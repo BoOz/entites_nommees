@@ -1,0 +1,123 @@
+#CACHE{0}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	#INSERT_HEAD
+	<style>
+		h1 {
+			margin:0;
+		}
+		h2{
+			margin:0 20%;
+		}
+		ul {
+			margin:0;
+			list-style-type:none;
+			padding:0;
+		}
+		.col{
+			float:left;
+			width:12%;
+			margin-left:30px;
+		}
+	</style>
+</head>
+<body>
+
+<div style="float:right;width:15%">
+<INCLURE{fond=noms_navigation}>
+</div>
+
+<h1><a href="?page=entites_nommees">Entités nommées</a> <small style="font-size:0.5em">dans #NOM_SITE_SPIP</small></h1>
+
+	<span></span>
+	<h2>[(#GET{affdate}|trim|sinon{#ENV{sdate}})]</h2>
+
+
+#SET{filtre_entites,INDETERMINE}
+[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
+
+<div id="debug" style="float:left;width:80%; max-height:300px;margin: 0 30px;overflow:auto">
+#SET{andwhere,""}
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite regexp '^LENTITE'"}|replace{LENTITE,#ENV{entite}}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
+
+	<B_fragments>
+	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
+		<div><strong>#ENTITE <small>(#TYPE_ENTITE)</small> :</strong> <small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#NB)]&nbsp;fois</a></small> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments>
+	<p>#PAGINATION</p>
+	</B_fragments>	
+
+	<B_fragments_entite>
+	<h3>[(#ENV{entite})] (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
+		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments_entite>
+	<p>#PAGINATION</p>
+	</B_fragments_entite>
+
+	<B_fragments_article>
+	<h3>Article [(#ENV{id_article})] (#GRAND_TOTAL) - <small><a href="?page=chercher_entites&id_article=#ENV{id_article}">re-indexer</a></small></h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_article(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where id_article='LENTITE' and type_entite='INDETERMINE' order by date desc"}|replace{LENTITE,#ENV{id_article}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|oui}>
+		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments_article>
+	<p>#PAGINATION</p>
+	</B_fragments_article>
+
+
+	<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prop, publie}>	
+
+	<h3>#TITRE<small> — <a href="?page=entites_nommees&amp;sdate=[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]">[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]</a></small></h3>	
+		
+	<div class="texte">
+		[(#CHAPO|concat{
+			#TEXTE})]
+		<div>
+		#NOTES
+		</div>
+	</div>
+	</BOUCLE_texte_article>
+
+</div>
+
+<div style="clear:left"></div>
+
+<BOUCLE_types(DATA){source sql, "select type_entite from entites_nommees where type_entite !='INDETERMINE' group by type_entite"}>
+<div class="col">
+ <h3>#TYPE_ENTITE</h3>
+
+	<B_entite_frequents>
+	#ANCRE_PAGINATION
+	<ul>
+	<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by entite asc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
+		<li>#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+	</small>
+		</li>
+	</BOUCLE_entite_frequents>
+	</ul>
+	<p>#PAGINATION</p>
+	</B_entite_frequents>
+
+</div>
+</BOUCLE_types>
+
+
+
+
+
+<hr style="clear:both" />
+</body>
+</html>

@@ -1,0 +1,10 @@
+// peuples mixtes
+Latino-|Américano-|Franco-
+
+// Exeptions
+Soviétiques?|Britanniques?|Européens?
+
+// Minorités
+Noirs?|Juifs?|Kurdes?|Africains?|Hutus?|Tutsis?|Arabes?
+
+

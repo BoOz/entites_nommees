@@ -1,0 +1,22 @@
+<!--
+<h3>Sur un texte <small>(signet de navigateur)</small></h3>
+<a href="javascript:var%20titre=document.title;var%20txt='';if(window.getSelection){txt=window.getSelection();}else%20if(document.getSelection){txt=document.getSelection();}else%20if(document.selection){txt=document.selection.createRange().text;}var%20logo='';var%20ogImage=document.querySelector('meta[property=\'og:image\']');if(ogImage){logo=ogImage.getAttribute('content');}var%20url=document.location+'';void(btw=window.open('http://seenthis.net/#ajouter='+encodeURIComponent(titre)+'&amp;url_site='+encodeURIComponent(url.replace('%2520','+'))+'&amp;logo='+encodeURIComponent(logo.replace('%2520','+'))+'&amp;extrait='+encodeURIComponent(txt)))" class="bkl">+&nbsp;Entités nommées</a>
+<h3>Dans le Diplo</h3>
+-->
+
+<p>
+<strong>Année :</strong> 
+<BOUCLE_arta(ARTICLES){statut IN prop, publie}{!par date_redac}{id_secteur=1}{fusion DATE_FORMAT(date_redac, '%Y')}>
+[(#SET{date,[(#DATE_REDAC|annee)]})]
+<a href="?page=[(#ENV{mode_chercher,entites_nommees})]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+</BOUCLE_arta>
+</p>
+
+
+<p>
+<strong>Numéro :</strong>
+<BOUCLE_artn(ARTICLES){statut IN prop, publie}{!par date_redac}{id_secteur=1}{fusion DATE_FORMAT(date_redac, '%Y-%m')}>
+[(#SET{date,[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]})]
+<a href="?page=[(#ENV{mode_chercher,entites_nommees})]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+</BOUCLE_artn>
+</p>

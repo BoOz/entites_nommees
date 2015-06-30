@@ -1,0 +1,139 @@
+#CACHE{0}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	#INSERT_HEAD
+	<style>
+		h1 {
+			margin:0;
+		}
+		h2{
+			margin:0 20%;
+		}
+		ul {
+			margin:0;
+			list-style-type:none;
+			padding:0;
+		}
+		.col{
+			float:left;
+			width:12%;
+			margin-left:30px;
+		}
+	</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	 //setTimeout(function(){document.location.href='?page=importer_entites';},10000);
+});
+</script>
+
+</head>
+<body>
+
+<div style="float:right;width:15%">
+<INCLURE{fond=noms_navigation}>
+</div>
+
+<h1><a href="?page=entites_nommees">Entités nommées</a> <small style="font-size:0.5em">dans #NOM_SITE_SPIP</small></h1>
+
+	<span>Indexation de toute la base.</span>
+	<h2>Importer les entités nommées</h2>
+
+<div class="col">
+<h3>État de l'indexation</h3>
+<ul>
+<BOUCLE_cmpt(DATA){source sql, "select count(distinct(id_article)) nb from entites_nommees"}>
+	<li>#NB articles indexés</li> #SET{numerateur,#NB}
+</BOUCLE_cmpt>
+#SET{LEWHERE,'where id_secteur=1'}
+#SET{dividende,1}
+<BOUCLE_cmpt_total(DATA){source sql, #VAL{"select count(distinct(id_article)) nb from spip_articles LEWHERE"}|replace{ LEWHERE,#GET{LEWHERE}} }>
+	<li>#NB articles au total</li> #SET{dividende,#NB}
+</BOUCLE_cmpt_total>
+<BOUCLE_date_recent(DATA){source sql, #VAL{"select date from entites_nommees order by date asc limit 0,1"}|replace{ LEWHERE} }>
+	<li>Date article le plus vieux importé : [(#DATE|annee)]</li> 
+	[(#SET{datecond, (year(date_redac)=[(#DATE|annee)] or year(date_redac)=[(#DATE|annee|moins{1})]) and })]
+</BOUCLE_date_recent>
+[(#SET{prog,[(#GET{numerateur}|div{#GET{dividende}}|mult{100}|round)]})]
+<li style="border:1px solid black;height:20px;position:relative">
+	<div id="progress" style="height:20px;background-color:#cccccc;width:#GET{prog}%;position:absolute;z-index:1"></div>
+	<div id="progress_label" style="height:20px;position:absolute;z-index:2;padding:2px 5px">[(#GET{prog})]&nbsp;%</div>
+</li>
+</ul>
+</div>
+<div class="col" style="width:800px">
+	<h3>Indexation</h3>
+
+	<ul style="width:80%; max-height:300px;margin: 0 30px;overflow:auto">
+	<BOUCLE_articles(DATA){source sql,#VAL{"select a.id_article, a.date_redac, a.titre from spip_articles a left join entites_nommees m on a.id_article=m.id_article where a.id_secteur=1 and LEWHERE m.id_article IS NULL limit 0,50"}|replace{LEWHERE,#GET{datecond}} }>
+		<li>#TITRE — [(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</li>
+	<BOUCLE_importer(ARTICLES){id_article}{statut IN prop, publie}>
+	#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
+	#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
+	</BOUCLE_importer>
+	</BOUCLE_articles>
+	</ul>
+</div>
+
+#SET{filtre_entites,INDETERMINE}
+[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
+
+<div id="debug" style="float:left;width:80%; max-height:300px;margin: 0 30px;overflow:auto">
+#SET{andwhere,""}
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite regexp '^LENTITE'"}|replace{LENTITE,#ENV{entite}}} ]
+
+	<B_fragments>
+	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
+		<div><strong>#ENTITE <small>(#TYPE_ENTITE)</small> :</strong> <small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#NB)]&nbsp;fois</a></small> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments>
+	<p>#PAGINATION</p>
+	</B_fragments>	
+
+	<B_fragments_entite>
+	<h3>[(#ENV{entite})] (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{entite}|oui}>
+		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments_entite>
+	<p>#PAGINATION</p>
+	</B_fragments_entite>
+
+
+</div>
+
+<div style="clear:left"></div>
+
+<BOUCLE_types(DATA){source sql, "select type_entite from entites_nommees where type_entite !='INDETERMINE' group by type_entite"}>
+<div class="col">
+ <h3>#TYPE_ENTITE</h3>
+
+	<B_entite_frequents>
+	#ANCRE_PAGINATION
+	<ul>
+	<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE} }{pagination 1000}>
+		<li>#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+	</small>
+		</li>
+	</BOUCLE_entite_frequents>
+	</ul>
+	<p>#PAGINATION</p>
+	</B_entite_frequents>
+
+</div>
+</BOUCLE_types>
+
+
+
+
+
+<hr style="clear:both" />
+</body>
+</html>

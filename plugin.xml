@@ -1,0 +1,18 @@
+<plugin>
+<nom>Entités nommées</nom>
+<auteur>BoOz</auteur>
+<icon></icon>
+<licence>(c) 20[1-9]{2} GPL</licence>
+<version>0.1</version>
+<version_base>0.0</version_base>
+<install>base/entites_nommees_upgrade.php</install>
+<etat>test</etat>
+<description>Trouver des entités nommées dans un texte en regexp sur les Capitales, après avoir isolé des entités connues avec des listes.</description>
+<lien></lien>
+<prefix>entites_nommees</prefix>
+<fonctions>entites_fonctions.php</fonctions>
+<pipeline>
+	<nom>declarer_tables_principales</nom>
+	<inclure>base/entites_nommees.php</inclure>
+</pipeline>  
+</plugin>

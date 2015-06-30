@@ -1,0 +1,1410 @@
+// Continents
+Afrique-maghreb
+Amériques
+Asie
+Europe
+Océanie
+Proche-orient 
+
+// lieux
+// AFGHANISTAN
+
+provinces : Badakchan
+Badghis
+Baghlan
+Balkh
+Bamiyan
+Farah
+Faryab
+Ghazni
+Ghor
+Helmand
+Herat
+Jozjan
+Kandahar
+Kapisa
+Kounar
+Koundouz
+Laghman
+Logar
+Nangarhar
+Nimroz
+Ourouzgan
+Paktika
+Paktiya
+Parvan
+Samangan
+Wardak
+Zaboul
+
+Panchir
+
+// AFRIQUE DU SUD
+
+Kwazulu-Natal
+Cap-Nord
+Robben Island
+
+// ALBANIE
+
+lac Shkroda
+Drin
+
+// ALGÉRIE
+
+
+// ALLEMAGNE
+
+Alexanderplatz
+Spree
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ANDORRE
+
+// ANGOLA
+
+Aldeia Nova
+Benguela
+fleuves Dande
+Cuanza
+
+Capanda
+Waku-Kungo
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ANTIGUA-ET-BARBUDA
+
+// ARABIE SAOUDITE
+
+province d'Al-Jouf
+le Hedjaz
+Tiran
+
+// ARGENTINE
+
+Córdoba
+Río de la Plata
+Terre de Feu
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ARMÉNIE
+
+// AUSTRALIE
+
+terre d’Arnhem
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans AUTRICHE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans AZERBAÏDJAN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BAHAMAS
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BAHREÏN m.
+
+// BANGLADESH
+
+Bengale oriental
+Khulna
+Kilgaon
+Niketon
+
+Meghna
+les Sundarbans
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BARBADE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BÉDOUINS m.
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BELGIQUE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BELIZE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BÉNIN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BHOUTAN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BIÉLORUSSIE
+
+// BIRMANIE
+
+la capitale est Naypyidaw
+les sept Etats : chin
+kachin
+karen
+karenni
+//mon
+rakhine
+shan
+
+fleuves : Salween
+Irrawaddy
+
+« région spéciale » n° 1
+le Kokang
+
+
+Ramree
+îles Cocos
+champ gazier de Yadana
+barrage de Ta Sang
+barrage de Myitsone
+
+Hatgyi
+Tasang
+
+// BOLIVIE
+
+9 provinces : Beni
+Chuquisaca
+Cochabamba
+La Paz
+Oruro
+Pando
+Potosí
+Santa Cruz
+Tarija
+
+Altiplano
+El Alto
+Nancahuazú
+Vallegrande
+Yungas
+
+// BOSNIE-HERZÉGOVINE
+
+Vrbas
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BOTSWANA
+
+// BRÉSIL
+
+l’ABC
+périphérie industrielle de São Paulo
+
+Brasília
+Campinas
+Carandiru
+Eldorado do Carajás
+Itapecerica da Serra
+Macapá
+Minas Gerais
+région minière
+
+Osasco
+Porto Velho
+Rio Grande do Sul
+Taubaté
+quartiers de Salvado de Bahia : Pelourinho
+Periperi
+Itapoan
+
+régions : Maranhão
+Ceará
+Piauí
+Rondônia
+Paraná
+Marabá
+Santarém
+Goiás
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BRUNEI
+
+// BULGARIE
+
+_fleuves_ : Iskar
+Maritsa
+Struma
+Tundza
+
+monts Rhodopes
+Stara Planina
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BURKINA FASO
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans BURUNDI
+
+// CAMBODGE
+
+Battambang
+Siem Reap
+
+réserve de Botum Sakor
+Koh Kong
+lac Tonlé Sap
+
+// CAMEROUN
+
+Depuis 2008
+le pays est divisé en régions
+départements et arrondissements
+
+//les 10 régions : de l'Adamaoua
+//du Centre
+//de l'Est
+//de l'Extrême-Nord
+//du Littoral
+//de l'Ouest
+//du Nord
+//du Nord-Ouest
+//du Sud et du Sud-Ouest
+
+
+// CANADA
+
+Grand Lac de l’Ours
+Grand Lac des Esclaves
+les Prairies
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans CAP-VERT
+
+// CENTRAFRIQUE
+
+Vakaga
+
+// CHILI
+
+Antofagasta
+Iquique
+Tarapacá
+Valparaíso
+Viña del Mar
+
+// CHINE
+
+
+// CHYPRE f.
+
+
+// COLOMBIE
+
+Apartadó
+Bogotá
+Cali
+Cartagena
+Cucúta
+Mapiripán
+Nazaret
+Urabá
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans COMORES
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans CONGO
+
+// CORÉE DU NORD
+
+« Grand Leader »
+Pyong[yang
+île Yanggak
+
+// CORÉE DU SUD
+
+_Pour les noms géographiques
+utiliser la romanisation McCune-Reischauer ._
+
+Pusan
+Masan
+île Cheju
+
+// COSTA RICA
+
+parc de la Merced
+San José
+fleuve San Juan
+
+// CÔTE D'IVOIRE
+
+Bouaké
+Cocody
+le Plateau
+
+fleuve Cavally
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans CROATIE
+
+// CUBA f.
+
+Sierra Maestra
+caserne Moncada
+Santiago de Cuba
+Oriente
+Gran Piedra
+
+// DANEMARK
+
+Christianshavn
+île de Fyn
+Jylland
+Nørrebro
+l’Øresund ou Sund
+Roskilde
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans DJIBOUTI m. ex-Territoire français des Afars et des Issas
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans DOMINIQUE
+
+// ÉGYPTE
+
+Alexandrie
+Assiout
+Charm El-Cheikh
+Dinshwai
+Kefaya
+Louqsor
+Mahallah Al-Koubra
+Port-Saïd
+Sohag
+Suez
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ÉMIRATS ARABES UNIS
+
+// ÉQUATEUR
+
+Cotopaxi
+Manta
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ÉRYTHRÉE
+
+// ESPAGNE
+
+Costa Brava
+Costa Dorada
+aux Canaries : El Medano
+El Hierro
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ESTONIE
+
+// ÉTATS-UNIS
+
+Camp Delta
+Diego Garcia
+Guam
+pénitencier de Terre Haute
+Washington
+DC
+
+Deep South
+Cotton Belt
+Rust Belt
+Grand Lac Salé
+
+// ÉTHIOPIE
+
+Ogaden
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans EX-YOUGOSLAVIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans FIDJI
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans FINLANDE
+
+// FRANCE
+
+// GABON
+
+Bélinga
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GAMBIE
+
+// GÉORGIE
+
+Akhalkalaki
+Batoumi
+Djavakhétie
+Gori
+Kvémo-Kartlie
+vallée de Pankissi
+Poti
+Sénaki
+Zougdidi
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GHANA
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GRÈCE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GRENADE
+
+// GUATEMALA
+
+fleuve Usumacinta
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GUINÉE
+
+// GUINÉE-BISSAU
+
+Bafatá
+Bissau est capitale autonome
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans GUINÉE-ÉQUATORIALE
+
+// GUYANA
+
+
+// HAÏTI m.
+
+Artibonite
+Cité Soleil
+la Saline
+Bel Air
+Martissant
+
+Pétionville
+aéroport Toussaint-Louverture
+
+// HONDURAS
+
+Cortés
+Tela
+La Ceiba
+Puerto Castilla
+
+Soto Cano Air Base
+
+// HONGRIE
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans hors-caste
+
+// INDE
+
+Pour les _Etats_
+voir plus haut
+et également la carte du _Manière de voir_ n° 94
+« Réveil de l'Inde »
+p. 6-7.
+
+
+// INDONÉSIE
+
+Atjeh
+Bandung
+Surabaya
+
+
+// IRAK
+
+
+// IRAN
+
+30 provinces
+Abadan
+Abou Moussa
+Ahwaz
+Araxe
+Ardebil
+Bouchehr
+Chatt Al-Arab
+Chiraz
+Qom
+Ispahan
+Kermanchah
+Khorasan
+Khouzistan
+Machhad
+Mahabad
+Natanz
+Ormuz
+Ourmia
+Rey
+Sanandaj
+Tabriz
+Zahedan
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans IRLANDE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans IRLANDE DU NORD
+
+// ISLANDE
+
+Reykjavík
+
+// ISRAËL m.
+
+
+// ITALIE
+
+territoire libre de Trieste
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans JAMAÏQUE
+
+// JAPON
+
+l'Archipel
+_Iles_ : Deshima
+Hokkaido
+Honshu
+Kyushu
+Ogasawara
+Okinawa
+Ryuku
+Sakhaline
+Shikoku
+Takeshima . Revendication des « territoires du Nord »
+
+quartiers de Tokyo : Akihabara
+Kanda
+
+Ota
+mer Intérieure
+gare de Shibuya
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans JORDANIE
+
+// KAZAKHSTAN
+
+Alma Ata
+Aktobe
+Arkalyk
+Atyraou
+Baïkonour
+Djamboul
+Ekibastouz
+Euskemen
+Jambyl
+Janaozen
+Karaganda
+Kashagan
+Kiziliar
+Kostanaï
+Kzyl-Orda/Kysylorda
+Oral
+Ouskemen
+Pavlodar
+Petropavlosk
+Semeï
+Semipalatinsk
+Taldy-Korgan
+Taras
+Tchimkent
+Tenguiz
+
+
+// KENYA
+
+mont Elgon
+mont Kenya
+
+vallée du Rift
+
+// KIRGHIZSTAN
+
+Asky
+Djalalabad
+Och
+Talas
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans KIRIBATI f.
+
+// KOSOVO
+
+villages de Gorazdevac
+d’Orahovac et de Velika Hoca
+enclaves serbes au Kosovo
+
+la Metohija
+kosovare
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans KOWEÏT
+
+// LAOS
+
+Luang Prabang
+Paksé
+Phongsali
+Sam Neua
+Savannakhet
+Thakhek
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LESOTHO
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LETTONIE
+
+// LIBAN
+
+Achrafieh
+plaine de la Bekaa
+camps palestiniens au Liban : Mar Elias
+Bourj Al-Baraneh
+Sabra et Chatila
+Dbaye
+Aïn Héloué
+Myé Myé
+Al-Buss
+Rachidiyé
+Bourj Al-Chemalhe
+Nahr Al-Bared
+Baddaoui
+Tal Al-Zaatar
+Waweel
+
+fermes de Chebaa
+Liban sud
+Mont-Liban
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LIBERIA
+
+// LIBYE
+
+quartier Ben Achour
+à Tripoli
+
+djebel Nefoussa
+Fezzan
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LIECHTENSTEIN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LITUANIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans LUXEMBOURG
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MACÉDOINE
+
+// MADAGASCAR
+
+Ambatovy
+Antananarivo
+Antsirabe
+Fianarantsoa
+Ilakaka
+Moramanga
+Sakaraha
+Toliara
+
+Atsinanana
+
+// MALAISIE
+
+Bahru
+George Town
+Hat Yai
+Ipoh
+Kilang
+Kota Kinabalu
+Kuala Trengganu
+Kuantan
+Kuchin
+Malacca
+Miri
+Oya
+Penang
+Port Kang
+Sandakan
+Seremban
+Seria
+Sibu
+Tanjong Pagar
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MALAWI
+
+// MALDIVES
+
+_Régions administratives_ : les Maldives se composent de 1 200 îles dont 200 habitées regroupées en 19 atolls et 1 zone de premier rang : Alifu
+Baa
+Dhaalu
+Faafu
+Gaafu Alifu
+Gaafu Dhaalu
+Gnaviyani
+Haa Alifu
+Haa Dhaalu
+Kaafu
+Laamu
+Lhaviyani
+Meemu
+Noonu
+Raa
+Seenu
+Shaviyani
+Thaa
+Vaavu
+
+îles Marao
+
+// MALI
+
+le nord du Mali
+le Nord
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MALTE f.
+
+// MAROC
+
+Aït Bouayèche
+Al-Hoceïma
+Fès
+Kénitra
+Khénifra
+Khourigba
+Meknès
+Oujda
+Safi
+Séfrou
+Sidi Ifni
+Taza
+Tameslohte
+
+la médina
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MARSHALL
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MAURICE f.
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MAURITANIE
+
+// MEXIQUE
+
+Etat de Basse-Californie
+Ciudad Juárez
+Michoacán
+Sinaloa
+Yucatán
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MICRONÉSIE f.
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MOLDAVIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MONACO m.
+
+// MONGOLIE
+
+Dalanzadgad
+Erdenet
+Oyu Tolgoï
+Tavan Tolgoï
+
+désert de Gobi
+rivière Tuul
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MONTÉNÉGRO
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans MOZAMBIQUE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans NAMIBIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans NAURU f.
+
+// NÉPAL
+
+Bhatgaon
+Biratnagar
+Birganj
+Jomosom
+Kagbeni
+Jomosom
+Lo Manthang
+Marpha
+Nepalganj
+Patan
+Pokhara
+
+plaine du Terai
+
+// NICARAGUA
+
+Bluefields
+Jalapa
+Managua
+Ocotal
+San Juan del Norte
+
+// NIGER
+
+
+// NIGERIA
+
+delta du Niger
+Etat musulman de Katsina
+Etat de Cross River
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans NORVÈGE
+
+// NOUVELLE-CALÉDONIE
+
+Nouméa la Blanche
+le Caillou
+3 provinces : province Nord
+province Sud
+province des îles Loyauté
+
+îles : Grande Terre
+Ouvéa
+Lifou
+Maré
+
+mer de Corail
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans NOUVELLE-ZÉLANDE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans NUNAVUT
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans OMAN m.
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ONU
+
+// OUGANDA
+
+Buganda
+Gulu
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans OUZBÉKISTAN
+
+// PAKISTAN
+
+_Dans le nord du Pakistan
+il y a six entités :
+
+- la vallée de la Shaksgam
+concédée à la Chine
+
+- les Territoires du Nord
+devenus la province de Gilgit-Baltistan
+et l’Azad Cachemire
+ils sont revendiqués par l’Inde
+
+
+- la Province de la frontière du Nord-Ouest
+où se trouvent la vallée de Swat et la ville de Peshawar
+devenue Khyber Pakhtunkhwa
+
+- les Territoires tribaux fédéraux
+en anglais Federally Administered Tribal Areas
+qui comprennent 7 territoires tribaux : Bajaur
+Kurram
+Khyber
+Mohmand
+Orazkai
+Waziristan nord
+Waziristan sud
+
+- le territoire fédéral d’Islamabad_
+Abbottabad
+Bahawalpur
+Baloutchistan
+Buner
+Dera Ismail Khan
+Gwadar
+passe de Khyber
+Lahore
+Lower Dir
+Peshawar
+provinces : Baloutchistan
+Pendjab
+Province de la frontière du Nord-Ouest
+Sind
+
+mer d’Oman
+Rawalpindi
+vallée de Swat
+Waziristan nord
+Waziristan sud
+les deux Waziristans
+
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans PALAU m.
+
+// PALESTINE
+
+Beit Hanoun
+Beit Lahya
+Bethléem
+Hébron
+Jabaliya
+Jénine
+Jéricho
+Naplouse
+Rafah
+Ramallah
+Shati
+Tulkarem
+Wadi Fukin
+
+
+// PANAMÁ
+
+Panamá
+
+// PAPOUASIE-NOUVELLE-GUINÉE
+
+_cf._ carte Diplo
+janvier 2013
+
+provinces : Hela
+
+// PARAGUAY
+
+Asunción
+Itaipu
+Lambaré
+Yaciretá
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans PAYS-BAS
+
+// PÉROU
+
+Callao
+Cuajone
+
+// PHILIPPINES
+
+-Archipel de plus de 7 000 îles dont 880 seulement sont habitées_
+_îles principales_ : Basilan
+Bohol
+Catanduanes
+Cebu
+Leyte
+Luçon
+Masbate
+Mindanao
+Mindoro
+Negros
+Palawan
+Panay
+Samar
+Sulu
+Tawi-Tawi…
+
+Baggao
+Bataan
+Cagayan
+Cavite
+Iglesia de Cristo
+Luçon Central
+Makati
+Quezon City...
+
+
+// POLOGNE
+
+voïvodie : division administrative correspondant à la province ou à la région. Utiliser les noms polonais : Podlaskie
+Podkarpackie
+Lubelskie
+Warminsko-Mazurskie
+Swietokrzyskie .
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans PORTO RICO
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans PORTUGAL
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans QATAR
+
+// RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
+
+Kalemie
+Kilo-Moto
+Kinshasa
+Nord-Kivu
+Sud-Kivu
+
+aéroport de Ndjili
+Ruashi
+site miner proche de Lubumbashi
+
+lac Tanganyika
+
+// RÉPUBLIQUE DOMINICAINE
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans RÉPUBLIQUE TCHÈQUE
+
+// ROUMANIE
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ROYAUME-UNI
+
+// RUSSIE
+
+Russie = 83 sujets divisés en :
+1 région autonome juive
+4 districts autonomes : Iamal
+Khantys-Mansis
+Nenets
+Tchoukotka
+
+9 kraïs : Altaï
+Kamtchatka
+Khabarovsk
+Krasnodar
+Krasnoïarsk
+Perm
+Primorie
+Stavropol
+Transbaïkalie
+
+21 républiques : Adyghés
+Altaï
+Bachkortostan
+Bouriatie
+Carélie
+Daghestan
+Ingouchie
+Kabardino-Balkarie
+Kalmoukie
+Karatchaevo-Tcherkessie
+Khakassie
+Komis
+Maris
+Mordovie
+Ossétie du Nord
+Oudmourtie
+Sakha-Iakoutie
+Tatarstan
+Tchétchénie
+Tchouvachie
+Touva
+
+46 oblasts : Amour
+Arkhangelsk
+Astrakhan
+Belgorod
+Briansk
+Iaroslavl
+Irkoutsk
+Ivanovo
+Kaliningrad
+Kalouga
+Kemerovo
+Kirov
+Kostroma
+Kourgan
+Koursk
+Leningrad
+Lipetsk
+Magadan
+Moscou
+Mourmansk
+Nijni-Novgorod
+Novgorod
+Novossibirsk
+Omsk
+Oreil
+Orenbourg
+Oulianovsk
+Penza
+Pskov
+Riazan
+Sverdlosk
+Rostov
+Sakhaline
+Samara
+Saratov
+Smolensk
+Tambov
+Tcheliabinsk
+Tioumen
+Tomsk
+Toula
+Tver
+Vladimir
+Volgograd
+Vologda
+Voronej
+
+
+// RWANDA
+
+Gisenyi
+Kanombe
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SAINT-KITTS-ET-NEVIS
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SAINT-MARIN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SAINT-VINCENT-ET-LES-GRENADINES
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SAINTE-LUCIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SALOMON
+
+// SALVADOR
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SAMOA
+
+// SÃO-TOMÉ-ET-PRÍNCIPE, m.
+
+Santo Antonio
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SÉNÉGAL
+
+// SERBIE
+
+on n’indique pas les consonnes serbes
+et on ne les « phonétise » pas
+
+Dedinje
+Drina
+Portes de Fer
+Sandjak de Novi Pazar
+vallée de Presevo
+Voïvodine
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SEYCHELLES
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SIERRA LEONE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SINGAPOUR
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SLOVAQUIE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SLOVÉNIE
+
+// SOMALIE
+
+Alalu
+détroit de Bab Al-Mandeb
+Baidoa
+Bargal
+Berbera
+Eyl
+Galcaio
+Hargeisa
+Hobyo
+Mogadiscio
+Sool
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SOUDAN DU SUD
+
+// SOUDAN
+
+Nil Blanc
+Nil Bleu
+Etat du Nil Bleu
+
+
+district d’Abyei
+Abou Hamed
+Abou Sourouj
+Al-Mouglad
+Al-Obeid
+Ed-Debba
+Kourmouk
+Sirba
+Suleia
+
+barrage hydroélectrique de Méroé
+monts Nouba
+_Darfour_ : Al-Fashir
+Al-Jounaynah
+Nyala
+Zalingei
+
+
+// SRI LANKA
+
+Amparai
+Anuradhapura
+Batticaloa
+Chalai
+Dehiwala Mount
+Elephant Pass
+Galle
+Jaffna
+Kandy
+Katunayake
+Kilali
+Kilinochchi
+Kotte
+Lavinia
+Mankulam
+Moratuwa
+Negombo
+Pallai
+Paranthan
+Puthukkudiyiruppu
+Puttalam
+Ratnapura
+Trincomalee
+Vavuniya
+
+
+• DIVERS
+au Sri Lanka
+Cinghalais
+conférence de Bossey
+conseil provincial
+Lessons Learnt and Reconciliation Commission
+Sirasa TV
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SUÈDE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SUISSE
+
+// SURINAM
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans SWAZILAND
+
+// SYRIE
+
+Qalamoun
+
+// TADJIKISTAN
+
+Acht
+Gharm
+Khodjent
+Khorog
+Kouliab
+Kourgan Tioubé
+Mourgab
+Pendjikent
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TAÏWAN
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TANZANIE
+
+// TCHAD
+
+bande d’Aouzou
+fleuves : Chari
+Logone
+
+
+// THAÏLANDE
+
+Chiang Mai
+Isaan
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TIMOR-LESTE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TOGO
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TONGA
+
+// TOUAREGS
+
+Adrar des Ifoghas
+lieux : Azawad
+Aïr
+Azawagh
+tassili des Ajjer
+Ténéré
+
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TRINITÉ-ET-TOBAGO
+
+// TUNISIE
+
+Dorsale tunisienne
+Feriana
+Gafsa
+Metlaoui
+Oum Larayes
+
+Redeyef
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TURKMÉNISTAN
+
+// TURQUIE
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TUVALU
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans TZIGANES
+
+// UKRAINE
+
+_Préférer les graphies ukrainiennes aux graphies russes. L'alphabet ukrainien est une variété d'alphabet cyrillique. Principales différences pour la romanisation : emplois du "i" et du "y"
+"hrad" et "horod" à la place de "grad" et "gorod" russes ..._
+
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans UNION EUROPÉENNE
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Union soviétique
+
+// URUGUAY
+
+Río de la Plata
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans VANUATU
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans VATICAN
+
+// VENEZUELA
+
+Cojedes
+région Occidente
+lac de Maracaibo
+péninsule de Paraguaná
+Petare
+Yaracuy
+
+// VIETNAM
+
+Bac Ninh
+Buon Ma Thuot
+Ca Mau
+Cam Ranh
+Can Tho
+Cao Bang
+Chang Hung
+Dalat
+Da Nang
+Dien Bien Phu
+Dong Hoi
+Haïphong
+Halong
+Ha Tinh
+Hoa Binh
+Ho Chi Minh-Ville
+Hue
+Lang Son
+Lao Cai
+Mui Ne
+Nha Trang
+My Tho
+Nam Dinh
+Nha Trang
+Phan Rang
+Phan Thiet
+Quang Nam
+Quang Ngai
+Quang Tri
+Qui Nhon
+Rach Gia
+Thai Nguyen
+Than Hoa
+Vinh
+Vung Tau
+
+
+// YÉMEN
+
+détroit de Bab Al-Mandeb
+Chabwa
+Hadramaout
+Hanish
+le Jawf
+Jibla
+lignes Hamza
+Philby
+Violet
+
+Marib
+Moukalla
+« quart vide »
+Saada
+Socotra
+les deux Yémens
+Yémen du Nord
+Yémen du Sud
+
+
+zaydisme
+zaydite
+
+
+// ZAMBIE
+
+Copperbelt
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans ZIMBABWE

@@ -1,0 +1,1371 @@
+// Capitales
+Kaboul
+Tshwane
+Tirana
+Alger
+Berlin
+Andorre-la-Vieille
+Luanda
+St John's
+Riyad
+Buenos Aires
+Erevan
+Canberra
+Vienne
+Bakou
+Nassau
+Manama
+Dacca
+Bridgetown
+Bruxelles
+Belmopan
+Porto Novo
+Thimphou  
+Minsk
+Naypyidaw
+La Paz
+Sarajevo
+Gaborone
+Brasília
+Bandar Seri Begawan
+Sofia
+Ouagadougou
+Bujumbura
+Phnom Penh
+Yaoundé
+Ottawa
+Praia
+Bangui
+Santiago
+Pékin
+Nicosie
+Bogotá
+Moroni
+Brazzaville
+Pyongyang
+Séoul
+San José
+Yamoussoukro
+Zagreb
+La Havane
+Copenhague
+Djibouti
+Roseau
+Le Caire
+Abou Dhabi
+Quito
+Asmara
+Madrid
+Tallinn
+Washington
+Addis-Abeba
+// ALERTE pas de capitale dans EX-YOUGOSLAVIE
+Suva
+Helsinki
+Paris
+Libreville
+Banjul
+Tbilissi
+Accra
+Athènes
+St George's
+Guatemala
+Conakry
+Bissau
+Malabo
+Georgetown
+Port-au-Prince
+Tegucigalpa
+Budapest
+New Delhi
+Djakarta
+Bagdad
+Téhéran
+Dublin
+// ALERTE pas de capitale dans IRLANDE DU NORD
+Reykjavík
+Jérusalem
+Rome
+Kingston
+Tokyo
+Amman
+// ALERTE pas de capitale dans KAZAKHSTAN
+Nairobi
+Bichkek
+Bairiki
+// ALERTE pas de capitale dans KOSOVO
+Koweït
+Vientiane
+Maseru
+Riga
+Beyrouth
+Monrovia
+Tripoli
+Vaduz
+Vilnius
+Luxembourg
+Skopje
+Antananarivo
+Kuala Lumpur
+Lilongwe
+Malé
+Bamako
+La Valette
+Rabat
+Delap-Uliga-Djarrit
+Port Louis
+Nouakchott
+Mexico
+Palikir
+Chisinau
+Monaco
+Oulan-Bator
+Podgorica
+Maputo
+Windhoek
+Yaren
+Katmandou
+Managua
+Niamey
+Abuja
+Oslo
+Nouméa
+Wellington
+Iqaluit
+Mascate
+// ALERTE pas de capitale dans ONU
+Kampala
+Tachkent
+Islamabad
+Koror
+Jérusalem
+Panamá
+Port Moresby
+Asunción
+Amsterdam
+Lima
+Manille
+Varsovie
+San Juan
+Lisbonne
+Doha
+Kinshasa
+Saint-Domingue
+Prague
+Bucarest
+Londres
+Moscou
+Kigali
+Basseterre
+Saint-Marin
+Kingstown
+Castries
+Honiara
+San Salvador
+Apia
+São Tomé
+Dakar
+Belgrade
+Victoria
+Freetown
+Singapour
+Bratislava
+Ljubljana
+Mogadiscio
+Juba
+Khartoum
+Colombo
+Stockholm
+Berne
+Paramaribo
+Mbabane
+Damas
+Douchanbé
+Taipei
+Dodoma
+N'Djamena
+Bangkok
+Dili
+Lomé
+Nukualofa
+Port of Spain
+Tunis
+Achkhabad
+Ankara
+Funafuti
+Kiev
+// ALERTE pas de capitale dans UNION EUROPÉENNE
+// ALERTE pas de capitale dans Union soviétique
+Montevideo
+Port-Vila
+// ALERTE pas de capitale dans VATICAN
+Caracas
+Hanoï
+Sanaa
+Lusaka
+Harare
+// Villes
+
+// AFGHANISTAN
+Faizabad
+Farah
+Herat
+Kaboul
+Kandahar
+Kunduz
+Maydan Sher
+Mazar-e-Charif
+Musa Qala
+
+// AFRIQUE DU SUD
+Khayelitsha
+Polokwane
+
+// ALBANIE
+Durrës
+Kalimash
+Korçë
+Kukës
+Pukë
+Rrëshen
+Shkodra
+
+// ALGÉRIE
+Aïn Arnat
+Aïn Defla
+Annaba
+Arzew
+Béchar
+Béjaïa
+Beni Saf
+Beni Yenni
+Benthala
+Blida
+Boudjellil
+Boukanoun
+Boumerdès
+Cherchell
+Chlef
+Constantine
+Djanet
+Edjeleh
+El-Hadjar
+El-Tarf
+Figuig
+Ghardaïa
+Ghazaouet
+Guelma
+Hassi Messaoud
+Hassi R’Mel
+Khemis Miliana
+Kherrata
+Mers El-Kébir
+Mostaganem
+Oran
+Ouargla
+Reggane
+Reibell
+Rouïba
+Sétif
+Sidi Fredj
+Sidi Salem
+Soudani
+Souk Ahras
+Tamanrasset
+Tazmalt
+Ténès
+Timimoun
+Tipasa
+Tizi Ouzou
+
+// ALLEMAGNE
+// ALERTE pas de villes dans ALLEMAGNE
+
+// ANDORRE
+// ALERTE pas de villes dans ANDORRE
+
+// ANGOLA
+// ALERTE pas de villes dans ANGOLA
+
+// ANTIGUA-ET-BARBUDA
+// ALERTE pas de villes dans ANTIGUA-ET-BARBUDA
+
+// ARABIE SAOUDITE
+Abha
+Djedda
+La Mecque
+Najran
+Qatif
+Taëf
+
+// ARGENTINE
+// ALERTE pas de villes dans ARGENTINE
+
+// ARMÉNIE
+Chouchi
+Stepanakert
+
+// AUSTRALIE
+// ALERTE pas de villes dans AUSTRALIE
+
+// AUTRICHE
+// ALERTE pas de villes dans AUTRICHE
+
+// AZERBAÏDJAN
+// ALERTE pas de villes dans AZERBAÏDJAN
+
+// BAHAMAS
+// ALERTE pas de villes dans BAHAMAS
+
+// BAHREÏN m.
+// ALERTE pas de villes dans BAHREÏN m.
+
+// BANGLADESH
+// ALERTE pas de villes dans BANGLADESH
+
+// BARBADE
+// ALERTE pas de villes dans BARBADE
+
+// BELGIQUE
+// ALERTE pas de villes dans BELGIQUE
+
+// BELIZE
+// ALERTE pas de villes dans BELIZE
+
+// BÉNIN
+// ALERTE pas de villes dans BÉNIN
+
+// BHOUTAN
+// ALERTE pas de villes dans BHOUTAN
+
+// BIÉLORUSSIE
+// ALERTE pas de villes dans BIÉLORUSSIE
+
+// BIRMANIE
+Kengtung
+Kunlong
+Kyaupkyu
+Loikaw
+Mandalay
+Mong La
+Muse
+Namkham
+Naypyidaw
+Pakokku
+Panghsang
+Pyinmana
+Rangoun
+Sittwe
+Tai Ping
+Toungoo
+Taunggok
+Thamanya
+
+// BOLIVIE
+Camiri
+Cochabamba
+Guaqui
+La Paz
+Oruro
+Potosí
+Puerto Suárez
+Riberalta
+Santa Cruz
+Santa Ana
+Santa Cruz
+Siglo Veinte
+Sucre
+Tarija
+Trinidad
+
+// BOSNIE-HERZÉGOVINE
+Banja Luka
+Brcko
+Goradze
+Laktasi
+Mostar
+Trebinje
+Tuzla
+
+// BOTSWANA
+// ALERTE pas de villes dans BOTSWANA
+
+// BRÉSIL
+// ALERTE pas de villes dans BRÉSIL
+
+// BRUNEI
+// ALERTE pas de villes dans BRUNEI
+
+// BULGARIE
+Bourgas
+Choumen
+Dobritch
+Pazardjik
+Pleven
+Plovdiv
+Roussé
+Varna
+Veliko Tarnovo
+Vratsa
+
+// BURKINA FASO
+// ALERTE pas de villes dans BURKINA FASO
+
+// BURUNDI
+// ALERTE pas de villes dans BURUNDI
+
+// CAMBODGE
+// ALERTE pas de villes dans CAMBODGE
+
+// CAMEROUN
+Douala
+Garoua
+Kousséri
+Maroua
+
+// CANADA
+// ALERTE pas de villes dans CANADA
+
+// CAP-VERT
+// ALERTE pas de villes dans CAP-VERT
+
+// CENTRAFRIQUE
+Birao
+Bouar
+Ouanda Djallé
+Sam Ouandja
+
+// CHILI
+// ALERTE pas de villes dans CHILI
+
+// CHINE
+Baotou
+Batang
+Beidaihe
+Canton
+Changchun
+Changsha
+Chengde
+Chengdu
+Chongqing
+Dalian
+Dongtan
+Dongzhou
+Fenyang
+Fushun
+Fuzhou
+Gejiu
+Guiyang
+Haikou
+Hangzhou
+Harbin
+Hefei
+Hengyang
+Hohhot
+Hongkong
+Hotan
+Huainan
+Huangpu
+Jiamusi
+Jilin
+Jinan
+Jinzhou
+Kashi
+Kunming
+Lanzhou
+Leshan
+Lhassa
+Liaoyang
+Liuzhou
+Luoyang
+Macao
+Mudanjiang
+Nanchang
+Nankin
+Nanning
+Ningbo
+Pékin
+Qingdao
+Qiqihar
+Qufu
+Shanghaï
+Shangzhou
+Shantou
+Shaoshan
+Shashi
+Shenyang
+Shenzhen
+Shijiazhuang
+Taiyuan
+Tangshan
+Tianjin
+Urumqi
+Wanxian
+Wenzhou
+Wuchang
+Wuhan
+Wuzhou
+Xi’an
+Xiamen
+Xingshan
+Xining
+Yangpu
+Yingkou
+Yining
+Zhanjiang
+Zhengzhou
+Zhuhai
+Zibo
+Zunyi
+
+// CHYPRE f.
+Larnaca
+Morfou
+
+// COLOMBIE
+// ALERTE pas de villes dans COLOMBIE
+
+// COMORES
+// ALERTE pas de villes dans COMORES
+
+// CONGO
+// ALERTE pas de villes dans CONGO
+
+// CORÉE DU NORD
+// ALERTE pas de villes dans CORÉE DU NORD
+
+// CORÉE DU SUD
+// ALERTE pas de villes dans CORÉE DU SUD
+
+// COSTA RICA
+// ALERTE pas de villes dans COSTA RICA
+
+// CÔTE D'IVOIRE
+Duékoué
+San Pedro
+Taï
+Zagné
+
+// CROATIE
+Dubrovnik
+Rijeka
+Zadar
+
+// CUBA f.
+// ALERTE pas de villes dans CUBA f.
+
+// DANEMARK
+// ALERTE pas de villes dans DANEMARK
+
+// DJIBOUTI m. ex-Territoire français des Afars et des Issas
+// ALERTE pas de villes dans DJIBOUTI m. ex-Territoire français des Afars et des Issas
+
+// DOMINIQUE
+// ALERTE pas de villes dans DOMINIQUE
+
+// ÉGYPTE
+// ALERTE pas de villes dans ÉGYPTE
+
+// ÉMIRATS ARABES UNIS
+// ALERTE pas de villes dans ÉMIRATS ARABES UNIS
+
+// ÉQUATEUR
+// ALERTE pas de villes dans ÉQUATEUR
+
+// ÉRYTHRÉE
+// ALERTE pas de villes dans ÉRYTHRÉE
+
+// ESPAGNE
+// ALERTE pas de villes dans ESPAGNE
+
+// ESTONIE
+// ALERTE pas de villes dans ESTONIE
+
+// ÉTATS-UNIS
+// ALERTE pas de villes dans ÉTATS-UNIS
+
+// ÉTHIOPIE
+// ALERTE pas de villes dans ÉTHIOPIE
+
+// EX-YOUGOSLAVIE
+// ALERTE pas de villes dans EX-YOUGOSLAVIE
+
+// FIDJI
+// ALERTE pas de villes dans FIDJI
+
+// FINLANDE
+// ALERTE pas de villes dans FINLANDE
+
+// FRANCE
+// ALERTE pas de villes dans FRANCE
+
+// GABON
+// ALERTE pas de villes dans GABON
+
+// GAMBIE
+// ALERTE pas de villes dans GAMBIE
+
+// GÉORGIE
+// ALERTE pas de villes dans GÉORGIE
+
+// GHANA
+// ALERTE pas de villes dans GHANA
+
+// GRÈCE
+// ALERTE pas de villes dans GRÈCE
+
+// GRENADE
+// ALERTE pas de villes dans GRENADE
+
+// GUATEMALA
+// ALERTE pas de villes dans GUATEMALA
+
+// GUINÉE
+// ALERTE pas de villes dans GUINÉE
+
+// GUINÉE-BISSAU
+// ALERTE pas de villes dans GUINÉE-BISSAU
+
+// GUINÉE-ÉQUATORIALE
+// ALERTE pas de villes dans GUINÉE-ÉQUATORIALE
+
+// GUYANA
+// ALERTE pas de villes dans GUYANA
+
+// HAÏTI m.
+// ALERTE pas de villes dans HAÏTI m.
+
+// HONDURAS
+// ALERTE pas de villes dans HONDURAS
+
+// HONGRIE
+Debrecen
+Miskolc
+
+// INDE
+// ALERTE pas de villes dans INDE
+
+// INDONÉSIE
+// ALERTE pas de villes dans INDONÉSIE
+
+// IRAK
+Baiji
+Bassora
+Fallouja
+Kadhimain
+Kerbala
+Kirkouk
+Kout
+Mossoul
+Nadjaf
+Nassiriya
+Samarra
+Tikrit
+
+// IRAN
+// ALERTE pas de villes dans IRAN
+
+// IRLANDE
+// ALERTE pas de villes dans IRLANDE
+
+// IRLANDE DU NORD
+// ALERTE pas de villes dans IRLANDE DU NORD
+
+// ISLANDE
+// ALERTE pas de villes dans ISLANDE
+
+// ISRAËL m.
+Acre
+Arad
+Arara
+Ashdod
+Ashkelon
+Beer Sheva
+Beit Lid
+Binyamina
+Deir Yassine
+Dikla
+Dimona
+Di Zahav
+Eilaboun
+Eilat
+Emmanuel
+Guivat Haïm
+Haïfa
+Har Homa
+Herzliya
+Houra
+Itamar
+Jaffa
+Kfar Etzion
+Kiryat Arba
+Kiryat Sefer
+Lod
+Maalot
+Mitspeh Ramon
+Nazareth
+Nazareth Ilit
+Netanya
+Ofra
+Omer
+Rahat
+Ramat Rachel
+Ramleh
+Sadot
+Safed
+Saint-Jean-d’Acre
+Sderot
+Shfaram
+Tcherkass
+Tel-Aviv
+Tibériade
+Wadi Salib
+Yanoun
+Yoqneam
+
+// ITALIE
+// ALERTE pas de villes dans ITALIE
+
+// JAMAÏQUE
+// ALERTE pas de villes dans JAMAÏQUE
+
+// JAPON
+Ashio
+Edo
+Fukuoka
+Hiroshima
+Hokkaido
+Iwakuni
+Kadena
+Kagoshima
+Kawasaki
+Kita-kyushu
+Kobe
+Komaki
+Kurashi
+Kyoto
+Nagasaki
+Nagoya
+Nara
+Osaka
+Ose
+Sapporo
+Shimonoseki
+Yokohama
+Yokota
+Yososuka
+
+// JORDANIE
+Akaba
+Amman
+Karak
+Ma’an
+Mafrak
+Ramtha
+Tafilah
+
+// KAZAKHSTAN
+// ALERTE pas de villes dans KAZAKHSTAN
+
+// KENYA
+Eldoret
+Kisumu
+Molo
+Mombasa
+Narok
+Tungaï
+
+// KIRGHIZSTAN
+// ALERTE pas de villes dans KIRGHIZSTAN
+
+// KIRIBATI f.
+// ALERTE pas de villes dans KIRIBATI f.
+
+// KOSOVO
+Cirez
+Decani
+Djakovica
+Dragas
+Gnjilane
+Gorazdevac
+Gracanica
+Istok
+Janjevo
+Junik
+Kacanik
+Kamenica
+Kijevo
+Klina
+Kosovo Polje
+Kosovska Mitrovica
+Kraljane
+Lipljan
+Malisevo
+Novo Brdo
+Pec
+Orahovac
+Podujevo
+Pristina
+Prizren
+Srbica
+Stimlje/Shtime
+Strpce
+Suva Reka
+Urosevac
+Velika Hoca
+Vitomirica
+Vrela
+Vucitrn
+Zvecan
+
+// KOWEÏT
+// ALERTE pas de villes dans KOWEÏT
+
+// LAOS
+// ALERTE pas de villes dans LAOS
+
+// LESOTHO
+// ALERTE pas de villes dans LESOTHO
+
+// LETTONIE
+// ALERTE pas de villes dans LETTONIE
+
+// LIBAN
+Bar Elias Ehden
+Hermel
+Majdel Anjar
+Nabatieh
+Saïda
+Tyr
+Zahlé
+Zghorta
+
+// LIBERIA
+// ALERTE pas de villes dans LIBERIA
+
+// LIBYE
+Bani Walid
+Benghazi
+Brega
+Cheguiga
+Ghariane
+Ghadamès
+Misrata
+Mizda
+Ras Lanouf
+Sabratha
+Sorman
+Syrte
+Taourgha
+Tarhouna
+Zaouia
+Zintan
+Zouara
+
+// LIECHTENSTEIN
+// ALERTE pas de villes dans LIECHTENSTEIN
+
+// LITUANIE
+// ALERTE pas de villes dans LITUANIE
+
+// LUXEMBOURG
+// ALERTE pas de villes dans LUXEMBOURG
+
+// MACÉDOINE
+Bitola
+Kocani
+Kumanovo
+Prilep
+Skopje
+Strumica
+Tetovo
+
+
+// MADAGASCAR
+// ALERTE pas de villes dans MADAGASCAR
+
+// MALAISIE
+// ALERTE pas de villes dans MALAISIE
+
+// MALAWI
+// ALERTE pas de villes dans MALAWI
+
+// MALDIVES
+// ALERTE pas de villes dans MALDIVES
+
+// MALI
+_ Diabali
+Kati
+Konna
+Koulikoro
+Mopti
+Sikasso
+Ségou
+Sévaré
+
+// MALTE f.
+// ALERTE pas de villes dans MALTE f.
+
+// MAROC
+// ALERTE pas de villes dans MAROC
+
+// MARSHALL
+// ALERTE pas de villes dans MARSHALL
+
+// MAURICE f.
+// ALERTE pas de villes dans MAURICE f.
+
+// MAURITANIE
+// ALERTE pas de villes dans MAURITANIE
+
+// MEXIQUE
+// ALERTE pas de villes dans MEXIQUE
+
+// MICRONÉSIE f.
+// ALERTE pas de villes dans MICRONÉSIE f.
+
+// MOLDAVIE
+// ALERTE pas de villes dans MOLDAVIE
+
+// MONACO m.
+// ALERTE pas de villes dans MONACO m.
+
+// MONGOLIE
+// ALERTE pas de villes dans MONGOLIE
+
+// MONTÉNÉGRO
+Andrijevica
+Berane
+Bijelo Polje
+Cetinje
+Gusinje
+Niksic
+Plav
+Pljevlja
+Podgorica
+Rozaje
+Savnik
+Ulcinj
+
+// MOZAMBIQUE
+// ALERTE pas de villes dans MOZAMBIQUE
+
+// NAMIBIE
+// ALERTE pas de villes dans NAMIBIE
+
+// NAURU f.
+// ALERTE pas de villes dans NAURU f.
+
+// NÉPAL
+// ALERTE pas de villes dans NÉPAL
+
+// NICARAGUA
+// ALERTE pas de villes dans NICARAGUA
+
+// NIGER
+Aderbissinat
+Agadez
+Akokan
+Arlit
+Azelik
+Diffa
+Iférouane
+Imouraren
+Ingal
+Maradi
+N'Guigmi
+Tegguidda
+Tessaoua
+Zinder
+
+// NIGERIA
+Aba
+Calabar
+Ekets
+Enugu
+Ibadan
+Ibenos
+Kaduna
+Kano
+Kumo
+Maiduguri
+Onitsha
+Port Harcourt
+Yenagoa
+Zaria
+
+// NORVÈGE
+// ALERTE pas de villes dans NORVÈGE
+
+// NOUVELLE-CALÉDONIE
+// ALERTE pas de villes dans NOUVELLE-CALÉDONIE
+
+// NOUVELLE-ZÉLANDE
+// ALERTE pas de villes dans NOUVELLE-ZÉLANDE
+
+// NUNAVUT
+// ALERTE pas de villes dans NUNAVUT
+
+// OMAN m.
+// ALERTE pas de villes dans OMAN m.
+
+// ONU
+// ALERTE pas de villes dans ONU
+
+// OUGANDA
+// ALERTE pas de villes dans OUGANDA
+
+// OUZBÉKISTAN
+// ALERTE pas de villes dans OUZBÉKISTAN
+
+// PAKISTAN
+// ALERTE pas de villes dans PAKISTAN
+
+// PALAU m.
+// ALERTE pas de villes dans PALAU m.
+
+// PALESTINE
+// ALERTE pas de villes dans PALESTINE
+
+// PANAMÁ
+// ALERTE pas de villes dans PANAMÁ
+
+// PAPOUASIE-NOUVELLE-GUINÉE
+// ALERTE pas de villes dans PAPOUASIE-NOUVELLE-GUINÉE
+
+// PARAGUAY
+// ALERTE pas de villes dans PARAGUAY
+
+// PAYS-BAS
+// ALERTE pas de villes dans PAYS-BAS
+
+// PÉROU
+// ALERTE pas de villes dans PÉROU
+
+// PHILIPPINES
+// ALERTE pas de villes dans PHILIPPINES
+
+// POLOGNE
+Bytom
+Chorzów
+Kielce
+
+// PORTO RICO
+// ALERTE pas de villes dans PORTO RICO
+
+// PORTUGAL
+// ALERTE pas de villes dans PORTUGAL
+
+// QATAR
+// ALERTE pas de villes dans QATAR
+
+// RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
+// ALERTE pas de villes dans RÉPUBLIQUE DÉMOCRATIQUE DU CONGO
+
+// RÉPUBLIQUE DOMINICAINE
+// ALERTE pas de villes dans RÉPUBLIQUE DOMINICAINE
+
+// RÉPUBLIQUE TCHÈQUE
+// ALERTE pas de villes dans RÉPUBLIQUE TCHÈQUE
+
+// ROUMANIE
+Braila
+Brasov
+Cluj-Napoca
+Craiova
+Galati
+Pitesti
+Sighisoara
+Târgu Mures
+
+// ROYAUME-UNI
+// ALERTE pas de villes dans ROYAUME-UNI
+
+// RUSSIE
+Moscou et Saint-Pétersbourg
+
+// RWANDA
+// ALERTE pas de villes dans RWANDA
+
+// SAINT-KITTS-ET-NEVIS
+// ALERTE pas de villes dans SAINT-KITTS-ET-NEVIS
+
+// SAINT-MARIN
+// ALERTE pas de villes dans SAINT-MARIN
+
+// SAINT-VINCENT-ET-LES-GRENADINES
+// ALERTE pas de villes dans SAINT-VINCENT-ET-LES-GRENADINES
+
+// SAINTE-LUCIE
+// ALERTE pas de villes dans SAINTE-LUCIE
+
+// SALOMON
+// ALERTE pas de villes dans SALOMON
+
+// SALVADOR
+// ALERTE pas de villes dans SALVADOR
+
+// SAMOA
+// ALERTE pas de villes dans SAMOA
+
+// SÃO-TOMÉ-ET-PRÍNCIPE
+// ALERTE pas de villes dans SÃO-TOMÉ-ET-PRÍNCIPE
+
+// SÉNÉGAL
+// ALERTE pas de villes dans SÉNÉGAL
+
+// SERBIE
+Ada Ciganlija
+Bajina Basta
+Batajnica
+Bela Palanka
+Bezanijska Kosa
+Bogutovac
+Bor
+Bujanovac
+Cacak
+Cukarika
+Doljevac
+Gruza
+Ivanjica
+Kragujevac
+Kraljevo
+Krusevac
+Leskovac
+Lestane
+Lipljan
+Ljubovija
+Lucani
+Nis
+Nova Varos
+Novi Beograd
+Novi Pazar
+Novi Sad
+Obrenovac
+Pancevo
+Petrovac
+Pozega
+Prahovo
+Priboj
+Prijepolje
+Sid
+Sjenica
+Smederevo
+Sombor
+Srbobran
+Subotica
+Tutin
+Uzice
+Valjevo
+Velika Plana
+Veliki Crljeni
+Vranje
+Vrsac
+Zajecar
+
+// SEYCHELLES
+// ALERTE pas de villes dans SEYCHELLES
+
+// SIERRA LEONE
+// ALERTE pas de villes dans SIERRA LEONE
+
+// SINGAPOUR
+// ALERTE pas de villes dans SINGAPOUR
+
+// SLOVAQUIE
+// ALERTE pas de villes dans SLOVAQUIE
+
+// SLOVÉNIE
+// ALERTE pas de villes dans SLOVÉNIE
+
+// SOMALIE
+// ALERTE pas de villes dans SOMALIE
+
+// SOUDAN DU SUD
+// ALERTE pas de villes dans SOUDAN DU SUD
+
+// SOUDAN
+// ALERTE pas de villes dans SOUDAN
+
+// SRI LANKA
+// ALERTE pas de villes dans SRI LANKA
+
+// SUÈDE
+// ALERTE pas de villes dans SUÈDE
+
+// SUISSE
+// ALERTE pas de villes dans SUISSE
+
+// SURINA
+// ALERTE pas de villes dans SURINA
+
+// SWAZILAND
+// ALERTE pas de villes dans SWAZILAND
+
+// SYRIE
+Abou Kamal
+Alep
+Deir Ez-Zor
+Deraa
+Hama
+Homs
+Kamechliyé
+Lattaquié
+Qoussair
+Rakka
+Tadmor
+
+// TADJIKISTAN
+// ALERTE pas de villes dans TADJIKISTAN
+
+// TAÏWAN
+// ALERTE pas de villes dans TAÏWAN
+
+// TANZANIE
+// ALERTE pas de villes dans TANZANIE
+
+// TCHAD
+Abéché
+Adré
+Abou Goulem
+Bongor
+Doba
+Maroua
+Massaguet
+Moundou
+Sarh
+
+// THAÏLANDE
+// ALERTE pas de villes dans THAÏLANDE
+
+// TIMOR-LESTE
+// ALERTE pas de villes dans TIMOR-LESTE
+
+// TOGO
+// ALERTE pas de villes dans TOGO
+
+// TONGA
+// ALERTE pas de villes dans TONGA
+
+// TRINITÉ-ET-TOBAGO
+// ALERTE pas de villes dans TRINITÉ-ET-TOBAGO
+
+// TUNISIE
+// ALERTE pas de villes dans TUNISIE
+
+// TURKMÉNISTAN
+// ALERTE pas de villes dans TURKMÉNISTAN
+
+// TURQUIE
+Adana
+Adapazarı
+Agri
+Akhisar
+Amasya
+Ankara
+Antakya
+Antalya
+Ardahan
+Aydın
+Balçova
+Belek
+Bingöl
+Bitlis
+Bodrum
+Bursa
+Çesme
+Ceyhan
+Diyarbakır
+Edirne
+Erzincan
+Erzurum
+Foça
+Gaziantep
+Göcek
+Iskenderun
+Istanbul
+Izmir
+Iznik
+Karaman
+Kars
+Karsıyaka
+Kayseri
+Kemer
+Kirikkale
+Konya
+Kusadasi
+Lara
+Malatya
+Manisa
+Maras
+Mardin
+Mersin
+Paladöken
+Saklıkent
+Samsun
+Sart
+Selçuk
+Sinop
+Siirt
+Sivas
+Tarse
+Trabzon
+Tunceli
+Urfa
+Van
+Yumurtalık
+Zonguldak
+
+// TUVALU
+// ALERTE pas de villes dans TUVALU
+
+// UKRAINE
+Chegueni
+Dnipropetrovsk
+Donetsk
+Kharkiv
+Kherson
+Kryvyï Rih
+Lviv
+Makiivka
+Marioupol
+Mykolaïv
+Odessa
+Rivne
+Tcherkassy
+Tchernobyl
+
+// UNION EUROPÉENNE
+// ALERTE pas de villes dans UNION EUROPÉENNE
+
+// Union soviétique
+// ALERTE pas de villes dans Union soviétique
+
+// URUGUAY
+// ALERTE pas de villes dans URUGUAY
+
+// VANUATU
+// ALERTE pas de villes dans VANUATU
+
+// VATICAN
+// ALERTE pas de villes dans VATICAN
+
+// VENEZUELA
+// ALERTE pas de villes dans VENEZUELA
+
+// VIETNA
+// ALERTE pas de villes dans VIETNA
+
+// YÉMEN
+// ALERTE pas de villes dans YÉMEN
+
+// ZAMBIE
+Chambezi
+Chingola
+Kabwe
+Kitwe
+Luanshya
+Mufulira
+
+// ZIMBABWE
+// ALERTE pas de villes dans ZIMBABWE
