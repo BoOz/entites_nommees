@@ -1,4 +1,4 @@
-# entites_nommees
+# Entités Nommées
 
 Plugin pour SPIP qui permet de découvrir des entités nommées dans un corpus. On essaie notamment de trouver les personnalités évoquées par période de temps.
 
@@ -25,3 +25,6 @@ Enfin on cherche en Regexp le masque Xxx Xxx xx xx Xxx sur le reliquat du texte 
 On obtient :
 -> Des Personnalités
 -> D'autres entités pour gonfler les listes prédéfinies.
+
+
+Installer un spip avec une base de donnée d'articles et le plugin itérateurs, puis appeler /?page=importer_entites et se rendre sur /?page=entites_nommees.
