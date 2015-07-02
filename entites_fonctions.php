@@ -276,10 +276,31 @@ function trouver_entites($texte,$id_article=""){
 	if(!is_array($fragments_fusionnes))
 		$fragments_fusionnes = array(0 => "PASDENTITE|PASDENTITE|$id_article|");
 
-	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
-	enregistrer_entites($fragments_fusionnes, $id_article);
+	// requalifier les Personnalités qui n'en sont pas par heuristique.
 
-	return $fragments_fusionnes ;
+	$lieux = ENTITES_LIEUX_HEURISTIQUE ;
+	$institutions = ENTITES_INSTITUTIONS_HEURISTIQUE ;
+
+	foreach($fragments_fusionnes as $v){
+		if(preg_match("/^(.*)\|(Personnalités)\|/",$v,$m)){
+			if(preg_match("/$lieux/U",$m[1])){
+				$f = preg_replace("/\|".$m[2]."\|/","|Lieux automatiques|",$v) ;
+				$fragments_traites[] = $f ;
+			}elseif(preg_match("/$institutions/U",$m[1])){
+				$f = preg_replace("/\|".$m[2]."\|/","|Institutions automatiques|",$v) ;
+				$fragments_traites[] = $f ;
+			}else{
+				$fragments_traites[] = $v ;
+			}			
+		}else{
+			$fragments_traites[] = $v ;
+		}
+	}
+
+	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
+	enregistrer_entites($fragments_traites, $id_article);
+
+	return $fragments_traites ;
 }
 
 

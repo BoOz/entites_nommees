@@ -45,6 +45,6 @@ define("ENTITES_PERSO","Machiavel|Molière|Mirabeau|Staline|Lénine|Mao|Bono|Mus
 
 /* Patterns pour isoler des entités restées parmis des personnalités */
 
-define("ENTITES_LIEUX_EURISTIQUE","Sud$|^Nord-|Nord$|Est$|Ouest$|Côte|Congo|République|Etats|City");
-define("ENTITES_INSTITUTIONS_EURISTIQUE","Nation|Ambassade|Conseil|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|Accords|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration");
+define("ENTITES_LIEUX_HEURISTIQUE","Sud$|^Nord-|Nord$|Est$|Ouest$|Côte|Congo|République|Etats|City");
+define("ENTITES_INSTITUTIONS_HEURISTIQUE","Nation|Ambassade|Conseil|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|Accords|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration");
 
