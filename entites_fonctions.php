@@ -2,46 +2,15 @@
 
 include('mots_courants.php');
 
+// remonter la limite de taille d'une regexp
+// essential for huge PCREs
+// ini_set("pcre.backtrack_limit", "10000000000000");
+// ini_set("pcre.recursion_limit", "10000000000000");
+
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
 define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒ-]");
 
-// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
-include_spip('iterateur/data');
-$types_entites_repertoires = inc_ls_to_array_dist('plugins/entites_nommees/listes_lexicales/*') ;
-
-/**/
-
-// define des entités connues à partir des listes texte.
-foreach($types_entites_repertoires as $type){
-	$type_entite = $type['file'] ;
-	$sous_categories = inc_ls_to_array_dist("plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
-	/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
-	if( sizeof($sous_categories) >= 1){
-		// var_dump(strtoupper($type_entite));
-		$entites_regexp = "" ;
-		foreach($sous_categories as $sous_categorie){
-			$sous_categorie_entites = $sous_categorie['file'] ;
-			//var_dump("-- " . $sous_categorie_entites);
-			$sous_cat_ent = file_get_contents("plugins/entites_nommees/listes_lexicales/$type_entite/$sous_categorie_entites");
-			$sous_cat_lol = inc_file_to_array_dist(trim($sous_cat_ent)) ;
-			
-			foreach($sous_cat_lol as $k => $ligne){
-				//pas de ligne vides ou de // commentaires 
-				if( preg_match(",^\/\/|^$,",$ligne) )
-					unset($sous_cat_lol[$k]);
-			}
-
-			if( sizeof($sous_cat_lol) >= 1)
-				foreach($sous_cat_lol as $entite_unique){
-					$entites_regexp .=  preg_quote($entite_unique) . "|" ;
-				}
-		}
-		$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
-		define(strtoupper($type_entite),$entites_regexp);
-	}
-}
-
-// var_dump("<pre>",PAYS,"</pre>");
+// var_dump("<pre>",$types_entites,"</pre>");
 
 // Isoler les entites connues (Institutions, Traités etc).
 function trouver_entites($texte,$id_article=""){
@@ -50,7 +19,7 @@ function trouver_entites($texte,$id_article=""){
 	$texte_original = $texte ;
 
 	// Traiter les notes de bas de pages.
-	//* SOURCES
+	// SOURCES
 	if(preg_match_all("/\[\[(.*)\]\]/Ums", $texte, $notes)){
 		foreach($notes[1] as $note){
 			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/ims",$note,$e)){
@@ -67,10 +36,68 @@ function trouver_entites($texte,$id_article=""){
 		}
 	}
 
+	// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
+	include_spip('iterateur/data');
+	$types_entites_repertoires = inc_ls_to_array_dist('plugins/entites_nommees/listes_lexicales/*') ;
+
+	// define des entités connues à partir des listes texte.
+	foreach($types_entites_repertoires as $type){
+		$type_entite = $type['file'] ;
+		$sous_categories = inc_ls_to_array_dist("plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
+		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
+		if( sizeof($sous_categories) >= 1){
+			// var_dump(strtoupper($type_entite));
+			$entites_regexp = "" ;
+			foreach($sous_categories as $sous_categorie){
+				$sous_categorie_entites = $sous_categorie['file'] ;
+				//var_dump("-- " . $sous_categorie_entites);
+				$sous_cat_ent = file_get_contents("plugins/entites_nommees/listes_lexicales/$type_entite/$sous_categorie_entites");
+				$sous_cat_lol = inc_file_to_array_dist(trim($sous_cat_ent)) ;
+				
+				foreach($sous_cat_lol as $k => $ligne){
+					//pas de ligne vides ou de // commentaires 
+					if( preg_match(",^\/\/|^$,",$ligne) OR trim($ligne) == "")
+						unset($sous_cat_lol[$k]);
+				}
+	
+				if( sizeof($sous_cat_lol) >= 1)
+					foreach($sous_cat_lol as $entite_unique){
+						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
+						$entites_regexp .=  preg_quote($entite_unique) . "|" ;
+					}
+			}
+			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
+			
+			// on fait des paquets de maximum 10000 de long.
+			$longueur = strlen($entites_regexp) ;
+			if ($longueur > 10000){
+				$nb = ceil($longueur / 10000) ;
+				// echo $type_entite . "est $nb fois trop long : " . strlen($entites_regexp) . "<br>" ;
+				// position du dernier | avant 40000 char
+				$i=1 ;
+				$chaine = $entites_regexp ;
+				$sous_chaine = array();
+				while($i <= $nb){
+					$pos = strrpos(substr($chaine, 0, 10000), "|") ;
+					// echo "dernier | du paquet $i à la pos : $pos" ;
+					$s_chaine = substr($chaine,0,$pos) ;
+					$types_entites[$type_entite.$i] = $s_chaine ;
+					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
+					$chaine = str_replace($s_chaine . "|" ,"", $chaine);
+					$i ++ ;
+				}			
+			}	
+			else
+				$types_entites[$type_entite] = $entites_regexp ;
+		}
+	}
+
+
+
 	// Isoler les entites connues (Institutions, Traités etc).
 	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
 
-	if(preg_match_all( "/" . INSTITUTIONS . "/ms" ,$texte,$e)){
+	if(preg_match_all( "`" . $types_entites['Institutions'] . "`" . "ms" ,$texte,$e)){
 			//var_dump($e);	
 			foreach($e[0] as $s){
 				// Trouver l'extrait
@@ -137,31 +164,14 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	// defini par l'arbo de fichiers du répertoire listes_lexicales
-	$type_reg = array(
-	//* PARTIS POLITIQUES
-		"Partis politiques" => "/" . PARTIS_POLITIQUES . "/",
-	//* PEUPLES
-		"Peuples" => "/" . PEUPLES . "/",
-	//* LIEUX
-	// Pays
-		"Pays" => "/" . PAYS . "/",
-	// Villes
-		"Villes" => "/" . VILLES . "/",
-	// Villes
-		"Geographie" => "/" . GEOGRAPHIE . "/",
-	// Medias
-		"Journaux" => "/" . JOURNAUX . "/"
-	);
-
-	// defini par l'arbo de fichiers du répertoire listes_lexicales
 	//$type_reg = array(
 	//* PARTIS POLITIQUES
-	//	"Villes" => "/" . VILLES . "/"
+	//	"Villes" => "`" . VILLES . "`"
 	//);
 
-	foreach($type_reg as $k => $v){
-		//var_dump("<br/><br/>$k<br/>",$v . "ms");
-		if(preg_match_all( $v . "ms" ,$texte,$e)){
+	foreach($types_entites as $k => $v){
+		//var_dump("<br/><br/>$k<br/>$v");
+		if(preg_match_all( "`" . $v . "`ms" ,$texte,$e)){
 			//var_dump($e);
 			foreach($e[0] as $s){
 				// Trouver l'extrait
@@ -184,8 +194,11 @@ function trouver_entites($texte,$id_article=""){
 					$texte = str_replace(trim($r[1]), "" , $texte);
 				}
 
+				// réguler les types avec plusieurs sous_chaines
+				$type = preg_replace("/(.*)\d+$/", "$1", $k) ;
+
 				// Enregistrer l'entite
-				$fragments[] = $s . "|$k|" . $id_article . "|" . $m[0];
+				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
 			}
 		}
 	}
@@ -251,18 +264,28 @@ function trouver_entites($texte,$id_article=""){
 			$personnalites[] = $m[1] ;
 	}
 
+	//var_dump("<pre>",$personnalites);
+
+
 	foreach($personnalites as $v){
-		$patronyme = array_pop(explode(" ",$v));
-		if(!$patronymes[$patronyme])
-			$patronymes[$patronyme] = $v ;
+		$a = explode(" ",$v) ;
+		if(is_array($a)){
+			$patronyme = array_pop($a);
+			if(!$patronymes[$patronyme])
+				$patronymes[$patronyme] = $v ;
+		}
 	}
 
-	//var_dump($patronymes);
+	//var_dump("<pre>",$patronymes);
 
 	foreach($fragments as $v){
 		if(preg_match("/^(.*)\|(Personnalités|INDETERMINE)\|/",$v,$m)){
-			if($patronymes[$m[1]]){
-				$f = preg_replace("/^".$m[1]."/",$patronymes[$m[1]],$v) ;
+			// attention aux noms de plus de deux mots
+			$noms = explode(" ",$m[1]) ;
+			$nom = array_pop($noms);
+			//var_dump("<pre>",$m[1],$nom);
+			if($patronymes[$nom]){
+				$f = preg_replace("/^".$m[1]."/",$patronymes[$nom],$v) ;
 				$f = preg_replace("/\|".$m[2]."\|/","|Personnalités|",$f) ;
 				$fragments_fusionnes[] = $f ;
 			}
@@ -273,6 +296,8 @@ function trouver_entites($texte,$id_article=""){
 				$fragments_fusionnes[] = $v ;
 	}
 	
+	//var_dump("<pre>",$fragments_fusionnes);
+
 	if(!is_array($fragments_fusionnes))
 		$fragments_fusionnes = array(0 => "PASDENTITE|PASDENTITE|$id_article|");
 
@@ -392,7 +417,7 @@ function preparer_texte($texte){
 
 function agreger_fragments($fragments = array()){ // noms pondérés
 
-	foreach ($fragments as $f){
+	foreach($fragments as $f){
 		
 		$fragment = explode("|",$f);
 	//var_dump("<pre>",$fragment);
@@ -413,11 +438,12 @@ function grouper_entites($entites = array()){ // noms pondérés
 
 	foreach ($entites as $entite){
 		$e = explode("|", $entite);
-
-		if(!$entites_ponderes[$e[1]][$e[0]])
-			$entites_ponderes[$e[1]][$e[0]] = 1 ;
+		// Réguler les types avec plusieurs sous chaines
+		$type = preg_replace("/(.*)\d+$/", "$1", $e[1]) ;
+		if(!$entites_ponderes[$type][$e[0]])
+			$entites_ponderes[$type][$e[0]] = 1 ;
 		else
-			$entites_ponderes[$e[1]][$e[0]] ++ ;	
+			$entites_ponderes[$type][$e[0]] ++ ;	
 	}
 
 	//var_dump("<pre>",$entites_ponderes,"</pre>");

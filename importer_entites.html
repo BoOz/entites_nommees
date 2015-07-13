@@ -25,7 +25,7 @@
 	</style>
 <script type="text/javascript">
 $(document).ready(function(){
-	 //setTimeout(function(){document.location.href='?page=importer_entites';},10000);
+	 setTimeout(function(){document.location.href='?page=importer_entites';},10000);
 });
 </script>
 
@@ -67,7 +67,7 @@ $(document).ready(function(){
 	<h3>Indexation</h3>
 
 	<ul style="width:80%; max-height:300px;margin: 0 30px;overflow:auto">
-	<BOUCLE_articles(DATA){source sql,#VAL{"select a.id_article, a.date_redac, a.titre from spip_articles a left join entites_nommees m on a.id_article=m.id_article where a.id_secteur=1 and LEWHERE m.id_article IS NULL limit 0,50"}|replace{LEWHERE,#GET{datecond}} }>
+	<BOUCLE_articles(DATA){source sql,#VAL{"select a.id_article, a.date_redac, a.titre from spip_articles a left join entites_nommees m on a.id_article=m.id_article where a.id_secteur=1  and a.statut in ('prop','publie') and m.id_article IS NULL order by a.date_redac desc limit 0,50"}|replace{LEWHERE,#GET{datecond}} }>
 		<li>#TITRE — [(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</li>
 	<BOUCLE_importer(ARTICLES){id_article}{statut IN prop, publie}>
 	#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
