@@ -28,5 +28,5 @@ On obtient :
 -> D'autres entités pour gonfler les listes prédéfinies.
 
 
-Installer un spip avec une base de donnée d'articles et le plugin itérateurs, puis appeler /?page=importer_entites et se rendre sur /?page=entites_nommees.
+Installer un spip avec une base de données d'articles + les plugins itérateurs et spip-cli, lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`.
 
