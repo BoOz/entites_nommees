@@ -45,6 +45,10 @@ function trouver_entites($texte,$id_article=""){
 	if(preg_match_all( "`" . $types_entites['Institutions'] . "`" . "ms" ,$texte,$e)){
 			//var_dump($e);	
 			foreach($e[0] as $s){
+
+				// nettoyage des entités choppées avec une ,. ou autre.
+				$s = trim(preg_replace("/\W+$/", "", $s));
+	
 				// Trouver l'extrait
 				preg_match("/\s(?:.{0,60})".trim($s)."(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
 				$extrait = trim($m[0]) ;
@@ -114,15 +118,17 @@ function trouver_entites($texte,$id_article=""){
 	//	"Villes" => "`" . VILLES . "`"
 	//);
 
+
+	/**/
 	foreach($types_entites as $k => $v){
 		//var_dump("<br/><br/>$k<br/>$v");
 		if(preg_match_all( "`" . $v . "`ms" ,$texte,$e)){
 			//var_dump($e);
 			foreach($e[0] as $s){
 				
-				// nettoyage
-				$s = trim(str_replace(".","", $s));
-				
+				// nettoyage des entités choppées avec une ,. ou autre.
+				$s = trim(preg_replace("/\W+$/", "", $s));
+					
 				// Trouver l'extrait
 				preg_match("/\s(?:.{0,60})".trim($s)."(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
 				$extrait = trim($m[0]) ;
@@ -504,7 +510,7 @@ function generer_types_entites(){
 				if( sizeof($sous_cat_lol) >= 1)
 					foreach($sous_cat_lol as $entite_unique){
 						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
-						$entites_regexp .=  preg_quote($entite_unique) . "(?:\s|\.)|" ;
+						$entites_regexp .=  preg_quote($entite_unique) . "\W|" ;
 					}
 			}
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
@@ -519,12 +525,12 @@ function generer_types_entites(){
 				$chaine = $entites_regexp ;
 				$sous_chaine = array();
 				while($i <= $nb){
-					$pos = strrpos(substr($chaine, 0, 10000), "(?:\s|\.)|") ;
+					$pos = strrpos(substr($chaine, 0, 10000), "\W|") ;
 					//echo "dernier | du paquet $i à la pos : $pos" ;
 					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$type_entite.$i] = $s_chaine . "(?:\s|\.)" ;
+					$types_entites[$type_entite.$i] = $s_chaine . "\W" ;
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
-					$chaine = str_replace($s_chaine . "(?:\s|\.)|" ,"", $chaine);
+					$chaine = str_replace($s_chaine . "\W|" ,"", $chaine);
 					$i ++ ;
 				}			
 			}	
