@@ -33,3 +33,10 @@ Lumières
 11-Septembre
 Mai 68
 guerre du Golfe
+
+// périodes
+XXe sciècle
+XIXe siècle
+
+// Institutions
+Parlement

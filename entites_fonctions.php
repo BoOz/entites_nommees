@@ -25,7 +25,7 @@ function trouver_entites($texte,$id_article=""){
 			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/ims",$note,$e)){
 				foreach($e[1] as $s){
 					// Trouver l'extrait
-					preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/",$texte,$m);
+					preg_match("`(\s(?:.{0,60})$s(?:.{0,60})\s)`",$texte,$m);
 					// Virer dans cet extrait
 					$extrait = $m[0] ;
 					$extrait_propre = str_replace($s,"",$extrait);
@@ -266,15 +266,15 @@ function trouver_entites($texte,$id_article=""){
 
 	//var_dump("<pre>",$personnalites);
 
-
-	foreach($personnalites as $v){
-		$a = explode(" ",$v) ;
-		if(is_array($a)){
-			$patronyme = array_pop($a);
-			if(!$patronymes[$patronyme])
-				$patronymes[$patronyme] = $v ;
+	if(is_array($personnalites))
+		foreach($personnalites as $v){
+			$a = explode(" ",$v) ;
+			if(is_array($a)){
+				$patronyme = array_pop($a);
+				if(!$patronymes[$patronyme])
+					$patronymes[$patronyme] = $v ;
+			}
 		}
-	}
 
 	//var_dump("<pre>",$patronymes);
 
@@ -470,7 +470,6 @@ function afficher_noms($noms = array()){ // noms pondérés
 
 function trouver_entites_residuelles($texte){
 
-
 	preg_match_all("/((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+/U",$texte,$m);
 
 	//var_dump("<pre>",$m);
@@ -503,6 +502,7 @@ function trouver_extraits_entites_residuelles($texte, $noms=array()){
 }
 
 function enregistrer_entites($entites = array(), $id_article){
+		
 	// effacer les entites deja enregistrées pour cet article (maj)
 	include_spip("base/abstract_sql");
 	//var_dump("delete from entites_nommees where id_article=$id_article");

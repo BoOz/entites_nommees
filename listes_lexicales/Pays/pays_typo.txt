@@ -13,7 +13,6 @@ Etat d'Israël
 Etat de Bahreïn
 Etat du Koweït
 Etat indépendant des Samoa
-Etat islamique d'Afghanistan
 Etat libre associé de Porto Rico
 Etat mongol
 Etats fédérés de Micronésie
@@ -35,7 +34,7 @@ Royaume du Swaziland
 Royaume hachémite de Jordanie
 Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
 République algérienne démocratique et populaire
-République arabe d'Egypte
+République arabe d'Égypte
 République arabe syrienne
 République argentine
 République centrafricaine
@@ -148,6 +147,7 @@ République fédérative du Brésil
 République gabonaise
 République hellénique
 République hongroise
+République islamique d'Afghanistan
 République islamique d'Iran
 République islamique de Mauritanie
 République islamique du Pakistan
@@ -155,6 +155,7 @@ République italienne
 République kirghize
 République libanaise
 République orientale de l'Uruguay
+République populaire de Chine
 République populaire du Bangladesh
 République populaire démocratique de Corée
 République portugaise
@@ -165,7 +166,6 @@ République tchèque
 République tunisienne
 République turque
 République unie de Tanzanie
-Serbie
 Turkménistan
 Tuvalu
 Union des Comores
@@ -188,7 +188,6 @@ sultanat d'Oman
 sultanat de Brunei
 émirat du Qatar
 îles Salomon
-
 // Pays
 Afghanistan
 Afrique du sud
@@ -232,6 +231,7 @@ Chili
 Chine
 Chypre
 Colombie
+Commonwealth of nations
 Comores
 Congo
 Corée du nord
@@ -295,6 +295,7 @@ Liban
 Liberia
 Libye
 Liechtenstein
+Lieux de publication
 Lituanie
 Luxembourg
 Macédoine
@@ -310,6 +311,7 @@ Maurice
 Mauritanie
 Mexique
 Micronésie
+Missions et opérations de maintien de la paix de l'onu
 Moldavie
 Monaco
 Mongolie
@@ -326,7 +328,8 @@ Nouvelle-calédonie
 Nouvelle-zélande
 Nunavut
 Oman
-Onu
+Organisation des nations unies
+Organisation internationale de la francophonie
 Ouganda
 Ouzbékistan
 Pakistan
@@ -358,7 +361,6 @@ Salvador
 Samoa
 São-tomé-et-príncipe
 Sénégal
-Serbie
 Seychelles
 Sierra leone
 Singapour
@@ -398,4 +400,4 @@ Venezuela
 Vietnam
 Yémen
 Zambie
-Zimbabwe 
+Zimbabwe
