@@ -21,6 +21,8 @@
 			float:left;
 			width:12%;
 			margin-left:30px;
+			max-height:500px;
+			overflow:auto;
 		}
 	</style>
 </head>
@@ -96,10 +98,11 @@
 <div style="clear:left"></div>
 
 <div class="col">
- <h3>#TYPE_ENTITE</h3>
-
 	<B_personnalites_frequents>
 	#ANCRE_PAGINATION
+
+ <h3>Personnalités</h3>
+
 	<ul>
 	<BOUCLE_personnalites_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite having nb > 1 order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
 		<li>#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
@@ -114,12 +117,11 @@
 
 <BOUCLE_types(DATA){source sql, "select type_entite from entites_nommees where type_entite not in ('INDETERMINE','Personnalités') group by type_entite"}>
 <div class="col">
- <h3>#TYPE_ENTITE</h3>
-
-	<B_entite_frequents>
+<B_entite_frequents> 
+<h3>#TYPE_ENTITE</h3>
 	#ANCRE_PAGINATION
 	<ul>
-	<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by entite asc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
+	<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
 		<li>#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 	</small>
 		</li>

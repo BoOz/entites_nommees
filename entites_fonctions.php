@@ -264,7 +264,7 @@ function trouver_entites($texte,$id_article=""){
 	foreach($fragments_fusionnes as $v){
 		if(preg_match("/^(.*)\|(Personnalités)\|/",$v,$m)){
 			if(preg_match("/$lieux/U",$m[1])){
-				$f = preg_replace("/\|".$m[2]."\|/","|Lieux automatiques|",$v) ;
+				$f = preg_replace("/\|".$m[2]."\|/","|Géographie (auto)|",$v) ;
 				$fragments_traites[] = $f ;
 			}elseif(preg_match("/$institutions/U",$m[1])){
 				$f = preg_replace("/\|".$m[2]."\|/","|Institutions automatiques|",$v) ;
