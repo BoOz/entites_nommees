@@ -25,9 +25,8 @@ function trouver_entites($texte,$id_article=""){
 			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/ims",$note,$e)){
 				foreach($e[1] as $s){
 					// Trouver l'extrait
-					preg_match("`(\s(?:.{0,60})$s(?:.{0,60})\s)`",$texte,$m);
-					// Virer dans cet extrait
-					$extrait = $m[0] ;
+					preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
+					$extrait = trim($m[0]) ;
 					$extrait_propre = str_replace($s,"",$extrait);
 					$texte = str_replace($extrait, $extrait_propre , $texte);
 					$fragments[] = $s . "|Sources|" . $id_article . "|" . $m[0];			
@@ -50,7 +49,7 @@ function trouver_entites($texte,$id_article=""){
 				$s = trim(preg_replace("/\W+$/", "", $s));
 	
 				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim($s)."(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
+				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
 				$extrait = trim($m[0]) ;
 
 				// Virer l'entité dans cet extrait, puis dans le texte.
@@ -88,8 +87,7 @@ function trouver_entites($texte,$id_article=""){
 	foreach($entites_inconnues[0] as $s){
 		
 		// Trouver l'extrait
-		preg_match("/\s(?:.{0,60})$s(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
-
+		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
 		$extrait = trim($m[0]) ;
 
 		// Virer l'entité dans cet extrait, puis dans le texte.
@@ -130,7 +128,7 @@ function trouver_entites($texte,$id_article=""){
 				$s = trim(preg_replace("/\W+$/", "", $s));
 					
 				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim($s)."(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
+				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
 				$extrait = trim($m[0]) ;
 
 				// Virer l'entité dans cet extrait, puis dans le texte.

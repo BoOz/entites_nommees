@@ -40,6 +40,7 @@ Ve République
 
 
 // périodes
+XXIe siècle
 XXe siècle
 XIXe siècle
 XVIIIe siècle
@@ -58,6 +59,7 @@ Parti socialiste
 
 // pays
 Serbie
+Sahara occidental
 
 // régime
 République
