@@ -41,6 +41,7 @@ function trouver_entites($texte,$id_article=""){
 	$types_entites_repertoires = inc_ls_to_array_dist('plugins/entites_nommees/listes_lexicales/*') ;
 
 	// define des entités connues à partir des listes texte.
+	// define des entités connues à partir des listes texte.
 	foreach($types_entites_repertoires as $type){
 		$type_entite = $type['file'] ;
 		$sous_categories = inc_ls_to_array_dist("plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
@@ -63,7 +64,7 @@ function trouver_entites($texte,$id_article=""){
 				if( sizeof($sous_cat_lol) >= 1)
 					foreach($sous_cat_lol as $entite_unique){
 						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
-						$entites_regexp .=  preg_quote($entite_unique) . "|" ;
+						$entites_regexp .=  preg_quote($entite_unique) . "(?:\s|\.)|" ;
 					}
 			}
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
@@ -78,12 +79,12 @@ function trouver_entites($texte,$id_article=""){
 				$chaine = $entites_regexp ;
 				$sous_chaine = array();
 				while($i <= $nb){
-					$pos = strrpos(substr($chaine, 0, 10000), "|") ;
-					// echo "dernier | du paquet $i à la pos : $pos" ;
+					$pos = strrpos(substr($chaine, 0, 10000), "(?:\s|\.)|") ;
+					//echo "dernier | du paquet $i à la pos : $pos" ;
 					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$type_entite.$i] = $s_chaine ;
+					$types_entites[$type_entite.$i] = $s_chaine . "(?:\s|\.)" ;
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
-					$chaine = str_replace($s_chaine . "|" ,"", $chaine);
+					$chaine = str_replace($s_chaine . "(?:\s|\.)|" ,"", $chaine);
 					$i ++ ;
 				}			
 			}	
@@ -91,8 +92,6 @@ function trouver_entites($texte,$id_article=""){
 				$types_entites[$type_entite] = $entites_regexp ;
 		}
 	}
-
-
 
 	// Isoler les entites connues (Institutions, Traités etc).
 	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
@@ -174,6 +173,10 @@ function trouver_entites($texte,$id_article=""){
 		if(preg_match_all( "`" . $v . "`ms" ,$texte,$e)){
 			//var_dump($e);
 			foreach($e[0] as $s){
+				
+				// nettoyage
+				$s = trim(str_replace(".","", $s));
+				
 				// Trouver l'extrait
 				preg_match("/\s(?:.{0,60})".trim($s)."(?:.{0,60})(?:\s|,|\.)/",$texte,$m);
 				$extrait = trim($m[0]) ;

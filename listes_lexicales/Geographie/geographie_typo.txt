@@ -1,3 +1,6 @@
+// attention aux Rey, Vladimir et autres Abou Moussa qui flinguent des noms.
+
+
 // Continents
 Afrique-maghreb
 Amériques
