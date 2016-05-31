@@ -36,62 +36,8 @@ function trouver_entites($texte,$id_article=""){
 		}
 	}
 
-	// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
-	include_spip('iterateur/data');
-	$types_entites_repertoires = inc_ls_to_array_dist('plugins/entites_nommees/listes_lexicales/*') ;
-
-	// define des entités connues à partir des listes texte.
-	// define des entités connues à partir des listes texte.
-	foreach($types_entites_repertoires as $type){
-		$type_entite = $type['file'] ;
-		$sous_categories = inc_ls_to_array_dist("plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
-		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
-		if( sizeof($sous_categories) >= 1){
-			// var_dump(strtoupper($type_entite));
-			$entites_regexp = "" ;
-			foreach($sous_categories as $sous_categorie){
-				$sous_categorie_entites = $sous_categorie['file'] ;
-				//var_dump("-- " . $sous_categorie_entites);
-				$sous_cat_ent = file_get_contents("plugins/entites_nommees/listes_lexicales/$type_entite/$sous_categorie_entites");
-				$sous_cat_lol = inc_file_to_array_dist(trim($sous_cat_ent)) ;
-				
-				foreach($sous_cat_lol as $k => $ligne){
-					//pas de ligne vides ou de // commentaires 
-					if( preg_match(",^\/\/|^$,",$ligne) OR trim($ligne) == "")
-						unset($sous_cat_lol[$k]);
-				}
-	
-				if( sizeof($sous_cat_lol) >= 1)
-					foreach($sous_cat_lol as $entite_unique){
-						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
-						$entites_regexp .=  preg_quote($entite_unique) . "(?:\s|\.)|" ;
-					}
-			}
-			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
-			
-			// on fait des paquets de maximum 10000 de long.
-			$longueur = strlen($entites_regexp) ;
-			if ($longueur > 10000){
-				$nb = ceil($longueur / 10000) ;
-				// echo $type_entite . "est $nb fois trop long : " . strlen($entites_regexp) . "<br>" ;
-				// position du dernier | avant 40000 char
-				$i=1 ;
-				$chaine = $entites_regexp ;
-				$sous_chaine = array();
-				while($i <= $nb){
-					$pos = strrpos(substr($chaine, 0, 10000), "(?:\s|\.)|") ;
-					//echo "dernier | du paquet $i à la pos : $pos" ;
-					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$type_entite.$i] = $s_chaine . "(?:\s|\.)" ;
-					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
-					$chaine = str_replace($s_chaine . "(?:\s|\.)|" ,"", $chaine);
-					$i ++ ;
-				}			
-			}	
-			else
-				$types_entites[$type_entite] = $entites_regexp ;
-		}
-	}
+	// types d'entites définis dans les listes txt.
+	$types_entites =  generer_types_entites();
 
 	// Isoler les entites connues (Institutions, Traités etc).
 	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
@@ -526,4 +472,68 @@ function enregistrer_entites($entites = array(), $id_article){
 
 }
 
+/**/
+function generer_types_entites(){
+	// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
+	include_spip('iterateur/data');
+	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
 
+	/* define des entités connues à partir des listes texte.
+	*/
+
+	foreach($types_entites_repertoires as $type){
+		$type_entite = $type['file'] ;
+	
+		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
+		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
+		if( sizeof($sous_categories) >= 1){
+			// var_dump(strtoupper($type_entite));
+			$entites_regexp = "" ;
+			foreach($sous_categories as $sous_categorie){
+				$sous_categorie_entites = $sous_categorie['file'] ;
+				//var_dump("-- " . $sous_categorie_entites);
+				$sous_cat_ent = file_get_contents(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$type_entite/$sous_categorie_entites");
+				$sous_cat_lol = inc_file_to_array_dist(trim($sous_cat_ent)) ;
+				
+				foreach($sous_cat_lol as $k => $ligne){
+					//pas de ligne vides ou de // commentaires 
+					if( preg_match(",^\/\/|^$,",$ligne) OR trim($ligne) == "")
+						unset($sous_cat_lol[$k]);
+				}
+	
+				if( sizeof($sous_cat_lol) >= 1)
+					foreach($sous_cat_lol as $entite_unique){
+						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
+						$entites_regexp .=  preg_quote($entite_unique) . "(?:\s|\.)|" ;
+					}
+			}
+			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
+			
+			// on fait des paquets de maximum 10000 de long.
+			$longueur = strlen($entites_regexp) ;
+			if ($longueur > 10000){
+				$nb = ceil($longueur / 10000) ;
+				// echo $type_entite . "est $nb fois trop long : " . strlen($entites_regexp) . "<br>" ;
+				// position du dernier | avant 40000 char
+				$i=1 ;
+				$chaine = $entites_regexp ;
+				$sous_chaine = array();
+				while($i <= $nb){
+					$pos = strrpos(substr($chaine, 0, 10000), "(?:\s|\.)|") ;
+					//echo "dernier | du paquet $i à la pos : $pos" ;
+					$s_chaine = substr($chaine,0,$pos) ;
+					$types_entites[$type_entite.$i] = $s_chaine . "(?:\s|\.)" ;
+					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
+					$chaine = str_replace($s_chaine . "(?:\s|\.)|" ,"", $chaine);
+					$i ++ ;
+				}			
+			}	
+			else
+				$types_entites[$type_entite] = $entites_regexp ;
+		}
+	}
+		
+	return $types_entites ;
+
+
+}

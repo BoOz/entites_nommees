@@ -6,8 +6,8 @@
 
 <p>
 <strong>Année :</strong> 
-<BOUCLE_arta(ARTICLES){statut IN prop, publie}{!par date_redac}{id_secteur=1}{fusion DATE_FORMAT(date_redac, '%Y')}>
-[(#SET{date,[(#DATE_REDAC|annee)]})]
+<BOUCLE_arta(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y')}>
+[(#SET{date,[(#DATE|annee)]})]
 <a href="?page=[(#ENV{mode_chercher,entites_nommees})]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
 </BOUCLE_arta>
 </p>
@@ -15,8 +15,8 @@
 
 <p>
 <strong>Numéro :</strong>
-<BOUCLE_artn(ARTICLES){statut IN prop, publie}{!par date_redac}{id_secteur=1}{fusion DATE_FORMAT(date_redac, '%Y-%m')}>
-[(#SET{date,[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]})]
+<BOUCLE_artn(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y-%m')}>
+[(#SET{date,[(#DATE|annee)][-(#DATE|mois)]})]
 <a href="?page=[(#ENV{mode_chercher,entites_nommees})]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
 </BOUCLE_artn>
 </p>
