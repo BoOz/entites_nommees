@@ -21,6 +21,19 @@ Afrique du Sud
 Serbie
 Sahara occidental
 
+// villes non présentes dans typo
+
+New York
+
+// peuples mixtes
+Latino-|Américano-|Franco-
+
+// Exeptions
+Soviétiques?|Britanniques?|Européens?
+
+// Minorités
+Noirs?|Juifs?|Kurdes?|Africains?|Hutus?|Tutsis?|Arabes?
+
 
 // Journaux souvent cités dans le Diplo
 Le Monde diplomatique
@@ -102,3 +115,6 @@ Nuit debout
 
 // expressions
 Occident
+
+
+
