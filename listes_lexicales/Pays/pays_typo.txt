@@ -1,6 +1,3 @@
-// TO DO : Ne pas mettre des mots trop critique genre Iran qui casserait République Islamique d'iran
-// http://archives.mondediplo.com/?page=pays_typo
-
 // Pays (nom officiel)
 Burkina Faso
 Commonwealth d'Australie
@@ -14,7 +11,6 @@ Etat de Bahreïn
 Etat du Koweït
 Etat indépendant des Samoa
 Etat libre associé de Porto Rico
-Etat mongol
 Etats fédérés de Micronésie
 Etats-Unis d'Amérique
 Etats-Unis du Mexique
@@ -23,6 +19,8 @@ Fédération de Saint-Kitts-et-Nevis
 Grenade
 Jamahiriya
 Jamaïquain
+Japon
+Mongolie
 Monténégro
 Nouvelle-Zélande
 Papouasie-Nouvelle-Guinée
@@ -69,7 +67,7 @@ République de Finlande
 République de Guatemala
 République de Guinée
 République de Guinée-Bissau
-République de Guinée-Equatoriale
+République de Guinée-Équatoriale
 République de Géorgie
 République de Kiribati
 République de Lettonie
@@ -119,6 +117,7 @@ République du Mali
 République du Mozambique
 République du Nicaragua
 République du Niger
+République du Népal
 République du Panamá
 République du Paraguay
 République du Pérou
@@ -170,7 +169,7 @@ Turkménistan
 Tuvalu
 Union des Comores
 grand-duché de Luxembourg
-les Emirats arabes unis
+les Émirats arabes unis
 principauté d'Andorre
 principauté de Monaco
 royaume d'Arabie saoudite
@@ -183,39 +182,32 @@ royaume du Bhoutan
 royaume du Cambodge
 royaume du Lesotho
 royaume du Maroc
-royaume du Népal
 sultanat d'Oman
 sultanat de Brunei
 émirat du Qatar
 îles Salomon
 // Pays
-Afghanistan
-Afrique du sud
-Albanie
+Afrique du Sud
 Algérie
-Allemagne
 Andorre
 Angola
-Antigua-et-barbuda
+Antigua-et-Barbuda
 Arabie saoudite
 Argentine
 Arménie
 Australie
 Autriche
-Azerbaïdjan
 Bahamas
 Bahreïn
-Bangladesh
 Barbade
 Bédouins
 Belgique
 Belize
 Bénin
-Bhoutan
 Biélorussie
 Birmanie
 Bolivie
-Bosnie-herzégovine
+Bosnie-Herzégovine
 Botswana
 Brésil
 Brunei
@@ -225,31 +217,26 @@ Burundi
 Cambodge
 Cameroun
 Canada
-Cap-vert
+Cap-Vert
 Centrafrique
 Chili
-Chine
 Chypre
 Colombie
-Commonwealth of nations
 Comores
 Congo
-Corée du nord
-Corée du sud
-Costa rica
-Côte d'ivoire
+Costa Rica
+Côte d'Ivoire
 Croatie
 Cuba
 Danemark
 Djibouti
 Dominique
-Égypte
 Émirats arabes unis
 Équateur
 Érythrée
 Espagne
 Estonie
-États-unis
+États-Unis
 Éthiopie
 Ex-yougoslavie
 Fidji
@@ -263,28 +250,24 @@ Grèce
 Grenade
 Guatemala
 Guinée
-Guinée-bissau
-Guinée-équatoriale
+Guinée-Bissau
+Guinée-Équatoriale
 Guyana
 Haïti
 Honduras
 Hongrie
 Hors-caste
-Inde
 Indonésie
 Irak
 Iran
 Irlande
-Irlande du nord
+Irlande du Nord
 Islande
 Israël
 Italie
 Jamaïque
-Japon
 Jordanie
-Kazakhstan
 Kenya
-Kirghizstan
 Kiribati
 Kosovo
 Koweït
@@ -311,82 +294,70 @@ Maurice
 Mauritanie
 Mexique
 Micronésie
-Missions et opérations de maintien de la paix de l'onu
 Moldavie
 Monaco
-Mongolie
 Monténégro
 Mozambique
 Namibie
 Nauru
-Népal
 Nicaragua
 Niger
 Nigeria
 Norvège
-Nouvelle-calédonie
-Nouvelle-zélande
+Nouvelle-Calédonie
+Nouvelle-Zélande
 Nunavut
 Oman
-Organisation des nations unies
-Organisation internationale de la francophonie
 Ouganda
-Ouzbékistan
-Pakistan
 Palau
 Palestine
 Panamá
-Papouasie-nouvelle-guinée
+Papouasie-Nouvelle-Guinée
 Paraguay
-Pays-bas
+Pays-Bas
 Pérou
 Philippines
 Pologne
 Porto rico
 Portugal
 Qatar
-République démocratique du congo
+République démocratique du Congo
 République dominicaine
 République tchèque
 Roumanie
 Royaume-uni
 Russie
 Rwanda
-Saint-kitts-et-nevis
-Saint-marin
-Saint-vincent-et-les-grenadines
-Sainte-lucie
+Saint-Kitts-et-Nevis
+Saint-Marin
+Saint-Vincent-et-les-Grenadines
+Sainte-Lucie$
 Salomon
 Salvador
 Samoa
-São-tomé-et-príncipe
+São-Tomé-et-Príncipe
 Sénégal
 Seychelles
-Sierra leone
-Singapour
+Sierra Leone
 Slovaquie
 Slovénie
 Somalie
-Soudan du sud
+Soudan du Sud
 Soudan
-Sri lanka
 Suède
 Suisse
 Surinam
 Swaziland
 Syrie
-Tadjikistan
-Taïwan
 Tanzanie
 Tchad
 Thaïlande
-Timor-leste
+Timor-Leste
 Togo
 Tonga
 Touaregs
-Trinité-et-tobago
+Trinité-et-Tobago
 Tunisie
-Turkménistan
 Turquie
 Tuvalu
 Tziganes
@@ -397,7 +368,30 @@ Uruguay
 Vanuatu
 Vatican
 Venezuela
-Vietnam
 Yémen
 Zambie
 Zimbabwe
+Afghanistan
+Albanie
+Allemagne
+Azerbaïdjan
+Bangladesh
+Bhoutan
+Chine
+Corée du Nord
+Corée du Sud
+Égypte
+Inde
+Japon
+Kazakhstan
+Kirghizstan
+Mongolie
+Népal
+Ouzbékistan
+Pakistan
+Singapour
+Sri lanka
+Tadjikistan
+Taïwan
+Turkménistan
+Vietnam 

@@ -5,6 +5,11 @@
 <div>
 <BOUCLE_listes(DATA){source table,#VAL|generer_types_entites}>
 <h3>#CLE</h3>
-<p>#VALEUR</p>
+
+<ul>
+<BOUCLE_ls(DATA){source table, #VALEUR|explode{"|"}}>
+<li>#VALEUR</li>
+</BOUCLE_ls>
+</ul>
 </BOUCLE_listes>
 </div>

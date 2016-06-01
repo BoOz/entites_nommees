@@ -507,6 +507,11 @@ function generer_types_entites(){
 	
 				if( sizeof($sous_cat_lol) >= 1)
 					foreach($sous_cat_lol as $entite_unique){
+						// nettoyer
+						$entite_unique = trim($entite_unique);
+						// forme développée ou pas
+						//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
+						
 						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
 						$entites_regexp .=  preg_quote($entite_unique) . "\W|" ;
 					}

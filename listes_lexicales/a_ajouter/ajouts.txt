@@ -9,6 +9,7 @@ Amérique du nord
 Amérique latine
 Amérique
 
+
 Proche-Orient
 
 // Pays
@@ -20,6 +21,7 @@ République islamique
 Afrique du Sud
 Serbie
 Sahara occidental
+Empire ottoman
 
 // villes non présentes dans typo
 
@@ -29,7 +31,7 @@ New York
 Latino-|Américano-|Franco-
 
 // Exeptions
-Soviétiques?|Britanniques?|Européens?
+Soviétiques?|Britanniques?|Européens?|Américains?
 
 // Minorités
 Noirs?|Juifs?|Kurdes?|Africains?|Hutus?|Tutsis?|Arabes?
@@ -38,7 +40,9 @@ Noirs?|Juifs?|Kurdes?|Africains?|Hutus?|Tutsis?|Arabes?
 // Journaux souvent cités dans le Diplo
 Le Monde diplomatique
 Le Monde
+Monde
 Al-Masri Al-Youm
+Agence France-Presse
 
 
 // Institutions
@@ -116,5 +120,8 @@ Nuit debout
 // expressions
 Occident
 
+// économie
+PIB
+Bourse
 
 
