@@ -7,6 +7,7 @@ Afrique
 Amérique centrale
 Amérique du nord
 Amérique latine
+Amérique du Sud
 Amérique
 
 
@@ -16,9 +17,7 @@ Proche-Orient
 
 Grande-Bretagne
 Yougoslavie
-Etats-Unis
 République islamique
-Afrique du Sud
 Serbie
 Sahara occidental
 Empire ottoman

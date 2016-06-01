@@ -20,12 +20,12 @@ function trouver_entites($texte,$id_article=""){
 
 	// Traiter les notes de bas de pages.
 	// SOURCES
-	if(preg_match_all("/\[\[(.*)\]\]/Ums", $texte, $notes)){
+	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
 		foreach($notes[1] as $note){
-			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/ims",$note,$e)){
+			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/uims",$note,$e)){
 				foreach($e[1] as $s){
 					// Trouver l'extrait
-					preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
+					preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
 					$extrait = trim($m[0]) ;
 					$extrait_propre = str_replace($s,"",$extrait);
 					$texte = str_replace($extrait, $extrait_propre , $texte);
@@ -41,15 +41,15 @@ function trouver_entites($texte,$id_article=""){
 	// Isoler les entites connues (Institutions, Traités etc).
 	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
 
-	if(preg_match_all( "`" . $types_entites['Institutions'] . "`" . "ms" ,$texte,$e)){
+	if(preg_match_all( "`" . $types_entites['Institutions'] . "`" . "ums" ,$texte,$e)){
 			//var_dump($e);	
 			foreach($e[0] as $s){
 
 				// nettoyage des entités choppées avec une ,. ou autre.
-				$s = trim(preg_replace("/\W+$/", "", $s));
+				$s = trim(preg_replace("/\W+$/u", "", $s));
 	
 				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
+				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
 				$extrait = trim($m[0]) ;
 
 				// Virer l'entité dans cet extrait, puis dans le texte.
@@ -61,7 +61,7 @@ function trouver_entites($texte,$id_article=""){
 				}
 
 				// En cas d'accronyme, virer aussi la forme réduite
-				if(preg_match("/$acronymes/U", $s, $r)){
+				if(preg_match("/$acronymes/Uu", $s, $r)){
 					// En cas d'accronyme, virer aussi la forme réduite
 					$texte = str_replace(trim($r[2]), "" , $texte);
 					// et la forme moyenne
@@ -78,7 +78,7 @@ function trouver_entites($texte,$id_article=""){
 	$texte = str_replace("}", "", $texte);
 
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	preg_match_all("/$acronymes/U", $texte, $entites_inconnues);
+	preg_match_all("/$acronymes/Uu", $texte, $entites_inconnues);
 
 	//var_dump("<pre>");
 	//var_dump($entites_inconnues);
@@ -87,7 +87,7 @@ function trouver_entites($texte,$id_article=""){
 	foreach($entites_inconnues[0] as $s){
 		
 		// Trouver l'extrait
-		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
+		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
 		$extrait = trim($m[0]) ;
 
 		// Virer l'entité dans cet extrait, puis dans le texte.
@@ -98,7 +98,7 @@ function trouver_entites($texte,$id_article=""){
 			$texte = str_replace($extrait, $extrait_propre , $texte);
 		}
 
-		if(preg_match("/$acronymes/U", $s, $r)){
+		if(preg_match("/$acronymes/Uu", $s, $r)){
 			// En cas d'accronyme, virer aussi la forme réduite
 			$texte = str_replace(trim($r[2]), "" , $texte);
 			// et la forme moyenne
@@ -120,15 +120,15 @@ function trouver_entites($texte,$id_article=""){
 	/**/
 	foreach($types_entites as $k => $v){
 		//var_dump("<br/><br/>$k<br/>$v");
-		if(preg_match_all( "`" . $v . "`ms" ,$texte,$e)){
+		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
 			//var_dump($e);
 			foreach($e[0] as $s){
 				
 				// nettoyage des entités choppées avec une ,. ou autre.
-				$s = trim(preg_replace("/\W+$/", "", $s));
+				$s = trim(preg_replace("/\W+$/u", "", $s));
 					
 				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/",$texte,$m);
+				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
 				$extrait = trim($m[0]) ;
 
 				// Virer l'entité dans cet extrait, puis dans le texte.
@@ -140,7 +140,7 @@ function trouver_entites($texte,$id_article=""){
 				}
 
 				// En cas d'accronyme, virer aussi la forme réduite
-				if(preg_match("/$acronymes/U", $s, $r)){
+				if(preg_match("/$acronymes/Uu", $s, $r)){
 					// En cas d'accronyme, virer aussi la forme réduite
 					$texte = str_replace(trim($r[2]), "" , $texte);
 					// et la forme moyenne
@@ -148,7 +148,7 @@ function trouver_entites($texte,$id_article=""){
 				}
 
 				// réguler les types avec plusieurs sous_chaines
-				$type = preg_replace("/(.*)\d+$/", "$1", $k) ;
+				$type = preg_replace("/(.*)\d+$/u", "$1", $k) ;
 
 				// Enregistrer l'entite
 				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
@@ -168,7 +168,7 @@ function trouver_entites($texte,$id_article=""){
 	// Trouver l'extrait
 	// Virer l'entité dans cet extrait concerné (M. Kennedy)
 	foreach($noms as $s){
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/",$texte,$m);
+		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
 		$extrait = $m[0] ;
 		$extrait_propre = str_replace($s,"",$extrait);
 		$texte = str_replace($extrait, $extrait_propre , $texte);
@@ -178,12 +178,12 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	// Isoler les présidents résiduels
-	preg_match_all("/président\s([A-Z]". LETTRES ."+)/", $texte, $presidents);
+	preg_match_all("/président\s([A-Z]". LETTRES ."+)/u", $texte, $presidents);
 
 	$i=0;
 	foreach($presidents[0] as $s){
 		// Trouver l'extrait
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/",$texte,$m);
+		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
 		// Virer l'entité dans cet extrait
 		$extrait = $m[0] ;
 		$extrait_propre = str_replace($s,"",$extrait);
@@ -201,7 +201,7 @@ function trouver_entites($texte,$id_article=""){
 
 	foreach($entites_residuelles as $s){
 		// Trouver l'extrait
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/",$texte,$m);
+		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
 		// Virer l'entité dans cet extrait
 		$extrait = $m[0] ;
 		$extrait_propre = str_replace($s,"",$extrait);
@@ -213,7 +213,7 @@ function trouver_entites($texte,$id_article=""){
 	// fusionner les personnalités.
 
 	foreach($fragments as $v){
-		if(preg_match("/(.*)\|Personnalités\|/",$v,$m))
+		if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
 			$personnalites[] = $m[1] ;
 	}
 
@@ -232,14 +232,14 @@ function trouver_entites($texte,$id_article=""){
 	//var_dump("<pre>",$patronymes);
 
 	foreach($fragments as $v){
-		if(preg_match("/^(.*)\|(Personnalités|INDETERMINE)\|/",$v,$m)){
+		if(preg_match("/^(.*)\|(Personnalités|INDETERMINE)\|/u",$v,$m)){
 			// attention aux noms de plus de deux mots
 			$noms = explode(" ",$m[1]) ;
 			$nom = array_pop($noms);
 			//var_dump("<pre>",$m[1],$nom);
 			if($patronymes[$nom]){
-				$f = preg_replace("/^".$m[1]."/",$patronymes[$nom],$v) ;
-				$f = preg_replace("/\|".$m[2]."\|/","|Personnalités|",$f) ;
+				$f = preg_replace("/^".$m[1]."/u",$patronymes[$nom],$v) ;
+				$f = preg_replace("/\|".$m[2]."\|/u","|Personnalités|",$f) ;
 				$fragments_fusionnes[] = $f ;
 			}
 			else
@@ -260,12 +260,12 @@ function trouver_entites($texte,$id_article=""){
 	$institutions = ENTITES_INSTITUTIONS_HEURISTIQUE ;
 
 	foreach($fragments_fusionnes as $v){
-		if(preg_match("/^(.*)\|(Personnalités)\|/",$v,$m)){
-			if(preg_match("/$lieux/U",$m[1])){
-				$f = preg_replace("/\|".$m[2]."\|/","|Géographie (auto)|",$v) ;
+		if(preg_match("/^(.*)\|(Personnalités)\|/u",$v,$m)){
+			if(preg_match("/$lieux/Uu",$m[1])){
+				$f = preg_replace("/\|".$m[2]."\|/u","|Géographie (auto)|",$v) ;
 				$fragments_traites[] = $f ;
-			}elseif(preg_match("/$institutions/U",$m[1])){
-				$f = preg_replace("/\|".$m[2]."\|/","|Institutions automatiques|",$v) ;
+			}elseif(preg_match("/$institutions/Uu",$m[1])){
+				$f = preg_replace("/\|".$m[2]."\|/u","|Institutions automatiques|",$v) ;
 				$fragments_traites[] = $f ;
 			}else{
 				$fragments_traites[] = $v ;
@@ -297,7 +297,7 @@ function trouver_noms($texte){
 				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
 				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")[A-Z]". LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
 			"|". ENTITES_PERSO .")". // Personnalités à pseudo
-	"%m"	;
+	"%mu"	;
 
 	preg_match_all($reg,$texte,$m);
 	$noms = $m[1] ;
@@ -311,8 +311,8 @@ function trouver_noms($texte){
 // renvoyer en fait patronyme => forme longue
 function nettoyer_noms(&$item1, $key){
 	// (^M\.|^Mme|^Mgr|^Dr|^Me) \s+
-	$item1 = preg_replace("/(^M\.|^Mme|^Mgr|^Dr|^Me)\s+/U","",$item1); // pas les civilités
-	$item1 = preg_replace("/-$/"," ",$item1);
+	$item1 = preg_replace("/(^M\.|^Mme|^Mgr|^Dr|^Me)\s+/Uu","",$item1); // pas les civilités
+	$item1 = preg_replace("/-$/u"," ",$item1);
 	
 	// http://archives.mondediplo.com/ecrire/?exec=articles&id_article=8337
 	$item1 = preg_replace("/\R/"," ",$item1);
@@ -327,9 +327,9 @@ function entites_nommees($noms = array()){
 	$institutions = ENTITES_INSTITUTIONS_EURISTIQUE ;
 
 	foreach($noms as $k => $v){
-		if(preg_match("/$lieux/U",$k))
+		if(preg_match("/$lieux/Uu",$k))
 			$entites_nommees['lieux'][$k] = $v ;
-		elseif(preg_match("/$institutions/U",$k))
+		elseif(preg_match("/$institutions/Uu",$k))
 			$entites_nommees['institutions'][$k] = $v ;	
 		else
 			$entites_nommees['personnalites'][$k] = $v ;		 
@@ -392,7 +392,7 @@ function grouper_entites($entites = array()){ // noms pondérés
 	foreach ($entites as $entite){
 		$e = explode("|", $entite);
 		// Réguler les types avec plusieurs sous chaines
-		$type = preg_replace("/(.*)\d+$/", "$1", $e[1]) ;
+		$type = preg_replace("/(.*)\d+$/u", "$1", $e[1]) ;
 		if(!$entites_ponderes[$type][$e[0]])
 			$entites_ponderes[$type][$e[0]] = 1 ;
 		else
@@ -423,7 +423,7 @@ function afficher_noms($noms = array()){ // noms pondérés
 
 function trouver_entites_residuelles($texte){
 
-	preg_match_all("/((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+/U",$texte,$m);
+	preg_match_all("/((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+/Uu",$texte,$m);
 
 	//var_dump("<pre>",$m);
 
@@ -440,7 +440,7 @@ function trouver_entites_residuelles($texte){
 function trouver_extraits_entites_residuelles($texte, $noms=array()){
 	
 	// On cherche des mots avec une capitale pas courants qui restent et leur contexte.
-	preg_match_all("/((?:.{50})(?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+)\s+(?:.{50}))/",$texte,$m);
+	preg_match_all("/((?:.{50})(?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+)\s+(?:.{50}))/u",$texte,$m);
 
 	//var_dump("<pre>",$m);
 
@@ -508,12 +508,15 @@ function generer_types_entites(){
 				if( sizeof($sous_cat_lol) >= 1)
 					foreach($sous_cat_lol as $entite_unique){
 						// nettoyer
-						$entite_unique = trim($entite_unique);
+						$entite_unique = trim(preg_quote($entite_unique));
+						// gérer les accents
+						$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
+						
 						// forme développée ou pas
 						//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
 						
 						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
-						$entites_regexp .=  preg_quote($entite_unique) . "\W|" ;
+						$entites_regexp .=  $entite_unique . "\W|" ;
 					}
 			}
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
