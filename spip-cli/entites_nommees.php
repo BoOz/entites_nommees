@@ -45,8 +45,14 @@ class entites_nommees extends Command {
 				
 				passthru("clear");
 
+				// articles deja faits
+				$articles_faits = array("0") ;
+				$articles_sql = sql_allfetsel("id_article", "entites_nommees", "", "id_article");
+				foreach($articles_sql as $a)
+					$articles_faits[] = $a['id_article'] ;	
+
 				// chopper les articles non déjà faits ;				
-				$articles = sql_query("select a.id_article from spip_articles a left join entites_nommees e on a.id_article=e.id_article where a.id_secteur=1 and e.id_article is null order by a.date_redac desc limit 0,1000");
+				$articles = sql_query("select a.id_article from spip_articles a where a.id_secteur=1 and a.id_article not in(" . implode(",", $articles_faits) . ") order by a.date_redac desc limit 0,1000");
 				$res = sql_fetch_all($articles) ;
 				
 				// start and displays the progress bar

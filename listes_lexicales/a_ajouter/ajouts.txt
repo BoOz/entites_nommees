@@ -1,8 +1,10 @@
 // constatés dans le Diplo
 
-Mossad
+
+// Institutions
+Parlement
+Nations unies
 Maison Blanche
-Amnesty International
 Wall Street
 Union européène
 Conseil de sécurité
@@ -15,16 +17,15 @@ Congrès des Etats-Unis
 Congrès américain
 Banque mondiale
 
-
 Organisation du traité de l'Atlantique nord
+Fonds monétaire international
 
+Amnesty International
 
-Charte des Nations unies
-Nations unies
-Déclaration des droits de l'homme
-Déclaration universelle des droits de l'homme et du citoyen
+Mossad
 
-Coup d'Etat
+// divers
+Coup d'État
 Prix Nobel
 prix Nobel
 traité de Versailles
@@ -32,27 +33,22 @@ traité de Versailles
 // Périodes
 Renaissance
 Lumières
+
+IIIe République
 Ve République
 
-
-// Evenements
-11-Septembre
-
-
-// périodes
 XXIe siècle
 XXe siècle
 XIXe siècle
 XVIIIe siècle
-IIIe République
 
-Mai 68
+// Evenements
+11-Septembre
 guerre du Golfe
 
-
-// Institutions
-Parlement
-
+// révolutions
+Révolution islamique
+Mai 68
 
 // partis
 Parti socialiste
@@ -66,3 +62,19 @@ République
 
 // etat
 Sécurité sociale
+
+// juridique
+Constitution
+Charte des Nations unies
+Déclaration des droits de l'homme
+Déclaration universelle des droits de l'homme et du citoyen
+
+
+// affaires
+Panama papers
+
+// mouvements sociaux
+Nuit debout
+
+// expressions
+Occident
