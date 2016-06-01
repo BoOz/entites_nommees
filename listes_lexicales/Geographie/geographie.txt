@@ -1,12 +1,1 @@
-// Lieux géographie non présents sur le site typo
-
-
-Afrique australe
-Afrique
-
-Amérique centrale
-Amérique du nord
-Amérique latine
-Amérique
-
-Proche-Orient
+// autre fichier typo ici

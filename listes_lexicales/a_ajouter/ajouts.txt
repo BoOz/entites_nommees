@@ -1,4 +1,20 @@
-// constatés dans le Diplo
+// Constatés dans le Diplo mais non présents sur le site typo
+
+// Géographie
+Afrique australe
+Afrique
+
+Amérique centrale
+Amérique du nord
+Amérique latine
+Amérique
+
+Proche-Orient
+
+// Journaux souvent cités dans le Diplo
+Le Monde diplomatique
+Le Monde
+Al-Masri Al-Youm
 
 
 // Institutions
