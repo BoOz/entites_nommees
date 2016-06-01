@@ -11,6 +11,17 @@ Amérique
 
 Proche-Orient
 
+// Pays
+
+Grande-Bretagne
+Yougoslavie
+Etats-Unis
+République islamique
+Afrique du Sud
+Serbie
+Sahara occidental
+
+
 // Journaux souvent cités dans le Diplo
 Le Monde diplomatique
 Le Monde
@@ -69,9 +80,6 @@ Mai 68
 // partis
 Parti socialiste
 
-// pays
-Serbie
-Sahara occidental
 
 // régime
 République
