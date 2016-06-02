@@ -276,7 +276,6 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
-	enregistrer_entites($fragments_traites, $id_article);
 
 	return $fragments_traites ;
 }
@@ -486,6 +485,7 @@ function generer_types_entites(){
 	*/
 
 	foreach($types_entites_repertoires as $type){
+
 		$type_entite = $type['file'] ;
 	
 		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
@@ -504,21 +504,32 @@ function generer_types_entites(){
 					if( preg_match(",^\/\/|^$,",$ligne) OR trim($ligne) == "")
 						unset($sous_cat_lol[$k]);
 				}
-	
+				
+				// si on a des lignes dans un fichier texte bien rangé
 				if( sizeof($sous_cat_lol) >= 1)
 					foreach($sous_cat_lol as $entite_unique){
 						// nettoyer
-						$entite_unique = trim(preg_quote($entite_unique));
+						$entite_unique = preg_quote(trim($entite_unique));
+						
 						// gérer les accents
 						$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
 						
 						// forme développée ou pas
 						//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
 						
-						// ne doit pas etre trop long car les regexp ont une limite à 1000000.
-						$entites_regexp .=  $entite_unique . "\W|" ;
+						/*
+						if(!strpos($entite_unique," ")){ // fait bugguer ?? domage car c pour ne prendre que les pas singleton
+							var_dump($entite_unique);
+						}else{
+							$entites_regexp .=  $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
+						}
+						*/	
+						
+						$entites_regexp .=  $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
+
 					}
 			}
+			// pas de | final ni de / 
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
 			
 			// on fait des paquets de maximum 10000 de long.

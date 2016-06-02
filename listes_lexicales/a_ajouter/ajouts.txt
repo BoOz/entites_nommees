@@ -23,8 +23,10 @@ Sahara occidental
 Empire ottoman
 
 // villes non présentes dans typo
-
 New York
+San Francisco
+São Paulo
+
 
 // peuples mixtes
 Latino-|Américano-|Franco-
@@ -67,11 +69,17 @@ Amnesty International
 
 Mossad
 
-// divers
-Coup d'État
+
+
+// culture
+Opéra du Caire
+Pacha Mama
+Musée du quai Branly
+
+
+// distinctions
 Prix Nobel
 prix Nobel
-traité de Versailles
 
 // Périodes
 Renaissance
@@ -86,8 +94,11 @@ XIXe siècle
 XVIIIe siècle
 
 // Evenements
+Coup d'État
 11-Septembre
 guerre du Golfe
+traité de Versailles
+
 
 // révolutions
 Révolution islamique

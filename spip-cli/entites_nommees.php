@@ -72,6 +72,7 @@ class entites_nommees extends Command {
     				include_spip("entites_fonctions");
     				$texte = preparer_texte($art['titre'] . "\n" . $art['chapo'] . "\n" . $art['texte'] . "\n");
 					$fragments = trouver_entites($texte, $art['id_article']) ;
+					enregistrer_entites($fragments, $art['id_article']);
 
 					// Si tout s'est bien passé, on avance la barre
 					$progress->setFormat("<fg=white;bg=blue>%message%</>\n" . '%current%/%max% [%bar%] %percent:3s%% %elapsed:6s%/%estimated:-6s% %memory:6s%' ."\n\n");
