@@ -92,7 +92,7 @@
 	</B_fragments_entite>
 
 	<B_fragments_article>
-	<h3>Article [(#ENV{id_article})] (#GRAND_TOTAL) - <small><a href="?page=chercher_entites&id_article=#ENV{id_article}">re-indexer</a></small></h3>
+	<h3 style="clear:both">Article [(#ENV{id_article})] (#GRAND_TOTAL) - <small><a href="?page=chercher_entites&id_article=#ENV{id_article}">re-indexer</a></small></h3>
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments_article(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where id_article='LENTITE' and type_entite='INDETERMINE' order by date desc"}|replace{LENTITE,#ENV{id_article}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|oui}>
 		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
@@ -102,9 +102,10 @@
 	<p>#PAGINATION</p>
 	</B_fragments_article>
 
+	#SET{comp,'having nb > 5'}
 	<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prop, publie}>	
-
-	<h3>#TITRE<small> — <a href="?page=entites_nommees&amp;sdate=[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]">[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]</a></small></h3>	
+	#SET{comp,''}
+	<h3 style="clear:both">#TITRE<small> — <a href="?page=entites_nommees&amp;sdate=[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]">[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]</a></small></h3>	
 		
 	<div class="texte">
 		[(#CHAPO|concat{
@@ -140,6 +141,7 @@
 <div style="clear:left"></div>
 
 <div style="margin: 0 30px;">
+
 	<div class="col">
 		<B_personnalites_frequents>
 		#ANCRE_PAGINATION
@@ -147,7 +149,7 @@
 	 <h3>Personnalités</h3>
 	
 		<ul>
-		<BOUCLE_personnalites_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite having nb > 1 order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}{si #ENV{entite}|non}>
+		<BOUCLE_personnalites_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}{si #ENV{entite}|non}>
 			<li>#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 		</small>
 			</li>
@@ -155,7 +157,6 @@
 		</ul>
 		<p>#PAGINATION</p>
 		</B_personnalites_frequents>
-	
 	</div>
 	
 	<BOUCLE_types(DATA){source sql, "select type_entite from entites_nommees where type_entite not in ('INDETERMINE','Personnalités') group by type_entite"}>

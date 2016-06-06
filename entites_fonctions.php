@@ -36,7 +36,7 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	// types d'entites définis dans les listes txt.
-	$types_entites =  generer_types_entites();
+	$types_entites =  generer_types_entites("multi");	
 
 	// Isoler les entites connues (Institutions, Traités etc).
 	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
@@ -105,6 +105,7 @@ function trouver_entites($texte,$id_article=""){
 			$texte = str_replace(trim($r[1]), "" , $texte);
 		}
 
+
 		// Enregistrer l'entite
 		$fragments[] = $s . "|Institutions|" . $id_article . "|" . $extrait ;
 
@@ -119,6 +120,12 @@ function trouver_entites($texte,$id_article=""){
 
 	/**/
 	foreach($types_entites as $k => $v){
+
+		// on ne refait pas le sinstitutions
+		if($k == "Institutions"){
+			continue;
+		}
+
 		//var_dump("<br/><br/>$k<br/>$v");
 		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
 			//var_dump($e);
@@ -127,6 +134,10 @@ function trouver_entites($texte,$id_article=""){
 				// nettoyage des entités choppées avec une ,. ou autre.
 				$s = trim(preg_replace("/\W+$/u", "", $s));
 					
+				if($s == "")
+					continue ;
+
+
 				// Trouver l'extrait
 				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
 				$extrait = trim($m[0]) ;
@@ -148,7 +159,12 @@ function trouver_entites($texte,$id_article=""){
 				}
 
 				// réguler les types avec plusieurs sous_chaines
-				$type = preg_replace("/(.*)\d+$/u", "$1", $k) ;
+				$type = preg_replace("/([^\d]+)\d+$/u", "$1", $k) ;
+
+				if(preg_match(",\d,", $type)){
+					var_dump($type);
+					exit ;
+				}
 
 				// Enregistrer l'entite
 				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
@@ -196,6 +212,47 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	//var_dump("<pre>",$texte);
+
+
+	// trouver des entites mono type
+
+	// types d'entites définis dans les listes txt.
+	$types_entites_mono =  generer_types_entites("mono");	
+
+	foreach($types_entites_mono as $k => $v){
+
+		//var_dump("<br/><br/>$k<br/>$v");
+		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
+			//var_dump($e);
+			foreach($e[0] as $s){
+				
+				// nettoyage des entités choppées avec une ,. ou autre.
+				$s = trim(preg_replace("/\W+$/u", "", $s));
+					
+				if($s == "")
+					continue ;
+
+
+				// Trouver l'extrait
+				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
+				$extrait = trim($m[0]) ;
+
+				// Virer l'entité dans cet extrait, puis dans le texte.
+				if(!$m[0])
+					$texte = str_replace($s, "" , $texte);
+				else{
+					$extrait_propre = str_replace($s,"",$extrait);
+					$texte = str_replace($extrait, $extrait_propre , $texte);
+				}
+
+				// réguler les types avec plusieurs sous_chaines
+				$type = preg_replace("/(.*)\d+$/u", "$1", $k) ;
+
+				// Enregistrer l'entite
+				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
+			}
+		}
+	}
 
 	$entites_residuelles = trouver_entites_residuelles($texte);
 
@@ -422,6 +479,7 @@ function afficher_noms($noms = array()){ // noms pondérés
 
 function trouver_entites_residuelles($texte){
 
+	// mot avec une majuscule.	
 	preg_match_all("/((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+/Uu",$texte,$m);
 
 	//var_dump("<pre>",$m);
@@ -461,10 +519,22 @@ function enregistrer_entites($entites = array(), $id_article){
 	sql_query("delete from entites_nommees where id_article=$id_article");
 
 	foreach($entites as $entite){
+
+		if(preg_match("/^\|/", $entite)){
+			var_dump($entite);
+			exit ;
+		}
+
+
 		$e = explode("|", $entite);
+
 		$id_article_entite = $e[2];
 		$extrait = _q($e[3]);
 		$entite = _q($e[0]);
+
+
+				
+
 		$type_entite = _q($e[1]);
 		$date = _q(sql_getfetsel("date_redac","spip_articles","id_article=$id_article"));
 		//var_dump($date);
@@ -476,7 +546,7 @@ function enregistrer_entites($entites = array(), $id_article){
 }
 
 /**/
-function generer_types_entites(){
+function generer_types_entites($nb_mots="multi"){
 	// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
 	include_spip('iterateur/data');
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
@@ -486,30 +556,53 @@ function generer_types_entites(){
 
 	foreach($types_entites_repertoires as $type){
 
-		$type_entite = $type['file'] ;
+		$t_entite = $type['file'] ;
 	
-		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$type_entite/*.txt");
+		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/*.txt");
 		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
 		if( sizeof($sous_categories) >= 1){
 			// var_dump(strtoupper($type_entite));
+			$entites_multi = array();
+			$entites_mono = array();
 			$entites_regexp = "" ;
 			foreach($sous_categories as $sous_categorie){
-				$sous_categorie_entites = $sous_categorie['file'] ;
-				//var_dump("-- " . $sous_categorie_entites);
-				$sous_cat_ent = file_get_contents(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$type_entite/$sous_categorie_entites");
-				$sous_cat_lol = inc_file_to_array_dist(trim($sous_cat_ent)) ;
+				$sous_categorie_type = $sous_categorie['file'] ;
+				//var_dump("-- " . $sous_categorie_type);
+				//exit ;
+				$sous_cat_ent = file_get_contents(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/$sous_categorie_type");
+				$sous_cat_entites = inc_file_to_array_dist(trim($sous_cat_ent)) ;
 				
-				foreach($sous_cat_lol as $k => $ligne){
+				foreach($sous_cat_entites as $k => $ligne){
+					$ligne = trim($ligne) ;
 					//pas de ligne vides ou de // commentaires 
-					if( preg_match(",^\/\/|^$,",$ligne) OR trim($ligne) == "")
-						unset($sous_cat_lol[$k]);
+					if( preg_match(",^\/\/|^$,",$ligne) || $ligne == "")
+						continue ;
+					// entites multi-mots
+					if(strpos($ligne," ")){ 
+						$entites_multi[] =  $ligne ;
+					}else{
+						$entites_mono[] =  $ligne ;	
+					}
+					// entites mono-mot
 				}
-				
+			
+				//var_dump($nb_mots);
+				//exit ;
+
+				// Mono ou multi mots ?
+				if($nb_mots == "mono")
+					$ajout_entites = $entites_mono ;
+				else
+					$ajout_entites = $entites_multi ;
+
+				//var_dump($ajout_entites);
+
 				// si on a des lignes dans un fichier texte bien rangé
-				if( sizeof($sous_cat_lol) >= 1)
-					foreach($sous_cat_lol as $entite_unique){
+				if( sizeof($ajout_entites) >= 1){
+					foreach($ajout_entites as $entite_unique){
+
 						// nettoyer
-						$entite_unique = preg_quote(trim($entite_unique));
+						$entite_unique = preg_quote($entite_unique);
 						
 						// gérer les accents
 						$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
@@ -517,18 +610,15 @@ function generer_types_entites(){
 						// forme développée ou pas
 						//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
 						
-						/*
-						if(!strpos($entite_unique," ")){ // fait bugguer ?? domage car c pour ne prendre que les pas singleton
-							var_dump($entite_unique);
-						}else{
-							$entites_regexp .=  $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
-						}
-						*/	
-						
 						$entites_regexp .=  $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
 
 					}
+				}
 			}
+
+			//var_dump($entites_regexp);
+			//exit ;
+
 			// pas de | final ni de / 
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
 			
@@ -536,7 +626,7 @@ function generer_types_entites(){
 			$longueur = strlen($entites_regexp) ;
 			if ($longueur > 10000){
 				$nb = ceil($longueur / 10000) ;
-				// echo $type_entite . "est $nb fois trop long : " . strlen($entites_regexp) . "<br>" ;
+				// echo $t_entite . "est $nb fois trop long : " . strlen($entites_regexp) . "<br>" ;
 				// position du dernier | avant 40000 char
 				$i=1 ;
 				$chaine = $entites_regexp ;
@@ -545,17 +635,21 @@ function generer_types_entites(){
 					$pos = strrpos(substr($chaine, 0, 10000), "\W|") ;
 					//echo "dernier | du paquet $i à la pos : $pos" ;
 					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$type_entite.$i] = $s_chaine . "\W" ;
+					$types_entites[$t_entite.$i] = $s_chaine . "\W" ;
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
 					$chaine = str_replace($s_chaine . "\W|" ,"", $chaine);
 					$i ++ ;
 				}			
 			}	
-			else
-				$types_entites[$type_entite] = $entites_regexp ;
+			else{
+				$types_entites[$t_entite] = $entites_regexp ;
+			}
 		}
 	}
-		
+	
+	//var_dump($types_entites['Partis_politiques1']);
+	//exit();
+
 	return $types_entites ;
 
 

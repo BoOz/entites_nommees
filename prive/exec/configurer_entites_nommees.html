@@ -3,7 +3,7 @@
 <h1>Listes utilisées dans les expressions rationnelles</h1>
 
 <div>
-<BOUCLE_listes(DATA){source table,#VAL|generer_types_entites}>
+<BOUCLE_listes(DATA){source table,#VAL{multi}|generer_types_entites}>
 <h3>#CLE</h3>
 
 <ul>
@@ -12,4 +12,18 @@
 </BOUCLE_ls>
 </ul>
 </BOUCLE_listes>
+
+<h4>Entités mono mot</h4>
+
+<BOUCLE_listes_mono(DATA){source table,#VAL{mono}|generer_types_entites}>
+<h3>#CLE</h3>
+
+<ul>
+<BOUCLE_ls_mono(DATA){source table, #VALEUR|explode{"\W|"}}>
+<li>#VALEUR</li>
+</BOUCLE_ls_mono>
+</ul>
+</BOUCLE_listes_mono>
+
+
 </div>
