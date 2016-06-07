@@ -9,6 +9,8 @@ include('mots_courants.php');
 
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
 define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒ-]");
+define("LETTRES_CAPITALES","[A-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßŒ-]");
+
 
 // var_dump("<pre>",$types_entites,"</pre>");
 
@@ -25,7 +27,7 @@ function trouver_entites($texte,$id_article=""){
 			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/uims",$note,$e)){
 				foreach($e[1] as $s){
 					// Trouver l'extrait
-					preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
+					preg_match("`\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)`u",$texte,$m);
 					$extrait = trim($m[0]) ;
 					$extrait_propre = str_replace($s,"",$extrait);
 					$texte = str_replace($extrait, $extrait_propre , $texte);
@@ -121,18 +123,23 @@ function trouver_entites($texte,$id_article=""){
 	/**/
 	foreach($types_entites as $k => $v){
 
+		//var_dump("type<hr>",$types_entites);
+
 		// on ne refait pas le sinstitutions
 		if($k == "Institutions"){
 			continue;
 		}
-
+		if($v == "")
+			continue;
+			
 		//var_dump("<br/><br/>$k<br/>$v");
 		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
-			//var_dump($e);
+			// var_dump($e);
 			foreach($e[0] as $s){
 				
 				// nettoyage des entités choppées avec une ,. ou autre.
 				$s = trim(preg_replace("/\W+$/u", "", $s));
+				$s = trim(preg_replace("/^\W+/u", "", $s));
 					
 				if($s == "")
 					continue ;
@@ -173,7 +180,28 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	//var_dump($texte);
+	// on essaie de virer des permier ministre du Luxembourg
+	
+	// Isoler les fonctions
+	preg_match_all("/(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRES_CAPITALES . LETTRES ."+)/u", $texte, $fonctions);
 
+	$i=0;
+	foreach($fonctions[0] as $k => $s){
+		if($s == "")
+			continue ;
+					
+		// Trouver l'extrait
+		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
+		// Virer l'entité dans cet extrait
+		$extrait = $m[0] ;
+		$extrait_propre = str_replace($s,"",$extrait);
+		$texte = str_replace($extrait, $extrait_propre , $texte);
+
+		// chercher si on a la forme longue et y raccorcher ce président.
+		$fragments[] = $fonctions[0][$i] . "|Fonction|" . $id_article . "|" . $m[0];
+		$i++;
+	}
+	
 	// Dans le texte expurgé des entités connues, on passe la regexp qui trouve des noms.
 	// a mettre en démo	
 
@@ -221,13 +249,17 @@ function trouver_entites($texte,$id_article=""){
 
 	foreach($types_entites_mono as $k => $v){
 
+		if($v == "")
+			continue;
+
 		//var_dump("<br/><br/>$k<br/>$v");
 		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
-			//var_dump($e);
+			// var_dump($e);
 			foreach($e[0] as $s){
 				
 				// nettoyage des entités choppées avec une ,. ou autre.
 				$s = trim(preg_replace("/\W+$/u", "", $s));
+				$s = trim(preg_replace("/^\W+/u", "", $s));
 					
 				if($s == "")
 					continue ;
@@ -345,7 +377,7 @@ function trouver_noms($texte){
 	// http://stackoverflow.com/questions/7653942/find-names-with-regular-expression
 
 	// virer les débuts de phrases
-	$reg =  "%(?:\s|\n|\"|\')". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
+	$reg =  "%(?:\W)". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
 			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas de mot de debut de phrase avec un capitale lambda ou en CAPS
 			"(".
 				"(?:(?<!\.)[A-Z](?!')(?:". LETTRES ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou d'un .
@@ -556,18 +588,25 @@ function generer_types_entites($nb_mots="multi"){
 
 	foreach($types_entites_repertoires as $type){
 
+		$entites_multi = array();
+		$entites_mono = array();
+		$ajout_entites = array();
+		$entites_regexp = "" ;
+
+		// pour chaque repertoire
 		$t_entite = $type['file'] ;
+		// var_dump($t_entite);
 	
+		// on liste les fichiers
 		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/*.txt");
 		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
 		if( sizeof($sous_categories) >= 1){
-			// var_dump(strtoupper($type_entite));
-			$entites_multi = array();
-			$entites_mono = array();
-			$entites_regexp = "" ;
+			//var_dump(strtoupper($t_entite));
+
+			// pour chaque fichier
 			foreach($sous_categories as $sous_categorie){
 				$sous_categorie_type = $sous_categorie['file'] ;
-				//var_dump("-- " . $sous_categorie_type);
+				// var_dump("<hr />-- $t_entite /" . $sous_categorie_type);
 				//exit ;
 				$sous_cat_ent = file_get_contents(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/$sous_categorie_type");
 				$sous_cat_entites = inc_file_to_array_dist(trim($sous_cat_ent)) ;
@@ -583,41 +622,39 @@ function generer_types_entites($nb_mots="multi"){
 					}else{
 						$entites_mono[] =  $ligne ;	
 					}
-					// entites mono-mot
 				}
 			
-				//var_dump($nb_mots);
+				
 				//exit ;
 
-				// Mono ou multi mots ?
-				if($nb_mots == "mono")
-					$ajout_entites = $entites_mono ;
-				else
-					$ajout_entites = $entites_multi ;
+			}
+			
+			
+			// Mono ou multi mots ?
+			if($nb_mots == "mono")
+				$ajout_entites = $entites_mono ;
+			else
+				$ajout_entites = $entites_multi ;
 
-				//var_dump($ajout_entites);
+			//var_dump($ajout_entites);
 
-				// si on a des lignes dans un fichier texte bien rangé
-				if( sizeof($ajout_entites) >= 1){
-					foreach($ajout_entites as $entite_unique){
+			// si on a des lignes dans un fichier texte bien rangé
+			if( sizeof($ajout_entites) >= 1){
+				foreach($ajout_entites as $entite_unique){
 
-						// nettoyer
-						$entite_unique = preg_quote($entite_unique);
-						
-						// gérer les accents
-						$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
-						
-						// forme développée ou pas
-						//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
-						
-						$entites_regexp .=  $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
+					// nettoyer
+					$entite_unique = preg_quote($entite_unique);
+					
+					// gérer les accents
+					$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
+					
+					// forme développée ou pas
+					//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
+					
+					$entites_regexp .=  "\W". $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
 
-					}
 				}
 			}
-
-			//var_dump($entites_regexp);
-			//exit ;
 
 			// pas de | final ni de / 
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
@@ -640,15 +677,11 @@ function generer_types_entites($nb_mots="multi"){
 					$chaine = str_replace($s_chaine . "\W|" ,"", $chaine);
 					$i ++ ;
 				}			
-			}	
-			else{
+			}else{
 				$types_entites[$t_entite] = $entites_regexp ;
 			}
 		}
 	}
-	
-	//var_dump($types_entites['Partis_politiques1']);
-	//exit();
 
 	return $types_entites ;
 

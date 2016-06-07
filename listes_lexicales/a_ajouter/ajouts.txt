@@ -2,16 +2,12 @@
 
 // Géographie
 Afrique australe
-Afrique
 
 Amérique centrale
 Amérique du nord
 Amérique latine
 Amérique du Sud
 Amérique
-
-
-Proche-Orient
 
 // Pays
 
@@ -28,14 +24,21 @@ San Francisco
 São Paulo
 
 
-// peuples mixtes
-Latino-|Américano-|Franco-
-
 // Exeptions
-Soviétiques?|Britanniques?|Européens?|Américains?
+Soviétiques
+Britanniques
+Européens
+Américains
 
 // Minorités
-Noirs?|Juifs?|Kurdes?|Africains?|Hutus?|Tutsis?|Arabes?
+Noirs
+Juifs
+Kurdes
+Africains
+Hutus
+Tutsis
+Arabes
+Blancs
 
 
 // Journaux souvent cités dans le Diplo
@@ -98,6 +101,7 @@ Coup d'État
 11-Septembre
 guerre du Golfe
 traité de Versailles
+Intifada
 
 
 // révolutions
@@ -133,5 +137,64 @@ Occident
 // économie
 PIB
 Bourse
+Consensus de Washington
 
 
+
+// fiche france
+
+Acrimed (Action-Critique-Médias)
+Agence de la biomédecine
+Assistance publique - Hôpitaux de Paris (AP-HP)
+Association des agences conseils en communication (AACC)
+Association française des magistrats de la jeunesse et de la famille
+Association des professionnels pour la promotion de l'emploi sur Internet (Appei)
+Banlieue 89
+Betar
+Caisse nationale d'assurance-maladie (CNAM)
+Comité inter-mouvements auprès des évacués (Cimade)
+Comité intersyndical de l'épargne salariale (CIES)
+délégation interministérielle à la lutte contre le travail illégal (Dilti)
+Direction de l'animation de la recherche, des études et des statistiques (Dares)
+Droits devant !
+Groupe d'information et de soutien des immigrés (Gisti)
+Groupe intergouvernemental sur l'évolution du climat (GIEC)
+Haute Autorité de lutte contre les discriminations et pour l'égalité (Halde)
+Haute Autorité de santé
+Hospices civils de Lyon (HCL)
+inspection générale des affaires sociales (IGAS)
+Institut national de recherches archéologiques préventives (INRAP)
+Les entreprises du médicament (LEEM)
+Ligue de défense juive
+syndicat Prisme (Professionnels de l'intérim, services et métiers de l'emploi)
+Ni putes ni soumises
+Nouveau Parti anticapitaliste
+Observatoire national des zones urbaines sensibles (Onzus)
+Renseignements généraux (RG)
+SOS-Racisme
+Syndicat national des gynécologues-obstétriciens de France (Syngof)
+la Tribu Ka
+Unedic (Union nationale pour l'emploi dans l'industrie et le commerce)
+Union fédérale des consommateurs (UFC) - Que choisir ; UFC - Que choisir
+Uni(e)s contre une immigration jetable (UCIJ)
+
+// PERSONNALITÉS
+Abd Al Malik (rappeur)
+M. Claude Bébéar (président d'Axa)
+M. Jean-Philippe Bouret (magistrat à la chambre sociale de la Cour de cassation)
+Emil Cioran (écrit ainsi sur sa tombe)
+Mme Anne Courrège (conseillère d'Etat)
+D' de Kabal (rappeur)
+Dgiz (rappeur)
+Grand Corps Malade (slameur)
+Bernard-Henri Lévy (répétable) ou « BHL »
+Mme Béatrice Marre (députée de l'Oise, 2000)
+Mme Christine Maugüé (conseillère d'Etat)
+M. Allan Metzer (rapport Metzer, mars 2000)
+professeur Pierre Pellerin (Service central de protection contre les rayonnements ionisants) (Tchernobyl)
+M. Arnaud de Puyfontaine (patron de Mondadori France)
+Rocé (rappeur)
+M. Gérald de Roquemaurel (PDG de Hachette Filippachi Médias)
+M. Thierry Saussez (président d'Image et Stratégie)
+M. Philippe Séguin (président de la Cour des comptes)
+M. Nicolas de Tavernost (président de M6)
