@@ -22,285 +22,84 @@ function trouver_entites($texte,$id_article=""){
 
 	// Traiter les notes de bas de pages.
 	// SOURCES
-	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
-		foreach($notes[1] as $note){
-			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/uims",$note,$e)){
-				foreach($e[1] as $s){
-					// Trouver l'extrait
-					preg_match("`\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)`u",$texte,$m);
-					$extrait = trim($m[0]) ;
-					$extrait_propre = str_replace($s,"",$extrait);
-					$texte = str_replace($extrait, $extrait_propre , $texte);
-					$fragments[] = $s . "|Sources|" . $id_article . "|" . $m[0];			
-				}		
-			}
-		}
-	}
+	$recolte = recolter_fragments("Sources", "\[\[(.*)\]\]", $texte, $fragments, $id_article);
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
 	// types d'entites définis dans les listes txt.
 	$types_entites =  generer_types_entites("multi");	
 
 	// Isoler les entites connues (Institutions, Traités etc).
-	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
-
-	if(preg_match_all( "`" . $types_entites['Institutions'] . "`" . "ums" ,$texte,$e)){
-			//var_dump($e);	
-			foreach($e[0] as $s){
-
-				// nettoyage des entités choppées avec une ,. ou autre.
-				$s = trim(preg_replace("/\W+$/u", "", $s));
-	
-				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
-				$extrait = trim($m[0]) ;
-
-				// Virer l'entité dans cet extrait, puis dans le texte.
-				if(!$m[0])
-					$texte = str_replace($s, "" , $texte);
-				else{
-					$extrait_propre = str_replace($s,"",$extrait);
-					$texte = str_replace($extrait, $extrait_propre , $texte);
-				}
-
-				// En cas d'accronyme, virer aussi la forme réduite
-				if(preg_match("/$acronymes/Uu", $s, $r)){
-					// En cas d'accronyme, virer aussi la forme réduite
-					$texte = str_replace(trim($r[2]), "" , $texte);
-					// et la forme moyenne
-					$texte = str_replace(trim($r[1]), "" , $texte);
-				}
-
-				// Enregistrer l'entite
-				$fragments[] = $s . "|Institutions|" . $id_article . "|" . $m[0];
-			}
-	}
+	$recolte = recolter_fragments("Institutions", $types_entites['Institutions'], $texte, $fragments, $id_article);
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
 	// itals spip
 	$texte = str_replace("{", "", $texte);
 	$texte = str_replace("}", "", $texte);
 
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	preg_match_all("/$acronymes/Uu", $texte, $entites_inconnues);
-
-	//var_dump("<pre>");
-	//var_dump($entites_inconnues);
-	//var_dump("</pre>");
-
-	foreach($entites_inconnues[0] as $s){
-		
-		// Trouver l'extrait
-		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
-		$extrait = trim($m[0]) ;
-
-		// Virer l'entité dans cet extrait, puis dans le texte.
-		if(!$m[0])
-			$texte = str_replace($s, "" , $texte);
-		else{
-			$extrait_propre = str_replace($s,"",$extrait);
-			$texte = str_replace($extrait, $extrait_propre , $texte);
-		}
-
-		if(preg_match("/$acronymes/Uu", $s, $r)){
-			// En cas d'accronyme, virer aussi la forme réduite
-			$texte = str_replace(trim($r[2]), "" , $texte);
-			// et la forme moyenne
-			$texte = str_replace(trim($r[1]), "" , $texte);
-		}
-
-
-		// Enregistrer l'entite
-		$fragments[] = $s . "|Institutions|" . $id_article . "|" . $extrait ;
-
-	}
-
-	// defini par l'arbo de fichiers du répertoire listes_lexicales
-	//$type_reg = array(
-	//* PARTIS POLITIQUES
-	//	"Villes" => "`" . VILLES . "`"
-	//);
-
-
-	/**/
-	foreach($types_entites as $k => $v){
-
-		//var_dump("type<hr>",$types_entites);
+	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
+	$recolte = recolter_fragments("Institutions", $acronymes, $texte, $fragments, $id_article);
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
+	
+	/* regex automatisées depuis les fichiers de listes */
+	foreach($types_entites as $type => $regex){
 
 		// on ne refait pas le sinstitutions
-		if($k == "Institutions"){
+		if($type == "Institutions"){
 			continue;
 		}
-		if($v == "")
+		if($regex == "")
 			continue;
-			
-		//var_dump("<br/><br/>$k<br/>$v");
-		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
-			// var_dump($e);
-			foreach($e[0] as $s){
-				
-				// nettoyage des entités choppées avec une ,. ou autre.
-				$s = trim(preg_replace("/\W+$/u", "", $s));
-				$s = trim(preg_replace("/^\W+/u", "", $s));
-					
-				if($s == "")
-					continue ;
-
-
-				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
-				$extrait = trim($m[0]) ;
-
-				// Virer l'entité dans cet extrait, puis dans le texte.
-				if(!$m[0])
-					$texte = str_replace($s, "" , $texte);
-				else{
-					$extrait_propre = str_replace($s,"",$extrait);
-					$texte = str_replace($extrait, $extrait_propre , $texte);
-				}
-
-				// En cas d'accronyme, virer aussi la forme réduite
-				if(preg_match("/$acronymes/Uu", $s, $r)){
-					// En cas d'accronyme, virer aussi la forme réduite
-					$texte = str_replace(trim($r[2]), "" , $texte);
-					// et la forme moyenne
-					$texte = str_replace(trim($r[1]), "" , $texte);
-				}
-
-				// réguler les types avec plusieurs sous_chaines
-				$type = preg_replace("/([^\d]+)\d+$/u", "$1", $k) ;
-
-				if(preg_match(",\d,", $type)){
-					var_dump($type);
-					exit ;
-				}
-
-				// Enregistrer l'entite
-				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
-			}
-		}
+		
+		$recolte = recolter_fragments($type, $regex, $texte, $fragments, $id_article);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
 	}
 
 	//var_dump($texte);
 	// on essaie de virer des permier ministre du Luxembourg
-	
-	// Isoler les fonctions
-	preg_match_all("/(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRES_CAPITALES . LETTRES ."+)/u", $texte, $fonctions);
-
-	$i=0;
-	foreach($fonctions[0] as $k => $s){
-		if($s == "")
-			continue ;
-					
-		// Trouver l'extrait
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
-		// Virer l'entité dans cet extrait
-		$extrait = $m[0] ;
-		$extrait_propre = str_replace($s,"",$extrait);
-		$texte = str_replace($extrait, $extrait_propre , $texte);
-
-		// chercher si on a la forme longue et y raccorcher ce président.
-		$fragments[] = $fonctions[0][$i] . "|Fonction|" . $id_article . "|" . $m[0];
-		$i++;
-	}
-	
+	$fragments = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRES_CAPITALES . LETTRES ."+)", $texte, $fragments, $id_article);
+		
 	// Dans le texte expurgé des entités connues, on passe la regexp qui trouve des noms.
 	// a mettre en démo	
 
 	$noms = trouver_noms($texte) ;
-
 	array_walk($noms,"nettoyer_noms");
-
-	// Trouver l'extrait
-	// Virer l'entité dans cet extrait concerné (M. Kennedy)
-	foreach($noms as $s){
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
-		$extrait = $m[0] ;
-		$extrait_propre = str_replace($s,"",$extrait);
-		$texte = str_replace($extrait, $extrait_propre , $texte);
-		$fragments[] = $s . "|Personnalités|" . $id_article . "|" . $m[0];
-
-		// array pop du patronyme ?
-	}
+	$recolte = traiter_fragments($noms, "Personnalités", $texte, $fragments, $id_article) ;
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
 	// Isoler les présidents résiduels
-	preg_match_all("/président\s([A-Z]". LETTRES ."+)/u", $texte, $presidents);
-
-	$i=0;
-	foreach($presidents[0] as $s){
-		// Trouver l'extrait
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
-		// Virer l'entité dans cet extrait
-		$extrait = $m[0] ;
-		$extrait_propre = str_replace($s,"",$extrait);
-		$texte = str_replace($extrait, $extrait_propre , $texte);
-
-		// chercher si on a la forme longue et y raccorcher ce président.
-
-		$fragments[] = $presidents[1][$i] . "|Personnalités|" . $id_article . "|" . $m[0];
-		$i++;
-	}
-
-	//var_dump("<pre>",$texte);
-
+	$recolte  = recolter_fragments("Personnalités", "président\s([A-Z]". LETTRES ."+)" , $texte, $fragments, $id_article) ;
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
 	// trouver des entites mono type
 
 	// types d'entites définis dans les listes txt.
 	$types_entites_mono =  generer_types_entites("mono");	
 
-	foreach($types_entites_mono as $k => $v){
-
-		if($v == "")
+	/* regex automatisées depuis les fichiers de listes */
+	foreach($types_entites_mono as $type => $regex){
+		if($regex == "")
 			continue;
+		
+		$recolte = recolter_fragments($type, $regex, $texte, $fragments, $id_article);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
 
-		//var_dump("<br/><br/>$k<br/>$v");
-		if(preg_match_all( "`" . $v . "`msu" ,$texte,$e)){
-			// var_dump($e);
-			foreach($e[0] as $s){
-				
-				// nettoyage des entités choppées avec une ,. ou autre.
-				$s = trim(preg_replace("/\W+$/u", "", $s));
-				$s = trim(preg_replace("/^\W+/u", "", $s));
-					
-				if($s == "")
-					continue ;
-
-
-				// Trouver l'extrait
-				preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
-				$extrait = trim($m[0]) ;
-
-				// Virer l'entité dans cet extrait, puis dans le texte.
-				if(!$m[0])
-					$texte = str_replace($s, "" , $texte);
-				else{
-					$extrait_propre = str_replace($s,"",$extrait);
-					$texte = str_replace($extrait, $extrait_propre , $texte);
-				}
-
-				// réguler les types avec plusieurs sous_chaines
-				$type = preg_replace("/(.*)\d+$/u", "$1", $k) ;
-
-				// Enregistrer l'entite
-				$fragments[] = $s . "|$type|" . $id_article . "|" . $m[0];
-			}
-		}
 	}
 
 	$entites_residuelles = trouver_entites_residuelles($texte);
 
-	foreach($entites_residuelles as $s){
-		// Trouver l'extrait
-		preg_match("/(\s(?:.{0,60})$s(?:.{0,60})\s)/u",$texte,$m);
-		// Virer l'entité dans cet extrait
-		$extrait = $m[0] ;
-		$extrait_propre = str_replace($s,"",$extrait);
-
-		$texte = str_replace($extrait, $extrait_propre , $texte);
-		$fragments[] = $s . "|INDETERMINE|" . $id_article . "|" . $m[0];
-	}
+	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article) ;
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
 	// fusionner les personnalités.
-
 	foreach($fragments as $v){
 		if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
 			$personnalites[] = $m[1] ;
@@ -367,6 +166,60 @@ function trouver_entites($texte,$id_article=""){
 	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
 
 	return $fragments_traites ;
+}
+
+
+function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article){
+
+	if(preg_match_all( "`" . $regex . "`Umsu" , $texte ,$e)){
+		// var_dump($e);
+		$fragments = traiter_fragments($e[0], $type_entite, $texte, $fragments, $id_article);
+	}
+	return array("texte" => $texte, "fragments" => $fragments) ;
+}
+
+function traiter_fragments($matches, $type_entite, $texte, $fragments, $id_article){
+
+	foreach($matches as $s){
+		
+		// nettoyage des entités choppées avec une ,. ou autre.
+		$s = trim(preg_replace("/\W+$/u", "", $s));
+		$s = trim(preg_replace("/^\W+/u", "", $s));
+			
+		if($s == "")
+			continue ;
+
+		// Trouver l'extrait
+		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
+		$extrait = trim($m[0]) ;
+
+		// Virer l'entité dans cet extrait, puis dans le texte.
+		if(!$m[0])
+			$texte = str_replace($s, "" , $texte);
+		else{
+			$extrait_propre = str_replace($s,"",$extrait);
+			$texte = str_replace($extrait, $extrait_propre , $texte);
+		}
+
+		// En cas d'accronyme, virer aussi la forme réduite
+		$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
+		if(preg_match("/$acronymes/Uu", $s, $r)){
+			// En cas d'accronyme, virer aussi la forme réduite
+			$texte = str_replace(trim($r[2]), "" , $texte);
+			// et la forme moyenne
+			$texte = str_replace(trim($r[1]), "" , $texte);
+		}
+
+		// réguler les types avec plusieurs sous_chaines
+		$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite) ;
+
+		$extrait = preg_replace(",\R,","",trim($m[0]));
+
+		// Enregistrer l'entite
+		$fragments[] = $s . "|$type|" . $id_article . "|" . $extrait;
+	}
+	return array("texte" => $texte, "fragments" => $fragments) ;
+
 }
 
 

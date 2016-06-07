@@ -37,7 +37,7 @@ define("MOTS_DEBUT", $adverbes .
 
 define("MOTS_MILIEU" , "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière") ;
 
-define("MOTS_FIN" , "Cedex|Parti|Dieu") ;
+define("MOTS_FIN" , "Cedex|Parti|Dieu|PO Box|BP \d+") ;
 
 // Personnalités à Pseudo.
 

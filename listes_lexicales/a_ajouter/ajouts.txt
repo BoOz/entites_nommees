@@ -47,6 +47,12 @@ Le Monde
 Monde
 Al-Masri Al-Youm
 Agence France-Presse
+Charlie Hebdo
+France Inter
+
+
+// think tank
+Terra Nova
 
 
 // Institutions
@@ -103,6 +109,8 @@ guerre du Golfe
 traité de Versailles
 Intifada
 
+// Social
+Loi Macron
 
 // révolutions
 Révolution islamique
