@@ -69,24 +69,6 @@ barrage de Myitsone
 Hatgyi
 Tasang
 
-// BOLIVIE
-
-9 provinces : Beni
-Chuquisaca
-Cochabamba
-La Paz
-Oruro
-Pando
-Potosí
-Santa Cruz
-Tarija
-
-Altiplano
-El Alto
-Nancahuazú
-Vallegrande
-Yungas
-
 // ALERTE pas de LIEUX|GEOGRAPHIE dans BOTSWANA
 
 // BRÉSIL
@@ -143,13 +125,6 @@ le pays est divisé en régions
 départements et arrondissements
 
 les 10 régions : de l'Adamaoua
-du Centre
-de l'Est
-de l'Extrême-Nord
-du Littoral
-de l'Ouest
-du Nord
-du Nord-Ouest
 du Sud et du Sud-Ouest
 
 
@@ -184,12 +159,6 @@ Urabá
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans CONGO
 
-// COSTA RICA
-
-parc de la Merced
-San José
-fleuve San Juan
-
 // CÔTE D'IVOIRE
 
 Bouaké
@@ -198,24 +167,9 @@ le Plateau
 
 fleuve Cavally
 
-// CUBA f.
-
-Sierra Maestra
-caserne Moncada
-Santiago de Cuba
-Oriente
-Gran Piedra
-
 // ALERTE pas de LIEUX|GEOGRAPHIE dans DJIBOUTI m. ex-Territoire français des Afars et des Issas
 
-// ALERTE pas de LIEUX|GEOGRAPHIE dans DOMINIQUE
-
 // ALERTE pas de LIEUX|GEOGRAPHIE dans ÉMIRATS ARABES UNIS
-
-// ÉQUATEUR
-
-Cotopaxi
-Manta
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans ÉRYTHRÉE
 
@@ -235,12 +189,6 @@ Bélinga
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans GHANA
 
-// ALERTE pas de LIEUX|GEOGRAPHIE dans GRENADE
-
-// GUATEMALA
-
-fleuve Usumacinta
-
 // ALERTE pas de LIEUX|GEOGRAPHIE dans GUINÉE
 
 // GUINÉE-BISSAU
@@ -249,9 +197,6 @@ Bafatá
 Bissau est capitale autonome
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans GUINÉE-ÉQUATORIALE
-
-// GUYANA
-
 
 // HAÏTI m.
 
@@ -959,6 +904,8 @@ Copperbelt
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Biélorussie
 
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Bolivie
+
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Bosnie-Herzégovine
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Bulgarie
@@ -973,11 +920,19 @@ Copperbelt
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Corée du Sud
 
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Costa Rica
+
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Croatie
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Cuba
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Danemark
 
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Dominique
+
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Égypte
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Équateur
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Espagne
 
@@ -992,6 +947,12 @@ Copperbelt
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Géorgie
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Grèce
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Grenade
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Guatemala
+
+// ALERTE pas de LIEUX|GEOGRAPHIE dans Guyana
 
 // ALERTE pas de LIEUX|GEOGRAPHIE dans Hongrie
 

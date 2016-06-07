@@ -8,7 +8,7 @@
 
 <ul>
 <BOUCLE_ls(DATA){source table, #VALEUR|explode{"\W|"}}>
-<li>#VALEUR</li>
+<li>[(#VALEUR|replace{^\\w})]</li>
 </BOUCLE_ls>
 </ul>
 </BOUCLE_listes>
@@ -20,7 +20,7 @@
 
 <ul>
 <BOUCLE_ls_mono(DATA){source table, #VALEUR|explode{"\W|"}}>
-<li>#VALEUR</li>
+<li>[(#VALEUR|replace{^\\w})]</li>
 </BOUCLE_ls_mono>
 </ul>
 </BOUCLE_listes_mono>
