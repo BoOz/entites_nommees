@@ -559,3 +559,16 @@ function generer_types_entites($nb_mots="multi"){
 
 
 }
+
+function nuage_mot($poids, $max){
+	$score = $poids/$max; # entre 0 et 1
+
+	$p = ($unite=floor($score += 0.900001)) . floor(10*($score - $unite)); // technique de rastapopoulos de 0 Ã  10
+	$p -= 9;
+
+	$class = ($p >= 8) ? '2'
+	   		       : (($p > 4) ? '1.8'
+	               : (($p >= 2) ? '1.2' : '1'));
+
+	return $class ;
+}
