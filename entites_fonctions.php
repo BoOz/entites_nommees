@@ -228,7 +228,8 @@ function traiter_fragments($matches, $type_entite, $texte, $fragments, $id_artic
 
 		// réguler les types avec plusieurs sous_chaines
 		$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite) ;
-
+		$type = str_replace("_", " ", $type);	
+		
 		// Enregistrer l'entite
 		$fragments[] = $s . "|$type|" . $id_article . "|" . $extrait;
 	}
