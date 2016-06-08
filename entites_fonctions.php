@@ -186,8 +186,7 @@ function trouver_entites($texte,$id_article=""){
 
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article){
 
-	if(preg_match_all( "`" . $regex . "`Umsu" , $texte ,$e)){
-		//var_dump($e);
+	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
 		$recolte = traiter_fragments($e[0], $type_entite, $texte, $fragments, $id_article);
 		$fragments = $recolte["fragments"];
 		$texte = $recolte["texte"];
@@ -207,7 +206,7 @@ function traiter_fragments($matches, $type_entite, $texte, $fragments, $id_artic
 			continue ;
 
 		// Trouver l'extrait
-		preg_match("/\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)/u",$texte,$m);
+		preg_match("`\s(?:.{0,60})".trim(preg_quote($s))."(?:.{0,60})(?:\W)`u",$texte,$m);
 		$extrait = preg_replace(",\R,","",trim($m[0]));
 
 		// Virer l'entité dans cet extrait, puis dans le texte.
