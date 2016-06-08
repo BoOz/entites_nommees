@@ -15,7 +15,6 @@ Phnom Penh
 Yaoundé
 Praia
 Bangui
-Santiago
 Bogotá
 // ALERTE pas de capitale dans COMMONWEALTH OF NATIONS
 Moroni
@@ -151,10 +150,11 @@ Belmopan
 Minsk
 La Paz
 Sarajevo
-Brasilia
+Brasília
 Sofia
 Ottawa
-// ALERTE pas de capitale dans Chine
+Santiago
+Pékin
 Nicosie
 Pyongyang
 Séoul
@@ -334,9 +334,6 @@ Birao
 Bouar
 Ouanda Djallé
 Sam Ouandja
-
-// CHILI
-// ALERTE pas de villes dans CHILI
 
 // COLOMBIE
 // ALERTE pas de villes dans COLOMBIE
@@ -988,6 +985,7 @@ Tuzla
 // Brésil
 Rio de Janeiro
 São Paulo
+Salvado de Bahia
 
 // Bulgarie
 Bourgas
@@ -1003,6 +1001,9 @@ Vratsa
 
 // Canada
 // ALERTE pas de villes dans Canada
+
+// Chili
+// ALERTE pas de villes dans Chili
 
 // Chine
 // ALERTE pas de villes dans Chine
@@ -1050,7 +1051,7 @@ Melilla
 // ALERTE pas de villes dans Estonie
 
 // États-Unis
-// ALERTE pas de villes dans États-Unis
+New York
 
 // Finlande
 // ALERTE pas de villes dans Finlande
