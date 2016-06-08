@@ -67,7 +67,7 @@
 [(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
 
 	#SET{tab,#ARRAY}
-	<BOUCLE_home(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'Peuples') group by entite having nb > 10 order by nb desc limit 0,50"}}{si #ENV{entite}|non}>
+	<BOUCLE_home(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'Peuples', 'a ajouter') group by entite having nb > 10 order by nb desc limit 0,50"}}{si #ENV{entite}|non}>
 		#SET{tab,#GET{tab}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_home>
 
@@ -78,11 +78,15 @@
 
 
 	<B_top_entites>
-	<div style="margin:40px 60px;line-height:1.8em;width:66%;text-align:center;max-height:350px;overflow:auto">
+	<div style="margin:40px 60px;line-height:1.8em;width:66%;text-align:center;">
 
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">[(#CLE|replace{" ",&nbsp;})]</span>&nbsp;<small><a style="padding-right:20px" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#VALEUR)]&nbsp;fois</a>
-			</small>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
+		<a style="padding-right:20px;color:#000000;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		</a>
+	</span>
 	</BOUCLE_top_entites>
 
 	<br />
@@ -90,8 +94,12 @@
 	<br />
 
 	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">[(#CLE|replace{" ",&nbsp;})]</span>&nbsp;<small><a style="padding-right:20px" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#VALEUR)]&nbsp;fois</a>
-			</small>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
+		<a style="padding-right:20px;color:#000000;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		</a>
+	</span>
 	</BOUCLE_top_territoires>
 
 
