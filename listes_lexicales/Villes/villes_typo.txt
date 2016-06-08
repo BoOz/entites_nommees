@@ -1052,6 +1052,7 @@ Melilla
 
 // États-Unis
 New York
+San Fransisco
 
 // Finlande
 // ALERTE pas de villes dans Finlande
@@ -1234,4 +1235,4 @@ Kielce
 Kiptchak
 
 // Vietna
-// ALERTE pas de villes dans Vietna
+// ALERTE pas de villes dans Vietna 

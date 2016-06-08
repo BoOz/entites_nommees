@@ -19,9 +19,8 @@ Sahara occidental
 Empire ottoman
 
 // villes non présentes dans typo
-New York
-San Francisco
-São Paulo
+
+
 
 
 // Exeptions
