@@ -199,7 +199,7 @@ function traiter_fragments($matches, $type_entite, $texte, $fragments, $id_artic
 	foreach($matches as $s){
 		
 		// nettoyage des entités choppées avec une ,. ou autre.
-		$s = trim(preg_replace("/\W+$/u", "", $s));
+		$s = trim(preg_replace("/(?!\))\W+$/u", "", $s));
 		$s = trim(preg_replace("/^\W+/u", "", $s));
 			
 		if($s == "")
