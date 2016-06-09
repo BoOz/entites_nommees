@@ -23,7 +23,7 @@ Empire ottoman
 
 
 
-// Exeptions
+// Exceptions
 Soviétiques
 Britanniques
 Européens
@@ -75,6 +75,12 @@ Fonds monétaire international
 
 Amnesty International
 
+
+// partis
+Parti socialiste
+Frères musulmans
+
+// autres
 Mossad
 
 
@@ -115,8 +121,7 @@ Loi Macron
 Révolution islamique
 Mai 68
 
-// partis
-Parti socialiste
+
 
 
 // régime

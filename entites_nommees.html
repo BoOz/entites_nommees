@@ -36,7 +36,7 @@
 <INCLURE{fond=noms_navigation}>
 </div>
 
-<h1><a href="?page=entites_nommees">Entités nommées</a> <small style="font-size:0.5em">dans #NOM_SITE_SPIP</small></h1>
+<h1><a href="?page=entites_nommees">Entités nommées</a> <small style="font-size:0.5em">dans [(#NOM_SITE_SPIP|replace{^Les,les})]</small></h1>
 
 	<span></span>
 	<h2>[(#GET{affdate}|trim|sinon{#ENV{sdate}})]</h2>
@@ -78,11 +78,11 @@
 
 
 	<B_top_entites>
-	<div style="margin:40px 60px;padding:0 50px;line-height:1.8em;width:70%;text-align:center;">
+	<div style="margin:40px 60px 20px 40px;padding:0 50px;line-height:1.8em;width:70%;text-align:center;">
 
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
-		<a style="padding-right:20px;color:#000000;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+		<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
 [(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 		</a>
@@ -91,11 +91,10 @@
 
 	<br />
 	<br />
-	<br />
 
 	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
-		<a style="padding-right:20px;color:#000000;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+		<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
 [(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 		</a>
@@ -128,6 +127,21 @@
 		<strong>Fidèles compagnons :</strong> <BOUCLE_cd(DATA){source table, #GET{compagnons}}{", "}{cle!=#ENV{entite}}{si #ENV{entite}|oui}><a href="?page=entites_nommees&entite=[(#CLE|urlencode)]">[(#CLE)]</a>[&nbsp;((#VALEUR))]</BOUCLE_cd>
 	</div>
 	</B_cd>
+
+<div style="max-height:200px;overflow:auto">
+
+	<B_fragments_entite>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
+		<div><BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}><strong>[(#TITRE) ]</strong><small>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</small></BOUCLE_article> : [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments_entite>
+	<p>#PAGINATION</p>
+	</B_fragments_entite>
+
+</div>
+
 
 	<B_fragments_article>
 	<h3 style="clear:both">Article [(#ENV{id_article})] (#GRAND_TOTAL) - <small><a href="?page=chercher_entites&id_article=#ENV{id_article}">re-indexer</a></small></h3>
@@ -217,15 +231,6 @@
 <hr style="clear:both" />
 
 
-	<B_fragments_entite>
-	#ANCRE_PAGINATION
-	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
-		<div><BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}><strong>[(#TITRE) ]</strong><small>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</small></BOUCLE_article> : [(#EXTRAIT)] 
-		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
-		</div>
-	</BOUCLE_fragments_entite>
-	<p>#PAGINATION</p>
-	</B_fragments_entite>
 
 
 
