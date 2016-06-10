@@ -87,7 +87,7 @@ function trouver_entites($texte,$id_article=""){
 	$texte = $recolte['texte'];
 
 	// Isoler les présidents résiduels
-	$recolte  = recolter_fragments("Personnalités", "président\s([A-Z]". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
+	$recolte  = recolter_fragments("Personnalités", "présidente?\s([A-Z]". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
@@ -116,9 +116,10 @@ function trouver_entites($texte,$id_article=""){
 	// On vire donc les noms complets du texte intégral au rique de flinguer quelques extraits.
 
 	$texte_original_sans_noms = $texte_original ;
-	foreach(array_unique($noms) as $nom){
-		$texte_original_sans_noms = str_replace($nom, "", $texte_original_sans_noms);
-	}
+	if(is_array($noms))
+		foreach(array_unique($noms) as $nom){
+			$texte_original_sans_noms = str_replace($nom, "", $texte_original_sans_noms);
+		}
 		
 	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte_original_sans_noms) ;
 	$fragments = $recolte['fragments'];
@@ -210,13 +211,42 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 	// On recupere un tableau d'entites possiblement redondantes
 	// nettoyer un peu
 	// array_walk($entites,"nettoyer_entite_nommee"); // marche pas
-	foreach($entites as $entite)
-		$entites_clean[] = nettoyer_entite_nommee($entite);
-	$entites = $entites_clean ;
-
-	if(!is_array($entites))
+	if(is_array($entites) and sizeof($entites) >= 1)
+		array_walk($entites,"nettoyer_entite_nommee");
+	else	
 		return array("texte" => $texte, "fragments" => $fragments);
+		
+	// On enregistre les extraits. Tout en isolant des formulations réduites.
+	$entites_uniques = array_unique($entites);
 
+	if(is_array($entites_uniques))
+		foreach($entites_uniques as $entite){
+
+			if($entite == "")
+				continue ;
+
+			// En cas d'accronyme, virer aussi la forme réduite
+			$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
+			if(preg_match("/$acronymes/Uu", $entite, $r)){
+				// En cas d'accronyme, virer aussi la forme réduite ou moyenne
+				$reduite[trim($r[2])] = trim($r[1]) ;
+			}
+	
+			// Trouver les extraits ou apparaissent l'entite dans le texte original
+			preg_match_all("`(?:\W)((?:.{0,60})" . preg_quote($entite) . "(?:.{0,60}))(?:\W)`u", $texte_original, $m);
+	
+			foreach($m[1] as $extrait){
+				$extrait = preg_replace(",\R,","",trim($extrait));
+	
+				// réguler les types avec plusieurs sous_chaines
+				$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
+				$type = str_replace("_", " ", $type);	
+			
+				// Enregistrer l'entite
+				$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
+	
+			}
+		}
 
 	// Chasse aux entites ouverte !
 	// On supprime les entites du texte pour les chasser toutes à la fin ou ne reste plus qu'un texte sans entites.
@@ -235,33 +265,6 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 		else{
 			$extrait_propre = str_replace($entite,"",$extrait);
 			$texte = str_replace($extrait, $extrait_propre , $texte);
-		}
-	}
-
-	// On enregistre les extraits. Tout en isolant des formulations réduites.
-	$entites_uniques = array_unique($entites);
-
-	foreach($entites_uniques as $entite){
-		// En cas d'accronyme, virer aussi la forme réduite
-		$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
-		if(preg_match("/$acronymes/Uu", $entite, $r)){
-			// En cas d'accronyme, virer aussi la forme réduite ou moyenne
-			$reduite[trim($r[2])] = trim($r[1]) ;
-		}
-
-		// Trouver les extraits ou apparaissent l'entite dans le texte original
-		preg_match_all("`(?:\W)((?:.{0,60})" . preg_quote($entite) . "(?:.{0,60}))(?:\W)`u", $texte_original, $m);
-
-		foreach($m[1] as $extrait){
-			$extrait = preg_replace(",\R,","",trim($extrait));
-
-			// réguler les types avec plusieurs sous_chaines
-			$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
-			$type = str_replace("_", " ", $type);	
-		
-			// Enregistrer l'entite
-			$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
-
 		}
 	}
 
@@ -294,11 +297,8 @@ function trouver_noms($texte){
 	$noms = $m[1] ;
 	//var_dump("<pre>",$m);
 
-	//array_walk($noms,"nettoyer_noms");
-	foreach($noms as $nom)
-		$noms_clean[] = nettoyer_entite_nommee($nom);
-	$noms = $noms_clean ;
-
+	array_walk($noms,"nettoyer_noms");
+	
 	//var_dump("<pre>",$noms);
 
 	return $noms ;
@@ -317,7 +317,7 @@ function nettoyer_noms(&$item1, $key){
 
 }
 
-function nettoyer_entite_nommee($entite){
+function nettoyer_entite_nommee(&$entite, $key){
 
 	// nettoyage des entités choppées avec une ,. ou autre.
 	if(strpos($entite, "("))
@@ -327,7 +327,6 @@ function nettoyer_entite_nommee($entite){
 
 	$entite = trim(preg_replace("/^\W+/u", "", $entite));
 
-	return $entite ;
 }
 
 function entites_nommees($noms = array()){
@@ -377,80 +376,10 @@ function preparer_texte($texte){
 
 }
 
-function agreger_fragments($fragments = array()){ // noms pondérés
-
-	foreach($fragments as $f){
-		
-		$fragment = explode("|",$f);
-	//var_dump("<pre>",$fragment);
-		
-		if(!$fragments_ponderes[$fragment[1]][$fragment[0]])
-			$fragments_ponderes[$fragment[1]][$fragment[0]] = 1 ;
-		else
-			$fragments_ponderes[$fragment[1]][$fragment[0]] ++ ;	
-	}
-
-	//var_dump("<pre>",$fragments_ponderes);
-
-	return $fragments_ponderes ;
-}
-
-
-function grouper_entites($entites = array()){ // noms pondérés
-
-	foreach ($entites as $entite){
-		$e = explode("|", $entite);
-		// Réguler les types avec plusieurs sous chaines
-		$type = preg_replace("/(.*)\d+$/u", "$1", $e[1]) ;
-		if(!$entites_ponderes[$type][$e[0]])
-			$entites_ponderes[$type][$e[0]] = 1 ;
-		else
-			$entites_ponderes[$type][$e[0]] ++ ;	
-	}
-
-	//var_dump("<pre>",$entites_ponderes,"</pre>");
-
-	return $entites_ponderes ;
-
-}
-
-
-function afficher_noms($noms = array()){ // noms pondérés
-
-	sort($noms);
-
-	foreach ($noms as $nom){
-		if(!$noms_ponderes[$nom])
-			$noms_ponderes[$nom] = 1 ;
-		else
-			$noms_ponderes[$nom] ++ ;	
-	}
-
-	return $noms_ponderes ;
-
-}
-
 function trouver_entites_residuelles($texte){
 
 	// mot avec une majuscule.	
-	preg_match_all("/((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+/Uu",$texte,$m);
-
-	//var_dump("<pre>",$m);
-
-	$entites_residuelles = array_unique($m[1]);		
-
-	if(is_array($entites_residuelles))
-		return $entites_residuelles ;
-	else{ // ne pas merger avec un tableau NULL
-		return array(0 => 'fail');
-	}	
-	
-}
-
-function trouver_extraits_entites_residuelles($texte, $noms=array()){
-	
-	// On cherche des mots avec une capitale pas courants qui restent et leur contexte.
-	preg_match_all("/((?:.{50})(?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+)\s+(?:.{50}))/u",$texte,$m);
+	preg_match_all("`((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+`u",$texte,$m);
 
 	//var_dump("<pre>",$m);
 
@@ -474,19 +403,15 @@ function enregistrer_entites($entites = array(), $id_article){
 	foreach($entites as $entite){
 
 		if(preg_match("/^\|/", $entite)){
-			var_dump($entite);
-			exit ;
+			var_dump("alert pas d'entite",$entite,$entites);
+			continue ;
 		}
-
 
 		$e = explode("|", $entite);
 
 		$id_article_entite = $e[2];
 		$extrait = _q($e[3]);
 		$entite = _q($e[0]);
-
-
-				
 
 		$type_entite = _q($e[1]);
 		$date = _q(sql_getfetsel("date_redac","spip_articles","id_article=$id_article"));
