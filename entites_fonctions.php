@@ -72,7 +72,7 @@ function trouver_entites($texte,$id_article=""){
 	}
 
 	//var_dump($texte);
-	// on essaie de virer des permier ministre du Luxembourg
+	// on essaie de virer des premier ministre du Luxembourg
 	$recolte = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRES_CAPITALES . LETTRES ."+)", $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
@@ -81,10 +81,6 @@ function trouver_entites($texte,$id_article=""){
 	// a mettre en démo	
 
 	$noms = trouver_noms($texte) ;
-	//array_walk($noms,"nettoyer_noms");
-	foreach($noms as $nom)
-		$noms_clean[] = nettoyer_entite_nommee($nom);
-	$noms = $noms_clean ;
 
 	$recolte = traiter_fragments($noms, "Personnalités", $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
@@ -94,7 +90,7 @@ function trouver_entites($texte,$id_article=""){
 	$recolte  = recolter_fragments("Personnalités", "président\s([A-Z]". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
-
+	
 	// trouver des entites mono type
 
 	// types d'entites définis dans les listes txt.
@@ -111,24 +107,34 @@ function trouver_entites($texte,$id_article=""){
 
 	}
 
+	// on cherche des termes qui ont des majuscules dans le texte restant.
 	$entites_residuelles = trouver_entites_residuelles($texte);
 
-	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte_original) ;
+	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
+
+	// attention que les patronymes simple genre Obama vont faire reprendre des extraits deja connus dans le texte intégral.
+	// On vire donc les noms complets du texte intégral au rique de flinguer quelques extraits.
+
+	$texte_original_sans_noms = $texte_original ;
+	foreach(array_unique($noms) as $nom){
+		$texte_original_sans_noms = str_replace($nom, "", $texte_original_sans_noms);
+	}
+		
+	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte_original_sans_noms) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
-	// Revoir ici
-	// fusionner les personnalités.
+	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
 	foreach($fragments as $v){
 		if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
 			$personnalites[] = $m[1] ;
 	}
-	//var_dump("<pre>",$personnalites);
-
+	// var_dump("<pre>",$personnalites,"</pre><hr>");
 	if(is_array($personnalites))
 		foreach($personnalites as $v){
 			$a = explode(" ",$v) ;
 			if(sizeof($a) > 1){
+				// on suppose que le nom de famille est a la fin (mais ce n'est pas toujours le cas cf les personnalités asiatiques)
 				$patronyme = array_pop($a);
 				if(!$patronymes[$patronyme])
 					$patronymes[$patronyme] = $v ;
@@ -136,6 +142,7 @@ function trouver_entites($texte,$id_article=""){
 		}
 
 	//var_dump("<pre>",$patronymes);
+	//var_dump("<pre>",$fragments,"</pre><hr>");
 
 	foreach($fragments as $v){
 		if(preg_match("/^(.*)\|(Personnalités|INDETERMINE)\|/u",$v,$m)){
@@ -210,6 +217,27 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 	if(!is_array($entites))
 		return array("texte" => $texte, "fragments" => $fragments);
 
+
+	// Chasse aux entites ouverte !
+	// On supprime les entites du texte pour les chasser toutes à la fin ou ne reste plus qu'un texte sans entites.
+	foreach($entites as $entite){
+			
+		if($entite == "")
+			continue ;
+
+		// Trouver l'extrait dans le texte débité
+		preg_match("`(?:\W)(?:.{0,60})" . preg_quote($entite) . "(?:.{0,60})(?:\W)`u", $texte, $m);
+		$extrait = preg_replace(",\R,","",trim($m[0]));
+
+		// Virer l'entité dans cet extrait, puis dans le texte débité.
+		if(!$m[0])
+			$texte = str_replace($entite, "" , $texte);
+		else{
+			$extrait_propre = str_replace($entite,"",$extrait);
+			$texte = str_replace($extrait, $extrait_propre , $texte);
+		}
+	}
+
 	// On enregistre les extraits. Tout en isolant des formulations réduites.
 	$entites_uniques = array_unique($entites);
 
@@ -234,26 +262,6 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 			// Enregistrer l'entite
 			$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
 
-		}
-	}
-
-	// Chasse aux entites ouverte !
-	// On supprime les entites du texte pour les chasser toutes à la fin ou ne reste plus qu'un texte sans entites.
-	foreach($entites as $entite){
-			
-		if($entite == "")
-			continue ;
-
-		// Trouver l'extrait dans le texte débité
-		preg_match("`(?:\W)(?:.{0,60})" . preg_quote($entite) . "(?:.{0,60})(?:\W)`u", $texte, $m);
-		$extrait = preg_replace(",\R,","",trim($m[0]));
-
-		// Virer l'entité dans cet extrait, puis dans le texte débité.
-		if(!$m[0])
-			$texte = str_replace($entite, "" , $texte);
-		else{
-			$extrait_propre = str_replace($entite,"",$extrait);
-			$texte = str_replace($extrait, $extrait_propre , $texte);
 		}
 	}
 
@@ -286,7 +294,12 @@ function trouver_noms($texte){
 	$noms = $m[1] ;
 	//var_dump("<pre>",$m);
 
-	array_walk($noms,"nettoyer_noms");
+	//array_walk($noms,"nettoyer_noms");
+	foreach($noms as $nom)
+		$noms_clean[] = nettoyer_entite_nommee($nom);
+	$noms = $noms_clean ;
+
+	//var_dump("<pre>",$noms);
 
 	return $noms ;
 }
