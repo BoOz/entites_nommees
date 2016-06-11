@@ -58,8 +58,8 @@ Terra Nova
 
 
 // Institutions
-// Organisation des Nations unies (ONU)
-// Organisation du traité de l'Atlantique nord (OTAN)
+Organisation des Nations unies (ONU)
+Organisation du traité de l'Atlantique nord (OTAN)
 Parlement
 Nations unies
 Maison Blanche
@@ -84,6 +84,7 @@ Amnesty International
 // partis
 Parti socialiste
 Frères musulmans
+Parti des travailleurs du Kurdistan (PKK)
 
 // autres
 Mossad
