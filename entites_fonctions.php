@@ -7,6 +7,7 @@ include('mots_courants.php');
 // ini_set("pcre.backtrack_limit", "10000000000000");
 // ini_set("pcre.recursion_limit", "10000000000000");
 
+// http://www.regular-expressions.info/unicode.html
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
 define("LETTRES","\p{L}-");
 
@@ -89,7 +90,7 @@ function trouver_entites($texte,$id_article){
 	$texte = $recolte['texte'];
 
 	// Isoler les présidents résiduels
-	$recolte  = recolter_fragments("Personnalités", "présidente?\s(" . LETTRE_CAPITALE . "". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
+	$recolte  = recolter_fragments("Personnalités", "présidente?\s(" . LETTRE_CAPITALE . LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
