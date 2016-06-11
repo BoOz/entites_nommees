@@ -9,13 +9,16 @@ include('mots_courants.php');
 
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
 define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒ-]");
-define("LETTRES_CAPITALES","[A-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßŒ-]");
+
+// http://www.regular-expressions.info/unicode.html
+// \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant. 
+define("LETTRE_CAPITALE","\p{Lu}");
 
 
 // var_dump("<pre>",$types_entites,"</pre>");
 
 // Isoler les entites connues (Institutions, Traités etc).
-function trouver_entites($texte,$id_article=""){
+function trouver_entites($texte,$id_article){
 
 	$fragments = array();
 	$texte_original = $texte ;
@@ -71,9 +74,8 @@ function trouver_entites($texte,$id_article=""){
 		$texte = $recolte['texte'];
 	}
 
-	//var_dump($texte);
-	// on essaie de virer des premier ministre du Luxembourg
-	$recolte = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRES_CAPITALES . LETTRES ."+)", $texte, $fragments, $id_article, $texte_original);
+	// on enlève des FONCTIONS de QUELQUEPART : premier ministre du Luxembourg etc
+	$recolte = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRE_CAPITALE . LETTRES ."+)", $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
@@ -91,7 +93,7 @@ function trouver_entites($texte,$id_article=""){
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
-	// trouver des entites mono type
+	// trouver des entites constituées d'un seul mot
 
 	// types d'entites définis dans les listes txt.
 	$types_entites_mono =  generer_types_entites("mono");	
@@ -233,7 +235,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 			}
 	
 			// Trouver les extraits ou apparaissent l'entite dans le texte original
-			preg_match_all("`(?:\W)((?:.{0,60})" . preg_quote($entite) . "(?:.{0,60}))(?:\W)`u", $texte_original, $m);
+			preg_match_all("`(?:\W)((?:.{0,60})\W" . preg_quote($entite) . "\W(?:.{0,60}))(?:\W)`u", $texte_original, $m);
 	
 			foreach($m[1] as $extrait){
 				$extrait = preg_replace(",\R,","",trim($extrait));
@@ -378,8 +380,8 @@ function preparer_texte($texte){
 
 function trouver_entites_residuelles($texte){
 
-	// mot avec une majuscule.	
-	preg_match_all("`((?!(?i)(?:". MOTS_DEBUT .")\s+)[A-Z](?:". LETTRES ."+))\s+`u",$texte,$m);
+	// mots avec une majuscule.
+	preg_match_all("`((?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+))\s+`u", $texte, $m);
 
 	//var_dump("<pre>",$m);
 
