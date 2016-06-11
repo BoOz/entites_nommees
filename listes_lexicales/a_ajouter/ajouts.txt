@@ -17,9 +17,10 @@ République islamique
 Serbie
 Sahara occidental
 Empire ottoman
+Corée
 
 // villes non présentes dans typo
-
+Gaza
 
 
 
@@ -28,6 +29,7 @@ Soviétiques
 Britanniques
 Européens
 Américains
+
 
 // Minorités
 Noirs
@@ -38,6 +40,7 @@ Hutus
 Tutsis
 Arabes
 Blancs
+Palestiniens
 
 
 // Journaux souvent cités dans le Diplo
@@ -55,6 +58,8 @@ Terra Nova
 
 
 // Institutions
+// Organisation des Nations unies (ONU)
+// Organisation du traité de l'Atlantique nord (OTAN)
 Parlement
 Nations unies
 Maison Blanche

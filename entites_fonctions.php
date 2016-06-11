@@ -53,8 +53,8 @@ function trouver_entites($texte,$id_article){
 	$texte = str_replace("}", "", $texte);
 
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s)+)\((" . LETTRE_CAPITALE . "+)\)";
-	$recolte = recolter_fragments("Institutions", $acronymes, $texte, $fragments, $id_article, $texte_original);
+	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
+	$recolte = recolter_fragments("Institutions automatiques", $acronymes, $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
@@ -229,7 +229,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 				continue ;
 
 			// En cas d'accronyme, virer aussi la forme réduite
-			$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s)+)\((" . LETTRE_CAPITALE . "+)\)";
+			$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 			if(preg_match("/$acronymes/Uu", $entite, $r)){
 				// En cas d'accronyme, virer aussi la forme réduite ou moyenne
 				$reduite[trim($r[2])] = trim($r[1]) ;
