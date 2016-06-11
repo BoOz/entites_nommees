@@ -7,11 +7,11 @@ include('mots_courants.php');
 // ini_set("pcre.backtrack_limit", "10000000000000");
 // ini_set("pcre.recursion_limit", "10000000000000");
 
-// http://www.regular-expressions.info/unicode.html
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
-define("LETTRES","\p{L}-");
+define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒ-]");
 
 // http://www.regular-expressions.info/unicode.html
+// \p{L} lettres
 // \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant. 
 define("LETTRE_CAPITALE","\p{Lu}");
 
