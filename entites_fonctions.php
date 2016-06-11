@@ -8,7 +8,7 @@ include('mots_courants.php');
 // ini_set("pcre.recursion_limit", "10000000000000");
 
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
-define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒ-]");
+define("LETTRES","\p{L}-");
 
 // http://www.regular-expressions.info/unicode.html
 // \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant. 
@@ -52,7 +52,7 @@ function trouver_entites($texte,$id_article){
 	$texte = str_replace("}", "", $texte);
 
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
+	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s)+)\((" . LETTRE_CAPITALE . "+)\)";
 	$recolte = recolter_fragments("Institutions", $acronymes, $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
@@ -89,7 +89,7 @@ function trouver_entites($texte,$id_article){
 	$texte = $recolte['texte'];
 
 	// Isoler les présidents résiduels
-	$recolte  = recolter_fragments("Personnalités", "présidente?\s([A-Z]". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
+	$recolte  = recolter_fragments("Personnalités", "présidente?\s(" . LETTRE_CAPITALE . "". LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
@@ -228,7 +228,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 				continue ;
 
 			// En cas d'accronyme, virer aussi la forme réduite
-			$acronymes = "((?<!\.\s)[A-Z](?:". LETTRES ."|\s)+)\(([A-Z]+)\)";
+			$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s)+)\((" . LETTRE_CAPITALE . "+)\)";
 			if(preg_match("/$acronymes/Uu", $entite, $r)){
 				// En cas d'accronyme, virer aussi la forme réduite ou moyenne
 				$reduite[trim($r[2])] = trim($r[1]) ;
@@ -288,10 +288,10 @@ function trouver_noms($texte){
 	$reg =  "%(?:\W)". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
 			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas de mot de debut de phrase avec un capitale lambda ou en CAPS
 			"(".
-				"(?:(?<!\.)[A-Z](?!')(?:". LETTRES ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou d'un .
-				"(?:\s+[A-Z](?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
+				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:". LETTRES ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou d'un .
+				"(?:\s+" . LETTRE_CAPITALE . "(?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
 				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
-				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")[A-Z]". LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
+				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
 			"|". ENTITES_PERSO .")". // Personnalités à pseudo
 	"%mu"	;
 
