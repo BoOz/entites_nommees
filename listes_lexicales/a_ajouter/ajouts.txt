@@ -67,7 +67,6 @@ Parlement
 Maison Blanche
 Wall Street
 Union européène
-Conseil de sécurité
 Conseil national de sécurité
 Conseil européen
 Parlement européen
@@ -77,21 +76,17 @@ Congrès des Etats-Unis
 Congrès américain
 Banque mondiale
 
-Organisation du traité de l'Atlantique nord
 Fonds monétaire international (FMI)
 
 Amnesty International
 
-
 // partis
-Parti socialiste
 Frères musulmans
 Parti des travailleurs du Kurdistan (PKK)
 Forces armées révolutionnaires de Colombie (FARC)
 
 // autres
 Mossad
-
 
 
 // culture
@@ -129,8 +124,6 @@ Loi Macron
 // révolutions
 Révolution islamique
 Mai 68
-
-
 
 
 // régime
@@ -198,24 +191,3 @@ la Tribu Ka
 Unedic (Union nationale pour l'emploi dans l'industrie et le commerce)
 Union fédérale des consommateurs (UFC) - Que choisir ; UFC - Que choisir
 Uni(e)s contre une immigration jetable (UCIJ)
-
-// PERSONNALITÉS
-Abd Al Malik (rappeur)
-M. Claude Bébéar (président d'Axa)
-M. Jean-Philippe Bouret (magistrat à la chambre sociale de la Cour de cassation)
-Emil Cioran (écrit ainsi sur sa tombe)
-Mme Anne Courrège (conseillère d'Etat)
-D' de Kabal (rappeur)
-Dgiz (rappeur)
-Grand Corps Malade (slameur)
-Bernard-Henri Lévy (répétable) ou « BHL »
-Mme Béatrice Marre (députée de l'Oise, 2000)
-Mme Christine Maugüé (conseillère d'Etat)
-M. Allan Metzer (rapport Metzer, mars 2000)
-professeur Pierre Pellerin (Service central de protection contre les rayonnements ionisants) (Tchernobyl)
-M. Arnaud de Puyfontaine (patron de Mondadori France)
-Rocé (rappeur)
-M. Gérald de Roquemaurel (PDG de Hachette Filippachi Médias)
-M. Thierry Saussez (président d'Image et Stratégie)
-M. Philippe Séguin (président de la Cour des comptes)
-M. Nicolas de Tavernost (président de M6)
