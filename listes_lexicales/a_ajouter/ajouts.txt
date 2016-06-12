@@ -20,10 +20,13 @@ Empire ottoman
 Corée
 URSS
 
+// République fédérale d'Allemagne (RFA)
+// République démocratique du Congo (RDC)
+
+
 // villes non présentes dans typo
 Gaza
 Genève
-
 
 
 // Exceptions
@@ -54,36 +57,56 @@ Agence France-Presse
 Charlie Hebdo
 France Inter
 
+// ONG
+Amnesty International
 
 // think tank
 Terra Nova
+
+Wall Street
 
 
 // Institutions
 Organisation des Nations unies (ONU)
 Organisation du traité de l'Atlantique nord (OTAN)
 Haut-Commissariat des Nations unies pour les réfugiés (HCR)
-Parlement
-Maison Blanche
-Wall Street
-Union européène
+
+Conférence des Nations unies
 Conseil national de sécurité
-Conseil européen
-Parlement européen
-Cour des comptes
+
+Maison Blanche
 Cour suprême
 Congrès des Etats-Unis
 Congrès américain
-Banque mondiale
 
+Union européène
+Conseil européen
+Parlement européen
+
+Parlement
+Cour des comptes
+
+Banque mondiale
 Fonds monétaire international (FMI)
 
-Amnesty International
 
 // partis
+Parti socialiste (PS)
+Parti socialiste
+PS
+
+Parti communiste français (PCF)
+Parti communiste
+PCF
+PC
+
 Frères musulmans
+
 Parti des travailleurs du Kurdistan (PKK)
+PKK
+
 Forces armées révolutionnaires de Colombie (FARC)
+FARC
 
 // autres
 Mossad
