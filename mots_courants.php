@@ -46,7 +46,7 @@ define("ENTITES_PERSO","Machiavel|Molière|Mirabeau|Staline|Lénine|Mao|Bono|Mus
 /* Patterns pour isoler des entités restées parmis des personnalités */
 
 define("ENTITES_LIEUX_HEURISTIQUE","Sud$|^Nord-|Nord$|Est$|Ouest$|Côte|Congo|République|Etats|City");
-define("ENTITES_INSTITUTIONS_HEURISTIQUE","Nation|Ambassade|Conseil|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|Accords|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration");
+define("ENTITES_INSTITUTIONS_HEURISTIQUE","Nation|Ambassade|Conseil|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|Accords|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration|convention d(?:e|') \p{Lu}\w+|accords d(?:e|')\w+");
 
 // http://typo.mondediplo.net/?page=entites_nommees&entite=fonctions
 define("FONCTIONS_PERSONNALITES_TYPO","présidente? de la République|chef de l'exécutif|premier ministre|président fédéral|chancelière fédérale|chef du gouvernement|reine|chancelier fédéral|première ministre|roi des Belges|roi-dragon|présidence collégiale tournante|président du conseil des ministres|président du présidium de l'Assemblée populaire suprême depuis 2011|président du gouvernement|ministre d'Etat|roi|présidente?|président du conseil|empereur|prince régnant|grand-duc|premier ministre par intérim|prince|ministre d'État");
