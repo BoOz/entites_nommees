@@ -87,7 +87,7 @@ Forces armées révolutionnaires de Colombie (FARC)
 
 // autres
 Mossad
-
+Kremlin
 
 // culture
 Opéra du Caire
@@ -117,6 +117,7 @@ Coup d'État
 guerre du Golfe
 traité de Versailles
 Intifada
+révolution russe
 
 // Social
 Loi Macron
