@@ -119,7 +119,7 @@
 	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{si #ENV{entite}|oui}> 			#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
 	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES)"}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 	
-	<BOUCLE_fcl(DATA){source sql, #VAL{"select entite , count(entite) nb from entites_nommees where id_article in (LESARTICLES) and type_entite='Personnalités' group by entite having nb > 5 order by nb desc limit 0,10"}|replace{LESARTICLES,#GET{articles}|join{","}} }{si #GET{articles}|sizeof|>={1}|oui}>
+	<BOUCLE_fcl(DATA){source sql, #VAL{"select entite , count(entite) nb from entites_nommees where id_article in (LESARTICLES) and type_entite='Personnalités' and entite != 'LENTITE' group by entite having nb > 5 order by nb desc limit 0,10"}|replace{LENTITE,#ENV{entite}}|replace{LESARTICLES,#GET{articles}|join{","}} }{si #GET{articles}|sizeof|>={1}|oui}>
 	#SET{compagnons,#GET{compagnons}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_fcl>
 
 	<B_cd>

@@ -20,8 +20,13 @@ Empire ottoman
 Corée
 URSS
 
+
+// debraye sur les institutions
 // République fédérale d'Allemagne (RFA)
 // République démocratique du Congo (RDC)
+
+// debraye sur les personnalités
+Celtics de Glasgow
 
 
 // villes non présentes dans typo
