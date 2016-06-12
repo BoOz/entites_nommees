@@ -18,9 +18,11 @@ Serbie
 Sahara occidental
 Empire ottoman
 Corée
+URSS
 
 // villes non présentes dans typo
 Gaza
+Genève
 
 
 
@@ -29,7 +31,7 @@ Soviétiques
 Britanniques
 Européens
 Américains
-
+Israéliens
 
 // Minorités
 Noirs
@@ -60,8 +62,8 @@ Terra Nova
 // Institutions
 Organisation des Nations unies (ONU)
 Organisation du traité de l'Atlantique nord (OTAN)
+Haut-Commissariat des Nations unies pour les réfugiés (HCR)
 Parlement
-Nations unies
 Maison Blanche
 Wall Street
 Union européène
@@ -76,7 +78,7 @@ Congrès américain
 Banque mondiale
 
 Organisation du traité de l'Atlantique nord
-Fonds monétaire international
+Fonds monétaire international (FMI)
 
 Amnesty International
 
