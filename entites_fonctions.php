@@ -159,7 +159,7 @@ function trouver_entites($texte,$id_article){
 			// cas des Parti communiste (PC)
 			// recaler des institutions réduites PC
 			if($institutions[$m[1]]){
-				$f = preg_replace("/^".$m[1]."/u", $institutions[$m[1]] . " (" . $m[1] . ")", $v) ;
+				$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
 				$f = preg_replace("/\|".$m[2]."\|/u","|Institutions automatiques|",$f) ;
 				$fragments_fusionnes[] = $f ;
 			}elseif(in_array($m[1], $institutions)){ // recaler des institutions réduites moyenne Parti communiste

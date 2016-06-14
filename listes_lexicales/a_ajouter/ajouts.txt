@@ -95,6 +95,8 @@ Parti pour l'indépendance du Royaume-Uni (Ukip)
 
 Syriza
 
+Organisation de libération de la Palestine (OLP)
+
 // autres
 Mossad
 Kremlin
@@ -109,12 +111,14 @@ Musée du quai Branly
 Prix Nobel
 prix Nobel
 
-// Périodes
+// Périodes / Régimes
 Renaissance
 Lumières
 
+
 IIIe République
 Ve République
+République
 
 IIIe Reich
 République de Weimar
@@ -140,9 +144,6 @@ Loi Macron
 Révolution islamique
 Mai 68
 
-
-// régime
-République
 
 // etat
 Sécurité sociale

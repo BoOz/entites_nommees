@@ -33,26 +33,13 @@
 <body>
 
 <div style="float:right;width:15%">
-<INCLURE{fond=noms_navigation}>
+#INCLURE{fond=noms_navigation}
 </div>
 
 <h1><a href="?page=entites_nommees">Entités nommées</a> <small style="font-size:0.5em">dans [(#NOM_SITE_SPIP|replace{^Les,les})]</small></h1>
 
 	<span></span>
 	<h2>[(#GET{affdate}|trim|sinon{#ENV{sdate}})]</h2>
-
-
-[(#REM) Débug ]
-#SET{entites,#ARRAY}
-<B_art>
-<div id="debug" style="float:left;width:80%; max-height:300px;overflow:auto">
-<BOUCLE_art(ARTICLES){id_article}{statut IN prop, publie}{si #VAL{1}|=={1}}>
-	#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
-	#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
-</BOUCLE_art>
-[<pre>(#GET{entites}|print_r{1})</pre>]
-</div>
-</B_art>
 
 #SET{articles,#ARRAY}
 #SET{compagnons,#ARRAY}
@@ -62,22 +49,21 @@
 [(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 
 #SET{andwhere,""}
-[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite regexp '^LENTITE'"}|replace{LENTITE,#ENV{entite}}} ]
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}}} ]
 [(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
 [(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
 
 <B_type>
 <h2>
 <BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite='LENTITE' limit 0,1"}|replace{LENTITE,#ENV{entite}}}{si #ENV{entite}|oui}>
-#TYPE_ENTITE
+#TYPE_ENTITE [> (#ENV{entite})]
 </BOUCLE_type>
 </h2>
 </B_type>
 
-[<h3>(#ENV{entite}) </h3>]
 
 <BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{si #ENV{entite}|oui}> 			#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
-[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES)"}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !='LENTITE'"}|replace{LENTITE,#ENV{entite}}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 
 	#SET{tab,#ARRAY}
 	<BOUCLE_home(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'Peuples', 'a ajouter') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>
@@ -89,61 +75,73 @@
 		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_territoires>
 
-
 	<B_top_entites>
 	<div style="margin:40px 60px 20px 40px;padding:0 50px;line-height:1.8em;width:70%;text-align:center;">
-
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
-		<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
-[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
-		</a>
-	</span>
+		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
+			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+			</a>
+		</span>
 	</BOUCLE_top_entites>
 
 	<br />
 	<br />
 
 	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
-		<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
-[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
-		</a>
-	</span>
+		<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
+			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+			</a>
+		</span>
 	</BOUCLE_top_territoires>
-
 
 	</div>
 	</B_top_entites>
 
 
-<div style="max-height:200px;overflow:auto;clear:left">
-
 	<B_fragments_entite>
+	<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 40px;padding: 0 50px;width:66%">
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
-		<div><BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}><strong>[(#TITRE) ]</strong><small>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</small></BOUCLE_article> : [(#EXTRAIT)] 
-		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
-		</div>
+		<p>
+			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
+			<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
+			<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]" title="Extrait de « [(#TITRE)] »">[voir]</a></small>
+		</p>
 	</BOUCLE_fragments_entite>
-	<p>#PAGINATION</p>
+		<p>#PAGINATION</p>
+	</div>
 	</B_fragments_entite>
-
-</div>
 
 
 	#SET{comp,'having nb > 5'}
 	<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prop, publie}>	
 	#SET{comp,''}
-	<h3 style="">#TITRE<small> — <a href="?page=entites_nommees&amp;sdate=[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]">[(#DATE_REDAC|annee)][-(#DATE_REDAC|mois)]</a></small></h3>	
-		
-	<div class="texte">
-		[(#CHAPO|concat{
-			#TEXTE})]
-		<div>
-		#NOTES
+	<h3 style="clear:left;">#TITRE</h3>
+
+	[(#REM) Débug : Entites d'un article en direct sans enregistrement ]
+	#SET{entites,#ARRAY}
+
+	#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
+	#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
+
+	<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 40px;padding: 0 50px;width:66%">
+		<BOUCLE_entites_articles(DATA){source table,#GET{entites}}{valeur !==INDETERMINE}>
+		[<p>
+			 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> : [(#VALEUR|explode{"|"}|table_valeur{3})]
+			
+		</p>]
+		</BOUCLE_entites_articles>
+		<h4>Texte</h4>	
+		<div class="texte">
+			[(#CHAPO|concat{
+				#TEXTE})]
+			<div>
+			#NOTES
+			</div>
 		</div>
 	</div>
 	</BOUCLE_texte_article>
@@ -215,11 +213,10 @@
 <div id="debug" style="float:left;width:80%; max-height:300px;overflow:auto">
 
 	<B_fragments_article>
-	<h3 style="">Article [(#ENV{id_article})] (#GRAND_TOTAL)</h3>
+	<h3 style="">Type indéterminé (#GRAND_TOTAL)</h3>
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments_article(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where id_article='LENTITE' and type_entite='INDETERMINE' order by date desc"}|replace{LENTITE,#ENV{id_article}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|oui}>
 		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
-		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
 		</div>
 	</BOUCLE_fragments_article>
 	<p>#PAGINATION</p>
@@ -230,7 +227,7 @@
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
 		<div><strong>#ENTITE <small>(#TYPE_ENTITE)</small> :</strong> <small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#NB)]&nbsp;fois</a></small> [(#EXTRAIT)] 
-		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		[(#ENV{id_article}|non)<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>]
 		</div>
 	</BOUCLE_fragments>
 	<p>#PAGINATION</p>
