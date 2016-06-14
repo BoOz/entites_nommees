@@ -248,20 +248,20 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 				continue ;
 	
 			// Trouver les extraits ou apparaissent l'entite dans le texte original
-			preg_match_all("`(?:\W)((?:.{0,60})\W" . preg_quote($entite) . "\W(?:.{0,60}))(?:\W)`u", $texte_original, $m);
+			if(preg_match_all("`(?:\W)((?:.{0,60})\W" . preg_quote($entite) . "\W(?:.{0,60}))(?:\W)`u", $texte_original, $m)){
 	
-			foreach($m[1] as $extrait){
-				$extrait = preg_replace(",\R,","",trim($extrait));
-	
-				// réguler les types avec plusieurs sous_chaines
-				$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
-				$type = str_replace("_", " ", $type);	
-			
-				// Enregistrer l'entite
-				$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
-	
+				foreach($m[1] as $extrait){
+					$extrait = preg_replace(",\R,","",trim($extrait));
+		
+					// réguler les types avec plusieurs sous_chaines
+					$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
+					$type = str_replace("_", " ", $type);	
+				
+					// Enregistrer l'entite
+					$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
+		
+				}
 			}
-
 		}
 
 	// Chasse aux entites ouverte !
