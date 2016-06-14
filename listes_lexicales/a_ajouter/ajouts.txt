@@ -1,30 +1,5 @@
 // Constatés dans le Diplo mais non présents sur le site typo
 
-// Géographie
-Afrique australe
-
-Amérique centrale
-Amérique du nord
-Amérique latine
-Amérique du Sud
-Amérique
-
-// Pays
-
-Grande-Bretagne
-Yougoslavie
-République islamique
-Serbie
-Sahara occidental
-Empire ottoman
-Corée
-URSS
-
-
-// debraye sur les institutions
-// République fédérale d'Allemagne (RFA)
-// République démocratique du Congo (RDC)
-
 // debraye sur les personnalités
 Celtics de Glasgow
 
@@ -53,23 +28,26 @@ Blancs
 Palestiniens
 
 
-// Journaux souvent cités dans le Diplo
-Le Monde diplomatique
-Le Monde
-Monde
-Al-Masri Al-Youm
-Agence France-Presse
 Charlie Hebdo
-France Inter
+
 
 // ONG
 Amnesty International
 
+// OG
+Frontex
+
 // think tank
 Terra Nova
 
+
+// Etats
 Wall Street
 
+// entreprises
+Vinci
+Google
+Facebook
 
 // Institutions
 Organisation des Nations unies (ONU)
@@ -95,14 +73,14 @@ Banque mondiale
 Fonds monétaire international (FMI)
 
 
-// partis
-Parti socialiste (PS)
+// partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
 Parti socialiste
 PS
 
-Parti communiste français (PCF)
-Parti communiste
+Parti communiste français
 PCF
+
+Parti communiste
 PC
 
 Frères musulmans
@@ -112,6 +90,10 @@ PKK
 
 Forces armées révolutionnaires de Colombie (FARC)
 FARC
+
+Parti pour l'indépendance du Royaume-Uni (Ukip)
+
+Syriza
 
 // autres
 Mossad
@@ -186,7 +168,8 @@ PIB
 Bourse
 Consensus de Washington
 
-
+// traités
+grand marché transatlantique (GMT)
 
 // fiche france
 

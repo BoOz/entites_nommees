@@ -4,8 +4,7 @@
 Agang
 Alliance démocratique
 African National Congress
-Congrès national africain
-(ANC)
+Congrès national africain (ANC)
 Congress of South African Trade Unions
 Congrès des syndicats sud-africains
 (Cosatu)
@@ -975,18 +974,15 @@ Pro-European Conservative Party
 Parti social-démocrate et travailliste (SDLP)
 Scottish National Party
 Sinn Fein
-officiel
 
 Parti nationaliste écossais (SNP)
 Socialist Workers Party
-Parti socialiste des travailleurs
-(SWP)
+Parti socialiste des travailleurs (SWP)
 Ulster Defence Association
 Association de défense de l'Ulster
 (UDA)
 United Kingdom Independence Party
-Parti pour l'indépendance du Royaume-Uni
-(UKIP)
+Parti pour l'indépendance du Royaume-Uni (UKIP)
 Parti unioniste du Royaume-Uni (UKUP)
 Westminster Foundation dor Democracy
 
@@ -1051,37 +1047,30 @@ Refondation communiste (RC)
 // SAINTE-LUCIE, f.
 
 Progressive Labour Party
-Parti travailliste progressiste
-(PLP)
+Parti travailliste progressiste (PLP)
 Saint Lucia Labour Party
-Parti travailliste de Sainte-Lucie
-(SLLP)
+Parti travailliste de Sainte-Lucie (SLLP)
 United Workers Party
-Parti uni des travailleurs
-(UWP)
+Parti uni des travailleurs (UWP)
 
 // ALERTE pas de formations politiques dans SALOMON
 
 // SALVADOR
 
 Alianza Republicana Nacionalista
-Alliance républicaine nationaliste
-(Arena)
+Alliance républicaine nationaliste (Arena)
 Convergence démocratique (CD)
 Centre démocratique uni (CDU)
 Direction révolutionnaire unifiée (DRU)
 Ejercito Revolucionario del Pueblo
-Armée révolutionnaire du peuple
-(ERP)
+Armée révolutionnaire du peuple (ERP)
 Front démocratique révolutionnaire (FDR)
 Frente Farabundo Martí para la Liberacion Nacional
-Front Farabundo Martí pour la libération nationale
-(FMLN)
+Front Farabundo Martí pour la libération nationale (FMLN)
 Mouvement populaire social-chrétien (MPSC)
 Parti de conciliation nationale (PCN)
 Partido Democrata Cristiano
-Parti chrétien-démocrate
-(PDC)
+Parti chrétien-démocrate (PDC)
 
 // ALERTE pas de formations politiques dans SAMOA
 
@@ -1089,9 +1078,7 @@ Parti chrétien-démocrate
 
 Action démocratique indépendante (ADI)
 Front démocratique chrétien (FDC)
-Mouvement de libération de São-Tomé-et-Príncipe
-ex-parti unique
-(MLSTP)
+Mouvement de libération de São-Tomé-et-Príncipe ex-parti unique (MLSTP)
 Parti de la convergence démocratique (PCD)
 
 // SÉNÉGAL
@@ -1146,8 +1133,7 @@ Parti de l'entente civique (SOP)
 
 // SOMALIE
 
-Al-Chabab
-des _chabab_
+Al-Chabab des _chabab_
 
 Alliance pour la libération nouvelle de la Somalie
 Alliance nationale somalienne (ANS)
