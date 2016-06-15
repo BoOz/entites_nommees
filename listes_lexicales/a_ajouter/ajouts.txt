@@ -6,7 +6,6 @@ Celtics de Glasgow
 
 // villes non présentes dans typo
 Gaza
-Genève
 
 
 // Exceptions

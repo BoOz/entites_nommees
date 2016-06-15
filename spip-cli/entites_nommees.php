@@ -24,13 +24,22 @@ class entites_nommees extends Command {
 			->setDescription('Générer les entités nommées en parcourant la base.')
 			->setAliases(array(
 				'entites'
-			));
+			))
+			->addOption(
+				'restart',
+				'r',
+				InputOption::VALUE_OPTIONAL,
+				'Effacer les entités nommées en base et recommencer la recherche',
+				'non'
+			);
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output) {
 		global $spip_racine;
 		global $spip_loaded;
 		global $spip_version_branche ;		
+	
+		$restart = $input->getOption('restart') ;
 	
 		include_spip("base/abstract_sql");
 				
@@ -42,6 +51,11 @@ class entites_nommees extends Command {
 			}
 			// Si c'est bon on continue
 			else{
+				
+				if($restart !=="non"){
+					$output->writeln("<info>On efface tout et on recommence.</info>");
+					sql_query("truncate table entites_nommees");
+				}
 				
 				passthru("clear");
 

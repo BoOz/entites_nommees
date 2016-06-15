@@ -123,15 +123,15 @@
 	<h3 style="clear:left;">#TITRE</h3>
 
 	[(#REM) Débug : Entites d'un article en direct sans enregistrement ]
-	#SET{entites,#ARRAY}
 
 	#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
+	#SET{entites,#ARRAY}
 	#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
 
 	<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 40px;padding: 0 50px;width:66%">
-		<BOUCLE_entites_articles(DATA){source table,#GET{entites}}{valeur !==INDETERMINE}>
+		<BOUCLE_entites_articles(DATA){source table,#GET{entites}}>
 		[<p>
-			 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> : [(#VALEUR|explode{"|"}|table_valeur{3})]
+			 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> ([(#VALEUR|explode{"|"}|table_valeur{1})]) : [(#VALEUR|explode{"|"}|table_valeur{3})]
 			
 		</p>]
 		</BOUCLE_entites_articles>
