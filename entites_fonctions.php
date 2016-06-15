@@ -346,6 +346,9 @@ function nettoyer_entite_nommee(&$entite, $key){
 		$entite = trim(preg_replace("/(?!\))\P{L}+$/u", "", $entite));
 	else
 		$entite = trim(preg_replace("/\P{L}+$/u", "", $entite));
+		
+	if(preg_match("`^" . MOTS_DEBUT . "$`u", $entite))
+		$entite = "" ;	
 
 	$entite = trim(preg_replace("/^\P{L}+/u", "", $entite));
 }
