@@ -121,6 +121,13 @@ function trouver_entites($texte,$id_article){
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
+
+	foreach($fragments as $v){
+			if(preg_match("/^a\|/", $v)){
+			exit ;
+	}}
+
+
 	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
@@ -150,6 +157,7 @@ function trouver_entites($texte,$id_article){
 	//var_dump("<pre>",$fragments,"</pre><hr>");
 
 	foreach($fragments as $v){
+		
 		// Dans ce qu'il reste plus les persos auto
 		if(preg_match("/^(.*)\|(Personnalités|INDETERMINE)\|/u",$v,$m)){
 			// attention aux noms de plus de deux mots
@@ -208,7 +216,7 @@ function trouver_entites($texte,$id_article){
 			}			
 		}else{
 			$fragments_traites[] = $v ;
-		}
+		}	
 	}
 
 	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
@@ -241,14 +249,16 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 	// On enregistre les extraits. Tout en isolant des formulations réduites.
 	$entites_uniques = array_unique($entites);
 
+	//var_dump($entites);
+
 	if(is_array($entites_uniques))
 		foreach($entites_uniques as $entite){
 
 			if($entite == "")
 				continue ;
-	
+		
 			// Trouver les extraits ou apparaissent l'entite dans le texte original
-			if(preg_match_all("`(?:\W)((?:.{0,60})\W" . preg_quote($entite) . "\W(?:.{0,60}))(?:\W)`u", $texte_original, $m)){
+			if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . preg_quote($entite) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte_original, $m)){
 	
 				foreach($m[1] as $extrait){
 					$extrait = preg_replace(",\R,","",trim($extrait));
@@ -256,6 +266,8 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 					// réguler les types avec plusieurs sous_chaines
 					$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
 					$type = str_replace("_", " ", $type);	
+				
+					//var_dump($entite . "|$type|" . $id_article . "|" . $extrait);
 				
 					// Enregistrer l'entite
 					$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
@@ -272,7 +284,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 			continue ;
 
 		// Trouver l'extrait dans le texte débité
-		preg_match("`(?:\W)(?:.{0,60})" . preg_quote($entite) . "(?:.{0,60})(?:\W)`u", $texte, $m);
+		preg_match("`(?:\P{L})(?:.{0,60})" . preg_quote($entite) . "(?:.{0,60})(?:\P{L})`u", $texte, $m);
 		$extrait = preg_replace(",\R,","",trim($m[0]));
 
 		// Virer l'entité dans cet extrait, puis dans le texte débité.
@@ -300,7 +312,7 @@ function trouver_noms($texte){
 	// http://stackoverflow.com/questions/7653942/find-names-with-regular-expression
 
 	// virer les débuts de phrases
-	$reg =  "%(?:\W)". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
+	$reg =  "%(?:\P{L})". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
 			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas de mot de debut de phrase avec un capitale lambda ou en CAPS
 			"(".
 				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:". LETTRES ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou d'un .
@@ -338,12 +350,11 @@ function nettoyer_entite_nommee(&$entite, $key){
 
 	// nettoyage des entités choppées avec une ,. ou autre.
 	if(strpos($entite, "("))
-		$entite = trim(preg_replace("/(?!\))\W+$/u", "", $entite));
+		$entite = trim(preg_replace("/(?!\))\P{L}+$/u", "", $entite));
 	else
-		$entite = trim(preg_replace("/\W+$/u", "", $entite));
+		$entite = trim(preg_replace("/\P{L}+$/u", "", $entite));
 
-	$entite = trim(preg_replace("/^\W+/u", "", $entite));
-
+	$entite = trim(preg_replace("/^\P{L}+/u", "", $entite));
 }
 
 function entites_nommees($noms = array()){
@@ -419,6 +430,12 @@ function enregistrer_entites($entites = array(), $id_article){
 
 	foreach($entites as $entite){
 
+/*
+		if(preg_match("/^a\|/", $entite)){
+			var_dump("enregis",$entite);
+			exit ;
+		}
+*/
 		if(preg_match("/^\|/", $entite)){
 			var_dump("alert pas d'entite",$entite,$entites);
 			continue ;
@@ -514,7 +531,7 @@ function generer_types_entites($nb_mots="multi"){
 					// forme développée ou pas
 					//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
 					
-					$entites_regexp .=  "\W". $entite_unique . "\W|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
+					$entites_regexp .=  "\P{L}". $entite_unique . "\P{L}|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
 
 				}
 			}
@@ -532,12 +549,12 @@ function generer_types_entites($nb_mots="multi"){
 				$chaine = $entites_regexp ;
 				$sous_chaine = array();
 				while($i <= $nb){
-					$pos = strrpos(substr($chaine, 0, 10000), "\W|") ;
+					$pos = strrpos(substr($chaine, 0, 10000), "\P{L}|") ;
 					//echo "dernier | du paquet $i à la pos : $pos" ;
 					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$t_entite.$i] = $s_chaine . "\W" ;
+					$types_entites[$t_entite.$i] = $s_chaine . "\P{L}" ;
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
-					$chaine = str_replace($s_chaine . "\W|" ,"", $chaine);
+					$chaine = str_replace($s_chaine . "\P{L}|" ,"", $chaine);
 					$i ++ ;
 				}			
 			}else{
