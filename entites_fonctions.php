@@ -121,13 +121,6 @@ function trouver_entites($texte,$id_article){
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
-
-	foreach($fragments as $v){
-			if(preg_match("/^a\|/", $v)){
-			exit ;
-	}}
-
-
 	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
@@ -407,11 +400,12 @@ function preparer_texte($texte){
 function trouver_entites_residuelles($texte){
 
 	// mots avec une majuscule.
-	preg_match_all("`((?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+))\s+`u", $texte, $m);
+	preg_match_all("`(?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+)\s+`u", $texte, $m);
 
-	//var_dump("<pre>",$m);
+	$entites_residuelles = array_unique($m[0]);
 
-	$entites_residuelles = array_unique($m[1]);		
+	if(is_array($entites_residuelles) and sizeof($entites_residuelles) >= 1)
+		array_walk($entites_residuelles,"nettoyer_entite_nommee");
 
 	if(is_array($entites_residuelles))
 		return $entites_residuelles ;
