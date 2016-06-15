@@ -341,16 +341,21 @@ function nettoyer_noms(&$item1, $key){
 
 function nettoyer_entite_nommee(&$entite, $key){
 
+	//var_dump($entite);
+
 	// nettoyage des entités choppées avec une ,. ou autre.
 	if(strpos($entite, "("))
-		$entite = trim(preg_replace("/(?!\))\P{L}+$/u", "", $entite));
+		$entite = trim(preg_replace("`(?!\))[^\p{L}\p{N}]+$`u", "", $entite));
 	else
-		$entite = trim(preg_replace("/\P{L}+$/u", "", $entite));
+		$entite = trim(preg_replace("`[^\p{L}\p{N}]+$`u", "", $entite));
 		
-	if(preg_match("`^" . MOTS_DEBUT . "$`u", $entite))
+	if(preg_match("`^(" . MOTS_DEBUT . ")$`u", $entite))
 		$entite = "" ;	
 
-	$entite = trim(preg_replace("/^\P{L}+/u", "", $entite));
+	$entite = trim(preg_replace("/^[^\p{L}\p{N}]+/u", "", $entite));
+	
+	//var_dump($entite);
+
 }
 
 function entites_nommees($noms = array()){
