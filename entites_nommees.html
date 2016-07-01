@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<div style="float:right;width:15%">
+<div style="float:right;width:15%;height:600px;overflow:auto">
 #INCLURE{fond=noms_navigation}
 </div>
 
@@ -118,7 +118,7 @@
 
 
 	#SET{comp,'having nb > 5'}
-	<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prop, publie}>	
+	<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prepa, prop, publie}>	
 	#SET{comp,''}
 	<h3 style="clear:left;">#TITRE</h3>
 

@@ -46,6 +46,14 @@ function trouver_entites($texte,$id_article){
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
+
+	// Isoler les entites connues (Institutions, Traités etc mais cette fois ci en forme réduite) qui n'auraient pas été déclarées avec les ().
+	$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$types_entites['Institutions']);
+	
+	$recolte = recolter_fragments("Institutions", $types_reduits, $texte, $fragments, $id_article, $texte_original);
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
+
 	//var_dump($fragments,"<hr><hr>");
 
 	// itals spip
@@ -90,7 +98,7 @@ function trouver_entites($texte,$id_article){
 	$texte = $recolte['texte'];
 
 	// Isoler les présidents résiduels
-	$recolte  = recolter_fragments("Personnalités", "présidente?\s(" . LETTRE_CAPITALE . LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
+	$recolte  = recolter_fragments("Personnalités", "(?:Dr|présidente?)\s(" . LETTRE_CAPITALE . LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 	
@@ -172,7 +180,7 @@ function trouver_entites($texte,$id_article){
 				$f = preg_replace("/\|".$m[2]."\|/u","|Personnalités|",$f) ;
 				$fragments_fusionnes[] = $f ;
 			}elseif(preg_match("`\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
-				if(preg_match("`" . str_replace("xxx", ".*" , preg_quote($extraitsc[1])) . "`u" , $texte_original , $extrait )){
+				if(preg_match("`" . str_replace("`", "" , str_replace("xxx", ".*" , preg_quote($extraitsc[1]))) . "`u" , $texte_original , $extrait )){
 					$f = str_replace($extraitsc[1], $extrait[0], $f) ;
 					$fragments_fusionnes[] = $f ;
 				}else{
@@ -251,7 +259,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 				continue ;
 		
 			// Trouver les extraits ou apparaissent l'entite dans le texte original
-			if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . preg_quote($entite) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte_original, $m)){
+			if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . str_replace("`", "", preg_quote($entite)) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte_original, $m)){
 	
 				foreach($m[1] as $extrait){
 					$extrait = preg_replace(",\R,","",trim($extrait));
@@ -277,7 +285,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 			continue ;
 
 		// Trouver l'extrait dans le texte débité
-		preg_match("`(?:\P{L})(?:.{0,60})" . preg_quote($entite) . "(?:.{0,60})(?:\P{L})`u", $texte, $m);
+		preg_match("`(?:\P{L})(?:.{0,60})" . str_replace("`", "", preg_quote($entite)) . "(?:.{0,60})(?:\P{L})`u", $texte, $m);
 		$extrait = preg_replace(",\R,","",trim($m[0]));
 
 		// Virer l'entité dans cet extrait, puis dans le texte débité.

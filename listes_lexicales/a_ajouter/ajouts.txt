@@ -8,6 +8,7 @@ Celtics de Glasgow
 Gaza
 
 
+
 // Exceptions
 Soviétiques
 Britanniques
@@ -47,6 +48,8 @@ Wall Street
 Vinci
 Google
 Facebook
+France Télécom
+
 
 // Institutions
 Organisation des Nations unies (ONU)
@@ -56,10 +59,11 @@ Haut-Commissariat des Nations unies pour les réfugiés (HCR)
 Conférence des Nations unies
 Conseil national de sécurité
 
-Maison Blanche
+
 Cour suprême
 Congrès des Etats-Unis
 Congrès américain
+Chambre des représentants
 
 Union européène
 Conseil européen
@@ -98,7 +102,13 @@ Organisation de libération de la Palestine (OLP)
 
 // autres
 Mossad
+Opus Dei
+
+
+// Sièges de gouvernements
 Kremlin
+Maison Blanche
+
 
 // culture
 Opéra du Caire
@@ -170,6 +180,7 @@ Consensus de Washington
 
 // traités
 grand marché transatlantique (GMT)
+Bretton Woods
 
 // fiche france
 
