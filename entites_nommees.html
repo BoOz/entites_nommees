@@ -49,21 +49,21 @@
 [(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 
 #SET{andwhere,""}
-[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}}} ]
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}|_q}|replace{"^'"}|replace{"'$"}} ]
 [(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
 [(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
 
 <B_type>
 <h2>
-<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite='LENTITE' limit 0,1"}|replace{LENTITE,#ENV{entite}}}{si #ENV{entite}|oui}>
+<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
 #TYPE_ENTITE [> (#ENV{entite})]
 </BOUCLE_type>
 </h2>
 </B_type>
 
 
-<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{si #ENV{entite}|oui}> 			#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
-[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !='LENTITE'"}|replace{LENTITE,#ENV{entite}}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> 			#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
+[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 
 	#SET{tab,#ARRAY}
 	<BOUCLE_home(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'Peuples', 'a ajouter') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>
@@ -105,7 +105,7 @@
 	<B_fragments_entite>
 	<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 40px;padding: 0 50px;width:66%">
 	#ANCRE_PAGINATION
-	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite='LENTITE' order by date desc"}|replace{LENTITE,#ENV{entite}} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
+	<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
 		<p>
 			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
 			<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
