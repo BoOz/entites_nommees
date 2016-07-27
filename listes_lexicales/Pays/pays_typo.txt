@@ -1,58 +1,51 @@
 // Pays (nom officiel)
+Antigua-et-Barbuda
+Belize
 Burkina Faso
+Canada
 Commonwealth d'Australie
 Commonwealth de Saint-Vincent-et-les-Grenadines
 Commonwealth de la Barbade
 Commonwealth de la Dominique
 Commonwealth des Bahamas
 Confédération helvétique
-Etat d'Israël
-Etat de Bahreïn
-Etat du Koweït
 Etat indépendant des Samoa
 Etat libre associé de Porto Rico
 Etats fédérés de Micronésie
-Etats-Unis d'Amérique
-Etats-Unis du Mexique
 Fédération de Russie
 Fédération de Saint-Kitts-et-Nevis
-Grenade
-Jamahiriya
-Jamaïquain
+Géorgie
+Hongrie
+Irlande
 Japon
 Mongolie
 Monténégro
 Nouvelle-Zélande
 Papouasie-Nouvelle-Guinée
-Principauté du Liechtenstein
-Royaume d'Espagne
-Royaume de Norvège
-Royaume du Danemark
-Royaume du Swaziland
-Royaume hachémite de Jordanie
-Royaume-Uni
+Roumanie
+Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
 République algérienne démocratique et populaire
 République arabe d'Égypte
 République arabe syrienne
 République argentine
+République bolivarienne du Venezuela
 République centrafricaine
-République coopérative de Guyana
+République coopérative du Guyana
 République d'Afrique du Sud
 République d'Albanie
 République d'Angola
 République d'Arménie
 République d'Azerbaïdjan
-République d'Erythrée
 République d'Estonie
 République d'Haïti
 République d'Indonésie
 République d'Irak
-République d'Irlande
 République d'Islande
+République d'Ouganda
 République d'Ouzbékistan
 République d'Ukraine
+République d'Érythrée
 République de Biélorussie
-République de Bolivie
 République de Bosnie-Herzégovine
 République de Bulgarie
 République de Chine
@@ -64,11 +57,10 @@ République de Cuba
 République de Côte d'Ivoire
 République de Djibouti
 République de Finlande
-République de Guatemala
+République de Gambie
 République de Guinée
 République de Guinée-Bissau
 République de Guinée-Équatoriale
-République de Géorgie
 République de Kiribati
 République de Lettonie
 République de Lituanie
@@ -81,18 +73,19 @@ République de Namibie
 République de Nauru
 République de Palau
 République de Pologne
-République de Roumanie
 République de Saint-Marin
+République de Serbie
 République de Sierra Leone
 République de Singapour
 République de Slovénie
 République de Trinité-et-Tobago
+République de Tunisie
+République de Turquie
 République de Vanuatu
 République de Zambie
-République de l'Equateur
+République de Zimbabwe
 République de l'Inde
-République de l'Ouganda
-République de la Gambie
+République de l'Équateur
 République de l’Union du Myanmar
 République des Maldives
 République des Philippines
@@ -109,6 +102,7 @@ République du Chili
 République du Congo
 République du Costa Rica
 République du Ghana
+République du Guatemala
 République du Honduras
 République du Kenya
 République du Liberia
@@ -120,7 +114,9 @@ République du Niger
 République du Népal
 République du Panamá
 République du Paraguay
+République du Portugal
 République du Pérou
+République du Rwanda
 République du Salvador
 République du Soudan
 République du Soudan du Sud
@@ -128,11 +124,7 @@ République du Surinam
 République du Sénégal
 République du Tadjikistan
 République du Tchad
-République du Togo
-République du Venezuela
 République du Yémen
-République du Zimbabwe
-République démocratique de Somalie
 République démocratique de São-Tomé-et-Príncipe
 République démocratique du Congo
 République démocratique populaire du Laos
@@ -140,12 +132,12 @@ République démocratique socialiste du Sri Lanka
 République française
 République fédérale d'Allemagne
 République fédérale d'Autriche
+République fédérale de Somalie
 République fédérale du Nigeria
-République fédérale démocratique d'Ethiopie
+République fédérale démocratique d'Éthiopie
 République fédérative du Brésil
 République gabonaise
 République hellénique
-République hongroise
 République islamique d'Afghanistan
 République islamique d'Iran
 République islamique de Mauritanie
@@ -157,73 +149,124 @@ République orientale de l'Uruguay
 République populaire de Chine
 République populaire du Bangladesh
 République populaire démocratique de Corée
-République portugaise
-République rwandaise
 République slovaque
 République socialiste du Vietnam
 République tchèque
-République tunisienne
-République turque
+République togolaise
 République unie de Tanzanie
 Turkménistan
 Tuvalu
 Union des Comores
 grand-duché de Luxembourg
-les Émirats arabes unis
+la Grenade
+la Jamaïque
 principauté d'Andorre
 principauté de Monaco
+principauté du Liechtenstein
 royaume d'Arabie saoudite
+royaume d'Espagne
+royaume de Bahreïn
 royaume de Belgique
+royaume de Norvège
 royaume de Suède
 royaume de Thaïlande
 royaume de Tonga
 royaume des Pays-Bas
 royaume du Bhoutan
 royaume du Cambodge
+royaume du Danemark
 royaume du Lesotho
 royaume du Maroc
+royaume du Swaziland
+royaume hachémite de Jordanie
 sultanat d'Oman
 sultanat de Brunei
-émirat du Qatar
+État d'Israël
+État de Libye
+État de Palestine / territoires palestiniens
+État des émirats arabes unis
+État du Koweït
+État du Qatar
+État plurinational de Bolivie / République de Bolivie
+États-Unis d'Amérique
+États-Unis du Mexique
 îles Salomon
 // Pays
+Australie
+Birmanie
+Brunei
+Cambodge
+Ex-yougoslavie
+Fidji
+Indonésie
+Kiribati
+Laos
+Malaisie
+Maldives
+Marshall
+Micronésie
+Nauru
+Nouvelle-Calédonie
+Nouvelle-Zélande
+Nunavut
+Palau
+Papouasie-Nouvelle-Guinée
+Philippines
+Porto rico
+Saint-Kitts-et-Nevis
+Saint-Marin
+Saint-Vincent-et-les-Grenadines
+Sainte-Lucie
+Salomon
+Samoa
+São-Tomé-et-Príncipe
+Thaïlande
+Timor-Leste
+Tonga
+Tuvalu
+Ukraine
+Union soviétique
+Vanuatu
+Afghanistan
 Afrique du Sud
+Albanie
 Algérie
+Allemagne
 Andorre
 Angola
 Antigua-et-Barbuda
 Arabie saoudite
 Argentine
 Arménie
-Australie
 Autriche
+Azerbaïdjan
 Bahamas
 Bahreïn
+Bangladesh
 Barbade
-Bédouins
 Belgique
 Belize
 Bénin
+Bhoutan
 Biélorussie
-Birmanie
 Bolivie
 Bosnie-Herzégovine
 Botswana
 Brésil
-Brunei
 Bulgarie
 Burkina faso
 Burundi
-Cambodge
 Cameroun
 Canada
 Cap-Vert
-Centrafrique
 Chili
+Chine
 Chypre
 Colombie
 Comores
 Congo
+Corée du Nord
+Corée du Sud
 Costa Rica
 Côte d'Ivoire
 Croatie
@@ -231,6 +274,7 @@ Cuba
 Danemark
 Djibouti
 Dominique
+Égypte
 Émirats arabes unis
 Équateur
 Érythrée
@@ -238,8 +282,6 @@ Espagne
 Estonie
 États-Unis
 Éthiopie
-Ex-yougoslavie
-Fidji
 Finlande
 France
 Gabon
@@ -256,71 +298,62 @@ Guyana
 Haïti
 Honduras
 Hongrie
-Hors-caste
-Indonésie
+Inde
 Irak
 Iran
 Irlande
-Irlande du Nord
 Islande
 Israël
 Italie
 Jamaïque
+Japon
 Jordanie
+Kazakhstan
 Kenya
-Kiribati
+Kirghizstan
 Kosovo
 Koweït
-Laos
 Lesotho
 Lettonie
 Liban
 Liberia
 Libye
 Liechtenstein
-Lieux de publication
 Lituanie
 Luxembourg
 Macédoine
 Madagascar
-Malaisie
 Malawi
-Maldives
 Mali
 Malte
 Maroc
-Marshall
 Maurice
 Mauritanie
 Mexique
-Micronésie
 Moldavie
 Monaco
+Mongolie
 Monténégro
 Mozambique
 Namibie
-Nauru
+Népal
 Nicaragua
 Niger
 Nigeria
 Norvège
-Nouvelle-Calédonie
-Nouvelle-Zélande
-Nunavut
 Oman
 Ouganda
-Palau
+Ouzbékistan
+Pakistan
 Palestine
 Panamá
-Papouasie-Nouvelle-Guinée
 Paraguay
 Pays-Bas
 Pérou
-Philippines
 Pologne
-Porto rico
 Portugal
 Qatar
+République centrafricaine
 République démocratique du Congo
 République dominicaine
 République tchèque
@@ -328,70 +361,36 @@ Roumanie
 Royaume-uni
 Russie
 Rwanda
-Saint-Kitts-et-Nevis
-Saint-Marin
-Saint-Vincent-et-les-Grenadines
-Sainte-Lucie
-Salomon
 Salvador
-Samoa
-São-Tomé-et-Príncipe
 Sénégal
+Serbie
 Seychelles
 Sierra Leone
+Singapour
 Slovaquie
 Slovénie
 Somalie
-Soudan du Sud
 Soudan
+Soudan du Sud
+Sri lanka
 Suède
 Suisse
 Surinam
 Swaziland
 Syrie
+Tadjikistan
+Taïwan
 Tanzanie
 Tchad
-Thaïlande
-Timor-Leste
 Togo
-Tonga
-Touaregs
 Trinité-et-Tobago
 Tunisie
+Turkménistan
 Turquie
-Tuvalu
-Tziganes
-Ukraine
-Union européenne
-Union soviétique
 Uruguay
-Vanuatu
 Vatican
 Venezuela
+Vietnam
 Yémen
 Zambie
 Zimbabwe
-Afghanistan
-Albanie
-Allemagne
-Azerbaïdjan
-Bangladesh
-Bhoutan
-Chine
-Corée du Nord
-Corée du Sud
-Égypte
-Inde
-Japon
-Kazakhstan
-Kirghizstan
-Mongolie
-Népal
-Ouzbékistan
-Pakistan
-Singapour
-Sri lanka
-Tadjikistan
-Taïwan
-Turkménistan
-Vietnam 
