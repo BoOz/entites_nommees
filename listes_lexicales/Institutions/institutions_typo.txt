@@ -1,65 +1,201 @@
-// Institutions et organismes d'État internationaux
+// institutions
+// institutions et organismes d'État internationaux
 
 
 
 Commission européenne 
 la Commission
-Conseil de l'Europe 
-Conseil de l'Union européenne 
-Conseil européen 
+Conseil de l'Europe
+Conseil de l'Union européenne
+Conseil européen
 Comité des représentants permanents (Coreper)
 Convention de sauvegarde des droits de l'homme et des libertés fondamentales
 Cour européenne des droits de l'homme
-Cour de justice de l'Union européenne 
-
-
-Commission des Nations unies pour le droit commercial international (CNUDCI)
-Conférence des Nations unies sur  le commerce et le développement (Cnuced)
-Conférence générale de l'Unesco (bisannuelle)
-Conseil des droits de l'homme
-Fonds international de développement agricole (FIDA)
-Fonds des Nations unies pour la population 
-Fonds monétaire international (FMI)
-force de réaction rapide (OTAN)
-Groupe d'assistance des Nations unies pour la période de transition 
-Haut-Commissariat des Nations unies pour les réfugiés (HCR) 
-Haut-Commissariat des Nations unies aux droits de l'homme
-Institut interrégional de recherche des Nations unies sur la criminalité et la justice 
-Mission des Nations unies et de l'Union africaine au Darfour (Minuad)
-Mission des Nations unies pour l'assistance au Rwanda 
-Mission des Nations unies en Éthiopie et en Érythrée 
-Mission des Nations unies au Liberia 
-Mission des Nations unies en République centrafricaine 
-Mission des Nations unies en République centrafricaine et au Tchad 
-Mission des Nations unies au Soudan (Minus)
-Mission des Nations unies en Sierra Leone 
-Mission d'observation des Nations unies en Angola 
-Mission d'observation des Nations unies en Ouganda-Rwanda 
-Mission d'observation des Nations unies en Sierre Leone 
-Mission de l'Organisation des Nations unies pour la stabilisation en République démocratique du Congo (Monusco)
-Mission de vérification des Nations unies en Angola 
-Office des Nations unies contre la drogue et le crime (ONUDC)
-Opérations des Nations unies au Burundi 
-Opération des Nations unies au Congo 
-Opération des Nations unies en Côte d'Ivoire (Onuci)
-Opération des Nations unies au Mozambique (Onumoz)
-Opération des Nations unies en Somalie 
-Organe international de contrôle des stupéfiants (OICS)
-pacte international relatif aux droits civils et politiques (ONU)
-Programme alimentaire mondial 
+Cour de justice de l'Union européenne
 
 
 Cour internationale de justice (CIJ)
 Cour pénale internationale (CPI)
-Le groupe des 10 (1973)
+groupe des 10 (1973) 
 groupe des 77 ou les « 77 ».
-Alena 
-Association des nations du Sud-Est asiatique (ASEAN)
+Association des nations de l'Asie du Sud-Est (Anase)
 Communauté andine des nations (CAN)
 Organisation mondiale du commerce (OMC)
 Organisation des pays exportateurs de pétrole (OPEP)
 Organisation mondiale de la santé (OMS)
 Organisation mondiale du tourisme (OMT)
 Organisation du traité central (Cento)
-Organisation du traité de l'Asie du Sud-Est 
+Organisation du traité de l'Asie du Sud-Est
 
+// missions
+// Missions et opérations de maintien de la paix de l'ONU
+
+Force intérimaire des Nations unies au Liban (Finul)
+Force intérimaire des Nations unies pour Abiyé (Fisnua)
+Force des Nation unies chargée d'observer le désengagement (Fnuod)
+Mission d'appui des Nations unies en Libye (Manul)
+Mission hybride des Nations unies et de l'Union africaine au Darfour (Minuad)
+Mission d'administration intérimaire des Nations unies au Kossovo (Minuk)
+Mission des Nations unies au Liberia (Minul)
+Mission des Nations unies pour l'organisation d'un référendum au Sahara occidental (Minurso)
+Mission multidimensionnelle intégrée des Nations unies pour la stabilisation au Mali (Minusma)
+Mission multidimensionnelle intégrée des Nations unies pour la stabilisation en République centrafricaine (Minusca)
+Mission des Nations Unies au Soudan du Sud (Minuss)
+Mission des Nations unies pour la stabilisation en Haïti (Minustah)
+Mission de l'Organisation des Nations unies pour la stabilisation en République démocratique du Congo (Monusco)
+Opération des Nations unies en Côte d'Ivoire (Onuci)
+Organisme des Nations unies chargé de la surveillance de la trêve (Onust)
+Force des Nations unies chargée du maintien de la paix à Chypre
+United Nation Peacekeeping Force in Cyprus
+(Unficyp)
+Groupe d'observateurs militaires des Nations unies dans l'Inde et le Pakistan
+United Nation Military Observer Group in India and Pakistan
+(Unmogip)
+
+Groupe d'assistance des Nations unies pour la période de transition (Ganupt)
+Mission des Nations unies pour l'assistance au Rwanda (Minuar)
+Mission des Nations unies en Ethiopie et en Erythrée (Minuee)
+Mission des Nations unies en République centrafricaine (Minurca)
+Mission des Nations unies en République centrafricaine et au Tchad (Minurcat)
+Mission des Nations unies au Soudan (Minus)
+Mission des Nations unies en Sierra Leone (Minusil)
+Mission d'observation des Nations unies en Angola (Monua)
+Mission d'observation des Nations unies en Ouganda-Rwanda (Monuor)
+Mission d'observation des Nations unies en Sierre Leone (Monusil)
+Opérations des Nations unies au Burundi (ONUB)
+Opération des Nations unies au Congo (ONUC)
+Opération des Nations unies au Mozambique (Onumoz)
+Opération des Nations unies en Somalie (Onusom)
+Mission de vérification des Nations unies en Angola
+United Nation Angola Verification Mission
+(Unavem)
+// institutions dans les fiches « continents » et #institutions_internationales
+
+// AFRIQUE
+
+
+African Growth and Opportunity Act (AGOA)
+Africom
+Autorité intergouvernementale pour le développement (IGAD)
+Commission de l’Union africaine
+Commission pour l’Afrique
+Commission du bassin du lac Tchad (CBLT)
+Communauté de développement d’Afrique australe (SADC)
+Communauté de l’Afrique de l’Est (EAC)
+Communauté des Etats sahélo-sahariens (CEN-SAD)
+Communauté économique et monétaire de l’Afrique centrale (Cemac)
+Communauté économique des Etats de l'Afrique de l'Ouest (Cedeao)
+Communauté économique des Etats de l’Afrique centrale (Ceeac)
+Communautés économiques régionales (CER)
+Communauté des pays de langue portugaise (CPLP)
+Conférence internationale de Tokyo sur le développement de l’Afrique
+Conférence internationale sur la région des Grands Lacs () (CIRGL)
+Conseil économique
+social et culturel de l’Union africaine
+
+Conseil français des investisseurs en Afrique (CIAN)
+Conseil de paix et de sécurité de l’Union africaine (CPS)
+Ecomog
+forum AGOA
+Forum on China-Africa Cooperation
+Forum sur la coopération sino-africaine
+(Focac)
+Marché commun de l’Afrique orientale et australe [proposition de Réka] (Comesa)
+Mission des Nations unies et de l’Union africaine au Darfour (Minuad)
+Mission des Nations unies en République centrafricaine et au Tchad (Minurcat)
+Nouveau partenariat pour le développement de l’Afrique (Nepad)
+Nouveau partenariat stratégique Asie-Afrique
+Organisation de l’unité africaine
+Union africaine (UA)
+Union du Maghreb arabe
+Union douanière de l’Afrique australe (SACU)
+Union économique et monétaire ouest-africaine (Uemoa)
+
+
+// AMÉRIQUES
+
+
+Accord de libre-échange nord-américain (Alena)
+Alternative bolivarienne pour les Amériques
+devenue Alliance bolivarienne pour les peuples de notre Amérique
+(ALBA)
+Alliance bolivarienne pour les peuples de notre Amérique - traité de commerce des peuples (ALBA-TCP)
+Association latino-américaine d’intégration (Aladi)
+Association latino-américaine de libre-échange
+Banque du Sud
+Banque interaméricaine de développement (BID)
+Cafta
+Commission économique pour l’Amérique latine et les Caraïbes (Cepalc)
+Communauté andine des nations (CAN)
+Communauté d’Etats latino-américains et caraïbes (Celac)
+Communauté des Caraïbes (Caricom)
+Communauté sud-américaine des nations (CSN)
+Confédération anticommuniste d’Amérique latine (CAL)
+Conférence des parlementaires des Amériques (COPA)
+Fonds latino-américain de réserve
+groupe de Contadora
+groupe de Rio
+Initiative pour les Amériques
+Ligue mondiale anticommuniste
+Marché commun centre-américain (MCCA)
+Marché commun du Sud (Mercosur)
+Organisation des Etats américains (OEA)
+Pacte andin : Bolivie
+Colombie
+Equateur
+Pérou
+Venezuela
+
+Partenariat pour la sécurité et la prospérité (PSP)
+Système d’intégration centre-américan (SICA)
+Union des nations sud-américaines (Unasur)
+
+
+// ASIE
+
+
+Association de l’Asie du Sud pour la coopération régionale (AASCR)
+Association des nations de l’Asie du Sud-Est (Anase)
+Anase + 3
+Asia-Pacific Economic Cooperation
+Coopération économique Asie-Pacifique
+
+(APEC)
+groupe de Colombo
+Organisation de coopération de Shanghaï (OCS)
+Organisation du traité de l’Asie du Sud-Est (Otase)
+
+
+// COMMONWEALTH OF NATIONS
+
+
+
+// EUROPE
+
+
+Association européenne de libre-échange (AELE)
+Communauté des Etats indépendants (CEI)
+Conférence pour la sécurité et la coopération en Europe (CSCE)
+Groupe armement de l’Europe occidentale (GAEO)
+GUAM
+Union de l’Europe occidentale (UEO)
+Union Russie-Biélorussie
+
+
+// OCÉANIE
+
+
+
+// Organisation internationale de la francophonie
+
+
+
+// PROCHE-ORIENT
+
+
+
+// UNION EUROPÉENNE
+
+
+
+// Organisation des Nations unies
