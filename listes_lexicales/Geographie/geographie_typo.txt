@@ -1,6 +1,3 @@
-Entités nommées dans Typo
-
-Personalités - Institutions - Partis et formations politiques - Pays - Villes - Géographie - Publications - Nationalité / éthnies - /!\ Sociétés (A ajouter dans Divers en section 2) - Fonctions - Langues
 // lieux
 // AUSTRALIE
 
