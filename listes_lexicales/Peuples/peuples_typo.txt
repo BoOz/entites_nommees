@@ -1,244 +1,1249 @@
 // Habitants
-Afghan
-Sud-Africain
-Albanais
-Algérien
-Allemand
-Andorran
-Angolais
-Antiguais
-Saoudien
-Argentin
-Arménien
+
+// PAS D'HABITANTS DANS AFRIQUE
+
+
+// PAS D'HABITANTS DANS AMÉRIQUES
+
+
+// PAS D'HABITANTS DANS ASIE
+
 Australien
+Australienne
+Australiens
+Australiennes
+Birman
+Birmane
+Birmans
+Birmanes
+Brunéien
+Brunéienne
+Brunéiens
+Brunéiennes
+Cambodgien
+Cambodgienne
+Cambodgiens
+Cambodgiennes
+
+// PAS D'HABITANTS DANS EUROPE
+
+
+// PAS D'HABITANTS DANS EX-YOUGOSLAVIE
+
+Fidjien
+Fidjienne
+Fidjiens
+Fidjiennes
+Indonésien
+Indonésienne
+Indonésiens
+Indonésiennes
+Kiribatien
+Kiribatienne
+Kiribatiens
+Kiribatiennes
+Laotien
+Laotienne
+Laotiens
+Laotiennes
+Malaisien
+Malaisienne
+Malaisiens
+Malaisiennes
+Maldivien
+Maldivienne
+Maldiviens
+Maldiviennes
+Marshallais
+Marshallaise
+Marshallais
+Marshallaises
+Micronésien
+Micronésienne
+Micronésiens
+Micronésiennes
+Nauruan
+Nauruane
+Nauruans
+Nauruanes
+Néo-Calédonien
+Néo-Calédonienne
+Néo-Calédoniens
+Néo-Calédoniennes
+Néo-Zélandais
+Néo-Zélandaise
+Néo-Zélandais
+Néo-Zélandaises
+Inuits
+Inuit
+Inuits
+Inuits
+
+// PAS D'HABITANTS DANS OCÉANIE
+
+Palauan
+Palauane
+Palauans
+Palauanes
+Papouan
+Papouanes-Néo-Guinéenne
+Papouans
+Papouanes-Néo-Guinéennes
+Philippin
+Philippine
+Philippins
+Philippines
+Portoricain
+Portoricaine
+Portoricains
+Portoricaines
+
+// PAS D'HABITANTS DANS PROCHE-ORIENT
+
+Saint-Kittois
+Saint-Kittoise
+Saint-Kittois
+Saint-Kittoises
+Saint-Marinais
+Saint-Marinaise
+Saint-Marinais
+Saint-Marinaises
+Saint-Vincentais
+Saint-Vincentaise
+Saint-Vincentais
+Saint-Vincentaises
+Saint-Lucien
+Saint-Lucienne
+Saint-Luciens
+Saint-Luciennes
+Salomonais
+Salomonaise
+Salomonais
+Salomonaises
+Samoan
+Samoane
+Samoans
+Samoanes
+Santoméen
+Santoméenne
+Santoméens
+Santoméennes
+Thaïlandais
+Thaïlandaise
+Thaïlandais
+Thaïlandaises
+Est-Timorais
+Est-Timoraise
+Est-Timorais
+Est-Timoraises
+Tonguien
+Tonguienne
+Tonguien
+Tonguienne
+Tuvaluan
+Tuvaluane
+Tuvaluan
+Tuvaluane
+Ukrainien
+Ukrainienne
+Ukrainiens
+Ukrainiennes
+
+// PAS D'HABITANTS DANS Union soviétique
+
+Vanuatan
+Vanuatane
+Vanuatans
+Vanuatanes
+Afghan
+Afghane
+Afghans
+Afghanes
+Sud-Africain
+Sud-Africaine
+Sud-Africains
+Sud-Africaines
+Albanais
+Albanaise
+Albanais
+Albanaises
+Algérien
+Algérienne
+Algériens
+Algériennes
+Allemand
+Allemande
+Allemands
+Allemandes
+Andorran
+Andorrane
+Andorrans
+Andorranes
+Angolai
+Angolaise
+Angolais
+Angolaises
+Antiguai
+Antiguaise
+Antiguais
+Antiguaises
+Saoudien
+Saoudienne
+Saoudiens
+Saoudiennes
+Argentin
+Argentine
+Argentins
+Argentines
+Arménien
+Arménienne
+Arméniens
+Arméniennes
 Autrichien
-Azerbaïdjanais
-Bahamien
+Autrichienne
+Autrichiens
+Autrichiennes
+Azerbaidjanai
+Azerbaidjanaise
+Azerbaidjanais
+Azerbaidjanaises
+Bahaméen
+Bahaméenne
+Bahaméens
+Bahaméennes
 Bahreïni
+Bahreïnie
+Bahreïnis
+Bahreïnies
+Bangladai
+Bangladaise
 Bangladais
+Bangladaises
 Barbadien
+Barbadienne
+Barbadiens
+Barbadiennes
+Belges
+Belge
+Belges
 Belges
 Bélizien
+Bélizienne
+Béliziens
+Béliziennes
+Béninoi
+Béninoise
 Béninois
+Béninoises
+Bhoutanai
+Bhoutanaise
 Bhoutanais
+Bhoutanaises
+Biélorusse
+Biélorusse
+Biélorusse
 Biélorusses
-Birman
+Bolivien
+Bolivienne
 Boliviens
+Boliviennes
 Bosnien
+Bosnienne
+Bosniens
+Bosniennes
+Botswanai
+Botswanaise
 Botswanais
+Botswanaises
 Brésilien
-Brunéien
+Brésilienne
+Brésiliens
+Brésiliennes
+Bulgare
+Bulgare
+Bulgare
 Bulgares
 Burkinabés
+Burkinabé
+Burkinabés
+Burkinabés
+Burundai
+Burundaise
 Burundais
-Cambodgien
+Burundaises
+Camerounai
+Camerounaise
 Camerounais
+Camerounaises
 Canadien
+Canadienne
+Canadiens
+Canadiennes
 Capverdien
-Centrafricain
+Capverdienne
+Capverdiens
+Capverdiennes
 Chilien
+Chilienne
+Chiliens
+Chiliennes
 Chinois
+Chinoise
+Chinois
+Chinoises
+Chypriote
+Chypriote
+Chypriote
 Chypriotes
 Colombien
+Colombienne
+Colombiens
+Colombiennes
 Comorien
+Comorienne
+Comoriens
+Comoriennes
+Congolai
+Congolaise
 Congolais
+Congolaises
 Nord-Coréen
+Nord-Coréenne
+Nord-Coréens
+Nord-Coréennes
 Coréen
-Costaricain
+Coréenne
+Coréens
+Coréennes
+Costaricien
+Costaricienne
+Costariciens
+Costariciennes
 Ivoirien
+Ivoirienne
+Ivoiriens
+Ivoiriennes
+Croate
+Croate
+Croate
 Croates
 Cubain
+Cubaine
+Cubains
+Cubaines
 Danois
+Danoise
+Danoiss
+Danoises
 Djiboutien
+Djiboutienne
+Djiboutiens
+Djiboutiennes
 Dominiquais
-Egyptien
-Emirati
-Equatorien
-Erythréen
+Dominiquaise
+Dominiquais
+Dominiquaises
+Égyptien
+Égyptienne
+Égyptiens
+Égyptiennes
+Émirati
+Émiratie
+Émiratis
+Émiraties
+Équatorien
+Équatorienne
+Équatoriens
+Équatoriennes
+Érythréen
+Érythréenne
+Érythréens
+Érythréennes
 Espagnol
+Espagnole
+Espagnols
+Espagnoles
 Estonien
+Estonienne
+Estoniens
+Estoniennes
 Américain
-Ethiopien
-Fidjien
+Américaine
+Américains
+Américaines
+Éthiopien
+Éthiopienne
+Éthiopiens
+Éthiopiennes
 Finlandais
+Finlandaise
+Finlandaiss
+Finlandaises
+Françai
+Française
 Français
+Françaises
+Gabonai
+Gabonaise
 Gabonais
+Gabonaises
 Gambien
+Gambienne
+Gambiens
+Gambiennes
 Géorgien
+Géorgienne
+Géorgiens
+Géorgiennes
 Ghanéen
+Ghanéenne
+Ghanéens
+Ghanéennes
 Grec
+Grecque
+Grecs
+Grecques
 Grenadien
+Grenadienne
+Grenadiens
+Grenadiennes
+Guatémaltèques
+Guatémaltèque
+Guatémaltèques
 Guatémaltèques
 Guinéen
+Guinéenne
+Guinéens
+Guinéennes
 Bissau-Guinéen
-Equato-Guinéen
+Bissau-Guinéenne
+Bissau-Guinéens
+Bissau-Guinéennes
+Équato-Guinéen
+Équato-Guinéenne
+Équato-Guinéens
+Équato-Guinéennes
 Guyanien
+Guyanienne
+Guyaniens
+Guyaniennes
 Haïtien
+Haïtienne
+Haïtiens
+Haïtiennes
+Hondurien
+Hondurienne
+Honduriens
+Honduriennes
 Hongrois
+Hongroise
+Hongrois
+Hongroises
 Indien
-Indonésien
+Indienne
+Indiens
+Indiennes
 Irakien
+Irakienne
+Irakiens
+Irakiennes
 Iranien
+Iranienne
+Iraniens
+Iraniennes
 Irlandais
+Irlandaise
+Irlandaiss
+Irlandaises
+Islandai
+Islandaise
 Islandais
+Islandaises
 Israélien
+Israélienne
+Israéliens
+Israéliennes
 Italien
+Italienne
+Italiens
+Italiennes
+Jamaïquain
+Jamaïquaine
+Jamaïquains
+Jamaïquaines
+Japonai
+Japonaises/Niponne
 Japonais
+Japonaises/Niponnes
 Jordanien
+Jordanienne
+Jordaniens
+Jordaniennes
 Kazakh
+Kazakhe
+Kazakhs
+Kazakhes
 Kényan
-Kirghiz
-Kiribatien
-Koweïti
-Laotien
+Kényane
+Kényans
+Kényanes
+Kirghizes
+Kirghize
+Kirghizes
+Kirghizes
+Kosovar
+Kosovare
+Kosovars
+Kosovares
+Koweïtien
+Koweïtienne
+Koweïtiens
+Koweïtiennes
 Lesothan
+Lesothane
+Lesothans
+Lesothanes
 Letton
+Lettone
+Lettons
+Lettones
+Libanai
+Libanaise
 Libanais
+Libanaises
 Libérien
+Libérienne
+Libériens
+Libériennes
 Libyen
+Libyenne
+Libyens
+Libyennes
 Liechtensteinois
+Liechtensteinoise
+Liechtensteinois
+Liechtensteinoises
 Lituanien
+Lituanienne
+Lituaniens
+Lituaniennes
 Luxembourgeois
+Luxembourgeoise
+Luxembourgeois
+Luxembourgeoises
 Macédonien
+Macédonienne
+Macédoniens
+Macédoniennes
 Malgaches
-Malaisien
+Malgache
+Malgaches
+Malgaches
 Malawien
-Maldivien
+Malawienne
+Malawiens
+Malawiennes
 Malien
+Malienne
+Maliens
+Maliennes
 Maltais
+Maltaise
+Maltais
+Maltaises
 Marocain
-Marshallais
+Marocaine
+Marocains
+Marocaines
 Mauricien
+Mauricienne
+Mauriciens
+Mauriciennes
 Mauritanien
+Mauritanienne
+Mauritaniens
+Mauritaniennes
 Mexicain
-Micronésien
+Mexicaine
+Mexicains
+Mexicaines
+Moldaves
+Moldave
+Moldaves
 Moldaves
 Monégasques
+Monégasque
+Monégasques
+Monégasques
 Mongol
+Mongole
+Mongols
+Mongoles
 Monténégrin
+Monténégrine
+Monténégrins
+Monténégrines
 Mozambicain
+Mozambicaine
+Mozambicains
+Mozambicaines
 Namibien
-Nauruan
+Namibienne
+Namibiens
+Namibiennes
+Népalai
+Népalaise
 Népalais
+Népalaises
 Nicaraguayen
+Nicaraguayenne
+Nicaraguayens
+Nicaraguayennes
 Nigérien
+Nigérienne
+Nigériens
+Nigériennes
 Nigérian
+Nigériane
+Nigérians
+Nigérianes
 Norvégien
-Néo-Calédonien
-Néo-Zélandais
-Inuits
+Norvégienne
+Norvégiens
+Norvégiennes
+Omanai
+Omanaise
 Omanais
+Omanaises
+Ougandai
+Ougandaise
 Ougandais
-Ouzbeks
+Ougandaises
+Ouzbeks/Ouzbèkes
+Ouzbeks/Ouzbèke
+Ouzbeks/Ouzbèkes
+Ouzbeks/Ouzbèkes
 Pakistanais
-Palauan
+Pakistanaise
+Pakistanais
+Pakistanaises
 Palestinien
+Palestinienne
+Palestiniens
+Palestiniennes
 Panaméen
-Papouan
+Panaméenne
+Panaméens
+Panaméennes
 Paraguayen
+Paraguayenne
+Paraguayens
+Paraguayennes
+Néerlandai
+Néerlandaise
 Néerlandais
+Néerlandaises
 Péruvien
-Philippin
+Péruvienne
+Péruviens
+Péruviennes
 Polonais
-Portoricain
+Polonaise
+Polonais
+Polonaises
+Portugai
+Portugaise
 Portugais
+Portugaises
 Qatari
+Qatarie
+Qataris
+Qataries
+Centrafricain
+Centrafricaine
+Centrafricains
+Centrafricaines
+Congolai
+Congolaise
 Congolais
+Congolaises
 Dominicain
+Dominicaine
+Dominicains
+Dominicaines
+Tchèques
+Tchèque
+Tchèques
 Tchèques
 Roumain
+Roumaine
+Roumain
+Roumaines
+Britanniques
+Britannique
+Britanniques
 Britanniques
 Russes
+Russe
+Russes
+Russes
+Rwandai
+Rwandaise
 Rwandais
-Saint-Kittois
-Saint-Marinais
-Saint-Vincentais
-Saint-Lucien
-Salomonais
+Rwandaises
 Salvadorien
-Samoan
-Santoméen
+Salvadorienne
+Salvadoriens
+Salvadoriennes
+Sénégalai
+Sénégalaise
 Sénégalais
+Sénégalaises
 Serbes
+Serbe
+Serbes
+Serbes
+Seychelloi
+Seychelloise
 Seychellois
+Seychelloises
+Sierra-Léonai
+Sierra-Léonaise
 Sierra-Léonais
+Sierra-Léonaises
 Singapourien
+Singapourienne
+Singapouriens
+Singapouriennes
+Slovaques
+Slovaque
+Slovaques
 Slovaques
 Slovènes
+Slovène
+Slovènes
+Slovènes
 Somalien
+Somalienne
+Somaliens
+Somaliennes
 Soudanais
+Soudanaise
+Soudanaiss
+Soudanaises
+Sud-Soudanai
+Sud-Soudanaie
+Sud-Soudanais
+Sud-Soudanaies
+Sri-Lankai
+Sri-Lankaise
 Sri-Lankais
+Sri-Lankaises
 Suédois
+Suédoise
+Suédois
+Suédoises
 Suisse
+Suissesse
+Suisses
+Suissesses
 Surinamien
+Surinamienne
+Surinamiens
+Surinamiennes
 Swazi
+Swazie
+Swazis
+Swazies
 Syrien
+Syrienne
+Syriens
+Syriennes
 Tadjik
+Tadjike
+Tadjiks
+Tadjikes
 Taïwanais
+Taïwanaise
+Taïwanais
+Taïwanaises
 Tanzanien
-Tchadien
-Thaïlandais
-Est-Timorais
+Tanzanienne
+Tanzaniens
+Tanzaniennes
+Tachadien
+Tachadienne
+Tachadiens
+Tachadiennes
+Togolai
+Togolaise
 Togolais
-Tonguien
+Togolaises
 Trinitéen
+Trinitéenne
+Trinitéens
+Trinitéennes
 Tunisien
+Tunisienne
+Tunisiens
+Tunisiennes
+Turkmènes
+Turkmène
+Turkmènes
 Turkmènes
 Turcs
-Tuvaluan
-Ukrainien
+Turc
+Turcs
+Turcs
 Uruguayen
-Vanuatan
+Uruguayenne
+Uruguayens
+Uruguayennes
+Vatican
+Vaticane
+Vaticans
+Vaticanes
 Vénézuélien
+Vénézuélienne
+Vénézuéliens
+Vénézuéliennes
 Vietnamien
+Vietnamienne
+Vietnamiens
+Vietnamiennes
+Yéménites
+Yéménite
+Yéménites
 Yéménites
 Zambien
+Zambienne
+Zambiens
+Zambiennes
 Zimbabwéen
+Zimbabwéenne
+Zimbabwéens
+Zimbabwéennes
 // ethnies
-// AFGHANISTAN
-
-Aimaks
-Arabes
-Baloutches
-Brahouis
-Hazaras
-Juifs
-Kirghizes
-Nouristanis
-Ouzbeks
-Pachaïs
-Pachtounes
-Sikhs
-Tadjiks
-Turkmènes
-
+// AUSTRALIE
 
 // BIRMANIE
-ethnies : Karens
+
+Karens
 Karennis
 Lahus
 Lakhas
 Paos
 Rohingyas
 Shans
-Was…
+Was… // BRUNEI
 
+// CAMBODGE
 
-« révolution safran »
-Tatmadaw
+// EX-YOUGOSLAVIE
 
-// NIGERIA
-ethnies : Annangs
+// FIDJI
+
+// INDONÉSIE
+
+// KIRIBATI f.
+
+// LAOS
+
+// MALAISIE
+
+// MALDIVES
+
+// MARSHALL
+
+// MICRONÉSIE f.
+
+// NAURU f.
+
+// NOUVELLE-CALÉDONIE
+
+// NOUVELLE-ZÉLANDE
+
+// NUNAVUT
+
+// PALAU m.
+
+// PAPOUASIE-NOUVELLE-GUINÉE
+
+// PHILIPPINES
+
+// PORTO RICO
+
+// SAINT-KITTS-ET-NEVIS
+
+// SAINT-MARIN
+
+// SAINT-VINCENT-ET-LES-GRENADINES
+
+// SAINTE-LUCIE
+
+// SALOMON
+
+// SAMOA
+
+// SÃO-TOMÉ-ET-PRÍNCIPE
+
+// THAÏLANDE
+
+// TIMOR-LESTE
+
+// TONGA
+
+// TUVALU
+
+// UKRAINE
+
+// Union soviétique
+
+// VANUATU
+
+// Afghanistan
+
+// Afrique du Sud
+
+// Albanie
+
+// Algérie
+
+// Allemagne
+
+// Andorre
+
+// Angola
+
+// Antigua-et-Barbuda
+
+// Arabie saoudite
+
+// Argentine
+
+// Arménie
+
+// Autriche
+
+// Azerbaïdjan
+
+// Bahamas
+
+// Bahreïn
+
+// Bangladesh
+
+// Barbade
+
+// Belgique
+
+// Belize
+
+// Bénin
+
+// Bhoutan
+
+// Biélorussie
+
+// Bolivie
+
+// Bosnie-Herzégovine
+
+// Botswana
+
+// Brésil
+
+// Bulgarie
+
+// Burkina Faso
+
+// Burundi
+
+// Cameroun
+
+// Canada
+
+// Cap-Vert
+
+// Chili
+
+// Chine
+
+// Chypre
+
+// Colombie
+
+// Comores
+
+// Congo
+
+// Corée du Nord
+
+// Corée du Sud
+
+// Costa Rica
+
+// Côte d'Ivoire
+
+// Croatie
+
+// Cuba
+
+// Danemark
+
+// Djibouti
+
+// Dominique
+
+// Égypte
+
+// Émirats arabes unis
+
+// Équateur
+
+// Érythrée
+
+// Espagne
+
+// Estonie
+
+// États-Unis
+
+// Éthiopie
+
+// Finlande
+
+// France
+
+// Gabon
+
+// Gambie
+
+// Géorgie
+
+// Ghana
+
+// Grèce
+
+// Grenade
+
+// Guatemala
+
+// Guinée
+
+// Guinée-Bissau
+
+// Guinée-Équatoriale
+
+// Guyana
+
+// Haïti
+
+// Honduras
+
+// Hongrie
+
+// Inde
+
+// Irak
+
+// Iran
+
+// Irlande
+
+// Islande
+
+// Israël
+
+// Italie
+
+// Jamaïque
+
+// Japon
+
+// Jordanie
+
+// Kazakhstan
+
+// Kenya
+
+// Kirghizstan
+
+// Kosovo
+
+// Koweït
+
+// Lesotho
+
+// Lettonie
+
+// Liban(le)
+
+// Liberia
+
+// Libye
+
+// Liechtenstein
+
+// Lituanie
+
+// Luxembourg
+
+// Macédoine
+
+// Madagascar
+
+// Malawi
+
+// Mali
+
+// Malte
+
+// Maroc
+
+// Maurice
+
+// Mauritanie
+
+// Mexique
+
+// Moldavie
+
+// Monaco
+
+// Mongolie
+
+// Monténégro
+
+// Mozambique
+
+// Namibie
+
+// Népal
+
+// Nicaragua
+
+// Niger
+
+// Nigeria
+
+Annangs
 Ibibios
 Ibos
 Ijaws
 Itsérikis
 Modakékés
 Ogonis
-Yoroubas...
+Yoroubas // Norvège
 
+// Oman
 
-guerre du Biafra
+arabe
+baloutche
+sud-asiatique et africaine // Ouganda
 
-// SOUDAN DU SUD
-ethnies majoritaires
+Langis
+Bantous
+Acholis
+Bagandas
+Banyankolés // Ouzbékistan
+
+// Pakistan
+
+// Palestine
+
+// Panamá
+
+// Paraguay
+
+// Pays-Bas
+
+// Pérou
+
+// Pologne
+
+// Portugal
+
+// Qatar
+
+// République centrafricaine
+
+// République démocratique du Congo
+
+// République dominicaine
+
+// République Tchèque
+
+// Roumanie
+
+// Royaume-Uni
+
+// Russie
+
+// Rwanda
+
+// Salvador
+
+// Sénégal
+
+// Serbie
+
+// Seychelles
+
+// Sierra Leone
+
+// Singapour
+
+// Slovaquie
+
+// Slovénie
+
+// Somalie
+
+// Soudan
+
+// Soudan du Sud
+
+// Sri Lanka
+
+// Suède
+
+// Suisse
+
+// Surina
+
+// Swaziland
+
+// Syrie
+
+// Tadjikistan
+
+// Taïwan
+
+// Tanzanie
+
+// Tchad
+
+// Togo
+
+// Trinité-et-Tobago
+
+// Tunisie
+
+// Turkménistan
+
+// Turquie
+
+// Uruguay
+
+// Vatican
+
+// Venezuela
+
+// Vietna
+
+// Yémen
+
+// Zambie
+
+// Zimbabwe
