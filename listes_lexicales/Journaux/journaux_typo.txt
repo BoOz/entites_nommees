@@ -1,5 +1,4 @@
-// publications
-// Lieux de publication A à G
+// Lieux de publication
 AAEL
 A bâbord !
 ABC
@@ -17,7 +16,6 @@ Aedelsa
 Adams Media Corp
 Adels
 Aden
-Aden. Paul Nizan et les années trente
 Adva Center
 Africa Mining Intelligence
 Africultures
@@ -70,6 +68,7 @@ Antipodes
 A. Pedone
 A plus d'un titre
 Apogée
+Aras
 Arcane 17
 L'Arche
 L'Archipel
@@ -83,6 +82,7 @@ Asahi Shimbun
 Asbar for Studies Research and Communications
 Ashgate
 Asian Survey
+Asia Pacific Viewpoint
 Asia Times Online
 L'Association
 L'Atalante
@@ -128,9 +128,11 @@ Bleu autour
 Bleu de Chine
 Bloomberg Businessweek_ (et non _Business Week_)
 Bloomsbury Publishing
+La Boîte à bulles
 Boitempo Editorial
 Le Bord de l'eau
 Boréal
+Börsen-Zeitung
 Bouchène
 Bourin Editeur
 Brasil de Fato
@@ -143,6 +145,7 @@ Le Bruit du temps
 Bruno Leprince
 Bruylant
 Buchet-Chastel
+Bulletin de l’Institut français d’études andines
 Bulletin of the World Health Organization
 Burt Franklin
 Business Day
@@ -220,6 +223,7 @@ Corsaires Editions
 Couleur livres
 Counterpoint
 CounterPunch
+Le Courrier
 The Courier-Mail_ (un seul "r")
 The Courrier ACP-EU
 Courrier de la planète
@@ -233,6 +237,7 @@ Critique internationale
 Crown Publishers
 Cultures et conflits
 Current Biology
+Dagens Nyheter
 Dagsavisen
 Daily Monitor
 The Daily Nation
@@ -300,6 +305,7 @@ The Economic Times
 Economica
 Economie et Statistiques
 Economie Matin
+L'Economie politique
 The Economist
 The Economist Intelligence Unit
 Ecosociété
@@ -317,6 +323,7 @@ Editions Amsterdam
 Editions Arkuiris
 Editions B2
 Editions CNT-RP
+Editions de Juillet
 Editions de l'Aube
 Editions de la Cité
 Editions de la Nuit
@@ -346,6 +353,7 @@ Editions du Croquant
 Editions du Cygne
 Editions du huitième jour
 Editions du Linteau
+Editions du Moment
 Editions du Monde libertaire
 Editions du Panama
 Editions du Rocher
@@ -361,7 +369,6 @@ Editions libertaires
 Editions N° 1
 Editions Palea
 Editions Pélissier
-Editions Petra
 Editions sociales
 Editions Unesco
 Editions universitaires du Septentrion
@@ -375,6 +382,7 @@ Einaudi
 Ellipses
 El Espectador
 Elkar
+El Litoral
 El Mundo
 El Nuevo Herald
 El País
@@ -402,6 +410,7 @@ L'Esprit des péninsules
 L'Esprit du temps
 Estrella
 Estudios Urbanos
+Eternel
 Etincelles
 Etudes
 Les Etudes du CERI
@@ -420,6 +429,7 @@ La Fabrique
 Die Fackel
 Fakir
 Fantassins
+Fario
 Il Fatto Quotidiano
 Le Félin
 Le Figaro
@@ -470,9 +480,8 @@ Grijalbo
 Guanda
 The Guardian
 Guérin
+La Guillotine
 Gulf News
-
-// Lieux de publication H à Z
 Haaretz
 Handelszeitung
 Harper & Row
@@ -530,6 +539,7 @@ L'Insomniaque
 Institut d'études slaves
 Institut de recherche sur le Maghreb contemporain
 Instituto Cubano del Libro
+Instituto de Estudios Peruanos (IEP)
 L'Interdisciplinaire
 Interlink Pub Group
 International Crisis Group
@@ -581,9 +591,11 @@ Labor et Fides
 Laika
 Lancashire Telegraph
 The Lancet [Infectious Diseases]
+Larcier
 Lars Müller Publishers
 Latin Business Chronicle
 Lawrence Erlbaum
+Leduc.s Editions
 La Lenteur
 Lessius
 La Lettre du continent
@@ -592,6 +604,7 @@ La Libre Belgique
 La Lettre de l'océan Indien
 Liaisons directes
 Liana Levi
+Lianhe Zaobao
 Liber - Raisons d'agir, Paris (pour les premiers ouvrages jusqu'en 1998), puis Raisons d'agir (seulement)
 Liberalnaïa Missiia
 Libertalia
@@ -625,6 +638,7 @@ Marines Editions
 La Martinière
 Martin Secker
 Matériaux pour l'histoire de notre temps
+Maurice Dreyfous
 Max Milo
 Meadowlark Springs Production
 Medact
@@ -637,6 +651,7 @@ Mémoire d'encrier
 Mémoire du livre
 Métailié
 Methuen
+MétisPresses
 Metropolis
 Metropolitan Books
 Michalon
@@ -650,7 +665,7 @@ Middle East Report
 Mideast Mirror
 Midi libre
 Mille et une nuits
-Mimesis
+Mimésis
 Minerva
 Mint asbl
 Miskal Yediot Aharonot Books
@@ -659,6 +674,7 @@ The MIT Press
 The MIT Press
 Mnémos
 Le Monde libertaire
+Monde nouveau / Afrique nouvelle
 The Monitor
 Monsieur Toussaint Louverture
 Montparnasse
@@ -675,6 +691,7 @@ Le Muscadier
 La Nacíon
 La Nación_ (quotidien
 El Nacional
+Nada
 Nanfang Zhoumo_ (« Week-end du Sud »)
 The Nation
 The Nation
@@ -718,6 +735,7 @@ Nowy Robotnik
 NRC Handelsblad
 Nuestra America
 Les Nuits rouges
+Nuvis
 Observatoire des Amériques
 The Observer
 Odile Jacob
@@ -729,6 +747,7 @@ Oil and Gas Journal
 Olive Branch Press
 L'Olivier
 Olizane
+Ombres
 Omniscience
 Oneworld Publications
 Open Democracy
@@ -744,9 +763,10 @@ La Padania
 Page deux
 Página 12
 Página 13
+Pagnerre
 El País
 Palgrave
-Palgrave Macmillan, Basingstoke (et non Houndmills
+Palgrave Macmillan
 Pambazuka News
 Pantheon Books
 Paperback
@@ -781,6 +801,7 @@ Perspectives économiques en Afrique
 Peter Hammer Verlag
 Peter Lang
 Les Petits Matins
+Pétra
 Petroleum Review
 Phaidon
 Phébus
@@ -795,6 +816,7 @@ Pluto Press
 Point de vue
 Le Point du jour éditeur
 Political Communication
+_Politico
 Politika
 Politique africaine
 Politique étrangère
@@ -806,10 +828,13 @@ Population & Avenir
 Population & Sociétés
 POUR (revue du groupe de recherche pour l'éducation et la prospective)
 Pour la Palestine
+Les Prairies ordinaires
 Premières Pierres
+Premier Parallèle
 La Prensa
 La Presse
 La Presse de Tunisie
+Presses de la Cité
 Presses de la Renaissance
 Presses de l'Université Laval
 Presses de Sciences Po
@@ -824,6 +849,7 @@ Prensa libre
 Princeton Architectural Press
 Privat
 Problèmes d'Amérique latine
+Proceedings Magazine
 Profile
 Prolongations
 Prometheus Books
@@ -862,6 +888,7 @@ Res Publica
 Ressouvenances
 Retraite et société
 Review of African Political Economy
+Revue bleue
 Revue de l'énergie
 Revue de l'IRES
 Revue des études slaves
@@ -904,6 +931,7 @@ Sciences sociales et santé
 Scribest Publications
 Scrineo
 The Scotsman
+Sens & Tonka
 Seppia
 Le Serpent à plumes
 Seven Stories Press
@@ -927,6 +955,7 @@ Les Solitaires intempestifs
 Soteca
 Le Souffle d'or
 South China Morning Post
+_South Dakota Law Review
 South End Press
 Der Spiegel
 La Stampa,_ Turin (avec trois rédactions : Turin, Milan
@@ -962,6 +991,7 @@ Terre vivante
 Tesev Publications
 Textuel
 Thames & Hudson
+Théâtre typographique
 Thélès
 Le Tiers Livre
 Three Leaves Publishing
@@ -992,6 +1022,7 @@ Turkish Daily News
 Ultima Hora
 United Press International (UPI), Washington
 University of California Press, Berkeley
+University of Hawaii Press
 University of Illinois Press
 University of Michigan Press
 University of Minnesota Press
