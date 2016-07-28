@@ -346,6 +346,7 @@ Forum national islamique (Al-Menbar)
 Mouvement d'opposition chiite (Al-Wefaq)
 Front islamique de libération de Bahreïn (FILB)
 Mouvement de libération de Bahreïn (MLB)
+Waad
 
 // Bangladesh
 
@@ -1903,7 +1904,7 @@ Parti agraire du Turkménistan  (PAT)
 Union des femmes du Turkménistan
 Parti communiste du Turkménistan (PCT)
 Parti des industriels et des entrepreneurs  (PIE)
-Turquie
+
 
 // Turquie
 
