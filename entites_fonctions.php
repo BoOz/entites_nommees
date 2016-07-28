@@ -28,10 +28,32 @@ function trouver_entites($texte,$id_article){
 	// SOURCES
 	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
 		foreach($notes[1] as $note){
-			if(preg_match_all("/\{((?!Cf|Ibid)[^,]+),?\}/uims",$note,$e)){
-				$recolte = traiter_fragments($e[1], "Sources", $texte, $fragments, $id_article, $texte_original)	;
-				$fragments = $recolte['fragments'];
-				$texte = $recolte['texte'];
+			if(preg_match_all("/\{(?!Cf|Ibid)[^,]+,?\}/uims",$note,$e)){
+
+
+				//exit();
+				
+				$i = 0 ;
+				
+				foreach($e[0] as $ent){
+					// Trouver les extraits ou apparaissent l'entite dans le texte original
+					//var_dump("<pre>",$ent);
+					
+					if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . str_replace("`", "", preg_quote($ent)) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte_original, $m)){
+						
+			
+						foreach($m[1] as $extrait){
+							$extrait = preg_replace(",\R,","",trim($extrait));	
+						
+							//var_dump("<pre>",$ent . "|Source|" . $id_article . "|" . $extrait);
+						
+							// Enregistrer l'entite
+							$fragments[] = $ent . "|Sources|" . $id_article . "|" . $extrait ;
+				
+						}
+					}
+					$i++;	
+				}
 			}
 		}
 	}
@@ -268,7 +290,7 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 					$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
 					$type = str_replace("_", " ", $type);	
 				
-					//var_dump($entite . "|$type|" . $id_article . "|" . $extrait);
+//					var_dump("<pre>",$entite . "|$type|" . $id_article . "|" . $extrait);
 				
 					// Enregistrer l'entite
 					$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
