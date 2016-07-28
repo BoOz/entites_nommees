@@ -3,20 +3,10 @@
 // debraye sur les personnalités
 Celtics de Glasgow
 
-
-// villes non présentes dans typo
-Gaza
-
-
-
-// Exceptions
+// Minorités
 Soviétiques
 Britanniques
 Européens
-Américains
-Israéliens
-
-// Minorités
 Noirs
 Juifs
 Kurdes
@@ -25,11 +15,6 @@ Hutus
 Tutsis
 Arabes
 Blancs
-Palestiniens
-
-
-Charlie Hebdo
-
 
 // ONG
 Amnesty International
@@ -39,7 +24,6 @@ Frontex
 
 // think tank
 Terra Nova
-
 
 // Etats
 Wall Street
@@ -66,7 +50,6 @@ Congrès américain
 Chambre des représentants
 
 Union européène
-Conseil européen
 Parlement européen
 
 Parlement
@@ -94,10 +77,6 @@ PKK
 Forces armées révolutionnaires de Colombie (FARC)
 FARC
 
-Parti pour l'indépendance du Royaume-Uni (Ukip)
-
-Syriza
-
 Organisation de libération de la Palestine (OLP)
 
 // autres
@@ -124,7 +103,6 @@ prix Nobel
 Renaissance
 Lumières
 
-
 IIIe République
 Ve République
 République
@@ -143,6 +121,7 @@ Coup d'État
 guerre du Golfe
 traité de Versailles
 Intifada
+Charlie Hebdo
 révolution russe
 Révolution française
 
@@ -181,40 +160,3 @@ Consensus de Washington
 // traités
 grand marché transatlantique (GMT)
 Bretton Woods
-
-// fiche france
-
-Acrimed (Action-Critique-Médias)
-Agence de la biomédecine
-Assistance publique - Hôpitaux de Paris (AP-HP)
-Association des agences conseils en communication (AACC)
-Association française des magistrats de la jeunesse et de la famille
-Association des professionnels pour la promotion de l'emploi sur Internet (Appei)
-Banlieue 89
-Betar
-Caisse nationale d'assurance-maladie (CNAM)
-Comité inter-mouvements auprès des évacués (Cimade)
-Comité intersyndical de l'épargne salariale (CIES)
-délégation interministérielle à la lutte contre le travail illégal (Dilti)
-Direction de l'animation de la recherche, des études et des statistiques (Dares)
-Droits devant !
-Groupe d'information et de soutien des immigrés (Gisti)
-Groupe intergouvernemental sur l'évolution du climat (GIEC)
-Haute Autorité de lutte contre les discriminations et pour l'égalité (Halde)
-Haute Autorité de santé
-Hospices civils de Lyon (HCL)
-inspection générale des affaires sociales (IGAS)
-Institut national de recherches archéologiques préventives (INRAP)
-Les entreprises du médicament (LEEM)
-Ligue de défense juive
-syndicat Prisme (Professionnels de l'intérim, services et métiers de l'emploi)
-Ni putes ni soumises
-Nouveau Parti anticapitaliste
-Observatoire national des zones urbaines sensibles (Onzus)
-Renseignements généraux (RG)
-SOS-Racisme
-Syndicat national des gynécologues-obstétriciens de France (Syngof)
-la Tribu Ka
-Unedic (Union nationale pour l'emploi dans l'industrie et le commerce)
-Union fédérale des consommateurs (UFC) - Que choisir ; UFC - Que choisir
-Uni(e)s contre une immigration jetable (UCIJ)

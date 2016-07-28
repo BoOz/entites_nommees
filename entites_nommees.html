@@ -79,7 +79,7 @@
 	<div style="margin:40px 60px 20px 40px;padding:0 50px;line-height:1.8em;width:70%;text-align:center;">
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
-			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
 	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 			</a>
