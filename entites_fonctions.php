@@ -30,7 +30,6 @@ function trouver_entites($texte,$id_article){
 		foreach($notes[1] as $note){
 			if(preg_match_all("/\{(?!Cf|Ibid)[^,]+,?\}/uims",$note,$e)){
 
-
 				//exit();
 				
 				$i = 0 ;
@@ -46,7 +45,7 @@ function trouver_entites($texte,$id_article){
 							$extrait = preg_replace(",\R,","",trim($extrait));	
 						
 							//var_dump("<pre>",$ent . "|Source|" . $id_article . "|" . $extrait);
-						
+							$ent = preg_replace("~\{|\}|\,~","", $ent);
 							// Enregistrer l'entite
 							$fragments[] = $ent . "|Sources|" . $id_article . "|" . $extrait ;
 				
