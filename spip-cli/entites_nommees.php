@@ -66,7 +66,7 @@ class entites_nommees extends Command {
 					$output->writeln("<info>Requalification des données</info>");
 
 					include_spip('iterateur/data');
-					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/a ajouter/*') ; /**/
+					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/a_ajouter/*') ; /**/
 					foreach($types_requalif as $t){
 
 						if($t['filename'] == "a_ajouter")
@@ -74,6 +74,7 @@ class entites_nommees extends Command {
 
 						$entites_a_revoir = $freq = array(); 
 						lire_fichier($t['dirname'] . "/" . $t['file'], $freq);
+						//echo $t['file'] . "\n" ;
 						$entites_a_revoir = explode("\n", $freq);
 						if(sizeof($entites_a_revoir) > 1 ){
 							foreach($entites_a_revoir as $e){
