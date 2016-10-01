@@ -21,7 +21,7 @@ class entites_nommees extends Command {
 	protected function configure() {
 		$this
 			->setName('entites_nommees:importer')
-			->setDescription('Générer les entités nommées en parcourant la base.')
+			->setDescription('Générer les entités nommées en parcourant la base. ` for i in {1..50} ; do spip entites ; done`')
 			->setAliases(array(
 				'entites'
 			))
@@ -30,6 +30,13 @@ class entites_nommees extends Command {
 				'r',
 				InputOption::VALUE_OPTIONAL,
 				'Effacer les entités nommées en base et recommencer la recherche',
+				'non'
+			)
+			->addOption(
+				'maj',
+				'm',
+				InputOption::VALUE_OPTIONAL,
+				'Requalifier les entités de statut INDETERMINE (en renommant le type d\'apres les fichiers du répertoire a_ajouter)',
 				'non'
 			);
 	}
@@ -40,6 +47,7 @@ class entites_nommees extends Command {
 		global $spip_version_branche ;		
 	
 		$restart = $input->getOption('restart') ;
+		$requalifier = $input->getOption('maj') ;
 	
 		include_spip("base/abstract_sql");
 				
@@ -51,14 +59,44 @@ class entites_nommees extends Command {
 			}
 			// Si c'est bon on continue
 			else{
+
+				// requalifier les types d'apres les fichier du repertoire a_ajouter ?
+				if($requalifier !=="non"){
+					passthru("clear");
+					$output->writeln("<info>Requalification des données</info>");
+
+					include_spip('iterateur/data');
+					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/a ajouter/*') ; /**/
+					foreach($types_requalif as $t){
+
+						if($t['filename'] == "a_ajouter")
+							continue;
+
+						$entites_a_revoir = $freq = array(); 
+						lire_fichier($t['dirname'] . "/" . $t['file'], $freq);
+						$entites_a_revoir = explode("\n", $freq);
+						if(sizeof($entites_a_revoir) > 1 ){
+							foreach($entites_a_revoir as $e){
+								$ent = sql_query("select * from entites_nommees where type_entite = 'INDETERMINE' and entite= " . sql_quote($e) );
+								$res = sql_fetch_all($ent) ;
+								if($res){
+									echo sizeof($res) . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
+									echo "update entites_nommees set type=" . sql_quote($t['filename']) . " where  type_entite = 'INDETERMINE' and entite=" . sql_quote($e) . "\n" ;
+									sql_query("update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($t['filename'])) . " where  type_entite = 'INDETERMINE' and entite=" . sql_quote($e)) ;
+									echo "\n\n" ;
+								}
+							}		
+						}
+					}
+						
+					exit();				
+				}
+
 				
 				if($restart !=="non"){
 					$output->writeln("<info>On efface tout et on recommence.</info>");
 					sql_query("truncate table entites_nommees");
 				}
-				
-				passthru("clear");
-
 				// articles deja faits
 				$articles_faits = array("0") ;
 				$articles_sql = sql_allfetsel("id_article", "entites_nommees", "", "id_article");
