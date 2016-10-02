@@ -61,10 +61,34 @@ class entites_nommees extends Command {
 			else{
 
 				// requalifier les types d'apres les fichier du repertoire a_ajouter ?
-				// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
 				if($requalifier !=="non"){
 					passthru("clear");
 					$output->writeln("<info>Requalification des données</info>");
+
+
+					// recaler apres coup 
+					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
+
+					lire_fichier('plugins/entites_nommees/recaler.txt', $recale);
+					$entites_a_revoir = explode("\n", $recale);
+					if(sizeof($entites_a_revoir) > 1 )
+							foreach($entites_a_revoir as $e){
+								if(preg_match(",^//," ,$e) OR preg_match(",^$," ,$e)) /**/
+									continue;
+								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite) = explode("\t", $e);
+								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
+								$sel = 	"select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+								$q = sql_query($sel);
+								$nb = sql_count($q);
+								if($nb > 0){
+									echo "$nb $entite_actuelle ($entite_dans_extrait) => $entite\n" ;
+									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+									echo $up . "\n" ;
+									sql_query($up);
+								}
+								echo "\n" ;
+							}
+
 
 					include_spip('iterateur/data');
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/a_ajouter/*') ; /**/
@@ -79,17 +103,19 @@ class entites_nommees extends Command {
 						$entites_a_revoir = explode("\n", $freq);
 						if(sizeof($entites_a_revoir) > 1 ){
 							foreach($entites_a_revoir as $e){
-								$ent = sql_query("select * from entites_nommees where type_entite = 'INDETERMINE' and entite= " . sql_quote($e) );
-								$res = sql_fetch_all($ent) ;
-								if($res){
-									echo sizeof($res) . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									echo "update entites_nommees set type=" . sql_quote($t['filename']) . " where  type_entite = 'INDETERMINE' and entite=" . sql_quote($e) . "\n" ;
-									sql_query("update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($t['filename'])) . " where  type_entite = 'INDETERMINE' and entite=" . sql_quote($e)) ;
+								$ent = sql_query("select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités') and entite= " . sql_quote($e));
+								$nb = sql_count($ent);
+								if($nb > 0){
+									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($t['filename'])) . " where  (type_entite = 'INDETERMINE' or type_entite='Personnalités') and entite=" . sql_quote($e) . "\n" ;	
+									echo $up . "\n";
+									sql_query($up);
 									echo "\n\n" ;
 								}
 							}		
 						}
 					}
+
 						
 					exit();				
 				}

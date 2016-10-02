@@ -1,0 +1,8 @@
+// La bonne entite après coup
+// entite actuelle 	entite dans l'extrait	type_entite	entite
+Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
+Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
+OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
+Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
+ONU	ONU	Institutions	Organisation des Nations unies (ONU)
+
