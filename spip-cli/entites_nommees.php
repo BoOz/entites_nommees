@@ -61,6 +61,7 @@ class entites_nommees extends Command {
 			else{
 
 				// requalifier les types d'apres les fichier du repertoire a_ajouter ?
+				// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
 				if($requalifier !=="non"){
 					passthru("clear");
 					$output->writeln("<info>Requalification des données</info>");
