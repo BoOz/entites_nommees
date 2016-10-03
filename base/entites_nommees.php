@@ -25,6 +25,3 @@
 	function entites_nommees_declarer_tables_interface($interface){
 		return $interface;
 	}
-
-?>
-

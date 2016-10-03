@@ -30,4 +30,3 @@
 		//sql_drop_table("entites_nommees");
 		//effacer_meta($nom_meta_base_version);
 	}
-?>
