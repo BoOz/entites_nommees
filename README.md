@@ -1,4 +1,4 @@
-# Entités Nommées
+# Entités nommées
 
 Plugin pour SPIP qui permet de découvrir des entités nommées dans un corpus. On essaie notamment de trouver les personnalités évoquées par période de temps.
 
