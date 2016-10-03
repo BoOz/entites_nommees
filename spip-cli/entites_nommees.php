@@ -132,7 +132,7 @@ class entites_nommees extends Command {
 					$articles_faits[] = $a['id_article'] ;	
 
 				// chopper les articles non déjà faits ;				
-				$articles = sql_query("select a.id_article from spip_articles a where a.id_secteur=1 and a.id_article not in(" . implode(",", $articles_faits) . ") order by a.date_redac desc limit 0,1000");
+				$articles = sql_query("select a.id_article from spip_articles a where a.id_secteur=" . _SECTEUR_ENTITES . " and a.id_article not in(" . implode(",", $articles_faits) . ") order by a.date_redac desc limit 0,1000");
 				$res = sql_fetch_all($articles) ;
 				
 				// start and displays the progress bar

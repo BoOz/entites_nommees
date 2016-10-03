@@ -11,6 +11,7 @@
 <lien></lien>
 <prefix>entites_nommees</prefix>
 <fonctions>entites_fonctions.php</fonctions>
+<fonctions>entites_options.php</fonctions>
 <pipeline>
 	<nom>declarer_tables_principales</nom>
 	<inclure>base/entites_nommees.php</inclure>
