@@ -2,7 +2,6 @@
 // institutions et organismes d'État internationaux
 
 
-
 Commission européenne 
 la Commission
 Conseil de l'Europe
@@ -29,7 +28,6 @@ Organisation du traité de l'Asie du Sud-Est
 
 // missions
 // Missions et opérations de maintien de la paix de l'ONU
-
 Force intérimaire des Nations unies au Liban (Finul)
 Force intérimaire des Nations unies pour Abiyé (Fisnua)
 Force des Nation unies chargée d'observer le désengagement (Fnuod)
@@ -45,16 +43,11 @@ Mission des Nations unies pour la stabilisation en Haïti (Minustah)
 Mission de l'Organisation des Nations unies pour la stabilisation en République démocratique du Congo (Monusco)
 Opération des Nations unies en Côte d'Ivoire (Onuci)
 Organisme des Nations unies chargé de la surveillance de la trêve (Onust)
-Force des Nations unies chargée du maintien de la paix à Chypre
-United Nation Peacekeeping Force in Cyprus
-(Unficyp)
-Groupe d'observateurs militaires des Nations unies dans l'Inde et le Pakistan
-United Nation Military Observer Group in India and Pakistan
-(Unmogip)
-
+Force des Nations unies chargée du maintien de la paix à Chypre (Unficyp)
+Groupe d'observateurs militaires des Nations unies dans l'Inde et le Pakistan (Unmogip)
 Groupe d'assistance des Nations unies pour la période de transition (Ganupt)
 Mission des Nations unies pour l'assistance au Rwanda (Minuar)
-Mission des Nations unies en Ethiopie et en Erythrée (Minuee)
+Mission des Nations unies en Éthiopie et en Érythrée (Minuee)
 Mission des Nations unies en République centrafricaine (Minurca)
 Mission des Nations unies en République centrafricaine et au Tchad (Minurcat)
 Mission des Nations unies au Soudan (Minus)
@@ -66,118 +59,10 @@ Opérations des Nations unies au Burundi (ONUB)
 Opération des Nations unies au Congo (ONUC)
 Opération des Nations unies au Mozambique (Onumoz)
 Opération des Nations unies en Somalie (Onusom)
-Mission de vérification des Nations unies en Angola
-United Nation Angola Verification Mission
-(Unavem)
+Mission de vérification des Nations unies en Angola (Unavem)
 // institutions dans les fiches « continents » et #institutions_internationales
 
-// AFRIQUE
-
-
-African Growth and Opportunity Act (AGOA)
-Africom
-Autorité intergouvernementale pour le développement (IGAD)
-Commission de l’Union africaine
-Commission pour l’Afrique
-Commission du bassin du lac Tchad (CBLT)
-Communauté de développement d’Afrique australe (SADC)
-Communauté de l’Afrique de l’Est (EAC)
-Communauté des Etats sahélo-sahariens (CEN-SAD)
-Communauté économique et monétaire de l’Afrique centrale (Cemac)
-Communauté économique des Etats de l'Afrique de l'Ouest (Cedeao)
-Communauté économique des Etats de l’Afrique centrale (Ceeac)
-Communautés économiques régionales (CER)
-Communauté des pays de langue portugaise (CPLP)
-Conférence internationale de Tokyo sur le développement de l’Afrique
-Conférence internationale sur la région des Grands Lacs () (CIRGL)
-Conseil économique
-social et culturel de l’Union africaine
-
-Conseil français des investisseurs en Afrique (CIAN)
-Conseil de paix et de sécurité de l’Union africaine (CPS)
-Ecomog
-forum AGOA
-Forum on China-Africa Cooperation
-Forum sur la coopération sino-africaine
-(Focac)
-Marché commun de l’Afrique orientale et australe [proposition de Réka] (Comesa)
-Mission des Nations unies et de l’Union africaine au Darfour (Minuad)
-Mission des Nations unies en République centrafricaine et au Tchad (Minurcat)
-Nouveau partenariat pour le développement de l’Afrique (Nepad)
-Nouveau partenariat stratégique Asie-Afrique
-Organisation de l’unité africaine
-Union africaine (UA)
-Union du Maghreb arabe
-Union douanière de l’Afrique australe (SACU)
-Union économique et monétaire ouest-africaine (Uemoa)
-
-
-// AMÉRIQUES
-
-
-Accord de libre-échange nord-américain (Alena)
-Alternative bolivarienne pour les Amériques
-devenue Alliance bolivarienne pour les peuples de notre Amérique
-(ALBA)
-Alliance bolivarienne pour les peuples de notre Amérique - traité de commerce des peuples (ALBA-TCP)
-Association latino-américaine d’intégration (Aladi)
-Association latino-américaine de libre-échange
-Banque du Sud
-Banque interaméricaine de développement (BID)
-Cafta
-Commission économique pour l’Amérique latine et les Caraïbes (Cepalc)
-Communauté andine des nations (CAN)
-Communauté d’Etats latino-américains et caraïbes (Celac)
-Communauté des Caraïbes (Caricom)
-Communauté sud-américaine des nations (CSN)
-Confédération anticommuniste d’Amérique latine (CAL)
-Conférence des parlementaires des Amériques (COPA)
-Fonds latino-américain de réserve
-groupe de Contadora
-groupe de Rio
-Initiative pour les Amériques
-Ligue mondiale anticommuniste
-Marché commun centre-américain (MCCA)
-Marché commun du Sud (Mercosur)
-Organisation des États américains (OEA)
-Pacte andin (Pacte andin)
-Partenariat pour la sécurité et la prospérité (PSP)
-Système d’intégration centre-américan (SICA)
-Union des nations sud-américaines (Unasur)
-
-
-// ASIE
-
-
-Association de l’Asie du Sud pour la coopération régionale (AASCR)
-Association des nations de l’Asie du Sud-Est (Anase)
-Anase + 3
-Asia-Pacific Economic Cooperation
-Coopération économique Asie-Pacifique
-
-(APEC)
-groupe de Colombo
-Organisation de coopération de Shanghaï (OCS)
-Organisation du traité de l’Asie du Sud-Est (Otase)
-
-
 // COMMONWEALTH OF NATIONS
-
-
-
-// EUROPE
-
-
-Association européenne de libre-échange (AELE)
-Communauté des Etats indépendants (CEI)
-Conférence pour la sécurité et la coopération en Europe (CSCE)
-Groupe armement de l’Europe occidentale (GAEO)
-GUAM
-Union de l’Europe occidentale (UEO)
-Union Russie-Biélorussie
-
-
-// OCÉANIE
 
 
 
@@ -185,12 +70,153 @@ Union Russie-Biélorussie
 
 
 
-// PROCHE-ORIENT
-
-
-
-// UNION EUROPÉENNE
-
-
-
 // Organisation des Nations unies
+
+Assemblée générale
+Conseil de sécurité
+Cour internationale de justice
+Conférence des Nations unies sur le commerce et le développement (Cnuced)
+Fonds des Nations unies pour la population (Fnuap)
+Haut-Commissariat des Nations unies pour les réfugiés (HCR)
+Office des Nations unies contre la drogue et le crime (ONUDC)
+ONU-Femmes
+Programme des Nations unies pour les établissements humains (ONU-Habitat )
+Programme alimentaire mondial (PAM)
+Programme des Nations unies pour le développement (PNUD )
+Programme des Nations unies pour l'environnement (PNUE )
+Fonds des Nations unies pour l'enfance (Unicef)
+Office de secours et de travaux pour les réfugiés de Palestine dans le Proche- Orient (UNRWA )
+Agences spécialisées
+Banque mondiale (BM)
+Food and Agriculture Organization (FAO)
+Fonds international pour le développement agricole (FIDA)
+le Fonds (FMI)
+Organisation de l'aviation civile internationale (OACI)
+Organisation internationale du travail (OIT)
+Organisation maritime internationale (OMI)
+Organisation météorologique mondiale (OMM)
+Organisation mondiale de la propriété intellectuelle (OMPI)
+Organisation mondiale de la santé (OMS)
+Organisation mondiale du tourisme (OMT)
+Organisation des Nations unies pour le développement industriel (Onudi)
+Union internationale des télécommunications (UIT)
+la science et la culture (Unesco)
+Union postale universelle (UPU)
+Conférence générale de l'Unesco
+Conseil des droits de l'homme
+Commission des Nations unies pour le droit commercial international (Cnudci)
+Haut-Commissariat des Nations unies aux droits de l'homme (HCDH)
+Bureau de la coordination des affaires humanitaires (OCHA)
+Organe international de contrôle des stupéfiants (OICS)
+Programme commun des Nations unies sur le VIH/sida (Onusida)
+Tribunal pénal international pour l'ex-Yougoslavie (TPIY)
+Tribunal pénal international pour le Rwanda (TPIR)
+United Nations Interregional Crime and Justice Research Institute (Unicri)
+United Nations Office for Disaster Risk Reduction (UNISDR)
+United Nations Office for Project Services (Unops)
+Charte de l'ONU
+convention-cadre des Nations unies sur les changements climatiques
+convention des Nations unies sur le droit de la mer
+Déclaration universelle des droits de l'homme
+pacte international relatif aux droits civils et politiques
+P5
+préférer 4ᵉ sommet des chefs d'Etat à IVᵉ sommet
+
+
+// Organisations internationales
+
+Alliance des petits États insulaires (Aosis)
+Communauté des pays de langue portugaise (CPLP)
+Organisation de coopération et de développement économiques (OCDE)
+Organisation de la coopération islamique (OCI)
+Organisation internationale de la francophonie (OIF)
+Organisation des pays exportateurs de pétrole (OPEP)
+Organisation pour la sécurité et la coopération en Europe (OSCE)
+Organisation du traité de l'Atlantique nord (OTAN)
+Organisation des Nations unies (ONU)
+
+Agence internationale de l'énergie atomique (AIEA)
+Autorité internationale des fonds marins (AIFM)
+Banque mondiale (BM)
+Conférence des Nations unies sur le commerce et le développement (Cnuced)
+Cour pénale internationale (CPI)
+Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)
+Fonds monétaire international (FMI)
+Fonds des Nations unies pour le développement (FNUD)
+G12 (groupes des Nations unies)
+Haut-Commissariat pour les réfugiés (HCR)
+Organisation pour l'interdiction des armes chimiques (OIAC)
+Organisation internationale du travail (OIT)
+Organisation mondiale du commerce (OMC)
+Organisation maritime internationale (OMI)
+Organisation météorologique mondiale (OMM)
+Organisation mondiale de la propriété intellectuelle (OMPI)
+Organisation mondiale de la santé (OMS)
+Organisation mondiale du tourisme (OMT)
+Programme alimentaire mondial (PAM)
+Programme des Nations unies pour le développement (PNUD)
+Programme des Nations unies pour l'environnement (PNUE)
+Tribunal pénal international (TPI)
+la science et la culture (Unesco)
+Fonds des Nations unies pour l'enfance (Unicef)
+Office de secours et de travaux pour les réfugiés de Palestine dans le Proche-Orient (UNRWA)
+Commission africaine des droits de l'homme et des peuples (ACHPR)
+Association des pays africains producteurs de diamants (APDA)
+Communauté d'Afrique de l'Est (CAE)
+Commission du bassin du lac Tchad (CBLT)
+Communauté de développement de l'Afrique australe (CDAA)
+Communauté économique des États d'Afrique de l'Ouest (Cedeao)
+Communauté économique des États d'Afrique centrale (Ceeac)
+Communauté économique et monétaire d'Afrique centrale (Cemac)
+Communauté des États sahélo-sahariens (CEN-SAD)
+Communauté économique des pays des Grands Lacs (CEPGL)
+Comité inter-États de lutte contre la sécheresse au Sahel (CILSS)
+Conférence internationale sur la région des Grands Lacs (CIRGL)
+Commission de l'océan Indien (COI)
+Marché commun de l'Afrique orientale et australe (Comesa)
+Commission des forêts d'Afrique centrale (Comifac)
+Autorité intergouvernementale pour le développement (IGAD)
+Association des États riverains de l'océan Indien (IORA)
+Nouveau partenariat pour le développement de l'Afrique (Nepad)
+Organisation pour l'harmonisation en Afrique du droit des affaires (Ohada)
+Organisation pour la mise en valeur du fleuve Gambie (OMVG)
+Organisation pour la mise en valeur du fleuve Sénégal (OMVS)
+Union douanière de l'Afrique australe (SACU)
+Union africaine (UA)
+Union économique et monétaire ouest-africaine (Uemoa)
+Union du Maghreb arabe (UMA)
+Association des États de la Caraïbe (AEC)
+Association latino-américaine d'intégration (Aladi)
+Association latino-américaine de libre-échange (Alale)
+Alliance bolivarienne pour les peuples de notre Amérique - Traité de commerce des peuples (ALBA-TCP)
+Accord de libre-échange nord-américain (Alena)
+Banque du Sud
+Banque interaméricaine de développement (BID)
+Marché commun d'Amérique centrale (CACM)
+Communauté andine des nations (CAN)
+Communauté des Caraïbes (Caricom)
+Communauté d'États latino-américains et caraïbes (Celac)
+Commission économique pour l'Amérique latine et les Caraïbes (Cepalc)
+Conférence des parlementaires des Amériques (COPA)
+Marché commun du Sud (Mercosur)
+Organisation des États américains (OEA)
+Organisation des États de la Caraïbe orientale (OECO)
+Système d'intégration centre-américain (SICA)
+Union des nations sud-américaines (Unasur)
+Association des nations de l'Asie du Sud-Est (Anase)
+Coopération économique Asie-Pacifique (APEC)
+Communauté des États indépendants (CEI)
+groupe de Colombo
+Organisation de coopération économique (OCE)
+Organisation de coopération de Shanghaï (OCS)
+Organisation du traité de l'Asie du Sud-Est (Otase)
+Association sud-asiatique pour la coopération régionale (Saacr)
+Union économique eurasiatique (UEE)
+Association européenne de libre-échange (AELE)
+Union européenne (UE)
+Communauté du Pacifique (CPS)
+Forum des îles du Pacifique (FIP)
+Forum pour le développement des îles du Pacifique (FDIP)
+Groupe mélanésien Fer de lance (GMLF)
+Programme régional océanien de l'environnement (PROE)
+Conseil de coopération du Golfe (CCG)
