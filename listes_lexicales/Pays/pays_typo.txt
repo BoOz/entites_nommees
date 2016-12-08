@@ -4,24 +4,20 @@ Belize
 Burkina Faso
 Canada
 Commonwealth d'Australie
-Commonwealth de Saint-Vincent-et-les-Grenadines
 Commonwealth de la Barbade
 Commonwealth de la Dominique
 Commonwealth des Bahamas
-Confédération helvétique
-Etat indépendant des Samoa
-Etat libre associé de Porto Rico
-Etats fédérés de Micronésie
+Confédération suisse
 Fédération de Russie
 Fédération de Saint-Kitts-et-Nevis
 Géorgie
 Hongrie
 Irlande
 Japon
+Malaisie
 Mongolie
 Monténégro
 Nouvelle-Zélande
-Papouasie-Nouvelle-Guinée
 Roumanie
 Royaume-Uni de Grande-Bretagne et d'Irlande du Nord
 République algérienne démocratique et populaire
@@ -61,7 +57,6 @@ République de Gambie
 République de Guinée
 République de Guinée-Bissau
 République de Guinée-Équatoriale
-République de Kiribati
 République de Lettonie
 République de Lituanie
 République de Macédoine
@@ -81,12 +76,12 @@ République de Slovénie
 République de Trinité-et-Tobago
 République de Tunisie
 République de Turquie
-République de Vanuatu
 République de Zambie
 République de Zimbabwe
 République de l'Inde
+République de l'Union de Birmanie
 République de l'Équateur
-République de l’Union du Myanmar
+République des Kiribati
 République des Maldives
 République des Philippines
 République des Seychelles
@@ -126,8 +121,9 @@ République du Tadjikistan
 République du Tchad
 République du Yémen
 République démocratique de São-Tomé-et-Príncipe
+République démocratique de Timor-Leste
 République démocratique du Congo
-République démocratique populaire du Laos
+République démocratique populaire lao
 République démocratique socialiste du Sri Lanka
 République française
 République fédérale d'Allemagne
@@ -154,12 +150,15 @@ République socialiste du Vietnam
 République tchèque
 République togolaise
 République unie de Tanzanie
+Saint-Vincent-et-les-Grenadines
+Sainte-Lucie
 Turkménistan
-Tuvalu
 Union des Comores
+Vanuatu
 grand-duché de Luxembourg
 la Grenade
 la Jamaïque
+les Tuvalu
 principauté d'Andorre
 principauté de Monaco
 principauté du Liechtenstein
@@ -170,8 +169,8 @@ royaume de Belgique
 royaume de Norvège
 royaume de Suède
 royaume de Thaïlande
-royaume de Tonga
 royaume des Pays-Bas
+royaume des Tonga
 royaume du Bhoutan
 royaume du Cambodge
 royaume du Danemark
@@ -180,53 +179,23 @@ royaume du Maroc
 royaume du Swaziland
 royaume hachémite de Jordanie
 sultanat d'Oman
-sultanat de Brunei
+sultanat de Brunei Darussalam
+territoire de Nouvelle-Calédonie et dépendances
 État d'Israël
 État de Libye
 État de Palestine / territoires palestiniens
 État des émirats arabes unis
 État du Koweït
 État du Qatar
+État indépendant de Papouasie-Nouvelle-Guinée
+État indépendant des Samoa
+État libre associé de Porto Rico
 État plurinational de Bolivie / République de Bolivie
+États fédérés de Micronésie
 États-Unis d'Amérique
 États-Unis du Mexique
 îles Salomon
 // Pays
-Australie
-Birmanie
-Brunei
-Cambodge
-Ex-yougoslavie
-Fidji
-Indonésie
-Kiribati
-Laos
-Malaisie
-Maldives
-Marshall
-Micronésie
-Nauru
-Nouvelle-Calédonie
-Nouvelle-Zélande
-Nunavut
-Palau
-Papouasie-Nouvelle-Guinée
-Philippines
-Porto rico
-Saint-Kitts-et-Nevis
-Saint-Marin
-Saint-Vincent-et-les-Grenadines
-Sainte-Lucie
-Salomon
-Samoa
-São-Tomé-et-Príncipe
-Thaïlande
-Timor-Leste
-Tonga
-Tuvalu
-Ukraine
-Union soviétique
-Vanuatu
 Afghanistan
 Afrique du Sud
 Albanie
@@ -238,6 +207,7 @@ Antigua-et-Barbuda
 Arabie saoudite
 Argentine
 Arménie
+Australie
 Autriche
 Azerbaïdjan
 Bahamas
@@ -249,13 +219,16 @@ Belize
 Bénin
 Bhoutan
 Biélorussie
+Birmanie
 Bolivie
 Bosnie-Herzégovine
 Botswana
 Brésil
+Brunei
 Bulgarie
 Burkina faso
 Burundi
+Cambodge
 Cameroun
 Canada
 Cap-Vert
@@ -282,6 +255,8 @@ Espagne
 Estonie
 États-Unis
 Éthiopie
+Ex-yougoslavie
+Fidji
 Finlande
 France
 Gabon
@@ -299,6 +274,7 @@ Haïti
 Honduras
 Hongrie
 Inde
+Indonésie
 Irak
 Iran
 Irlande
@@ -311,8 +287,10 @@ Jordanie
 Kazakhstan
 Kenya
 Kirghizstan
+Kiribati
 Kosovo
 Koweït
+Laos
 Lesotho
 Lettonie
 Liban
@@ -323,34 +301,45 @@ Lituanie
 Luxembourg
 Macédoine
 Madagascar
+Malaisie
 Malawi
+Maldives
 Mali
 Malte
 Maroc
+Marshall
 Maurice
 Mauritanie
 Mexique
+Micronésie
 Moldavie
 Monaco
 Mongolie
 Monténégro
 Mozambique
 Namibie
+Nauru
 Népal
 Nicaragua
 Niger
 Nigeria
 Norvège
+Nouvelle-Calédonie
+Nouvelle-Zélande
 Oman
 Ouganda
 Ouzbékistan
 Pakistan
+Palau
 Palestine
 Panamá
+Papouasie-Nouvelle-Guinée
 Paraguay
 Pays-Bas
 Pérou
+Philippines
 Pologne
+Porto rico
 Portugal
 Qatar
 République centrafricaine
@@ -361,7 +350,14 @@ Roumanie
 Royaume-uni
 Russie
 Rwanda
+Saint-Kitts-et-Nevis
+Saint-Marin
+Saint-Vincent-et-les-Grenadines
+Sainte-Lucie
+Salomon
 Salvador
+Samoa
+São-Tomé-et-Príncipe
 Sénégal
 Serbie
 Seychelles
@@ -382,12 +378,18 @@ Tadjikistan
 Taïwan
 Tanzanie
 Tchad
+Thaïlande
+Timor-Leste
 Togo
+Tonga
 Trinité-et-Tobago
 Tunisie
 Turkménistan
 Turquie
+Tuvalu
+Ukraine
 Uruguay
+Vanuatu
 Vatican
 Venezuela
 Vietnam
