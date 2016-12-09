@@ -1,41 +1,8 @@
 // Capitales
-Canberra
-Naypyidaw
-Bandar Seri Begawan
-Phnom Penh
-// ALERTE pas de capitale dans EX-YOUGOSLAVIE
-Suva
-Djakarta
-Bairiki
-Vientiane
-Kuala Lumpur
-Malé
-Delap-Uliga-Djarrit
-Palikir
-Yaren
-Nouméa
-Wellington
-Iqaluit
-Koror
-Port Moresby
-Manille
-San Juan
-Basseterre
-Saint-Marin
-Kingstown
-Castries
-Honiara
-Apia
-São Tomé
-Bangkok
-Dili
-Nukualofa
-Funafuti
-Kiev
-// ALERTE pas de capitale dans Union soviétique
-Port-Vila
 Kaboul
 Pretoria
+Le Cap
+Bloemfontein
 Tirana
 Alger
 Berlin
@@ -45,6 +12,7 @@ Saint John's
 Riyad
 Buenos Aires
 Erevan
+Canberra
 Vienne
 Bakou
 Nassau
@@ -54,15 +22,19 @@ Bridgetown
 Bruxelles
 Belmopan
 Porto Novo
-// ALERTE pas de capitale dans Bhoutan
+Thimphou
 Minsk
+Naypyidaw
 La Paz
+Sucre
 Sarajevo
 Gaborone
 Brasília
+Bandar Seri Begawan
 Sofia
 Ouagadougou
 Bujumbura
+Phnom Penh
 Yaoundé
 Ottawa
 Praia
@@ -88,7 +60,10 @@ Asmara
 Madrid
 Tallinn
 Washington
+DC
 Addis-Abeba
+// ALERTE pas de capitale dans EX-YOUGOSLAVIE
+Suva
 Helsinki
 Paris
 Libreville
@@ -101,11 +76,13 @@ Guatemala
 Conakry
 Bissau
 Malabo
+sur l'île de Bioko
 Georgetown
 Port-au-Prince
 Tegucigalpa
 Budapest
 New Delhi
+Djakarta
 Bagdad
 Téhéran
 Dublin
@@ -115,14 +92,17 @@ Rome
 Kingston
 Tokyo
 Amman
-// ALERTE pas de capitale dans Kazakhstan
+Astana
 Nairobi
 Bichkek
+Tarawa
+Bairiki
 Pristina
 Koweït
+Vientiane
 Maseru
 Riga
-Beyrouth
+Beyrouths)
 Monrovia
 Tripoli
 Vaduz
@@ -130,34 +110,49 @@ Vilnius
 Luxembourg
 Skopje
 Antananarivo
+Kuala Lumpur
+Putrajaya
 Lilongwe
+Malé
 Bamako
 La Valette
 Rabat
+Delap-Uliga-Djarrit
 Port Louis
 Nouakchott
 Mexico
-Chisinau
+Palikir
+Chișinău
 Monaco
 Oulan-Bator
-deux capitales : Podgorica
+Podgorica
+Cetinje
 Maputo
+ex-Lourenço Marques
 Windhoek
+Yaren
 Katmandou
 Managua
 Niamey
-Abuja
+Abuja et Lagos
 Oslo
+Nouméa
+Wellington
 Mascate
 Kampala
 Tachkent
 Islamabad
+Melekeok
 Jérusalem
+Ramallah
 Panamá
+Port Moresby
 Asunción
 Amsterdam
 Lima
+Manille
 Varsovie
+San Juan
 Lisbonne
 Doha
 Bangui
@@ -168,10 +163,18 @@ Bucarest
 Londres
 Moscou
 Kigali
+Basseterre
+Saint-Marin
+Kingstown
+Castries
+Honiara
 San Salvador
+Apia
+São-Tomé
 Dakar
 Belgrade
 Victoria
+île de Mahé
 Freetown
 Singapour
 Bratislava
@@ -181,21 +184,29 @@ Khartoum
 Juba
 Colombo
 Stockholm
-Genève
+Berne
 Paramaribo
 Mbabane
+Lobamba
 Damas
 Douchanbé
 Taipei
 Dodoma
 N'Djamena
+Bangkok
+Dili
 Lomé
+Nuku'alofa
 Port of Spain
 Tunis
 Achkhabad
 Ankara
+Funafuti
+Kiev
+// ALERTE pas de capitale dans Union soviétique
 Montevideo
-// ALERTE pas de capitale dans Vatican
+Port-Vila
+Cité du Vatican
 Caracas
 Hanoï
 Sanaa
@@ -203,146 +214,11 @@ Lusaka
 Harare
 // Villes
 
-// AUSTRALIE
-
-
-// BIRMANIE
-Kengtung
-Kunlong
-Kyaupkyu
-Loikaw
-Mandalay
-Mong La
-Muse
-Namkham
-Naypyidaw
-Pakokku
-Panghsang
-Pyinmana
-Rangoun
-Sittwe
-Tai Ping
-Toungoo
-Taunggok
-Thamanya
-
-// BRUNEI
-
-
-// CAMBODGE
-
-
-// EX-YOUGOSLAVIE
-
-
-// FIDJI
-
-
-// INDONÉSIE
-
-
-// KIRIBATI f.
-
-
-// LAOS
-
-
-// MALAISIE
-
-
-// MALDIVES
-
-
-// MARSHALL
-
-
-// MICRONÉSIE f.
-
-
-// NAURU f.
-
-
-// NOUVELLE-CALÉDONIE
-
-
-// NOUVELLE-ZÉLANDE
-
-
-// NUNAVUT
-
-
-// PALAU m.
-
-
-// PAPOUASIE-NOUVELLE-GUINÉE
-
-
-// PHILIPPINES
-
-
-// PORTO RICO
-
-
-// SAINT-KITTS-ET-NEVIS
-
-
-// SAINT-MARIN
-
-
-// SAINT-VINCENT-ET-LES-GRENADINES
-
-
-// SAINTE-LUCIE
-
-
-// SALOMON
-
-
-// SAMOA
-
-
-// SÃO-TOMÉ-ET-PRÍNCIPE
-
-
-// THAÏLANDE
-
-
-// TIMOR-LESTE
-
-
-// TONGA
-
-
-// TUVALU
-
-
-// UKRAINE
-Chegueni
-Dnipropetrovsk
-Donetsk
-Kharkiv
-Kherson
-Kryvyï Rih
-Lviv
-Makiivka
-Marioupol
-Mykolaïv
-Odessa
-Rivne
-Tcherkassy
-Tchernobyl
-
-// Union soviétique
-
-
-// VANUATU
-
-
 // Afghanistan
 
 
 // Afrique du Sud
-Johannesbourg
+Johannesburg
 Khayelitsha
 Polokwane
 
@@ -398,6 +274,13 @@ Taëf
 // Arménie
 
 
+// Australie
+Sydney
+Melbourne
+Brisbane
+Perth
+
+
 // Autriche
 
 
@@ -438,6 +321,26 @@ Abomey
 // Biélorussie
 
 
+// Birmanie
+Kengtung
+Kunlong
+Kyaupkyu
+Loikaw
+Mandalay
+Mong La
+Muse
+Namkham
+Naypyidaw
+Pakokku
+Panghsang
+Pyinmana
+Rangoun
+Sittwe
+Tai Ping
+Toungoo
+Taunggok
+Thamanya
+
 // Bolivie
 
 
@@ -462,6 +365,11 @@ Rio de Janeiro
 São Paulo
 Salvado de Bahia
 
+// Brunei
+Kuala Belait
+Tutong
+Jerudong
+
 // Bulgarie
 Bourgas
 Choumen
@@ -480,6 +388,11 @@ Vratsa
 // Burundi
 
 
+// Cambodge
+Sihanoukville
+Battambang
+Siem Reap
+
 // Cameroun
 Douala
 Yaoundé
@@ -488,7 +401,10 @@ Garoua
 Maroua
 
 // Canada
-
+Toronto
+Montréal
+Vancouver
+Calgary
 
 // Cap-Vert
 
@@ -586,6 +502,15 @@ San Francisco
 // Éthiopie
 
 
+// EX-YOUGOSLAVIE
+
+
+// Fidji
+Lautoka
+Nadi
+Ba
+Labasa
+
 // Finlande
 
 
@@ -647,7 +572,16 @@ Miskolc
 // Inde
 
 
+// Indonésie
+Bandung
+Surabaya
+Medan
+Palembang
+Makassar
+Semarang
+
 // Irak
+Al-Baaj
 Baiji
 Bassora
 Diyala
@@ -656,16 +590,20 @@ Kadhimain
 Kerbala
 Kirkouk
 Kout
+Lalish
 Mossoul
 Nadjaf
 Nassiriya
 Samarra
+Sinjar
+Tell Afar
 Tikrit
 
 // Iran
 Abadan
 Ahwaz
 Ardebil
+Bandar Abbas
 Bouchehr
 Chiraz
 Qom
@@ -689,6 +627,8 @@ Dublin
 
 // Islande
 Reykjavík
+Akureyri
+Hafnarfjörður
 
 // Israël
 Acre
@@ -760,6 +700,9 @@ Zarka
 // Kirghizstan
 
 
+// Kiribati
+
+
 // Kosovo
 Cirez
 Decani
@@ -801,13 +744,21 @@ Zvecan
 Ahmadi
 Jahra
 
+// Laos
+Luang Prabang
+Paksé
+Phongsaly
+Sam Neua
+Savannakhet
+Thakhek
+
 // Lesotho
 
 
 // Lettonie
 
 
-// Liban(le)
+// Liban
 Tripoli
 Saïda
 Tyr
@@ -863,7 +814,30 @@ Antsirabe
 Fianarantsoa
 Toliara
 
+// Malaisie
+Bahru
+George Town
+Ipoh
+Kilang
+Kota Kinabalu
+Kuala Trengganu
+Kuantan
+Kuchin
+Malacca
+Miri
+Oya
+Penang
+Port Kang
+Sandakan
+Seremban
+Seria
+Sibu
+Tanjong Pagar
+
 // Malawi
+
+
+// Maldives
 
 
 // Mali
@@ -894,6 +868,9 @@ Sidi Ifni
 Taza
 Tameslohte
 
+// Marshall
+
+
 // Maurice
 Quatre-Bornes
 Curepipe
@@ -907,11 +884,16 @@ Rosso
 // Mexique
 
 
+// Micronésie
+Côlonia
+Kolonia
+Tofol
+Weno
+
 // Moldavie
 Tiraspol
-Balti
+Bălți
 Tighina
-Chisinau
 
 // Monaco
 
@@ -937,6 +919,9 @@ Ulcinj
 
 
 // Namibie
+
+
+// Nauru
 
 
 // Népal
@@ -986,6 +971,12 @@ Zaria
 // Norvège
 
 
+// Nouvelle-Calédonie
+
+
+// Nouvelle-Zélande
+
+
 // Oman
 Salalah
 Sur
@@ -999,6 +990,10 @@ Sohar
 
 // Pakistan
 
+
+// Palau
+Koror
+Meyuns
 
 // Palestine
 Beit Hanoun
@@ -1018,6 +1013,12 @@ Wadi Fukin
 // Panamá
 
 
+// Papouasie-Nouvelle-Guinée
+Lae
+Madang
+Goroka
+Mount Hagen
+
 // Paraguay
 
 
@@ -1027,10 +1028,21 @@ Wadi Fukin
 // Pérou
 
 
+// Philippines
+metro Manila »
+Caloocan
+Makati
+Quezon City
+Davao
+Cebu
+
 // Pologne
 Bytom
 Chorzów
 Kielce
+
+// Porto Rico
+
 
 // Portugal
 Porto
@@ -1041,6 +1053,7 @@ Al-Khor
 Al-Rayyan
 Lusail
 Umm Salal
+Zoubara
 
 // République centrafricaine
 Birao
@@ -1056,7 +1069,7 @@ Kinshasa
 // République dominicaine
 
 
-// République Tchèque
+// République tchèque
 Brno
 Ostrava
 Plzeň
@@ -1086,9 +1099,31 @@ Moscou et Saint-Pétersbourg
 // Rwanda
 
 
+// Saint-Kitts-et-Nevis
+
+
+// Saint-Marin
+
+
+// Saint-Vincent-et-les-Grenadines
+Georgetown
+Chateaubelair
+
+// Sainte-Lucie
+
+
+// Salomon
+
+
 // Salvador
 Santa Ana
 San Miguel
+
+// Samoa
+
+
+// São-Tomé-et-Príncipe
+São António do Príncipe
 
 // Sénégal
 
@@ -1149,11 +1184,13 @@ Göteborg
 Malmö
 Uppsala
 Linköping
+Östersund
 
 // Suisse
-Zurich
 Bâle
+Genève
 Lausanne
+Zurich
 
 // Surina
 
@@ -1168,6 +1205,7 @@ Deir Ez-Zor
 Deraa
 Hama
 Homs
+Idlib
 Kamechliyé
 Lattaquié
 Qoussair
@@ -1198,10 +1236,23 @@ Massaguet
 Moundou
 Sarh
 
+// Thaïlande
+Chiang Mai
+Nakhon Ratchasima
+Udon Thani
+Hat Yai
+Pattaya
+
+// Timor-Leste
+Bacau
+
 // Togo
 Kara
 Dapaong
 Sokodé
+
+// Tonga
+
 
 // Trinité-et-Tobago
 
@@ -1275,11 +1326,36 @@ Van
 Yumurtalık
 Zonguldak
 
+// Tuvalu
+
+
+// Ukraine
+Chegueni
+Dnipro
+Donetsk
+Kharkiv
+Kherson
+Kryvyï Rih
+Lviv
+Makiivka
+Marioupol
+Mykolaïv
+Odessa
+Rivne
+Tcherkassy
+Tchernobyl
+
+// Union soviétique
+
+
 // Uruguay
 Canelones
 Maldonado
 Salto
 Colonia
+
+// Vanuatu
+
 
 // Vatican
 
