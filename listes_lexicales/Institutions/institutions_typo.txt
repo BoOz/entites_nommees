@@ -26,14 +26,66 @@ Organisation mondiale du tourisme (OMT)
 Organisation du traité central (Cento)
 Organisation du traité de l'Asie du Sud-Est
 
-// missions
-// Missions et opérations de maintien de la paix de l'ONU
+// institutions dans les fiches « continents » et #institutions_internationales
+
+// Commonwealth of Nations
+
+Charte du Commonwealth
+
+
+// Organisation des Nations unies
+
+Agence internationale de l'énergie atomique (AIEA)
+Autorité internationale des fonds marins (AIFM)
+Cour pénale internationale (CPI)
+Organisation pour l'interdiction des armes chimiques (OIAC)
+Organisation mondiale du commerce (OMC)
+Tribunal international du droit de la mer
+Assemblée générale
+Cour internationale de justice (CIJ)
+Conseil de tutelle
+Conseil de sécurité
+Conseil économique et social (Ecosoc)
+Secrétariat général
+Conférence des Nations unies sur le commerce et le développement (Cnuced)
+Conseil des droits de l'homme
+Haut-Commissariat pour les réfugiés (HCR)
+opérations de maintien de la paix et missions politiques
+Programme alimentaire mondial (PAM)
+Programme des Nations unies pour le développement (PNUD)
+Programme des Nations unies pour l'environnement (PNUE)
+Tribunal pénal international pour le Rwanda (TPIR)
+Tribunal pénal international pour l'ex-Yougoslavie (TPIY)
+Fonds des nations unies pour l'enfance (Unicef)
+Office de secours et de travaux des Nations unies pour les réfugiés de Palestine dans le Proche-Orient (UNRWA)
+Agence internationale de l'énergie atomique (AIEA)
+Autorité internationale des fonds marins (AIFM)
+Cour pénale internationale (CPI)
+Organisation pour l'interdiction des armes chimiques (OIAC)
+Organisation mondiale du commerce (OMC)
+Tribunal international du droit de la mer
+Banque mondiale
+Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)
+Fonds monétaire international (FMI)
+Organisation internationale du travail (OIT)
+Organisation maritime internationale (OMI)
+Organisation météorologique mondiale (OMM)
+Organisation mondiale de la propriété intellectuelle (OMPI)
+Organisation mondiale de la santé (OMS)
+Organisation des Nations unies pour l'éducation, la science et la culture (Unesco)
+convention-cadre des Nations unies sur les changements climatiques
+convention des Nations unies sur le droit de la mer
+convention sur l'interdiction des armes chimiques
+Déclaration universelle des droits de l'homme
+pacte international relatif aux droits civils et politiques
+processus de Kimberley
+traité de non-prolifération nucléaire (TNP)
 Force intérimaire des Nations unies au Liban (Finul)
 Force intérimaire des Nations unies pour Abiyé (Fisnua)
 Force des Nation unies chargée d'observer le désengagement (Fnuod)
 Mission d'appui des Nations unies en Libye (Manul)
 Mission hybride des Nations unies et de l'Union africaine au Darfour (Minuad)
-Mission d'administration intérimaire des Nations unies au Kossovo (Minuk)
+Mission d'administration intérimaire des Nations unies au Kosovo (Minuk)
 Mission des Nations unies au Liberia (Minul)
 Mission des Nations unies pour l'organisation d'un référendum au Sahara occidental (Minurso)
 Mission multidimensionnelle intégrée des Nations unies pour la stabilisation au Mali (Minusma)
@@ -46,13 +98,17 @@ Organisme des Nations unies chargé de la surveillance de la trêve (Onust)
 Force des Nations unies chargée du maintien de la paix à Chypre (Unficyp)
 Groupe d'observateurs militaires des Nations unies dans l'Inde et le Pakistan (Unmogip)
 Groupe d'assistance des Nations unies pour la période de transition (Ganupt)
+Groupe d'observateurs des Nations unies dans la bande d'Aouzou (Gonuba)
 Mission des Nations unies pour l'assistance au Rwanda (Minuar)
+Mission des Nations unies en Côte d'Ivoire (Minuci)
 Mission des Nations unies en Éthiopie et en Érythrée (Minuee)
 Mission des Nations unies en République centrafricaine (Minurca)
 Mission des Nations unies en République centrafricaine et au Tchad (Minurcat)
 Mission des Nations unies au Soudan (Minus)
 Mission des Nations unies en Sierra Leone (Minusil)
 Mission d'observation des Nations unies en Angola (Monua)
+Mission d'observation des Nations unies en République démocratique du Congo (Monuc)
+Mission d'observation des Nations unies au Liberia (Monul)
 Mission d'observation des Nations unies en Ouganda-Rwanda (Monuor)
 Mission d'observation des Nations unies en Sierre Leone (Monusil)
 Opérations des Nations unies au Burundi (ONUB)
@@ -60,73 +116,42 @@ Opération des Nations unies au Congo (ONUC)
 Opération des Nations unies au Mozambique (Onumoz)
 Opération des Nations unies en Somalie (Onusom)
 Mission de vérification des Nations unies en Angola (Unavem)
-// institutions dans les fiches « continents » et #institutions_internationales
-
-// COMMONWEALTH OF NATIONS
-
+Groupe d'observateurs des Nations unies en Amérique centrale (Onuca)
+Mission du représentant du secrétaire général en République dominicaine (Domrep)
+Mission d'observation de l'ONU au Salvador (Onusal)
+Mission de vérification de l'ONU au Guatemala (Minugua)
+Mission de police civile de l'ONU en Haïti (Miponuh)
+Mission de l'ONU en Haïti (Minuha)
+Mission d'appui de l'ONU en Haïti (Minuh)
+Mission de transition de l'ONU en Haïti (Mitnuh)
+Force de déploiement préventif de l'ONU (Fordeprenu)
+Force de protection de l'ONU (Forpronu)
+Mission d'observation des Nations unies en Géorgie (Monug)
+Mission d'observation de l'ONU à Prevlaka (Monup)
+Opération de l'ONU pour le rétablissement de la confiance en Croatie (Onurc)
+Groupe d'appui de la police civile de l'ONU (UNPSG)
+Force d'urgence de l'ONU (FUNU)
+Groupe d'observateurs militaires de l'ONU pour l'Iran et l'Iraq (Gonmuii)
+Groupe d'observation de l'ONU au Liban (Gonul)
+Mission de supervision des Nations unies en Syrie (Misnus)
+Mission d'observation de l'ONU pour l'Irak et le Koweït (Monuik)
+Mission d'observation de l'ONU au Yémen (Unyom)
 
 
 // Organisation internationale de la francophonie
 
-
-
-// Organisation des Nations unies
-
-Assemblée générale
-Conseil de sécurité
-Cour internationale de justice
-Conférence des Nations unies sur le commerce et le développement (Cnuced)
-Fonds des Nations unies pour la population (Fnuap)
-Haut-Commissariat des Nations unies pour les réfugiés (HCR)
-Office des Nations unies contre la drogue et le crime (ONUDC)
-ONU-Femmes
-Programme des Nations unies pour les établissements humains (ONU-Habitat )
-Programme alimentaire mondial (PAM)
-Programme des Nations unies pour le développement (PNUD )
-Programme des Nations unies pour l'environnement (PNUE )
-Fonds des Nations unies pour l'enfance (Unicef)
-Office de secours et de travaux pour les réfugiés de Palestine dans le Proche- Orient (UNRWA )
-Agences spécialisées
-Banque mondiale (BM)
-Food and Agriculture Organization (FAO)
-Fonds international pour le développement agricole (FIDA)
-le Fonds (FMI)
-Organisation de l'aviation civile internationale (OACI)
-Organisation internationale du travail (OIT)
-Organisation maritime internationale (OMI)
-Organisation météorologique mondiale (OMM)
-Organisation mondiale de la propriété intellectuelle (OMPI)
-Organisation mondiale de la santé (OMS)
-Organisation mondiale du tourisme (OMT)
-Organisation des Nations unies pour le développement industriel (Onudi)
-Union internationale des télécommunications (UIT)
-la science et la culture (Unesco)
-Union postale universelle (UPU)
-Conférence générale de l'Unesco
-Conseil des droits de l'homme
-Commission des Nations unies pour le droit commercial international (Cnudci)
-Haut-Commissariat des Nations unies aux droits de l'homme (HCDH)
-Bureau de la coordination des affaires humanitaires (OCHA)
-Organe international de contrôle des stupéfiants (OICS)
-Programme commun des Nations unies sur le VIH/sida (Onusida)
-Tribunal pénal international pour l'ex-Yougoslavie (TPIY)
-Tribunal pénal international pour le Rwanda (TPIR)
-United Nations Interregional Crime and Justice Research Institute (Unicri)
-United Nations Office for Disaster Risk Reduction (UNISDR)
-United Nations Office for Project Services (Unops)
-Charte de l'ONU
-convention-cadre des Nations unies sur les changements climatiques
-convention des Nations unies sur le droit de la mer
-Déclaration universelle des droits de l'homme
-pacte international relatif aux droits civils et politiques
-P5
-préférer 4ᵉ sommet des chefs d'Etat à IVᵉ sommet
+Conférence ministérielle de la francophonie (CMF)
+Conseil permanent de la francophonie (CPF)
+Sommet de la francophonie
+charte de la francophonie
 
 
 // Organisations internationales
 
 Alliance des petits États insulaires (Aosis)
+Commonwealth
 Communauté des pays de langue portugaise (CPLP)
+Ligue arabe
 Organisation de coopération et de développement économiques (OCDE)
 Organisation de la coopération islamique (OCI)
 Organisation internationale de la francophonie (OIF)
@@ -134,7 +159,6 @@ Organisation des pays exportateurs de pétrole (OPEP)
 Organisation pour la sécurité et la coopération en Europe (OSCE)
 Organisation du traité de l'Atlantique nord (OTAN)
 Organisation des Nations unies (ONU)
-
 Agence internationale de l'énergie atomique (AIEA)
 Autorité internationale des fonds marins (AIFM)
 Banque mondiale (BM)
@@ -143,7 +167,7 @@ Cour pénale internationale (CPI)
 Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)
 Fonds monétaire international (FMI)
 Fonds des Nations unies pour le développement (FNUD)
-G12 (groupes des Nations unies)
+G77, G12, G20... (groupes des Nations unies)
 Haut-Commissariat pour les réfugiés (HCR)
 Organisation pour l'interdiction des armes chimiques (OIAC)
 Organisation internationale du travail (OIT)
@@ -157,11 +181,13 @@ Programme alimentaire mondial (PAM)
 Programme des Nations unies pour le développement (PNUD)
 Programme des Nations unies pour l'environnement (PNUE)
 Tribunal pénal international (TPI)
-la science et la culture (Unesco)
+Tribunal international du droit de la mer
+Organisation des Nations unies pour l'éducation, la science et la culture (Unesco)
 Fonds des Nations unies pour l'enfance (Unicef)
 Office de secours et de travaux pour les réfugiés de Palestine dans le Proche-Orient (UNRWA)
 Commission africaine des droits de l'homme et des peuples (ACHPR)
 Association des pays africains producteurs de diamants (APDA)
+Autorité du bassin du Niger
 Communauté d'Afrique de l'Est (CAE)
 Commission du bassin du lac Tchad (CBLT)
 Communauté de développement de l'Afrique australe (CDAA)
@@ -175,6 +201,7 @@ Conférence internationale sur la région des Grands Lacs (CIRGL)
 Commission de l'océan Indien (COI)
 Marché commun de l'Afrique orientale et australe (Comesa)
 Commission des forêts d'Afrique centrale (Comifac)
+G5 Sahel
 Autorité intergouvernementale pour le développement (IGAD)
 Association des États riverains de l'océan Indien (IORA)
 Nouveau partenariat pour le développement de l'Afrique (Nepad)
@@ -185,6 +212,8 @@ Union douanière de l'Afrique australe (SACU)
 Union africaine (UA)
 Union économique et monétaire ouest-africaine (Uemoa)
 Union du Maghreb arabe (UMA)
+Union du fleuve Mano
+zone franc
 Association des États de la Caraïbe (AEC)
 Association latino-américaine d'intégration (Aladi)
 Association latino-américaine de libre-échange (Alale)
@@ -198,12 +227,14 @@ Communauté des Caraïbes (Caricom)
 Communauté d'États latino-américains et caraïbes (Celac)
 Commission économique pour l'Amérique latine et les Caraïbes (Cepalc)
 Conférence des parlementaires des Amériques (COPA)
+groupe de Rio
 Marché commun du Sud (Mercosur)
 Organisation des États américains (OEA)
 Organisation des États de la Caraïbe orientale (OECO)
 Système d'intégration centre-américain (SICA)
 Union des nations sud-américaines (Unasur)
 Association des nations de l'Asie du Sud-Est (Anase)
+Anase + 3
 Coopération économique Asie-Pacifique (APEC)
 Communauté des États indépendants (CEI)
 groupe de Colombo
@@ -213,6 +244,7 @@ Organisation du traité de l'Asie du Sud-Est (Otase)
 Association sud-asiatique pour la coopération régionale (Saacr)
 Union économique eurasiatique (UEE)
 Association européenne de libre-échange (AELE)
+Conseil de l'Europe
 Union européenne (UE)
 Communauté du Pacifique (CPS)
 Forum des îles du Pacifique (FIP)
