@@ -1,201 +1,18 @@
 // Formations politiques
 
-// AUSTRALIE
-
-
-Australian Christian-Democratic Party (ACDP)
-Confédération australienne des syndicats (ACTU)
-Parti des démocrates australiens (AD)
-Parti travailliste australien (ALP)
-Country Liberal Party (CLP)
-Verts australiens (Greens)
-Parti libéral d'Australie (LP(A))
-Une nation (ON)
-Parti pour le désarmement nucléaire (NDP)
-Parti national d'Australie (NP(A))
-Unity Party say no to Hanson
-
-// BIRMANIE
-
-
-Front démocratique des étudiants de Birmanie (ABSDF)
-Front islamique du Rohingya Arakan (ARIF)
-Committee Representing the People’s Parliament (CRPP)
-Alliance démocratique birmane (DAB)
-Conseil des minorités ethniques (ENC)
-Génération 88
-Union nationale karen (KNU)
-Ligue nationale pour la démocratie (NLD)
-Organisation de libération musulmane de la Birmanie (MLBO)
-Myanmar National Democratic Alliance Army (MNDAA)
-Parti de l'unité nationale (NUP)
-Parti communiste birman
-Pao National Organization (PNO)
-Shan State Army South (SSA-S)
-United Nationalities Federal Council (UNFC)
-Union Solidarity and Development Association (USDA)
-Parti de la solidarité et du développement de l'Union
-
-// BRUNEI
-
-
-Parti national de Brunei (BNP)
-Parti national de la solidarité de Brunei (BNSP)
-Parti populaire de Brunei (BPP)
-Brunei United National Party (BUNP)
-
-// CAMBODGE
-
-
-neutre (Funcinpec)
-Parti libéral bouddhiste (PLB)
-Parti du peuple cambodgien (PPC)
-Parti Sam Rainsy (PSR)
-coalition de groupes d'opposition dont le PSR (CNRP)
-
-// EX-YOUGOSLAVIE
-
-
-// FIDJI
-
-
-Alliance conservatrice
-Parti travailliste fidjien (FLP)
-Parti de la fédération nationale (NFP)
-Parti de la loi naturelle (NLP)
-Nouveau parti travailliste
-Parti uni des Fidji (SDL)
-Parti général unifié (UGP)
-
-// INDONÉSIE
-
-
-organisation de jeunesse du NU (Anshor)
-Badan Intelijen Negara (BIN)
-Mouvement pour un Atjeh libre (GAM)
-Groupes fonctionnels (Golkar)
-organisation extrémiste clandestine soupçonnée d’être à l’origine de l’attentat de Bali (Jemaah Islamiyah)
-Muhammadiyah
-Renaissance des oulémas (NU)
-fondé par Amien Rais (PAN)
-Indonesian Democratic Party of Struggle (PDI-P/PDI Perjuangan)
-fondé par Abdurrahman Wahid (PKB)
-Parti de la justice et de la prospérité (PKS)
-Parti uni pour le développement (PPP)
-
-// KIRIBATI f.
-
-
-BTK
-Parti démocrate-chrétien (MTB)
-
-// LAOS
-
-
-Parti révolutionnaire du peuple laotien (PRPL)
-
-// MALAISIE
-
-
-coalition de l’opposition dominée par le PAS (Barisan Alternatif)
-Bersih
-14 partis dominés par l’UMNO (BN)
-Malaysian Chinese Association (MCA)
-Malaysian Indian Congress (MIC)
-Pakatan Rakyat (PR)
-Parti islamique panmalaisien (PAS)
-Organisation nationale des Malais unis (UMNO)
-
-// MALDIVES
-
-
-// MARSHALL
-
-
-// MICRONÉSIE f.
-
-
-// NAURU f.
-
-
-// NOUVELLE-CALÉDONIE
-
-
-// NOUVELLE-ZÉLANDE
-
-
-// NUNAVUT
-
-
-// PALAU m.
-
-
-// PAPOUASIE-NOUVELLE-GUINÉE
-
-
-// PHILIPPINES
-
-
-// PORTO RICO
-
-
-// SAINT-KITTS-ET-NEVIS
-
-
-// SAINT-MARIN
-
-
-// SAINT-VINCENT-ET-LES-GRENADINES
-
-
-// SAINTE-LUCIE
-
-
-// SALOMON
-
-
-// SAMOA
-
-
-// SÃO-TOMÉ-ET-PRÍNCIPE
-
-
-// THAÏLANDE
-
-
-// TIMOR-LESTE
-
-
-// TONGA
-
-
-// TUVALU
-
-
-// UKRAINE
-
-
-// Union soviétique
-
-
-// VANUATU
-
-
 // Afghanistan
-
 
 Coalition nationale d'Afghanistan (CNA)
 Front national uni (FNU)
 Parti pour la vérité et la justice (PVJ)
-scission du PDPA (Khalq)
-scission du PDPA (Parcham)
+« le peuple » (Khalq)
+« le drapeau » (Parcham)
 Parti populaire démocratique d'Afghanistan (PDPA)
 Parti de la patrie (PP)
 Parti révolutionnaire national (PRN)
 Front uni islamique et national pour le salut de l'Afghanistan (Alliance du Nord ou Fuinsa)
 
 // Afrique du Sud
-
 
 Congrès national africain (ANC)
 Alliance démocratique (DA)
@@ -204,13 +21,12 @@ Parti national (NP)
 
 // Albanie
 
-
-la protection sociale et l'intégration (APMI)
+Alliance pour l'emploi, la protection sociale et l'intégration (APMI)
 Parti démocratique d'Albanie (PD)
 Parti chrétien démocrate d'Albanie (PDK)
 Parti républicain d'Albanie (PR)
 Alliance pour une Albanie européenne (ASHE)
-l'intégration et l'unité (PDIU)
+Parti pour la justice, l'intégration et l'unité (PDIU)
 Mouvement socialiste pour l'intégration (LSI)
 Parti socialiste d'Albanie (PS)
 Alliance rouge et noire (AK)
@@ -222,7 +38,6 @@ Parti communiste albanais (PKSH)
 Parti social-démocrate albanais (PSD)
 
 // Algérie
-
 
 Alliance nationale républicaine (ANR)
 Mouvement de la renaissance islamique (Ennahda)
@@ -242,7 +57,6 @@ Groupe salafiste pour la prédication et le combat (GSPC)
 
 // Allemagne
 
-
 Alternative pour l'Allemagne (AfD)
 Alliance 90 - Les Verts (Bündis 90 - Die Grünen)
 Union chrétienne-démocrate (CDU)
@@ -253,7 +67,6 @@ Parti social-démocrate (SPD)
 
 // Andorre
 
-
 Démocrates pour Andorre (DA)
 Parti libéral d'Andorre (PLA)
 Parti social-démocrate (PS)
@@ -262,7 +75,6 @@ Démocratie sociale et progrès (SDP)
 Les Verts d'Andorre (VA)
 
 // Angola
-
 
 Large Convergence pour le salut de l'Angola -- Coalition électorale (CASA-CE)
 Front de libération nationale de l'Angola (FLNA)
@@ -273,23 +85,19 @@ Forces armées populaires de libération de l'Angola
 
 // Antigua-et-Barbuda
 
-
 Parti travailliste d'Antigua (ALP)
 Mouvement populaire de Barbuda (BPM)
 Parti progressiste unifié (UPP)
 
 // Arabie saoudite
 
-
-Sans Parlement ni vie partisane.
-Al-Qaida dans la péninsule arabique ou Ansar Al-Charia (AQPA)
+Al-Qaida dans la péninsule arabique (AQPA)
 
 // Argentine
 
-
-Alliance anticommuniste argentine (AAA )
-coalition (Cambiemos)
-Coalition civique ARI . (CC-ARI)
+Alliance anticommuniste argentine (AAA)
+Coalition (Cambiemos)
+Coalition civique ARI (CC-ARI)
 Proposition républicaine (PRO)
 Union civique radicale ou Parti radical (UCR)
 Front pour la victoire (FPV)
@@ -301,16 +109,24 @@ Parti socialiste (PS)
 
 // Arménie
 
-
 Arménie prospère (BHK)
 Congrès national arménien (HAK)
 Héritage
 Parti républicain d'Arménie (HHK)
 Parti communiste arménien (HKK)
-Etat de droit (OEK)
+État de droit (OEK)
+
+// Australie
+
+Parti des démocrates australiens (AD)
+Parti travailliste australien (ALP)
+Parti des Verts australiens (Greens)
+Parti australien de Katter (KAP)
+Parti libéral australien (LP)
+Parti national (NP)
+Équipe Nick Xenophon (NXT)
 
 // Autriche
-
 
 les Verts (Die Grünen)
 Parti de la liberté d'Autriche (FPÖ)
@@ -319,7 +135,6 @@ Parti social-démocrate d'Autriche (SPÖ)
 Équipe Stronach pour l'Autriche (Team Stronach)
 
 // Azerbaïdjan
-
 
 Parti démocrate d'Azerbaïdjan (ADP)
 Front populaire d'Azerbaïdjan (AHC)
@@ -331,72 +146,61 @@ Parti du nouvel Azerbaïdjan (YAP)
 
 // Bahamas
 
-
 Mouvement national libre (FNM)
 Parti progressiste libéral (PLP)
 
 // Bahreïn
 
-
-Les partis politiques sont interdits et des « sociétés politiques » sont autorisées depuis 2005.
-mouvement d'opposition (AAI)
+Association de l'action islamique (AAI)
 Al-Assala
 Al-Ikha
 Forum national islamique (Al-Menbar)
-Mouvement d'opposition chiite (Al-Wefaq)
+National Islamic Society (Al-Wefaq)
 Front islamique de libération de Bahreïn (FILB)
 Mouvement de libération de Bahreïn (MLB)
 Waad
 
 // Bangladesh
 
-
 Ligue Awami (AL)
 Parti nationaliste du Bangladesh (BNP)
 Parti islamiste du Bangladesh (JI)
 Parti communiste du Bangladesh (PCB)
-la Ligue Awami et le Parti nationaliste du Bangladesh
 
 // Barbade
-
 
 Parti travailliste de la Barbade (BLP)
 Parti travailliste démocratique (DLP)
 
 // Belgique
 
-
 Centre démocrate humaniste (CDH)
 Chrétiens démocrates flamands (CD&V)
 Démocrates fédéralistes indépendants (DÉFI)
-Verts (Écolo)
+Ecologistes confédérés pour l'Organisation des luttes originales, Verts (Écolo)
 Parti écologiste belge flamand (Groen)
-coalition belge francophone (MR)
+Mouvement réformateur (MR)
 Alliance néo-flamande (N-VA)
 Libéraux et démocrates flamands (Open Vld)
 Parti populaire (PP)
-(PTB-GO)
+Parti du travail de Belgique - Gauche d'ouverture (PTB-GO)
 Parti socialiste (PS)
 Socialistische Partij Anders (SP.A)
-intérêt flamand (VB)
+Intérêt flamand (VB)
 
 // Belize
-
 
 Parti uni du peuple (PUP)
 Parti démocratique uni (UDP)
 
 // Bénin
 
-
 Mouvement africain pour le développement et le progrès (Madep)
 Parti du renouveau démocratique (PRD)
 Renaissance du Bénin (RB)
 Parti de la révolution populaire béninoise (PRPB)
-Adoption du multipartisme en 1990. Il existe aujourd'hui une centaine de formations politiques et de nombreux candidats ne sont pas affiliés à un parti.
 
 // Bhoutan
-
 
 Bhutan Kuen-Nyam Party (BKP)
 Druk Chirwang Tshogpa (DCT)
@@ -404,34 +208,46 @@ Druk Nyamrup Tshogpa (DNT)
 Parti bhoutanais de l'unité et de l'harmonie (DPT)
 Parti démocratique populaire (PDP)
 Parti communiste du Bhoutan (CPB)
-Premières élections en 2008 et première alternance démocratique en 2013 .
 
 // Biélorussie
-
 
 Front populaire biélorusse (BNF)
 Parti communiste biélorusse (KPB)
 Parti civil uni de Biélorussie
-Parti républicain du travail et de la justice 
-Note : Seuls les partis progouvernementaux sont présents au Parlement.
+Parti républicain du travail et de la justice
+
+// Birmanie
+
+Parti national d'Arakan (ANP)
+Ligue nationale pour la démocratie (LND)
+Parti de la solidarité et du développement de l'Union (USDP)
+Pao National Organization (PNO)
+Ligue des nationalités shan pour la démocratie (SNLD)
+Parti national Taang (TNP)
+Zomi Congress for Democracy (ZCD)
+Ma Ba Tha
+Front islamique du Rohingya Arakan (ARIF)
+Organisation de libération musulmane de la Birmanie (MLBO)
+Myanmar National Democratic Alliance Army (MNDAA)
+Pao National Army
+Shan State Army South (SSA-S)
+United Wa State Army (UWSA)
 
 // Bolivie
 
-
 Mouvement vers le socialisme (MAS)
+Mouvement social-démocrate (MDS)
 Mouvement nationaliste révolutionnaire (MNR)
 Parti communiste de Bolivie (PCB)
 Parti démocrate-chrétien de Bolivie (PDC)
-Poder démocratico social (PDS)
+Pouvoir démocratique social (PDS)
 Unidad Democrata (UD)
-Mouvement social-démocrate (MDS)
 Front d'unité nationale (UN)
 
 // Bosnie-Herzégovine
 
-
 Parti patriotique de Bosnie-Herzégovine (BPS)
-Front démocratique  (FD)
+Front démocratique (FD)
 Communauté démocratique croate de Bosnie-Herzégovine (HDZ BiH)
 Union démocratique croate 1990 (HDZ 1990)
 Parti paysan croate (HSS)
@@ -440,10 +256,9 @@ Parti d'action démocratique (SDA)
 Parti démocrate serbe (SDS)
 Parti des sociaux-démocrates indépendants (SNSD)
 Parti socialiste serbe (SPS)
-Union pour un meilleur futur en Bosnie-Herzégovine  (SBB BiH)
+Union pour un meilleur futur en Bosnie-Herzégovine (SBB BiH)
 
 // Botswana
-
 
 Parti démocrate du Botswana (BDP)
 Front national du Botswana (BNF)
@@ -452,7 +267,6 @@ Botswana People's Party (BPP)
 Parapluie pour le changement démocratique (UDC)
 
 // Brésil
-
 
 Les Démocrates (DEM)
 Parti démocratique travailliste (PDT)
@@ -464,22 +278,28 @@ Parti des travailleurs (PT)
 Parti travailliste brésilien (PTB)
 Parti socialiste brésilien (PSB)
 Parti social-démocrate (PSDB)
+Parti socialisme et liberté (PSOL)
 Parti Vert (PV)
 
-// Bulgarie
+// Brunei
 
+Parti du développement national (Parti Pembanguan)
+Parti populaire de Brunei (BPP)
+Parti de la conscience populaire (Pakar)
+Parti de la solidarité nationale (PPKB ou BNSP)
+
+// Bulgarie
 
 Alternative pour la renaissance bulgare (ABV)
 Union nationale attaque (Ataka)
 Bulgarie sans censure (BBT)
 Parti socialiste bulgare (BSP)
 Mouvement pour les droits et les libertés (DPS)
-Front patriotique  (FP)
+Front patriotique (FP)
 Citoyens pour le développement européen de la Bulgarie (GERB)
-Bloc réformiste  (RB)
+Bloc réformiste (RB)
 
 // Burkina Faso
-
 
 Congrès pour la démocratie et le progrès (CDP)
 Mouvement populaire pour le progrès (MPP)
@@ -487,26 +307,27 @@ Union pour le progrès et le changement (UPC)
 
 // Burundi
 
-
 Conseil national de défense de la démocratie - Forces de défense de la démocratie (CNDD-FDD)
 Forces de libération nationale (FLN)
-Forces républicaines du Burundi  (Forebu)
+Forces républicaines du Burundi (Forebu)
 Front pour la démocratie au Burundi (Frodebu)
 Mouvement pour la solidarité et la démocratie (MSD)
 Parti pour la libération du peuple hutu (Palipehutu)
 Parti du redressement national (Parena)
 Union pour le progrès national (Uprona)
-le CNDD-FDD domine la vie politique depuis les années 1990.
+
+// Cambodge
+
+Front uni national pour un Cambodge indépendant, neutre, pacifique et coopératif (Funcinpec)
+Parti du peuple cambodgien (PPC)
+Parti du salut national du Cambodge (PSN)
 
 // Cameroun
 
-
 Rassemblement démocratique du peuple camerounais (RDPC)
 Front social-démocrate (SDF)
-l'opposition est très morcelée.
 
 // Canada
-
 
 Bloc québécois (BQ)
 Parti conservateur du Canada (CPC)
@@ -521,13 +342,10 @@ Québec solidaire (QS)
 
 // Cap-Vert
 
-
 Parti africain pour l'indépendance du Cap-Vert (PAICV)
 Mouvement pour la démocratie (MPD)
-régime de parti unique du PAICV
 
 // Chili
-
 
 Chile Vamos
 Union démocrate indépendante (UDI)
@@ -541,11 +359,9 @@ Mouvement de la gauche révolutionnaire (MIR)
 
 // Chine
 
-
 Parti communiste chinois (PCC)
 
 // Chypre
-
 
 Parti progressiste des travailleurs (AKEL)
 Parti démocratique (DIKO)
@@ -559,7 +375,6 @@ Parti de l'unité nationale (UBP)
 
 // Colombie
 
-
 Alliance sociale indépendante (ASI)
 Alliance verte (AV)
 Engagement citoyen pour la Colombie (CCC)
@@ -567,7 +382,7 @@ Centre démocratique (CD)
 Changement radical (CR)
 Mouvement de rénovation indépendante (MIRA)
 Marche patriotique (MP)
-Parti conservateur colombien
+Parti conservateur colombien (Partido Conservador Colombiano)
 Parti communiste colombien (PCC)
 Parti social d'unité nationale (Partido de la U)
 Pôle démocratique alternatif (PDA)
@@ -575,38 +390,32 @@ Parti d'intégration nationale (PIN)
 Parti libéral colombien (PLC)
 Parti vert (PV)
 Union patriotique (UP)
-Forces armées révolutionnaires de Colombie - Armée du peuple
+Forces armées révolutionnaires de Colombie - Armée du peuple (FARC)
 Armée de libération nationale (ELN)
 Armée populaire de libération (EPL)
 
 // Comores
 
-
 Parti pour l'entente comorienne (PEC)
 Parti Juwa (PJ)
 Parti national de la justice (PNJ)
 Union pour le développement des Comores (UPDC)
-soit rassemblés au sein de la mouvance présidentielle
 
 // Congo
-
 
 Conseil national des républicains (CNR)
 Parti congolais du travail (PCT)
 Union panafricaine pour la démocratie sociale (Upads)
-rébellion congolaise exportée au Rwanda (M23)
-Note : début du multipartisme en 1992
+Mouvement du 23 mars (M23)
 
 // Corée du Nord
 
-
-Front démocratique pour la réunification de la patrie (FDRP)
-ou Chongu chondoïste (CCD)
-Parti du travail de Corée ou Parti des travailleurs de Corée (PTC)
+Parti Chondogyo-Chong-u (CCD)
 Parti social-démocrate (CSD)
+Front démocratique pour la réunification de la patrie (FDRP)
+Parti du travail de Corée (PTC)
 
 // Corée du Sud
-
 
 Parti de la justice (PJ)
 Parti Minju de Corée (PMC)
@@ -614,7 +423,6 @@ Parti de la nouvelle frontière (PNF)
 Parti populaire (PP)
 
 // Costa Rica
-
 
 Front large (FA)
 Force démocratique (FD)
@@ -628,9 +436,8 @@ Parti unifié social chrétien (PUSC)
 
 // Côte d'Ivoire
 
-
 Front populaire ivoirien (FPI)
-Rassemblement des Houphouëtistes pour la démocratie et la paix  (RHDP)
+Rassemblement des Houphouëtistes pour la démocratie et la paix (RHDP)
 Mouvement des forces d'avenir (MFA)
 Parti démocrate de Côte d'Ivoire (PDCI)
 Rassemblement des républicains (RDR)
@@ -639,8 +446,7 @@ Al-Qaida au Maghreb islamique (AQMI)
 
 // Croatie
 
-
-Union démocratique croate (HDZ)
+Communauté démocratique croate (HDZ)
 Parti social-libéral croate (HSLS)
 Parti croate des retraités (HSU)
 Diète démocrate istrienne (IDS)
@@ -651,11 +457,9 @@ Travaillistes croates - Parti du travail
 
 // Cuba
 
-
 Parti communiste de Cuba (PCC)
 
 // Danemark
-
 
 Parti Alternative (AP)
 Parti populaire danois (DF)
@@ -669,22 +473,18 @@ Parti libéral danois (V)
 
 // Djibouti
 
-
 Front pour la restauration de l'unité démocratique (FRUD)
 Parti national démocratique (PND)
 Rassemblement populaire pour le progrès (RPP)
 Union pour la majorité présidentielle (UMP)
-4 partis autorisés
 
 // Dominique
-
 
 Parti de la liberté de la Dominique (DFP)
 Parti travailliste de la Dominique (DLP)
 Parti des travailleurs unis (UWP)
 
 // Égypte
-
 
 Alliance démocratique
 Avenir (Al-Ghad)
@@ -698,8 +498,8 @@ Parti social-démocrate
 Alliance islamiste
 Authenticité (Al-Asala)
 Parti de la vertu (Al-Fadila)
-Al-Nour: Parti de la lumière
-parti officiel du groupe djihadiste Al-Gamaa Al-Islamiyya  (Parti de la construction et du développement)
+Parti de la lumière (Al-Nour)
+Parti de la construction et du développement
 Alliance pour l'achèvement de la révolution
 Alliance populaire socialiste
 Parti égyptien de la liberté
@@ -707,16 +507,15 @@ Parti égalité et développement
 Coalition de la jeunesse révolutionnaire
 Mouvement des jeunes pour la justice et la liberté
 Union des paysans indépendants
-Coalition Pour l'amour de l'Égypte 
+Coalition Pour l'amour de l'Égypte
 Parti des égyptiens libres (Al Masreyeen Al-Ahrar)
 Parti de l'avenir de la nation
 Parti de la réforme et du développement
 Rébellion (Tamarrod)
-
 Le centre (Al-Wasat)
 Conseil suprême des forces armées (CSFA)
 Front de salut national (FSN)
-(Parti de la révolution de l'Égypte)
+Parti de la révolution de l'Égypte
 Al-Ahrar
 Parti de la délégation (Al-Wafd)
 El-Omma
@@ -729,15 +528,14 @@ Parti communiste égyptien (PCE)
 Parti national-démocrate (PND)
 Union socialiste arabe (USA)
 Groupe islamique (Al-Gamaa Al-Islamiyya)
-Les partisans de Jérusalem nom précédent Wilayat Sinaï (Ansar Beit Al-Maqdis)
+Les partisans de Jérusalem nom précédent (Ansar Beit Al-Maqdis)
+Wilayat Sinaï
 
 // Émirats arabes unis
-
 
 Aucun
 
 // Équateur
-
 
 Partido Avanza (Avanza)
 Alliance pays (AP)
@@ -750,17 +548,14 @@ Parti roldosiste équatorien (PRE)
 Parti socialiste -- Front large (PS-FA)
 Parti société patriotique 21 janvier (PSP)
 Union équatorienne (UE)
-Union plurinationale des gauches Pachkutik
+Union plurinationale des gauches Pachkutik (Unidad plurinacional de las Izquierdas-Pachakutik)
 Mouvement d'unité populaire (UP)
 
 // Érythrée
 
-
 Front populaire pour la démocratie et la justice (FPDJ)
-Note : pas de multipartisme.
 
 // Espagne
-
 
 Parti socialiste ouvrier espagnol (PSOE)
 Parti populaire (PP)
@@ -772,26 +567,26 @@ Bloc nationaliste valencien (BLOC)
 Centre nationaliste canarien (CNN)
 Convergence démocratique de Catalogne (CDC)
 Citoyen - Parti de la citoyenneté (C's)
-Euskal Herritarok  (EH)
+Euskal Herritarok (EH)
 Réunir le Pays basque (EH Bildu)
 Forum des Asturies (FAC)
 Parti nationaliste basque (PNV)
 Parti socialiste d'Euskadi (PSE)
 Unité (Batasuna)
 Pays basque et liberté (ETA)
+Democracia real ya !
+mouvement du 15-M
 
 // Estonie
 
-
-Parti estonien de la réforme (ER)
-Parti du centre (K)
 Parti populaire conservateur d'Estonie (EKRE)
-Parti uni du peuple estonien
+Parti estonien de la réforme (ER)
 Union de la patrie et Res publica (IRL)
+Parti du centre (K)
+Parti uni du peuple estonien
 Parti social-démocrate (SDE)
 
 // États-Unis
-
 
 Parti communiste des États-Unis (CPUSA)
 Green Party
@@ -802,20 +597,28 @@ Tea Party
 
 // Éthiopie
 
-
-Font démocratique révolutionnaire du peuple éthiopien (EPRDF)
+Front démocratique révolutionnaire du peuple éthiopien (FDRPE)
 Ahmara National Democratic Movement (ANDM)
 Front de libération du peuple du Tigré (FLPT)
 Organisation démocratique du peuple oromo (OPDO)
 Mouvement démocratique des peuples du sud de l'Éthiopie (SEPDM)
-Parti national démocratique afar  (ANDP)
+Parti national démocratique afar (ANDP)
 Somali People's Democratic Party (SPDP)
 Front de libération oromo (FLO)
-et son bras armé l'armée nationale de libération de l'Ogaden  (FNLO)
+Front de libération national de l'Ogaden (FNLO)
 Front uni révolutionnaire démocratique afar (Furda)
 
-// Finlande
+// EX-YOUGOSLAVIE
 
+
+// Fidji
+
+Fidji d'abord (Fiji First)
+Parti de la fédération nationale (NFP)
+Parti fidjien uni (SDL)
+Parti social-démocrate libéral (Sodelpa)
+
+// Finlande
 
 Chrétiens-démocrates de Finlande (KD)
 Parti du centre (KESK)
@@ -828,7 +631,6 @@ Alliance de gauche (VAS)
 Ligue verte (VIHR)
 
 // France
-
 
 Écologistes !
 Europe Ecologie -- Les Verts (EELV)
@@ -846,59 +648,50 @@ Union des démocrates et indépendants (UDI)
 
 // Gabon
 
-
 Parti démocratique gabonais (PDG)
 Rassemblement pour le Gabon (RPG)
 Union du peuple gabonais (UPG)
-Note : PDG parti unique de 1967 à 1990
 
 // Gambie
-
 
 Alliance pour la construction et la réorientation patriotique (APRC)
 Alliance nationale pour la démocratie et le développement (NADD)
 Parti de la réconciliation nationale (NRP)
 Parti de l'unité et la démocratie (UDP)
-les partis d'opposition sont très peu représentés dans les institutions.
 
 // Géorgie
 
-
 Mouvement national uni (ENM)
 les Cavaliers (Mkhedrioni)
-Notre Géorgie -- Démocrates libres  (NGDL)
+Notre Géorgie -- Démocrates libres (NGDL)
 Rêve géorgien
 Rêve géorgien -- Géorgie démocratique
 Parti communiste géorgien (SKP)
 
 // Ghana
 
-
 National Democratic Congress (NDC)
 New Patriotic Party (NPP)
 
 // Grèce
 
-
 Grecs indépendants (ANEL)
 Aube dorée
 Gauche démocratique (Dimar)
 Parti communiste de Grèce (KKE)
-scission Syriza (LE)
+Unité populaire (LE)
 Nouvelle Démocratie (ND)
 Mouvement socialiste panhellénique (Pasok)
 Coalition de la gauche radicale (Syriza)
-La Rivière  (To Potami)
+La Rivière (To Potami)
 
 // Grenade
-
 
 Parti travailliste uni de la Grenade (GULP)
 Congrès démocratique national (NDC)
 Nouveau Parti national (NNP)
 
 // Guatemala
-
 
 Convergencia-CPO-CRD
 Rencontre pour le Guatemala (EG)
@@ -917,7 +710,6 @@ Organisation du peuple en armes (ORPA)
 
 // Guinée
 
-
 Conseil national pour la démocratie et le développement (CNDD)
 Coalition arc-en-ciel
 Rassemblement du peuple de Guinée (RPG)
@@ -926,20 +718,15 @@ Union des forces républicaines (UFR)
 
 // Guinée-Bissau
 
-
 Parti africain pour l'indépendance de la Guinée et du Cap-Vert (PAIGC)
 Parti du renouveau social (PRS)
-Note : les deux partis se succèdent au pouvoir depuis 1994.
 
 // Guinée-Équatoriale
 
-
 Parti de convergence pour la démocratie sociale (PCDS)
 Parti démocratique de la Guinée-Équatoriale (PDGE)
-président actuel au pouvoir depuis 1979
 
 // Guyana
-
 
 Alliance pour le changement (AFC)
 Partenariat pour l'unité nationale (APNU)
@@ -947,7 +734,6 @@ Congrès national du Peuple (PNC)
 Parti progressiste du peuple (PPP)
 
 // Haïti
-
 
 Haïti en action (AAA)
 Famille Lavalas (FL)
@@ -964,7 +750,6 @@ Front pour l'avancement et le progrès haïtien (FRAPH)
 
 // Honduras
 
-
 Partido Libertad y Refundación (Libre)
 Parti anticorruption (PAC)
 Partido Liberal de Honduras (PLH)
@@ -972,8 +757,7 @@ Parti national du Honduras (PNH)
 
 // Hongrie
 
-
-Alliance civile hongroise (Fidesz)
+au pouvoir (Fidesz-Alliance civique hongroise)
 Mouvement pour une meilleure Hongrie (Jobbik)
 Parti populaire chrétien-démocrate (KDNP)
 Une autre politique est possible (LMP)
@@ -985,27 +769,54 @@ Dialogue pour la Hongrie (PM)
 
 // Inde
 
-
 Parti de l'homme ordinaire (AAP)
 All India Anna Dravida Munnetra Kazhagam (AIADMK)
 All India Trinamool Congress (AITC)
 Biju Janata Dal (BJD)
 Parti du peuple indien (BJP)
 Parti de la société majoritaire (BSP)
-comité de l'état Kerala (LMUI)
+Ligue musulmane de l'Union indienne, comité de l'état Kerala (LMUI)
 Parti du Congrès
 Parti communiste d'Inde (PCI)
 Parti Telugu Desam (PTD)
 Shiv Sena (SHS)
 Telegana Rashtra Samithi (TRS)
 YSR Congress Party (YSRCP)
-émergence récente de partis régionaux alliés au BJP au sein de l'Alliance nationale démocratique majoritaire au Parlement.
+
+// Indonésie
+
+Great Indonesia Movement Party (Gerindra)
+Party of the Functional Groups (Golkar)
+Parti du mandat national (PAN)
+Parti démocrate (PD)
+Indonesian Democratic Party of Struggle (PDI-P)
+Parti du réveil national (PKB)
+Parti pour l'unité et le développement (PPP)
+Harakah Sunni for the Indonesian Society (Hasmi)
+Jemaah Islamiyah (JI)
 
 // Irak
 
+Al-Arabiya
+Appel islamique (Al-Dawa Al-Islamiya)
+Alliance nationale irakienne
+Mouvement pour le changement (Bzutinewey Goran)
+Coalition de l'État de droit
+Conseil suprême islamique irakien (CSII/Mouwatin)
+Front du dialogue national
+Mouvement sadriste
+Parti démocratique du Kurdistan (PDK)
+Parti des travailleurs du Kurdistan (PKK)
+Union patriotique du Kurdistan (UPK)
+Al-Qaida en Irak
+Armée du Mahdi
+Brigade Badr
+Chevaliers de l'espoir
+Forces de mobilisation populaire
+Organisation de l'État islamique (OEI)
+Sahwa
 
 // Iran
-
 
 Association du clergé militant (ACM)
 Centre national de la résistance iranienne (CNRI)
@@ -1018,12 +829,11 @@ Parti de la coalition islamique (Motalefeh)
 Voix d'Iran (NEDA)
 Parti Toudeh
 Compagnons du Parti de Dieu (Ansar-e-Hezbollah)
-Mouvement de la résistance populaire d'Iran (Jundallah)
+Les soldats de Dieu (Jundallah)
 Organisation des moudjahidins du peuple iranien (MKO ou OMPI)
 Parti pour une vie libre au Kurdistan (PJAK)
 
 // Irlande
-
 
 Alliance antiaustérité - Le peuple avant le profit (AAA-PBP)
 Fianna Fáil (FF)
@@ -1034,33 +844,31 @@ Parti des travailleurs (WP)
 
 // Islande
 
-
 Avenir radieux (BF)
-Parti de l'indépendance (IP)
-Mouvement gauche-vert (LGM)
-Parti pirate
-Parti progressiste (PP)
-Alliance des sociaux-démocrates ou Alliance (SDA)
+Parti pirate (Þ)
+Parti du progrès (PP)
+Mouvement gauche-vert (VG)
+Régénération ou Renaissance (XC)
+Parti de l'indépendance (XD)
+Alliance (XS)
 
 // Israël
-
 
 Ligue démocratique nationale (Balad)
 Foyer juif
 Front démocratique pour la paix et l'égalité (Hadash)
 Judaïsme de la Torah
 Koulanou
-notre maison » (Israël Beitenou)
+« Israël, notre maison » (Israël Beitenou)
 Likoud
 Liste arabe unie
-branche nordiste et branche sudiste (Mouvement islamique)
-Parti travailliste 
-Shas 0
+Mouvement islamique
+Parti travailliste
+Shas
 Mouvement arabe pour le renouveau (Ta-al)
 Yesh Atid
 
 // Italie
-
 
 Coalition de centre-gauche
 Centre démocrate (CD)
@@ -1075,26 +883,23 @@ Frères d'Italie - Alliance nationale (FDI-AN)
 
 // Jamaïque
 
-
 Parti travailliste de Jamaïque (JLP)
 People National Party (PNP)
 
 // Japon
 
-
 Iniatives d'Osaka (IO)
 Les Verts du Japon (LVJ)
-Parti démocrate
+Parti démocrate (Minshinto)
 Parti de la justice et de l'intégrité (NPK)
 Parti communiste japonais (PCJ)
 Parti démocrate japonais (PDJ)
 Parti pour le Kokoro japonais (PKJ)
 Parti libéral-démocrate (PLD)
 Parti japonais de l'innovation (ISHIN)
-Parti social-démocrate japonais  (PSD)
+Parti social-démocrate japonais (PSD)
 
 // Jordanie
-
 
 Front islamique d'action
 Front national pour la réforme (FNR)
@@ -1104,22 +909,18 @@ Parti de l'Union nationale
 Parti démocratique populaire
 Parti national constitutionnel
 Parti centriste islamique (Wasat)
-aucun bloc ne se distingue et une multitude de partis sont faiblement représentés.
 
 // Kazakhstan
-
 
 Parti populaire démocratique du Kazakhstan (Ak Jol)
 Parti communiste populaire du Kazakhstan (KNPK)
 Nour Otan (NO)
 OSDP Azat
 Parti démocratique uni (PDU)
-Parti national patriote  (PNP)
+Parti national patriote (PNP)
 Unité du peuple du Kazakhstan (UPK)
-deux partis au moins doivent être présents au Parlement.
 
 // Kenya
-
 
 Coalition pour les réformes et la démocratie (CORD)
 Orange Democratic Movement (ODM)
@@ -1127,10 +928,8 @@ Jubilee Alliance
 Parti de l'alliance nationale (TNA)
 Coalition nationale arc-en-ciel (NARC)
 Parti républicain uni (URP)
-Note : multipartisme à partir de 1992.
 
 // Kirghizstan
-
 
 Parti socialiste « patrie » (Ata-Meken)
 Progrès (Onuguu)
@@ -1139,8 +938,14 @@ Parti politique unité nationale et du patriotisme (Bir-Bol)
 Parti des communistes du Kirghizstan (PKK)
 République mère patrie (RAJ)
 
-// Kosovo
+// Kiribati
 
+« Les piliers de la vérité » (BTK)
+Kamaeuraoan Te I-Kiribati Party (KTK)
+Maurin Kiribati Paty (MKP)
+Tobwaan Kiribati Party (TKP)
+
+// Kosovo
 
 Alliance pour l'avenir du Kosovo (AAK)
 Ligue démocratique du Kosovo (LDK)
@@ -1150,8 +955,6 @@ Autodétermination (VV)
 
 // Koweït
 
-
-les citoyens votent pour des tendances
 Forum démocratique du Koweït
 Mouvement constitutionnel islamique
 Rassemblement populaire islamique
@@ -1159,8 +962,11 @@ Bloc national islamique
 Bloc constitutionnel
 groupes tribaux
 
-// Lesotho
+// Laos
 
+Parti révolutionnaire populaire lao (PRPL)
+
+// Lesotho
 
 All Basotho Convention (ABC)
 Basotho National party (BNP)
@@ -1169,28 +975,27 @@ Lesotho Congress for Democracy (LCD)
 
 // Lettonie
 
-
-Association lettone des régions  (LRA)
+Association lettone des régions (LRA)
 Du cœur pour la Lettonie (NSL)
 Alliance nationale (NA)
-Unité  (Vienotiba)
+Unité (Vienotiba)
 Union des Verts et des paysans (ZZS)
 Parti vert (LZP)
 Parti social démocrate « Harmonie » (SC)
 Centre de la concorde
 
-// Liban(le)
-
+// Liban
 
 Coalition du 14 mars
-Forces libanaises 
+Courant du futur
+Forces libanaises
 Mouvement de la gauche démocratique (MGD)
 Mouvement Marada
-Parti des Phalanges libanaises  (Kataëb)
+Parti des Phalanges libanaises (Kataëb)
 Parti social-démocrate Hentchak (PSDH)
 Coalition du 8 mars
 Bloc de la loyauté à la résistance
-« mouvement de Michel Aoun »  (CPL)
+Courant patriotique libre, « mouvement de Michel Aoun » (CPL)
 Mouvement de l'espoir (Mouvement Amal)
 Parti Baas
 Parti démocratique libanais
@@ -1199,44 +1004,39 @@ Parti de Dieu (Hezbollah)
 
 // Liberia
 
-
 Congress for Democratic Change (CDC)
 Parti de l'unité (UP)
 Liberian United for Reconciliation and Democracy (LURD)
 
 // Libye
 
-
 Alliance des forces nationales (AFN)
 Parti national libyen (Al-Watan)
 Parti de la justice et de la construction (PJC)
 Parti du front national (PFN)
-Al-Mourabitoune (AQMI)
+Al-Qaida au Maghreb islamique (AQMI)
 Aube de la Libye (Fajr Libya)
 Conseil consultatif de la jeunesse islamique (MCCI)
 Conseil consultatif des moudjahidins des environs de Jérusalem (MSC)
 
 // Liechtenstein
 
-
 Les Indépendants (DU)
-Parti progressiste des citoyens  (FBP)
+Parti progressiste des citoyens (FBP)
 Liste libre (FL)
 Union patriotique (VU)
 
 // Lituanie
 
-
 Voie du courage (DK)
 Parti travailliste (DP)
 Action électorale des Polonais de Lituanie (LLRA)
 Mouvement libéral de la République de Lituanie (LRLS)
-fusionne en 2001 avec le Parti lituanien démocrate du travail (LSDP)
+Parti social-démocrate de Lituanie (LSDP)
 Union de la patrie - Démocrates chrétiens lituaniens (TS-LKD)
 Ordre et justice (TT)
 
 // Luxembourg
-
 
 Parti populaire social-chrétien (CSV)
 Parti démocratique (DP)
@@ -1246,54 +1046,64 @@ Parti communiste luxembourgeois (PCL)
 
 // Macédoine
 
-
 Union démocratique pour l'intégration (BDI)
 Parti démocratique des Albanais (DPSH)
 Union sociale-démocrate de Macédoine (SDSM)
-Organisation révolutionnaire macédonienne intérieure -- Parti démocratique pour l'unité nationale macédonienne (VMRO-DPMNE)
+Organisation révolutionnaire macédonienne intérieure - Parti démocratique pour l'unité nationale macédonienne (VMRO-DPMNE)
 
 // Madagascar
-
 
 Force nouvelle pour Madagascar (HVM)
 Miaraka amin'ni Prezida Andry Rajoelina (Mapar)
 J'aime Madagascar (TIM)
 
-// Malawi
+// Malaisie
 
+Front national (BN)
+Organisation nationale des Malais unis (UMNO)
+Democratic Action Party (DAP)
+Parti islamique panmalaisien (PAS)
+Coalition de l'espoir (PH)
+Parti socialiste de Malaisie (PSM)
+Sarawak People's Energy Party (TERAS)
+
+// Malawi
 
 Congrès national africain (ANC)
 Parti démocrate progressiste (DPP)
 Parti du congrès malawite (MCP)
 Parti populaire (PP)
 Front démocratique uni (UDF)
-Note : multipartisme et élections libres en 1994.
+
+// Maldives
+
+Parti de la justice (AP)
+Parti républicain (JP)
+Maldives Development Alliance (MDA)
+Maldavian Democratic Party (MDP)
+Progressive Party of Maldives (PPM)
 
 // Mali
-
 
 Alliance pour la démocratie au Mali - Parti africain pour la solidarité et la justice (Adema-PASJ)
 Rassemblement pour le Mali (RPM)
 Union pour la République et la démocratie (URD)
 Groupe vigilance démocratique et républicaine (VRD)
-Al-Qaida au Maghreb islamique ou Al-Mourabitoune (AQMI)
+Al-Qaida au Maghreb islamique (AQMI)
 Coordination des mouvements de l'Azawad (CMA)
 Haut Conseil pour l'unité de l'Azawad (HCUA)
 Mouvement national de libération de l'Azawad (MNLA)
-CM-FPR : Coordination des mouvements-Front patriotique de résistance
-FLNM : Front de libération du nord du Mali
-"Les enfants du pays" (Ganda Izo)
-MPGK ou Ganda Koy : Mouvement patriotique Ganda Koy
-Note : Il existe une multitude de groupes armés au Mali et une concurrence offensive entre les membres de la CMA et les autres milices pro-Bamako.
+Coordination des mouvements-Front patriotique de résistance (CM-FPR)
+Front de libération du nord du Mali (FLNM)
+« Les enfants du pays » (Ganda Izo)
+Mouvement patriotique Ganda Koy (MPGK)
 
 // Malte
-
 
 Parti nationaliste (PN)
 Parti travailliste (PL)
 
 // Maroc
-
 
 Parti de l'indépendance (Istiqlal)
 Mouvement populaire (MP)
@@ -1301,12 +1111,17 @@ Mouvement du 20-Février
 Parti authenticité et modernité (PAM)
 Parti de la justice et du développement (PJD)
 Parti du progrès et du socialisme (PPS)
+Parti socialiste unifié (PSU)
 Rassemblement national des indépendants (RNI)
 Union socialiste des forces populaires (USFP)
 Front populaire de libération de la Saguia el Hamra et du rio de oro (Front Polisario)
 
-// Maurice
+// Marshall
 
+Aelon Kein Ad Party
+Parti démocratique uni (UDP)
+
+// Maurice
 
 Alliance du peuple (Lepep)
 Mouvement socialiste militant (MSM)
@@ -1317,7 +1132,6 @@ Parti travailliste (PTR)
 
 // Mauritanie
 
-
 Coordination de l'opposition démocratique (COD)
 Force de libération des Africains de Mauritanie (FLAM)
 Parti Tawassoul
@@ -1327,7 +1141,6 @@ Al-Qaida au Maghreb islamique (AQMI)
 
 // Mexique
 
-
 Parti révolutionnaire institutionnel (PRI)
 Parti d'action nationale (PAN)
 Parti de la révolution démocratique (PRD)
@@ -1335,24 +1148,25 @@ Parti vert écologiste du Mexique (PVEM)
 Mouvement régénération nationale (Morena)
 Mouvement citoyen (Movimiento Ciudadanos)
 
-// Moldavie
+// Micronésie
 
+Note : Pas de partis formels, les candidats se présentent à titre indépendant.
+
+// Moldavie
 
 Parti des communistes de la République de Moldavie (PCRM)
 Parti libéral-démocrate de Moldavie (PLDM)
 Parti des socialistes de la République de Moldavie (PSRM)
-Parti démocratique de Moldavie (PDM)
+Parti démocrate de Moldavie (PDM)
 Parti libéral (PL)
 
 // Monaco
-
 
 Horizon Monaco
 Renaissance
 Union monégasque
 
 // Mongolie
-
 
 Parti Coalition de la Justice (CJ)
 Parti démocrate mongol (PDM)
@@ -1363,7 +1177,6 @@ Tous les mongols (Dayar mongol)
 Parti démocrate (PD)
 
 // Monténégro
-
 
 Parti bosniaque (BS)
 Monténégro démocratique (DCG)
@@ -1377,7 +1190,6 @@ Parti populaire socialiste du Monténégro (SNP)
 
 // Mozambique
 
-
 Front de libération du Mozambique (Frelimo)
 Mouvement démocratique du Mozambique (MDM)
 Résistance nationale mozambicaine (Renamo)
@@ -1385,17 +1197,20 @@ Mouvement national de résistance (MNR)
 
 // Namibie
 
-
 Democratic Turnhall Alliance (DTA)
 Rassemblement pour la démocratie et le progrès (RDP)
 Organisation de libération du Sud-Ouest africain (Swapo)
-Note : vie politique dominée par la Swapo depuis l'accession à l'indépendance.
+
+// Nauru
+
+Parti démocratique (DP)
+Nauru First Party
+Parti de Nauru (Nauru Party)
 
 // Népal
 
-
-le Parti du Congrès népalais et le Parti communiste du Népal marxiste-léniniste unifié
-Parti du Congrès népalais  (CPN)
+et le Parti communiste du Népal marxiste-léniniste unifié ) (CPN-MLU)
+Parti du Congrès népalais (CPN)
 Parti communiste népalais maoïste (PCN-M)
 Parti communiste du Népal marxiste-léniniste unifié (PCN-UML)
 Forum des droits du peuple Madhesi (FDPM)
@@ -1410,13 +1225,11 @@ Travailleurs du Népal et Parti des paysans (TNPP)
 
 // Nicaragua
 
-
 Front sandiniste de libération nationale (FSLN)
 Parti libéral indépendant (PLN)
 Parti libéral constitutionnel (PLC)
 
 // Niger
-
 
 Convention démocratique et sociale (CDS-Ramaha)
 Mouvement national pour la société de développement (MNDS-Nassara)
@@ -1424,65 +1237,68 @@ Mouvement démocratique nigérien pour une Fédération africaine (Moden-FA)
 Parti nigérien pour l'autogestion (PNA)
 Parti nigérien pour la démocratie et le socialisme (PNDS-Tarayya)
 Parti progressiste nigérien (PPN)
-Al-Qaida au Maghreb islamique ou Al-Mourabitoune (AQMI)
+Al-Qaida au Maghreb islamique (AQMI)
 Front de libération de l'Aïr et de l'Azawak (FLAA)
 Mouvement des nigériens pour la justice (MNJ)
-Note : autorisation du multipartisme en 1991
 
 // Nigeria
-
 
 Parti de tous les peuples du Nigeria (ANPP)
 All Progressives Congress (APC)
 Parti démocratique du peuple (PDP)
 Boko Haram
 
-
 // Norvège
 
-
-Parti conservateur  (H)
+Parti conservateur (H)
 Parti Vert (MDG)
-Coalition de centre-droite
-Parti du progrès  (FRP)
-Parti démocrate-chrétien ou chrétien-populaire (KRF)
+Parti du progrès (FRP)
+Parti démocrate-chrétien (KRF)
 Parti libéral (V)
-Coalition rouge-verte
-Parti travailliste  (AP)
+Parti travailliste (AP)
 Parti du centre (SP)
 Parti de gauche socialiste (SV)
 
-// Oman
+// Nouvelle-Calédonie
 
+Calédonie ensemble
+Construisons notre nation arc-en-ciel
+Front de libération nationale kanak et socialiste (FLNKS)
+
+// Nouvelle-Zélande
+
+Parti ACT (ANZ)
+Parti Vert d'Aotearoa (GPA)
+Parti maori (Maori Party)
+Parti Nouvelle-Zélande d'abord (NZFP)
+Parti travailliste néo-zélandais (NZLP)
+Parti national néo-zélandais (NZNP)
+
+// Oman
 
 Pas de partis politiques
 
 // Ouganda
 
-
 Forum pour le changement démocratique (FDC)
 Mouvement de résistance nationale (NRM)
-rebelles islamistes ougandais (ADF-NALU)
+ADF-NALU
 Armée de résistance du Seigneur (LRA)
-multipartisme institué en 2005.
 
 // Ouzbékistan
-
 
 Parti social-démocrate de justice (Adolat)
 Parti démocrate de la renaissance nationale (MT)
 Parti populaire démocratique de l'Ouzbékistan (NDPOU)
 Parti communiste ouzbek (PCO)
 Parti libéral-démocrate (Uzlidep)
-leur rôle est de représenter les diverses composantes de la société ouzbèke et non de proposer des projets politiques alternatifs. Interdiction des partis d'opposition
 Mouvement écologique d'Ouzbékistan (MEO)
 Mouvement islamique d'Ouzbékistan (MOI)
 
 // Pakistan
 
-
-Parti islamique du Pakistan ou Alliance démocratique islamique (JI)
-Assemblée du clergé islamique ou Rassemblement des oulémas de l'islam (JUI)
+Parti islamique du Pakistan (JI)
+Assemblée du clergé islamique (JUI)
 Jamiat Ulema-e-Islam Fazlur Rehman (JUI-F)
 Société des érudits religieux de l'Islam (JUI-N)
 Jamiat Ulema-e-Islam Sami ul-Haq (JUI-S)
@@ -1495,10 +1311,13 @@ Parti national baloutche Mengal (PBN-M)
 Pakhtunkhwa Milli Awami Party (PKMAP)
 Parti du peuple pakistanais (PPP)
 
+// Palau
+
+Pas de partis politiques
+
 // Palestine
 
-
-« Conquête » Mouvement de libération nationale palestinien (Fatah)
+« Conquête » (Fatah)
 Mouvement de la résistance islamique (Hamas)
 Front démocratique de libération de la Palestine (FDLP)
 Parti de la libération islamique (PLI)
@@ -1508,12 +1327,20 @@ Front populaire de libération de la Palestine (FPLP)
 
 // Panamá
 
-
 Parti panaméiste (Partido Panameñista)
 Parti révolutionnaire démocratique (PRD)
 
-// Paraguay
+// Papouasie-Nouvelle-Guinée
 
+National Alliance Party (NA)
+People's National Congress Party (PNC)
+Papua New Guinea Party (PNGP)
+People's Party (PP)
+People's Progress Party (PPP)
+Triumph Heritage Empowerment Party (THE)
+United Ressources Party (URP)
+
+// Paraguay
 
 les colorados (ANR)
 Avanza País (AP)
@@ -1526,7 +1353,6 @@ Union nationale de citoyens éthiques (Unace)
 
 // Pays-Bas
 
-
 Appel chrétien-démocrate (CDA)
 Démocrates 66 (D66)
 Parti travailliste (PVDA)
@@ -1536,19 +1362,30 @@ Parti populaire pour la liberté et la démocratie (VVD)
 
 // Pérou
 
-
 Parti de l'alliance pour le progrès (APP)
-Partido Aprista Peruviano Parti apriste péruvien (PAP)
+Parti apriste péruvien (PAP)
 Front élargi (Frente Amplio)
 Force populaire (Fuerza Popular)
 Parti restauration nationale
 Parti populaire chrétien (PPC)
 Parti Pérou possible (PP)
 Solidaridad nacional (SN)
-Sentier lumineux (PCP-SL)
+Partido Comunista del Peru-Sendero Luminoso, Sentier lumineux (PCP-SL)
+
+// Philippines
+
+Lutte pour des Philippines démocratiques (LDP)
+Front de libération nationale moro (MNLF)
+Coalition nationaliste populaire (NPC)
+Parti populaire démocratique philippin - Pouvoir du peuple (PDP-Laban)
+Parti libéral des Philippines (PL)
+Parti nationaliste (PN)
+Alliance nationaliste unifiée (UNA)
+Abou Sayyaf
+Front de libération islamique moro (MILF)
+Nouvelle Armée du peuple (NAP)
 
 // Pologne
-
 
 Comité de défense de la démocratie (KOD)
 Kukiz'15
@@ -1557,8 +1394,13 @@ Plate-forme civique (PO)
 Parti populaire polonais Parti paysan polonais (PSL)
 Alliance de la gauche démocratique (SLD)
 
-// Portugal
+// Porto Rico
 
+Parti de l'indépendance portoricaine (PIP)
+Nouveau parti progressiste (PNP)
+Parti démocratique populaire (PPD)
+
+// Portugal
 
 Coalition démocratique unitaire (CDU)
 Parti socialiste (PS)
@@ -1568,19 +1410,16 @@ Parti social-démocrate (PSD)
 
 // Qatar
 
-
 Partis politiques interdits
 
 // République centrafricaine
 
-
-Convergence nationale « le travail (KNK)
+Convergence nationale « le travail, rien que le travail » (KNK)
 Rassemblement démocratique centrafricain (RDC)
 Armée de résistance du Seigneur (LRA)
-« Coalition » (Séléka (la))
+« Coalition » (Séléka)
 
 // République démocratique du Congo
-
 
 Alliance des forces démocratiques pour la libération du Congo-Zaïre (AFDL)
 UDPS
@@ -1588,18 +1427,16 @@ UNC
 UFC
 Congrès national pour la défense du peuple (CNDP)
 Parti du peuple pour la reconstruction et la démocratie (PPRD)
-rebelles islamistes ougandais (ADF-NALU)
+forces démocratiques alliées (ADF-NALU)
 Armée de résistance du Seigneur (LRA)
 M23
 
 // République dominicaine
 
-
 Parti de la libération dominicaine (PLD)
 Parti révolutionnaire dominicain (PRD)
 
-// République Tchèque
-
+// République tchèque
 
 Action des citoyens mécontents (ANO)
 Parti social-démocrate tchèque (CSSD)
@@ -1607,10 +1444,9 @@ Union démocrate-chrétienne -- Parti populaire tchécoslovaque (KDU-CSL)
 Parti démocratique civique (ODS)
 Parti des droits civiques (SPO)
 Parti des Verts (SZ)
-responsabilité (TOP-09)
+Tradition, responsabilité, prospérité (TOP-09)
 
 // Roumanie
-
 
 Alliance des libéraux et démocrates (ALDE)
 Parti national libéral (PNL)
@@ -1620,7 +1456,6 @@ Union démocrate magyare de Roumanie (UDMR)
 Union nationale pour le progrès de la Roumanie (UNPR)
 
 // Royaume-Uni
-
 
 Parti national britannique (BNP)
 Parti Vert de l'Angleterre et du Pays de Galles (Green Party)
@@ -1638,27 +1473,58 @@ Armée républicaine irlandaise (IRA)
 
 // Russie
 
-
 Parti communiste de la Fédération de Russie (KPRF)
 Parti libéral-démocrate de Russie (LDPR)
 Russie Unie
 Russie juste
-
+Iabloko
 Union des forces de droite (SPS)
 L'Autre Russie
-Note : Jeu politique réduit à peu de partis nationaux et sans possibilité d'alternance hors crise.
 
 // Rwanda
-
 
 Front patriotique rwandais (FPR)
 Parti social-démocrate du Rwanda (PSDR)
 Front/force démocratique de libération du Rwanda (FDLR)
 Mouvement du 23 mars (M23)
-Note : instauration du multipartisme en 1991.
+
+// Saint-Kitts-et-Nevis
+
+Mouvement des citoyens concernés (CCM)
+Parti de la réforme de Nevis (NRP)
+Mouvement de l'action populaire (PAM)
+Parti travailliste populaire (PLP)
+Saint-Kitts-et-Nevis Labor Party (SKNLP)
+
+// Saint-Marin
+
+Parti des chrétiens-démocrates saint-marinais (PDCS)
+Parti des socialistes et des démocrates (PSD)
+Alliance populaire des démocrates saint-marinais (AP)
+Nous Saint-Marinais (NS)
+Nouveau Parti socialiste (NPS)
+Union pour la République (UPR)
+Union saint-marinaise des modérés (USDM)
+Gauche unie (SU)
+
+// Saint-Vincent-et-les-Grenadines
+
+Nouveau parti démocratique (NDP)
+Unity Labor Party (ULP)
+
+// Sainte-Lucie
+
+Parti travailliste de Sainte-Lucie (SLP)
+Parti uni des travailleurs (UWP)
+
+// Salomon
+
+Parti de l'alliance démocratique (DAP)
+Kadere Party of Solomon Islands (KPSI)
+Parti de l'Alliance populaire (PAP)
+Parti démocratique uni (UDP)
 
 // Salvador
-
 
 Alliance républicaine nationaliste (Arena)
 Changement démocratique (CD)
@@ -1667,35 +1533,43 @@ Grande Alliance pour l'unité nationale (GANA)
 Parti de la coalition nationale (PCN)
 Parti démocrate-chrétien (PDC)
 
-// Sénégal
+// Samoa
 
+Parti pour la protection des droits de l'homme (HRPP)
+Tautua Samoa
+
+// São-Tomé-et-Príncipe
+
+Action démocratique indépendante (ADI)
+Mouvement pour la libération de São-Tomé-et-Príncipe -- Parti social-démocrate (MLSTP-PSD)
+Parti de la convergence démocratique - Groupe de réflexion (PCD-GR)
+
+// Sénégal
 
 Alliance pour la République (APR)
 Benno Bokk Yaakar (BBY)
-Benno Siggil Senegal  (BSS)
+Benno Siggil Senegal (BSS)
 Parti démocratique sénégalais (PDS)
 
 // Serbie
-
 
 Assez (DJB)
 Parti communiste serbe (KP)
 La Serbie gagne
 Pour une Serbie juste
+Parti progressiste serbe (SNS)
+Mouvement serbe du renouveau (SPO)
 Parti socialiste de Serbie (SPS)
 Parti radical serbe (SRS)
 Parti des Verts de Serbie (ZS)
 
 // Seychelles
 
-
 Lalyans Seselwa
 Parti populaire (Lepep)
-Seychelles National Party  (SNP)
-après vingt-sept ans de régime de parti unique. Vie politique bipolaire.
+Seychelles National Party (SNP)
 
 // Sierra Leone
-
 
 All People Congress (APC)
 Front uni révolutionnaire (RUF)
@@ -1703,15 +1577,12 @@ Parti populaire de Sierra Leone (SLPP)
 
 // Singapour
 
-
 Parti de la solidarité nationale (NSP)
 Parti d'action populaire (PAP)
-Parti démocratique de Singapour   (SDP)
+Parti démocratique de Singapour (SDP)
 Parti des travailleurs de Singapour (WP)
-au pouvoir depuis 1959.
 
 // Slovaquie
-
 
 Mouvement chrétien-démocrate (KDH)
 Parti populaire - Notre Slovaquie (LSNS)
@@ -1723,7 +1594,6 @@ Parti national slovaque (SNS)
 
 // Slovénie
 
-
 Parti démocratique des retraités de Slovénie (Desus)
 Nouvelle Slovénie (NSI)
 Parti social-démocrate (SD)
@@ -1733,7 +1603,6 @@ Združena Levica Gauche unie (ZL)
 
 // Somalie
 
-
 Alliance pour la re-libération de la Somalie (ARS)
 Parti de la paix et du développement (PDP)
 Al-Chabab
@@ -1742,25 +1611,22 @@ Union des tribunaux islamiques (UTI)
 
 // Soudan
 
-
 Parti démocratique unioniste (DUP)
 Parti du congrès national (NCP)
 Front révolutionnaire soudanais (FRS)
 Mouvement pour la justice et l'égalité (MJE)
 Mouvement pour la liberté et la justice (MLJ)
-branche Minnawi  (MLS-MM)
+Mouvement de libération du Soudan (MLS-MM)
 Mouvement populaire de libération du Soudan (MPLS)
 Mouvement de libération populaire du Soudan nord (MPLS/Nord)
 
 // Soudan du Sud
-
 
 Mouvement populaire de libération du Soudan (MPLS)
 Mouvement populaire de libération du Soudan pour le changement démocratique (MPLS-CD)
 Armée de résistance du Seigneur (LRA)
 
 // Sri Lanka
-
 
 Parti démocratique populaire de l'Eelam (EPDP)
 Front d'unité nationale pour une bonne gouvernance (EYJP)
@@ -1771,31 +1637,29 @@ Sri Lanka Freedom Party (SLFP)
 Congrès musulman du Sri Lanka (SLMC)
 Alliance nationale tamoule (TNA)
 Parti national uni (UNP)
-organisation paramilitaire sophistiquée disposant de ses propres services de renseignement
 
 // Suède
 
-
 Parti du centre (C)
-Union démocrate-chrétienne  (KD)
+Union démocrate-chrétienne (KD)
+Libéraux (L)
 Parti modéré (M)
-Parti de l'environnement -- Les Verts (MP)
+Parti de l'environnement - les Verts (MP)
 Parti social-démocrate suédois des travailleurs (SAP)
 Démocrates suédois (SD)
 Parti de gauche (V)
 
 // Suisse
 
-
 Les Verts
 Parti bourgeois démocratique suisse (PBD)
 Parti démocrate-chrétien suisse (PDC)
 Parti libéral-radical (PLR)
+Parti socialiste suisse (PSS)
 Parti Vert libéral (PVL)
 Union démocratique du centre (UDC)
 
 // Surina
-
 
 Parti pour l'unité nationale et la solidarité (KTPI)
 Parti démocratique national (NDP)
@@ -1804,17 +1668,14 @@ Parti hindoustani uni (VHP)
 
 // Swaziland
 
-
-quelques partis sont tolérés
 Mouvement populaire démocratique uni (Pudemo)
 Ngwane Natonal Liberatory Congress (NNLC)
 
 // Syrie
 
-
-Coalition des forces de la révolution et de l'opposition syrienne
-Conseil national des Kurdes de Syrie  (CNKS)
-coalition qui rassemble l'ensemble des partis légaux en Syrie (Front national progressiste)
+Coalition nationale syrienne (CNS)
+Conseil national des Kurdes de Syrie (CNKS)
+Front national progressiste
 Parti de la renaissance arabe (Parti Baas arabe socialiste)
 Parti communiste syrien
 Parti de l'union socialiste arabe
@@ -1823,26 +1684,27 @@ Parti de l'union démocratique (PYD)
 Mouvement de l'homme libre du Levant (Ahrar Al-Sham)
 Armée syrienne libre (ASL)
 Brigades Abdallah Hazzam (BAA)
-Armée de l'islam (Jaysh Al-Islam)
+Conquête d'Alep (Fatah Halab)
+Front Fatah Al-Cham
+Mouvement des nobles du parti de Dieu (Harakat Hezbollah Al-Nujaba)
+Armée de la conquête (Jaïch Al-Fatah)
+Armée de l'islam (Jaïch Al-Islam)
 Organisation de l'État islamique (OEI)
 Unités de protection du peuple (YPG)
 
 // Tadjikistan
 
-
 Parti agraire du Tadjikistan (HAT)
 Parti populaire démocratique du Tadjikistan (HDKT)
 Parti démocrate du Tadjikistan (HDT)
-Parti communiste du Tadjikistan  (HKT)
+Parti communiste du Tadjikistan (HKT)
 Parti de la réforme économique du Tadjikistan (PRET)
-Parti socialiste du Tadjikistan  (PST)
+Parti socialiste du Tadjikistan (PST)
 Rubis du Badakhchan (LB)
 Parti de la Renaissance islamique du Tadjikistan (PRIT)
-Parti social-démocrate du Tadjikistan  (PSD)
-le PRIT a été interdit par la Cour suprême en 2015
+Parti social-démocrate du Tadjikistan (PSD)
 
 // Taïwan
-
 
 Coalition pan-bleue
 Parti du « peuple d'abord » (PFP)
@@ -1855,59 +1717,72 @@ Parti de l'indépendance de Taïwan (TAIP)
 
 // Tanzanie
 
-
-Parti de la révolution  (CCM)
+Parti de la révolution (CCM)
 Civic United Front (CUF)
-le CCM est au pouvoir depuis l'indépendance
 
 // Tchad
-
 
 Coordination de la majorité présidentielle (CMP)
 Mouvement patriotique du salut (MPS)
 Rassemblement national pour la démocratie au Tchad (RNDT-le Réveil)
 Union nationale pour la démocratie et le renouveau (UNDR)
-2012 : premières élections locales de l'histoire du pays 
+
+// Thaïlande
+
+Parti démocrate
+Alliance du peuple pour la démocratie (PAD)
+Peua Thai
+Front national révolutionnaire (BRN)
+BRN-Koordinasi
+Gerakan Mujahidin Islam Patani (GMIP)
+Organisation unifiée de libération de Pattani (PULO)
+Patani Liberation Army (PLA)
+
+// Timor-Leste
+
+Comité national pour la reconstruction timoraise (CNRT)
+Front de reconstruction nationale du Timor-Leste (Frenti-Mudanca)
+Front révolutionnaire pour un Timor-Leste indépendant (Fretilin)
+Parti démocrate (PD)
+Aitarak
+Tim Alpha
 
 // Togo
-
 
 Alliance nationale pour le changement (ANC)
 Coalition arc-en-ciel
 Collectif sauvons le Togo (CST)
 Rassemblement du peuple togolais (RPT)
 Union pour la République (UNIR)
-rétablissement en 1991.
+
+// Tonga
+
+Parti populaire démocratique (PDP)
+Democratic Party of Friendly Islands (DPFI)
 
 // Trinité-et-Tobago
 
-
 Alliance nationale pour la reconstruction (NAR)
-Mouvement national populaire  (PNM)
+Mouvement national populaire (PNM)
 Congrès national unifié (UNC)
 
 // Tunisie
 
-
 Congrès pour la République (CPR)
 « renaissance » (Ennahda)
-Forum démocratique pour le travail et les libertés   (Ettakatol)
+Forum démocratique pour le travail et les libertés (Ettakatol)
 Front populaire
 Nidaa Tounès
 Parti de l'alliance démocratique (PAD)
 
 // Turkménistan
 
-
 Parti démocratique du Turkménistan (DPT)
-Parti agraire du Turkménistan  (PAT)
-Union des femmes du Turkménistan
+Parti agraire du Turkménistan (PAT)
 Parti communiste du Turkménistan (PCT)
-Parti des industriels et des entrepreneurs  (PIE)
-
+Parti des industriels et des entrepreneurs (PIE)
 
 // Turquie
-
 
 Parti de la justice et du développement (AKP)
 Parti de la grande unité (BBP)
@@ -1919,8 +1794,25 @@ Parti d'action nationaliste (MHP)
 Parti des travailleurs du Kurdistan (PKK)
 Force de défense du peuple (HPG)
 
-// Uruguay
+// Tuvalu
 
+Pas de partis politiques 
+
+// Ukraine
+
+Union panukrainienne « Patrie » (Batkivshchyna)
+Bloc d'opposition (BO)
+Bloc Petro Porochenko « Solidarité » (BPP)
+Parti communiste ukrainien (KPU)
+Front populaire (NF)
+Parti radical (PR)
+« Entraide » (Samopomich)
+« Liberté » (Svoboda)
+
+// Union soviétique
+
+
+// Uruguay
 
 Frente amplio (FA)
 Mouvement révolutionnaire oriental (MRO)
@@ -1929,13 +1821,20 @@ Parti communiste (PCU)
 Parti démocrate-chrétien (PDC)
 Parti national ou « Parti blanco » (PN)
 
-// Vatican
+// Vanuatu
 
+Confédération des Verts (GC)
+Land and Justice Party (GJP)
+Parti populaire du progrès (PPP)
+Reunification of Movement for Change (RMC)
+Union des partis modérés (UMP)
+Vanua'aku Pati Our Land Party (VP)
+
+// Vatican
 
 Pas de partis politiques
 
 // Venezuela
-
 
 Table de l'unité démocratique (MUD)
 Parti communiste vénézuélien (PCV)
@@ -1943,28 +1842,24 @@ Parti socialiste unifié du Venezuela (PSUV)
 
 // Vietna
 
-
 Parti communiste vietnamien (PCV)
 Alliance pour la démocratie (AD)
 Bloc 8406
 Parti démocrate du Vietnam (PDV)
 Parti de la réforme du Vietnam (Viet Tan)
-le PCV contrôle l'ensemble de la vie du pays
 
 // Yémen
 
-
-Congrès général du peuple  (CGP)
+Congrès général du peuple (CGP)
 Parti yéménite pour la réforme (Islah)
 Organisation nassérienne unioniste populaire
 Parti de la renaissance arabe (Parti Baas)
 Parti socialiste yéménite (PSY)
-Al-Qaida dans la péninsule arabique ou Ansar Al-Charia (AQPA)
-houthistes 
-branche yéménite de l'Organisation de l'État islamique (OEI)
+Al-Qaida dans la péninsule arabique (AQPA)
+houthistes
+Organisation de l'État islamique (OEI)
 
 // Zambie
-
 
 African National Congress (ANC)
 Mouvement pour la démocratie multipartite (MMD)
@@ -1974,8 +1869,6 @@ Parti uni pour le développement national (UPND)
 
 // Zimbabwe
 
-
 Movement for Democratic Change-Ncube (MDC-N)
 Movement for Democratic Change-Tsvangirai (MDC-T)
 Union nationale africaine du Zimbabwe - Front patriotique (ZANU-PF)
-Note : Politburo
