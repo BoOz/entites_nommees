@@ -1,4 +1,2 @@
 // Villes oubliées
 
-Los Angeles
-Gaza
