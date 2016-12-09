@@ -1,3 +1,6 @@
+Entités nommées dans Typo
+
+Personnalités - Institutions - Partis et formations politiques - Pays - Villes - Géographie - Publications - Nationalité / éthnies - /!\ Sociétés (A ajouter dans Divers en section 2) - Fonctions - Langues - Nature de l'État et Régime
 // Pays (nom officiel)
 Antigua-et-Barbuda
 Belize
@@ -183,14 +186,16 @@ sultanat de Brunei Darussalam
 territoire de Nouvelle-Calédonie et dépendances
 État d'Israël
 État de Libye
-État de Palestine / territoires palestiniens
+État de Palestine
+territoires palestiniens
 État des émirats arabes unis
 État du Koweït
 État du Qatar
 État indépendant de Papouasie-Nouvelle-Guinée
 État indépendant des Samoa
 État libre associé de Porto Rico
-État plurinational de Bolivie / République de Bolivie
+État plurinational de Bolivie
+République de Bolivie
 États fédérés de Micronésie
 États-Unis d'Amérique
 États-Unis du Mexique
@@ -388,6 +393,7 @@ Turkménistan
 Turquie
 Tuvalu
 Ukraine
+Union soviétique
 Uruguay
 Vanuatu
 Vatican
