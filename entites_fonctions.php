@@ -80,6 +80,7 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 	}
 
+	//var_dump("<pre>", $fragments);
 
 	// Gérer ensuite les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
@@ -107,7 +108,7 @@ function trouver_entites($texte,$id_article){
 		//var_dump($reg);
 		
 		// ensuite que l'acconyme s'il fait plus qu'une lettre...
-		preg_match_all("/\\\\\(.{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
+		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
 		
 		//var_dump($reg,$accros[0]);
 		
