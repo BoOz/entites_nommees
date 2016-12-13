@@ -468,7 +468,7 @@ Alliance libérale (LA)
 Parti du Groenland (Inuit Ataqatigiit)
 Parti populaire socialiste (SF)
 Parti social-démocrate (Socialdemokraterne)
-République (Tjóðveldi)
+//République (Tjóðveldi)
 Parti libéral danois (V)
 
 // Djibouti

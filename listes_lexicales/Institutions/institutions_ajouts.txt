@@ -22,3 +22,6 @@ Maison Blanche
 // Etats
 Wall Street
 Pentagone
+
+// syndicats
+Confédération générale du travail (CGT)
