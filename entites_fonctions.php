@@ -71,21 +71,71 @@ function trouver_entites($texte,$id_article){
 	//var_dump($orgas);
 	
 	foreach($orgas as $type => $reg){
-		// Isoler les entites connues (Institutions, Traités etc).
+		// On cherche la forme developpée + acrronyme : Confédération générale du travail (CGT)
 		$label = preg_replace("/\d$/", "", $type);
 		$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 	
-		// Isoler les entites connues (Institutions, Traités etc mais cette fois ci en forme réduite) qui n'auraient pas été déclarées avec les ().
+		// Ensuite l amême chose sans l'ccaonyme : Confédération générale du travail.
 		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+		
+		//var_dump($types_reduits);
 		
 		$recolte = recolter_fragments($label, $types_reduits, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
+		
+		//var_dump($reg);
+		
+		// ensuite que l'acconyme s'il fait plus qu'une lettre...
+		preg_match_all("/\\\\\(.{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
+		
+		//var_dump($reg,$accros[0]);
+		
+		$accros[0] = str_replace("\(", "\P{L}", $accros[0]);
+		$accros[0] = str_replace("\)", "\P{L}", $accros[0]);
+		
+		$accros = join("|", array_unique($accros[0]));
+		
+		$recolte = recolter_fragments($label, $accros, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+		
 	}
 	
-	//var_dump($fragments,"<hr><hr>");
+	// recaler les accro et les developpés
+	$institutions = array() ;
+	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
+
+	// En cas d'accronyme Parti communiste (PC), virer aussi la forme réduite			
+	foreach($fragments as $v){
+		if(preg_match("`$acronymes`u",$v,$m))
+			$institutions[$m[2]] = $m[1] ;
+	}
+
+	foreach($fragments as $v){
+		if(preg_match("/^(.*)\|(Institutions|Partis politiques)\|/u",$v,$m)){
+			// cas des Parti communiste (PC)
+			// recaler des institutions réduites PC
+			if($institutions[$m[1]]){
+				$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
+				$fragments_fusionnes[] = $f ;
+			}elseif(in_array($m[1], $institutions)){ // recaler des institutions réduites moyenne Parti communiste
+				$f = preg_replace("/^".$m[1]."/u", $institutions[$m[1]] . " (" . $m[1] . ")", $v) ;
+				$fragments_fusionnes[] = $f ;
+			}else
+				$fragments_fusionnes[] = $v ;
+		}else
+			$fragments_fusionnes[] = $v ;
+	}
+	if(is_array($fragments_fusionnes))
+		$fragments = array_unique($fragments_fusionnes) ;
+
+	$fragments_fusionnes = array();
+
+	
+	//var_dump($fragments,"<hr><hr>", $texte);
 
 	// itals spip
 	$texte = str_replace("{", "", $texte);
@@ -93,6 +143,7 @@ function trouver_entites($texte,$id_article){
 
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
 	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
+
 	$recolte = recolter_fragments("Institutions automatiques", $acronymes, $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
@@ -103,7 +154,7 @@ function trouver_entites($texte,$id_article){
 	foreach($types_entites as $type => $regex){
 
 		// on ne refait pas les institutions
-		if($type == "Institutions"){
+		if(preg_match("/^(institution.*|parti.*)/i", $type)){
 			continue;
 		}
 		if($regex == "")
@@ -164,7 +215,6 @@ function trouver_entites($texte,$id_article){
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
 	// En cas d'accronyme Parti communiste (PC), virer aussi la forme réduite		
-	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";  //'
 	
 	foreach($fragments as $v){
 		if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
@@ -229,6 +279,8 @@ function trouver_entites($texte,$id_article){
 
 	if(!is_array($fragments_fusionnes))
 		$fragments_fusionnes = array(0 => "PASDENTITE|PASDENTITE|$id_article|");
+
+	$fragments_fusionnes = array_unique($fragments_fusionnes);
 
 	// requalifier les Personnalités qui n'en sont pas par heuristique.
 
@@ -469,32 +521,33 @@ function enregistrer_entites($entites = array(), $id_article){
 	//var_dump("delete from entites_nommees where id_article=$id_article");
 	sql_query("delete from entites_nommees where id_article=$id_article");
 
-	foreach($entites as $entite){
-
-/*
-		if(preg_match("/^a\|/", $entite)){
-			var_dump("enregis",$entite);
-			exit ;
+	if(is_array($entites))
+		foreach($entites as $entite){
+	
+	/*
+			if(preg_match("/^a\|/", $entite)){
+				var_dump("enregis",$entite);
+				exit ;
+			}
+	*/
+			if(preg_match("/^\|/", $entite)){
+				var_dump("alert pas d'entite",$entite,$entites);
+				continue ;
+			}
+	
+			$e = explode("|", $entite);
+	
+			$id_article_entite = $e[2];
+			$extrait = _q($e[3]);
+			$entite = _q($e[0]);
+	
+			$type_entite = _q($e[1]);
+			$date = _q(sql_getfetsel("date_redac","spip_articles","id_article=$id_article"));
+			//var_dump($date);
+			$req = "INSERT INTO entites_nommees (entite, type_entite, id_article, extrait, date) VALUES ($entite,$type_entite,$id_article_entite,$extrait,$date)" ;
+			sql_query($req);
+			//var_dump("<pre>",$req,"</pre>");
 		}
-*/
-		if(preg_match("/^\|/", $entite)){
-			var_dump("alert pas d'entite",$entite,$entites);
-			continue ;
-		}
-
-		$e = explode("|", $entite);
-
-		$id_article_entite = $e[2];
-		$extrait = _q($e[3]);
-		$entite = _q($e[0]);
-
-		$type_entite = _q($e[1]);
-		$date = _q(sql_getfetsel("date_redac","spip_articles","id_article=$id_article"));
-		//var_dump($date);
-		$req = "INSERT INTO entites_nommees (entite, type_entite, id_article, extrait, date) VALUES ($entite,$type_entite,$id_article_entite,$extrait,$date)" ;
-		sql_query($req);
-		//var_dump("<pre>",$req,"</pre>");
-	}
 
 }
 
