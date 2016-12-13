@@ -63,7 +63,25 @@ function trouver_entites($texte,$id_article){
 	// on commence par celles qui font plusieurs mots.
 	$types_entites =  generer_types_entites("multi");	
 
-	// Gérer d'abord les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
+
+	/* regex automatisées depuis les fichiers de listes */
+	// on commence par tout sauf les organisations à cause de la RDC
+	foreach($types_entites as $type => $regex){
+
+		// on ne refait pas les institutions
+		if(preg_match("/^(institution.*|parti.*)/i", $type)){
+			continue;
+		}
+		if($regex == "")
+			continue;
+		
+		$recolte = recolter_fragments($type, $regex, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+	}
+
+
+	// Gérer ensuite les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
 		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
 			$orgas[$r[1]] = $v ;
@@ -104,11 +122,11 @@ function trouver_entites($texte,$id_article){
 		
 	}
 	
-	// recaler les accro et les developpés
+	/* recaler les accro et les developpés */
 	$institutions = array() ;
 	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 
-	// En cas d'accronyme Parti communiste (PC), virer aussi la forme réduite			
+	// Repérer les organisations
 	foreach($fragments as $v){
 		if(preg_match("`$acronymes`u",$v,$m))
 			$institutions[$m[2]] = $m[1] ;
@@ -141,29 +159,17 @@ function trouver_entites($texte,$id_article){
 	$texte = str_replace("{", "", $texte);
 	$texte = str_replace("}", "", $texte);
 
-	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
-
-	$recolte = recolter_fragments("Institutions automatiques", $acronymes, $texte, $fragments, $id_article, $texte_original);
-	$fragments = $recolte['fragments'];
-	$texte = $recolte['texte'];
+	// itals spip
+	$texte_original = str_replace("{", "", $texte);
+	$texte_original = str_replace("}", "", $texte);
 	
 	//var_dump($fragments,"<hr><hr>");
 	
-	/* regex automatisées depuis les fichiers de listes */
-	foreach($types_entites as $type => $regex){
+	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
+	$recolte = recolter_fragments("Institutions automatiques", $acronymes, $texte, $fragments, $id_article, $texte_original);
+	$fragments = $recolte['fragments'];
+	$texte = $recolte['texte'];
 
-		// on ne refait pas les institutions
-		if(preg_match("/^(institution.*|parti.*)/i", $type)){
-			continue;
-		}
-		if($regex == "")
-			continue;
-		
-		$recolte = recolter_fragments($type, $regex, $texte, $fragments, $id_article, $texte_original);
-		$fragments = $recolte['fragments'];
-		$texte = $recolte['texte'];
-	}
 
 	// on enlève des FONCTIONS de QUELQUEPART : premier ministre du Luxembourg etc
 	$recolte = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRE_CAPITALE . LETTRES ."+)", $texte, $fragments, $id_article, $texte_original);
@@ -179,10 +185,19 @@ function trouver_entites($texte,$id_article){
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
-	// Isoler les présidents résiduels
+	//var_dump($fragments,"lol");
+	
+	//var_dump($texte);
+
+/*
+	// Isoler les présidents résiduels // non car ca rechoppe les memes et ca va aller de toute facons dans les indeterminés
 	$recolte  = recolter_fragments("Personnalités", "(?:Dr|présidente?)\s(" . LETTRE_CAPITALE . LETTRES ."+)" , $texte, $fragments, $id_article, $texte_original) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
+	
+	var_dump($fragments);
+*/	
+	
 	
 	// trouver des entites constituées d'un seul mot
 
@@ -205,7 +220,7 @@ function trouver_entites($texte,$id_article){
 
 	// attention au entités d'un seul mot : les patronymes simple genre Obama vont faire reprendre des extraits deja connus dans le texte intégral.
 	// De même Parti va matcher Plusieurs Partis dans le texte, aussi les formes réduites OTAN vont matcher les formes développées.
-	// On les cherche donc dans le texte débités, puis on retourve dans le texte original les extrait non débités.
+	// On les cherche donc dans le texte débités, puis on retrouve dans le texte original les extraits non débités.
 
 	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte) ;
 	$fragments = $recolte['fragments'];
@@ -233,6 +248,12 @@ function trouver_entites($texte,$id_article){
 				if(!$patronymes[$patronyme])
 					$patronymes[$patronyme] = $v ;
 			}
+			if(sizeof($a) > 1){
+				// on suppose que le nom de famille est au milieu : Idriss Déby Itno => M. Déby
+				$patronyme = array_pop($a);
+				if(!$patronymes[$patronyme])
+					$patronymes[$patronyme] = $v ;
+			}
 		}
 
 	//var_dump("<pre>",$patronymes);
@@ -246,7 +267,7 @@ function trouver_entites($texte,$id_article){
 			$noms = explode(" ",$m[1]) ;
 			$nom = array_pop($noms);
 
-			// cas des Parti communiste (PC)
+			// cas des institutions automatiques Parti communiste (PC) et personnalités
 			// recaler des institutions réduites PC
 			if($institutions[$m[1]]){
 				$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
@@ -260,13 +281,6 @@ function trouver_entites($texte,$id_article){
 				$f = preg_replace("/^".$m[1]."/u",$patronymes[$nom],$v) ;
 				$f = preg_replace("/\|".$m[2]."\|/u","|Personnalités|",$f) ;
 				$fragments_fusionnes[] = $f ;
-			}elseif(preg_match("`\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
-				if(preg_match("`" . str_replace("`", "" , str_replace("xxx", ".*" , preg_quote($extraitsc[1]))) . "`u" , $texte_original , $extrait )){
-					$f = str_replace($extraitsc[1], $extrait[0], $f) ;
-					$fragments_fusionnes[] = $f ;
-				}else{
-					$fragments_fusionnes[] = $v ;
-				}
 			}
 			else
 				$fragments_fusionnes[] = $v ;
@@ -275,12 +289,32 @@ function trouver_entites($texte,$id_article){
 				$fragments_fusionnes[] = $v ;
 	}
 	
-	//var_dump("<pre>",$fragments_fusionnes);
+	$fragments = $fragments_fusionnes ;
+	$fragments_fusionnes = array();
+	
+	//var_dump("<pre>", $fragments);
+	
+	// remplacer les extraits caviardés par des vrais.
+	foreach($fragments as $v){
+		if(preg_match("`\d+\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
+			if(preg_match("`" . str_replace("`", "" , str_replace("xxx", ".*" , preg_quote($extraitsc[1]))) . "`u" , $texte_original , $extrait )){
+				$f = str_replace($extraitsc[1], $extrait[0], $f) ;
+				$fragments_fusionnes[] = $f ;
+			}else{
+				$fragments_fusionnes[] = $v ;
+			}
+		}else{
+			$fragments_fusionnes[] = $v ;
+		}
+	}
 
 	if(!is_array($fragments_fusionnes))
 		$fragments_fusionnes = array(0 => "PASDENTITE|PASDENTITE|$id_article|");
 
 	$fragments_fusionnes = array_unique($fragments_fusionnes);
+	sort($fragments_fusionnes);
+	//var_dump("<pre>",$fragments_fusionnes);
+
 
 	// requalifier les Personnalités qui n'en sont pas par heuristique.
 
@@ -330,13 +364,15 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 	else	
 		return array("texte" => $texte, "fragments" => $fragments);
 		
-	// On enregistre les extraits. Tout en isolant des formulations réduites.
+	// On enregistre les extraits. 
 	$entites_uniques = array_unique($entites);
 
-	//var_dump($entites);
+	//var_dump("<pre>");
 
 	if(is_array($entites_uniques))
 		foreach($entites_uniques as $entite){
+
+			//var_dump($entite);
 
 			if($entite == "")
 				continue ;
@@ -412,7 +448,41 @@ function trouver_noms($texte){
 
 	array_walk($noms,"nettoyer_noms");
 	
+	// recaler les noms ici meme si on le refait plus tard pour ne pas prendre deby maintenant
+	$noms = array_unique($noms);
+
+	// var_dump("<pre>",$personnalites,"</pre><hr>");
+	if(is_array($noms)){
+		foreach($noms as $v){
+			$a = explode(" ",str_replace("'", " ", $v)) ;
+			if(sizeof($a) > 1){
+				// on suppose que le nom de famille est a la fin (mais ce n'est pas toujours le cas cf les personnalités asiatiques)
+				$patronyme = array_pop($a);
+				if(!$patronymes[$patronyme])
+					$patronymes[$patronyme] = $v ;
+			}
+			if(sizeof($a) > 1){
+				// on suppose que le nom de famille est au milieu : Idriss Déby Itno => M. Déby
+				$patronyme = array_pop($a);
+				if(!$patronymes[$patronyme])
+					$patronymes[$patronyme] = $v ;
+			}
+		}
+		//var_dump("<pre>",$noms, $patronymes);
+	
+		// voir si on a pas un nom court qui existe en long
+		foreach($noms as $v)
+			if(!$patronymes[$v])
+				$noms_fusionnes[] = $v ;
+		
+		$noms = $noms_fusionnes ;
+		
+	}
+
+	
 	//var_dump("<pre>",$noms);
+	
+	//var_dump($noms);
 
 	return $noms ;
 }
@@ -602,7 +672,6 @@ function generer_types_entites($nb_mots="multi"){
 				//exit ;
 
 			}
-			
 			
 			// Mono ou multi mots ?
 			if($nb_mots == "mono")
