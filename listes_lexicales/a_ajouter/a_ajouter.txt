@@ -14,40 +14,11 @@ Frontex
 Terra Nova
 
 
-// Sièges de gouvernements
-Kremlin
-Maison Blanche
-
-// Etats
-Wall Street
-Pentagone
-
 // entreprises
 Vinci
 Google
 Facebook
 France Télécom
-
-
-// partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
-Parti socialiste
-PS
-
-Parti communiste français
-PCF
-
-Parti communiste
-PC
-
-Frères musulmans
-
-Parti des travailleurs du Kurdistan (PKK)
-PKK
-
-Forces armées révolutionnaires de Colombie (FARC)
-FARC
-
-Organisation de libération de la Palestine (OLP)
 
 // autres
 Opus Dei
