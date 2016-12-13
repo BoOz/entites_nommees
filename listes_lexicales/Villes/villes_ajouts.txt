@@ -1,2 +1,13 @@
 // Villes oubliées
 
+Hongkong
+Québec
+Saïgon
+Abidjan
+La Haye
+
+// alias
+Caire
+
+// faute mais on en trouve
+New-york

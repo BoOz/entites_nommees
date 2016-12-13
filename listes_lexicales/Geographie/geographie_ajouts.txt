@@ -1,9 +1,27 @@
 // Géographie non gérée dans typo diplo
 
+// eau
+océan Pacifique
+océan Atlantique
+Méditerranée
+
+Orient
+Occident
+
 Afrique australe
 
 Amérique centrale
 Amérique du nord
 Amérique latine
 Amérique du Sud
-Amérique
+
+
+Maghreb
+Sahara
+Balkans
+
+// regions
+Golfe
+Cisjordanie
+Gaza
+

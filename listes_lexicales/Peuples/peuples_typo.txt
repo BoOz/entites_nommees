@@ -1138,9 +1138,7 @@ Yoroubas // Norvège
 
 // Oman
 
-arabe
-baloutche
-sud-asiatique et africaine // Ouganda
+// Ouganda
 
 Langis
 Bantous

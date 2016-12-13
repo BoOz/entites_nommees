@@ -13,8 +13,14 @@ Frontex
 // think tank
 Terra Nova
 
+
+// Sièges de gouvernements
+Kremlin
+Maison Blanche
+
 // Etats
 Wall Street
+Pentagone
 
 // entreprises
 Vinci
@@ -45,12 +51,6 @@ Organisation de libération de la Palestine (OLP)
 
 // autres
 Opus Dei
-
-
-// Sièges de gouvernements
-Kremlin
-Maison Blanche
-
 
 // culture
 Opéra du Caire

@@ -1,15 +1,29 @@
 // Pays
-
 // non présents dans typo diplo
+
+// alias
 Amérique
 Grande-Bretagne
-Yougoslavie
 République islamique
-Sahara occidental
-Empire ottoman
-URSS
+Royaume-Uni
+Angleterre
+// avec un accent = faute mais on en trouve.
+Nigéria
 
 // debrayent sur les institutions
 République fédérale d'Allemagne (RFA)
 République démocratique du Congo (RDC)
 République fédérative yougoslave (RFY)
+
+// pays disparus
+Empire ottoman
+URSS
+Yougoslavie
+Indochine
+Zaïre
+Tchécoslovaquie
+
+// pays en galère
+Sahara occidental
+Pays basque
+
