@@ -60,21 +60,31 @@ function trouver_entites($texte,$id_article){
 	//var_dump($fragments,"<hr><hr>");
 
 	// types d'entites définis dans les listes txt.
+	// on commence par celles qui font plusieurs mots.
 	$types_entites =  generer_types_entites("multi");	
 
-	// Isoler les entites connues (Institutions, Traités etc).
-	$recolte = recolter_fragments("Institutions", $types_entites['Institutions'], $texte, $fragments, $id_article, $texte_original);
-	$fragments = $recolte['fragments'];
-	$texte = $recolte['texte'];
-
-
-	// Isoler les entites connues (Institutions, Traités etc mais cette fois ci en forme réduite) qui n'auraient pas été déclarées avec les ().
-	$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$types_entites['Institutions']);
+	// Gérer d'abord les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
+	foreach($types_entites as $k => $v)
+		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
+			$orgas[$r[1]] = $v ;
 	
-	$recolte = recolter_fragments("Institutions", $types_reduits, $texte, $fragments, $id_article, $texte_original);
-	$fragments = $recolte['fragments'];
-	$texte = $recolte['texte'];
-
+	//var_dump($orgas);
+	
+	foreach($orgas as $type => $reg){
+		// Isoler les entites connues (Institutions, Traités etc).
+		$label = preg_replace("/\d$/", "", $type);
+		$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+	
+		// Isoler les entites connues (Institutions, Traités etc mais cette fois ci en forme réduite) qui n'auraient pas été déclarées avec les ().
+		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+		
+		$recolte = recolter_fragments($label, $types_reduits, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+	}
+	
 	//var_dump($fragments,"<hr><hr>");
 
 	// itals spip
