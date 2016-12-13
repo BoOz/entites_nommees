@@ -3,18 +3,6 @@
 // debraye sur les personnalités
 Celtics de Glasgow
 
-// Minorités
-Soviétiques
-Britanniques
-Européens
-Noirs
-Juifs
-Kurdes
-Africains
-Hutus
-Tutsis
-Arabes
-Blancs
 
 // ONG
 Amnesty International
@@ -33,8 +21,6 @@ Vinci
 Google
 Facebook
 France Télécom
-
-
 
 
 // partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
@@ -58,7 +44,6 @@ FARC
 Organisation de libération de la Palestine (OLP)
 
 // autres
-Mossad
 Opus Dei
 
 
@@ -126,9 +111,6 @@ Panama papers
 
 // mouvements sociaux
 Nuit debout
-
-// Territoires
-Occident
 
 // économie
 PIB
