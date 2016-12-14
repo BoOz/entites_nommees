@@ -335,7 +335,8 @@ function trouver_entites($texte,$id_article){
 		//var_dump($v,"hum");
 
 		if(preg_match("`\d+\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
-			if(preg_match("`" . str_replace("`", "" , str_replace("xxx", ".*" , preg_quote($extraitsc[1]))) . "`u" , $texte_original , $extrait )){
+			$r = str_replace("`", "" , str_replace("xxx", ".*?" , preg_quote($extraitsc[1]))) ;
+			if(preg_match("`" . $r . "`u" , $texte_original , $extrait )){ // peut donner un résultat long d'un paragraphe entier si l'entite xxx est au début.
 				$f = str_replace($extraitsc[1], $extrait[0], $v) ;
 				$fragments_fusionnes[] = $f ;
 			}else{
@@ -343,7 +344,6 @@ function trouver_entites($texte,$id_article){
 			}
 
 		//var_dump("deb", $v, $f,"zou");
-
 
 		}else{
 			$fragments_fusionnes[] = $v ;
