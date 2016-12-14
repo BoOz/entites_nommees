@@ -511,7 +511,7 @@ function trouver_noms($texte){
 // renvoyer en fait patronyme => forme longue
 function nettoyer_noms(&$item1, $key){
 	// (^M\.|^Mme|^Mgr|^Dr|^Me) \s+
-	$item1 = preg_replace("/(^M\.|^Mme|^Mgr|^Dr|^Me)\s+/Uu","",$item1); // pas les civilités
+	$item1 = preg_replace("/(^M\.|^Mmes?|^Mgr|^Dr|^Me)\s+/Uu","",$item1); // pas les civilités
 	$item1 = preg_replace("/-$/u"," ",$item1);
 	
 	// http://archives.mondediplo.com/ecrire/?exec=articles&id_article=8337
