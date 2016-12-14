@@ -1,5 +1,7 @@
 <?php
 
+// passer un unique sur les listes texte (PKK) ?
+
 include('mots_courants.php');
 
 // remonter la limite de taille d'une regexp
@@ -79,7 +81,7 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 	}
 
-	//var_dump("<pre>", $fragments);
+	//var_dump($fragments, "lol");
 
 	// Gérer ensuite les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
@@ -91,10 +93,13 @@ function trouver_entites($texte,$id_article){
 	foreach($orgas as $type => $reg){
 		// On cherche la forme developpée + acrronyme : Confédération générale du travail (CGT)
 		$label = preg_replace("/\d$/", "", $type);
+		
+		//var_dump($reg);
+		
 		$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
-	
+		
 		/*
 		// Ensuite l amême chose sans l'ccaonyme : Confédération générale du travail.
 		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
@@ -125,6 +130,9 @@ function trouver_entites($texte,$id_article){
 
 
 	}
+	
+	// a debug
+	//var_dump($fragments);
 	
 	/* recaler les accro et les developpés */
 	$institutions = array() ;
@@ -157,7 +165,7 @@ function trouver_entites($texte,$id_article){
 	$fragments_fusionnes = array();
 
 	
-	//var_dump($fragments,"<hr><hr>", $texte);
+	//var_dump("<pre>", $fragments,"<hr><hr>", $texte);
 
 	// itals spip
 	$texte = str_replace("{", "", $texte);
@@ -224,8 +232,11 @@ function trouver_entites($texte,$id_article){
 
 	// on cherche des termes qui ont des majuscules dans le texte restant.
 	$entites_residuelles = trouver_entites_residuelles($texte);
+	
+	//var_dump($texte);
+	//var_dump($entites_residuelles);
 
-	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte_original) ;
+	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
@@ -420,6 +431,8 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 		preg_match("`(?:\P{L})(?:.{0,60})" . str_replace("`", "", preg_quote($entite)) . "(?:.{0,60})(?:\P{L})`u", $texte, $m);
 		$extrait = preg_replace(",\R,","",trim($m[0]));
 
+		//var_dump($entite);
+
 		// Virer l'entité dans cet extrait, puis dans le texte débité.
 		if(!$m[0])
 			$texte = str_replace($entite, "xxx" , $texte);
@@ -433,7 +446,6 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 				
 		// Enregistrer l'entite
 		$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
-
 	}
 
 	// var_dump($entites,$fragments,"lol");
@@ -470,7 +482,8 @@ function trouver_noms($texte){
 	array_walk($noms,"nettoyer_noms");
 	
 	// recaler les noms ici meme si on le refait plus tard pour ne pas prendre deby maintenant
-	$noms = array_unique($noms);
+
+	//var_dump($noms);
 
 	// var_dump("<pre>",$personnalites,"</pre><hr>");
 	if(is_array($noms)){
@@ -589,8 +602,12 @@ function preparer_texte($texte){
 
 function trouver_entites_residuelles($texte){
 
+	//var_dump($texte);
+
 	// mots avec une majuscule.
 	preg_match_all("`(?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+)\s+`u", $texte, $m);
+
+	//var_dump($m);
 
 	$entites_residuelles = $m[0];
 
