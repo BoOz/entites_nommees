@@ -91,3 +91,30 @@ Consensus de Washington
 // traités
 grand marché transatlantique (GMT)
 Bretton Woods
+
+// médias
+Arte
+BFM TV
+Cable News Network (CNN)
+Canal Plus
+France 24
+France Bleu
+France Culture
+France Info
+France Inter
+i-Télé
+La Chaîne info (LCI)
+La Chaîne parlementaire (LCP)
+Le Figaro
+Le Nouvel Observateur
+Le Point
+Marianne
+Mediapart
+Ouest-France
+Paris Match 
+Radio France
+Radio France International (RFI)
+Radio-Télévision suisse
+Radio-Télévision suisse romande
+TF1
+TV5 Monde
