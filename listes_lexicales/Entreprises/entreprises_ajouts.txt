@@ -7,6 +7,7 @@ Total
 Chevron
 Électricité de France (EDF)
 Loy Yang Power
+Tokyo Electric Power Company
 
 // transport et aviation
 Air France
@@ -37,6 +38,7 @@ GlaxoSmithKline
 Charles River Laboratories
 
 // technologie
+Facebook
 Google
 Mifare Classic
 International Data Corporation (IDC)
@@ -51,4 +53,10 @@ BHP Billiton
 Rio Tinto
 Wesfarmers
 China Ocean Shipping Company
-Tokyo Electric Power Company
+Uber
+Vinci
+France Télécom
+ArcelorMittal
+Areva
+Texaco
+Amazon 
