@@ -1,0 +1,54 @@
+// énergie
+BP
+Royal Dutch Shell
+GDF Suez
+ExxonMobil
+Total
+Chevron
+Électricité de France (EDF)
+Loy Yang Power
+
+// transport et aviation
+Air France
+Air France-KLM
+Boeing
+Société nationale des chemins de fer français (SNCF)
+European Aeronotic Defence and Space (EADS)
+Peugeot société anonyme (PSA)
+
+// banque et finance
+Citigroup
+Standard & Poor’s
+BNP Paribas
+Westpac
+
+// fonds d'investissement
+Qatar Investment Authority (QIA)
+Kuwait Investment Authority (KIA)
+Merrill Lynch
+Abu Dhabi Investment Authority (ADIA)
+China Investment Corporation (CIC)
+Government of Singapore Investment Corporation (GIC)
+Temasek Holdings (Singapour)
+Banque asiatique d'investissement dans les infrastructures (BAII)
+
+// pharmaceutique
+GlaxoSmithKline
+Charles River Laboratories
+
+// technologie
+Google
+Mifare Classic
+International Data Corporation (IDC)
+
+// autre
+Fnac
+Publicis
+Kentucky Fried Chicken (KFC)
+Compagnie européenne d'intelligence stratégique (CEIS)
+Starbucks Corporation
+BHP Billiton
+Rio Tinto
+Wesfarmers
+China Ocean Shipping Company
+Tokyo Electric Power Company
