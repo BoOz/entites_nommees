@@ -147,7 +147,7 @@
 	
 		[(#REM) Débug : Entites d'un article en direct sans enregistrement ]
 	
-		#SET{texte,#CHAPO*|concat{#TEXTE*}|preparer_texte}
+		#SET{texte,#TITRE*|concat{" // "}|concat{#CHAPO*}|concat{" // "}|concat{#TEXTE*}|preparer_texte}
 		#SET{entites,#ARRAY}
 		#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
 	

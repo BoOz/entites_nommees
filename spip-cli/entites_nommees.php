@@ -150,7 +150,7 @@ class entites_nommees extends Command {
     				
     				// Trouver et enregistrer les entites nommées
     				include_spip("entites_fonctions");
-    				$texte = preparer_texte($art['titre'] . "\n" . $art['chapo'] . "\n" . $art['texte'] . "\n");
+    				$texte = preparer_texte($art['titre'] . " // \n" . $art['chapo'] . " // \n" . $art['texte'] . "\n");
 					$fragments = trouver_entites($texte, $art['id_article']) ;
 					enregistrer_entites($fragments, $art['id_article']);
 
