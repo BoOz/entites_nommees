@@ -1,4 +1,9 @@
+Entités nommées dans Typo
+
+Personnalités - Institutions - Partis et formations politiques - Pays - Villes - Géographie - Publications - Nationalité / éthnies - /!\ Sociétés (A ajouter dans Divers en section 2) - Fonctions - Langues - Nature de l'État et Régime
+// publications
 // Lieux de publication
+
 AAEL
 A bâbord !
 ABC
@@ -16,6 +21,7 @@ Aedelsa
 Adams Media Corp
 Adels
 Aden
+Aden. Paul Nizan et les années trente
 Adva Center
 Africa Mining Intelligence
 Africultures
@@ -37,10 +43,11 @@ Al-Chark Al-Awsat
 Al Dante
 Alfred A. Knopf
 Al-Hayat
-Al-Jazira (télévision)
+Al-Jazira
 Allary Editions
 Allia
 Alliage
+Alma Editeur
 Al-Misri Al-Yawm
 Al-Medina
 Allen Lane Penguin Group
@@ -56,7 +63,7 @@ The American Conservative
 American Economic Review
 American Journal of Health Promotion
 American Journal of Human Genetics
-American Journal of Polical Science,_ Malden (Massachusetts)
+American Journal of Polical Science
 American Journal of Preventive Medecine
 American Journal of Sociology
 Amnis
@@ -91,8 +98,8 @@ Atelier des Cahiers
 ATG
 Athéna
 Atlantica
-The Atlantic,_ Boston
-The Atlantic Monthly,_ Washington
+The Atlantic
+The Atlantic Monthly
 Atlas
 Atrabile
 Attila
@@ -101,12 +108,16 @@ Au diable Vauvert
 Aufbau
 Autrement
 Au vent des îles
+Aux forges de Vulcain
 Aux lieux d'être
 Azer Tag
+
+
 Babel
 Bachari
 Balkanologie
 Ballantine Books
+Bangkok Post
 The Banker
 Barnes & Co
 Bartillat
@@ -117,6 +128,7 @@ Baywood
 BBC Mundo
 Beacon Press
 Le Bec en l'air
+Beijing News
 Belin
 Les Belles Lettres
 Bénévent
@@ -126,7 +138,7 @@ Berghahn
 Biteback Publishing
 Bleu autour
 Bleu de Chine
-Bloomberg Businessweek_ (et non _Business Week_)
+Bloomberg Businessweek
 Bloomsbury Publishing
 La Boîte à bulles
 Boitempo Editorial
@@ -140,7 +152,7 @@ Brecha
 La Brèche
 Brepols
 Brill
-Brookings Institution Press, Washington
+Brookings Institution Press
 Le Bruit du temps
 Bruno Leprince
 Bruylant
@@ -150,7 +162,9 @@ Bulletin of the World Health Organization
 Burt Franklin
 Business Day
 Business Insider
-Business Week_ (racheté par Bloomberg
+Business Week
+
+
 Cahier d'études stratégiques
 Cahiers de Chaillot
 Cahiers d'études sur la Méditerranée orientale et le monde turco-iranien
@@ -197,7 +211,7 @@ The Chosun Ilbo
 The Christian Science Monitor
 La Chronique internationale de l'IRES
 La Chronique des Amériques
-The Chronicle of Higher Education,_ Washington
+The Chronicle of Higher Education
 Cidhica
 Clarendon Press
 Clarín
@@ -217,6 +231,7 @@ Connexions
 Constable and Robinson
 La Contre Allée
 Le Coquelicot
+Cornélius
 Cornell University Press
 Corriere della Serra
 Corsaires Editions
@@ -224,7 +239,7 @@ Couleur livres
 Counterpoint
 CounterPunch
 Le Courrier
-The Courier-Mail_ (un seul "r")
+The Courier-Mail
 The Courrier ACP-EU
 Courrier de la planète
 Courrier international
@@ -237,6 +252,8 @@ Critique internationale
 Crown Publishers
 Cultures et conflits
 Current Biology
+
+
 Dagens Nyheter
 Dagsavisen
 Daily Monitor
@@ -275,7 +292,7 @@ Desmaret
 De Standaard
 Le Devoir
 Dialogues
-The Dickinson Press,_ (Dickinson
+The Dickinson Press
 Die Linkspartei
 Dieter Winkler
 Die Vrye Afrikaan
@@ -293,11 +310,13 @@ Le Droit ouvrier
 Droz
 Duke University Press
 Dykinson
+
+
 Earthscan Publications Ltd
 The East African
 Eburnie
 L'Ecarlate
-L'Echappée, Montreuil (Paris
+L'Echappée
 L'Echo
 Les Echos
 L'Ecole émancipée
@@ -338,6 +357,7 @@ Editions de l'Olivier
 Editions de l'Opportun
 Editions de Minuit
 Editions d'en bas
+
 Editions des Equateurs
 Editions des Femmes
 Editions des Nations unies
@@ -377,7 +397,7 @@ Editorial de Ciencias Sociales
 Editorial José Martí
 Editorial Universitaria
 EDP Sciences
-Efimerida ton Syntakton (Le Journal des rédacteurs)
+Efimerida ton Syntakton
 Einaudi
 Ellipses
 El Espectador
@@ -400,7 +420,7 @@ En toutes lettres
 Entremonde
 Erès
 Erick Bonnier
-Espace, populations, sociétés
+Espace
 Espacio Laical
 Espoir
 L'Espresso
@@ -415,16 +435,17 @@ Etincelles
 Etudes
 Les Etudes du CERI
 Eurabe-CADH
-Eurasia Daily Monitor,_ Washington
+Eurasia Daily Monitor
 Eurekah-Landes Bioscience
 Eurotopia
 Evenimentul Zilei
 Everat
-The Examiner,_ Washington
+The Examiner
 L'Expansion
 Express India
 Extra !
-The Express Tribune_
+The Express Tribune
+
 La Fabrique
 Die Fackel
 Fakir
@@ -434,7 +455,7 @@ Il Fatto Quotidiano
 Le Félin
 Le Figaro
 Le Figaro Economie
-Finance & Development,_ Washington
+Finance & Development
 Financial Times
 Financial Times Deutschland
 Financial Times Magazine
@@ -442,32 +463,36 @@ Finitude
 First Edition
 Fischer Verlag
 Focus Asie du Sud-Est
+Folha de S. Paolo
 Folio
 Fondation Gabriel Péri
 Fondo Editorial del Congresso del Perú
 Forbes
 Foreign Affairs
-Foreign Policy,_ Washington
+Foreign Policy
 Fortune
 Franco Angeli
 François Bourin éditeur
 François-Xavier de Guibert
-Frankfurter Allgemeine Zeitung (FAZ)
+Frankfurter Allgemeine Zeitung
 Fraternité Matin
 The Free Press
 Frontline
 Futuribles
 Futuropolis
+
+
 Gaeso
 Galaade
 Galilée
 La Galipote
 Gallmeister
 Garnet Publishing
+Gazzetta di Parma
 La Gazette du Maroc
 Le Genre humain
 Géopolitique africaine
-George Washington University Press, Washington
+George Washington University Press
 Geuthner
 Glénat
 Global Chances
@@ -482,6 +507,8 @@ The Guardian
 Guérin
 La Guillotine
 Gulf News
+
+
 Haaretz
 Handelszeitung
 Harper & Row
@@ -509,9 +536,13 @@ Hoëbeke
 L'Homme
 Homnisphères
 Houghton Mifflin
+The Huffington Post
 Hugo et Compagnie
 L'Humanité
+Hürriyet
 Hurst & Company
+
+
 I Avgi
 Ibis Press
 I. B. Tauris
@@ -532,24 +563,26 @@ Indian Research Press
 Indiana University Press
 Infolio Editions
 Infolio
-InfoSud (agence de presse)
+InfoSud
 Infoworld
 Les Inrockuptibles
 L'Insomniaque
 Institut d'études slaves
 Institut de recherche sur le Maghreb contemporain
 Instituto Cubano del Libro
-Instituto de Estudios Peruanos (IEP)
+Instituto de Estudios Peruanos
 L'Interdisciplinaire
 Interlink Pub Group
 International Crisis Group
-International Herald Tribune,_ Neuilly-sur-Seine (Serge Halimi, et non Paris)
+International Herald Tribune
 International Journal of Climatology
 International Review of the Red Cross
 ¿Interrogations?
 Ivan R. Dee Inc.
 Ivrea
 Izvestia
+
+
 Jaca Book
 Jacana
 Jacob-Duvernet
@@ -571,6 +604,8 @@ Le Journal hebdomadaire
 Journal officiel de l'Union européenne
 Journal of Ethnic and Migration Studies
 Journal of the Medical Association of Thailand
+
+
 Karthala
 Keter-Books
 Khiasma Sud
@@ -586,6 +621,8 @@ Koha Ditore
 Kommersant Vlast
 Konkret
 The Korea Times
+
+
 Labor
 Labor et Fides
 Laika
@@ -605,7 +642,7 @@ La Lettre de l'océan Indien
 Liaisons directes
 Liana Levi
 Lianhe Zaobao
-Liber - Raisons d'agir, Paris (pour les premiers ouvrages jusqu'en 1998), puis Raisons d'agir (seulement)
+Liber - Raisons d'agir
 Liberalnaïa Missiia
 Libertalia
 La Liberté
@@ -619,6 +656,8 @@ Lignes et Manifestes
 Luc Pire
 Lux
 Lynne Rienner Publishers
+
+
 Maariv
 Machsom Watch
 Mail and Guardian
@@ -654,6 +693,7 @@ Methuen
 MétisPresses
 Metropolis
 Metropolitan Books
+Miami Herald
 Michalon
 Michel Houdiard
 Michel Lafon
@@ -686,17 +726,19 @@ Le Mot et le Reste
 Mother Jones
 Mouvements
 Moyen-Orient
-Multinational Monitor,_ Washington
+Multinational Monitor
 Le Muscadier
+
+
 La Nacíon
-La Nación_ (quotidien
+La Nación
 El Nacional
 Nada
-Nanfang Zhoumo_ (« Week-end du Sud »)
+Nanfang Zhoumo
 The Nation
 The Nation
 The National Catholic Reporter
-The National Interest,_ Washington
+The National Interest
 National Post
 National Science Foundation
 Nation Books
@@ -709,18 +751,20 @@ Neue Rheinische Zeitung
 Nevicata
 Newsweek
 New Left Review
-The National Interest,_ Washington
+The National Interest
 The New Press
-The New Republic,_ Washington
+The New Republic
 New Society Publishers
 The New Statesman
 New Straits Times
 The New Times
+The New York Times
+The New Yorker
 Nezavissimaïa Gazeta
 Nhan Dan
 Nihon Keizai Shimbun
 NiL
-Noir sur Blanc, Paris
+Noir sur Blanc
 Non Lieu
 W. W. Norton
 Les Notes de l'IES
@@ -728,7 +772,7 @@ Le Nouveau Courrier
 Nouveau Monde
 Nouvelles Editions de l'université
 Nouvelles Editions ivoiriennes
-Nouvelles Editions Lignes, Fécamp (devenues Lignes
+Nouvelles Editions Lignes
 Novaïa Gazeta
 Nowy Przemys
 Nowy Robotnik
@@ -736,6 +780,8 @@ NRC Handelsblad
 Nuestra America
 Les Nuits rouges
 Nuvis
+
+
 Observatoire des Amériques
 The Observer
 Odile Jacob
@@ -759,6 +805,8 @@ Ouest-France
 Outlook
 Overlook Press
 Oxford University Press
+
+
 La Padania
 Page deux
 Página 12
@@ -792,6 +840,7 @@ Pepper
 Perfil
 Perigee Books
 El Periódico de Catalunya
+El Periódico
 Periódico Informativo Oftalmológico
 Permanent Black
 Perrin
@@ -816,7 +865,7 @@ Pluto Press
 Point de vue
 Le Point du jour éditeur
 Political Communication
-_Politico
+Politico
 Politika
 Politique africaine
 Politique étrangère
@@ -826,7 +875,7 @@ Polity Press
 Pontcerq
 Population & Avenir
 Population & Sociétés
-POUR (revue du groupe de recherche pour l'éducation et la prospective)
+POUR
 Pour la Palestine
 Les Prairies ordinaires
 Premières Pierres
@@ -837,6 +886,7 @@ La Presse de Tunisie
 Presses de la Cité
 Presses de la Renaissance
 Presses de l'Université Laval
+Presses de l'université Paris-Sorbonne
 Presses de Sciences Po
 Les Presses du réel
 Presses universitaires de Bordeaux
@@ -856,7 +906,7 @@ Prometheus Books
 Propyläen Verlag
 Prospect
 Le P'tit Gavroche
-PublicAffairs (sans espace)
+PublicAffairs
 Public Culture
 Public Library of Science
 Publications de l'Université de Provence
@@ -866,19 +916,23 @@ Pulso
 Punctum
 Pygmalion
 Pyramyd
+
+
 Quæ
 Les 400 coups
 Quai Voltaire
 Québec Amérique
 La Quinzaine littéraire
 Le Quotidien
+
+
 Racine
 Raisons d'agir
 Ralph Myles Publisher
 Random House
 Ramsay
 La Razón
-Regnery Publishing, Washington
+Regnery Publishing
 La Renaissance du livre
 éd. René Viénet
 Le Rénovateur
@@ -898,6 +952,7 @@ Revue internationale des sciences sociales
 La Revue internationale et stratégique
 La Revue nouvelle
 Revue politique et parlementaire
+Revue suisse
 Riad El-Rayyes Books
 Rivages
 The Riverside Press
@@ -915,6 +970,9 @@ Rue d'Ulm
 Rue du monde
 Rue des cascades
 Rzeczpospolita
+
+
+Saarbrücker Zeitung
 Sabine Wespieser
 Said International
 Saint Martin's Press
@@ -925,7 +983,7 @@ Salvator
 Saptamâna Financiara
 Saqi
 Schoken
-Science,_ Washington
+Science
 Sciences et Avenir
 Sciences sociales et santé
 Scribest Publications
@@ -944,6 +1002,7 @@ Sindbad
 Skira
 Slow Food Editore
 Small Arms Survey
+Soap Éditions
 Société des écrivains
 Social Science and Medicine
 Socialist Register
@@ -955,10 +1014,10 @@ Les Solitaires intempestifs
 Soteca
 Le Souffle d'or
 South China Morning Post
-_South Dakota Law Review
+South Dakota Law Review
 South End Press
 Der Spiegel
-La Stampa,_ Turin (avec trois rédactions : Turin, Milan
+La Stampa
 Stanford University Press
 Steidl
 Stern
@@ -972,6 +1031,8 @@ Sulliver
 The Sunday Times
 Sussex Academic Press
 Syros
+
+
 Tahin Party
 Talmart
 Talonbooks
@@ -979,7 +1040,7 @@ Tarik Editions
 Tatamis
 Taz
 Le Temps
-Le Temps des cerises, Montreuil (anciennement Pantin
+Le Temps des cerises
 Les Temps modernes
 Le Temps des médias
 Le Temps qu'il fait
@@ -1010,7 +1071,7 @@ Toute Latitude
 To Vima
 TPBM
 Transcontinental
-Travail, genre et sociétés
+Travail
 Travailler
 Trends-Tendances
 Tribord
@@ -1019,11 +1080,15 @@ Tribuna
 Tristram
 Trolley Ltd
 Turkish Daily News
+
+
 Ultima Hora
-United Press International (UPI), Washington
-University of California Press, Berkeley
+United Press International
+University of California Press
+University of Chicago Press
 University of Hawaii Press
 University of Illinois Press
+University of Iowa Press
 University of Michigan Press
 University of Minnesota Press
 University of Natal Press
@@ -1037,8 +1102,10 @@ University of Texas Press
 University of the West Indies Press
 University of Wisconsin Press
 Urbanisme
-US News & World Report,_ Washington
+US News & World Report
 USA Today
+
+
 Valeurs actuelles
 Valor Econômico
 Vajra Publications
@@ -1052,6 +1119,7 @@ Verticales
 V&R Uni Press
 Viator Publications
 La Vie économique
+Vientiane Times
 Viking Press
 Villard Books
 La ville brûle
@@ -1063,20 +1131,26 @@ Vlast
 Voix d'encre
 La Voix du Nord
 Vuibert
+
+
 Wal Fadjri
 The Wall Street Journal
 The Weekly Observer
-The Weekly Standard,_ Washington
+The Weekly Standard
 Weiss Press
 Women's Press
 Word Policy Journal
 Work and Occupations
 World Politics
 W. W. Norton & Company
+
+
 Xargol
-Xinhua (agence de presse)
+Xinhua
 XO éditions
 XXI
+
+
 Yale Law Journal
 Yale University Press
 Yediot Aharonot
@@ -1084,6 +1158,8 @@ Ynet
 Yoda Press
 Yomiuri Shimbun
 Yves Michel
+
+
 Z Magazine
 Zavtra
 Zed Books
@@ -1091,3 +1167,543 @@ Zhongguo Qingnian Bao
 Zoé
 Zones sensibles
 Zulma
+
+
+// media
+// Afghanistan
+
+// Afrique du Sud
+
+// Albanie
+
+// Algérie
+
+// Allemagne
+
+
+Bild Zeitung
+Der Tagesspiegel
+Die Spiegel
+Die Zeit
+Frankfurter Allgemeine Zeitung
+Süddeutsche Zeitung
+Taz
+
+// Andorre
+
+// Angola
+
+// Antigua-et-Barbuda
+
+// Arabie saoudite
+
+
+Arab Times
+Asharq Al-Aswat
+
+// Argentine
+
+// Arménie
+
+// Australie
+
+
+Fairfax
+The Australian
+
+// Autriche
+
+
+Der Standard
+
+// Azerbaïdjan
+
+// Bahamas
+
+// Bahreïn
+
+// Bangladesh
+
+// Barbade
+
+// Belgique
+
+// Belize
+
+// Bénin
+
+// Bhoutan
+
+// Biélorussie
+
+// Birmanie
+
+
+Myanmar Times
+
+// Bolivie
+
+// Bosnie-Herzégovine
+
+// Botswana
+
+// Brésil
+
+// Brunei
+
+// Bulgarie
+
+// Burkina Faso
+
+// Burundi
+
+// Cambodge
+
+// Cameroun
+
+// Canada
+
+// Cap-Vert
+
+// Chili
+
+// Chine
+
+// Chypre
+
+
+Politis
+Volkan
+
+// Colombie
+
+// Comores
+
+// Congo
+
+// Corée du Nord
+
+// Corée du Sud
+
+// Costa Rica
+
+// Côte d'Ivoire
+
+// Croatie
+
+// Cuba
+
+
+Granma
+
+// Danemark
+
+
+Jyllands-Posten
+
+// Djibouti
+
+// Dominique
+
+// Égypte
+
+
+Mada masr
+
+// Émirats arabes unis
+
+// Équateur
+
+// Érythrée
+
+// Espagne
+
+
+El País
+
+// Estonie
+
+// États-Unis
+
+// Éthiopie
+
+// EX-YOUGOSLAVIE
+
+// Fidji
+
+// Finlande
+
+// France
+
+
+BFM TV
+Direct 8
+France 24
+M6
+W9
+TF1
+La Cinq
+le JT
+La Correspondance de la presse
+Direct Matin
+Metro
+Paris Match
+Conseil national du numérique
+
+// Gabon
+
+// Gambie
+
+// Géorgie
+
+
+Civil Georgia
+Imedi
+The Messenger
+
+// Ghana
+
+// Grèce
+
+// Grenade
+
+// Guatemala
+
+// Guinée
+
+// Guinée-Bissau
+
+// Guinée-Équatoriale
+
+// Guyana
+
+// Haïti
+
+// Honduras
+
+
+El Heraldo
+La Prensa
+
+// Hongrie
+
+// Inde
+
+// Indonésie
+
+
+Kompas
+
+// Irak
+
+// Iran
+
+// Irlande
+
+// Islande
+
+
+Morgunblaðið
+365 miðlar
+RUV
+
+// Israël
+
+
+Médias 
+Al Qods
+Davar
+Derech Hanitzotz
+Haaretz
+Hadachot
+The Israel Equality Monitor
+Jerusalem Post
+Kountrass
+Maariv
+News From Within
+Yediot Aharonot
+Zion
+
+// Italie
+
+// Jamaïque
+
+// Japon
+
+// Jordanie
+
+// Kazakhstan
+
+// Kenya
+
+// Kirghizstan
+
+// Kiribati
+
+// Kosovo
+
+// Koweït
+
+// Laos
+
+// Lesotho
+
+// Lettonie
+
+
+The Baltic Course
+
+// Liban
+
+// Liberia
+
+// Libye
+
+// Liechtenstein
+
+// Lituanie
+
+// Luxembourg
+
+// Macédoine
+
+// Madagascar
+
+// Malaisie
+
+
+New Straits Times
+
+// Malawi
+
+// Maldives
+
+// Mali
+
+// Malte
+
+// Maroc
+
+// Marshall
+
+// Maurice
+
+// Mauritanie
+
+// Mexique
+
+// Micronésie
+
+// Moldavie
+
+// Monaco
+
+// Mongolie
+
+// Monténégro
+
+// Mozambique
+
+// Namibie
+
+// Nauru
+
+
+
+// Népal
+
+// Nicaragua
+
+// Niger
+
+// Nigeria
+
+// Norvège
+
+// Nouvelle-Calédonie
+
+// Nouvelle-Zélande
+
+// Oman
+
+// Ouganda
+
+// Ouzbékistan
+
+// Pakistan
+
+// Palau
+
+// Palestine
+
+
+Al Qods
+
+// Panamá
+
+
+La Prensa
+
+// Papouasie-Nouvelle-Guinée
+
+// Paraguay
+
+// Pays-Bas
+
+
+NRC Handelsblad
+
+// Pérou
+
+// Philippines
+
+
+Philippine Daily Inquirer
+
+// Pologne
+
+
+Dziennik Zachodni
+Gazeta Wyborcza
+Radio Maryja
+Trybuna Górnicza
+Trybuna Robotnicza
+wSieci
+
+// Porto Rico
+
+// Portugal
+
+// Qatar
+
+// République centrafricaine
+
+// République démocratique du Congo
+
+// République dominicaine
+
+// République tchèque
+
+// Roumanie
+
+// Royaume-Uni
+
+
+BBC
+
+// Russie
+
+
+Nezavissimaïa Gazeta
+Ria Novosti
+Rossiskaïa Gazeta
+
+// Rwanda
+
+
+Kangura
+
+// Saint-Kitts-et-Nevis
+
+// Saint-Marin
+
+// Saint-Vincent-et-les-Grenadines
+
+// Sainte-Lucie
+
+// Salomon
+
+// Salvador
+
+
+La Prensa Gráfica
+
+// Samoa
+
+// São-Tomé-et-Príncipe
+
+// Sénégal
+
+// Serbie
+
+// Seychelles
+
+// Sierra Leone
+
+// Singapour
+
+// Slovaquie
+
+// Slovénie
+
+
+Mladina  
+
+// Somalie
+
+// Soudan
+
+// Soudan du Sud
+
+// Sri Lanka
+
+// Suède
+
+// Suisse
+
+// Surina
+
+// Swaziland
+
+// Syrie
+
+// Tadjikistan
+
+// Taïwan
+
+// Tanzanie
+
+// Tchad
+
+// Thaïlande
+
+// Timor-Leste
+
+// Togo
+
+// Tonga
+
+// Trinité-et-Tobago
+
+// Tunisie
+
+// Turkménistan
+
+// Turquie
+
+
+Cumhuriyet
+Hürriyet
+Milliyet
+
+// Tuvalu
+
+// Ukraine
+
+// Union soviétique
+
+// Uruguay
+
+// Vanuatu
+
+// Vatican
+
+// Venezuela
+
+// Vietna
+
+// Yémen
+
+// Zambie
+
+// Zimbabwe
