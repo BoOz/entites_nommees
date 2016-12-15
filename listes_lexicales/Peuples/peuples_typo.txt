@@ -1,160 +1,4 @@
 // Habitants
-
-// PAS D'HABITANTS DANS AFRIQUE
-
-
-// PAS D'HABITANTS DANS AMÉRIQUES
-
-
-// PAS D'HABITANTS DANS ASIE
-
-Australien
-Australienne
-Australiens
-Australiennes
-Birman
-Birmane
-Birmans
-Birmanes
-Brunéien
-Brunéienne
-Brunéiens
-Brunéiennes
-Cambodgien
-Cambodgienne
-Cambodgiens
-Cambodgiennes
-
-// PAS D'HABITANTS DANS EUROPE
-
-
-// PAS D'HABITANTS DANS EX-YOUGOSLAVIE
-
-Fidjien
-Fidjienne
-Fidjiens
-Fidjiennes
-Indonésien
-Indonésienne
-Indonésiens
-Indonésiennes
-Kiribatien
-Kiribatienne
-Kiribatiens
-Kiribatiennes
-Laotien
-Laotienne
-Laotiens
-Laotiennes
-Malaisien
-Malaisienne
-Malaisiens
-Malaisiennes
-Maldivien
-Maldivienne
-Maldiviens
-Maldiviennes
-Marshallais
-Marshallaise
-Marshallais
-Marshallaises
-Micronésien
-Micronésienne
-Micronésiens
-Micronésiennes
-Nauruan
-Nauruane
-Nauruans
-Nauruanes
-Néo-Calédonien
-Néo-Calédonienne
-Néo-Calédoniens
-Néo-Calédoniennes
-Néo-Zélandais
-Néo-Zélandaise
-Néo-Zélandais
-Néo-Zélandaises
-Inuits
-Inuit
-Inuits
-Inuits
-
-// PAS D'HABITANTS DANS OCÉANIE
-
-Palauan
-Palauane
-Palauans
-Palauanes
-Papouan
-Papouanes-Néo-Guinéenne
-Papouans
-Papouanes-Néo-Guinéennes
-Philippin
-Philippine
-Philippins
-Philippines
-Portoricain
-Portoricaine
-Portoricains
-Portoricaines
-
-// PAS D'HABITANTS DANS PROCHE-ORIENT
-
-Saint-Kittois
-Saint-Kittoise
-Saint-Kittois
-Saint-Kittoises
-Saint-Marinais
-Saint-Marinaise
-Saint-Marinais
-Saint-Marinaises
-Saint-Vincentais
-Saint-Vincentaise
-Saint-Vincentais
-Saint-Vincentaises
-Saint-Lucien
-Saint-Lucienne
-Saint-Luciens
-Saint-Luciennes
-Salomonais
-Salomonaise
-Salomonais
-Salomonaises
-Samoan
-Samoane
-Samoans
-Samoanes
-Santoméen
-Santoméenne
-Santoméens
-Santoméennes
-Thaïlandais
-Thaïlandaise
-Thaïlandais
-Thaïlandaises
-Est-Timorais
-Est-Timoraise
-Est-Timorais
-Est-Timoraises
-Tonguien
-Tonguienne
-Tonguien
-Tonguienne
-Tuvaluan
-Tuvaluane
-Tuvaluan
-Tuvaluane
-Ukrainien
-Ukrainienne
-Ukrainiens
-Ukrainiennes
-
-// PAS D'HABITANTS DANS Union soviétique
-
-Vanuatan
-Vanuatane
-Vanuatans
-Vanuatanes
 Afghan
 Afghane
 Afghans
@@ -199,14 +43,18 @@ Arménien
 Arménienne
 Arméniens
 Arméniennes
+Australien
+Australienne
+Australiens
+Australiennes
 Autrichien
 Autrichienne
 Autrichiens
 Autrichiennes
-Azerbaidjanai
-Azerbaidjanaise
-Azerbaidjanais
-Azerbaidjanaises
+Azerbaïdjanai
+Azerbaïdjanaise
+Azerbaïdjanais
+Azerbaïdjanaises
 Bahaméen
 Bahaméenne
 Bahaméens
@@ -243,6 +91,10 @@ Biélorusse
 Biélorusse
 Biélorusse
 Biélorusses
+Birman
+Birmane
+Birmans
+Birmanes
 Bolivien
 Bolivienne
 Boliviens
@@ -259,6 +111,10 @@ Brésilien
 Brésilienne
 Brésiliens
 Brésiliennes
+Brunéien
+Brunéienne
+Brunéiens
+Brunéiennes
 Bulgare
 Bulgare
 Bulgare
@@ -271,6 +127,10 @@ Burundai
 Burundaise
 Burundais
 Burundaises
+Cambodgien
+Cambodgienne
+Cambodgiens
+Cambodgiennes
 Camerounai
 Camerounaise
 Camerounais
@@ -375,6 +235,13 @@ Américaines
 Éthiopienne
 Éthiopiens
 Éthiopiennes
+
+// PAS D'HABITANTS DANS EX-YOUGOSLAVIE
+
+Fidjien
+Fidjienne
+Fidjiens
+Fidjiennes
 Finlandais
 Finlandaise
 Finlandaiss
@@ -443,6 +310,10 @@ Indien
 Indienne
 Indiens
 Indiennes
+Indonésien
+Indonésienne
+Indonésiens
+Indonésiennes
 Irakien
 Irakienne
 Irakiens
@@ -491,6 +362,10 @@ Kirghizes
 Kirghize
 Kirghizes
 Kirghizes
+Kiribatien
+Kiribatienne
+Kiribatiens
+Kiribatiennes
 Kosovar
 Kosovare
 Kosovars
@@ -499,6 +374,10 @@ Koweïtien
 Koweïtienne
 Koweïtiens
 Koweïtiennes
+Laotien
+Laotienne
+Laotiens
+Laotiennes
 Lesothan
 Lesothane
 Lesothans
@@ -539,10 +418,18 @@ Malgaches
 Malgache
 Malgaches
 Malgaches
+Malaisien
+Malaisienne
+Malaisiens
+Malaisiennes
 Malawien
 Malawienne
 Malawiens
 Malawiennes
+Maldivien
+Maldivienne
+Maldiviens
+Maldiviennes
 Malien
 Malienne
 Maliens
@@ -555,6 +442,10 @@ Marocain
 Marocaine
 Marocains
 Marocaines
+Marshallai
+Marshallaise
+Marshallais
+Marshallaises
 Mauricien
 Mauricienne
 Mauriciens
@@ -567,6 +458,10 @@ Mexicain
 Mexicaine
 Mexicains
 Mexicaines
+Micronésien
+Micronésienne
+Micronésiens
+Micronésiennes
 Moldaves
 Moldave
 Moldaves
@@ -591,6 +486,10 @@ Namibien
 Namibienne
 Namibiens
 Namibiennes
+Nauruan
+Nauruane
+Nauruans
+Nauruanes
 Népalai
 Népalaise
 Népalais
@@ -611,6 +510,14 @@ Norvégien
 Norvégienne
 Norvégiens
 Norvégiennes
+Néo-Calédonien
+Néo-Calédonienne
+Néo-Calédoniens
+Néo-Calédoniennes
+Néo-Zélandai
+Néo-Zélandaise
+Néo-Zélandais
+Néo-Zélandaises
 Omanai
 Omanaise
 Omanais
@@ -627,6 +534,10 @@ Pakistanais
 Pakistanaise
 Pakistanais
 Pakistanaises
+Palauan
+Palauane
+Palauans
+Palauanes
 Palestinien
 Palestinienne
 Palestiniens
@@ -635,6 +546,10 @@ Panaméen
 Panaméenne
 Panaméens
 Panaméennes
+Papouan
+Papouanes-Néo-Guinéenne
+Papouans
+Papouanes-Néo-Guinéennes
 Paraguayen
 Paraguayenne
 Paraguayens
@@ -647,10 +562,18 @@ Péruvien
 Péruvienne
 Péruviens
 Péruviennes
+Philippin
+Philippine
+Philippins
+Philippines
 Polonais
 Polonaise
 Polonais
 Polonaises
+Portoricain
+Portoricaine
+Portoricains
+Portoricaines
 Portugai
 Portugaise
 Portugais
@@ -691,10 +614,38 @@ Rwandai
 Rwandaise
 Rwandais
 Rwandaises
+Saint-Kittoi
+Saint-Kittoise
+Saint-Kittois
+Saint-Kittoises
+Saint-Marinai
+Saint-Marinaise
+Saint-Marinais
+Saint-Marinaises
+Saint-Vincentai
+Saint-Vincentaise
+Saint-Vincentais
+Saint-Vincentaises
+Saint-Lucien
+Saint-Lucienne
+Saint-Luciens
+Saint-Luciennes
+Salomonai
+Salomonaise
+Salomonais
+Salomonaises
 Salvadorien
 Salvadorienne
 Salvadoriens
 Salvadoriennes
+Samoan
+Samoane
+Samoans
+Samoanes
+Santoméen
+Santoméenne
+Santoméens
+Santoméennes
 Sénégalai
 Sénégalaise
 Sénégalais
@@ -775,10 +726,22 @@ Tachadien
 Tachadienne
 Tachadiens
 Tachadiennes
+Thaïlandai
+Thaïlandaise
+Thaïlandais
+Thaïlandaises
+Est-Timorai
+Est-Timoraise
+Est-Timorais
+Est-Timoraises
 Togolai
 Togolaise
 Togolais
 Togolaises
+Tonguien
+Tonguienne
+Tonguiens
+Tonguiennes
 Trinitéen
 Trinitéenne
 Trinitéens
@@ -795,10 +758,25 @@ Turcs
 Turc
 Turcs
 Turcs
+Tuvaluan
+Tuvaluane
+Tuvaluans
+Tuvaluanes
+Ukrainien
+Ukrainienne
+Ukrainiens
+Ukrainiennes
+
+// PAS D'HABITANTS DANS Union soviétique
+
 Uruguayen
 Uruguayenne
 Uruguayens
 Uruguayennes
+Vanuatan
+Vanuatane
+Vanuatans
+Vanuatanes
 Vatican
 Vaticane
 Vaticans
@@ -824,83 +802,6 @@ Zimbabwéenne
 Zimbabwéens
 Zimbabwéennes
 // ethnies
-// AUSTRALIE
-
-// BIRMANIE
-
-Karens
-Karennis
-Lahus
-Lakhas
-Paos
-Rohingyas
-Shans
-Was… // BRUNEI
-
-// CAMBODGE
-
-// EX-YOUGOSLAVIE
-
-// FIDJI
-
-// INDONÉSIE
-
-// KIRIBATI f.
-
-// LAOS
-
-// MALAISIE
-
-// MALDIVES
-
-// MARSHALL
-
-// MICRONÉSIE f.
-
-// NAURU f.
-
-// NOUVELLE-CALÉDONIE
-
-// NOUVELLE-ZÉLANDE
-
-// NUNAVUT
-
-// PALAU m.
-
-// PAPOUASIE-NOUVELLE-GUINÉE
-
-// PHILIPPINES
-
-// PORTO RICO
-
-// SAINT-KITTS-ET-NEVIS
-
-// SAINT-MARIN
-
-// SAINT-VINCENT-ET-LES-GRENADINES
-
-// SAINTE-LUCIE
-
-// SALOMON
-
-// SAMOA
-
-// SÃO-TOMÉ-ET-PRÍNCIPE
-
-// THAÏLANDE
-
-// TIMOR-LESTE
-
-// TONGA
-
-// TUVALU
-
-// UKRAINE
-
-// Union soviétique
-
-// VANUATU
-
 // Afghanistan
 
 // Afrique du Sud
@@ -922,6 +823,8 @@ Was… // BRUNEI
 // Argentine
 
 // Arménie
+
+// Australie
 
 // Autriche
 
@@ -945,6 +848,18 @@ Was… // BRUNEI
 
 // Biélorussie
 
+// Birmanie
+
+Bamars Chinois
+Indiens
+Karens
+Karennis
+Lahus
+Lakhas
+Paos
+Rohingyas
+Shans
+Was
 // Bolivie
 
 // Bosnie-Herzégovine
@@ -953,11 +868,15 @@ Was… // BRUNEI
 
 // Brésil
 
+// Brunei
+
 // Bulgarie
 
 // Burkina Faso
 
 // Burundi
+
+// Cambodge
 
 // Cameroun
 
@@ -1011,6 +930,10 @@ Was… // BRUNEI
 
 // Éthiopie
 
+// EX-YOUGOSLAVIE
+
+// Fidji
+
 // Finlande
 
 // France
@@ -1045,6 +968,8 @@ Was… // BRUNEI
 
 // Inde
 
+// Indonésie
+
 // Irak
 
 // Iran
@@ -1069,15 +994,19 @@ Was… // BRUNEI
 
 // Kirghizstan
 
+// Kiribati
+
 // Kosovo
 
 // Koweït
+
+// Laos
 
 // Lesotho
 
 // Lettonie
 
-// Liban(le)
+// Liban
 
 // Liberia
 
@@ -1093,7 +1022,11 @@ Was… // BRUNEI
 
 // Madagascar
 
+// Malaisie
+
 // Malawi
+
+// Maldives
 
 // Mali
 
@@ -1101,11 +1034,15 @@ Was… // BRUNEI
 
 // Maroc
 
+// Marshall
+
 // Maurice
 
 // Mauritanie
 
 // Mexique
+
+// Micronésie
 
 // Moldavie
 
@@ -1118,6 +1055,8 @@ Was… // BRUNEI
 // Mozambique
 
 // Namibie
+
+// Nauru
 
 // Népal
 
@@ -1134,7 +1073,12 @@ Ijaws
 Itsérikis
 Modakékés
 Ogonis
-Yoroubas // Norvège
+Yoroubas
+// Norvège
+
+// Nouvelle-Calédonie
+
+// Nouvelle-Zélande
 
 // Oman
 
@@ -1144,13 +1088,18 @@ Langis
 Bantous
 Acholis
 Bagandas
-Banyankolés // Ouzbékistan
+Banyankolés
+// Ouzbékistan
 
 // Pakistan
+
+// Palau
 
 // Palestine
 
 // Panamá
+
+// Papouasie-Nouvelle-Guinée
 
 // Paraguay
 
@@ -1158,7 +1107,11 @@ Banyankolés // Ouzbékistan
 
 // Pérou
 
+// Philippines
+
 // Pologne
+
+// Porto Rico
 
 // Portugal
 
@@ -1170,7 +1123,7 @@ Banyankolés // Ouzbékistan
 
 // République dominicaine
 
-// République Tchèque
+// République tchèque
 
 // Roumanie
 
@@ -1180,7 +1133,21 @@ Banyankolés // Ouzbékistan
 
 // Rwanda
 
+// Saint-Kitts-et-Nevis
+
+// Saint-Marin
+
+// Saint-Vincent-et-les-Grenadines
+
+// Sainte-Lucie
+
+// Salomon
+
 // Salvador
+
+// Samoa
+
+// São-Tomé-et-Príncipe
 
 // Sénégal
 
@@ -1222,7 +1189,13 @@ Banyankolés // Ouzbékistan
 
 // Tchad
 
+// Thaïlande
+
+// Timor-Leste
+
 // Togo
+
+// Tonga
 
 // Trinité-et-Tobago
 
@@ -1232,7 +1205,15 @@ Banyankolés // Ouzbékistan
 
 // Turquie
 
+// Tuvalu
+
+// Ukraine
+
+// Union soviétique
+
 // Uruguay
+
+// Vanuatu
 
 // Vatican
 

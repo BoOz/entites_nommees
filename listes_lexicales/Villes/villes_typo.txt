@@ -59,8 +59,7 @@ Quito
 Asmara
 Madrid
 Tallinn
-Washington
-DC
+Washington, DC
 Addis-Abeba
 // ALERTE pas de capitale dans EX-YOUGOSLAVIE
 Suva
@@ -87,7 +86,7 @@ Bagdad
 Téhéran
 Dublin
 Reykjavík
-Tel-Aviv et non pas Jérusalem
+Tel-Aviv
 Rome
 Kingston
 Tokyo
@@ -516,7 +515,12 @@ Labasa
 
 
 // France
-
+Bordeaux
+Grenoble
+Lille
+Nantes
+Strasbourg
+Toulouse
 
 // Gabon
 
