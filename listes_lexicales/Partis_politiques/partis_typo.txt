@@ -122,7 +122,7 @@ Parti des démocrates australiens (AD)
 Parti travailliste australien (ALP)
 Parti des Verts australiens (Greens)
 Parti australien de Katter (KAP)
-Parti libéral australien (LP)
+Parti libéral (LP)
 Parti national (NP)
 Équipe Nick Xenophon (NXT)
 
@@ -468,7 +468,7 @@ Alliance libérale (LA)
 Parti du Groenland (Inuit Ataqatigiit)
 Parti populaire socialiste (SF)
 Parti social-démocrate (Socialdemokraterne)
-//République (Tjóðveldi)
+République (Tjóðveldi)
 Parti libéral danois (V)
 
 // Djibouti
@@ -1147,6 +1147,7 @@ Parti de la révolution démocratique (PRD)
 Parti vert écologiste du Mexique (PVEM)
 Mouvement régénération nationale (Morena)
 Mouvement citoyen (Movimiento Ciudadanos)
+Armée zapatiste de libération nationale (EZLN)
 
 // Micronésie
 
@@ -1417,7 +1418,7 @@ Partis politiques interdits
 Convergence nationale « le travail, rien que le travail » (KNK)
 Rassemblement démocratique centrafricain (RDC)
 Armée de résistance du Seigneur (LRA)
-« Coalition » (Séléka)
+« Coalition » (Seleka)
 
 // République démocratique du Congo
 
