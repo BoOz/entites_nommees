@@ -1,6 +1,7 @@
 // institutions
 // institutions et organismes d'État internationaux
 
+
 Commission européenne 
 la Commission
 Conseil de l'Europe
@@ -190,9 +191,9 @@ Autorité du bassin du Niger
 Communauté d'Afrique de l'Est (CAE)
 Commission du bassin du lac Tchad (CBLT)
 Communauté de développement de l'Afrique australe (CDAA)
-Communauté économique des États d'Afrique de l'Ouest (Cedeao)
-Communauté économique des États d'Afrique centrale (Ceeac)
-Communauté économique et monétaire d'Afrique centrale (Cemac)
+Communauté économique des États de l'Afrique de l'Ouest (Cedeao)
+Communauté économique des États de l'Afrique centrale (Ceeac)
+Communauté économique et monétaire de l'Afrique centrale (Cemac)
 Communauté des États sahélo-sahariens (CEN-SAD)
 Communauté économique des pays des Grands Lacs (CEPGL)
 Comité inter-États de lutte contre la sécheresse au Sahel (CILSS)
