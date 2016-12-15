@@ -16,6 +16,8 @@ Boeing
 Société nationale des chemins de fer français (SNCF)
 European Aeronotic Defence and Space (EADS)
 Peugeot société anonyme (PSA)
+Ford
+Volkswagen
 
 // banque et finance
 Citigroup
@@ -42,6 +44,7 @@ Facebook
 Google
 Mifare Classic
 International Data Corporation (IDC)
+Netflix
 
 // autre
 Fnac
@@ -60,3 +63,6 @@ ArcelorMittal
 Areva
 Texaco
 Amazon 
+Coca-Cola
+Eiffage
+Abertis
