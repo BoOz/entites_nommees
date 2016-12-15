@@ -1,109 +1,35 @@
-// lieux
-// AUSTRALIE
-
-// BIRMANIE
-
-// BRUNEI
-
-// CAMBODGE
-
-// EX-YOUGOSLAVIE
-
-// FIDJI
-
-// INDONÉSIE
-
-// KIRIBATI f.
-
-// LAOS
-
-// MALAISIE
-
-// MALDIVES
-
-// MARSHALL
-
-// MICRONÉSIE f.
-
-// NAURU f.
-
-// NOUVELLE-CALÉDONIE
-
-// Provinces
-province Nord
-province Sud
-province des îles Loyauté
-
-// NOUVELLE-ZÉLANDE
-
-// NUNAVUT
-
-// PALAU m.
-
-// PAPOUASIE-NOUVELLE-GUINÉE
-
-// Provinces
-Hela
-
-// PHILIPPINES
-
-// PORTO RICO
-
-// SAINT-KITTS-ET-NEVIS
-
-// SAINT-MARIN
-
-// SAINT-VINCENT-ET-LES-GRENADINES
-
-// SAINTE-LUCIE
-
-// SALOMON
-
-// SAMOA
-
-// SÃO-TOMÉ-ET-PRÍNCIPE
-
-// THAÏLANDE
-
-// TIMOR-LESTE
-
-// TONGA
-
-// TUVALU
-
-// UKRAINE
-
-// Union soviétique
-
-// VANUATU
-
+/ lieux
 // Afghanistan
 
 // Afrique du Sud
 
 // Provinces
+
 Cap-Est
 Cap-Nord
 Cap-Ouest
-Etat libre
+État libre
 Gauteng
 Kwazulu-Natal
 Limpopo
 Mpumalanga
-Nord-Ouest.
+
 
 // Albanie
 
-// Divers
+//Divers
+
 lac Shkroda
 Drin
 
 
+
 // Algérie
 
-// Divers
+//Divers
+
 Bab El-Oued
-la Casbah d’Alger
+la Casbah d'Alger
 Kabylie
 Petite Kabylie
 Grande Kabylie
@@ -112,23 +38,26 @@ Grande Kabylie
 
 // Allemagne
 
-// Divers
+//Divers
+
 Alexanderplatz
 Spree
+
 
 
 // Andorre
 
 // Angola
 
-// Divers
+//Divers
+
 Aldeia Nova
 Benguela
-fleuves Dande
+Dande
 Cuanza
-
 Capanda
 Waku-Kungo
+
 
 
 // Antigua-et-Barbuda
@@ -136,24 +65,46 @@ Waku-Kungo
 // Arabie saoudite
 
 // Provinces
+
 Al-Jouf
 Asir
 Jizan
 Najran
 Nadjd
 
-// Divers
+//Divers
+
 Dhahran
 Farasan
 le Hedjaz
 péninsule arabique
-Tiran Égypte - Arabie saoudite
-La minorité chiite se trouve dans la province orientale
+Roub Al-Khali
+Tiran
+Zahran
+
+
+
 
 
 // Argentine
 
 // Arménie
+
+// Australie
+
+// Provinces
+
+territoire Nord
+territoire de la capitale australienne
+
+//Divers
+
+Darwin
+Pine Gap
+terre d'Arnhem
+
+
+
 
 // Autriche
 
@@ -161,14 +112,18 @@ La minorité chiite se trouve dans la province orientale
 
 // Bahamas
 
-// Divers
-les Bahamas sont composées de 700 îles et îlots
+//Divers
+
+
+
 
 
 // Bahreïn
 
-// Divers
+//Divers
+
 îles Hawar
+
 
 
 // Bangladesh
@@ -178,6 +133,16 @@ les Bahamas sont composées de 700 îles et îlots
 // Belgique
 
 // Provinces
+
+wallonne
+flamande bruxelloise 
+trois Communautés 
+Communauté flamande
+Communauté française
+Communauté germanophone
+Région flamande
+Région wallonne
+Région de Bruxelles-capitale
 Anvers
 Brabant flamand
 Brabant wallon
@@ -197,42 +162,101 @@ Namur
 
 // Biélorussie
 
+// Provinces
+
+Brest
+Homiel
+Hrodna
+Mahiliow
+Minsk
+Vitebsk
+
+// Birmanie
+
+//Divers
+
+Rangoun
+Pyinmana
+Salween
+Irrawaddy
+
+« région spéciale » n° 1
+le Kokang
+Ramree
+îles Cocos
+champ gazier de Yadana
+barrage de Ta Sang  
+barrage de Myitsone
+Hatgyi
+Tasang
+
+
+
 // Bolivie
 
 // Bosnie-Herzégovine
 
-// Divers
+//Divers
+
 Vrbas
+
 
 
 // Botswana
 
 // Brésil
 
-// Divers
-l’ABC
-périphérie industrielle de São Paulo
+//Divers
+
+l'ABC
 
 
+
+// Brunei
 
 // Bulgarie
 
-// Divers
+//Divers
+
 monts Rhodopes
 Stara Planina
 
 
+
 // Burkina Faso
 
-// Divers
+//Divers
+
 Kadiogo
+
 
 
 // Burundi
 
+// Cambodge
+
+//Divers
+
+lac Tonlé Sap
+
+
+
 // Cameroun
 
-// Divers
+// Provinces
+
+Adamaoua
+
+
+Extrême-Nord
+Littoral
+
+
+
+Sud-Ouest
+
+//Divers
+
 péninsule de Bakassi
 barrage de Lom Pangar
 port et centrale à gaz de Kribi
@@ -242,39 +266,65 @@ centrale hydroélectrique de Mem'vele
 
 // Canada
 
-// Divers
+// Provinces
+
+Alberta
+Colombie britannique
+Manitoba
+Nouveau-Brunswick
+Terre-Neuve Labrador
+Ontario
+Nouvelle-Écosse
+Île prince Édouard
+Québec
+Saskatchewan
+Nunavut
+
+Yukon
+
+//Divers
+
 archipel Arctique canadien
+
 
 
 // Cap-Vert
 
-// Divers
+//Divers
+
 São Vicente
+
 
 
 // Chili
 
 // Chine
 
-// Divers
-se reporter à la carte du _Manière de voir_ n° 123
-« Chine
-état critique »
+// Provinces
+
+vallée de la Shaksgam Aksai Chin
+
+//Divers
+
+
 
 
 
 // Chypre
 
-// Divers
+//Divers
+
 l'île d'Aphrodite
+
 
 
 // Colombie
 
 // Comores
 
-// Divers
-Mayotte est administrée par le France
+//Divers
+
+
 Grands-Comoriens
 Mohéliens
 Anjouanais
@@ -283,10 +333,12 @@ Anjouanais
 
 // Congo
 
-// Divers
+//Divers
+
 région du Pool
 quartier de Mpila
 Oyo 
+
 
 
 // Corée du Nord
@@ -295,61 +347,85 @@ Oyo
 
 // Costa Rica
 
-// Divers
-fleuve San Juan
+//Divers
+
+San Juan
 parc de la Merced
+
 
 
 // Côte d'Ivoire
 
-// Divers
+//Divers
+
 Bouaké
 Cocody
 le Plateau
-
 Grand-Bassam
-fleuve Cavally
+Cavally
+
 
 
 // Croatie
 
-// Divers
+//Divers
+
 péninsule d'Istrie
+
 
 
 // Cuba
 
-// Divers
+//Divers
+
 Sierra Maestra
 caserne Moncada
 Santiago de Cuba
 Oriente
 Gran Piedra
-zone de Guantanamo louée aux États-Unis
+
+
+
 
 
 // Danemark
 
-// Divers)
+// Provinces
+
+Hovedstaden
+Jutland Nord
+Jutland central
+Danemark Sud
+Zélande Nord
+
+//Divers
+
+Christianshavn
 île de Fyn
 Jylland
 Nørrebro
-l'Øresund ou Sund
+l'Øresund
+Sund
 Roskilde
+
 
 
 // Djibouti
 
-// Divers
+//Divers
+
 port de Doraleh
+
 
 
 // Dominique
 
 // Égypte
 
-// Divers
-valée du Nil
+//Divers
+
+vallée du Nil
+
 
 
 // Émirats arabes unis
@@ -358,12 +434,40 @@ valée du Nil
 
 // Érythrée
 
+//Divers
+
+Dahlak
+
+
+
 // Espagne
 
-// Divers 
+// Provinces
+
+Andalousie
+Aragon
+Principauté des Asturies
+îles Baléares
+communauté autonome basque
+Canaries
+Cantabrie
+Castille-La Manche
+Castille--León
+Catalogne
+rémare
+Galice
+communauté de Madrid
+région de Murcie
+communauté de Navarre
+La Rioja
+communauté valencienne
+
+//Divers
+ 
 Costa Brava
 Costa Dorada
-aux Canaries : El Medano
+Canaries
+El Medano
 El Hierro
 
 
@@ -372,25 +476,76 @@ El Hierro
 
 // États-Unis
 
-// Divers
-baie de Guantánamo « louée » à Cuba
-île de Guam cédée par l'Espagne aux Etats-Unis en 1898  
-14 autres territoires dépendants non incorporés
+//Divers
+
+Guantánamo
+île de Guam
+Samoa
+Baker
+Howland
+Jarvis
+Johnston Atoll
+Kingman Reef
+Midway
+Navassa
+Northern Mariana
+Palmyra Atoll
+Puerto Rico
+Virgin
+Wake
+Silicon Valley
 
 
 
 // Éthiopie
 
-// Divers
-L'Éthiopie enclavée a accès à la mer par Port-Soudan et par Djibouti.
+//Divers
+
+
 barrage de la Renaissance du Nil Bleu
+
+
+
+// EX-YOUGOSLAVIE
+
+// Fidji
+
+//Divers
+
+
+Vanua Levu
+Viti Levu
+
 
 
 // Finlande
 
+// Provinces
+
+Aland
+Carélie Nord
+Carélie Sud
+Finlande centrale
+Finlande Sud-Ouest
+Kainuu
+Kanta-Häme
+Laponie
+Ostrobotnie
+Ostrobotnie centrale
+Ostrobotnie Nord
+Ostrobotnie Sud
+Päijät-Häme
+Pirkanmaa
+Satakunta
+Savonie Nord
+Savonie Sud
+Uusimaa
+Vallée de la Kymi
+
 // France
 
-// Divers
+//Divers
+
 Front de Seine
 hôpital de la Croix-Rouge
 la Goutte-d'Or
@@ -399,105 +554,152 @@ Roissy - Charles-de-Gaulle
 Sophia Antipolis
 
 
+
 // Gabon
 
-// Divers
+//Divers
+
 Bélinga
+
 
 
 // Gambie
 
 // Géorgie
 
-// Divers
+// Provinces
+
+Gourie
+Iméréthie
+Kakhétie
+Kvémo-Kartlie
+Mingrélie Haute-Svanétie
+Mtskhéta-Mtianéti
+Racha-Léckhumi Kvémo Svanéti
+Samtskhe-Djavakhéti
+Shida Kartli
+Abkhazie
+Adjarie
+
+//Divers
+
 Akhalkalaki
 Gori
 vallée de Pankissi
 Sénaki
 
 
+
 // Ghana
 
-// Divers
-Nima
-quartier populaire d’Accra
+//Divers
 
-barrage d’Akosombo
+Nima
+quartier populaire d'Accra
+barrage d'Akosombo
 Volta
-ancienne Gold Coast
-ou Côte-de-l’Or
+Gold Coast
+
+Côte-de-l'Or
 
 
 
 // Grèce
 
-// Divers
-Salonique
-plutôt que Thessalonique
+//Divers
 
+Salonique
 place Syntagma
+
 
 
 // Grenade
 
 // Guatemala
 
-// Divers
+//Divers
+
 volcan Fuego
 Tikal
 Mirador
+Usumacinta
 
-fleuve Usumacinta
 
 
 // Guinée
 
 // Guinée-Bissau
 
-// Divers
+//Divers
+
 Bafatá
+
 
 
 // Guinée-Équatoriale
 
-// Divers
-ex-Guinée espagnole : Río Muni et île Bioko
+//Divers
+
+Río Muni
+île Bioko
+
 
 
 // Guyana
 
 // Haïti
 
-// Divers
+//Divers
+
 Artibonite
 Cité Soleil
 la Saline
 Bel Air
 Martissant
-
+Cap-Haïtien
 Pétionville
+
 
 
 // Honduras
 
-// Divers
+//Divers
+
 Copán
 Soto Cano Air Base
+
 
 
 // Hongrie
 
 // Inde
 
-// Divers
+//Divers
+
 Jammu-et-Cachemire  
-le reste du Cachemire est divisé entre le Pakistan et la Chine. Conflit ouvert
+
+
+
+// Indonésie
+
+//Divers
+
+
+Java
+Sumatra
+Kalimantan
+Sulawesi
+Bali
+Papouasie
+Moluques
+
 
 
 
 // Irak
 
 // Provinces
+
 Anbar
 Bagdad
 Bassora
@@ -513,17 +715,19 @@ Salaheddine
 Souleimaniyé
 Wasit
 
-// Divers
-« zone verte » : îlot hypersécurisé situé à Bagdad et permettant de maintenir l'activité des institutions
+//Divers
+
+« zone verte » 
 Chatt Al-Arab
-Les 3 provinces kurdes sont constituées en région autonome  
-le reste du découpage des entités fédérées est retardé par la grande instabilité dans l'ensemble du pays.
+
+
 
 
 
 // Iran
 
 // Provinces
+
 Alborz
 Ardebil
 Bouchehr
@@ -539,14 +743,18 @@ Téhéran
 Yazd
 Zanjan
 
-// Divers
-Abou Moussa
+//Divers
+
+Ab
+Moussa
+Arabistan
 Araxe
 Chatt Al-Arab
 Ormuz
 Khorasan
 Khouzistan
 Ourmia
+îles Tomb
 
 
 
@@ -554,11 +762,24 @@ Ourmia
 
 // Islande
 
+// Provinces
+
+Austurland
+Höfuðborgarsvæðið
+Norðurland eystra
+Norðurland vestra
+Suðurland
+Suðurnes
+Vestfirðir
+Vesturland
+
 // Israël
 
-// Divers
+//Divers
+
 « corpus separatum »
 « ligne verte »
+
 golfe d'Akaba
 pont Allenby
 mont Carmel
@@ -573,62 +794,127 @@ Judée
 Néguev
 Samarie
 Sinaï
-
 centrale nucléaire de Dimona
+
 
 
 // Italie
 
-// Divers
+// Provinces
+
+Abruzzes
+Vallée d'Aoste
+Basilicate
+Calabre
+Campanie
+Émilie-Romagne
+Frioul - Vénétie julienne
+Latium
+Ligurie
+Lombardie
+Marches
+Molise
+Ombrie
+Piémont
+Pouilles
+Sardaigne
+Sicile
+Toscane
+Trentin - Haut-Adige
+Vénétie
+
+//Divers
+
 territoire libre de Trieste
+
 
 
 // Jamaïque
 
 // Japon
 
+//Divers
+
+Hokkaido
+Honshu
+Kyushu
+Shikoku
+
+
+
 // Jordanie
 
 // Kazakhstan
+
+//Divers
+
+Baïkonour
+
+
 
 // Kenya
 
 // Kirghizstan
 
+// Kiribati
+
+//Divers
+
+îles Gilbert
+îles Phoenix
+îles de la Ligne
+île de Banaba
+
+
+
 // Kosovo
 
-// Divers
-villages de Gorazdevac
-d’Orahovac et de Velika Hoca
-enclaves serbes au Kosovo
+//Divers
 
+villages de Gorazdevac
+d'Orahovac et de Velika Hoca
+enclaves serbes au Kosovo
 la Metohija
+
 
 
 // Koweït
 
-// Divers
-Failaka
-Warba
+//Divers
 
+
+
+
+
+// Laos
 
 // Lesotho
 
 // Lettonie
 
-// Liban(le)
+// Provinces
 
-// Divers
+Zemgale
+Kurzeme
+Latgale
+Vidzeme
+
+// Liban
+
+//Divers
+
 plaine de la Bekaa
 Liban sud
 Mont-Liban
+
 
 
 // Liberia
 
 // Libye
 
-// Divers
+//Divers
+
 djebel Nefoussa
 Cyrénaïque
 Fezzan
@@ -637,20 +923,26 @@ Fezzan
 
 // Liechtenstein
 
-// Divers
+//Divers
+
 la Principauté
+
 
 
 // Lituanie
 
-// Divers
+//Divers
+
 Klaipėda
+
 
 
 // Luxembourg
 
-// Divers
+//Divers
+
 le Grand-Duché
+
 
 
 // Macédoine
@@ -658,6 +950,19 @@ le Grand-Duché
 // Madagascar
 
 // Provinces
+
+
+
+//Divers
+
+« la ville des mille »
+Ambatovy
+Ilakaka
+Moramanga
+Sakaraha
+
+Atsinanana
+
 Antananarivo
 Antsiranana
 Fianarantsoa
@@ -665,80 +970,102 @@ Mahajanga
 Toamasina
 Toliana
 
-// Divers
-« la ville des mille »
-Ambatovy
-Ilakaka
-Moramanga
-Sakaraha
 
 
-Atsinanana
-Madagascar est également divisée en 6 provinces __: Antananarivo
-Antsiranana
-Fianarantsoa
-Mahajanga
-Toamasina
-Toliana
-
-
+// Malaisie
 
 // Malawi
 
+// Maldives
+
+//Divers
+
+
+îles Marao
+
+
+
 // Mali
 
-// Divers
-le nord du Mali 
-le Nord
+// Provinces
+
+Mopti
+Gao
+Tombouctou
+
+//Divers
+
 
 Azawad
 barrage de Markala
 Macina
 
 
+
 // Malte
 
-// Divers
+//Divers
+
 Gozo
-habitants : Gozitains
+Gozitains
 
 
 
 // Maroc
 
-// Divers
+//Divers
+
 Ceuta 
 Melilla 
 îles Zaffarines
-
 El-Ayoun
 la médina
 
 
+
+// Marshall
+
+//Divers
+
+atoll de Bikini
+Delap-Uliga-Djarrit
+atoll de Majuro
+atoll de Kwajalein
+île d'Ebeye
+
+îles Ratak
+îles Ralik
+
+
+
 // Maurice
 
-// Divers
-formé des îles de Port Louis
+//Divers
+
+Port Louis
 Rodrigues
 Saint Brandon
 Agaléga
+Aapravasi Ghat
+morne Brabant
 
-Aapravasi Ghat : lieu de pèlerinage hindou
-morne Brabant : montagne et site historique de l’esclavage
 
 
 // Mauritanie
 
 // Mexique
 
-// Divers
-sites archéologiques mayas : Palenque
-Tulum
+//Divers
 
+Palenque
+Tulum
 Tenochtitlán
 le Zócalo
 Yucatán
 
+
+
+// Micronésie
 
 // Moldavie
 
@@ -748,18 +1075,25 @@ Yucatán
 
 // Monténégro
 
-// Divers
+//Divers
+
 bouches de Kotor
-lac Shkodra ou lac Skadar
+lac Shkodra
+lac Skadar
+
 
 
 // Mozambique
 
-// Divers
+//Divers
+
 lac Nyassa
 
 
+
 // Namibie
+
+// Nauru
 
 // Népal
 
@@ -769,24 +1103,43 @@ lac Nyassa
 
 // Nigeria
 
-// Divers
+//Divers
+
 État musulman de Katsina  
 État de Cross River
-
 delta du Niger
+
 
 
 // Norvège
 
+// Nouvelle-Calédonie
+
+// Provinces
+
+province des îles Loyauté
+province Nord
+province Sud
+
+// Nouvelle-Zélande
+
+// Provinces
+
+Auckland
+
 // Oman
 
-// Divers
+//Divers
+
 Bouraïmi
 Dhofar
+dhofarie
+djebel Akhdar
+djebel Al-Qara
 île Masirah
+Moussandam
 Salalah
 Yibal
-champ de pétrole
 
 
 
@@ -796,88 +1149,153 @@ champ de pétrole
 
 // Pakistan
 
-// Divers
+// Provinces
+
+Pendjab
+Sind
+Khyber Pakhtunkhwa
+Baloutchistan
+territoire fédéral d'Islamabad
+territoires tribaux fédéraux
+Azad Jammu--Cachemire
+Gilgit-Baltistan
+
+//Divers
+
 les deux Pakistans
 les deux Waziristans
 
 
+
+// Palau
+
+//Divers
+
+Koror
+
+
+
+
 // Palestine
 
-// Divers
+//Divers
+
 Aïda
+
 
 
 // Panamá
 
+// Papouasie-Nouvelle-Guinée
+
+// Provinces
+
+Hela
+
 // Paraguay
 
-// Divers
+//Divers
+
 barrage binational d'Itaipu
+
 
 
 // Pays-Bas
 
-// Divers
+//Divers
+
 le Meinweg
+
 
 
 // Pérou
 
-// Divers
+//Divers
+
 Callao
 Cuajone
 
 
+
+// Philippines
+
+//Divers
+
+Mindanao
+archipel de Sulu
+Basilan
+Bohol
+Catanduanes
+Cebu
+Leyte
+Luçon
+Masbate
+Mindanao
+Mindoro
+Negros
+Palawan
+Panay
+Samar
+Sulu
+Tawi-Tawi
+
+
+
+
 // Pologne
 
-// Divers
-Utiliser les noms polonais : Podlaskie
-Podkarpackie
-Lubelskie
-Warminsko-Mazurskie
-Swietokrzyskie .
+//Divers
+
 
 mines Budryk
 Pokój
 
 
 
+// Porto Rico
+
 // Portugal
 
 // Qatar
 
-// Divers
+//Divers
+
 Al-Ohdeid
 Burgan
 Dukhan
 
 
+
 // République centrafricaine
 
-// Divers
+//Divers
+
 Vakaga
+
 
 
 // République démocratique du Congo
 
-// Divers
+//Divers
+
 barrage d'Inga
 Nord-Kivu
 Sud-Kivu 
 les deux Kivus
-
-
 aéroport de Ndjili
 lac Tanganyika
 
 
+
 // République dominicaine
 
-// Divers
+//Divers
+
 Hispaniola
 
 
-// République Tchèque
+
+// République tchèque
 
 // Roumanie
 
@@ -885,42 +1303,181 @@ Hispaniola
 
 // Russie
 
-// Divers
-fleuves : Ienisseï
-Lena
+// Provinces
+
+Altaï
+Kamtchatka
+Khabarovsk
+Krasnodar
+Krasnoïarsk
+Perm
+Primorie
+Stavropol
+Transbaïkalie
+Adyghés
+Altaï
+Bachkortostan
+Bouriatie
+Carélie
+Daghestan
+Ingouchie
+Kabardino-Balkarie
+Kalmoukie
+Karatchaevo-Tcherkessie
+Khakassie
+Komis
+Maris
+Mordovie
+Ossétie Nord
+Oudmourtie
+Sakha-Iakoutie
+Tatarstan
+Tchétchénie
+Tchouvachie
+Touva
+Amour
+Arkhangelsk
+Astrakhan
+Belgorod
+Briansk
+Iaroslavl
+Irkoutsk
+Ivanovo
+Kaliningrad
+Kalouga
+Kemerovo
+Kirov
+Kostroma
+Kourgan
+Koursk
+Leningrad
+Lipsk
+Magadan
+Moscou
+Mourmansk
+Nijni-Novgorod
+Novgorod
+Novossibirsk
+Omsk
+Oreil
+Orenbourg
+Oulianovsk
+Penza
+Pskov
+Riazan
+Sverdlosk
+Rostov
+Sakhaline
+Samara
+Saratov
+Smolensk
+Tambov
+Tcheliabinsk
+Tioumen
+Tomsk
+Toula
+Tver
+Vladimir
+Volgograd
+Vologda
+Voronej
+
+Extrême-Orient
+
+Oural
+Sibérie
+
+Volga
+
+//Divers
+
 
 détroit de Béring
 mer de Béring
+Baïkal-Amour
 
-ligne ferroviaire Baïkal-Amour
 
 
 // Rwanda
 
+// Saint-Kitts-et-Nevis
+
+// Saint-Marin
+
+//Divers
+
+
+
+
+
+// Saint-Vincent-et-les-Grenadines
+
+//Divers
+
+
+
+
+
+// Sainte-Lucie
+
+// Salomon
+
 // Salvador
 
-// Divers
+//Divers
+
 El Mozote
 El Salvador 
 
 
+
+// Samoa
+
+//Divers
+
+
+Savai'i
+Upolu
+
+
+
+// São-Tomé-et-Príncipe
+
+// Provinces
+
+São-Tomé
+Príncipe
+
+//Divers
+
+
+
+
+
 // Sénégal
 
-// Divers
-pour la Casamance
-création prévue d'une entité autonome dans le nouveau découpage territorial décentralisé.
+//Divers
+
+Casamance
+
+
 
 
 
 // Serbie
 
-// Divers
+//Divers
+
+Voïvodine
+
 
 
 // Seychelles
 
-// Divers
-composées de 115 îles et îlots
+//Divers
+
+
+
 
 
 // Sierra Leone
@@ -933,44 +1490,49 @@ composées de 115 îles et îlots
 
 // Somalie
 
-// Divers
+//Divers
+
 détroit de Bab Al-Mandeb
 Sool
 État semi-autonome de Puntland
 
 
+
 // Soudan
 
-// Divers
+//Divers
+
 Abyei
 Nil Blanc
 Nil Bleu 
 État du Nil Bleu
-
-
 district d'Abyei
 barrage hydroélectrique de Méroé
 monts Nouba
 
 
+
 // Soudan du Sud
 
-// Divers
+//Divers
+
 Abyei
+
 
 
 // Sri Lanka
 
 // Provinces
-Nord
-Est
-Centre-Nord
-Nord-Ouest
-Centre
+
+
+
+
+
+
 Uva
 Sabaragamuwa
-Ouest
-Sud.
+
+
 
 // Suède
 
@@ -982,33 +1544,71 @@ Sud.
 
 // Syrie
 
-// Divers
+//Divers
+
+Alep-Est
+Alépins
 Ghouta
 Qalamoun
 Rojava
+
 
 
 // Tadjikistan
 
 // Taïwan
 
-// Divers
-détroit de Formose ou détroit de Taïwan
+//Divers
+
+détroit de Formose
+détroit de Taïwan
 Kaohsiung
+
 
 
 // Tanzanie
 
 // Tchad
 
-// Divers
-bande d'Aouzou
-fleuves : Chari
+//Divers
+
+bande d'Aouz
+
+Chari
 Logone
 
 
 
+// Thaïlande
+
+//Divers
+
+Isaan
+
+
+
+// Timor-Leste
+
+//Divers
+
+Atauro
+enclave d'Oecussi
+gisements pétroliers offshore de Kitan et Bayu-Undan
+« Greater Sunrise »
+Tibar
+
+
+
+
 // Togo
+
+// Tonga
+
+//Divers
+
+
+
+
 
 // Trinité-et-Tobago
 
@@ -1018,30 +1618,75 @@ Logone
 
 // Turquie
 
-// Divers
+//Divers
+
 Asie Mineure
 Kurdistan
 le Cordon
 la Corne d'Or
 
 
+
+// Tuvalu
+
+//Divers
+
+
+
+
+
+// Ukraine
+
+// Provinces
+
+Donsk
+Lougansk
+Transcarpatie
+
+//Divers
+
+Donbass
+Kryvorizhstal
+Maïdan
+mer Noire
+mer d'Azov
+républiques populaires autoproclamées de Donetsk et de Lougansk
+Yiddishland
+
+
+
+// Union soviétique
+
 // Uruguay
 
-// Divers
+//Divers
+
 Río de la Plata
+
+
+
+// Vanuatu
+
+//Divers
+
+
+
 
 
 // Vatican
 
 // Venezuela
 
-// Divers
+//Divers
+
 région Occidente
+
 
 
 // Vietna
 
-// Divers
+//Divers
+
 Ho Chi Minh-Ville 
 Ho Chi Minh
 
@@ -1049,36 +1694,37 @@ Ho Chi Minh
 
 // Yémen
 
-// Divers
+//Divers
+
 Hadramaout
 Hanish
 Kamaran  
 Périm 
 Socotra
-
 détroit de Bab Al-Mandeb
 Chabwa
 le Jawf
-lignes Hamza
-Philby
-Violet
 
-le « quart vide »
+
+
 
 
 // Zambie
 
-// Divers
+//Divers
+
 Chambezi
 Copperbelt
+
 
 
 // Zimbabwe
 
 // Continents
+Europe
 Afrique
 Amériques
 Asie
-Europe
+Continent
 Océanie
-Proche-Orient 
+Proche-Orient
