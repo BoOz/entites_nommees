@@ -2,6 +2,7 @@
 
 // TODO
 // passer un unique sur les listes texte (PKK) ?
+// passer la liste des institutions automatique et personnalité dans une liste d'alias pour repecher les FARC par exemple.
 
 include('mots_courants.php');
 
