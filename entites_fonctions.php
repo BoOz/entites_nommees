@@ -1,5 +1,6 @@
 <?php
 
+// TODO
 // passer un unique sur les listes texte (PKK) ?
 
 include('mots_courants.php');
@@ -20,6 +21,7 @@ define("LETTRE_CAPITALE","\p{Lu}");
 // var_dump("<pre>",$types_entites,"</pre>");
 
 // Isoler les entites connues (Institutions, Traités etc).
+// POur trouver ensuite les personnalités
 function trouver_entites($texte,$id_article){
 
 	$fragments = array();
@@ -392,7 +394,7 @@ function trouver_entites($texte,$id_article){
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
 
 	// trouver toutes les occurences d'une entité
-	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
+	if(preg_match_all( "`" . $regex . "`iu" , $texte ,$e)){
 		$entites = $e[0];
 		//var_dump("<pre>",$entites,"</pre>lol");
 		$recolte = traiter_fragments($entites, $type_entite, $texte, $fragments, $id_article, $texte_original);
