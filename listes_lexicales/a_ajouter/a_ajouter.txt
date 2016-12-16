@@ -13,13 +13,6 @@ Frontex
 // think tank
 Terra Nova
 
-
-// entreprises
-Vinci
-Google
-Facebook
-France Télécom
-
 // autres
 Opus Dei
 
@@ -55,7 +48,6 @@ Coup d'État
 guerre du Golfe
 traité de Versailles
 Intifada
-Charlie Hebdo
 révolution russe
 Révolution française
 
@@ -87,7 +79,6 @@ Nuit debout
 PIB
 Bourse
 Consensus de Washington
-Silicon Valley
 New Deal
 
 // traités
