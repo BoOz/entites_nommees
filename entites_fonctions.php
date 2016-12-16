@@ -394,8 +394,8 @@ function trouver_entites($texte,$id_article){
 
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
 
-	// trouver toutes les occurences d'une entité
-	if(preg_match_all( "`" . $regex . "`iu" , $texte ,$e)){
+	// Trouver toutes les occurences d'une entité en respectant la casse bien sur.
+	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
 		$entites = $e[0];
 		//var_dump("<pre>",$entites,"</pre>lol");
 		$recolte = traiter_fragments($entites, $type_entite, $texte, $fragments, $id_article, $texte_original);
