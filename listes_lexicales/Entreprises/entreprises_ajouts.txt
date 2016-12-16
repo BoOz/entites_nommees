@@ -1,6 +1,7 @@
 // énergie
 BP
 Royal Dutch Shell
+Elf 
 GDF Suez
 ExxonMobil
 Total
@@ -8,6 +9,8 @@ Chevron
 Électricité de France (EDF)
 Loy Yang Power
 Tokyo Electric Power Company
+Veolia 
+Rosatom 
 
 // transport et aviation
 Air France
@@ -15,9 +18,13 @@ Air France-KLM
 Boeing
 Société nationale des chemins de fer français (SNCF)
 European Aeronotic Defence and Space (EADS)
+Fiat 
 Peugeot société anonyme (PSA)
 Ford
+Toyota 
 Volkswagen
+Hyundai 
+Renault
 
 // banque et finance
 Citigroup
@@ -45,6 +52,10 @@ Google
 Mifare Classic
 International Data Corporation (IDC)
 Netflix
+Twitter
+YouTube
+Microsoft
+Apple
 
 // autre
 Fnac
@@ -66,3 +77,8 @@ Amazon
 Coca-Cola
 Eiffage
 Abertis
+SFR
+Airbnb 
+Tisco 
+Monsanto 
+Alstom 
