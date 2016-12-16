@@ -41,7 +41,7 @@ define("MOTS_FIN" , "Cedex|Parti|Dieu|PO Box|BP \d+") ;
 
 // Personnalités à Pseudo.
 
-define("ENTITES_PERSO","Machiavel|Molière|Mirabeau|Staline|Lénine|Mao|Bono|Mussolini|Voltaire|Sadate|Hitler|Marx|Lula|Pinochet|Allende");
+define("ENTITES_PERSO","Machiavel|Molière|Mirabeau|Staline|Lénine|Mao|Bono|Mussolini|Voltaire|Sadate|Hitler|Marx|Lula|Pinochet|Allende|Shakespeare");
 
 /* Patterns pour isoler des entités restées parmis des personnalités */
 
