@@ -6,6 +6,7 @@ Celtics de Glasgow
 
 // ONG
 Amnesty International
+Croix-Rouge 
 
 // OG
 Frontex
@@ -50,6 +51,7 @@ traité de Versailles
 Intifada
 révolution russe
 Révolution française
+Brexit
 
 // Social
 Loi Macron
@@ -61,6 +63,7 @@ Mai 68
 
 // etat
 Sécurité sociale
+RSA
 
 // juridique
 Constitution
@@ -71,6 +74,8 @@ Déclaration universelle des droits de l'homme et du citoyen
 
 // affaires
 Panama papers
+SwissLeaks 
+LuxLeaks 
 
 // mouvements sociaux
 Nuit debout
@@ -80,9 +85,10 @@ PIB
 Bourse
 Consensus de Washington
 New Deal
+CAC 40
 
 // traités
 grand marché transatlantique (GMT)
 Bretton Woods
-
+Sykes-Picot 
 
