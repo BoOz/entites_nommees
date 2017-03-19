@@ -1,0 +1,66 @@
+	<h2>Entités nommées</h2>
+	<span>[(#GET{affdate}|trim|sinon{#ENV{sdate}})]</span>
+
+	<p>
+	Filtrer par date : <a href="[(#SELF|parametre_url{decenie,1950})]">1954-59</a><BOUCLE_chrono(DATA){source sql,"select date from entites_nommees where date > '1950-01-01 00:00:00' group by year(date)"}>[(#DATE|annee|modulo{10}|=={0}|oui), <a href="[(#SELF|parametre_url{decenie,[(#DATE|annee)]})]" style="[(#ENV{decenie}|replace{\d$}|=={#DATE|annee|replace{\d$}}|oui)font-weight:bold]">[(#DATE|annee)]</a> ]</BOUCLE_chrono> 
+	</p>
+	
+	#SET{articles,#ARRAY}
+	#SET{compagnons,#ARRAY}
+	#SET{proches,#ARRAY}
+	
+	#SET{filtre_entites,INDETERMINE}
+	[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
+	
+	#SET{andwhere,""}
+	[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}|_q}|replace{"^'"}|replace{"'$"}} ]
+	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
+	[(#ENV{decenie}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like }|concat{#ENV{decenie}|replace{\d$}|concat{%}|_q}} ]
+	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
+
+	#SET{req,#VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q}}
+	<BOUCLE_fc(DATA){source sql, #GET{req} }{si #ENV{entite}|oui}>
+	#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
+	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+
+	#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}
+	
+	#SET{tab,#ARRAY}
+	<BOUCLE_home(DATA){source sql, #GET{req} }{si #ENV{id_article}|non}>
+		#SET{tab,#GET{tab}|array_merge{#ARRAY{#ENTITE,#NB}}}
+	</BOUCLE_home>
+
+	#SET{pays,#ARRAY}
+	<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>
+		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
+	</BOUCLE_territoires>
+
+	<B_top_entites>
+	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
+		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
+			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
+	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+			</a>
+		</span>
+	</BOUCLE_top_entites>
+
+	<br />
+	<br />
+
+	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
+		<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
+			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+			</a>
+		</span>
+	</BOUCLE_top_territoires>
+
+	</div>
+	</B_top_entites>
+
+
+
+	

@@ -14,10 +14,11 @@
 		$entites_key = array(
 				"PRIMARY KEY"     => "id_entite",
 				"KEY entite"        => "entite",
-				"KEY type_entite"        => "type_entite"            		
+				"KEY type_entite"        => "type_entite",
+				"KEY date"        => "date",
 		);
 
-		$tables_principales['entites_nommees'] = array('field' => &$entites, 'key' => &$entites_key);													
+		$tables_principales['entites_nommees'] = array('field' => &$entites, 'key' => &$entites_key);
 
 		return $tables_principales;
 	}
