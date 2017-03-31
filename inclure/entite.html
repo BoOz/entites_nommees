@@ -56,39 +56,34 @@
 	</B_type>
 	
 	
-	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> 			#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
+	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}>#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
 	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+
+	<BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }{" | "}>
+	#ANNEE - #NB 
+	</BOUCLE_historique>
 	
-		#SET{tab,#ARRAY}
-		<BOUCLE_home(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités', 'Institutions', 'Institutions automatiques', 'Partis politiques', 'Peuples', 'a ajouter') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>
-			#SET{tab,#GET{tab}|array_merge{#ARRAY{#ENTITE,#NB}}}
-		</BOUCLE_home>
-	
-		#SET{pays,#ARRAY}
-		<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes') ANDWHERE group by entite having nb > 10 order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>
-			#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
-		</BOUCLE_territoires>
-			
-		<B_fragments_entite>
+	<B_fragments_entite>
 		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%">
 		#ANCRE_PAGINATION
-		<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
+		<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{pagination 500}{si #ENV{entite}|oui}>
 			<p>
 				<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
 				<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
-				<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]" title="Extrait de « [(#TITRE)] »">[voir]</a></small>
+				<a href="./?page=article&id_article=#ID_ARTICLE" title="Extrait de « [(#TITRE)] »">[voir]</a>
 			</p>
 		</BOUCLE_fragments_entite>
 			<p>#PAGINATION</p>
 		</div>
-		</B_fragments_entite>
-			#SET{comp,'having nb > 5'}	
-	<div style="margin:0 40px 0 0">
+	</B_fragments_entite>
 	
-		<div class="col">
+	#SET{comp,'having nb > 5'}	
+	
+	<div style="margin:0 40px 0 0">
+
 		<B_personnalites_frequents>
-			#ANCRE_PAGINATION
-		
+		#ANCRE_PAGINATION
+		<div class="col">
 		 <h3>Personnalités</h3>
 		
 			<ul>
@@ -164,7 +159,7 @@
 
 </div>
 
-<div class="entites_residuelles">
+<div class="entites_residuelles ui segment left aligned container">
 
 	<B_fragments_article>
 	<h3 style="">Type indéterminé (#GRAND_TOTAL)</h3>
