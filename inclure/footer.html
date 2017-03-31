@@ -1,0 +1,52 @@
+	<footer>
+	<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Navigation</h4>
+          <div class="ui inverted link list">
+            <a href="./?page=explorer" class="item">Explorer</a>
+            <a href="./?page=entites" class="item">Index</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Index</h4>
+          <div class="ui inverted link list">
+			<BOUCLE_types(DATA){source sql, #VAL{"select type_entite, count(id_entite) nb from entites_nommees group by type_entite order by nb desc"}}>
+				
+			[(#TYPE_ENTITE|in_array{#ARRAY{0,INDETERMINE,1,a ajouter,2,Géographie (auto),3,Institutions automatiques}}|oui) [(#SET{autres,[(#GET{autres}|concat{<a href="./?page=entites_inconnues" class="item">#TYPE_ENTITE [(#NB)]</a>})]})] ]
+			
+			[(#TYPE_ENTITE|in_array{#ARRAY{0,INDETERMINE,1,a ajouter,2,Géographie (auto),3,Institutions automatiques}}|non)
+			<a href="" class="item">[(#TYPE_ENTITE)] ([(#NB)])</a>
+			]
+			</BOUCLE_types>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">À vérifier</h4>
+          <div class="ui inverted link list">
+			#GET{autres}
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Logiciels</h4>
+          <div class="ui inverted link list">
+            <a href="" class="item">inclure entite id_article</a>
+            <a href="" class="item">Signet Entités nommer</a>
+
+            <a href="" class="item">Plugin entités nommées</a>
+            <a href="" class="item">Text Kit</a>
+          </div>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <img src="simple-spip/spip.png" class="ui centered image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="http://www.spip.net">Site réalisé avec SPIP </a>
+        <a class="item" href="https://github.com/BoOz/simple-spip">Simple SPIP</a>
+        <a href="http://semantic-ui.com/introduction/getting-started.html" class="item">Semantic-ui</a>
+        <a href="http://www.spip.net/fr_article5443.html" class="item">Boucle DATA</a>
+      </div>
+    </div>
+  </div>	
+  </footer>

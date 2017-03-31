@@ -1,20 +1,3 @@
-	<p style="height:1.5em;overflow:auto">
-	<span>Filtrer par décénie :</span> <a href="[(#SELF|parametre_url{decenie,1950})]">1954-59</a><BOUCLE_chrono(DATA){source sql,"select date from entites_nommees where date > '1950-01-01 00:00:00' group by year(date)"}>[(#DATE|annee|modulo{10}|=={0}|oui), <a href="[(#SELF|parametre_url{decenie,[(#DATE|annee)]})]" style="[(#ENV{decenie}|replace{\d$}|=={#DATE|annee|replace{\d$}}|oui)font-weight:bold]">[(#DATE|annee)]</a> ]</BOUCLE_chrono> 
-
-
-
-
-	<span style="padding-left:60%">Filtrer par annee :</span> <BOUCLE_arta(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y')}> [(#SET{date,[(#DATE|annee)]})]
-			<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
-		</BOUCLE_arta>
-	<br><br>
-	<span style="padding-left:60%">Filtrer par numero :</span> <BOUCLE_numeros(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y-%m')}>[(#SET{date,[(#DATE|annee)][-(#DATE|mois)]})]
-			<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
-		</BOUCLE_numeros>
-
-	</p>
-
-	
 	#SET{articles,#ARRAY}
 	#SET{compagnons,#ARRAY}
 	#SET{proches,#ARRAY}
@@ -50,8 +33,6 @@
 		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_territoires>
 
-
-	<B_top_personnalites>
 	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
@@ -60,13 +41,10 @@
 			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 			</a>
 		</span>
+		
 	</BOUCLE_top_personnalites>
+	</div>
 
-	<br />
-	<br />
-
-
-	<B_top_entites>
 	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
@@ -76,10 +54,9 @@
 			</a>
 		</span>
 	</BOUCLE_top_entites>
+	</div>
 
-	<br />
-	<br />
-
+	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
 			<a style="padding-right:20px;text-decoration:none" href="?page=entites_nommees[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
@@ -88,10 +65,18 @@
 			</a>
 		</span>
 	</BOUCLE_top_territoires>
-
 	</div>
-	</B_top_entites>
 
+<div class="ui segment">
+	<p style="height:1.5em;overflow:auto">
+	<span>Filtrer par décénie :</span> <a href="[(#SELF|parametre_url{decenie,1950})]">1954-59</a><BOUCLE_chrono(DATA){source sql,"select date from entites_nommees where date > '1950-01-01 00:00:00' group by year(date)"}>[(#DATE|annee|modulo{10}|=={0}|oui), <a href="[(#SELF|parametre_url{decenie,[(#DATE|annee)]})]" style="[(#ENV{decenie}|replace{\d$}|=={#DATE|annee|replace{\d$}}|oui)font-weight:bold]">[(#DATE|annee)]</a> ]</BOUCLE_chrono> 
 
-
-	
+	<span style="padding-left:60%">Filtrer par annee :</span> <BOUCLE_arta(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y')}> [(#SET{date,[(#DATE|annee)]})]
+			<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+		</BOUCLE_arta>
+	<br><br>
+	<span style="padding-left:60%">Filtrer par numero :</span> <BOUCLE_numeros(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y-%m')}>[(#SET{date,[(#DATE|annee)][-(#DATE|mois)]})]
+			<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+		</BOUCLE_numeros>
+	</p>
+</div>
