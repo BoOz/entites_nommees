@@ -1,0 +1,81 @@
+	<style>
+		ul {
+			margin:0;
+			list-style-type:none;
+			padding:0;
+		}
+		.col{
+			float:left;
+			width:12%;
+			margin-right:30px;
+		}
+		.col ul {
+			max-height:500px;
+			overflow:auto;
+		}
+		.amis{
+			margin:30px 0 ;
+		}
+		.a_ajouter {
+		    background-color: #2c3f4f;
+		    color: #bbbbbb;
+		    margin: 0;
+		    padding: 40px ;
+		}
+		.a_ajouter a{
+			color : white ;
+		}
+		.entites_residuelles {
+		    margin: 0;
+		    padding: 40px ;
+		}
+		.entites_residuelles a{
+		}
+		
+	</style>
+
+<div class="a_ajouter" style="clear:both;line-height:1.3em">
+	<B_a_ajouter>
+		#ANCRE_PAGINATION
+	
+	 <h3>À ajouter</h3>
+	
+		<ul>
+		<BOUCLE_a_ajouter(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='a ajouter' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
+			<li style="float:left;padding-right:15px">
+			#ENTITE&nbsp;<small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+		</small>
+			</li>
+		</BOUCLE_a_ajouter>
+		</ul>
+		<p>#PAGINATION</p>
+	</B_a_ajouter>
+
+<br style="clear:both" />
+
+</div>
+
+<div class="entites_residuelles" style="text-align:left">
+
+	<B_fragments_article>
+	<h3 style="">Type indéterminé (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_article(DATA){source sql, #VAL{"select entite, extrait, id_article from entites_nommees where id_article='LENTITE' and type_entite='INDETERMINE' order by date desc"}|replace{LENTITE,#ENV{id_article}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|oui}>
+		<div><strong>#ENTITE :</strong> [(#EXTRAIT)] 
+		</div>
+	</BOUCLE_fragments_article>
+	<p>#PAGINATION</p>
+	</B_fragments_article>
+
+	<B_fragments>
+	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
+		<div><strong>#ENTITE <small>(#TYPE_ENTITE)</small> :</strong> <small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#NB)]&nbsp;fois</a></small> [(#EXTRAIT)] 
+		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments>
+	<p>#PAGINATION</p>
+	</B_fragments>	
+
+</div>
