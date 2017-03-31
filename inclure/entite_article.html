@@ -1,0 +1,27 @@
+		<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prepa, prop, publie}>	
+		#SET{comp,''}
+		<h3 style="clear:left;">#TITRE</h3>
+	
+		[(#REM) Débug : Entites d'un article en direct sans enregistrement ]
+	
+		#SET{texte,#TITRE*|concat{" // "}|concat{#CHAPO*}|concat{" // "}|concat{#TEXTE*}|preparer_texte}
+		#SET{entites,#ARRAY}
+		#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
+	
+		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%">
+			<BOUCLE_entites_articles(DATA){source table,#GET{entites}}>
+			[<p>
+				 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> ([(#VALEUR|explode{"|"}|table_valeur{1})]) : [(#VALEUR|explode{"|"}|table_valeur{3})]
+				
+			</p>]
+			</BOUCLE_entites_articles>
+			<h4>Texte</h4>	
+			<div class="texte">
+				[(#CHAPO|concat{
+					#TEXTE})]
+				<div>
+				#NOTES
+				</div>
+			</div>
+		</div>
+		</BOUCLE_texte_article>
