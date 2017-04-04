@@ -1,7 +1,7 @@
 // énergie
 BP
 Royal Dutch Shell
-Elf 
+Elf
 GDF Suez
 ExxonMobil
 Total
@@ -9,8 +9,9 @@ Chevron
 Électricité de France (EDF)
 Loy Yang Power
 Tokyo Electric Power Company
-Veolia 
-Rosatom 
+Veolia
+Rosatom
+UraMin
 
 // transport et aviation
 Air France

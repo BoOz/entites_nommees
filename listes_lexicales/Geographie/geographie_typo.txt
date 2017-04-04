@@ -1,4 +1,4 @@
-/ lieux
+// lieux
 // Afghanistan
 
 // Afrique du Sud
@@ -94,8 +94,8 @@ Zahran
 
 // Provinces
 
-territoire Nord
-territoire de la capitale australienne
+Territoire Nord
+Territoire de la capitale australienne
 
 //Divers
 
@@ -269,13 +269,13 @@ centrale hydroélectrique de Mem'vele
 // Provinces
 
 Alberta
-Colombie britannique
+Colombie-Britannique
 Manitoba
 Nouveau-Brunswick
-Terre-Neuve Labrador
+Terre-Neuve--Labrador
 Ontario
 Nouvelle-Écosse
-Île prince Édouard
+Île--Prince-Édouard
 Québec
 Saskatchewan
 Nunavut
@@ -1300,6 +1300,18 @@ Hispaniola
 // Roumanie
 
 // Royaume-Uni
+
+Anguilla
+Bermudes
+îles Caïmans
+Falkland Islands
+Gibraltar
+îles Anglo-Normandes
+Jersey
+îles Vierges britanniques
+île de Man
+Montserrat
+
 
 // Russie
 
