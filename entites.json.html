@@ -1,0 +1,13 @@
+#HTTP_HEADER{Content-Type: text/plain; charset="#CHARSET"}
+{"success":true,"results":{
+<BOUCLE_categories(ENTITES_NOMMEES){entite LIKE %(#ENV{entite})%}{fusion type_entite}{","}>
+	"[(#TYPE_ENTITE|strtolower|translitteration)]":{
+		"name":"[(#TYPE_ENTITE)]",
+		"results":[
+		<BOUCLE_entites(ENTITES_NOMMEES){entite LIKE %(#ENV{entite})%}{type_entite = #TYPE_ENTITE}{fusion entite}{","}{0,4}>{
+			"title":"#ENTITE","description":" Healthy Population"
+			}</BOUCLE_entites>
+		]
+	}
+</BOUCLE_categories>
+}}
