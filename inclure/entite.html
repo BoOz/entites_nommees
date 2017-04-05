@@ -52,11 +52,10 @@
 	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
 	#TYPE_ENTITE [> (#ENV{entite})]
 	</BOUCLE_type>
-	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}>#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
-	([(#TOTAL_BOUCLE)])
+	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}} </BOUCLE_fc>
+	<small>(#TOTAL_BOUCLE)</small>
 	</B_fc>
 	</h2>
-	</B_type>
 	
 	<style>
 		.bar {
@@ -101,8 +100,6 @@
 	
 	#SET{data,#ARRAY}
 	<BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }> 			#SET{data,#GET{data}|array_merge{#ARRAY{#VAL{"'"}|concat{#ANNEE}|concat{"'"},#NB}}}	</BOUCLE_historique>
-	[(#GET{data}|max) articles au plus ]
-
 
 	<script type="text/javascript">
 		// Create data array of values to visualize
@@ -238,7 +235,7 @@
 	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
 	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 	[(#GET{articles}|sizeof|>={1}|oui)
-	#SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entites}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
+	#SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
 	]
 	
 	#SET{req,#VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}
