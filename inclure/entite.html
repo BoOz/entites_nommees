@@ -275,7 +275,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entites[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 				</small>
 					</li>
 				</BOUCLE_entite_frequents>
@@ -294,7 +294,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_entite_frequents_autres(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entites[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 				</small>
 					</li>
 				</BOUCLE_entite_frequents_autres>
@@ -315,7 +315,7 @@
 		<ul>
 		<BOUCLE_a_ajouter(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='a ajouter' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
 			<li style="float:left;padding-right:15px">
-			#ENTITE&nbsp;<small><a href="?page=entites[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+			#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 		</small>
 			</li>
 		</BOUCLE_a_ajouter>

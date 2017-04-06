@@ -17,4 +17,5 @@ Parti Communiste	Parti Communiste	Partis_politiques	Parti communiste français (
 PC	communiste français	Partis_politiques	Parti communiste français (PCF)
 Parti communiste	Parti communiste	Partis_politiques	Parti communiste français (PCF)
 NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
-
+Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
+État	coups d'État	a_ajouter	Coup d'État
