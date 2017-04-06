@@ -22,5 +22,5 @@ Fonds	Fonds monétaire international	Institutions	Fonds monétaire international
 Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II
 Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II
 Reagan	Reagan	Personnalités	Ronald Reagan
-Marx	Marx	Personnalités	Karl Max
+Marx	Marx	Personnalités	Karl Marx
 
