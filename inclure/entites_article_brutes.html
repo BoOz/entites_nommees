@@ -31,11 +31,11 @@
 <BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}>[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</BOUCLE_personnalites>
 
 <h3 style="margin-top:1.5em">Institutions</h3>
-<BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques,Institutions automatiques}{fusion entite}{par entite}{", "}>
+<BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques}{fusion entite}{par entite}{", "}>
 	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]
 </BOUCLE_institutions>
 
-<BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques,Institutions automatiques}{fusion type_entite}>
+<BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques}{fusion type_entite}>
 <h3 style="margin-top:1.5em">#TYPE_ENTITE</h3>
 <BOUCLE_entites(DATA){source table,#GET{entites}}{type_entite=#TYPE_ENTITE}{fusion entite}{par entite}{", "}>
 	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]
