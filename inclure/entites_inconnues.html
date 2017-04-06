@@ -72,7 +72,7 @@
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
 		<div><strong>#ENTITE <small>(#TYPE_ENTITE)</small> :</strong> <small><a href="?page=entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#NB)]&nbsp;fois</a></small> [(#EXTRAIT)] 
-		<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		<small><a href="?page=article&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
 		</div>
 	</BOUCLE_fragments>
 	<p>#PAGINATION</p>
