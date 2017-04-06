@@ -19,3 +19,6 @@ Parti communiste	Parti communiste	Partis_politiques	Parti communiste français (
 NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
 Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
 État	coups d'État	a_ajouter	Coup d'État
+Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II
+Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II
+Reagan	Reagan	Personnalités	Ronald Reagan
