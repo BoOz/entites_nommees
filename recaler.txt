@@ -5,4 +5,8 @@ Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de 
 OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
 ONU	ONU	Institutions	Organisation des Nations unies (ONU)
-
+FMI	FMI	Institutions	Fonds monétaire international (FMI)
+Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
+OLP	OLP	Partis_politiques	Organisation de libération de la Palestine (OLP)
+Hezbollah	Hezbollah	Partis_politiques	Parti de Dieu (Hezbollah)
+Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
