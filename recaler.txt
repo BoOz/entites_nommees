@@ -10,3 +10,11 @@ Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
 OLP	OLP	Partis_politiques	Organisation de libération de la Palestine (OLP)
 Hezbollah	Hezbollah	Partis_politiques	Parti de Dieu (Hezbollah)
 Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
+PS	PS	Partis_politiques	Parti socialiste (PS)
+Parti socialiste	Parti socialiste	Partis_politiques	Parti socialiste (PS)
+PC	PC	Partis_politiques	Parti communiste français (PCF)
+Parti Communiste	Parti Communiste	Partis_politiques	Parti communiste français (PCF)
+PC	communiste français	Partis_politiques	Parti communiste français (PCF)
+Parti communiste	Parti communiste	Partis_politiques	Parti communiste français (PCF)
+NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
+

@@ -1,12 +1,8 @@
 // partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
-Parti socialiste
-PS
 
 Parti communiste français
-PCF
-
 Parti communiste
-PC
+Parti socialiste
 
 // absents
 Organisation de libération de la Palestine (OLP)
