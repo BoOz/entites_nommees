@@ -65,10 +65,9 @@ class entites_nommees extends Command {
 					passthru("clear");
 					$output->writeln("<info>Requalification des données</info>");
 
-
-					// recaler apres coup 
+					// recaler apres coup d'apres le ficheir recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
-
+					
 					lire_fichier('plugins/entites_nommees/recaler.txt', $recale);
 					$entites_a_revoir = explode("\n", $recale);
 					if(sizeof($entites_a_revoir) > 1 )
@@ -88,18 +87,14 @@ class entites_nommees extends Command {
 								}
 								echo "\n" ;
 							}
-
-
+					
+					// recaler les ajouts dans les fichiers *_ajouts
+					
 					include_spip('iterateur/data');
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*ajouts.txt') ; /**/
 					foreach($types_requalif as $t){
-						
-						//var_dump($t);
-						
 						$type_entite = basename($t['dirname']);
 						
-						//var_dump($type_entite,$t['dirname'] . "/" . $t['basename']);
-
 						$entites_a_revoir = $freq = array(); 
 						lire_fichier($t['dirname'] . "/" . $t['basename'], $freq);
 						//echo $t['file'] . "\n" ;
@@ -115,12 +110,36 @@ class entites_nommees extends Command {
 									sql_query($up);
 									echo "\n\n" ;
 								}
-							}		
+							}
 						}
 					}
-
-						
-					exit();				
+					
+					// effacer les mots courrants (stop words)
+					lire_fichier(find_in_path("mots_courants.php"), $stop_words);
+					// virer les com
+					$stop_words = preg_replace(",^//.*,um","",$stop_words);
+					preg_match_all('`\=\s*"([^"]+)"`Uims', $stop_words, $w);
+					
+					$words = array();
+					foreach($w[1] as $reg){
+						$words = array_merge($words, explode("|",$reg));
+					}
+					// var_dump($words);
+					
+					if(sizeof($words) > 1 ){
+						foreach($words as $e){
+							$ent = sql_query("select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités') and entite= " . sql_quote($e));
+							$nb = sql_count($ent);
+							if($nb > 0){
+								echo $nb . " entites '" . $e . "' de statut INDETERMINE => Poubelle\n";
+								$del =  "delete from entites_nommees where  (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;
+								echo $del . "\n";
+								sql_query($del);
+								echo "\n" ;
+							}
+						}
+					}
+					exit();
 				}
 
 				

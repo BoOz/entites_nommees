@@ -2,20 +2,21 @@
 
 /* Listes de MOTS COURANTS qui matchent dans la regexp qui trouve les personnalités, par exemple parce qu'ils sont en début de phrase avec une majuscule. On va isoler les echapper de la regexp  */
 
-$adverbes = "Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quels?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout" ;
+$adverbes = "Tandis|Ensuite|Puisque|Cependant|Bien|Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quels?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout" ;
 $pronoms = "Les?|La|Aux?|Ces?|Cet+e?|Celui|celles?|ceux|Tous|toute?s?|Des|Aucune?|Du|Ça" ;
 $verbes = "Lire|Voir|Etant|Est(?:-ce)?|se|Peut-on|Reste|A-t-elle|A-t-il" ;
-$conjonctions = "Mais|Ou|Et|Donc|Or|Ni|Car" ;
+$conjonctions = "Lorsque|Mais|Ou|Et|Donc|Or|Ni|Car" ;
 $conj = "Je|Tu|Il|elles?|on|Nous|Vous|Ils|Lui" ;
 $compt = "Une?|Deux|Trois|Quatre|Cinq|Six|Sept|Huit|Neuf|Dix|Plusieurs|Premier|Première|Deuxième|Troisième|Certaines|Certains?|Beaucoup|Laquelle|Les?quels?|Quelque|Trop" ;
 $coord = "De|Par|Pour|Sans" ;
 $coord2 = "Pourquoi|Hormis" ;
 $poss = "Notre|Votre|Vos|mon|Ma|ton|son|sa|ses|nos|Leurs?";
 $autres = "Qui|Que|quoi|dont|Où|Quant|Quel|Quelles?" ;
-$loc = "Sous|Sur|dans|Près|Loin|Là|Ici|Devant|Au-delà|Face|Derrière|Contre";
+$loc = "Sous|Sur|dans|Près|Loin|Là|Ici|Devant|Au-delà|Face|Derrière|Contre|Vers";
 $quant = "Quelques|Nombre|Très|Peu|plus|moins|Certains";
 $temps = "Quand|Hier|aujourd|Lors|Depuis|avant|après|pendant|Longtemps|Début|Fin|Parfois|Durant";
 $jargon = "Cité|Originaire|Né|Née|Mort|Côté|Personne|Ancien|Résultats?|Ayant|Soit|Faute|Sorti|Parfois|Fort|Fondé|Faut-il";
+$autres = "Monsieur|Mme|L|C|Rien|Comment|Alors|Tel|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The" ;
 //$singleton = "Internet|Dieu|Eglise|Djihad|Prophète|Toile";
 
 define("MOTS_DEBUT", $adverbes . 
@@ -27,13 +28,13 @@ define("MOTS_DEBUT", $adverbes .
 					"|" . $coord . 
 					"|" . $coord2 .
 					"|" . $poss .
-					"|" . $autres .	
-					"|" . $loc .															 										
+					"|" . $autres .
+					"|" . $loc .
 					"|" . $quant .
-					"|" . $temps .										
-					"|" . $jargon .										
-					"|" . $singleton .										
-					"|" .  "Bien|Monsieur|Mme|Cependant|Lorsque|L|C|Tandis|Ensuite|Puisque|Rien|Comment|Alors|Tel|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The");
+					"|" . $temps .
+					"|" . $jargon .
+					"|" . $singleton .
+					"|" .  $autres);
 
 define("MOTS_MILIEU" , "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière") ;
 
@@ -56,3 +57,4 @@ define("FONCTIONS_PERSONNALITES_TYPO","présidente? de la République|chef de l'
 define("FONCTIONS_PERSONNALITES_AJOUTS","sénateur|député|L(?:a|e) porte-parole");
 
 define("FONCTIONS_PERSONNALITES", FONCTIONS_PERSONNALITES_AJOUTS . "|" . FONCTIONS_PERSONNALITES_TYPO);
+
