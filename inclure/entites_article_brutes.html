@@ -1,0 +1,51 @@
+<BOUCLE_article(ARTICLES){id_article}{statut IN prepa, prop, publie}>	
+#SET{comp,''}
+
+[(#REM) Calcul direct des entités d'un article sans enregistrement // plutot en mode debug ]
+[(#REM) Prévoir un autre bloc avec les entites validées en bdd ? ]
+
+
+#SET{texte,#TITRE*|concat{" // "}|concat{#CHAPO*}|concat{" // "}|concat{#TEXTE*}|preparer_texte}
+#SET{entites,#GET{texte}|trouver_entites{#ID_ARTICLE}|entites_to_array}
+
+[(#REM) trier les entites connues ]
+
+#SET{poids,#ARRAY}
+<BOUCLE_poids_entites(DATA){source table,#GET{entites}}{fusion entite}>#SET{total,0}
+<BOUCLE_n(DATA){source table,#GET{entites}}{entite=#ENTITE} />#SET{total,#TOTAL_BOUCLE}<//B_n>
+#SET{poids,#GET{poids}|array_merge{#ARRAY{#ENTITE,#GET{total}}}}
+</BOUCLE_poids_entites>
+
+#SET{max,#GET{poids}|max}
+#SET{moyenne,#GET{poids}|array_sum|div{#GET{poids}|count}}
+
+<h2>Entités nommées</h2>
+
+<p style="text-align:center">
+<BOUCLE_top(DATA){source table,#GET{poids}}{par cle}{valeur > #GET{moyenne}}>
+	<span style="font-size:[(#GET{poids}|table_valeur{#CLE}|nuage_mot{#GET{max}})]em;" title="[(#GET{poids}|table_valeur{#CLE})]">#CLE</span>
+</BOUCLE_top>
+</p>
+
+<h3 style="margin-top:1.5em">Personnalités</h3>
+<BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}>[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</BOUCLE_personnalites>
+
+<h3 style="margin-top:1.5em">Institutions</h3>
+<BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques,Institutions automatiques}{fusion entite}{par entite}{", "}>
+	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]
+</BOUCLE_institutions>
+
+<BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques,Institutions automatiques}{fusion type_entite}>
+<h3 style="margin-top:1.5em">#TYPE_ENTITE</h3>
+<BOUCLE_entites(DATA){source table,#GET{entites}}{type_entite=#TYPE_ENTITE}{fusion entite}{par entite}{", "}>
+	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]
+</BOUCLE_entites>
+</BOUCLE_types_entites_nommees>
+
+<h3 style="margin-top:1.5em">Entités inconnues</h3>
+<BOUCLE_entites_inconnues(DATA){source table,#GET{entites}}{type_entite = INDETERMINE}>
+<p><strong>#ENTITE</strong> : [(#EXTRAIT)]</p>
+</BOUCLE_entites_inconnues>
+
+</BOUCLE_article>
+

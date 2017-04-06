@@ -784,3 +784,17 @@ function nuage_mot($poids, $max){
 
 	return $class ;
 }
+
+function entites_to_array($entites_trouvees){
+
+	foreach($entites_trouvees as $entite){
+		$e = explode("|", $entite) ;
+		$entites_nommees[] = array (
+					"entite" => $e[0],
+					"type_entite" => $e[1],
+					"id_article" => $e[2],
+					"extrait" => $e[3]
+			);
+	}
+	return $entites_nommees ;
+}
