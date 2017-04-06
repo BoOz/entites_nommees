@@ -23,4 +23,5 @@ Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II
 Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II
 Reagan	Reagan	Personnalités	Ronald Reagan
 Marx	Marx	Personnalités	Karl Marx
+Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev
 
