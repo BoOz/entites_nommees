@@ -7,7 +7,7 @@
 	[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 	
 	#SET{andwhere,""}
-	[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite like LENTITE "}|replace{LENTITE,#VAL{%}|concat{#ENV{entite}}|concat{%}|_q}|replace{"^'"}|replace{"'$"}} ]
+	[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
 	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
 	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 

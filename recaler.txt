@@ -6,17 +6,7 @@ OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
 ONU	ONU	Institutions	Organisation des Nations unies (ONU)
 FMI	FMI	Institutions	Fonds monétaire international (FMI)
-Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
-OLP	OLP	Partis_politiques	Organisation de libération de la Palestine (OLP)
-Hezbollah	Hezbollah	Partis_politiques	Parti de Dieu (Hezbollah)
 Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
-PS	PS	Partis_politiques	Parti socialiste (PS)
-Parti socialiste	Parti socialiste	Partis_politiques	Parti socialiste (PS)
-PC	PC	Partis_politiques	Parti communiste français (PCF)
-Parti Communiste	Parti Communiste	Partis_politiques	Parti communiste français (PCF)
-PC	communiste français	Partis_politiques	Parti communiste français (PCF)
-Parti communiste	Parti communiste	Partis_politiques	Parti communiste français (PCF)
-NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
 Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
 État	coups d'État	a_ajouter	Coup d'État
 Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II
@@ -24,4 +14,19 @@ Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II
 Reagan	Reagan	Personnalités	Ronald Reagan
 Marx	Marx	Personnalités	Karl Marx
 Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev
+Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong
+Mao	Mao	Personnalités	Mao Zedong
+
+// partis politiques avec nom d'usage
+Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
+OLP	OLP	Partis_politiques	Organisation de libération de la Palestine (OLP)
+Hezbollah	Hezbollah	Partis_politiques	Parti de Dieu (Hezbollah)
+NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
+PS	PS	Partis_politiques	Parti socialiste (PS)
+Parti socialiste	Parti socialiste	Partis_politiques	Parti socialiste (PS)
+PC	PC	Partis_politiques	Parti communiste français (PCF)
+Parti Communiste	Parti Communiste	Partis_politiques	Parti communiste français (PCF)
+PC	communiste français	Partis_politiques	Parti communiste français (PCF)
+Parti communiste	Parti communiste	Partis_politiques	Parti communiste français (PCF)
+Front	Front national	Partis_politiques	Front national (FN)
 

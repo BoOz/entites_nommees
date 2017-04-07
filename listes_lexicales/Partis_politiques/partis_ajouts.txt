@@ -1,10 +1,13 @@
-// partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
-
+// partis cité directement dans la forme réduite sans accronymes. penser ensuite à les recaler dans le fichier recaler.txt
+Front national
 Parti communiste français
 Parti communiste
 Parti socialiste
 
-// absents
+// nom d'usage en VO
+Forza Italia
+
+// absents de typo diplo
 Organisation de libération de la Palestine (OLP)
 Al-Qaida
 Daech
