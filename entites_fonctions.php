@@ -56,7 +56,7 @@ function trouver_entites($texte,$id_article){
 				
 						}
 					}
-					$i++;	
+					$i++;
 				}
 			}
 		}
@@ -350,9 +350,6 @@ function trouver_entites($texte,$id_article){
 		}else{
 			$fragments_fusionnes[] = $v ;
 		}
-
-
-
 	}
 
 	/**/
@@ -420,8 +417,6 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 
 	//var_dump("<pre>",$entites,"</pre>lol");
 
-	//var_dump("<pre>");
-
 	// Chasse aux entites ouverte !
 	// On supprime les entites du texte pour les chasser toutes à la fin ou ne reste plus qu'un texte sans entites.
 	foreach($entites as $entite){
@@ -462,19 +457,23 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 
 function trouver_noms($texte){
 
-	// M. Joseph (« Joe ») Lhota. http://localhost:8888/diplo/?page=noms&id_article=50640
-
+	// Trouver des noms de personnalités dans un texte en recherchant le masque : Xxx Xxx xx xx Xxx
 	// http://stackoverflow.com/questions/7653942/find-names-with-regular-expression
 
-	// virer les débuts de phrases
-	$reg =  "%(?:\P{L})". // un espace ou saut de ligne ou guillement ou apostrophe non capturé
-			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas de mot de debut de phrase avec un capitale lambda ou en CAPS
+	// http://php.net/manual/fr/regexp.reference.assertions.php
+	// http://php.net/manual/fr/regexp.reference.subpatterns.php
+	// (?<!foo)bar trouve les occurrences de "bar" qui ne sont pas précédées par "foo". // assertion arriere negative
+	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
+
+	// virer les débuts de phrases fréquents avec une liste de mots fréquents
+	$reg =  "%(?:\P{L})". // lettre ou ponctuation non capturée
+			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
 			"(".
 				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:" . LETTRES . ")(?:". LETTRESAP ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou ' (mais pas en deuxieme) ou d'un .
 				"(?:\s+" . LETTRE_CAPITALE . "(?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
 				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
 				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
-			"|". ENTITES_PERSO .")". // Personnalités à pseudo
+			"|". ENTITES_PERSO .")". // Personnalités à pseudo // a virer ?
 	"%mu"	;
 
 	preg_match_all($reg,$texte,$m);
@@ -604,14 +603,14 @@ function preparer_texte($texte){
 
 function trouver_entites_residuelles($texte){
 
-	//var_dump($texte);
-
-	// mots avec une majuscule. Mais pas précédé d'un . // pas au point...
-	preg_match_all("`(?:\P{L})(?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+)\s+`u", $texte, $m);
-
-	//var_dump($m);
-
-	$entites_residuelles = $m[0];
+	// Mots avec une Capitale pas en début de phrase.
+	preg_match_all("`" . 
+					LETTRES . // une lettre ponctuation NON incluse.
+					"\s+" . //  espace 
+					"(" . LETTRE_CAPITALE . LETTRES ."+)\s+". // une capitale suivie de lettres
+					"`u", $texte, $m);
+	
+	$entites_residuelles = $m[1];
 
 	if(is_array($entites_residuelles) and sizeof($entites_residuelles) >= 1)
 		array_walk($entites_residuelles,"nettoyer_entite_nommee");
@@ -620,8 +619,7 @@ function trouver_entites_residuelles($texte){
 		return $entites_residuelles ;
 	else{ // ne pas merger avec un tableau NULL
 		return array(0 => 'fail');
-	}	
-	
+	}
 }
 
 function enregistrer_entites($entites = array(), $id_article){
