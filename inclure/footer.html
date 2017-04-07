@@ -11,9 +11,9 @@
           <h4 class="ui inverted header">Navigation</h4>
           <div class="ui inverted link list">
           <BOUCLE_types(DATA){source sql, #VAL{"select type_entite, count(id_entite) nb from entites_nommees group by type_entite order by nb desc"}}>
-			[(#TYPE_ENTITE|in_array{#ARRAY{0,INDETERMINE,1,a ajouter,2,Géographie (auto),3,Institutions automatiques}}|oui) [(#SET{autres,[(#GET{autres}|concat{<a href="./?page=entites_inconnues" class="item">#TYPE_ENTITE [(#NB)]</a>})]})] ]
+			[(#TYPE_ENTITE|in_array{#ARRAY{0,INDETERMINE,1,a ajouter,2,Géographie (auto),3,Institutions automatiques}}|oui) [(#SET{autres,[(#GET{autres}|concat{<a href="./?page=entites_inconnues" class="item">#TYPE_ENTITE <small>([(#NB|number_format{0,","," "})])</small></a>})]})] ]
 			[(#TYPE_ENTITE|in_array{#ARRAY{0,INDETERMINE,1,a ajouter,2,Géographie (auto),3,Institutions automatiques}}|non)
-			<a href="" class="item">[(#TYPE_ENTITE)] ([(#NB)])</a>
+			<a href="" class="item">[(#TYPE_ENTITE)] <small>([(#NB|number_format{0,","," "})])</small></a>
 			]
 			</BOUCLE_types>
           </div>
