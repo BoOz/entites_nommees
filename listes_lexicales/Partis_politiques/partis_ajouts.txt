@@ -3,6 +3,7 @@ Front national
 Parti communiste français
 Parti communiste
 Parti socialiste
+Khmers rouges
 
 // nom d'usage en VO
 Forza Italia
@@ -17,4 +18,6 @@ Frères musulmans
 
 // anciens partis
 Nouveau Parti anticapitaliste (NPA)
+Union pour un mouvement populaire (UMP)
+Parti ouvrier d'unification marxiste (POUM)
 

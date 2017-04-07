@@ -31,6 +31,7 @@ PS	PS	Partis_politiques	Parti socialiste (PS)
 Parti socialiste	Parti socialiste	Partis_politiques	Parti socialiste (PS)
 PC	communiste français	Partis_politiques	Parti communiste français (PCF)
 Front	Front national	Partis_politiques	Front national (FN)
+Khmers	Khmers rouges	Partis_politiques	Khmers rouges
 
 // pays avec noms d'usage
 RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
