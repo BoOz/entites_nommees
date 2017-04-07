@@ -8,7 +8,7 @@ Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
 ONU	ONU	Institutions	Organisation des Nations unies (ONU)
 FMI	FMI	Institutions	Fonds monétaire international (FMI)
 
-// personalités
+// personnalités
 Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
 Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
 État	coups d'État	a_ajouter	Coup d'État

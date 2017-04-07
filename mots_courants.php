@@ -13,7 +13,7 @@ $coord2 = "Pourquoi|Hormis" ;
 $poss = "Notre|Votre|Vos|mon|Ma|ton|son|sa|ses|nos|Leurs?";
 $autres = "Qui|Que|quoi|dont|Où|Quant|Quel|Quelles?" ;
 $loc = "Sous|Sur|dans|Près|Loin|Là|Ici|Ailleurs|Devant|Au-delà|Face|Derrière|Contre|Vers";
-$quant = "Quelques|Nombre|Très|Peu|plus|moins|Certains";
+$quant = "Environ|Quelques|Nombre|Très|Peu|plus|moins|Certains";
 $temps = "Quand|Hier|aujourd|Lors|Depuis|avant|après|pendant|Longtemps|Début|Fin|Parfois|Durant";
 $jargon = "Article|Cité|Originaire|Né|Née|Mort|Côté|Personne|Ancien|Résultats?|Ayant|Soit|Faute|Sorti|Parfois|Fort|Fondé|Faut-il";
 $autres = "Monsieur|Mme|L|C|Rien|Est-il|Être|Comment|Alors|Tel|Telle|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The" ;
@@ -35,8 +35,15 @@ define("MOTS_DEBUT", $adverbes .
 					"|" . $jargon .
 					"|" . $singleton .
 					"|" .  $autres);
+					
 
-define("MOTS_MILIEU" , "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière") ;
+// Mots au milieu de la séquence cherchée en regex
+
+$mots_milieu = "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière" ;
+$verbes_milieux = "rencontre" ;
+
+define("MOTS_MILIEU" ,	$mots_milieu . 
+						"|" . $verbes_milieux ) ;
 
 define("MOTS_FIN" , "Cedex|Parti|Dieu|PO Box|BP \d+") ;
 
