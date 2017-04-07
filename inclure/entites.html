@@ -20,12 +20,13 @@
 	#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
 	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 
+	<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
+	
 	#SET{moyenne,100}
-	
-	[(#REM) pour une entite on pondere par rapport a son poids ]
+	[(#REM) pour une entite ou si on a peu d'entités en base, on pondere par rapport au poids de l'entite qui a le plus de citations ]
+
 	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select entite, count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
-	<BOUCLE_max(DATA){source sql,#GET{req}}{si #ENV{entite}}> #SET{moyenne,#MOYENNE|round} </BOUCLE_max>
-	
+	<BOUCLE_max(DATA){source sql,#GET{req}}{si #ENV{entite}|ou{#GET{nb_entites}|<{100000}}}> #SET{moyenne,#MOYENNE|round} </BOUCLE_max>
 	
 	#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne}}}
 	#SET{tab,#ARRAY}
