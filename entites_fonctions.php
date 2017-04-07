@@ -131,8 +131,6 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 		
 		*/
-
-
 	}
 	
 	// a debug
@@ -608,8 +606,8 @@ function trouver_entites_residuelles($texte){
 
 	//var_dump($texte);
 
-	// mots avec une majuscule.
-	preg_match_all("`(?!(?i)(?:". MOTS_DEBUT .")\s+)" . LETTRE_CAPITALE ."(?:". LETTRES ."+)\s+`u", $texte, $m);
+	// mots avec une majuscule. Mais pas précédé d'un .
+	preg_match_all("`(?!(?i)(?:". MOTS_DEBUT ."|\.)\s+)(?<!\.\s)" . LETTRE_CAPITALE ."(?:". LETTRES ."+)\s+`u", $texte, $m);
 
 	//var_dump($m);
 
