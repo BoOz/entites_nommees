@@ -21,18 +21,19 @@ Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong
 Mao	Mao	Personnalités	Mao Zedong
 Le Pen	Mme Le Pen	Personnalités	Marine Le Pen
 Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen
+Pinochet	Pinochet	Personnalités	Augusto Pinochet
 
 // partis politiques avec nom d'usage
-Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
-OLP	OLP	Partis_politiques	Organisation de libération de la Palestine (OLP)
-Hezbollah	Hezbollah	Partis_politiques	Parti de Dieu (Hezbollah)
-NPA	NPA	Partis_politiques	Nouveau Parti anticapitaliste (NPA)
-PS	PS	Partis_politiques	Parti socialiste (PS)
-Parti socialiste	Parti socialiste	Partis_politiques	Parti socialiste (PS)
-PC	communiste français	Partis_politiques	Parti communiste français (PCF)
-Front	Front national	Partis_politiques	Front national (FN)
-Khmers	Khmers rouges	Partis_politiques	Khmers rouges
-
+Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
+OLP	OLP	Partis politiques	Organisation de libération de la Palestine (OLP)
+Hezbollah	Hezbollah	Partis politiques	Parti de Dieu (Hezbollah)
+NPA	NPA	Partis politiques	Nouveau Parti anticapitaliste (NPA)
+PS	PS	Partis politiques	Parti socialiste (PS)
+Parti socialiste	Parti socialiste	Partis politiques	Parti socialiste (PS)
+PC	communiste français	Partis politiques	Parti communiste français (PCF)
+Front	Front national	Partis politiques	Front national (FN)
+Khmers	Khmers rouges	Partis politiques	Khmers rouges
+Conseil	Conseil national de la Résistance	Partis politiques	Conseil national de la Résistance (CNR)
 // pays avec noms d'usage
 RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
 RDA	RDA	Pays	République démocratique allemande (RDA)
