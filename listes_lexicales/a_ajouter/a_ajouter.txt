@@ -30,6 +30,7 @@ prix Nobel
 // Périodes / Régimes
 Renaissance
 Lumières
+Second Empire
 
 IIIe République
 Ve République

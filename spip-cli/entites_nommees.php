@@ -101,6 +101,8 @@ class entites_nommees extends Command {
 						$entites_a_revoir = explode("\n", $freq);
 						if(sizeof($entites_a_revoir) > 1 ){
 							foreach($entites_a_revoir as $e){
+								if(trim($e) == "")
+									continue ;
 								$ent = sql_query("select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités') and entite= " . sql_quote($e));
 								$nb = sql_count($ent);
 								if($nb > 0){

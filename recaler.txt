@@ -1,4 +1,5 @@
 // La bonne entite après coup
+
 // entite actuelle 	entite dans l'extrait	type_entite	entite
 Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
@@ -16,6 +17,10 @@ Marx	Marx	Personnalités	Karl Marx
 Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev
 Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong
 Mao	Mao	Personnalités	Mao Zedong
+
+// personalités
+Le Pen	Mme Le Pen	Personnalités	Marine Le Pen
+Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen
 
 // partis politiques avec nom d'usage
 Hamas	Hamas	Partis_politiques	Mouvement de la résistance islamique (Hamas)
