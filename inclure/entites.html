@@ -21,10 +21,6 @@
 	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 
 	<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
-	
-	<h3>Entités nommées
-	<small><small> : [(#GET{nb_entites}|number_format{0,","," "})]</small></small>
-	</h3>
 
 	#SET{moyenne,100}
 	[(#REM) pour une entite ou si on a peu d'entités en base, on pondere par rapport au poids de l'entite qui a le plus de citations ]
