@@ -12,7 +12,7 @@ include('mots_courants.php');
 // ini_set("pcre.recursion_limit", "10000000000000");
 
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
-define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı-]"); // il en manque, passer en /u
+define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı'-]"); // il en manque, passer en /u
 
 // http://www.regular-expressions.info/unicode.html
 // \p{L} lettres

@@ -5,6 +5,7 @@ Québec
 Saïgon
 Abidjan
 La Haye
+Marseille
 
 // alias
 Caire
