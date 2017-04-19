@@ -25,34 +25,39 @@
 	#SET{moyenne,100}
 	[(#REM) pour une entite ou si on a peu d'entités en base, on pondere par rapport au poids de l'entite qui a le plus de citations ]
 
-	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select entite, count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
-	<BOUCLE_max(DATA){source sql,#GET{req}}{si #ENV{entite}|ou{#GET{nb_entites}|<{1000000}}}> #SET{moyenne,#MOYENNE|round} </BOUCLE_max>
+	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
+	<BOUCLE_max_inst(DATA){source sql,#GET{req}}{si #ENV{entite}|ou{#GET{nb_entites}|<{1000000}}}> #SET{moyenne_inst,#MOYENNE|round} </BOUCLE_max_inst>
+
+	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
+	<BOUCLE_max_pers(DATA){source sql,#GET{req}}{si #ENV{entite}|ou{#GET{nb_entites}|<{1000000}}}> #SET{moyenne_pers,#MOYENNE|round} </BOUCLE_max_pers>
+
+	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
+	<BOUCLE_max_geo(DATA){source sql,#GET{req}}{si #ENV{entite}|ou{#GET{nb_entites}|<{1000000}}}> #SET{moyenne_geo,#MOYENNE|round} </BOUCLE_max_geo>
 	
-	#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne}}}
+	#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_inst}}}
 	#SET{tab,#ARRAY}
 	<BOUCLE_home(DATA){source sql, #GET{req} }{si #ENV{id_article}|non}>
 		#SET{tab,#GET{tab}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_home>
 	
 	#SET{personnalites,#ARRAY}
-	<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne}}}{si #ENV{id_article}|non}>
+	<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_pers}}}{si #ENV{id_article}|non}>
 		#SET{personnalites,#GET{personnalites}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_personnalites>
 
 	#SET{pays,#ARRAY}
-	<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne}}}{si #ENV{id_article}|non}>
+	<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite having nb > LEMAX order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_geo}}}{si #ENV{id_article}|non}>
 		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_territoires>
 
 	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
-		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
+		<span style="font-size:[(#VALEUR|nuage_mot{#GET{personnalites}|max})]em;">
 			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
 	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 			</a>
 		</span>
-		
 	</BOUCLE_top_personnalites>
 	</div>
 
