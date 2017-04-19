@@ -175,6 +175,9 @@ class entites_nommees extends Command {
 				if($type_source == "spip_syndic_articles")
 					$requete = "select id_syndic_article id_article from spip_syndic_articles where id_syndic_article not in(" . implode(",", $articles_faits) . ") order by date desc limit 0,1000" ;
 				
+				//var_dump($requete);
+				//die();
+				
 				// chopper les articles non déjà faits ;
 				$articles = sql_query($requete);
 				$res = sql_fetch_all($articles) ;
@@ -212,6 +215,13 @@ class entites_nommees extends Command {
     				include_spip("entites_fonctions");
     				$texte = preparer_texte($art['titre'] . " // \n" . $art['chapo'] . " // \n" . $art['texte'] . "\n");
 					$fragments = trouver_entites($texte, $art['id_article']) ;
+					//var_dump($fragments);
+					
+					if(!$fragments)
+						$fragments = array("rien|rien|" . $art['id_article'] ."|rien");
+					
+					//var_dump($fragments);
+
 					enregistrer_entites($fragments, $art['id_article'], $art['date_redac']);
 					
 					// Si tout s'est bien passé, on avance la barre
