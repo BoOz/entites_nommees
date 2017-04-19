@@ -38,16 +38,25 @@ class entites_nommees extends Command {
 				InputOption::VALUE_OPTIONAL,
 				'Requalifier les entités de statut INDETERMINE (en renommant le type d\'apres les fichiers du répertoire a_ajouter)',
 				'non'
+			)
+			->addOption(
+				'type',
+				't',
+				InputOption::VALUE_OPTIONAL,
+				'Chercher les entites dans le type `-t spip_syndic_articles`...',
+				'spip_articles'
 			);
+
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output) {
 		global $spip_racine;
 		global $spip_loaded;
-		global $spip_version_branche ;		
+		global $spip_version_branche ;
 	
 		$restart = $input->getOption('restart') ;
 		$requalifier = $input->getOption('maj') ;
+		$type_source = $input->getOption('type') ;
 	
 		include_spip("base/abstract_sql");
 				
@@ -143,20 +152,31 @@ class entites_nommees extends Command {
 					}
 					exit();
 				}
-
 				
 				if($restart !=="non"){
 					$output->writeln("<info>On efface tout et on recommence.</info>");
 					sql_query("truncate table entites_nommees");
 				}
+				
+				//
+				// chercher les entites dans 1 000 ... non déjà traités
+				//
+				
 				// articles deja faits
 				$articles_faits = array("0") ;
 				$articles_sql = sql_allfetsel("id_article", "entites_nommees", "", "id_article");
 				foreach($articles_sql as $a)
-					$articles_faits[] = $a['id_article'] ;	
-
-				// chopper les articles non déjà faits ;				
-				$articles = sql_query("select a.id_article from spip_articles a where a.statut !='prepa' and a.id_secteur=" . _SECTEUR_ENTITES . " and a.id_article not in(" . implode(",", $articles_faits) . ") order by a.date_redac desc limit 0,1000");
+					$articles_faits[] = $a['id_article'] ;
+				
+				
+				// articles
+				$requete = "select id_article from spip_articles where statut !='prepa' and id_secteur=" . _SECTEUR_ENTITES . " and id_article not in(" . implode(",", $articles_faits) . ") order by date_redac desc limit 0,1000" ;
+				// syndic articles
+				if($type_source == "spip_syndic_articles")
+					$requete = "select id_syndic_article id_article from spip_syndic_articles where id_syndic_article not in(" . implode(",", $articles_faits) . ") order by date desc limit 0,1000" ;
+				
+				// chopper les articles non déjà faits ;
+				$articles = sql_query($requete);
 				$res = sql_fetch_all($articles) ;
 				
 				// start and displays the progress bar
@@ -168,16 +188,32 @@ class entites_nommees extends Command {
 				
 				foreach($res as $a){
 					
-					$art = sql_fetsel("id_article, titre, chapo, texte, date_redac", "spip_articles", "id_article=" . $a['id_article']);
+					/// articles
+					$select = "id_article, titre, chapo, texte, date_redac" ;
+					$table = "spip_articles" ;
+					$where = "id_article=" . $a['id_article'] ;
+
+					if($type_source == "spip_syndic_articles"){
+						/// syndic_articles
+						$select = "id_syndic_article id_article, titre, descriptif, date date_redac" ;
+						$table = "spip_syndic_articles" ;
+						$where = "id_syndic_article=" . $a['id_article'] ;
+					}
+
+					$q = "select " . $select . " from " . $table ." where " . $where ;
+					$query = sql_query($q);
+					$art = sql_fetch($query) ;
+
 					$m = substr(" Traitement de l'article " . $art['id_article'] . " (" . $art['date_redac'] . ")", 0, 100) ;
     				$progress->setMessage($m, 'message');
+    				
     				
     				// Trouver et enregistrer les entites nommées
     				include_spip("entites_fonctions");
     				$texte = preparer_texte($art['titre'] . " // \n" . $art['chapo'] . " // \n" . $art['texte'] . "\n");
 					$fragments = trouver_entites($texte, $art['id_article']) ;
-					enregistrer_entites($fragments, $art['id_article']);
-
+					enregistrer_entites($fragments, $art['id_article'], $art['date_redac']);
+					
 					// Si tout s'est bien passé, on avance la barre
 					$progress->setFormat("<fg=white;bg=blue>%message%</>\n" . '%current%/%max% [%bar%] %percent:3s%% %elapsed:6s%/%estimated:-6s% %memory:6s%' ."\n\n");
 					$progress->advance();
