@@ -622,7 +622,7 @@ function trouver_entites_residuelles($texte){
 	}
 }
 
-function enregistrer_entites($entites = array(), $id_article){
+function enregistrer_entites($entites = array(), $id_article, $date){
 		
 	// effacer les entites deja enregistrées pour cet article (maj)
 	include_spip("base/abstract_sql");
@@ -642,15 +642,16 @@ function enregistrer_entites($entites = array(), $id_article){
 				var_dump("alert pas d'entite",$entite,$entites);
 				continue ;
 			}
-	
+			
 			$e = explode("|", $entite);
-	
+			
 			$id_article_entite = $e[2];
 			$extrait = _q($e[3]);
 			$entite = _q($e[0]);
-	
+			
 			$type_entite = _q($e[1]);
-			$date = _q(sql_getfetsel("date_redac","spip_articles","id_article=$id_article"));
+			$date = _q($date);
+			
 			//var_dump($date);
 			$req = "INSERT INTO entites_nommees (entite, type_entite, id_article, extrait, date) VALUES ($entite,$type_entite,$id_article_entite,$extrait,$date)" ;
 			sql_query($req);
