@@ -22,7 +22,7 @@
 
 	<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
 
-	#SET{moyenne,100}
+	#SET{moyenne_inst,100} #SET{moyenne_geo,100} #SET{moyenne_pers,100}
 	[(#REM) pour une entite ou si on a peu d'entités en base, on pondere par rapport au poids de l'entite qui a le plus de citations ]
 
 	#SET{req,#VAL{"SELECT AVG(nb) moyenne FROM (select count(entite) nb from entites_nommees where type_entite in('Institutions', 'Institutions automatiques', 'Partis politiques', 'a ajouter') ANDWHERE group by entite) AS max"}|replace{ANDWHERE,#GET{andwhere}}}
