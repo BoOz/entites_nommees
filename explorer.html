@@ -3,12 +3,12 @@
 <head>
 	<meta charset="#CHARSET">
 	<title>#NOM_SITE_SPIP</title>
-	<INCLURE{fond=inclure/head}>
+	[(#CHEMIN{inclure/head}|oui)<INCLURE{fond=inclure/head}>]
 </head>
 <body>
 	<header>
 		<div class="ui center aligned container">
-			<INCLURE{fond=inclure/entete}>
+			[(#CHEMIN{inclure/entete}|oui)<INCLURE{fond=inclure/entete}>]
 			<INCLURE{fond=inclure/entites_menu}>
 		</div>
 	</header>
@@ -20,7 +20,7 @@
 		</div>
 	</section>
 	<div class="ui hidden divider"></div>
-	<INCLURE{fond=inclure/footer}>
+	[(#CHEMIN{inclure/footer}|oui)<INCLURE{fond=inclure/footer}>]
 
 <script type="text/javascript">
 $(document)
