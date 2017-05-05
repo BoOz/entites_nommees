@@ -29,7 +29,7 @@ On obtient :
 
 **Usage**
 
-Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`.
+Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
 
 **Installation dans SPIP**
 
