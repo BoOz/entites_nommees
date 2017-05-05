@@ -31,12 +31,14 @@ On obtient :
 Installer un spip avec une base de données d'articles + le plugin `spip-cli` (https://contrib.spip.net/SPIP-Cli) , lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`.
 
 **Installation dans SPIP**
+
 ```
 cd plugins/
 git clone https://github.com/BoOz/entites_nommees.git
 ```
 **Configuration**
-Définir le secteur dans lequel prendre les articles pour trouver des entités. Par défaut `1`.
+
+Définir dans `config/mes_options.php` le secteur dans lequel prendre les articles pour trouver des entités. Par défaut `1`.
 ```
 define('_SECTEUR_ENTITES',1);
 ```
