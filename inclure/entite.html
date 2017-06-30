@@ -54,7 +54,7 @@
 	<B_type>
 	<h2>
 	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
-	<a href="[(#URL_PAGE{entite})]">#TYPE_ENTITE</a> [> (#ENV{entite})]
+	<a href="[(#URL_PAGE{explorer})]">.> </a>[(#TYPE_ENTITE)] [> (#ENV{entite})]
 	</BOUCLE_type>
 	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}} </BOUCLE_fc>
 	<small>(#TOTAL_BOUCLE)</small>
