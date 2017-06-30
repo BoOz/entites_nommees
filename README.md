@@ -14,7 +14,7 @@ On s'appuie pour cela sur des listes issues du site typo.mondediplo.net, ou mond
 -- Capitales
 -- Villes
 
-- Intitutions
+- Institutions
 -- Entreprises
 -- ONG
 -- Institutions publiques
@@ -30,6 +30,9 @@ On obtient :
 **Usage**
 
 Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+
+spip entites -r=oui pour recommencer à zéro l'indexation
+spip entites -m=oui pour optiliser apèrs une indexation
 
 **Installation dans SPIP**
 
@@ -48,4 +51,8 @@ Définir dans `config/mes_options.php` le secteur dans lequel prendre les articl
 define('_SECTEUR_ENTITES',1);
 ```
 Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.net/Iterateurs
+
+# entites nommees /references
+RewriteRule ^references$  spip.php?page=explorer [QSA,L]
+RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
 
