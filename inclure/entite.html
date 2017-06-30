@@ -18,9 +18,9 @@
 			padding:0;
 		}
 		.col{
-			float:left;
-			width:12%;
-			margin-right:30px;
+			width:200px;
+			margin-left:20px;
+			margin-bottom:60px;
 		}
 		.col ul {
 			max-height:500px;
@@ -251,7 +251,7 @@
 	
 	#SET{req,#VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}
 
-	<div style="margin:0 40px 0 0">
+	<div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
 
 		<B_personnalites_frequents>
 		#ANCRE_PAGINATION
