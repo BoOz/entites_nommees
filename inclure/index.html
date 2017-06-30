@@ -5,9 +5,9 @@
 			padding:0;
 		}
 		.col{
-			float:left;
-			width:12%;
-			margin-right:30px;
+			width:150px;
+			margin-right:32px;
+			margin-bottom:60px;
 		}
 		.col ul {
 			max-height:500px;
@@ -61,7 +61,7 @@
 		#SET{entites,#ARRAY}
 		#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
 	
-		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%">
+		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%;display: flex; flex-flow: row wrap;">
 			<BOUCLE_entites_articles(DATA){source table,#GET{entites}}>
 			[<p>
 				 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> ([(#VALEUR|explode{"|"}|table_valeur{1})]) : [(#VALEUR|explode{"|"}|table_valeur{3})]
@@ -79,7 +79,7 @@
 		</div>
 		</BOUCLE_texte_article>
 	
-	<div style="margin:0 40px 0 0">
+	<div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
 	
 		<B_personnalites_frequents>
 			#ANCRE_PAGINATION
@@ -136,7 +136,6 @@
 			</div>
 		</BOUCLE_types_autres>	
 	
-	</div>
 </div>
 <div class="a_ajouter" style="clear:both;line-height:1.3em">
 	<B_a_ajouter>
