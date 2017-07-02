@@ -50,23 +50,20 @@
 		
 	</style>
 
-	<div class="ariane">
-	<B_type>
-	<h2>
-	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
-	<a href="[(#URL_PAGE{explorer})]">Références</a> > [(#TYPE_ENTITE)] > <a href="./references/#ENV{entite}">[(#ENV{entite})]</a>
-	</BOUCLE_type>
-	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}} </BOUCLE_fc>
-	<small>(#TOTAL_BOUCLE)</small>
-	</B_fc>
-	</h2>
+	<div class="ariane"><B_type>
+		<h2><BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
+			<a href="[(#URL_PAGE{explorer})]">Références</a> > <a href="./references/#ENV{entite}">[(#ENV{entite})]</a> #SET{type,#TYPE_ENTITE}
+			</BOUCLE_type>
+			<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}
+			</BOUCLE_fc>
+			<small>(#TOTAL_BOUCLE)</small></B_fc>
+		</h2>
+		<p>> [(#GET{type})]</p>
 	</div>
 	
 	<div style="max-height:300px;overflow:auto;margin-bottom:30px">
-	<INCLURE{fond=inclure/entites,entite}>
+		<INCLURE{fond=inclure/entites,entite}>
 	</div>
-	
-	
 	
 	<style>
 		.bar {
@@ -107,7 +104,6 @@
 	</div>
 
 	<svg width="1000" height="150"></svg>
-	
 	
 	#SET{data,#ARRAY}
 	<BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }> 			#SET{data,#GET{data}|array_merge{#ARRAY{#VAL{"'"}|concat{#ANNEE}|concat{"'"},#NB}}}	</BOUCLE_historique>
@@ -346,4 +342,3 @@
 
 
 </BOUCLE_rem>
-
