@@ -36,7 +36,7 @@
 <BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Journaux', 'Sources', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
 
 <div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3>Personnalités[ (#ENV{entites}|oui) proches de [(#ENV{entites})]]</h3>
+	<h3>Personnalités[ (#ENV{entite}|oui) proches de [(#ENV{entite})]]</h3>
 <BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{personnalites}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
@@ -48,7 +48,7 @@
 </div>
 
 <div id="autres" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3>Références fréquentes[ (#ENV{entites}|oui) proches de [(#ENV{entites})]]</h3>
+	<h3>Références fréquentes[ (#ENV{entite}|oui) proches de [(#ENV{entite})]]</h3>
 <BOUCLE_top_entites(DATA){source table, #GET{autres}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{autres}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
@@ -60,7 +60,7 @@
 </div>
 
 <div id="geographie" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3>Références géographiques[ (#ENV{entites}|oui)proches de [(#ENV{entites})]]</h3>
+	<h3>Références géographiques[ (#ENV{entite}|oui)proches de [(#ENV{entite})]]</h3>
 <BOUCLE_top_geo(DATA){source table, #GET{pays}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
@@ -72,7 +72,7 @@
 </div>
 
 <div id="medias" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3>Médias[ (#ENV{entites}|oui) en relation avec  [(#ENV{entites})]]</h3>
+	<h3>Médias[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]</h3>
 <BOUCLE_top_medias(DATA){source table, #GET{medias}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{medias}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
