@@ -1,315 +1,312 @@
+#SET{articles,#ARRAY}
+#SET{compagnons,#ARRAY}
+#SET{proches,#ARRAY}
 
-	#SET{articles,#ARRAY}
-	#SET{compagnons,#ARRAY}
-	#SET{proches,#ARRAY}
-	
-	#SET{filtre_entites,INDETERMINE}
-	[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
-	
-	#SET{andwhere,""}
-	[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
-	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
-	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
+#SET{filtre_entites,INDETERMINE}
+[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 
-	<style>
-		ul {
-			margin:0;
-			list-style-type:none;
-			padding:0;
-		}
-		.col{
-			width:150px;
-			margin-right:32px;
-			margin-bottom:60px;
-		}
-		.col ul {
-			max-height:500px;
-			overflow:auto;
-		}
-		.amis{
-			margin:30px 0 ;
-		}
-		.a_ajouter {
-			background-color: #2c3f4f;
-			color: #bbbbbb;
-			margin: 0;
-			padding: 40px ;
-		}
-		.a_ajouter a{
-			color : white ;
-		}
-		.entites_residuelles {
-			margin: 0;
-			padding: 40px ;
-		}
-		.entites_residuelles a{
-		}
-		.ariane a {
-			text-decoration:none;
-		}
-		
-	</style>
+#SET{andwhere,""}
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
+[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 
-	<div class="ariane"><B_type>
-		<h2><BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
-			<a href="[(#URL_PAGE{explorer})]">Références</a> > <a href="./references/#ENV{entite}">[(#ENV{entite})]</a> #SET{type,#TYPE_ENTITE}
-			</BOUCLE_type>
-			<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}
-			</BOUCLE_fc>
-			<small>(#TOTAL_BOUCLE)</small></B_fc>
-		</h2>
-		<p>> [(#GET{type})]</p>
-	</div>
-	
-	<div style="max-height:300px;overflow:auto;margin-bottom:30px">
-		<INCLURE{fond=inclure/entites,entite}>
-	</div>
-	
-	<style>
-		.bar {
-		  fill: #0080FF;
-		  min-height:10px;
-		}</a>
-		
-		.bar:hover {
-		  fill: #003366
-		}
-		
-		/*Text class styling*/
-		
-		.text {
-		  fill: white;
-		  font-family: sans-serif
-		}
-		
-		.toolTip {
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		position: absolute;
-		display: none;
-		width: auto;
-		height: auto;
-		background: none repeat scroll 0 0 white;
-		border: 0 none;
-		border-radius: 8px 8px 8px 8px;
-		box-shadow: -3px 3px 15px #888888;
-		color: black;
-		font: 12px sans-serif;
-		padding: 5px;
-		text-align: center;
+<style>
+	ul {
+		margin:0;
+		list-style-type:none;
+		padding:0;
 	}
-		
-	</style>
-
-	<div id="graph">
-	</div>
-
-	<svg width="1000" height="150"></svg>
+	.col{
+		width:150px;
+		margin-right:32px;
+		margin-bottom:60px;
+	}
+	.col ul {
+		max-height:500px;
+		overflow:auto;
+	}
+	.amis{
+		margin:30px 0 ;
+	}
+	.a_ajouter {
+		background-color: #2c3f4f;
+		color: #bbbbbb;
+		margin: 0;
+		padding: 40px ;
+	}
+	.a_ajouter a{
+		color : white ;
+	}
+	.entites_residuelles {
+		margin: 0;
+		padding: 40px ;
+	}
+	.entites_residuelles a{
+	}
+	.ariane a {
+		text-decoration:none;
+	}
 	
-	#SET{data,#ARRAY}
-	<BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }> 			#SET{data,#GET{data}|array_merge{#ARRAY{#VAL{"'"}|concat{#ANNEE}|concat{"'"},#NB}}}	</BOUCLE_historique>
+</style>
 
-	<script type="text/javascript">
-		// Create data array of values to visualize
-		
-		var dataset = [<BOUCLE_valeurs(DATA){source table,#GET{data}}{","}>
-		[[(#CLE|replace{"'","",u})],[(#VALEUR)]]</BOUCLE_valeurs>
-		];
-		
-		var valeurs = [] ;
-		var dates = [] ;
-		for (var i = 0; i < dataset.length; i++) {
-			valeurs[i] = dataset[i][1] ;
-		}
-		for (var i = 0; i < dataset.length; i++) {
-			dates[i] = dataset[i][0] ;
-		}
-		var date_min = d3.min(dates) ;
-		var date_max = d3.max(dates) ;
-		var valeur_max = d3.max(valeurs) ;
-		var nb_annees = date_max - date_min ;
-		
-		//console.log(nb_annees + " annees depuis " + date_min + " jusque " + date_max);
-		
-		var svg = d3.select("svg"),
-			margin = {top: 20, right: 0, bottom: 20, left: 0},
-			width = +svg.attr("width") - margin.left - margin.right,
-			height = +svg.attr("height") - margin.top - margin.bottom,
-			g = svg.append("g");
-		
-		var formatNumber = d3.format(".0s");
-		
-		var x = d3.scaleTime()
-			.domain([new Date(date_min - 1, 1, 1), new Date(date_max, 11, 31)])
-			.range([0, width]);
-		
-		var y = d3.scaleLinear()
-			.domain([0, valeur_max])
-			.range([height, 0]);
-		
-		var xAxis = d3.axisBottom(x)
-			.ticks(d3.timeYear);
-		
-		/*
-		var yAxis = d3.axisRight(y)
-			.tickSize(width)
-			.tickFormat(function(d) {
-			  var s = formatNumber(d);
-			  return this.parentNode.nextSibling
-				  ? "\xa0" + s
-				  : s + " articles";
-			});
-		*/
-		
-		g.append("g")
-			.attr("transform", "translate(0," + height + ")")
-			.call(customXAxis);
-		/*
-		g.append("g")
-			.call(customYAxis);
-		*/
-		
-		function customXAxis(g) {
-		  g.call(xAxis);
-		  g.select(".domain").remove();
-		}
-		
-		/*
-		function customYAxis(g) {
-		  g.call(yAxis);
-		  g.select(".domain").remove();
-		  g.selectAll(".tick:not(:first-of-type) line").attr("stroke", "#777").attr("stroke-dasharray", "2,2");
-		  g.selectAll(".tick text").attr("x", 4).attr("dy", -4);
-		}
-		*/
-		
-		var barw = width / nb_annees ;
-		
-		var div = d3.select("body").append("div").attr("class", "toolTip");
-		
-		svg.selectAll("rect")
-			   .data(dataset)
-			   .enter()
-			   .append("rect")
-			   .attr("x", function(d, i) {
-			   		return x(new Date(d[0], 0, 1)) - (barw / 4) ;
-			   })
-			   .attr("y", function(d) {
-			   		return y(d[1]) ;
-			   })
-			   .attr("width", function(d) { return barw / 2 })
-			   .attr("height", function(d) {
-			   		var hauteur = height - y(d[1]) ;
-			   		if(hauteur < 5) hauteur = 5 ;
-			   		return hauteur ;
-			   })
-			   .attr("class","bar")
-			   .attr("data-value",function(d) { return d[0] + " " + d[1] } )
-			   .on("mousemove", function(d){
-					div.style("left", d3.event.pageX+10+"px");
-					div.style("top", d3.event.pageY-25+"px");
-					div.style("display", "inline-block");
-					div.html((d[0])+"<br>"+ d[1] + " articles");
-				}).on("mouseout", function(d){
-				div.style("display", "none");
-			}).on("click", function(d){
-				window.location="[(#SELF|parametre_url{sdate,''}|filtrer_entites)]&sdate=" + d[0];
-			});
-	</script>
+<div class="ariane"><B_type>
+	<h2><BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
+		<a href="[(#URL_PAGE{explorer})]">Références</a> > <a href="./references/#ENV{entite}">[(#ENV{entite})]</a> #SET{type,#TYPE_ENTITE}
+		</BOUCLE_type>
+		<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}
+		</BOUCLE_fc>
+		<small>(#TOTAL_BOUCLE)</small></B_fc>
+	</h2>
+	<p>> [(#GET{type})]</p>
+</div>
+
+<div id="nuage_entites" style="height:300px;overflow:auto;margin-bottom:30px">
+	<INCLURE{fond=inclure/entites,entite}>
+</div>
+
+<style>
+	.bar {
+	  fill: #0080FF;
+	  min-height:10px;
+	}</a>
+	
+	.bar:hover {
+	  fill: #003366
+	}
+	
+	/*Text class styling*/
+	
+	.text {
+	  fill: white;
+	  font-family: sans-serif
+	}
+	
+	.toolTip {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position: absolute;
+	display: none;
+	width: auto;
+	height: auto;
+	background: none repeat scroll 0 0 white;
+	border: 0 none;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -3px 3px 15px #888888;
+	color: black;
+	font: 12px sans-serif;
+	padding: 5px;
+	text-align: center;
+}
+	
+</style>
+
+<div id="graph">
+</div>
+
+<svg width="1000" height="150"></svg>
+
+#SET{data,#ARRAY}
+<BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }> 			#SET{data,#GET{data}|array_merge{#ARRAY{#VAL{"'"}|concat{#ANNEE}|concat{"'"},#NB}}}	</BOUCLE_historique>
+
+<script type="text/javascript">
+	// Create data array of values to visualize
+	
+	var dataset = [<BOUCLE_valeurs(DATA){source table,#GET{data}}{","}>
+	[[(#CLE|replace{"'","",u})],[(#VALEUR)]]</BOUCLE_valeurs>
+	];
+	
+	var valeurs = [] ;
+	var dates = [] ;
+	for (var i = 0; i < dataset.length; i++) {
+		valeurs[i] = dataset[i][1] ;
+	}
+	for (var i = 0; i < dataset.length; i++) {
+		dates[i] = dataset[i][0] ;
+	}
+	var date_min = d3.min(dates) ;
+	var date_max = d3.max(dates) ;
+	var valeur_max = d3.max(valeurs) ;
+	var nb_annees = date_max - date_min ;
+	
+	//console.log(nb_annees + " annees depuis " + date_min + " jusque " + date_max);
+	
+	var svg = d3.select("svg"),
+		margin = {top: 20, right: 0, bottom: 20, left: 0},
+		width = +svg.attr("width") - margin.left - margin.right,
+		height = +svg.attr("height") - margin.top - margin.bottom,
+		g = svg.append("g");
+	
+	var formatNumber = d3.format(".0s");
+	
+	var x = d3.scaleTime()
+		.domain([new Date(date_min - 1, 1, 1), new Date(date_max, 11, 31)])
+		.range([0, width]);
+	
+	var y = d3.scaleLinear()
+		.domain([0, valeur_max])
+		.range([height, 0]);
+	
+	var xAxis = d3.axisBottom(x)
+		.ticks(d3.timeYear);
+	
+	/*
+	var yAxis = d3.axisRight(y)
+		.tickSize(width)
+		.tickFormat(function(d) {
+		  var s = formatNumber(d);
+		  return this.parentNode.nextSibling
+			  ? "\xa0" + s
+			  : s + " articles";
+		});
+	*/
+	
+	g.append("g")
+		.attr("transform", "translate(0," + height + ")")
+		.call(customXAxis);
+	/*
+	g.append("g")
+		.call(customYAxis);
+	*/
+	
+	function customXAxis(g) {
+	  g.call(xAxis);
+	  g.select(".domain").remove();
+	}
+	
+	/*
+	function customYAxis(g) {
+	  g.call(yAxis);
+	  g.select(".domain").remove();
+	  g.selectAll(".tick:not(:first-of-type) line").attr("stroke", "#777").attr("stroke-dasharray", "2,2");
+	  g.selectAll(".tick text").attr("x", 4).attr("dy", -4);
+	}
+	*/
+	
+	var barw = width / nb_annees ;
+	
+	var div = d3.select("body").append("div").attr("class", "toolTip");
+	
+	svg.selectAll("rect")
+		   .data(dataset)
+		   .enter()
+		   .append("rect")
+		   .attr("x", function(d, i) {
+		   		return x(new Date(d[0], 0, 1)) - (barw / 4) ;
+		   })
+		   .attr("y", function(d) {
+		   		return y(d[1]) ;
+		   })
+		   .attr("width", function(d) { return barw / 2 })
+		   .attr("height", function(d) {
+		   		var hauteur = height - y(d[1]) ;
+		   		if(hauteur < 5) hauteur = 5 ;
+		   		return hauteur ;
+		   })
+		   .attr("class","bar")
+		   .attr("data-value",function(d) { return d[0] + " " + d[1] } )
+		   .on("mousemove", function(d){
+				div.style("left", d3.event.pageX+10+"px");
+				div.style("top", d3.event.pageY-25+"px");
+				div.style("display", "inline-block");
+				div.html((d[0])+"<br>"+ d[1] + " articles");
+			}).on("mouseout", function(d){
+			div.style("display", "none");
+		}).on("click", function(d){
+			window.location="[(#SELF|parametre_url{sdate,''}|filtrer_entites)]&sdate=" + d[0];
+		});
+</script>
 
 
 <BOUCLE_rem(DATA){liste 1}{si #GET{rem}|non}>
 
-	#SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
+#SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
 
-	<B_fragments_entite>
-		<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
-		#ANCRE_PAGINATION
-		<BOUCLE_fragments_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>
-			<p>
-				<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
-				<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
-				<a href="./?page=article&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
-			</p>
-		</BOUCLE_fragments_entite>
-			<p>#PAGINATION</p>
-		</div>
-	</B_fragments_entite>
-	
-	#SET{comp,'having nb > 5'}
-	
-	
-	#SET{andwhere,""}
-	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
-	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
-	[(#GET{articles}|sizeof|>={1}|oui)
-	#SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-	]
-	
-	#SET{req,#VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}
+<B_fragments_entite>
+	<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>
+		<p>
+			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
+			<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
+			<a href="./?page=article&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
+		</p>
+	</BOUCLE_fragments_entite>
+		<p>#PAGINATION</p>
+	</div>
+</B_fragments_entite>
 
-	<div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
+#SET{comp,'having nb > 5'}
 
-		<B_personnalites_frequents>
-		#ANCRE_PAGINATION
-		<div class="col">
-		 <h3>Personnalités</h3>
-		
+#SET{andwhere,""}
+[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
+[(#GET{articles}|sizeof|>={1}|oui)
+#SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
+]
+
+#SET{req,#VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}
+
+<div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
+
+	<B_personnalites_frequents>
+	#ANCRE_PAGINATION
+	<div class="col">
+	 <h3>Personnalités</h3>
+	
+		<ul>
+		<BOUCLE_personnalites_frequents(DATA){source sql,#GET{req}}{pagination 1000}>
+			<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+		</small>
+			</li>
+		</BOUCLE_personnalites_frequents>
+		</ul>
+		<p>#PAGINATION</p>
+	</div>
+	</B_personnalites_frequents>
+	
+	[(#REM) afficher les entites suivantes en premier ]
+	#SET{notin,#ARRAY}
+	<BOUCLE_types(DATA){source sql, #VAL{"select type_entite from entites_nommees where type_entite in ('Institutions', 'Institutions automatiques', 'Partis politiques', 'Partis politiques', 'Sources', 'Journaux') ANDWHERE group by type_entite"}|replace{ANDWHERE,#GET{andwhere}}}>
+		#SET{notin,#GET{notin}|push{#TYPE_ENTITE|_q}}
+		<div class="col" [ style="(#COMPTEUR_BOUCLE|alterner{'','','','',''})"]>
+		<B_entite_frequents> 
+		<h3>[(#TYPE_ENTITE|replace{_," "})]</h3>
+			#ANCRE_PAGINATION
 			<ul>
-			<BOUCLE_personnalites_frequents(DATA){source sql,#GET{req}}{pagination 1000}>
+			<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
 				<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 			</small>
 				</li>
-			</BOUCLE_personnalites_frequents>
+			</BOUCLE_entite_frequents>
 			</ul>
 			<p>#PAGINATION</p>
+		</B_entite_frequents>
 		</div>
-		</B_personnalites_frequents>
-		
-		[(#REM) afficher les entites suivantes en premier ]
-		#SET{notin,#ARRAY}
-		<BOUCLE_types(DATA){source sql, #VAL{"select type_entite from entites_nommees where type_entite in ('Institutions', 'Institutions automatiques', 'Partis politiques', 'Partis politiques', 'Sources', 'Journaux') ANDWHERE group by type_entite"}|replace{ANDWHERE,#GET{andwhere}}}>
-			#SET{notin,#GET{notin}|push{#TYPE_ENTITE|_q}}
-			<div class="col" [ style="(#COMPTEUR_BOUCLE|alterner{'','','','',''})"]>
-			<B_entite_frequents> 
-			<h3>[(#TYPE_ENTITE|replace{_," "})]</h3>
-				#ANCRE_PAGINATION
-				<ul>
-				<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
-				</small>
-					</li>
-				</BOUCLE_entite_frequents>
-				</ul>
-				<p>#PAGINATION</p>
-			</B_entite_frequents>
-			</div>
-		</BOUCLE_types>
-		
-		[(#SET{notin,#VAL{"and type_entite not in("}|concat{#GET{notin}|join{","}}|concat{")"}})]
-		
-		<BOUCLE_types_autres(DATA){source sql, #VAL{"select type_entite from entites_nommees where type_entite not in ('INDETERMINE', 'PASDENTITE', 'Personnalités','a ajouter') ANDWHERE NOTIN group by type_entite"}|replace{ANDWHERE,#GET{andwhere}}|replace{NOTIN,#GET{notin}}}>
-			<div class="col" [ style="(#COMPTEUR_BOUCLE|alterner{'clear:both','','','','',''})"]>
-			<B_entite_frequents_autres> 
-			<h3>[(#TYPE_ENTITE|replace{_," "})]</h3>
-				#ANCRE_PAGINATION
-				<ul>
-				<BOUCLE_entite_frequents_autres(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
-				</small>
-					</li>
-				</BOUCLE_entite_frequents_autres>
-				</ul>
-				<p>#PAGINATION</p>
-			</B_entite_frequents_autres>
-			</div>
-		</BOUCLE_types_autres>	
+	</BOUCLE_types>
+	
+	[(#SET{notin,#VAL{"and type_entite not in("}|concat{#GET{notin}|join{","}}|concat{")"}})]
+	
+	<BOUCLE_types_autres(DATA){source sql, #VAL{"select type_entite from entites_nommees where type_entite not in ('INDETERMINE', 'PASDENTITE', 'Personnalités','a ajouter') ANDWHERE NOTIN group by type_entite"}|replace{ANDWHERE,#GET{andwhere}}|replace{NOTIN,#GET{notin}}}>
+		<div class="col" [ style="(#COMPTEUR_BOUCLE|alterner{'clear:both','','','','',''})"]>
+		<B_entite_frequents_autres> 
+		<h3>[(#TYPE_ENTITE|replace{_," "})]</h3>
+			#ANCRE_PAGINATION
+			<ul>
+			<BOUCLE_entite_frequents_autres(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
+				<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+			</small>
+				</li>
+			</BOUCLE_entite_frequents_autres>
+			</ul>
+			<p>#PAGINATION</p>
+		</B_entite_frequents_autres>
+		</div>
+	</BOUCLE_types_autres>	
 </div>
+
 <div class="a_ajouter" style="clear:both;line-height:1.3em">
 	<B_a_ajouter>
 		#ANCRE_PAGINATION
-	
 	 <h3>À ajouter</h3>
-	
 		<ul>
 		<BOUCLE_a_ajouter(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='a ajouter' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
 			<li style="float:left;padding-right:15px">
@@ -320,13 +317,10 @@
 		</ul>
 		<p>#PAGINATION</p>
 	</B_a_ajouter>
-
-<br style="clear:both" />
-
+	<br style="clear:both" />
 </div>
 
 <div class="entites_residuelles ui segment left aligned container">
-
 	<B_fragments>
 	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
 	#ANCRE_PAGINATION
@@ -336,9 +330,7 @@
 		</div>
 	</BOUCLE_fragments>
 	<p>#PAGINATION</p>
-	</B_fragments>	
-
+	</B_fragments>
 </div>
-
 
 </BOUCLE_rem>

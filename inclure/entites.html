@@ -32,7 +32,7 @@
 		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
 	</BOUCLE_territoires>
 
-	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{personnalites}|max})]em;">
 			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
@@ -43,7 +43,7 @@
 	</BOUCLE_top_personnalites>
 	</div>
 
-	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<div id="autres" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
 			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
@@ -54,7 +54,7 @@
 	</BOUCLE_top_entites>
 	</div>
 
-	<div style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<div id="geographie" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
 		<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
 			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
@@ -64,4 +64,11 @@
 		</span>
 	</BOUCLE_top_territoires>
 	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// nuage_entites
+			$("#nuage_entites").height($("#references_liees").height() + "px");
+		});
+	</script>
 	
