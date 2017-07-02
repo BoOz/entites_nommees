@@ -29,11 +29,11 @@
 #SET{pays,#ARRAY}
 <BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_territoires>
 
-#SET{medias,#ARRAY}
-<BOUCLE_medias(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Journaux', 'Sources' ) ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{medias,#GET{medias}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_medias>
+#SET{sources,#ARRAY}
+<BOUCLE_sources(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Sources') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{sources,#GET{sources}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_sources>
 
 #SET{autres,#ARRAY}
-<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Journaux', 'Sources', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
+<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Sources', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
 
 <div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<h3>Personnalités[ (#ENV{entite}|oui) proches de [(#ENV{entite})]]</h3>
@@ -72,15 +72,15 @@
 </div>
 
 <div id="medias" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3>Médias[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]</h3>
-<BOUCLE_top_medias(DATA){source table, #GET{medias}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{medias}|max})]em;">
+	<h3>Sources[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]</h3>
+<BOUCLE_top_sources(DATA){source table, #GET{sources}}{par cle}>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{sources}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
 [(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
 		</a>
 	</span>
-</BOUCLE_top_medias>
+</BOUCLE_top_sources>
 </div>
 
 <script type="text/javascript">
