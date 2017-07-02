@@ -1,74 +1,76 @@
-	[(#REM) Réglages ]
-	
-	#SET{articles,#ARRAY}
-	#SET{compagnons,#ARRAY}
-	#SET{proches,#ARRAY}
-	
-	#SET{filtre_entites,INDETERMINE}
-	[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
-	
-	#SET{andwhere,""}
-	[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}|_q}|replace{"^'"}|replace{"'$"}} ]
-	[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
-	[(#ENV{decenie}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like }|concat{#ENV{decenie}|replace{\d$}|concat{%}|_q}} ]
-	[(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
-	
-	[(#REM) Chopper les autres entites dans les memes articles que notre entite ]
-	
-	#SET{req,#VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q}}
-	<BOUCLE_fc(DATA){source sql, #GET{req} }{si #ENV{entite}|oui}>
-	#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
-	[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+[(#REM) Réglages ]
 
-	<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
-	
-	#SET{personnalites,#ARRAY}
-	<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_pers}}}{si #ENV{id_article}|non}>
-		#SET{personnalites,#GET{personnalites}|array_merge{#ARRAY{#ENTITE,#NB}}}
-	</BOUCLE_personnalites>
+#SET{articles,#ARRAY}
+#SET{compagnons,#ARRAY}
+#SET{proches,#ARRAY}
 
-	#SET{pays,#ARRAY}
-	<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_geo}}}{si #ENV{id_article}|non}>
-		#SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}
-	</BOUCLE_territoires>
+#SET{filtre_entites,INDETERMINE}
+[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 
-	<div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
-		<span style="font-size:[(#VALEUR|nuage_mot{#GET{personnalites}|max})]em;">
-			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
-	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
-			</a>
-		</span>
-	</BOUCLE_top_personnalites>
-	</div>
+#SET{andwhere,""}
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}|_q}|replace{"^'"}|replace{"'$"}} ]
+[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
+[(#ENV{decenie}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like }|concat{#ENV{decenie}|replace{\d$}|concat{%}|_q}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
 
-	<div id="autres" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<BOUCLE_top_entites(DATA){source table, #GET{tab}}{par cle}>
-		<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
-			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
-	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
-			</a>
-		</span>
-	</BOUCLE_top_entites>
-	</div>
+[(#REM) Chopper les autres entites dans les memes articles que notre entite ]
 
-	<div id="geographie" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
-		<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
-			<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
-	[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
-			</a>
-		</span>
-	</BOUCLE_top_territoires>
-	</div>
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			// nuage_entites
-			$("#nuage_entites").height($("#references_liees").height() + "px");
-		});
-	</script>
-	
+#SET{req,#VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q}}
+<BOUCLE_fc(DATA){source sql, #GET{req} }{si #ENV{entite}|oui}>
+#SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
+[(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
+
+[(#REM) nombre total d'entites ]
+<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
+
+#SET{personnalites,#ARRAY}
+<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_pers}}}{si #ENV{id_article}|non}> #SET{personnalites,#GET{personnalites}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_personnalites>
+
+#SET{pays,#ARRAY}
+<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_autres}}}{si #ENV{id_article}|non}> #SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_territoires>
+
+#SET{autres,#ARRAY}
+<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}|replace{LEMAX,#GET{moyenne_geo}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
+
+<div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<h3>Personnalités proches</h3>
+<BOUCLE_top_personnalites(DATA){source table, #GET{personnalites}}{par cle}>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{personnalites}|max})]em;">
+		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
+[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		</a>
+	</span>
+</BOUCLE_top_personnalites>
+</div>
+
+<div id="autres" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<h3>Références proches</h3>
+<BOUCLE_top_entites(DATA){source table, #GET{autres}}{par cle}>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{tab}|max})]em;">
+		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="#CLE : [(#VALEUR)]&nbsp;fois">
+[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		</a>
+	</span>
+</BOUCLE_top_entites>
+</div>
+
+<div id="geographie" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<h3>Références géographiques proches</h3>
+<BOUCLE_top_territoires(DATA){source table, #GET{pays}}{par cle}>
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{pays}|max})]em;">
+		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
+[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		</a>
+	</span>
+</BOUCLE_top_territoires>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		// nuage_entites
+		$("#nuage_entites").height($("#references_liees").height() + "px");
+	});
+</script>
