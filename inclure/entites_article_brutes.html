@@ -29,13 +29,13 @@
 <B_institutions>
 <h3 style="margin-top:1.5em">Institutions</h3>
 <BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques}{fusion entite}{par entite}{", "}>
-	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]"><a href="[(#URL_PAGE{entite,id_entite=#ENTITE})]">(#ENTITE)</a></span>]
+<a href="[(#URL_PAGE{entite,id_entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a>
 </BOUCLE_institutions>
 
 <BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques}{fusion type_entite}>
 <h3 style="margin-top:1.5em">#TYPE_ENTITE</h3>
 <BOUCLE_entites(DATA){source table,#GET{entites}}{type_entite=#TYPE_ENTITE}{fusion entite}{par entite}{", "}>
-	[<span title="[(#GET{poids}|table_valeur{#ENTITE})]"><a href="[(#URL_PAGE{entite,id_entite=#ENTITE})]">(#ENTITE)</a></span>]
+<a href="[(#URL_PAGE{entite,id_entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a>
 </BOUCLE_entites>
 </BOUCLE_types_entites_nommees>
 
