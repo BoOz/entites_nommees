@@ -29,7 +29,7 @@ Drin
 //Divers
 
 Bab El-Oued
-la Casbah d'Alger
+la casbah d'Alger
 Kabylie
 Petite Kabylie
 Grande Kabylie
@@ -165,7 +165,7 @@ Namur
 // Provinces
 
 Brest
-Homiel
+Homel
 Hrodna
 Mahiliow
 Minsk
@@ -555,6 +555,7 @@ Sophia Antipolis
 
 
 
+
 // Gabon
 
 //Divers
@@ -685,13 +686,6 @@ Jammu-et-Cachemire
 //Divers
 
 
-Java
-Sumatra
-Kalimantan
-Sulawesi
-Bali
-Papouasie
-Moluques
 
 
 
@@ -1301,18 +1295,6 @@ Hispaniola
 
 // Royaume-Uni
 
-Anguilla
-Bermudes
-îles Caïmans
-Falkland Islands
-Gibraltar
-îles Anglo-Normandes
-Jersey
-îles Vierges britanniques
-île de Man
-Montserrat
-
-
 // Russie
 
 // Provinces
@@ -1560,6 +1542,7 @@ Sabaragamuwa
 
 Alep-Est
 Alépins
+Chayrat
 Ghouta
 Qalamoun
 Rojava
@@ -1663,6 +1646,7 @@ Maïdan
 mer Noire
 mer d'Azov
 républiques populaires autoproclamées de Donetsk et de Lougansk
+« République populaire de Donetsk»
 Yiddishland
 
 
@@ -1740,3 +1724,112 @@ Asie
 Continent
 Océanie
 Proche-Orient
+
+// Mots-clés "Géographie" Diplo (non référencés dans Typodiplo)
+Afrique australe
+Amérique latine
+Asie centrale
+Asie du Sud-Est
+Balkans
+Pays baltes
+Burkina Faso
+Caraïbes
+Caucase
+Corne de l'Afrique
+Corse
+France Outre-mer
+États-Unis (affaires extérieures)
+États-Unis (affaires intérieures)
+Europe de l'Est
+Golfe
+Guadeloupe
+Guyane
+République d'Irlande
+Irlande du Nord
+Martinique
+Méditerranée
+République fédérale de Yougoslavie
+Scandinavie
+Timor-Oriental
+URSS
+Monde arabe
+Tiers-monde
+Hongkong
+Amérique centrale
+Indochine
+Tchécoslovaquie
+RDA
+Macao
+Maghreb
+Océan indien
+Europe centrale
+Amérique du Nord
+Polynésie française
+Sri Lanka
+Tibet
+Europe de l'Ouest
+Gibraltar
+Pacifique
+La Réunion
+Sahel
+Mayotte
+Mer Baltique
+Papouasie-Nouvelle-Guinée
+Antilles néerlandaises
+Suriname
+Serbie-et-Monténégro
+Afrique centrale
+Afrique de l'Ouest
+Antarctique
+Asie du Nord
+Palestine (Cisjordanie)
+Palestine (Gaza)
+Kurdistan
+RFA
+Rhodésie du Sud
+Sahara
+Voïvodine
+Yémen du Nord
+Yémen du Sud
+Yougoslavie
+Amérique du Sud
+Sud-Vietnam
+Dubaï
+Palestine (Jérusalem)
+Palestine mandataire
+Açores
+Afrique des Grands Lacs
+Arctique
+Ecosse
+Mer Caspienne
+Mer de Chine
+Mer du Nord
+Mer Égée
+Nord-Vietnam
+Afrique du Nord
+Afrique de l'Est
+Zaïre
+Dahomey
+Haute-Volta
+Sahara occidental
+Mer noire
+Ceylan
+Sud-Ouest africain
+Benelux
+Bengale-Occidental
+Congo belge
+Indochine française
+Rhodésie du Nord
+Nyassaland
+Europe du Nord
+Nouvelle-Guinée hollandaise
+Côte-de-l'Or
+République arabe unie
+Tanganyika
+Nouvelle-Guinée
+Côte française des Somalis
+Malouines
+Fédération d'Arabie du Sud
+Sous-continent indien
+Ile de Man
+Somaliland 
