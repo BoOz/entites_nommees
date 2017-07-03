@@ -20,8 +20,7 @@ On s'appuie pour cela sur des listes issues du site typo.mondediplo.net, ou mond
 -- Institutions publiques
 -- Partis politiques
 
-
-Enfin on cherche en Regexp le masque Xxx Xxx xx xx Xxx sur le reliquat du texte en ignorant les mots de la langue française les plus fréquents constatés
+On cherche ensuite en Regexp le masque Xxx Xxx xx xx Xxx sur le reliquat du texte, en ignorant les mots de la langue française les plus fréquents constatés
 
 On obtient :
 -> Des Personnalités
@@ -33,7 +32,7 @@ Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_no
 
 ```
 spip entites -r oui // pour recommencer à zéro l'indexation
-spip entites -m oui // pour optimiser apèrs une indexation
+spip entites -m oui // pour optimiser après une indexation
 ```
 
 **Installation dans SPIP**
@@ -59,13 +58,14 @@ RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
 
 # Optimiser les entites enregistrées
-Le fichier ``recaler.txt`` permet de réformater des entités par des listes de remappage ``// entite actuelle 	entite dans l'extrait	type_entite	entite``
+```
+spip entites -m oui // pour optimiser après une indexation
+```
+Le fichier ``recaler.txt`` permet de réformater après l'indexation des entités mal indexées par des listes de remappage au format ``// entite actuelle 	entite dans l'extrait	type_entite	entite``
 
 Sont reformatées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales.
 
 Enfin on efface les mots de ``mots_courants.php`` qui ont été enregistrés par erreur.
 
-```
-spip entites -m oui // pour optimiser apèrs une indexation
-```
+
 
