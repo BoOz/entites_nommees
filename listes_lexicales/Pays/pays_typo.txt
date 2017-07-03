@@ -341,7 +341,7 @@ Pays-Bas
 Pérou
 Philippines
 Pologne
-Porto rico
+Porto Rico
 Portugal
 Qatar
 République centrafricaine
@@ -349,7 +349,7 @@ République démocratique du Congo
 République dominicaine
 République tchèque
 Roumanie
-Royaume-uni
+Royaume-Uni
 Russie
 Rwanda
 Saint-Kitts-et-Nevis
@@ -398,4 +398,4 @@ Venezuela
 Vietnam
 Yémen
 Zambie
-Zimbabwe
+Zimbabwe 
