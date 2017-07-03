@@ -56,7 +56,7 @@
 	</h2>
 	<p>
 		Type : [(#GET{type})] <BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
-		<small>([(#TOTAL_BOUCLE|number_format{0, ',', ' '})] occurences)</small></B_fc>
+		<small>([(#TOTAL_BOUCLE|number_format{0, ',', ' '})] occurrences)</small></B_fc>
 	</p>
 	[(#REM)
 	Trop bourrin comme requete mais interessant.
