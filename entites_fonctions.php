@@ -12,12 +12,35 @@ include('mots_courants.php');
 // ini_set("pcre.recursion_limit", "10000000000000");
 
 // http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
+// http://www.regular-expressions.info/unicode.html
+// To match a letter including any diacritics, use \p{L}\p{M}*+.
 define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı-]"); // il en manque, passer en /u
 define("LETTRESAP","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı'-]"); // il en manque, passer en /u
 
 // http://www.regular-expressions.info/unicode.html
-// \p{L} lettres
-// \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant. 
+/*
+
+ \p{L} lettres
+ \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant.
+ \p{Z} or \p{Separator}: any kind of whitespace or invisible separator.
+      \p{Zs} or \p{Space_Separator}: a whitespace character that is invisible, but does take up space.
+      \p{Zl} or \p{Line_Separator}: line separator character U+2028.
+      \p{Zp} or \p{Paragraph_Separator}: paragraph separator character U+2029. 
+    \p{N} or \p{Number}: any kind of numeric character in any script.
+        \p{Nd} or \p{Decimal_Digit_Number}: a digit zero through nine in any script except ideographic scripts.
+        \p{Nl} or \p{Letter_Number}: a number that looks like a letter, such as a Roman numeral.
+        \p{No} or \p{Other_Number}: a superscript or subscript digit, or a number that is not a digit 0–9 (excluding numbers from ideographic scripts). 
+    \p{P} or \p{Punctuation}: any kind of punctuation character.
+        \p{Pd} or \p{Dash_Punctuation}: any kind of hyphen or dash.
+        \p{Ps} or \p{Open_Punctuation}: any kind of opening bracket.
+        \p{Pe} or \p{Close_Punctuation}: any kind of closing bracket.
+        \p{Pi} or \p{Initial_Punctuation}: any kind of opening quote.
+        \p{Pf} or \p{Final_Punctuation}: any kind of closing quote.
+        \p{Pc} or \p{Connector_Punctuation}: a punctuation character such as an underscore that connects words.
+        \p{Po} or \p{Other_Punctuation}: any kind of punctuation character that is not a dash, bracket, quote or connector. 
+*/
+
+
 define("LETTRE_CAPITALE","\p{Lu}");
 
 // var_dump("<pre>",$types_entites,"</pre>");
@@ -217,20 +240,25 @@ function trouver_entites($texte,$id_article){
 	// trouver des entites constituées d'un seul mot
 
 	// types d'entites définis dans les listes txt.
-	$types_entites_mono =  generer_types_entites("mono");	
+	$types_entites_mono =  generer_types_entites("mono");
+	
+	// var_dump("<pre>",$types_entites_mono,"</pre>");
 
 	/* regex automatisées depuis les fichiers de listes */
 	foreach($types_entites_mono as $type => $regex){
 		if($regex == "")
 			continue;
 
+		// var_dump($texte);
+		// var_dump($texte_original); // hum pas si original... il y a des xxx
+		
 		$recolte = recolter_fragments($type, $regex, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 
 	}
 
-	//var_dump("lol", $fragments);
+	// var_dump("<pre>",$fragments,"</pre>","<hr>",$texte);
 
 	// on cherche des termes qui ont des majuscules dans le texte restant.
 	$entites_residuelles = trouver_entites_residuelles($texte);
@@ -389,11 +417,10 @@ function trouver_entites($texte,$id_article){
 
 
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
-
 	// Trouver toutes les occurences d'une entité en respectant la casse bien sur.
 	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
 		$entites = $e[0];
-		//var_dump("<pre>",$entites,"</pre>lol");
+		//var_dump("<pre> recolte :",$type_entite, $regex, $entites,"</pre>lol");
 		$recolte = traiter_fragments($entites, $type_entite, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte["fragments"];
 		$texte = $recolte["texte"];
@@ -424,11 +451,14 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 		if($entite == "")
 			continue ;
 
-		// Trouver l'extrait dans le texte débité
-		preg_match("`(?:\P{L})(?:.{0,60})" . str_replace("`", "", preg_quote($entite)) . "(?:.{0,60})(?:\P{L})`u", $texte, $m);
+		// Trouver l'extrait incluant l'entite dans le texte débité
+		preg_match("`(?:\P{L})(?:.{0,60})(?:\p{Z}|\p{P})" . str_replace("`", "", preg_quote($entite)) . "(?:\p{Z}|\p{P})(?:.{0,60})(?:\P{L})`u", $texte, $m);
 		$extrait = preg_replace(",\R,","",trim($m[0]));
 
 		//var_dump($entite);
+		//if($entite == "Cuba"){
+		//	var_dump("<pre>","Traiter frag :" ,$type, $entite,"</pre>", $extrait);
+		//}
 
 		// Virer l'entité dans cet extrait, puis dans le texte débité.
 		if(!$m[0])
@@ -550,7 +580,8 @@ function nettoyer_entite_nommee(&$entite, $key){
 
 	$entite = trim(preg_replace("/^[^\p{L}\p{N}]+/u", "", $entite));
 	
-	//var_dump($entite);
+	//if($entite == "Cuba")
+	//	var_dump("<pre>", "nettoyage entites : ", $entite, "</pre>");
 
 }
 
