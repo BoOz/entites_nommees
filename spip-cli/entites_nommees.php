@@ -74,7 +74,7 @@ class entites_nommees extends Command {
 					passthru("clear");
 					$output->writeln("<info>Requalification des données</info>");
 
-					// recaler apres coup d'apres le ficheir recaler.txt
+					// recaler apres coup d'apres le fichier recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
 					
 					lire_fichier('plugins/entites_nommees/recaler.txt', $recale);
@@ -98,7 +98,6 @@ class entites_nommees extends Command {
 							}
 					
 					// recaler les ajouts dans les fichiers *_ajouts
-					
 					include_spip('iterateur/data');
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*ajouts.txt') ; /**/
 					foreach($types_requalif as $t){

@@ -31,8 +31,10 @@ On obtient :
 
 Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
 
-spip entites -r=oui pour recommencer à zéro l'indexation
-spip entites -m=oui pour optiliser apèrs une indexation
+```
+spip entites -r oui // pour recommencer à zéro l'indexation
+spip entites -m oui // pour optimiser apèrs une indexation
+```
 
 **Installation dans SPIP**
 
@@ -55,4 +57,15 @@ Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.
 # entites nommees /references
 RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
+
+# Optimiser les entites enregistrées
+Le fichier ``recaler.txt`` permet de réformater des entités par des listes de remappage ``// entite actuelle 	entite dans l'extrait	type_entite	entite``
+
+Sont reformatées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales.
+
+Enfin on efface les mots de ``mots_courants.php`` qui ont été enregistrés par erreur.
+
+```
+spip entites -m oui // pour optimiser apèrs une indexation
+```
 
