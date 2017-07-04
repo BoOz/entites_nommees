@@ -40,7 +40,7 @@ define("MOTS_DEBUT", $adverbes .
 // Mots au milieu de la séquence cherchée en regex
 
 $mots_milieu = "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière" ;
-$verbes_milieux = "rencontre" ;
+$verbes_milieux = "rencontre|dirige" ;
 
 define("MOTS_MILIEU" ,	$mots_milieu . 
 						"|" . $verbes_milieux ) ;

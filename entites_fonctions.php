@@ -246,20 +246,20 @@ function trouver_entites($texte,$id_article){
 
 	//var_dump($fragments,"fragments");
 	//var_dump($institutions);
-
-	foreach($fragments as $v){
-		if(preg_match("/^(.*)\|(INDETERMINE)\|/u",$v,$m)){
-			// cas des institutions : Parti communiste (PC)
-			// recaler les accronymes : PC
-			if($institutions[$m[1]]){
-				$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]['valeur']) . " (" . $m[1] . ")", $v) ;
-				$f = preg_replace("/\|".$m[2]."\|/u","|". $institutions[$m[1]]['type'] ."|",$f) ;
-				$fragments_fusionnes[] = $f ;
+	if(is_array($fragments))
+		foreach($fragments as $v){
+			if(preg_match("/^(.*)\|(INDETERMINE)\|/u",$v,$m)){
+				// cas des institutions : Parti communiste (PC)
+				// recaler les accronymes : PC
+				if($institutions[$m[1]]){
+					$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]['valeur']) . " (" . $m[1] . ")", $v) ;
+					$f = preg_replace("/\|".$m[2]."\|/u","|". $institutions[$m[1]]['type'] ."|",$f) ;
+					$fragments_fusionnes[] = $f ;
+				}else
+					$fragments_fusionnes[] = $v ;
 			}else
 				$fragments_fusionnes[] = $v ;
-		}else
-			$fragments_fusionnes[] = $v ;
-	}
+		}
 
 	$fragments = $fragments_fusionnes ;
 	$fragments_fusionnes = array();
@@ -286,28 +286,28 @@ function trouver_entites($texte,$id_article){
 
 	// var_dump($personnalites,$institutions,$patronymes);
 	// var_dump("<pre>",$fragments,"</pre><hr>");
-
-	foreach($fragments as $v){
-		
-		// Dans ce qu'il reste plus les persos auto
-		if(preg_match("/^(.*)\|(INDETERMINE)\|/u",$v,$m)){
-			// attention aux noms de plus de deux mots
-			$noms = explode(" ",$m[1]) ;
-			$nom = array_pop($noms);
-
-			// cas des institutions automatiques Parti communiste (PC) et personnalités
-			// recaler des institutions réduites PC
-			if($patronymes[$nom]){
-				$f = preg_replace("/^".$m[1]."/u",$patronymes[$nom],$v) ;
-				$f = preg_replace("/\|".$m[2]."\|/u","|Personnalités|",$f) ;
-				$fragments_fusionnes[] = $f ;
+	if(is_array($fragments))
+		foreach($fragments as $v){
+			
+			// Dans ce qu'il reste plus les persos auto
+			if(preg_match("/^(.*)\|(INDETERMINE)\|/u",$v,$m)){
+				// attention aux noms de plus de deux mots
+				$noms = explode(" ",$m[1]) ;
+				$nom = array_pop($noms);
+	
+				// cas des institutions automatiques Parti communiste (PC) et personnalités
+				// recaler des institutions réduites PC
+				if($patronymes[$nom]){
+					$f = preg_replace("/^".$m[1]."/u",$patronymes[$nom],$v) ;
+					$f = preg_replace("/\|".$m[2]."\|/u","|Personnalités|",$f) ;
+					$fragments_fusionnes[] = $f ;
+				}
+				else
+					$fragments_fusionnes[] = $v ;
 			}
 			else
 				$fragments_fusionnes[] = $v ;
 		}
-		else
-			$fragments_fusionnes[] = $v ;
-	}
 	
 	$fragments = $fragments_fusionnes ;
 	$fragments_fusionnes = array();
@@ -316,25 +316,26 @@ function trouver_entites($texte,$id_article){
 	
 	
 	// remplacer les extraits caviardés par des vrais.
-	foreach($fragments as $v){
-
-		//var_dump($v,"hum");
-
-		if(preg_match("`\d+\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
-			$r = str_replace("`", "" , str_replace("xxx", ".*?" , preg_quote($extraitsc[1]))) ;
-			if(preg_match("`" . $r . "`u" , $texte_original , $extrait )){ // peut donner un résultat long d'un paragraphe entier si l'entite xxx est au début.
-				$f = str_replace($extraitsc[1], $extrait[0], $v) ;
-				$fragments_fusionnes[] = $f ;
+	if(is_array($fragments))
+		foreach($fragments as $v){
+	
+			//var_dump($v,"hum");
+	
+			if(preg_match("`\d+\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
+				$r = str_replace("`", "" , str_replace("xxx", ".*?" , preg_quote($extraitsc[1]))) ;
+				if(preg_match("`" . $r . "`u" , $texte_original , $extrait )){ // peut donner un résultat long d'un paragraphe entier si l'entite xxx est au début.
+					$f = str_replace($extraitsc[1], $extrait[0], $v) ;
+					$fragments_fusionnes[] = $f ;
+				}else{
+					$fragments_fusionnes[] = $v ;
+				}
+	
+			//var_dump("deb", $v, $f,"zou");
+	
 			}else{
 				$fragments_fusionnes[] = $v ;
 			}
-
-		//var_dump("deb", $v, $f,"zou");
-
-		}else{
-			$fragments_fusionnes[] = $v ;
 		}
-	}
 
 	/**/
 
