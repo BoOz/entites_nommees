@@ -52,7 +52,15 @@ function trouver_entites($texte,$id_article){
 	$fragments = array();
 	$texte_original = $texte ;
 
-	// Traiter les notes de bas de pages.
+	// types d'entites définis dans les listes txt.
+	// on commence par celles qui font plusieurs mots.
+	$types_entites =  generer_types_entites("multi");	
+
+	// types d'entites définis dans les listes txt.
+	// on recommencve ensuite avec les entites d'un mot.
+	$types_entites_mono =  generer_types_entites("mono");
+
+	// Traiter d'abord les notes de bas de pages.
 	// SOURCES
 	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
 		foreach($notes[1] as $note){
@@ -66,17 +74,31 @@ function trouver_entites($texte,$id_article){
 					// Trouver les extraits ou apparaissent l'entite dans le texte original
 					//var_dump("<pre>",$ent);
 					
-					if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . str_replace("`", "", preg_quote($ent)) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte_original, $m)){
-						
-			
+					if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . str_replace("`", "", preg_quote($ent)) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte, $m)){
 						foreach($m[1] as $extrait){
-							$extrait = preg_replace(",\R,","",trim($extrait));	
+							
+							$extrait_propre = preg_replace(",\R,","",trim($extrait));	
 						
 							//var_dump("<pre>",$ent . "|Source|" . $id_article . "|" . $extrait);
 							$ent = preg_replace("~\{|\}|\,~","", $ent);
 							// Enregistrer l'entite
-							$fragments[] = $ent . "|Sources|" . $id_article . "|" . $extrait ;
-				
+							//  "Black Boy|Sources|47572|se prenaient pour des amis des Nègres} [[ Richard Wright, {Black Boy,} traduit de l'anglais par Marcel Duhamel et Andrée R. Picard,"
+
+							// lieu édition ?
+							// pays multi
+							// pays mono
+							
+							// media ?
+							// journaux multi
+							// journaux mono
+
+							// Personnalités (trouver nom) sur la note
+							// auteurs / traducteurs / Editeurs
+							
+							// virer la note de bas de page du texte pour la suite ??
+							
+							$fragments[] = $ent . "|Sources|" . $id_article . "|" . $extrait_propre ;			
+							
 						}
 					}
 					$i++;
@@ -85,12 +107,7 @@ function trouver_entites($texte,$id_article){
 		}
 	}
 
-	//var_dump($fragments,"<hr><hr>");
-
-	// types d'entites définis dans les listes txt.
-	// on commence par celles qui font plusieurs mots.
-	$types_entites =  generer_types_entites("multi");	
-
+	// var_dump("<pre>",$fragments,"</pre><hr><hr>");
 
 	/* regex automatisées depuis les fichiers de listes */
 	// on commence par tout sauf les organisations à cause de la RDC
@@ -239,8 +256,6 @@ function trouver_entites($texte,$id_article){
 	
 	// trouver des entites constituées d'un seul mot
 
-	// types d'entites définis dans les listes txt.
-	$types_entites_mono =  generer_types_entites("mono");
 	
 	// var_dump("<pre>",$types_entites_mono,"</pre>");
 
