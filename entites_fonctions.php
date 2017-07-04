@@ -1,118 +1,56 @@
 <?php
 
-// TODO
-// passer un unique sur les listes texte (PKK) ?
-// passer la liste des institutions automatique et personnalité dans une liste d'alias pour repecher les FARC par exemple.
-
-include('mots_courants.php');
-
-// remonter la limite de taille d'une regexp
-// essential for huge PCREs
-// ini_set("pcre.backtrack_limit", "10000000000000");
-// ini_set("pcre.recursion_limit", "10000000000000");
-
-// http://fr.wikipedia.org/wiki/Table_des_caract%C3%A8res_Unicode/U0080
-// http://www.regular-expressions.info/unicode.html
-// To match a letter including any diacritics, use \p{L}\p{M}*+.
-define("LETTRES","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı-]"); // il en manque, passer en /u
-define("LETTRESAP","[a-zA-ZàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßœŒğı'-]"); // il en manque, passer en /u
-
-// http://www.regular-expressions.info/unicode.html
-/*
-
- \p{L} lettres
- \p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant.
- \p{Z} or \p{Separator}: any kind of whitespace or invisible separator.
-      \p{Zs} or \p{Space_Separator}: a whitespace character that is invisible, but does take up space.
-      \p{Zl} or \p{Line_Separator}: line separator character U+2028.
-      \p{Zp} or \p{Paragraph_Separator}: paragraph separator character U+2029. 
-    \p{N} or \p{Number}: any kind of numeric character in any script.
-        \p{Nd} or \p{Decimal_Digit_Number}: a digit zero through nine in any script except ideographic scripts.
-        \p{Nl} or \p{Letter_Number}: a number that looks like a letter, such as a Roman numeral.
-        \p{No} or \p{Other_Number}: a superscript or subscript digit, or a number that is not a digit 0–9 (excluding numbers from ideographic scripts). 
-    \p{P} or \p{Punctuation}: any kind of punctuation character.
-        \p{Pd} or \p{Dash_Punctuation}: any kind of hyphen or dash.
-        \p{Ps} or \p{Open_Punctuation}: any kind of opening bracket.
-        \p{Pe} or \p{Close_Punctuation}: any kind of closing bracket.
-        \p{Pi} or \p{Initial_Punctuation}: any kind of opening quote.
-        \p{Pf} or \p{Final_Punctuation}: any kind of closing quote.
-        \p{Pc} or \p{Connector_Punctuation}: a punctuation character such as an underscore that connects words.
-        \p{Po} or \p{Other_Punctuation}: any kind of punctuation character that is not a dash, bracket, quote or connector. 
-*/
-
-
-define("LETTRE_CAPITALE","\p{Lu}");
-
-// var_dump("<pre>",$types_entites,"</pre>");
-
-// Isoler les entites connues (Institutions, Traités etc).
-// POur trouver ensuite les personnalités
 function trouver_entites($texte,$id_article){
-
+	
+	/*
+		Trouver d'abord des entites connues (Pays, Institutions, Traités etc) à partir de listes txt.
+		Trouver ensuite dans le texte les personnalités restantes.
+		
+		TODO
+			- passer un unique sur les listes texte (PKK) ?
+			-
+	*/
+	
+	// Charger les entites nommees
+	include_spip("inc/entites_nommees");
+	
+	// Charger les regexp par types d'entites définis dans des fichiers dictionnaires au format txt.
+	// - entités nommées qui font plusieurs mots.
+	$types_entites =  generer_types_entites("multi");
+	// - entites d'un mot.
+	$types_entites_mono = generer_types_entites("mono");
+	
+	//var_dump("<pre>",$types_entites,"</pre>");
+	//var_dump("<pre>",$types_entites_mono,"</pre>");
+	
+	// Enregistrer les entites dans un tableau
 	$fragments = array();
+	// Garder le texte original pour chercher des extraits.
 	$texte_original = $texte ;
-
-	// types d'entites définis dans les listes txt.
-	// on commence par celles qui font plusieurs mots.
-	$types_entites =  generer_types_entites("multi");	
-
-	// types d'entites définis dans les listes txt.
-	// on recommencve ensuite avec les entites d'un mot.
-	$types_entites_mono =  generer_types_entites("mono");
-
+	
 	// Traiter d'abord les notes de bas de pages.
 	// SOURCES
-	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
-		foreach($notes[1] as $note){
-			if(preg_match_all("/\{(?!Cf|Ibid)[^,]+,?\}/uims",$note,$e)){
+	
+	// $types d'entites lieux ou média à repérer dans les notes.
+	foreach($types_entites as $k => $v)
+		if(preg_match("/^(villes.*|pays.*|journaux.*)/i", $k, $r))
+			$types_lieux[$r[1]] = $v ;
 
-				//exit();
-				
-				$i = 0 ;
-				
-				foreach($e[0] as $ent){
-					// Trouver les extraits ou apparaissent l'entite dans le texte original
-					//var_dump("<pre>",$ent);
-					
-					if(preg_match_all("`(?:\P{L})((?:.{0,60})\P{L}" . str_replace("`", "", preg_quote($ent)) . "\P{L}(?:.{0,60}))(?:\P{L})`u", $texte, $m)){
-						foreach($m[1] as $extrait){
-							
-							$extrait_propre = preg_replace(",\R,","",trim($extrait));	
-						
-							//var_dump("<pre>",$ent . "|Source|" . $id_article . "|" . $extrait);
-							$ent = preg_replace("~\{|\}|\,~","", $ent);
-							// Enregistrer l'entite
-							//  "Black Boy|Sources|47572|se prenaient pour des amis des Nègres} [[ Richard Wright, {Black Boy,} traduit de l'anglais par Marcel Duhamel et Andrée R. Picard,"
-
-							// lieu édition ?
-							// pays multi
-							// pays mono
-							
-							// media ?
-							// journaux multi
-							// journaux mono
-
-							// Personnalités (trouver nom) sur la note
-							// auteurs / traducteurs / Editeurs
-							
-							// virer la note de bas de page du texte pour la suite ??
-							
-							$fragments[] = $ent . "|Sources|" . $id_article . "|" . $extrait_propre ;			
-							
-						}
-					}
-					$i++;
-				}
-			}
-		}
+	// $types d'entites lieux ou média à repérer dans les notes.
+	foreach($types_entites_mono as $k => $v)
+		if(preg_match("/^(villes.*|pays.*|journaux.*)/i", $k, $r))
+			$types_lieux_mono[$r[1]] = $v ;
+	
+	$notes = entites_nommees_notes_bas_page($texte, $id_article, $types_lieux, $types_lieux_mono);
+	if(is_array($notes)){
+		$fragments = $notes['fragments'];
+		$texte = $notes['texte'];
 	}
-
-	// var_dump("<pre>",$fragments,"</pre><hr><hr>");
-
-	/* regex automatisées depuis les fichiers de listes */
-	// on commence par tout sauf les organisations à cause de la RDC
+	//var_dump("<pre>",$fragments,$texte,"</pre><hr><hr>");
+	
+	// Chercher d'abord les entités connues sauf les organisations (à cause de la RDC)
 	foreach($types_entites as $type => $regex){
-
+		
 		// on ne fait pas les organisations tout de suite.
 		if(preg_match("/^(institution.*|parti.*)/i", $type)){
 			continue;
@@ -181,31 +119,33 @@ function trouver_entites($texte,$id_article){
 	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 
 	// Repérer les organisations
-	foreach($fragments as $v){
-		if(preg_match("`$acronymes`u",$v,$m))
-			$institutions[$m[2]] = $m[1] ;
-	}
-
-	foreach($fragments as $v){
-		if(preg_match("/^(.*)\|(Institutions|Partis politiques)\|/u",$v,$m)){
-			// cas des Parti communiste (PC)
-			// recaler des institutions réduites PC
-			if($institutions[$m[1]]){
-				$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
-				$fragments_fusionnes[] = $f ;
-			}elseif(in_array($m[1], $institutions)){ // recaler des institutions réduites moyenne Parti communiste
-				$f = preg_replace("/^".$m[1]."/u", $institutions[$m[1]] . " (" . $m[1] . ")", $v) ;
-				$fragments_fusionnes[] = $f ;
+	
+	// var_dump($fragment);
+	if(is_array($fragments))
+		foreach($fragments as $v){
+			if(preg_match("`$acronymes`u",$v,$m))
+				$institutions[$m[2]] = $m[1] ;
+		}
+	if(is_array($fragments))
+		foreach($fragments as $v){
+			if(preg_match("/^(.*)\|(Institutions|Partis politiques)\|/u",$v,$m)){
+				// cas des Parti communiste (PC)
+				// recaler des institutions réduites PC
+				if($institutions[$m[1]]){
+					$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
+					$fragments_fusionnes[] = $f ;
+				}elseif(in_array($m[1], $institutions)){ // recaler des institutions réduites moyenne Parti communiste
+					$f = preg_replace("/^".$m[1]."/u", $institutions[$m[1]] . " (" . $m[1] . ")", $v) ;
+					$fragments_fusionnes[] = $f ;
+				}else
+					$fragments_fusionnes[] = $v ;
 			}else
 				$fragments_fusionnes[] = $v ;
-		}else
-			$fragments_fusionnes[] = $v ;
-	}
+		}
 	if(is_array($fragments_fusionnes))
 		$fragments = array_unique($fragments_fusionnes) ;
 
 	$fragments_fusionnes = array();
-
 	
 	//var_dump("<pre>", $fragments,"<hr><hr>", $texte);
 
@@ -292,16 +232,17 @@ function trouver_entites($texte,$id_article){
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
 	// En cas d'accronyme Parti communiste (PC), virer aussi la forme réduite		
 	
-	foreach($fragments as $v){
-		if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
-			$personnalites[] = $m[1] ;
-		elseif(preg_match("`$acronymes`u",$v,$m)){
-			$institutions[$m[2]]['valeur'] = trim($m[1]) ;
-			preg_match(",^[^|]+\|([^|]+)\|,", $v, $type_orga);
-			//var_dump($v, $type_orga, "lol");
-			$institutions[$m[2]]['type'] = trim($type_orga[1]) ;
+	if(is_array($fragments))
+		foreach($fragments as $v){
+			if(preg_match("/(.*)\|Personnalités\|/u",$v,$m))
+				$personnalites[] = $m[1] ;
+			elseif(preg_match("`$acronymes`u",$v,$m)){
+				$institutions[$m[2]]['valeur'] = trim($m[1]) ;
+				preg_match(",^[^|]+\|([^|]+)\|,", $v, $type_orga);
+				//var_dump($v, $type_orga, "lol");
+				$institutions[$m[2]]['type'] = trim($type_orga[1]) ;
+			}
 		}
-	}
 
 	//var_dump($fragments,"fragments");
 	//var_dump($institutions);
@@ -423,199 +364,11 @@ function trouver_entites($texte,$id_article){
 			}			
 		}else{
 			$fragments_traites[] = $v ;
-		}	
+		}
 	}
 
 	//var_dump("<pre>",$patronymes,$fragments_fusionnes);
 	return $fragments_traites ;
-}
-
-
-function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
-	// Trouver toutes les occurences d'une entité en respectant la casse bien sur.
-	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
-		$entites = $e[0];
-		//var_dump("<pre> recolte :",$type_entite, $regex, $entites,"</pre>lol");
-		$recolte = traiter_fragments($entites, $type_entite, $texte, $fragments, $id_article, $texte_original);
-		$fragments = $recolte["fragments"];
-		$texte = $recolte["texte"];
-	}
-	return array("texte" => $texte, "fragments" => $fragments) ;
-}
-
-function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_article, $texte_original){
-
-	// réguler les types avec plusieurs sous_chaines
-	$type = preg_replace("/([^\d]+)\d+$/u", "$1", $type_entite);
-	$type = str_replace("_", " ", $type);	
-
-	// On recupere un tableau d'entites possiblement redondantes
-	// nettoyer un peu
-	// array_walk($entites,"nettoyer_entite_nommee"); // marche pas
-	if(is_array($entites) and sizeof($entites) >= 1)
-		array_walk($entites,"nettoyer_entite_nommee");
-	else	
-		return array("texte" => $texte, "fragments" => $fragments);
-
-	//var_dump("<pre>",$entites,"</pre>lol");
-
-	// Chasse aux entites ouverte !
-	// On supprime les entites du texte pour les chasser toutes à la fin ou ne reste plus qu'un texte sans entites.
-	foreach($entites as $entite){
-			
-		if($entite == "")
-			continue ;
-
-		// Trouver l'extrait incluant l'entite dans le texte débité
-		preg_match("`(?:\P{L})(?:.{0,60})(?:\p{Z}|\p{P})" . str_replace("`", "", preg_quote($entite)) . "(?:\p{Z}|\p{P})(?:.{0,60})(?:\P{L})`u", $texte, $m);
-		$extrait = preg_replace(",\R,","",trim($m[0]));
-
-		//var_dump($entite);
-		//if($entite == "Cuba"){
-		//	var_dump("<pre>","Traiter frag :" ,$type, $entite,"</pre>", $extrait);
-		//}
-
-		// Virer l'entité dans cet extrait, puis dans le texte débité.
-		if(!$m[0])
-			$texte = str_replace($entite, "xxx" , $texte);
-		else{
-			$extrait_propre = str_replace($entite,"xxx",$extrait);
-			$texte = str_replace($extrait, $extrait_propre , $texte);
-		}
-
-		//var_dump($entite, $extrait, "lol");
-		//var_dump("<pre>",$entite . "|$type|" . $id_article . "|" . $extrait);
-				
-		// Enregistrer l'entite
-		$fragments[] = $entite . "|$type|" . $id_article . "|" . $extrait ;
-	}
-
-	// var_dump($entites,$fragments,"lol");
-
-	// trouver des formes réduites résiduelles
-	// if(is_array($reduite))
-	//	var_dump("<pre>", $reduite ,"</pre><hr>");
-
-	return array("texte" => $texte, "fragments" => $fragments);
-}
-
-
-function trouver_noms($texte){
-
-	// Trouver des noms de personnalités dans un texte en recherchant le masque : Xxx Xxx xx xx Xxx
-	// http://stackoverflow.com/questions/7653942/find-names-with-regular-expression
-
-	// http://php.net/manual/fr/regexp.reference.assertions.php
-	// http://php.net/manual/fr/regexp.reference.subpatterns.php
-	// (?<!foo)bar trouve les occurrences de "bar" qui ne sont pas précédées par "foo". // assertion arriere negative
-	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
-
-	// virer les débuts de phrases fréquents avec une liste de mots fréquents
-	$reg =  "%(?:\P{L})". // lettre ou ponctuation non capturée
-			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
-			"(".
-				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:" . LETTRES . ")(?:". LETTRESAP ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou ' (mais pas en deuxieme) ou d'un .
-				"(?:\s+" . LETTRE_CAPITALE . "(?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
-				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
-				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
-			"|". ENTITES_PERSO .")". // Personnalités à pseudo // a virer ?
-	"%mu"	;
-
-	preg_match_all($reg,$texte,$m);
-	$noms = $m[1] ;
-	//var_dump("<pre>",$m);
-
-	array_walk($noms,"nettoyer_noms");
-	
-	// recaler les noms ici meme si on le refait plus tard pour ne pas prendre deby maintenant
-
-	//var_dump($noms);
-
-	// var_dump("<pre>",$personnalites,"</pre><hr>");
-	if(is_array($noms)){
-		foreach($noms as $v){
-			$a = explode(" ",str_replace("'", " ", $v)) ;
-			if(sizeof($a) > 1){
-				// on suppose que le nom de famille est a la fin (mais ce n'est pas toujours le cas cf les personnalités asiatiques)
-				$patronyme = array_pop($a);
-				if(!$patronymes[$patronyme])
-					$patronymes[$patronyme] = $v ;
-			}
-			if(sizeof($a) > 1){
-				// on suppose que le nom de famille est au milieu : Idriss Déby Itno => M. Déby
-				$patronyme = array_pop($a);
-				if(!$patronymes[$patronyme])
-					$patronymes[$patronyme] = $v ;
-			}
-		}
-		//var_dump("<pre>",$noms, $patronymes);
-	
-		// voir si on a pas un nom court qui existe en long
-		foreach($noms as $v)
-			if(!$patronymes[$v])
-				$noms_fusionnes[] = $v ;
-		
-		$noms = $noms_fusionnes ;
-		
-	}
-
-	
-	//var_dump("<pre>",$noms);
-	
-	//var_dump($noms);
-
-	return $noms ;
-}
-
-// renvoyer en fait patronyme => forme longue
-function nettoyer_noms(&$item1, $key){
-	// (^M\.|^Mme|^Mgr|^Dr|^Me) \s+
-	$item1 = preg_replace("/(^M\.|^Mmes?|^Mgr|^Dr|^Me|MM\.)\s+/Uu","",$item1); // pas les civilités
-	$item1 = preg_replace("/-$/u"," ",$item1);
-	
-	// http://archives.mondediplo.com/ecrire/?exec=articles&id_article=8337
-	$item1 = preg_replace("/\R/"," ",$item1);
-	
-	$item1 = trim($item1);
-
-}
-
-function nettoyer_entite_nommee(&$entite, $key){
-
-	//var_dump($entite);
-
-	// nettoyage des entités choppées avec une ,. ou autre.
-	if(strpos($entite, "("))
-		$entite = trim(preg_replace("`(?!\))[^\p{L}\p{N}]+$`u", "", $entite));
-	else
-		$entite = trim(preg_replace("`[^\p{L}\p{N}]+$`u", "", $entite));
-		
-	if(preg_match("`^(" . MOTS_DEBUT . ")$`u", $entite))
-		$entite = "" ;	
-
-	$entite = trim(preg_replace("/^[^\p{L}\p{N}]+/u", "", $entite));
-	
-	//if($entite == "Cuba")
-	//	var_dump("<pre>", "nettoyage entites : ", $entite, "</pre>");
-
-}
-
-function entites_nommees($noms = array()){
-
-	$lieux = ENTITES_LIEUX_EURISTIQUE ;
-	$institutions = ENTITES_INSTITUTIONS_EURISTIQUE ;
-
-	foreach($noms as $k => $v){
-		if(preg_match("/$lieux/Uu",$k))
-			$entites_nommees['lieux'][$k] = $v ;
-		elseif(preg_match("/$institutions/Uu",$k))
-			$entites_nommees['institutions'][$k] = $v ;	
-		else
-			$entites_nommees['personnalites'][$k] = $v ;		 
-		
-	}
-
-	return $entites_nommees ;
 }
 
 function preparer_texte($texte){
