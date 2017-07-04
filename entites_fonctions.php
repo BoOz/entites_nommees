@@ -83,7 +83,7 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 		
 		/*
-		// Ensuite l amême chose sans l'ccaonyme : Confédération générale du travail.
+		// Ensuite la même chose sans l'accronyme : Confédération générale du travail.
 		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
 		
 		//var_dump($types_reduits);
@@ -94,21 +94,23 @@ function trouver_entites($texte,$id_article){
 		
 		//var_dump($reg);
 		
+		*/
+		
 		// ensuite que l'acconyme s'il fait plus qu'une lettre...
 		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
-		
-		//var_dump($reg,$accros[0]);
 		
 		$accros[0] = str_replace("\(", "\P{L}", $accros[0]);
 		$accros[0] = str_replace("\)", "\P{L}", $accros[0]);
 		
 		$accros = join("|", array_unique($accros[0]));
 		
+		//var_dump("<pre>",$reg,$accros,"</pre>");
+		
 		$recolte = recolter_fragments($label, $accros, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 		
-		*/
+		/**/
 	}
 	
 	// a debug
@@ -117,15 +119,18 @@ function trouver_entites($texte,$id_article){
 	/* recaler les accro et les developpés */
 	$institutions = array() ;
 	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
-
-	// Repérer les organisations
 	
+	// Repérer les organisations
+	// si une forme longue est trouvée, oncherche
 	// var_dump($fragment);
 	if(is_array($fragments))
 		foreach($fragments as $v){
 			if(preg_match("`$acronymes`u",$v,$m))
 				$institutions[$m[2]] = $m[1] ;
 		}
+	
+	//var_dump("<hr>",$fragments,"<hr>",$institutions,"<hr>");
+	
 	if(is_array($fragments))
 		foreach($fragments as $v){
 			if(preg_match("/^(.*)\|(Institutions|Partis politiques)\|/u",$v,$m)){
@@ -145,9 +150,10 @@ function trouver_entites($texte,$id_article){
 	if(is_array($fragments_fusionnes))
 		$fragments = array_unique($fragments_fusionnes) ;
 
+	//var_dump("<pre>", $fragments,"<hr><hr>", $texte);
+
 	$fragments_fusionnes = array();
 	
-	//var_dump("<pre>", $fragments,"<hr><hr>", $texte);
 
 	// itals spip
 	$texte = str_replace("{", "", $texte);
