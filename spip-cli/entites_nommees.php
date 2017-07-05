@@ -25,6 +25,7 @@ class entites_nommees extends Command {
 			->setAliases(array(
 				'entites'
 			))
+			->addArgument('fichier', InputArgument::OPTIONAL, 'Fichier texte à analyser')
 			->addOption(
 				'restart',
 				'r',
@@ -54,21 +55,41 @@ class entites_nommees extends Command {
 		global $spip_loaded;
 		global $spip_version_branche ;
 	
+		if($fichier = $input->getArgument('fichier')){
+			if(!is_file($fichier)){
+				echo "Fichier $fichier non trouvé...\n" ;
+				exit ;
+			}
+			echo "Calcul des entités nommées dans le fichier " . basename($fichier) . "...\n" ;
+			lire_fichier($fichier,$f);
+			//var_dump($f);
+			include_spip("entites_fonctions");
+			$texte = preparer_texte($f);
+			$fragments = trouver_entites($texte,0) ;
+			if($fragments)
+				foreach($fragments as $e)
+					echo preg_replace("/\|/","	", str_replace("|0|", "	" , $e));
+			else
+				echo "Pas d'entités nommées dans $fichier";
+			echo "\n\n";
+			exit ;
+		}
+		
 		$restart = $input->getOption('restart') ;
 		$requalifier = $input->getOption('maj') ;
 		$type_source = $input->getOption('type') ;
-	
+		
 		include_spip("base/abstract_sql");
-				
+		
 		if ($spip_loaded) {
 			chdir($spip_racine);
-
+			
 			if (!function_exists('passthru')){
 				$output->writeln("<error>Votre installation de PHP doit pouvoir exécuter des commandes externes avec la fonction passthru().</error>");
 			}
 			// Si c'est bon on continue
 			else{
-
+				
 				// requalifier les types d'apres les fichier du repertoire a_ajouter ?
 				if($requalifier !=="non"){
 					passthru("clear");
@@ -207,12 +228,12 @@ class entites_nommees extends Command {
 					$art = sql_fetch($query) ;
 
 					$m = substr(" Traitement de l'article " . $art['id_article'] . " (" . $art['date_redac'] . ")", 0, 100) ;
-    				$progress->setMessage($m, 'message');
-    				
-    				
-    				// Trouver et enregistrer les entites nommées
-    				include_spip("entites_fonctions");
-    				$texte = preparer_texte($art['titre'] . " // \n" . $art['chapo'] . " // \n" . $art['texte'] . "\n");
+					$progress->setMessage($m, 'message');
+					
+					
+					// Trouver et enregistrer les entites nommées
+					include_spip("entites_fonctions");
+					$texte = preparer_texte($art['titre'] . " // \n" . $art['chapo'] . " // \n" . $art['texte'] . "\n");
 					$fragments = trouver_entites($texte, $art['id_article']) ;
 					//var_dump($fragments);
 					
