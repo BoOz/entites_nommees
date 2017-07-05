@@ -114,7 +114,6 @@ Environnement
 Esclavage
 Espace
 Essai
-État
 Exclusion sociale
 Extrême droite
 Extrême gauche
@@ -322,4 +321,4 @@ Université
 Urbanisme
 Ville
 Violence
-Zone franche 
+Zone franche
