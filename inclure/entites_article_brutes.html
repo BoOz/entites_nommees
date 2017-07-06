@@ -28,7 +28,7 @@
 
 <B_personnalites>
 <h3 style="margin-top:1.5em">Personnalités</h3>
-<BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,id_entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a></BOUCLE_personnalites>
+<BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a></BOUCLE_personnalites>
 
 <B_institutions>
 <h3 style="margin-top:1.5em">Institutions</h3>
