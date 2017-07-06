@@ -50,10 +50,12 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 		foreach($notes[1] as $note){
 			$note_originale = $note ;
 			// trouver la source en ital spip {}
-			if(preg_match("/\{(?!Cf|Ibid)([^,]+),?\}/uims",$note,$s)){
-				$entite = $s[1] ;
+			if(preg_match("/\{(?!\s?Cf\s?|\s?Ibid\s?|\s?in\s?|\s?op\.?\s?cit\.?\s?)([^,]+),?\}/uims",$note,$s)){
+				$entite = trim($s[1]) ;
+				
 				// Enregistrer l'entité de type Sources.
-				$fragments[] = $entite . "|Sources|" . $id_article . "|" . $note ;
+				if(strlen($entite) > 1)
+					$fragments[] = $entite . "|Sources|" . $id_article . "|" . $note ;
 				
 				// Enlever les lieux et médias multi entités
 				foreach($regex_lieux as $regex){
