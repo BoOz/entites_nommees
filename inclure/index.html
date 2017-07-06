@@ -32,51 +32,6 @@
 		.entites_residuelles a{
 		}
 	</style>
-
-
-		<B_fragments_entite>
-		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%">
-		#ANCRE_PAGINATION
-		<BOUCLE_fragments_entite(DATA){source sql, #VAL{"select entite, extrait, id_article, type_entite from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{!par valeur}{valeur > 1}{pagination 500}{si #ENV{entite}|oui}>
-			<p>
-				<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
-				<strong>[(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
-				<small><a href="?page=entites_nommees&amp;id_article=[(#ID_ARTICLE)]" title="Extrait de « [(#TITRE)] »">[voir]</a></small>
-			</p>
-		</BOUCLE_fragments_entite>
-			<p>#PAGINATION</p>
-		</div>
-		</B_fragments_entite>
-	
-	
-		#SET{comp,'having nb > 5'}
-		<BOUCLE_texte_article(ARTICLES){id_article}{statut IN prepa, prop, publie}>	
-		#SET{comp,''}
-		<h3 style="clear:left;">#TITRE</h3>
-	
-		[(#REM) Débug : Entites d'un article en direct sans enregistrement ]
-	
-		#SET{texte,#TITRE*|concat{" // "}|concat{#CHAPO*}|concat{" // "}|concat{#TEXTE*}|preparer_texte}
-		#SET{entites,#ARRAY}
-		#SET{entites,#GET{entites}|array_merge{#GET{texte}|trouver_entites{#ID_ARTICLE}}}
-	
-		<div style="max-height:200px;overflow:auto;clear:left; margin: 40px 60px 20px 0px;padding: 0 50px;width:66%;display: flex; flex-flow: row wrap;">
-			<BOUCLE_entites_articles(DATA){source table,#GET{entites}}>
-			[<p>
-				 <strong>(#VALEUR|explode{"|"}|table_valeur{0})</strong> ([(#VALEUR|explode{"|"}|table_valeur{1})]) : [(#VALEUR|explode{"|"}|table_valeur{3})]
-				
-			</p>]
-			</BOUCLE_entites_articles>
-			<h4>Texte</h4>	
-			<div class="texte">
-				[(#CHAPO|concat{
-					#TEXTE})]
-				<div>
-				#NOTES
-				</div>
-			</div>
-		</div>
-		</BOUCLE_texte_article>
 	
 	<div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
 		
@@ -92,8 +47,8 @@
 			</BOUCLE_personnalites_frequents>
 			</ul>
 			<p>#PAGINATION</p>
-			</B_personnalites_frequents>
 		</div>
+		</B_personnalites_frequents>
 		
 		#SET{notin,#ARRAY}
 		
@@ -158,7 +113,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_entite_frequents_autres(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+					<li>[(#ENTITE|replace{^.*:})]&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
 				</small>
 					</li>
 				</BOUCLE_entite_frequents_autres>
