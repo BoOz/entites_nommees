@@ -50,7 +50,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 		foreach($notes[1] as $note){
 			$note_originale = $note ;
 			// trouver la source en ital spip {}
-			if(preg_match("/\{(?!\s?Cf\s?|\s?Ibid\s?|\s?in\s?|\s?op\.?\s?cit\.?\s?)([^,]+),?\}/uims",$note,$s)){
+			if(preg_match("/\{(?!\s?Cf\s?|\s?Ibid\s?|\s?in\s?|\s?et al\.?\s?|\s?op\.?\s?cit\.?\s?)([^,]+),?\}/uims",$note,$s)){ //  et al. 
 				$entite = trim($s[1]) ;
 				
 				// Enregistrer l'entité de type Sources.
