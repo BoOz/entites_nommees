@@ -55,7 +55,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 				
 				// Enregistrer l'entité de type Sources.
 				if(strlen($entite) > 1)
-					$fragments[] = $entite . "|Sources|" . $id_article . "|" . $note ;
+					$fragments[] = "media:" . $entite . "|Sources|" . $id_article . "|" . $note ;
 				
 				// Enlever les lieux et médias multi entités
 				foreach($regex_lieux as $regex){
@@ -64,7 +64,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 							// reperer un lieu de publication
 							$lieu = nettoyer_entite($lieu);
 							if($lieu)
-								$fragments[] = $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
+								$fragments[] = "media:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
 							// virer de la note
 							$note = str_replace($lieu, "", $note);
 						}
@@ -77,7 +77,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 							// reperer un lieu de publication
 							$lieu = nettoyer_entite($lieu);
 							if($lieu)
-								$fragments[] = $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
+								$fragments[] = "media:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
 							// virer de la note
 							$note = str_replace($lieu, "", $note);
 						}
@@ -92,12 +92,12 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 			// retrouver des institutions
 			if(is_array($auteurs ["institutions"]) AND sizeof($auteurs ["institutions"]) > 0)
 				foreach($auteurs ["institutions"] as $a)
-					$fragments[] = $a . "|Sources|" . $id_article . "|" . $note ;
+					$fragments[] = "media:" . $a . "|Sources|" . $id_article . "|" . $note ;
 			
 			// reste des noms
 			if(is_array($auteurs ["personnalites"]) AND sizeof($auteurs ["personnalites"]) > 0)
 				foreach($auteurs ["personnalites"] as $a)
-					$fragments[] = $a . "|Auteurs|" . $id_article . "|" . $note ;
+					$fragments[] = "media:" . $a . "|Auteurs|" . $id_article . "|" . $note ;
 			
 			// virer la note de bas de page du texte pour la suite
 			$texte = str_replace($note_originale, "", $texte);

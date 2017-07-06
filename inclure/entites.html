@@ -30,7 +30,7 @@
 <BOUCLE_sources(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Sources') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{sources,#GET{sources}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_sources>
 
 #SET{autres,#ARRAY}
-<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Sources', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
+<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Sources', 'Lieu de publication', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
 
 <div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<h3>Personnalités[ (#ENV{entite}|oui) proches de [(#ENV{entite})]]</h3>
