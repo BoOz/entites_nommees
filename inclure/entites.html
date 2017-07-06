@@ -75,7 +75,7 @@
 <div id="auteurs" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<h3>Auteurs[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]</h3>
 <BOUCLE_top_auteurs(DATA){source table, #GET{auteurs}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{sources}|max})]em;">
+	<span style="font-size:[(#VALEUR|nuage_mot{#GET{auteurs}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
 [(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
 		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
