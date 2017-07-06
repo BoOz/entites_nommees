@@ -170,6 +170,37 @@ class entites_nommees extends Command {
 							}
 						}
 					}
+					
+					// citation du diplo dans le texte
+					// «[->50393]» ({Le Monde diplomatique,} mai 2014)
+					// Dans « Le Monde diplomatique » de septembre 1977
+					// Le Monde diplomatique, décembre 2013
+					
+					$ent = sql_query("select * from entites_nommees where entite='Le Monde diplomatique'");
+					$nb = sql_count($ent);
+					if($nb > 0){
+						echo $nb . " mentions du diplo\n";
+						
+						while($res = sql_fetch($ent)){
+							// echo $res["extrait"] ."\n";
+							// par Victor de La Fuente, {Le Monde diplomatique,} décembre 1989
+							// (« Le Monde diplomatique », octobre 2012)
+							//
+							if(preg_match("/Le Monde diplomatique}?,.*\d{4}/", $res['extrait'])){
+								echo "///////\n CITATION : " . $res["extrait"] . "\n///////////" ;
+								$up =  "update entites_nommees set entite='media:Le Monde diplomatique' where id_entite=" . intval($res['id_entite']);
+								echo $up . "\n";
+								sql_query($up);
+							}
+							
+						}
+						
+						// $up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;	
+						// echo $up . "\n";
+						// sql_query($up);
+						echo "\n" ;
+					}
+					
 					exit();
 				}
 				

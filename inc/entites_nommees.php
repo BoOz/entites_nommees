@@ -103,6 +103,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 			$texte = str_replace($note_originale, "", $texte);
 		}
 	}
+	
 	return array('fragments' => $fragments, 'texte' => $texte);
 }
 
