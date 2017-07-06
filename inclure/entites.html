@@ -74,7 +74,7 @@
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{sources}|max})]em;">
 		<a style="padding-right:20px;text-decoration:none" href="?page=entite[&amp;entite=(#CLE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]" title="[(#VALEUR)]&nbsp;fois">
 [(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 		</a>
 	</span>
 </BOUCLE_top_sources>
