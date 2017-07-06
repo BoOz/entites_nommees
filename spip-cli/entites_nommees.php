@@ -186,7 +186,7 @@ class entites_nommees extends Command {
 							// par Victor de La Fuente, {Le Monde diplomatique,} décembre 1989
 							// (« Le Monde diplomatique », octobre 2012)
 							//
-							if(preg_match("/Le Monde diplomatique}?,.*\d{4}/", $res['extrait'])){
+							if(preg_match("/Le Monde diplomatique\s?»?\"?}?,.*\d{4}/", $res['extrait'])){
 								echo "///////\n CITATION : " . $res["extrait"] . "\n///////////" ;
 								$up =  "update entites_nommees set entite='media:Le Monde diplomatique' where id_entite=" . intval($res['id_entite']);
 								echo $up . "\n";
