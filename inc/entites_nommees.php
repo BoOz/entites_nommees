@@ -64,7 +64,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 							// reperer un lieu de publication
 							$lieu = nettoyer_entite($lieu);
 							if($lieu)
-								$fragments[] = "media:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
+								$fragments[] = "lieu:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
 							// virer de la note
 							$note = str_replace($lieu, "", $note);
 						}
@@ -77,7 +77,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 							// reperer un lieu de publication
 							$lieu = nettoyer_entite($lieu);
 							if($lieu)
-								$fragments[] = "media:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
+								$fragments[] = "lieu:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
 							// virer de la note
 							$note = str_replace($lieu, "", $note);
 						}
@@ -97,7 +97,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 			// reste des noms
 			if(is_array($auteurs ["personnalites"]) AND sizeof($auteurs ["personnalites"]) > 0)
 				foreach($auteurs ["personnalites"] as $a)
-					$fragments[] = "media:" . $a . "|Auteurs|" . $id_article . "|" . $note ;
+					$fragments[] = "auteur:" . $a . "|Auteurs|" . $id_article . "|" . $note ;
 			
 			// virer la note de bas de page du texte pour la suite
 			$texte = str_replace($note_originale, "", $texte);
