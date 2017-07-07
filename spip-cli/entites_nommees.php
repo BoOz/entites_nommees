@@ -136,7 +136,7 @@ class entites_nommees extends Command {
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;
