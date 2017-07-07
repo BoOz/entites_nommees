@@ -132,7 +132,8 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and (entite= " . sql_quote($e) . "or entite=" . sql_quote("auteur:$e"));
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
