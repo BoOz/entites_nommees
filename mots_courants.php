@@ -15,7 +15,7 @@ $autres = "Qui|Que|quoi|dont|Où|Quant|Quel|Quelles?" ;
 $loc = "Sous|Sur|dans|Près|Loin|Là|Ici|Ailleurs|Devant|Au-delà|Face|Derrière|Contre|Vers";
 $quant = "Environ|Quelques|Nombre|Très|Peu|plus|moins|Certains";
 $temps = "Quand|Hier|aujourd|Lors|Depuis|avant|après|pendant|Longtemps|Début|Fin|Parfois|Durant";
-$jargon = "Article|Cité|Originaire|Né|Née|Mort|Côté|Personne|Ancien|Résultats?|Ayant|Soit|Faute|Sorti|Parfois|Fort|Fondé|Faut-il|Fallait-il|Cf.";
+$jargon = "Article|Cité|Originaire|Né|Née|Mort|Côté|Personne|Ancien|Résultats?|Ayant|Soit|Faute|Sorti|Parfois|Fort|Fondé|Faut-il|Fallait-il|Cf.|Vue|Voyez|Intervention|Issu";
 $autres = "Monsieur|Mme|L|C|Rien|Est-il|Être|Comment|Alors|Tel|Telle|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The" ;
 //$singleton = "Internet|Dieu|Eglise|Djihad|Prophète|Toile";
 
@@ -39,8 +39,8 @@ define("MOTS_DEBUT", $adverbes .
 
 // Mots au milieu de la séquence cherchée en regex
 
-$mots_milieu = "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière|encore" ;
-$verbes_milieux = "rencontre|dirige|intimide|sera|(?:ré)?invente|prévoit|menac|accus|accoupl" ;
+$mots_milieu = "et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière|encore|a|en|puis|au|et|vers" ;
+$verbes_milieux = "rencontre|dirige|intimide|sera|(?:ré)?invente|prévoit|menac|accus|accoupl|travail|national|présent|crois|préfèr|publi|interpell|écras|remett|affaibl|devien|contrib|rédig|suit" ;
 
 define("MOTS_MILIEU" ,	$mots_milieu . 
 						"|" . $verbes_milieux ) ;
@@ -54,7 +54,7 @@ define("ENTITES_PERSO","Machiavel|Molière|Mirabeau|Staline|Lénine|Mao|Bono|Mus
 /* Patterns pour isoler des entités restées parmis des personnalités */
 
 define("ENTITES_LIEUX_HEURISTIQUE","Sud$|^Nord-|Nord$|Est$|Ouest$|Côte|Congo|République|Etats|City");
-define("ENTITES_INSTITUTIONS_HEURISTIQUE","Nation|Ambassade|Conseil|Fédération|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration|convention|accords|Institut|(?:É|E)tat|International|Post|News|Daily|Science|Biblio");
+define("ENTITES_INSTITUTIONS_HEURISTIQUE","Nation|Ambassade|Conseil|Fédération|Fondation|Foreign|olympique|Culture|Report|Nouvelle|^The|Parti|Patriot|Musée|Parlement|Press$|^Presses|Agence|University|Agreement|Observatory|Company|Fédération|Edition|News|Centre|démocrat|America|Association|Public|Chambre|Air|Watch$|United|diplomati|Comité|Corporation|Center|Administration|convention|accords|Institut|(?:É|E)tat|International|Post|News|Daily|Science|Biblio|World|Women|League|Univers");
 
 // http://typo.mondediplo.net/?page=entites_nommees&entite=fonctions
 define("FONCTIONS_PERSONNALITES_TYPO","présidente? de la République|chef de l'exécutif|chef de l'(?:É|E)tat,premier ministre|président fédéral|chancelière fédérale|chef du gouvernement|reine|chancelier fédéral|première ministre|roi des Belges|roi-dragon|présidence collégiale tournante|président du conseil des ministres|président du présidium de l'Assemblée populaire suprême depuis 2011|président du gouvernement|ministre d'Etat|roi|présidente?|président du conseil|président du gouvernement|vice-président de la fédération|Guide suprême|président de l'État|président du conseil|empereur|émir|président de la Chambre des représentants|prince régnant|grand-duc|premier ministre par intérim|prince|sultan|ministre d'État|PDG|président de l'Autorité palestinienne|gouverneur|président de la Roumanie|président de la fédération|secrétaire d'État pour les affaires extérieures et politiques|président du gouvernement de Serbie|premier ministre et président du Yuan exécutif|souverain pontife|pape|secrétaire d'(?:É|E)tat");
