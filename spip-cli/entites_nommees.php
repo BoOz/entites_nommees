@@ -132,11 +132,11 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($e));
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite= " . sql_quote($e));
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;
@@ -159,11 +159,11 @@ class entites_nommees extends Command {
 					
 					if(sizeof($words) > 1 ){
 						foreach($words as $e){
-							$ent = sql_query("select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités') and entite= " . sql_quote($e));
+							$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite= " . sql_quote($e));
 							$nb = sql_count($ent);
 							if($nb > 0){
 								echo $nb . " entites '" . $e . "' de statut INDETERMINE => Poubelle\n";
-								$del =  "delete from entites_nommees where  (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;
+								$del =  "delete from entites_nommees where  ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;
 								echo $del . "\n";
 								sql_query($del);
 								echo "\n" ;

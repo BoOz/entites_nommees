@@ -56,3 +56,6 @@ Courrier International
 British Broadcasting Corporation (BBC)
 BBC News
 Charlie Hebdo
+
+// Editeurs
+Armand Colin
