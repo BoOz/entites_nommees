@@ -12,3 +12,6 @@ Caire
 
 // faute mais on en trouve
 New-york
+
+// lieu d'edition
+New Haven

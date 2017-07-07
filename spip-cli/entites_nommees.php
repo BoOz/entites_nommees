@@ -173,7 +173,10 @@ class entites_nommees extends Command {
 					}
 					
 					// effacer les entites trop peu frequentes
-					$ent = sql_query("select count(id_entite) nb, max(date) max, entite from entites_nommees group by entite having nb = 1 and max < '2012'  order by max");
+					$date_e = sql_fetch(sql_query("select DATE_ADD(date,INTERVAL -5 YEAR) ladate from entites_nommees order by date desc limit 0,1"));
+					
+					echo "On efface les entites uniques qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")\n\n";
+					$ent = sql_query("select count(id_entite) nb, max(date) max, entite from entites_nommees group by entite having nb = 1 and max < '". $date_e["ladate"] ."'  order by max");
 					$nb = sql_count($ent);
 					if($nb > 0){
 						echo $nb . " entite pas connues \n";
