@@ -118,9 +118,9 @@ class entites_nommees extends Command {
 								echo "\n" ;
 							}
 					
-					// recaler les ajouts dans les fichiers *_ajouts
+					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
 					include_spip('iterateur/data');
-					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*ajouts.txt') ; /**/
+					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
 					foreach($types_requalif as $t){
 						$type_entite = basename($t['dirname']);
 						

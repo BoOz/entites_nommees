@@ -41,12 +41,18 @@ define("LETTRESAP","[a-zA-Zàáâãäåæçèéêëìíîïðñòóôõöøùú�
 
 define("LETTRE_CAPITALE","\p{Lu}");
 
-function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $regex_lieux_mono){
+function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus, $regex_types_connus_mono){
+	
+	//var_dump("<pre>", $regex_types_connus,"</pre><hr>");
+	//var_dump("<pre>", $regex_types_connus_mono,"</pre><hr>");
+	
 	// trouver des notes spip [[ note de bas de page ]]
 	// Enregistrer l'entite
 	// "Black Boy|Sources|47572|se prenaient pour des amis des Nègres} [[ Richard Wright, {Black Boy,} traduit de l'anglais par Marcel Duhamel et Andrée R. Picard,"
 	
 	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
+		
+		
 		foreach($notes[1] as $note){
 			$note_originale = $note ;
 			// trouver la source en ital spip {}
@@ -56,31 +62,36 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_lieux, $rege
 				// Enregistrer l'entité de type Sources.
 				if(strlen($entite) > 1)
 					$fragments[] = "media:" . $entite . "|Sources|" . $id_article . "|" . $note ;
-				
-				// Enlever les lieux et médias multi entités
-				foreach($regex_lieux as $regex){
-					if(preg_match_all( "`" . $regex . "`u" , $note ,$e)){
-						foreach($e[0] as $lieu){
-							// reperer un lieu de publication
-							$lieu = nettoyer_entite($lieu);
-							if($lieu)
-								$fragments[] = "lieu:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
-							// virer de la note
-							$note = str_replace($lieu, "", $note);
-						}
+			}
+			
+			// var_dump("<pre>", $regex_types_connus ,"</pre><hr><hr>");
+			
+			// Enlever les lieux et médias multi entités
+			foreach($regex_types_connus as $r){
+				if(preg_match_all( "`" . $r . "`u" , $note ,$e)){
+					foreach($e[0] as $l){
+						// reperer un lieu de publication
+						$l = nettoyer_entite($l);
+						if($l)
+							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note ;
+						// virer de la note
+						$note = str_replace($l, "", $note);
 					}
 				}
-				// Enlever les lieux et médias mono entités
-				foreach($regex_lieux_mono as $regex){
-					if(preg_match_all( "`" . $regex . "`u" , $note ,$e)){
-						foreach($e[0] as $lieu){
-							// reperer un lieu de publication
-							$lieu = nettoyer_entite($lieu);
-							if($lieu)
-								$fragments[] = "lieu:" . $lieu . "|Lieu de publication|" . $id_article . "|" . $note ;
-							// virer de la note
-							$note = str_replace($lieu, "", $note);
-						}
+			}
+			
+			// var_dump("<pre>", $regex_types_connus_mono ,"</pre><hr><hr>");
+			
+			// Enlever les lieux et médias mono entités
+			foreach($regex_types_connus_mono as $r){
+				if(preg_match_all( "`" . $r . "`u" , $note ,$e)){
+					foreach($e[0] as $l){
+						// reperer un lieu de publication
+						$lieu = nettoyer_entite($l);
+						if($l)
+							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note ;
+						// virer de la note
+						$note = str_replace($l, "", $note);
 					}
 				}
 			}

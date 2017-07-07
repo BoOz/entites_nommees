@@ -33,15 +33,17 @@ function trouver_entites($texte,$id_article){
 	
 	// $types d'entites lieux ou média à repérer dans les notes.
 	foreach($types_entites as $k => $v)
-		if(preg_match("/^(villes.*|pays.*|journaux.*)/i", $k, $r))
-			$types_lieux[$r[1]] = $v ;
+		if(preg_match("/(^villes.*|^pays.*|^journaux.*)/i", $k, $r))
+			$types_connus[$r[1]] = $v ;
+	
 
+	
 	// $types d'entites lieux ou média à repérer dans les notes.
 	foreach($types_entites_mono as $k => $v)
-		if(preg_match("/^(villes.*|pays.*|journaux.*)/i", $k, $r))
-			$types_lieux_mono[$r[1]] = $v ;
+		if(preg_match("/(^villes.*|^pays.*|^journaux.*)/i", $k, $r))
+			$types_connus_mono[$r[1]] = $v ;
 	
-	$notes = entites_nommees_notes_bas_page($texte, $id_article, $types_lieux, $types_lieux_mono);
+	$notes = entites_nommees_notes_bas_page($texte, $id_article, $types_connus, $types_connus_mono);
 	if(is_array($notes)){
 		$fragments = $notes['fragments'];
 		$texte = $notes['texte'];
