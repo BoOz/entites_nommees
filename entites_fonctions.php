@@ -8,7 +8,7 @@ function trouver_entites($texte,$id_article){
 		
 		TODO
 			- passer un unique sur les listes texte (PKK) ?
-			-
+		
 	*/
 	
 	// Charger les entites nommees
@@ -35,8 +35,6 @@ function trouver_entites($texte,$id_article){
 	foreach($types_entites as $k => $v)
 		if(preg_match("/(^villes.*|^pays.*|^journaux.*)/i", $k, $r))
 			$types_connus[$r[1]] = $v ;
-	
-
 	
 	// $types d'entites lieux ou média à repérer dans les notes.
 	foreach($types_entites_mono as $k => $v)
@@ -65,7 +63,7 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 	}
 
-	//var_dump($fragments, "lol");
+	// var_dump($fragments, "lol");
 
 	// Gérer ensuite les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
@@ -156,7 +154,6 @@ function trouver_entites($texte,$id_article){
 
 	$fragments_fusionnes = array();
 	
-
 	// itals spip
 	$texte = str_replace("{", "", $texte);
 	$texte = str_replace("}", "", $texte);
@@ -469,56 +466,54 @@ function enregistrer_entites($entites = array(), $id_article, $date){
 
 }
 
-/**/
+/*
+	Tableaux de regexp par types d'entites
+	à partir de fichiers dictionnaires
+*/
+
 function generer_types_entites($nb_mots="multi"){
-	// Générer des catégories d'entités à partir de l'arborescence de fichiers du répertoire listes_lexicales.
 	include_spip('iterateur/data');
+
+	// lister les répertoires / types d'entites : Pays Villes ...
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
-
-	/* define des entités connues à partir des listes texte.
-	*/
-
+	
 	foreach($types_entites_repertoires as $type){
-
+		
 		$entites_multi = array();
 		$entites_mono = array();
 		$ajout_entites = array();
 		$entites_regexp = "" ;
-
+		
 		// pour chaque repertoire
 		$t_entite = $type['file'] ;
 		// var_dump($t_entite);
-	
-		// on liste les fichiers
+		
+		// on liste les fichiers du repertoire
 		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/*.txt");
-		/**/// creer un type d'entite si le répertoire contient des recettes au format txt.
+		
+		// creer un type d'entite si le répertoire contient des recettes au format txt.
 		if( sizeof($sous_categories) >= 1){
 			//var_dump(strtoupper($t_entite));
-
+			
 			// pour chaque fichier
 			foreach($sous_categories as $sous_categorie){
 				$sous_categorie_type = $sous_categorie['file'] ;
+				
 				// var_dump("<hr />-- $t_entite /" . $sous_categorie_type);
 				//exit ;
-				$sous_cat_ent = file_get_contents(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/$sous_categorie_type");
-				$sous_cat_entites = inc_file_to_array_dist(trim($sous_cat_ent)) ;
+				$fichier_liste = _DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/$sous_categorie_type" ;
+				$sous_cat_entites = generer_mots_fichier($fichier_liste) ;
 				
 				foreach($sous_cat_entites as $k => $ligne){
 					$ligne = trim($ligne) ;
-					//pas de ligne vides ou de // commentaires 
-					if( preg_match(",^\/\/|^$,",$ligne) || $ligne == "")
-						continue ;
 					// entites multi-mots
 					if(strpos($ligne," ")){ 
 						$entites_multi[] =  $ligne ;
 					}else{
-						$entites_mono[] =  $ligne ;	
+						$entites_mono[] =  $ligne ;
 					}
 				}
-			
-				
 				//exit ;
-
 			}
 			
 			// Mono ou multi mots ?
@@ -526,13 +521,13 @@ function generer_types_entites($nb_mots="multi"){
 				$ajout_entites = $entites_mono ;
 			else
 				$ajout_entites = $entites_multi ;
-
+			
 			//var_dump($ajout_entites);
-
+			
 			// si on a des lignes dans un fichier texte bien rangé
 			if( sizeof($ajout_entites) >= 1){
 				foreach($ajout_entites as $entite_unique){
-
+			
 					// nettoyer
 					$entite_unique = preg_quote($entite_unique);
 					
@@ -543,10 +538,10 @@ function generer_types_entites($nb_mots="multi"){
 					//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
 					
 					$entites_regexp .=  "\P{L}". $entite_unique . "\P{L}|" ; // ne doit pas etre trop long car les regexp ont une limite à 1000000.	
-
+				
 				}
 			}
-
+			
 			// pas de | final ni de / 
 			$entites_regexp = preg_replace("/\|$|\//","",$entites_regexp);
 			
@@ -576,7 +571,6 @@ function generer_types_entites($nb_mots="multi"){
 
 	return $types_entites ;
 
-
 }
 
 function nuage_mot($poids, $max){
@@ -593,7 +587,7 @@ function nuage_mot($poids, $max){
 }
 
 function entites_to_array($entites_trouvees){
-
+	
 	foreach($entites_trouvees as $entite){
 		$e = explode("|", $entite) ;
 		$entites_nommees[] = array (

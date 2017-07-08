@@ -47,7 +47,7 @@ class entites_nommees extends Command {
 				'Chercher les entites dans le type `-t spip_syndic_articles`...',
 				'spip_articles'
 			);
-
+		
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output) {
@@ -94,7 +94,7 @@ class entites_nommees extends Command {
 				if($requalifier !=="non"){
 					passthru("clear");
 					$output->writeln("<info>Requalification des données</info>");
-
+					
 					// recaler apres coup d'apres le fichier recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
 					
@@ -146,17 +146,8 @@ class entites_nommees extends Command {
 						}
 					}
 					
-					// effacer les mots courrants (stop words)
-					lire_fichier(find_in_path("mots_courants.php"), $stop_words);
-					// virer les com
-					$stop_words = preg_replace(",^//.*,um","",$stop_words);
-					preg_match_all('`\=\s*"([^"]+)"`Uims', $stop_words, $w);
-					
-					$words = array();
-					foreach($w[1] as $reg){
-						$words = array_merge($words, explode("|",$reg));
-					}
-					// var_dump($words);
+					include_spip("inc/entites_nommees");
+					$words = generer_stop_words();
 					
 					if(sizeof($words) > 1 ){
 						foreach($words as $e){
@@ -262,18 +253,18 @@ class entites_nommees extends Command {
 					$select = "id_article, titre, chapo, texte, date_redac" ;
 					$table = "spip_articles" ;
 					$where = "id_article=" . $a['id_article'] ;
-
+					
 					if($type_source == "spip_syndic_articles"){
 						/// syndic_articles
 						$select = "id_syndic_article id_article, titre, descriptif, date date_redac" ;
 						$table = "spip_syndic_articles" ;
 						$where = "id_syndic_article=" . $a['id_article'] ;
 					}
-
+					
 					$q = "select " . $select . " from " . $table ." where " . $where ;
 					$query = sql_query($q);
 					$art = sql_fetch($query) ;
-
+					
 					$m = substr(" Traitement de l'article " . $art['id_article'] . " (" . $art['date_redac'] . ")", 0, 100) ;
 					$progress->setMessage($m, 'message');
 					
@@ -288,13 +279,13 @@ class entites_nommees extends Command {
 						$fragments = array("rien|rien|" . $art['id_article'] ."|rien");
 					
 					//var_dump($fragments);
-
+					
 					enregistrer_entites($fragments, $art['id_article'], $art['date_redac']);
 					
 					// Si tout s'est bien passé, on avance la barre
 					$progress->setFormat("<fg=white;bg=blue>%message%</>\n" . '%current%/%max% [%bar%] %percent:3s%% %elapsed:6s%/%estimated:-6s% %memory:6s%' ."\n\n");
 					$progress->advance();
-
+					
 				}	
 				
 				## FIN

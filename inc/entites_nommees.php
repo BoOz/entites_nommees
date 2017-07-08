@@ -52,7 +52,6 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 	
 	if(preg_match_all("/\[\[(.*)\]\]/Umsu", $texte, $notes)){
 		
-		
 		foreach($notes[1] as $note){
 			$note_originale = $note ;
 			// trouver la source en ital spip {}
@@ -186,7 +185,6 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 	return array("texte" => $texte, "fragments" => $fragments);
 }
 
-
 function trouver_noms($texte){
 
 	// Trouver des noms de personnalités dans un texte en recherchant le masque : Xxx Xxx xx xx Xxx
@@ -314,4 +312,37 @@ function entites_nommees($noms = array()){
 	}
 
 	return $entites_nommees ;
+}
+
+function generer_mots_fichier($fichier_mots){
+	include_spip('iterateur/data');
+	$liste = file_get_contents($fichier_mots);
+	$mots = inc_file_to_array_dist(trim($liste)) ;
+	
+	foreach($mots as $k => $mot){
+		$mot = trim($mot) ;
+		
+		//pas de ligne vides ou de // commentaires 
+		if( preg_match(",^\/\/|^$,",$mot) || $mot == "")
+			unset($mots[$k]) ;
+	}
+	
+	//var_dump("<pre>", $mots, "</pre>");
+	//die();
+	return $mots ;
+}
+
+function generer_stop_words(){
+	// effacer les mots courrants (stop words)
+	lire_fichier(find_in_path("mots_courants.php"), $stop_words);
+	// virer les com
+	$stop_words = preg_replace(",^//.*,um","",$stop_words);
+	preg_match_all('`\=\s*"([^"]+)"`Uims', $stop_words, $w);
+	
+	$words = array();
+	foreach($w[1] as $reg){
+		$words = array_merge($words, explode("|",$reg));
+	}
+	
+	return $words ;
 }
