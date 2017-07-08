@@ -28,25 +28,25 @@
 
 <B_personnalites>
 <h3 style="margin-top:1.5em">Personnalités</h3>
-<BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a></BOUCLE_personnalites>
+<BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a></BOUCLE_personnalites>
 
 <B_institutions>
 <h3 style="margin-top:1.5em">Institutions</h3>
 <BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques}{fusion entite}{par entite}{", "}>
-<a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a>
+<a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
 </BOUCLE_institutions>
 
 <BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques}{fusion type_entite}>
 <h3 style="margin-top:1.5em">#TYPE_ENTITE</h3>
 <BOUCLE_entites(DATA){source table,#GET{entites}}{type_entite=#TYPE_ENTITE}{fusion entite}{par entite}{", "}>
-<a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE)</span>]</a>
+<a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
 </BOUCLE_entites>
 </BOUCLE_types_entites_nommees>
 
 <B_entites_inconnues>
 <h3 style="margin-top:1.5em">Entités inconnues</h3>
 <BOUCLE_entites_inconnues(DATA){source table,#GET{entites}}{type_entite = INDETERMINE}>
-<p><strong><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">#ENTITE</a></strong> : [(#EXTRAIT)]</p>
+<p><strong><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[(#ENTITE|replace{^.*:})]</a></strong> : [(#EXTRAIT)]</p>
 </BOUCLE_entites_inconnues>
 
 </BOUCLE_article>

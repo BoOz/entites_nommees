@@ -49,7 +49,7 @@ class entites_nommees extends Command {
 			);
 		
 	}
-
+	
 	protected function execute(InputInterface $input, OutputInterface $output) {
 		global $spip_racine;
 		global $spip_loaded;
@@ -148,6 +148,7 @@ class entites_nommees extends Command {
 					
 					include_spip("inc/entites_nommees");
 					$words = generer_stop_words();
+					//var_dump($words);
 					
 					if(sizeof($words) > 1 ){
 						foreach($words as $e){
