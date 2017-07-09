@@ -473,6 +473,7 @@ function enregistrer_entites($entites = array(), $id_article, $date){
 
 function generer_types_entites($nb_mots="multi"){
 	include_spip('iterateur/data');
+	include_spip("inc/entites_nommees");
 
 	// lister les répertoires / types d'entites : Pays Villes ...
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;

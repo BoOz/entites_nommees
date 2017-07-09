@@ -1,6 +1,4 @@
-// institutions
 // institutions et organismes d'État internationaux
-
 
 Commission européenne 
 la Commission
@@ -15,7 +13,7 @@ Cour de justice de l'Union européenne
 
 Cour internationale de justice (CIJ)
 Cour pénale internationale (CPI)
-groupe des 10 (1973) 
+groupe des 10  
 groupe des 77 ou les « 77 ».
 Association des nations de l'Asie du Sud-Est (Anase)
 Communauté andine des nations (CAN)
@@ -49,7 +47,7 @@ Conseil économique et social (Ecosoc)
 Secrétariat général
 Conférence des Nations unies sur le commerce et le développement (Cnuced)
 Conseil des droits de l'homme
-Haut-Commissariat pour les réfugiés (HCR)
+Haut Commissariat des Nations unies pour les réfugiés (HCR)
 opérations de maintien de la paix et missions politiques
 Programme alimentaire mondial (PAM)
 Programme des Nations unies pour le développement (PNUD)
