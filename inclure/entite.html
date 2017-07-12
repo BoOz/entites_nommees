@@ -70,7 +70,7 @@
 	
 <B_references_proches>
 		Relations : 
-	<div id="nuage_entites" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	
 	<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{refs}|max})]em;">
