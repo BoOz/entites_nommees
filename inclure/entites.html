@@ -20,21 +20,26 @@
 #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
 [(#GET{articles}|sizeof|>={1}|oui)#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}]
 
+	[(#REM) Poids total des références les plus fréquentes (ne pas en prendre plus de 1000 sinon c long ) ]
+	#SET{references,#ARRAY}
+	<BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{si #ENV{entite}|oui}{0,1000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
+
+
 #SET{personnalites,#ARRAY}
-<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{personnalites,#GET{personnalites}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_personnalites>
+<BOUCLE_personnalites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Personnalités') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{poids,1} [(#ENV{entite}|oui) #SET{poids,#GET{references}|table_valeur{#ENV{entite}}|sinon{1}} ] #SET{personnalites,#GET{personnalites}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{poids}}}}}</BOUCLE_personnalites>
 
 #SET{pays,#ARRAY}
-<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_territoires>
+<BOUCLE_territoires(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{poids,1} [(#ENV{entite}|oui) #SET{poids,#GET{references}|table_valeur{#ENV{entite}}|sinon{1}} ] #SET{pays,#GET{pays}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{poids}}}}}</BOUCLE_territoires>
 
 #SET{sources,#ARRAY}
-<BOUCLE_sources(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Sources') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{sources,#GET{sources}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_sources>
+<BOUCLE_sources(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Sources') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>#SET{poids,1} [(#ENV{entite}|oui) #SET{poids,#GET{references}|table_valeur{#ENV{entite}}|sinon{1}} ] #SET{sources,#GET{sources}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{poids}}}}}</BOUCLE_sources>
 
 #SET{auteurs,#ARRAY}
-<BOUCLE_auteurs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Auteurs') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{auteurs,#GET{auteurs}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_auteurs>
+<BOUCLE_auteurs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite in('Auteurs') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>#SET{poids,1} [(#ENV{entite}|oui) #SET{poids,#GET{references}|table_valeur{#ENV{entite}}|sinon{1}} ] #SET{auteurs,#GET{auteurs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{poids}}}}}</BOUCLE_auteurs>
 
 
 #SET{autres,#ARRAY}
-<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Sources', 'Lieux de publication', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_autres>
+<BOUCLE_autres(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite not in('Personnalités', 'Sources', 'Lieux de publication', 'Pays', 'Geographie', 'Géographie (auto)', 'Villes', 'Peuples') ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>#SET{poids,1} [(#ENV{entite}|oui) #SET{poids,#GET{references}|table_valeur{#ENV{entite}}|sinon{1}} ] #SET{autres,#GET{autres}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{poids}}}}}</BOUCLE_autres>
 
 <div id="references_liees" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	<h3 title="Personnalités[ (#ENV{entite}|oui) proches de [(#ENV{entite})]]">Personnalités</h3>
