@@ -93,7 +93,8 @@ class entites_nommees extends Command {
 				// requalifier les types d'apres les fichier du repertoire a_ajouter ?
 				if($requalifier !=="non"){
 					passthru("clear");
-					$output->writeln("<info>Requalification des données</info>");
+					
+					$output->writeln("<info>Requalification des données d'après le fichier recaler.txt</info>");
 					
 					// recaler apres coup d'apres le fichier recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
@@ -114,11 +115,12 @@ class entites_nommees extends Command {
 									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 									echo $up . "\n" ;
 									sql_query($up);
+									echo "\n" ;
 								}
-								echo "\n" ;
 							}
 					
 					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
+					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
 					include_spip('iterateur/data');
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
 					foreach($types_requalif as $t){
@@ -145,7 +147,7 @@ class entites_nommees extends Command {
 							}
 						}
 					}
-					
+					$output->writeln("<info>Requalification des données d'après les mots courants (stop words)</info>");
 					include_spip("inc/entites_nommees");
 					$words = generer_stop_words();
 					//var_dump($words);
@@ -156,7 +158,7 @@ class entites_nommees extends Command {
 							$nb = sql_count($ent);
 							if($nb > 0){
 								echo $nb . " entites '" . $e . "' de statut INDETERMINE => Poubelle\n";
-								$del =  "delete from entites_nommees where  ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;
+								$del =  "delete from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;
 								echo $del . "\n";
 								sql_query($del);
 								echo "\n" ;
@@ -165,9 +167,8 @@ class entites_nommees extends Command {
 					}
 					
 					// effacer les entites trop peu frequentes
+					$output->writeln("<info>On efface les entites uniques qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")</info>");
 					$date_e = sql_fetch(sql_query("select DATE_ADD(date,INTERVAL -5 YEAR) ladate from entites_nommees order by date desc limit 0,1"));
-					
-					echo "On efface les entites uniques qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")\n\n";
 					$ent = sql_query("select count(id_entite) nb, max(date) max, entite from entites_nommees group by entite having nb = 1 and max < '". $date_e["ladate"] ."'  order by max");
 					$nb = sql_count($ent);
 					if($nb > 0){
@@ -179,6 +180,8 @@ class entites_nommees extends Command {
 							echo "\n" ;
 						}
 					}
+					
+					$output->writeln("<info>Requalifier des citations du Monde diplomatique</info>");
 					// citation du diplo dans le texte
 					// «[->50393]» ({Le Monde diplomatique,} mai 2014)
 					// Dans « Le Monde diplomatique » de septembre 1977
@@ -200,15 +203,26 @@ class entites_nommees extends Command {
 								echo $up . "\n";
 								sql_query($up);
 							}
-							
 						}
 						
 						// $up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite=" . sql_quote($e) . "\n" ;	
 						// echo $up . "\n";
 						// sql_query($up);
-						echo "\n" ;
 					}
 					
+					$output->writeln("<info>Générer le fichier txt du décompte des principales entités</info>");
+					// Générer le fichier txt du décompte des principales entites
+					
+					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","","entite, type_entite","nb desc","", "nb>5");
+					foreach($references as $reference){
+						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
+					}
+					if(!is_dir('plugins/entites_nommees/stats'))
+						mkdir('plugins/entites_nommees/stats');
+					ecrire_fichier('plugins/entites_nommees/stats/decompte_references.txt', $decompte_entites);
+					
+					echo "Maj de 'plugins/entites_nommees/stats/decompte_references.txt'\n" ;
+					echo sizeof($references) . " références apparaissant plus de 5 fois.\n\n" ;
 					exit();
 				}
 				
