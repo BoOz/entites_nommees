@@ -39,7 +39,7 @@
 	}
 	.entites_residuelles {
 		margin: 0;
-		padding: 40px ;
+		padding-top: 40px ;
 	}
 	.entites_residuelles a{
 	}
@@ -49,7 +49,7 @@
 	
 </style>
 
-<div class="ariane"><B_type>
+<div class="categorie hermetique"><B_type>
 	<h2><BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
 		<a href="[(#URL_PAGE{explorer})]">Références</a> > <a href="./references/#ENV{entite}">[(#ENV{entite})]</a> #SET{type,#TYPE_ENTITE}
 		</BOUCLE_type>
@@ -64,9 +64,32 @@
 	]
 </div>
 
+
+#SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
+
+<B_extraits_articles_entite>
+	<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
+	#ANCRE_PAGINATION
+	<h2 class="catego">Nos articles <span>(#GRAND_TOTAL documents)</span></h2>
+	<BOUCLE_extraits_articles_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>
+		<p>
+			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
+			<strong>[(#DATE_REDAC|nom_mois|ucfirst)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
+			<a href="./?page=article&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
+		</p>
+	</BOUCLE_extraits_articles_entite>
+		<p>#PAGINATION</p>
+	</div>
+</B_extraits_articles_entite>
+
+
+<h2 class="catego">Principales références [ (#ENV{entite}|oui)proches de [(#ENV{entite})]]</h2>
+
 <div id="nuage_entites" style="height:300px;overflow:auto;margin-bottom:30px">
 	<INCLURE{fond=inclure/entites,entite}>
 </div>
+
+<h2 class="catego">[ (#ENV{entite}|oui)[(#ENV{entite})] dans le temps ]</h2>
 
 <style>
 	.bar {
@@ -106,7 +129,7 @@
 <div id="graph">
 </div>
 
-<svg width="1000" height="150"></svg>
+<svg width="800" height="150"></svg>
 
 #SET{data,#ARRAY}
 <BOUCLE_historique(DATA){source sql, #VAL{"select count(id_article) nb, year(date) annee from entites_nommees where entite=LENTITE group by year(date) order by date asc"}|replace{LENTITE,#ENV{entite}|_q} }> 			#SET{data,#GET{data}|array_merge{#ARRAY{#VAL{"'"}|concat{#ANNEE}|concat{"'"},#NB}}}	</BOUCLE_historique>
@@ -222,21 +245,8 @@
 
 <BOUCLE_rem(DATA){liste 1}{si #GET{rem}|non}>
 
-#SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
+<h2 class="catego">Toutes les références [ (#ENV{entite}|oui)proches de [(#ENV{entite})]]</h2>
 
-<B_fragments_entite>
-	<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
-	#ANCRE_PAGINATION
-	<BOUCLE_fragments_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>
-		<p>
-			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
-			<strong>[(#DATE_REDAC|nom_mois|ucfirst)][ (#DATE_REDAC|annee)]</strong></BOUCLE_article> : [(#EXTRAIT)] 
-			<a href="./?page=article&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
-		</p>
-	</BOUCLE_fragments_entite>
-		<p>#PAGINATION</p>
-	</div>
-</B_fragments_entite>
 
 #SET{comp,'having nb > 5'}
 
@@ -361,7 +371,8 @@
 
 <div class="entites_residuelles ui segment left aligned container">
 	<B_fragments>
-	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
+	<h2 class="catego" title="Références inconnues[ (#ENV{entite}|oui)proches de [(#ENV{entite})]]">Références inconnues <span>(#GRAND_TOTAL)</span></h2>
+	<p>Notre algorithme a extrait ces références en raison de leurs lettres capitales, mais il ne les a pas reconnues.</p>
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
 		<div><strong><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
