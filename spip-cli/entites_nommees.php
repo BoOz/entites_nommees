@@ -166,6 +166,24 @@ class entites_nommees extends Command {
 						}
 					}
 					
+					$output->writeln("<info>Requalification des personnalités après maj heuristique institutions</info>");
+					$query="select entite, id_entite from entites_nommees where type_entite='Personnalités' and entite regexp '" . str_replace('(?:É|E)','É',ENTITES_INSTITUTIONS_HEURISTIQUE) . "'" ;
+					// echo $query ;
+					$ent = sql_query($query);
+					$nb = sql_count($ent);
+					if($nb > 0){
+						echo $nb . " personalités à requalifier institutions\n";
+						
+						while($res = sql_fetch($ent)){
+							echo $res["entite"] ."\n";
+							$up =  "update entites_nommees set type_entite='Institutions (auto)' where id_entite=" . intval($res['id_entite']);
+							//echo $up . "\n";
+							sql_query($up);
+							
+						}
+					}
+					
+					
 					// effacer les entites trop peu frequentes
 					$output->writeln("<info>On efface les entites uniques qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")</info>");
 					$date_e = sql_fetch(sql_query("select DATE_ADD(date,INTERVAL -5 YEAR) ladate from entites_nommees order by date desc limit 0,1"));
