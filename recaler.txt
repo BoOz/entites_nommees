@@ -46,3 +46,6 @@ Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite
 
 // alias
 Caire	Caire	Villes	Le Caire
+
+// choses connues
+Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
