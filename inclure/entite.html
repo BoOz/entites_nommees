@@ -64,7 +64,7 @@
 	
 	[(#REM) Entités les plus fréquentes dans ces articles pondéré par poids total ]
 	#SET{refs,#ARRAY}
-	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
+	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication') group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 	
 	[(#REM) Pondération par le poids de chaque ]
 	
