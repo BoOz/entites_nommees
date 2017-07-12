@@ -75,8 +75,8 @@
 	<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{refs}|max})]em;">
 					<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
-		[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
-		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+		[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 	</a>
 				</span>
 	</BOUCLE_references_proches>
