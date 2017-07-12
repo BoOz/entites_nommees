@@ -23,6 +23,10 @@ Le Pen	Mme Le Pen	Personnalités	Marine Le Pen
 Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen
 Pinochet	Pinochet	Personnalités	Augusto Pinochet
 BHL	BHL	Personnalités	Bernard-Henri Lévy
+Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing
+Nasser	Nasser	Personnalités	Gamal Abdel Nasser
+Allende	Allende	Personnalités	Salvadore Allende
+
 
 // partis politiques avec nom d'usage ou disparus
 Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
@@ -49,3 +53,8 @@ Caire	Caire	Villes	Le Caire
 
 // choses connues
 Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
+
+// accents
+Equateur	Equateur	Pays	Équateur
+Etats-unis	Etats-unis	Pays	États-unis
+

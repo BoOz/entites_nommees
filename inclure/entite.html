@@ -6,9 +6,6 @@
 [(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
 
 #SET{andwhere,""}
-[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
-[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
-[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 
 <style>
 	ul {
@@ -51,40 +48,48 @@
 
 <div class="categorie hermetique"><B_type>
 	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
-		<p>Type : #TYPE_ENTITE
+		<p>Type : #TYPE_ENTITE</p>
 	</BOUCLE_type>
 	
-	<BOUCLE_fc(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_fc>
+	<BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
 	
-		<small>([(#TOTAL_BOUCLE|number_format{0, ',', ' '})] occurrences)</small></B_fc>
-	</p>
+	[(#REM) Poids total des références les plus fréquentes (ne pas en prendre plus de 1000 sinon c long ) ]
+	#SET{references,#ARRAY}
+	<BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{0,1000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
 	
 	[(#REM) références proches ]
 	
 	[(#REM) tous les articles avec cette entité ]
 	#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
 	
-	[(#REM) Entités les plus fréquentes dans ces articles ]
+	[(#REM) Entités les plus fréquentes dans ces articles pondéré par poids total ]
 	#SET{refs,#ARRAY}
-	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB}}}</BOUCLE_refs>
+	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE group by entite order by nb desc limit 0,50"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 	
-	[(#REM) Pondération par le pods de chaque ]
+	[(#REM) Pondération par le poids de chaque ]
 	
-	<p><BOUCLE_ponderation(DATA){source table,#GET{refs}}{!par valeur}{", "}>#CLE : #VALEUR</BOUCLE_ponderation></p>
+<B_references_proches>
+		Relations : 
+	<div id="nuage_entites" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 	
-	<B_references_proches>
-	<p>
-		Relations : <BOUCLE_references_proches(DATA){source table,#GET{refs}}{!par valeur}{", "}{0,10}{si #ENV{entite}}>#CLE : #VALEUR</BOUCLE_references_proches>
-	</p>
-	</B_references_proches>
-		
-	[(#REM)
-	Trop bourrin comme requete mais interessant.
-	<INCLURE{fond=inclure/entites_proches,entite}>
-	]
+	<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
+				<span style="font-size:[(#VALEUR|nuage_mot{#GET{refs}|max})]em;">
+					<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE}" title="score : #VALEUR">
+		[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''})]]
+		[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;})]]
+	</a>
+				</span>
+	</BOUCLE_references_proches>
+	</div>
+</B_references_proches>
+
 </div>
 
 <INCLURE{fond=inclure/entite_temps,entite}>
+
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
+[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 
 #SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
 <B_extraits_articles_entite>

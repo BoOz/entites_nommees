@@ -107,12 +107,12 @@ class entites_nommees extends Command {
 									continue;
 								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
-								$sel = 	"select * from entites_nommees where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+								$sel = 	"select * from entites_nommees where entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 								$q = sql_query($sel);
 								$nb = sql_count($q);
 								if($nb > 0){
 									echo "$nb $entite_actuelle ($entite_dans_extrait) => $entite\n" ;
-									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where (type_entite = 'INDETERMINE' or type_entite='Personnalités' or type_entite='Institutions automatiques') and entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where entite=" . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 									echo $up . "\n" ;
 									sql_query($up);
 									echo "\n" ;
