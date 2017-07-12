@@ -199,6 +199,8 @@ class entites_nommees extends Command {
 						}
 					}
 					
+					// effacer les entites de plus de 5 ans qu'on a vu que dans un seul article (probablement une erreur ?). TODO
+					
 					$output->writeln("<info>Requalifier des citations du Monde diplomatique</info>");
 					// citation du diplo dans le texte
 					// «[->50393]» ({Le Monde diplomatique,} mai 2014)
