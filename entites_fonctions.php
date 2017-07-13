@@ -3,7 +3,7 @@
 function trouver_entites($texte,$id_article){
 	
 	/*
-		Trouver d'abord des entites connues (Pays, Institutions, Traités etc) à partir de listes txt.
+		Trouver d'abord des entites connues (Institutions, Traités,, ..., Pays (en dernier)) à partir de listes txt.
 		Trouver ensuite dans le texte les personnalités restantes.
 		
 		TODO

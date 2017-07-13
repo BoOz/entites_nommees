@@ -56,11 +56,14 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 			$note_originale = $note ;
 			// trouver la source en ital spip {}
 			if(preg_match("/\{(?!\s?Cf\s?|\s?Ibid\s?|\s?in\s?|\s?et al\.?\s?|\s?op\.?\s?cit\.?\s?)([^,]+),?\}/uims",$note,$s)){ //  et al. 
-				$entite = trim($s[1]) ;
+				$entite = nettoyer_entite($s[1]) ;
+				//var_dump($entite,"<br>");
 				
 				// Enregistrer l'entité de type Sources.
-				if(strlen($entite) > 1)
-					$fragments[] = "media:" . $entite . "|Sources|" . $id_article . "|" . $note ;
+				if(strlen($entite) > 1){
+					$fragments[] = "media:" . $entite . "|Sources|" . $id_article . "|" . $note_originale ;
+					$note = str_replace($s[1],"", $note);
+				}
 			}
 			
 			// var_dump("<pre>", $regex_types_connus ,"</pre><hr><hr>");
@@ -71,8 +74,9 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 					foreach($e[0] as $l){
 						// reperer un lieu de publication
 						$l = nettoyer_entite($l);
+						//var_dump($l,"<br>");
 						if($l)
-							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note ;
+							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note_originale ;
 						// virer de la note
 						$note = str_replace($l, "", $note);
 					}
@@ -86,9 +90,10 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 				if(preg_match_all( "`" . $r . "`u" , $note ,$e)){
 					foreach($e[0] as $l){
 						// reperer un lieu de publication
-						$lieu = nettoyer_entite($l);
+						$l = nettoyer_entite($l);
+						// var_dump($l,"<br>");
 						if($l)
-							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note ;
+							$fragments[] = "lieu:" . $l . "|Lieux de publication|" . $id_article . "|" . $note_originale ;
 						// virer de la note
 						$note = str_replace($l, "", $note);
 					}
@@ -102,12 +107,12 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 			// retrouver des institutions
 			if(is_array($auteurs ["institutions"]) AND sizeof($auteurs ["institutions"]) > 0)
 				foreach($auteurs ["institutions"] as $a)
-					$fragments[] = "media:" . $a . "|Sources|" . $id_article . "|" . $note ;
+					$fragments[] = "media:" . $a . "|Sources|" . $id_article . "|" . $note_originale ;
 			
 			// reste des noms
 			if(is_array($auteurs ["personnalites"]) AND sizeof($auteurs ["personnalites"]) > 0)
 				foreach($auteurs ["personnalites"] as $a)
-					$fragments[] = "auteur:" . $a . "|Auteurs|" . $id_article . "|" . $note ;
+					$fragments[] = "auteur:" . $a . "|Auteurs|" . $id_article . "|" . $note_originale ;
 			
 			// virer la note de bas de page du texte pour la suite
 			$texte = str_replace($note_originale, "", $texte);
@@ -289,20 +294,23 @@ function nettoyer_entite($entite){
 	}
 	if(preg_match("`^(" . MOTS_DEBUT . ")$`u", $entite))
 		$entite = "" ;
-
+	
 	$entite = trim(preg_replace("/^[^\p{L}\p{N}]+/u", "", $entite));
+	
+	$entite = preg_replace("/\R/Uim", " ", $entite);
+	//var_dump("<pre>",$entite,"<br>");
 	
 	return $entite ;
 }
 
 function entites_nommees($noms = array()){
-
+	
 	if(!is_array($noms))
 		return ;
-
+	
 	$lieux = ENTITES_LIEUX_HEURISTIQUE ;
 	$institutions = ENTITES_INSTITUTIONS_HEURISTIQUE ;
-
+	
 	foreach($noms as $k => $v){
 		if(preg_match("/$lieux/Uu",$v))
 			$entites_nommees['lieux'][$v] = $v ;
@@ -313,7 +321,7 @@ function entites_nommees($noms = array()){
 			$entites_nommees['personnalites'][$v] = $v ;
 		
 	}
-
+	
 	return $entites_nommees ;
 }
 
