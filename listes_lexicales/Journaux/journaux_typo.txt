@@ -758,7 +758,7 @@ New Society Publishers
 The New Statesman
 New Straits Times
 The New Times
-The New York Times
+(?:The )?New York Times
 The New Yorker
 Nezavissimaïa Gazeta
 Nhan Dan

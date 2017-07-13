@@ -200,15 +200,15 @@ function trouver_entites($texte,$id_article){
 	//var_dump("zou", $fragments);
 	
 	// trouver des entites constituées d'un seul mot
-
+	
 	
 	// var_dump("<pre>",$types_entites_mono,"</pre>");
-
+	
 	/* regex automatisées depuis les fichiers de listes */
 	foreach($types_entites_mono as $type => $regex){
 		if($regex == "")
 			continue;
-
+	
 		// var_dump($texte);
 		// var_dump($texte_original); // hum pas si original... il y a des xxx
 		
@@ -217,21 +217,21 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 
 	}
-
+	
 	// var_dump("<pre>",$fragments,"</pre>","<hr>",$texte);
-
+	
 	// on cherche des termes qui ont des majuscules dans le texte restant.
 	$entites_residuelles = trouver_entites_residuelles($texte);
 	
 	//var_dump($texte);
 	//var_dump($entites_residuelles);
-
+	
 	$recolte = traiter_fragments($entites_residuelles, "INDETERMINE", $texte, $fragments, $id_article, $texte) ;
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
-
+	
 	//var_dump($fragments,"fragments");
-
+	
 	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
@@ -248,7 +248,7 @@ function trouver_entites($texte,$id_article){
 				$institutions[$m[2]]['type'] = trim($type_orga[1]) ;
 			}
 		}
-
+	
 	//var_dump($fragments,"fragments");
 	//var_dump($institutions);
 	if(is_array($fragments))
@@ -265,12 +265,12 @@ function trouver_entites($texte,$id_article){
 			}else
 				$fragments_fusionnes[] = $v ;
 		}
-
+	
 	$fragments = $fragments_fusionnes ;
 	$fragments_fusionnes = array();
-
+	
 	//var_dump($fragments);
-
+	
 	// var_dump("<pre>",$personnalites,$institutions,"</pre><hr>");
 	if(is_array($personnalites))
 		foreach($personnalites as $v){
@@ -288,7 +288,7 @@ function trouver_entites($texte,$id_article){
 					$patronymes[$patronyme] = $v ;
 			}
 		}
-
+	
 	// var_dump($personnalites,$institutions,$patronymes);
 	// var_dump("<pre>",$fragments,"</pre><hr>");
 	if(is_array($fragments))
@@ -378,36 +378,36 @@ function trouver_entites($texte,$id_article){
 }
 
 function preparer_texte($texte){
-
+	
 	//$texte = "Philippe Lucas et Jean-Claude Vatin, Maspero, Paris, 1975."; << merde car pas d'espace au debut
-
+	
 	//http://archives.mondediplo.com/?page=noms&id_article=2488
 	//$texte = "Dans l’article d’Eric Rouleau « Ce pouvoir si pesant des militaires turcs »" ; << '
-
+	
 	// M. François d’Orcival http://archives.mondediplo.com/?page=noms&id_article=38507&var_mode=recalcul
 	//$texte = "M. François d'Orcival" ;
 	// $texte = "Fondé en 1954, sur l’initiative de M. François Honti, par M. Beuve-Méry, le Monde diplomatique atteint";
 	// insecables utf-8
-
+	
 	$texte = str_replace("\xC2\xA0", " ", $texte);
 	$texte = str_replace("’", "'", $texte);
 	$texte = str_replace("~", " ", $texte);
-
+	
 	// Nettoyer les inters et itals spip.
 	$texte = str_replace("}}}", ". ", $texte);
 	// gras spip
 	$texte = str_replace("{{", "", $texte);
 	$texte = str_replace("}}", "", $texte);
-
+	
 	include_spip("inc/filtres");
 	$texte= " " . filtrer_entites($texte) ; // ne pas louper un nom en début de texte.
-
+	
 	return $texte ;
-
+	
 }
 
 function trouver_entites_residuelles($texte){
-
+	
 	// Mots avec une Capitale pas en début de phrase.
 	preg_match_all("`" . 
 					LETTRES . // une lettre ponctuation NON incluse.
@@ -416,10 +416,10 @@ function trouver_entites_residuelles($texte){
 					"`u", $texte, $m);
 	
 	$entites_residuelles = $m[1];
-
+	
 	if(is_array($entites_residuelles) and sizeof($entites_residuelles) >= 1)
 		array_walk($entites_residuelles,"nettoyer_entite_nommee");
-
+	
 	if(is_array($entites_residuelles))
 		return $entites_residuelles ;
 	else{ // ne pas merger avec un tableau NULL
@@ -474,7 +474,7 @@ function enregistrer_entites($entites = array(), $id_article, $date){
 function generer_types_entites($nb_mots="multi"){
 	include_spip('iterateur/data');
 	include_spip("inc/entites_nommees");
-
+	
 	// lister les répertoires / types d'entites : Pays Villes ...
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
 	
@@ -528,9 +528,14 @@ function generer_types_entites($nb_mots="multi"){
 			// si on a des lignes dans un fichier texte bien rangé
 			if( sizeof($ajout_entites) >= 1){
 				foreach($ajout_entites as $entite_unique){
-			
-					// nettoyer
+					
+					// sécuriser la regexp en neutralisant les caractère réservés, mais pas les sous-masques (?:) ou (?=)?
 					$entite_unique = preg_quote($entite_unique);
+					if(preg_match("/\\\\\(\\\\\?\\\\\:[^\\\]+\\\\\)(?:\\\\\?)?/", $entite_unique, $sous_masque)){
+						$sous_masque_propre = str_replace('\\' , '' , $sous_masque);
+						$entite_unique = str_replace($sous_masque, $sous_masque_propre, $entite_unique);
+						// var_dump($entite_unique, $sous_masque, $sous_masque_propre, "<br>");
+					}
 					
 					// gérer les accents
 					$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
@@ -563,15 +568,15 @@ function generer_types_entites($nb_mots="multi"){
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
 					$chaine = str_replace($s_chaine . "\P{L}|" ,"", $chaine);
 					$i ++ ;
-				}			
+				}
 			}else{
 				$types_entites[$t_entite] = $entites_regexp ;
 			}
 		}
 	}
-
+	
 	return $types_entites ;
-
+	
 }
 
 function nuage_mot($poids, $max){
@@ -579,11 +584,11 @@ function nuage_mot($poids, $max){
 	
 	$p = ($unite=floor($score += 0.900001)) . floor(10*($score - $unite)); // technique de rastapopoulos de 0 Ã  10
 	$p -= 9;
-
+	
 	$class = ($p >= 8) ? '2'
 				: (($p > 4) ? '1.7'
 				: (($p >= 2) ? '1.4' : '1'));
-
+	
 	return $class ;
 }
 

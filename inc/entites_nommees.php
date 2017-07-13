@@ -119,6 +119,9 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
 	// Trouver toutes les occurences d'une entité en respectant la casse bien sur.
+	//if(preg_match("/Journaux/", $type_entite))
+	//	var_dump($regex);
+	
 	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){
 		$entites = $e[0];
 		//var_dump("<pre> recolte :",$type_entite, $regex, $entites,"</pre>lol");
@@ -186,15 +189,15 @@ function traiter_fragments($entites, $type_entite, $texte, $fragments, $id_artic
 }
 
 function trouver_noms($texte){
-
+	
 	// Trouver des noms de personnalités dans un texte en recherchant le masque : Xxx Xxx xx xx Xxx
 	// http://stackoverflow.com/questions/7653942/find-names-with-regular-expression
-
+	
 	// http://php.net/manual/fr/regexp.reference.assertions.php
 	// http://php.net/manual/fr/regexp.reference.subpatterns.php
 	// (?<!foo)bar trouve les occurrences de "bar" qui ne sont pas précédées par "foo". // assertion arriere negative
 	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
-
+	
 	// virer les débuts de phrases fréquents avec une liste de mots fréquents
 	$reg =  "%(?:\P{L})". // lettre ou ponctuation non capturée
 			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
@@ -205,17 +208,17 @@ function trouver_noms($texte){
 				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
 			"|". ENTITES_PERSO .")". // Personnalités à pseudo // a virer ?
 	"%mu"	;
-
+	
 	preg_match_all($reg,$texte,$m);
 	$noms = $m[1] ;
 	//var_dump("<pre>",$m);
-
+	
 	array_walk($noms,"nettoyer_noms");
 	
 	// recaler les noms ici meme si on le refait plus tard pour ne pas prendre deby maintenant
-
+	
 	//var_dump($noms);
-
+	
 	// var_dump("<pre>",$personnalites,"</pre><hr>");
 	if(is_array($noms)){
 		foreach($noms as $v){
@@ -243,12 +246,12 @@ function trouver_noms($texte){
 		$noms = $noms_fusionnes ;
 		
 	}
-
+	
 	
 	//var_dump("<pre>",$noms);
 	
 	//var_dump($noms);
-
+	
 	return $noms ;
 }
 
