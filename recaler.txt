@@ -50,6 +50,8 @@ Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite
 
 // alias
 Caire	Caire	Villes	Le Caire
+New York Times	New York Times	Journaux	The New York Times
+New York	New York Times	Journaux	The New York Times
 
 // choses connues
 Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
