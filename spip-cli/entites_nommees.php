@@ -185,21 +185,20 @@ class entites_nommees extends Command {
 					
 					
 					// effacer les entites trop peu frequentes
-					$output->writeln("<info>On efface les entites uniques qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")</info>");
 					$date_e = sql_fetch(sql_query("select DATE_ADD(date,INTERVAL -5 YEAR) ladate from entites_nommees order by date desc limit 0,1"));
-					$ent = sql_query("select count(id_entite) nb, max(date) max, entite from entites_nommees group by entite having nb = 1 and max < '". $date_e["ladate"] ."'  order by max");
+					$output->writeln("<info>On efface les entites vues dans un seul article et qu'on a pas revu depuis 5 ans (" . $date_e['ladate'] . ")</info>");
+					// select entite, count(distinct(id_article)) nb, max(date) d from entites_nommees group by entite having nb=1 and d < date_add(now(), interval -5 year) order by d desc ;
+					$ent = sql_query("select entite, count(distinct(id_article)) nb, max(date) d from entites_nommees group by entite having nb=1 and d < date_add(". _q($date_e["ladate"]) .", interval -5 year) order by d desc");
 					$nb = sql_count($ent);
 					if($nb > 0){
 						echo $nb . " entite pas connues \n";
 						while($res = sql_fetch($ent)){
-							$del =  "delete from entites_nommees where entite=" . sql_quote($res['entite']) . "\n" ;
-							echo $del . " > " . $res['max'] . "< \n";
+							$del =  "delete from entites_nommees where entite=" . sql_quote($res['entite']) ;
+							echo $del . " (" . $res['d'] . "< \n";
 							sql_query($del);
 							echo "\n" ;
 						}
 					}
-					
-					// effacer les entites de plus de 5 ans qu'on a vu que dans un seul article (probablement une erreur ?). TODO
 					
 					$output->writeln("<info>Requalifier des citations du Monde diplomatique</info>");
 					// citation du diplo dans le texte
