@@ -65,7 +65,7 @@ function trouver_entites($texte,$id_article){
 
 	// var_dump($fragments, "lol");
 
-	// Gérer ensuite les institutions et partis politiques en mode développé + accronyme connus pour trouver ensuite les autres.
+	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
 		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
 			$orgas[$r[1]] = $v ;
@@ -83,7 +83,7 @@ function trouver_entites($texte,$id_article){
 		$texte = $recolte['texte'];
 		
 		/*
-		// Ensuite la même chose sans l'accronyme : Confédération générale du travail.
+		// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
 		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
 		
 		//var_dump($types_reduits);
@@ -96,17 +96,17 @@ function trouver_entites($texte,$id_article){
 		
 		*/
 		
-		// ensuite que l'accronyme s'il fait plus qu'une lettre...
-		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
+		// ensuite que l'acronyme s'il fait plus qu'une lettre...
+		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
 		
-		$accros[0] = str_replace("\(", "\P{L}", $accros[0]);
-		$accros[0] = str_replace("\)", "\P{L}", $accros[0]);
+		$acros[0] = str_replace("\(", "\P{L}", $acros[0]);
+		$acros[0] = str_replace("\)", "\P{L}", $acros[0]);
 		
-		$accros = join("|", array_unique($accros[0]));
+		$acros = join("|", array_unique($acros[0]));
 		
-		//var_dump("<pre>",$reg,$accros,"</pre>");
+		//var_dump("<pre>",$reg,$acros,"</pre>");
 		
-		$recolte = recolter_fragments($label, $accros, $texte, $fragments, $id_article, $texte_original);
+		$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 		
@@ -116,7 +116,7 @@ function trouver_entites($texte,$id_article){
 	// a debug
 	//var_dump($fragments);
 	
-	/* recaler les accro et les developpés */
+	/* recaler les acro et les developpés */
 	$institutions = array() ;
 	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 	
@@ -235,7 +235,7 @@ function trouver_entites($texte,$id_article){
 	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
-	// En cas d'accronyme Parti communiste (PC), virer aussi la forme réduite		
+	// En cas d'acronyme Parti communiste (PC), virer aussi la forme réduite		
 	
 	if(is_array($fragments))
 		foreach($fragments as $v){
@@ -255,7 +255,7 @@ function trouver_entites($texte,$id_article){
 		foreach($fragments as $v){
 			if(preg_match("/^(.*)\|(INDETERMINE)\|/u",$v,$m)){
 				// cas des institutions : Parti communiste (PC)
-				// recaler les accronymes : PC
+				// recaler les acronymes : PC
 				if($institutions[$m[1]]){
 					$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]['valeur']) . " (" . $m[1] . ")", $v) ;
 					$f = preg_replace("/\|".$m[2]."\|/u","|". $institutions[$m[1]]['type'] ."|",$f) ;
