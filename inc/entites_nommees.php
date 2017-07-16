@@ -204,7 +204,7 @@ function trouver_noms($texte){
 	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
 	
 	// virer les débuts de phrases fréquents avec une liste de mots fréquents
-	$reg =  "%(?:\P{L})". // lettre ou ponctuation non capturée
+	$reg =  "%(?:\P{L})". // non lettre ou ponctuation non capturée
 			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
 			"(".
 				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:" . LETTRES . ")(?:". LETTRESAP ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou ' (mais pas en deuxieme) ou d'un .

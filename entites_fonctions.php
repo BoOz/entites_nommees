@@ -96,7 +96,7 @@ function trouver_entites($texte,$id_article){
 		
 		*/
 		
-		// ensuite que l'acconyme s'il fait plus qu'une lettre...
+		// ensuite que l'accronyme s'il fait plus qu'une lettre...
 		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $accros);
 		
 		$accros[0] = str_replace("\(", "\P{L}", $accros[0]);
@@ -118,10 +118,10 @@ function trouver_entites($texte,$id_article){
 	
 	/* recaler les accro et les developpés */
 	$institutions = array() ;
-	$acronymes = "((?<!\.\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
+	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 	
 	// Repérer les organisations
-	// si une forme longue est trouvée, oncherche
+	// si une forme longue est trouvée, on cherche
 	// var_dump($fragment);
 	if(is_array($fragments))
 		foreach($fragments as $v){
