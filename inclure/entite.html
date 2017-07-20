@@ -87,13 +87,19 @@
 
 <INCLURE{fond=inclure/entite_temps,entite}>
 
+[(#REM)
+<h2 class="catego">Nos articles <span>( documents)</span></h2>
+<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
+</div>
+]
+
 [(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
 [(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
 [(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
 
 #SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
 <B_extraits_articles_entite>
-	<h2 class="catego">Nos articles <span>(#GRAND_TOTAL documents)</span></h2>
+	<h2 class="catego">Références dans nos articles <span>(#GRAND_TOTAL documents)</span></h2>
 	<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
 	#ANCRE_PAGINATION
 	<BOUCLE_extraits_articles_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>

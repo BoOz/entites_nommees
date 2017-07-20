@@ -277,7 +277,7 @@ Parti de la République (PR)
 Parti des travailleurs (PT)
 Parti travailliste brésilien (PTB)
 Parti socialiste brésilien (PSB)
-Parti social-démocrate (PSDB)
+Parti de la social-démocratie brésilienne (PSDB)
 Parti socialisme et liberté (PSOL)
 Parti Vert (PV)
 
@@ -330,9 +330,9 @@ Front social-démocrate (SDF)
 // Canada
 
 Bloc québécois (BQ)
-Parti conservateur du Canada (CPC)
-Parti Vert du Canada (GP)
-Parti libéral du Canada (LPC)
+Parti Vert du Canada
+Parti conservateur du Canada (PCP)
+Parti libéral du Canada (PLC)
 Nouveau Parti démocratique (NPD)
 Action démocratique du Québec (ADQ)
 Coalition avenir Québec (CAQ)
@@ -418,9 +418,10 @@ Parti du travail de Corée (PTC)
 // Corée du Sud
 
 Parti de la justice (PJ)
-Parti Minju de Corée (PMC)
+Minju (PMC)
 Parti de la nouvelle frontière (PNF)
-Parti populaire (PP)
+Parti du peuple (PP)
+Parti progressiste unifié (PPU)
 
 // Costa Rica
 
@@ -557,11 +558,12 @@ Front populaire pour la démocratie et la justice (FPDJ)
 
 // Espagne
 
-Parti socialiste ouvrier espagnol (PSOE)
-Parti populaire (PP)
-Podemos
+Equo
 Gauche unie (IU)
 Parti communiste d'Espagne (PCE)
+Parti populaire (PP)
+Podemos
+Parti socialiste ouvrier espagnol (PSOE)
 Bloc nationaliste galicien (BNG)
 Bloc nationaliste valencien (BLOC)
 Centre nationaliste canarien (CNN)
@@ -590,8 +592,8 @@ Parti social-démocrate (SDE)
 
 Parti communiste des États-Unis (CPUSA)
 Green Party
-Parti libertarien (LP)
 Democratic Party (Parti démocrate)
+Libertarian Party (Parti libertarien)
 Republican Party (Parti républicain)
 Tea Party
 
@@ -632,14 +634,20 @@ Ligue verte (VIHR)
 
 // France
 
+Debout la France
 Écologistes !
 Europe Ecologie -- Les Verts (EELV)
+En marche !
 Front de gauche (FDG)
+La France insoumise
 Front national (FN)
+Lutte ouvrière (LO)
 Les Républicains (LR)
+La République en marche (LRM)
 Mouvement des progressistes (MDP)
 Mouvement démocrate (MoDem)
 Nouveau Centre
+Nouveau Parti anticapitaliste (NPA)
 Parti communiste français (PCF)
 Parti de gauche (PG)
 Parti radical de gauche (PRG)
@@ -757,8 +765,8 @@ Parti national du Honduras (PNH)
 
 // Hongrie
 
-au pouvoir (Fidesz-Alliance civique hongroise)
-Mouvement pour une meilleure Hongrie (Jobbik)
+le Fidesz (Fidesz-Alliance civique hongroise)
+le Jobbik (Jobbik)
 Parti populaire chrétien-démocrate (KDNP)
 Une autre politique est possible (LMP)
 coalition de gauche formée en 2014 (Unité)
@@ -778,18 +786,21 @@ Parti de la société majoritaire (BSP)
 Ligue musulmane de l'Union indienne, comité de l'état Kerala (LMUI)
 Parti du Congrès
 Parti communiste d'Inde (PCI)
+Parti communiste d'Inde maoïste (PCI-m)
 Parti Telugu Desam (PTD)
 Shiv Sena (SHS)
 Telegana Rashtra Samithi (TRS)
 YSR Congress Party (YSRCP)
+People's Liberation Guerrilla Army (PLGA)
 
 // Indonésie
 
-Great Indonesia Movement Party (Gerindra)
-Party of the Functional Groups (Golkar)
+Front des défenseurs de l'islam (FPI)
+Gerindra
+Golkar
 Parti du mandat national (PAN)
 Parti démocrate (PD)
-Indonesian Democratic Party of Struggle (PDI-P)
+Parti indonésien de lutte (PDI-P)
 Parti du réveil national (PKB)
 Parti pour l'unité et le développement (PPP)
 Harakah Sunni for the Indonesian Society (Hasmi)
@@ -848,7 +859,7 @@ Avenir radieux (BF)
 Parti pirate (Þ)
 Parti du progrès (PP)
 Mouvement gauche-vert (VG)
-Régénération ou Renaissance (XC)
+Régénération ou Parti de la réforme (XC)
 Parti de l'indépendance (XD)
 Alliance (XS)
 
@@ -857,6 +868,7 @@ Alliance (XS)
 Ligue démocratique nationale (Balad)
 Foyer juif
 Front démocratique pour la paix et l'égalité (Hadash)
+Hatnuah
 Judaïsme de la Torah
 Koulanou
 « Israël, notre maison » (Israël Beitenou)
@@ -870,16 +882,15 @@ Yesh Atid
 
 // Italie
 
-Coalition de centre-gauche
 Centre démocrate (CD)
+Frères d'Italie - Alliance nationale (FDI-AN)
+« En avant l'Italie ! » (FI)
 Mouvement 5 étoiles
 Nouveau Centre droit (NCD)
 Parti démocrate (PD)
 Choix civique pour l'Italie (SC)
-Gauche écologie et liberté (SEL)
+Gauche, écologie et liberté (SEL)
 Union du centre (UDC)
-Frères d'Italie - Alliance nationale (FDI-AN)
-« En avant l'Italie ! » (FI)
 
 // Jamaïque
 
@@ -1000,6 +1011,7 @@ Mouvement de l'espoir (Mouvement Amal)
 Parti Baas
 Parti démocratique libanais
 Parti social nationaliste syrien (PSNS)
+Parti socialiste progressiste (PSP)
 Parti de Dieu (Hezbollah)
 
 // Liberia
@@ -1461,13 +1473,13 @@ Union nationale pour le progrès de la Roumanie (UNPR)
 Parti national britannique (BNP)
 Parti Vert de l'Angleterre et du Pays de Galles (Green Party)
 Liberal Democrats (Libéraux-démocrates)
-Conservative Party (Parti conservateur)
+les tories (Parti conservateur)
 The Labour Party (Parti travailliste)
 Parti pour l'indépendance du Royaume-Uni (UKIP)
 Democratic Unionist Party (DUP)
 Parti nationaliste gallois (Plaid Cymru)
 Parti social-démocrate et libéral d'Irlande du Nord (SDLP)
-Sinn Féin (SF)
+Sinn Féin
 Parti national écossais (SNP)
 Parti unioniste de l'Ulster (UUP)
 Armée républicaine irlandaise (IRA)
@@ -1476,7 +1488,7 @@ Armée républicaine irlandaise (IRA)
 
 Parti communiste de la Fédération de Russie (KPRF)
 Parti libéral-démocrate de Russie (LDPR)
-Russie Unie
+Russie unie
 Russie juste
 Iabloko
 Union des forces de droite (SPS)
@@ -1647,7 +1659,7 @@ Libéraux (L)
 Parti modéré (M)
 Parti de l'environnement - les Verts (MP)
 Parti social-démocrate suédois des travailleurs (SAP)
-Démocrates suédois (SD)
+Démocrates de Suède (SD)
 Parti de gauche (V)
 
 // Suisse
