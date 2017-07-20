@@ -26,7 +26,7 @@ BHL	BHL	Personnalités	Bernard-Henri Lévy
 Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing
 Nasser	Nasser	Personnalités	Gamal Abdel Nasser
 Allende	Allende	Personnalités	Salvadore Allende
-
+Jean-Paul II  Jean-Paul II  Personnalités Jean Paul II
 
 // partis politiques avec nom d'usage ou disparus
 Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
