@@ -41,6 +41,7 @@ Front national	Front national	Partis politiques	Front national (FN)
 Khmers	Khmers rouges	Partis politiques	Khmers rouges
 Conseil	Conseil national de la Résistance	Partis politiques	Conseil national de la Résistance (CNR)
 Parti	Parti populaire français	Partis politiques	Parti populaire français (PPF)
+Front Al-Nosra	Front Al-Nosra	Partis politiques	Front Fatah Al-Cham
 
 // pays avec noms d'usage
 RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
