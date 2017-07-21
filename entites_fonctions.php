@@ -605,3 +605,4 @@ function entites_to_array($entites_trouvees){
 	}
 	return $entites_nommees ;
 }
+

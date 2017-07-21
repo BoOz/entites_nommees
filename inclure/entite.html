@@ -46,16 +46,16 @@
 	
 </style>
 
+[(#REM) Poids total des références les plus fréquentes (ne pas en prendre plus de 5 000 sinon c long ? ) ]
+#SET{references,#ARRAY}
+<BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{0,5000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
+
 <div class="categorie hermetique"><B_type>
 	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
 		<p>Type : #TYPE_ENTITE</p>
 	</BOUCLE_type>
 	
 	<BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
-	
-	[(#REM) Poids total des références les plus fréquentes (ne pas en prendre plus de 5 000 sinon c long ? ) ]
-	#SET{references,#ARRAY}
-	<BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{0,5000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
 	
 	[(#REM) références proches ]
 	
@@ -64,9 +64,7 @@
 	
 	[(#REM) Entités les plus fréquentes dans ces articles pondéré par poids total ]
 	#SET{refs,#ARRAY}
-	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
-	
-	[(#REM) Pondération par le poids de chaque ]
+	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 	
 <B_references_proches>
 		Relations : 
@@ -87,11 +85,101 @@
 
 <INCLURE{fond=inclure/entite_temps,entite}>
 
+[(#REM) On cherche des articles avec les meme mots en tfidf ]
+#SET{liste_mots,#ENV{entite}|liste_mots_tf_idf{#GET{refs}|max|mult{2}}}
+<BOUCLE_entites_frequentes_tf_idf(DATA){source table,#GET{refs}}{!par valeur}>
+[(#REM) On multiplie par 10 ]
+#SET{liste_mots,#GET{liste_mots}|concat{" "}|concat{#CLE|liste_mots_tf_idf{#VALEUR}}}
+</BOUCLE_entites_frequentes_tf_idf>
+
+<B_en_relation>
+<h2 class="catego"> Nos articles en relation avec <span>#ENV{entite}</span></h2>
+<ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
+<BOUCLE_en_relation(DATA){source diploiser,#GET{liste_mots},20}{!par score}{si #CHEMIN{modeles/item.html}}>
+	#SET{notin,#GET{notin}|concat{","}|concat{#ID_ARTICLE}}
+	<li>
+		<div style="float:right;width:100px">
+			Score : #SCORE // #ID_ARTICLE
+		</div>
+		<BOUCLE_snippets(SPHINX){recherche #ENV{entite}}
+				{snippet content,'',170}
+				{filter 1, 'properties.objet = "article"'}
+				{filter #_en_relation:ID_ARTICLE, 'IN(properties.id_objet, @valeurs)'}
+				{pagination 1}
+			>
+			#INCLURE{fond=modeles/item-snippets,id_article=#_en_relation:ID_ARTICLE,snippets=#VALEUR{snippet}}
+		</BOUCLE_snippets>
+			#INCLURE{fond=modeles/item,id}
+		<//B_snippets>
+	</li>
+</BOUCLE_en_relation>
+</ul>
+</B_en_relation>
+
+#SET{notin,#GET{notin}|replace{"^,"}}
+
 [(#REM)
-<h2 class="catego">Nos articles <span>( documents)</span></h2>
-<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
-</div>
+
+	Définition de la fonction de score (tri des résultats)
+
+	On bidouille la date car le UNIX_TIMESTAMP
+	est stupidement impossible avant 1er janvier 1970.
+
 ]
+
+[(#ENV{tri}|=={date}|ou{[(#ENV{entite}|strlen|=={0})]}?{
+	#SET{select,'*, IF (date > 2992477296, date-8589934591, date) as dateu'}
+	#SET{tri,dateu}
+	#SET{sens_tri,1}
+,
+	#SET{select,'*, WEIGHT() / (100+SQRT(SQRT(NOW()-(IF (date > 2992477296, date-8589934591, date))))) as poids'}
+	#SET{tri,poids}
+	#SET{sens_tri,1}
+})]
+
+[(#REM) supprimer les paginations de # SELF, pour les liens d'affinage ]
+[(#SET{self,[(#SELF|replace{'\+',' '}
+|parametre_url{debut_articles,''}
+|parametre_url{debut_cartes,''}
+|parametre_url{debut_livres,''}
+|parametre_url{debut_revues,''}
+)]})]
+
+
+<h2 class="catego"> Résultats de la recherche <span>#ENV{entite}</span></h2>
+<ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
+<BOUCLE_articles(SPHINX){recherche #ENV*{entite}}
+	{filter 1, 'properties.visible = 1'}
+	{filter #ENV{annee},  'YEAR(date) = @valeur' }
+	{filter #ENV{apres},  'YEAR(date) >= @valeur' }
+	{filter #ENV{avant},  'YEAR(date) <= @valeur' }
+	{filtermultijson #ENV{mots}, properties.tags, #ENV{mots}}
+	{filtermultijson #ENV{auteurs}, properties.authors, #ENV{auteurs}}
+	{filter #ENV{typearticle}, "IN(properties.type, '@valeurs')"}
+	{filter #ENV{secteur}, 'IN(properties.secteur, @valeurs)'}
+	
+	{filter 1, "NOT IN(properties.type, 1,601,603,608,609,617)"}
+	{filter "Dans les revues", "NOT IN(properties.secteur,@valeurs)"}
+	
+	{select #GET{select}}
+	{par #GET{tri}}{inverse #GET{sens_tri}}
+	
+	{snippet content,'',170}
+	
+	{pagination 20}>
+	[<li class="hermetique resultat">
+	(#MODELE{item_data,valeur=#VALEUR})
+	</li>]
+</BOUCLE_articles>
+	</ul>
+	[<p class="pagination">(#PAGINATION)</p>]
+	[(#REM) <tt>(# SPHINX_QUERY)</tt>]
+</B_articles>
+	[(#REM) <tt>(# SPHINX_QUERY)</tt>]
+<//B_articles>
+</ul>
+
+
 
 [(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
 [(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
