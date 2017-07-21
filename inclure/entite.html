@@ -85,6 +85,21 @@
 
 <INCLURE{fond=inclure/entite_temps,entite}>
 
+[(#REM) Chronologies 604 ]
+
+
+<B_chronologie>
+<h2 class="catego">Chronologie[(#TOTAL_BOUCLE|>{1}|?{'s',''})]</h2>
+<div style="max-height:300px;overflow:auto;margin-bottom:30px">
+<BOUCLE_chronologie(ARTICLES){id_mot=604}{id_article IN #GET{articles}}>
+
+<a href="#URL_PAGE{article,id_article=#ID_ARTICLE}"><h3>#SURTITRE // #TITRE</h3></a>
+<br>
+[(#TEXTE)] 
+</BOUCLE_chronologie>
+</div>
+</B_chronologie>
+
 [(#REM) On cherche des articles avec les meme mots en tfidf ]
 #SET{liste_mots,#ENV{entite}|liste_mots_tf_idf{#GET{refs}|max|mult{2}}}
 <BOUCLE_entites_frequentes_tf_idf(DATA){source table,#GET{refs}}{!par valeur}>
@@ -115,6 +130,16 @@
 </BOUCLE_en_relation>
 </ul>
 </B_en_relation>
+
+
+<B_chronologie_relation>
+<h2 class="catego">Chronologie en relation</h2>
+<div style="max-height:300px;overflow:auto;margin-bottom:30px">
+<BOUCLE_chronologie_relation(ARTICLES){id_mot=604}{id_article IN #GET{notin}|explode{","}}>
+[(#TEXTE)] 
+</BOUCLE_chronologie_relation>
+</div>
+</B_chronologie_relation>
 
 #SET{notin,#GET{notin}|replace{"^,"}}
 
