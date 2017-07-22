@@ -641,9 +641,9 @@ function peupler_timeline($timeline, $texte, $lien=""){
 	$events = explode("\n", trim($texte));
 	
 	foreach($events as $e){
-		if(preg_match("/\d{4}(:?\.|\s|\})/", $e, $m)){
-			preg_match("/\d{4}/", $m[0], $annee);
-			$timeline[$annee[0]] .= propre(typo($e . " " . $lien)) . "\n\n";
+		if(preg_match("/(\d{4})(\.|\s|\})+/", $e, $m)){
+			$e = preg_replace("/". $m[0] ."/", preg_replace("/[^\w]+/"," ",$m[0]) , $e);
+			$timeline[$m[1]] .= propre(typo($e . " " . $lien)) . "\n\n";
 		}
 	}
 	
