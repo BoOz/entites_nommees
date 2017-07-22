@@ -622,23 +622,26 @@ function peupler_timeline($timeline, $texte, $lien=""){
 		//var_dump($a);
 		foreach($a as $l){
 			//var_dump("<pre>",$l);
-			preg_match("/^\d{4}/", $l, $annee);
-			$annee =$annee[0] ;
+			preg_match("/^(\d{4})\}/", $l, $annee);
+			$annee =$annee[1] ;
 			$t = str_replace("}}}","", $l);
 			//var_dump("<pre>",$timeline[$annee], $annee, $t);
-			$timeline[$annee] .= propre(typo($t . " " . $lien)) . "\n\n";
+			$s = trim(propre(typo($t . " " . $lien))) ;
+			if($s != "")
+				$timeline[$annee] .= $s . "\n\n";
+			
 			//var_dump($timeline[$annee], $annee, $t);
 			//die();
-			$texte = str_replace($l,"" , $texte);
+			$texte = trim(str_replace($l,"" , $texte));
 		}
 		//var_dump("<pre>", $anne, $timeline[$annee], "</pre>");
 	}
 	
 
-	$events = explode("\n", $texte);
+	$events = explode("\n", trim($texte));
 	
 	foreach($events as $e){
-		if(preg_match("/\d{4}/", $e, $m))
+		if(preg_match("/\d{4}(:?\.|\s|\})/", $e, $m))
 			$timeline[$m[0]] .= propre(typo($e . " " . $lien)) . "\n\n";
 	}
 	
