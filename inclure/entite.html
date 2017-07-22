@@ -83,22 +83,64 @@
 
 </div>
 
-<INCLURE{fond=inclure/entite_temps,entite}>
-
 [(#REM) Chronologies 604 ]
 
 
-<B_chronologie>
-<h2 class="catego">Chronologie[(#TOTAL_BOUCLE|>{1}|?{'s',''})]</h2>
+<B_bio>
+<h2 class="catego">Biographie[(#TOTAL_BOUCLE|>{1}|?{'s',''})]</h2>
 <div style="max-height:300px;overflow:auto;margin-bottom:30px">
-<BOUCLE_chronologie(ARTICLES){id_mot=604}{id_article IN #GET{articles}}>
+<BOUCLE_bio(ARTICLES){id_mot=1277}{id_article IN #GET{articles}}>
 
 <a href="#URL_PAGE{article,id_article=#ID_ARTICLE}"><h3>#SURTITRE // #TITRE</h3></a>
 <br>
 [(#TEXTE)] 
-</BOUCLE_chronologie>
+</BOUCLE_bio>
 </div>
+</B_bio>
+
+<INCLURE{fond=inclure/entite_temps,entite}>
+
+[(#REM) Chronologies 604 
+	https://ilkeryilmaz.github.io/timelinejs/
+]
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>	
+<script type="text/javascript" src="#CHEMIN{javascript/timelinejs/js/timeline.min.js}"></script>
+<link rel="stylesheet" href="#CHEMIN{javascript/timelinejs/css/timeline.css}" type="text/css" media="all">
+<style>
+.timeline-item{overflow:auto}
+</style>
+
+#SET{timeline,#ARRAY}
+<B_chronologie>
+<BOUCLE_chronologie(ARTICLES){id_mot=604}{id_article IN #GET{articles}}>
+#SET{timeline,#GET{timeline}|peupler_timeline{#TEXTE**,<a href="#URL_ARTICLE" title='#SURTITRE // #TITRE'>-></a>}}
+</BOUCLE_chronologie>
 </B_chronologie>
+
+<div style="position:relative;margin-bottom:150px">
+	<h2 id="chronologie" class="catego">Chronologie</h2>
+	<div class="timeline-container timeline-theme-1">
+	  <div class="timeline js-timeline">
+		<BOUCLE_dates(DATA){source table,#GET{timeline}}{cle > 500}>
+	    <div data-time="#CLE">
+	     	#VALEUR
+	     </div>
+		</BOUCLE_dates>
+	  </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.js-timeline').Timeline({
+			autoplay: true,
+			autoplaySpeed : 6000
+		});
+	});
+</script>
+
 
 [(#REM) On cherche des articles avec les meme mots en tfidf ]
 #SET{liste_mots,#ENV{entite}|liste_mots_tf_idf{#GET{refs}|max|mult{2}}}

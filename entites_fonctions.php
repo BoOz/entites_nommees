@@ -606,3 +606,45 @@ function entites_to_array($entites_trouvees){
 	return $entites_nommees ;
 }
 
+function peupler_timeline($timeline, $texte, $lien=""){
+	$texte = preg_replace("/\R/", "\n", $texte);
+	// var_dump($lien);
+	// format 1
+	// {{{2004}}}
+	//	{{2 février}} : Ariel Sharon annonce...
+	//	{{14 avril}} : lol
+
+	if(preg_match("/\{\{\{\d{4}\}\}\}/", $texte, $m)){
+		//var_dump("<pre>", $m);
+		$a = preg_split("~\{\{\{~Uims", $texte);
+		if($a[0] == "")
+			unset($a[0]);
+		//var_dump($a);
+		foreach($a as $l){
+			//var_dump("<pre>",$l);
+			preg_match("/^\d{4}/", $l, $annee);
+			$annee =$annee[0] ;
+			$t = str_replace("}}}","", $l);
+			//var_dump("<pre>",$timeline[$annee], $annee, $t);
+			$timeline[$annee] .= propre(typo($t . " " . $lien)) . "\n\n";
+			//var_dump($timeline[$annee], $annee, $t);
+			//die();
+			$texte = str_replace($l,"" , $texte);
+		}
+		//var_dump("<pre>", $anne, $timeline[$annee], "</pre>");
+	}
+	
+
+	$events = explode("\n", $texte);
+	
+	foreach($events as $e){
+		if(preg_match("/\d{4}/", $e, $m))
+			$timeline[$m[0]] .= propre(typo($e . " " . $lien)) . "\n\n";
+	}
+	
+	ksort($timeline);
+	
+	//var_dump("<pre>", $timeline ,"</pre>");
+	
+	return $timeline ;
+}
