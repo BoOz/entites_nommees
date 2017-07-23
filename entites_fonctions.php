@@ -611,9 +611,12 @@ function peupler_timeline($timeline, $texte, $lien=""){
 	
 	
 	// Nettoyage
+	//<br />
+	$texte = preg_replace("/<br\s*\/*>/","",$texte);
+	
 	$texte = preg_replace("/(\{+)\s?\R+/is","\\1",$texte);
 	$texte = preg_replace("/\s?\R+(\}+)/is"," \\1",$texte);
-		
+	
 	//<div align="center">{{2006}}</div>
 	$texte = preg_replace("/<div align=\"center\">\{+(\d+)\}+<\/div>/","{{{\\1}}}",$texte);
 	
