@@ -115,8 +115,7 @@
 
 #SET{timeline,#ARRAY}
 <BOUCLE_chronologie(ARTICLES){statut IN prop, publie}{id_mot=604}{id_article IN #GET{articles}}>
-#SURTITRE // #TITRE<br>
-#SET{timeline,#GET{timeline}|peupler_timeline{#TEXTE**,<a href="#URL_ARTICLE" title='#SURTITRE // #TITRE'>-></a>}}
+[(#SET{timeline,[(#GET{timeline}|peupler_timeline{#TEXTE**,<a href="#URL_ARTICLE" title='[(#SURTITRE|attribut_html)] // [(#TITRE|attribut_html)]'>-></a>})]})]
 </BOUCLE_chronologie>
 </B_chronologie>
 

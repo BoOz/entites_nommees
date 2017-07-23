@@ -608,6 +608,17 @@ function entites_to_array($entites_trouvees){
 
 function peupler_timeline($timeline, $texte, $lien=""){
 	$texte = preg_replace("/\R/", "\n", $texte);
+	
+	
+	// Nettoyage
+	$texte = preg_replace("/(\{+)\s?\R+/is","\\1",$texte);
+	$texte = preg_replace("/\s?\R+(\}+)/is"," \\1",$texte);
+		
+	//<div align="center">{{2006}}</div>
+	$texte = preg_replace("/<div align=\"center\">\{+(\d+)\}+<\/div>/","{{{\\1}}}",$texte);
+	
+	// var_dump("<pre>", entites_html($texte));
+	
 	// var_dump($lien);
 	// format 1
 	// {{{2004}}}
@@ -622,28 +633,27 @@ function peupler_timeline($timeline, $texte, $lien=""){
 		//var_dump($a);
 		foreach($a as $l){
 			//var_dump("<pre>",$l);
-			preg_match("/^(\d{4})\}/", $l, $annee);
-			$annee =$annee[1] ;
-			$t = str_replace("}}}","", $l);
-			//var_dump("<pre>",$timeline[$annee], $annee, $t);
-			$s = trim(propre(typo($t . " " . $lien))) ;
-			if($s != "")
-				$timeline[$annee] .= $s . "\n\n";
-			
-			//var_dump($timeline[$annee], $annee, $t);
-			//die();
-			$texte = trim(str_replace($l,"" , $texte));
+			if(preg_match("/^(\d{4})\}/", $l, $annee)){
+				$annee =$annee[1] ;
+				$t = preg_replace("/". $annee ."\s*\.*\}\}\}/","{{{". extraire_attribut($lien,"title") ."}}}\n", $l);
+				//var_dump("<pre>",$timeline[$annee], $annee, $t);
+				$s = trim(propre(typo($t)) . " " . $lien) ;
+				if($s != "")
+					$timeline[$annee] .= $s . "\n\n";
+				
+				//var_dump($timeline[$annee], $annee, $t);
+				//die();
+				$texte = trim(str_replace($l,"" , $texte));
+			}
 		}
 		//var_dump("<pre>", $anne, $timeline[$annee], "</pre>");
 	}
 	
-
 	$events = explode("\n", trim($texte));
 	
 	foreach($events as $e){
-		if(preg_match("/(\d{4})(\.|\s|\})+/", $e, $m)){
-			$e = preg_replace("/". $m[0] ."/", preg_replace("/[^\w]+/"," ",$m[0]) , $e);
-			$timeline[$m[1]] .= propre(typo($e . " " . $lien)) . "\n\n";
+		if(preg_match("/(?:(?<!\>)(\d{4})(\.|\s|\})+/", $e, $m)){ // non précédé de > (lien)
+			$timeline[$m[1]] .= propre(typo($e) . " " . $lien) . "\n\n";
 		}
 	}
 	
