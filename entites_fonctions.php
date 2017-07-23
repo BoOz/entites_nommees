@@ -635,7 +635,7 @@ function peupler_timeline($timeline, $texte, $lien=""){
 			//var_dump("<pre>",$l);
 			if(preg_match("/^(\d{4})\}/", $l, $annee)){
 				$annee =$annee[1] ;
-				$t = preg_replace("/". $annee ."\s*\.*\}\}\}/","{{{". extraire_attribut($lien,"title") ."}}}\n", $l);
+				$t = preg_replace("/". $annee ."\s*\.*\}\}\}/","", $l);
 				//var_dump("<pre>",$timeline[$annee], $annee, $t);
 				$s = trim(propre(typo($t)) . " " . $lien) ;
 				if($s != "")
