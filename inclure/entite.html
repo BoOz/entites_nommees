@@ -66,30 +66,27 @@
 	#SET{refs,#ARRAY}
 	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 	
-<B_references_proches>
-		Relations : 
+	<B_references_proches>
+	Relations : 
 	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	
-	<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
+		<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{refs}|max})]em;">
 					<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
 						[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
 						[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 					</a>
 				</span>
-	</BOUCLE_references_proches>
+		</BOUCLE_references_proches>
 	</div>
-</B_references_proches>
-
+	</B_references_proches>
 </div>
 
 [(#REM) Biographies 1277 ]
 
-
 <B_bio>
-<h2 class="catego">Biographie[(#TOTAL_BOUCLE|>{1}|?{'s',''})]</h2>
+<h2 class="catego">Biographie</h2>
 <div style="max-height:300px;overflow:auto;margin-bottom:30px">
-<BOUCLE_bio(ARTICLES){id_mot=1277}{id_article IN #GET{articles}}>
+<BOUCLE_bio(ARTICLES){statut IN prop, publie}{id_mot=1277}{id_article IN #GET{articles}}>
 
 <a href="#URL_PAGE{article,id_article=#ID_ARTICLE}"><h3>#SURTITRE // #TITRE</h3></a>
 <br>
@@ -123,13 +120,13 @@
 <div style="position:relative;margin-bottom:150px">
 	<h2 id="chronologie" class="catego">Chronologie</h2>
 	<div class="timeline-container timeline-theme-1">
-	  <div class="timeline js-timeline">
+		<div class="timeline js-timeline">
 		<BOUCLE_dates(DATA){source table,#GET{timeline}}{cle > 500}>
-	    <div data-time="#CLE">
-	     	[(#VALEUR)]
-	     </div>
+			<div data-time="#CLE">
+			[(#VALEUR)]
+			</div>
 		</BOUCLE_dates>
-	  </div>
+		</div>
 	</div>
 </div>
 </B_dates>
@@ -143,7 +140,6 @@
 	});
 </script>
 
-
 [(#REM) On cherche des articles avec les meme mots en tfidf ]
 #SET{liste_mots,#ENV{entite}|liste_mots_tf_idf{#GET{refs}|max|mult{2}}}
 <BOUCLE_entites_frequentes_tf_idf(DATA){source table,#GET{refs}}{!par valeur}>
@@ -154,7 +150,7 @@
 <B_en_relation>
 <h2 class="catego"> Nos articles en relation avec <span>#ENV{entite}</span></h2>
 <ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
-<BOUCLE_en_relation(DATA){source diploiser,#GET{liste_mots},20}{!par score}{si #CHEMIN{modeles/item.html}}>
+<BOUCLE_en_relation(DATA){source diploiser,#GET{liste_mots},8}{!par score}{si #CHEMIN{modeles/item.html}}>
 	#SET{notin,#GET{notin}|concat{","}|concat{#ID_ARTICLE}}
 	<li>
 		<div style="float:right;width:100px">
@@ -174,46 +170,20 @@
 </BOUCLE_en_relation>
 </ul>
 </B_en_relation>
-
+#SET{notin,#GET{notin}|replace{"^,"}}
 
 <B_chronologie_relation>
-<h2 class="catego">Chronologie en relation</h2>
+<h2 class="catego">Chronologie en relation ??</h2>
 <div style="max-height:300px;overflow:auto;margin-bottom:30px">
-<BOUCLE_chronologie_relation(ARTICLES){id_mot=604}{id_article IN #GET{notin}|explode{","}}>
-[(#TEXTE)] 
-</BOUCLE_chronologie_relation>
+<BOUCLE_chronologie_relation(ARTICLES){id_mot=604}{id_article IN #GET{notin}|explode{","}}>[(#TEXTE)]</BOUCLE_chronologie_relation>
 </div>
 </B_chronologie_relation>
 
-#SET{notin,#GET{notin}|replace{"^,"}}
-
 [(#REM)
-
-	Définition de la fonction de score (tri des résultats)
-
-	On bidouille la date car le UNIX_TIMESTAMP
-	est stupidement impossible avant 1er janvier 1970.
-
+	[(#GET{notin}|explode{","}|print_r{1})]
+	{filter 1, 'properties.objet = "article"'}
+	{filter #GET{notin}|explode{","}, 'NOT IN(properties.id_objet, @valeurs)'}
 ]
-
-[(#ENV{tri}|=={date}|ou{[(#ENV{entite}|strlen|=={0})]}?{
-	#SET{select,'*, IF (date > 2992477296, date-8589934591, date) as dateu'}
-	#SET{tri,dateu}
-	#SET{sens_tri,1}
-,
-	#SET{select,'*, WEIGHT() / (100+SQRT(SQRT(NOW()-(IF (date > 2992477296, date-8589934591, date))))) as poids'}
-	#SET{tri,poids}
-	#SET{sens_tri,1}
-})]
-
-[(#REM) supprimer les paginations de # SELF, pour les liens d'affinage ]
-[(#SET{self,[(#SELF|replace{'\+',' '}
-|parametre_url{debut_articles,''}
-|parametre_url{debut_cartes,''}
-|parametre_url{debut_livres,''}
-|parametre_url{debut_revues,''}
-)]})]
-
 
 <h2 class="catego"> Résultats de la recherche <span>#ENV{entite}</span></h2>
 <ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
@@ -296,7 +266,6 @@
 #SET{req,#VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}
 
 <div style="margin:0 40px 0 0;display: flex; flex-flow: row wrap;">
-
 		<B_personnalites_frequents>
 			#ANCRE_PAGINATION
 		<div class="col">
@@ -311,7 +280,6 @@
 			<p>#PAGINATION</p>
 		</div>
 		</B_personnalites_frequents>
-
 		
 		#SET{notin,#ARRAY}
 		
