@@ -262,7 +262,7 @@ class entites_nommees extends Command {
 				
 				
 				// articles
-				$requete = "select id_article from spip_articles where statut !='prepa' and id_secteur=" . _SECTEUR_ENTITES . " and id_article not in(" . implode(",", $articles_faits) . ") order by date_redac desc limit 0,1000" ;
+				$requete = "select id_article from spip_articles where statut !='prepa' and id_secteur IN (" . _SECTEUR_ENTITES . ") and id_article not in(" . implode(",", $articles_faits) . ") order by date_redac desc limit 0,1000" ;
 				// syndic articles
 				if($type_source == "spip_syndic_articles")
 					$requete = "select id_syndic_article id_article from spip_syndic_articles where id_syndic_article not in(" . implode(",", $articles_faits) . ") order by date desc limit 0,1000" ;
