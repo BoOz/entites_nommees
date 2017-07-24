@@ -179,11 +179,41 @@
 </div>
 </B_chronologie_relation>
 
+
 [(#REM)
 	[(#GET{notin}|explode{","}|print_r{1})]
 	{filter 1, 'properties.objet = "article"'}
 	{filter #GET{notin}|explode{","}, 'NOT IN(properties.id_objet, @valeurs)'}
 ]
+
+
+[(#REM)
+
+	Définition de la fonction de score (tri des résultats)
+
+	On bidouille la date car le UNIX_TIMESTAMP
+	est stupidement impossible avant 1er janvier 1970.
+
+]
+
+[(#ENV{tri}|=={date}|ou{[(#ENV{entite}|strlen|=={0})]}?{
+	#SET{select,'*, IF (date > 2992477296, date-8589934591, date) as dateu'}
+	#SET{tri,dateu}
+	#SET{sens_tri,1}
+,
+	#SET{select,'*, WEIGHT() / (100+SQRT(SQRT(NOW()-(IF (date > 2992477296, date-8589934591, date))))) as poids'}
+	#SET{tri,poids}
+	#SET{sens_tri,1}
+})]
+
+[(#REM) supprimer les paginations de # SELF, pour les liens d'affinage ]
+[(#SET{self,[(#SELF|replace{'\+',' '}
+|parametre_url{debut_articles,''}
+|parametre_url{debut_cartes,''}
+|parametre_url{debut_livres,''}
+|parametre_url{debut_revues,''}
+)]})]
+
 
 <h2 class="catego"> Résultats de la recherche <span>#ENV{entite}</span></h2>
 <ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
