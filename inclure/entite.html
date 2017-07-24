@@ -55,6 +55,8 @@
 		<p>Type : #TYPE_ENTITE</p>
 	</BOUCLE_type>
 	
+	<INCLURE{fond=inclure/entite_temps,entite}>
+	
 	<BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
 	
 	[(#REM) références proches ]
@@ -67,7 +69,7 @@
 	<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{refs,#GET{refs}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 	
 	<B_references_proches>
-	Relations : 
+	<div>Relations :</div>
 	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 		<BOUCLE_references_proches(DATA){source table,#GET{refs}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{refs}|max})]em;">
@@ -94,8 +96,6 @@
 </BOUCLE_bio>
 </div>
 </B_bio>
-
-<INCLURE{fond=inclure/entite_temps,entite}>
 
 [(#REM) Chronologies 604 
 	https://ilkeryilmaz.github.io/timelinejs/
@@ -157,7 +157,7 @@
 			Score : #SCORE // #ID_ARTICLE
 		</div>
 		<BOUCLE_snippets(SPHINX){recherche #ENV{entite}}
-				{snippet content,'',170}
+				{snippet content,'',300}
 				{filter 1, 'properties.objet = "article"'}
 				{filter #_en_relation:ID_ARTICLE, 'IN(properties.id_objet, @valeurs)'}
 				{pagination 1}
@@ -233,7 +233,7 @@
 	{select #GET{select}}
 	{par #GET{tri}}{inverse #GET{sens_tri}}
 	
-	{snippet content,'',170}
+	{snippet content,'',300}
 	
 	{pagination 20}>
 	[<li class="hermetique resultat">
