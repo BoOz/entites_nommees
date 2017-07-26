@@ -25,6 +25,9 @@ Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing
 Nasser	Nasser	Personnalités	Gamal Abdel Nasser
 Allende	Allende	Personnalités	Salvadore Allende
 Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II
+Ben Laden	Ben Laden	Personnalités	Oussama Ben Laden
+Malcolm	Malcolm X	Personnalités	Malcolm X
+Fidel	Fidel	Personnalités	Fidel Castro
 			
 // Partis politiques avec nom d'usage ou disparus			
 Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
@@ -52,9 +55,17 @@ Caire	Caire	Villes	Le Caire
 New York Times	New York Times	Journaux	The New York Times
 New York	New York Times	Journaux	The New York Times
 media:New York Times	New York Times	Sources	media:The New York Times
+Monde SA	Monde SA	Journaux	Le Monde
+Monde	Monde	Journaux	Le Monde
+Point	Point	Journaux	Le Point
+Figaro	Figaro	Journaux	Le Figaro
+TF	TF 1	Journaux	TF1
+Black Panthers	Black Panthers	Partis politiques	Panthères noires
 			
 // Choses connues			
 Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
+Déclaration des droits de l'homme	Déclaration des droits de l'homme	institutions	Déclaration universelle des droits de l'homme
+Panthères	Panthères noires	Partis politiques	Panthères noires
 			
 // Accents			
 Equateur	Equateur	Pays	Équateur

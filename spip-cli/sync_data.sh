@@ -18,3 +18,7 @@ git diff > diff-recaler.txt
 
 echo "Mise à jour des alias"
 cat diff-recaler.txt
+
+echo "/* Mise à jour typoDiplo */"
+
+echo "Mise à jour des partis"
