@@ -97,8 +97,7 @@ class entites_nommees extends Command {
 					// Maj du fichier recaler.txt sur GD en bash.
 					passthru("./plugins/entites_nommees/spip-cli/sync_data.sh"); // chmod +x sync_data.sh la premiere fois
 					
-					die();
-					$output->writeln("<info>Mise à jour des entityés dans la base de données d'après le fichier recaler.txt</info>");
+					$output->writeln("<info>Mise à jour des entités dans la base de données d'après le fichier recaler.txt</info>");
 					
 					// recaler apres coup d'apres le fichier recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
