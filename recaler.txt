@@ -1,14 +1,12 @@
-// La bonne entite après coup
-
-// entite actuelle 	entite dans l'extrait	type_entite	entite
+// Entité actuelle	Texte contient	Type	Entité correcte
 Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
 Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
 ONU	ONU	Institutions	Organisation des Nations unies (ONU)
 FMI	FMI	Institutions	Fonds monétaire international (FMI)
-
-// personnalités
+			
+// Personnalités			
 Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
 Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
 État	coups d'État	a_ajouter	Coup d'État
@@ -27,8 +25,8 @@ Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing
 Nasser	Nasser	Personnalités	Gamal Abdel Nasser
 Allende	Allende	Personnalités	Salvadore Allende
 Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II
-
-// partis politiques avec nom d'usage ou disparus
+			
+// Partis politiques avec nom d'usage ou disparus			
 Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
 OLP	OLP	Partis politiques	Organisation de libération de la Palestine (OLP)
 Hezbollah	Hezbollah	Partis politiques	Parti de Dieu (Hezbollah)
@@ -42,23 +40,22 @@ Khmers	Khmers rouges	Partis politiques	Khmers rouges
 Conseil	Conseil national de la Résistance	Partis politiques	Conseil national de la Résistance (CNR)
 Parti	Parti populaire français	Partis politiques	Parti populaire français (PPF)
 Front Al-Nosra	Front Al-Nosra	Partis politiques	Front Fatah Al-Cham
-
-// pays avec noms d'usage
+			
+// Pays avec noms d'usage			
 RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
 RDA	RDA	Pays	République démocratique allemande (RDA)
 Maastricht	traité de Maastricht	a_ajouter	traité de Maastricht
 Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite
-
-// alias
+			
+// Alias			
 Caire	Caire	Villes	Le Caire
 New York Times	New York Times	Journaux	The New York Times
 New York	New York Times	Journaux	The New York Times
 media:New York Times	New York Times	Sources	media:The New York Times
-
-// choses connues
+			
+// Choses connues			
 Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
-
-// accents
+			
+// Accents			
 Equateur	Equateur	Pays	Équateur
 Etats-unis	Etats-unis	Pays	États-unis
-
