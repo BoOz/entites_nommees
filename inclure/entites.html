@@ -79,30 +79,6 @@
 </BOUCLE_top_geo>
 </div>
 
-<div id="auteurs" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3 title="Auteurs[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]">Auteurs</h3>
-<BOUCLE_top_auteurs(DATA){source table, #GET{auteurs}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{auteurs}|max})]em;">
-		<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
-			[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
-		</a>
-	</span>
-</BOUCLE_top_auteurs>
-</div>
-
-<div id="medias" style="margin:40px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-	<h3 tile="[ (#ENV{entite}|oui) en relation avec  [(#ENV{entite})]]">Sources</h3>
-<BOUCLE_top_sources(DATA){source table, #GET{sources}}{par cle}>
-	<span style="font-size:[(#VALEUR|nuage_mot{#GET{sources}|max})]em;">
-		<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
-			[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
-		</a>
-	</span>
-</BOUCLE_top_sources>
-</div>
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		// nuage_entites

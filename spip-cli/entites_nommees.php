@@ -54,7 +54,7 @@ class entites_nommees extends Command {
 		global $spip_racine;
 		global $spip_loaded;
 		global $spip_version_branche ;
-	
+		
 		if($fichier = $input->getArgument('fichier')){
 			if(!is_file($fichier)){
 				echo "Fichier $fichier non trouvé...\n" ;
@@ -94,7 +94,11 @@ class entites_nommees extends Command {
 				if($requalifier !=="non"){
 					passthru("clear");
 					
-					$output->writeln("<info>Requalification des données d'après le fichier recaler.txt</info>");
+					// Maj du fichier recaler.txt sur GD en bash.
+					passthru("./plugins/entites_nommees/spip-cli/sync_data.sh"); // chmod +x sync_data.sh la premiere fois
+					
+					die();
+					$output->writeln("<info>Mise à jour des entityés dans la base de données d'après le fichier recaler.txt</info>");
 					
 					// recaler apres coup d'apres le fichier recaler.txt
 					// prevoir aussi des : update entites_nommees set entite='Pays basque', type_entite='Pays' where entite='Pays' and extrait like '%Pays basque%' and type_entite='INDETERMINE' ;
