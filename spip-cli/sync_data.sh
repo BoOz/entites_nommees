@@ -1,5 +1,11 @@
 #!/bin/sh
 
+function typoDiploBrut {
+	d=$(curl "$1")
+	# virer les 15 premiere lignes, remplacer les <br> par des sauts de lignes, et virer le HTML
+	echo "$d" | tail -n +17 | sed -e :a -e 's,<a href="\(http.*\)">,\1~// ,g;s/<br *\/*>/~/g;s/~~*/~/g;s/<[^>]*>//g;/</N;//ba' | tr "\n" "~" | sed -e "s/~~~*/~~/g" | tr '~' "\n" 
+}
+
 echo "Mise à jour des dictionnaires." ;
 cd plugins/entites_nommees/
 
@@ -22,3 +28,5 @@ cat diff-recaler.txt
 echo "/* Mise à jour typoDiplo */"
 
 echo "Mise à jour des partis"
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=partis_formations_politiques" > listes_lexicales/Partis_politiques/partis_typo.txt
+
