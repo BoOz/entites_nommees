@@ -1,227 +1,437 @@
+
+
 // Capitales
+
 Kaboul
+
 Pretoria
 Le Cap
-Bloemfontein
+Johannesburg Bloemfontein
+
 Tirana
+
 Alger
+
 Berlin
+
 Andorre-la-Vieille
+
 Luanda
+
 Saint John's
+
 Riyad
+
 Buenos Aires
+
 Erevan
+
 Canberra
+
 Vienne
+
 Bakou
+
 Nassau
+
 Manama
+
 Dacca
+
 Bridgetown
+
 Bruxelles
+
 Belmopan
+
 Porto Novo
+
 Thimphou
+
 Minsk
+
 Naypyidaw
+
 La Paz
 Sucre
+
 Sarajevo
+
 Gaborone
+
 Brasília
+
 Bandar Seri Begawan
+
 Sofia
+
 Ouagadougou
+
 Bujumbura
+
 Phnom Penh
+
 Yaoundé
+
 Ottawa
+
 Praia
+
 Santiago
+
 Pékin
+
 Nicosie
+
 Bogotá
+
 Moroni
+
 Brazzaville
+
 Pyongyang
+
 Séoul
+
 San José
+
 Yamoussoukro
+
 Zagreb
+
 La Havane
+
 Copenhague
+
 Djibouti
+
 Roseau
+
 Le Caire
+
 Abou Dhabi
+
 Quito
+
 Asmara
+
 Madrid
+
 Tallinn
+
 Washington, DC
+
 Addis-Abeba
-// ALERTE pas de capitale dans EX-YOUGOSLAVIE
+
+// ALERTE pas de capitale dans http://typo.mondediplo.net/messages/1043
+// EX-YOUGOSLAVIE
+
 Suva
+
 Helsinki
+
 Paris
+
 Libreville
+
 Banjul
+
 Tbilissi
+
 Accra
+
 Athènes
+
 Saint-Georges
+
 Guatemala
+
 Conakry
+
 Bissau
+
 Malabo
 sur l'île de Bioko
+
 Georgetown
+
 Port-au-Prince
+
 Tegucigalpa
+
 Budapest
+
 New Delhi
+
 Djakarta
+
 Bagdad
+
 Téhéran
+
 Dublin
+
 Reykjavík
+
 Tel-Aviv
+
 Rome
+
 Kingston
+
 Tokyo
+
 Amman
+
 Astana
+
 Nairobi
+
 Bichkek
-Tarawa
+
+Tarawa 
 Bairiki
+
 Pristina
+
 Koweït
+
 Vientiane
+
 Maseru
+
 Riga
+
 Beyrouths)
+
 Monrovia
+
 Tripoli
+
 Vaduz
+
 Vilnius
+
 Luxembourg
+
 Skopje
+
 Antananarivo
-Kuala Lumpur
+
+Kuala Lumpur 
 Putrajaya
+
 Lilongwe
+
 Malé
+
 Bamako
+
 La Valette
+
 Rabat
+
 Delap-Uliga-Djarrit
+
 Port Louis
+
 Nouakchott
+
 Mexico
+
 Palikir
+
 Chișinău
+
 Monaco
+
 Oulan-Bator
+
 Podgorica
 Cetinje
+
 Maputo
 ex-Lourenço Marques
+
 Windhoek
+
 Yaren
+
 Katmandou
+
 Managua
+
 Niamey
+
 Abuja et Lagos
+
 Oslo
+
 Nouméa
+
 Wellington
+
 Mascate
+
 Kampala
+
 Tachkent
+
 Islamabad
+
 Melekeok
+
 Jérusalem
 Ramallah
+
 Panamá
+
 Port Moresby
+
 Asunción
+
 Amsterdam
+
 Lima
+
 Manille
+
 Varsovie
+
 San Juan
+
 Lisbonne
+
 Doha
+
 Bangui
+
 Kinshasa
+
 Saint-Domingue
+
 Prague
+
 Bucarest
+
 Londres
+
 Moscou
+
 Kigali
+
 Basseterre
+
 Saint-Marin
+
 Kingstown
+
 Castries
+
 Honiara
+
 San Salvador
+
 Apia
+
 São-Tomé
+
 Dakar
+
 Belgrade
+
 Victoria
 île de Mahé
+
 Freetown
+
 Singapour
+
 Bratislava
+
 Ljubljana
+
 Mogadiscio
+
 Khartoum
+
 Juba
+
 Colombo
+
 Stockholm
+
 Berne
+
 Paramaribo
-Mbabane
+
+Mbabane 
 Lobamba
+
 Damas
+
 Douchanbé
+
 Taipei
+
 Dodoma
+
 N'Djamena
+
 Bangkok
+
 Dili
+
 Lomé
+
 Nuku'alofa
+
 Port of Spain
+
 Tunis
+
 Achkhabad
+
 Ankara
+
 Funafuti
+
 Kiev
-// ALERTE pas de capitale dans Union soviétique
+
+// ALERTE pas de capitale dans http://typo.mondediplo.net/messages/1065
+// Union soviétique
+
 Montevideo
+
 Port-Vila
+
 Cité du Vatican
+
 Caracas
+
 Hanoï
+
 Sanaa
+
 Lusaka
+
 Harare
+
 // Villes
 
+// http://typo.mondediplo.net/messages/182
 // Afghanistan
 
-
+// http://typo.mondediplo.net/messages/181
 // Afrique du Sud
+
 Johannesburg
 Khayelitsha
 Polokwane
 
+// http://typo.mondediplo.net/messages/180
 // Albanie
+
 Durrës
 Kalimash
 Korçë
@@ -231,21 +441,27 @@ Rrëshen
 Shkodra
 Vlorë
 
+// http://typo.mondediplo.net/messages/179
 // Algérie
+
 Oran
 Constantine
 Annaba
 Sétif
 
+// http://typo.mondediplo.net/messages/178
 // Allemagne
+
 Berlin
 Brême
 Hambourg
 
+// http://typo.mondediplo.net/messages/177
 // Andorre
 
-
+// http://typo.mondediplo.net/messages/176
 // Angola
+
 Luanda
 Huambo
 Benguela
@@ -255,10 +471,12 @@ Lubango
 Cabinda
 Malange
 
+// http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
 
-
+// http://typo.mondediplo.net/messages/174
 // Arabie saoudite
+
 Dammam
 Djeddah
 La Mecque
@@ -267,60 +485,73 @@ Najran
 Qatif
 Taëf
 
+// http://typo.mondediplo.net/messages/173
 // Argentine
 
-
+// http://typo.mondediplo.net/messages/172
 // Arménie
 
-
+// http://typo.mondediplo.net/messages/171
 // Australie
+
 Sydney
 Melbourne
 Brisbane
 Perth
 
-
+// http://typo.mondediplo.net/messages/170
 // Autriche
 
-
+// http://typo.mondediplo.net/messages/169
 // Azerbaïdjan
+
 Soumgaït
 Gandja
 
+// http://typo.mondediplo.net/messages/168
 // Bahamas
 
-
+// http://typo.mondediplo.net/messages/167
 // Bahreïn
+
 Muharraq
 Riffa
 Isa Town
 Nuwaidrat
 
+// http://typo.mondediplo.net/messages/166
 // Bangladesh
 
-
+// http://typo.mondediplo.net/messages/165
 // Barbade
 
-
+// http://typo.mondediplo.net/messages/164
 // Belgique
 
-
+// http://typo.mondediplo.net/messages/163
 // Belize
 
-
+// http://typo.mondediplo.net/messages/162
 // Bénin
+
 Cotonou
 Djougou
 Parakou
 Abomey
 
+// http://typo.mondediplo.net/messages/161
 // Bhoutan
 
-
+// http://typo.mondediplo.net/messages/160
 // Biélorussie
 
+Hantsavitchy
+Lepel
+Vileïka
 
+// http://typo.mondediplo.net/messages/159
 // Birmanie
+
 Kengtung
 Kunlong
 Kyaupkyu
@@ -340,10 +571,12 @@ Toungoo
 Taunggok
 Thamanya
 
+// http://typo.mondediplo.net/messages/158
 // Bolivie
 
-
+// http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
+
 Banja Luka
 Brčko
 Goradže
@@ -352,24 +585,32 @@ Mostar
 Trebinje
 Tuzla
 
+// http://typo.mondediplo.net/messages/156
 // Botswana
+
 Francistown
 Molepolole
 Mogoditshane
 Maun
-Selebi-Phikwe
+Selebi-Phikwe 
 
+// http://typo.mondediplo.net/messages/155
 // Brésil
+
 Rio de Janeiro
 São Paulo
-Salvado de Bahia
+Salvado de Bahia 
 
+// http://typo.mondediplo.net/messages/154
 // Brunei
+
 Kuala Belait
 Tutong
 Jerudong
 
+// http://typo.mondediplo.net/messages/153
 // Bulgarie
+
 Bourgas
 Choumen
 Dobritch
@@ -381,49 +622,63 @@ Varna
 Veliko Tarnovo
 Vratsa
 
+// http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
-
+// http://typo.mondediplo.net/messages/151
 // Burundi
 
-
+// http://typo.mondediplo.net/messages/1019
 // Cambodge
+
 Sihanoukville
 Battambang
 Siem Reap
 
+// http://typo.mondediplo.net/messages/150
 // Cameroun
+
 Douala
 Yaoundé
 Bafoussam
 Garoua
 Maroua
 
+// http://typo.mondediplo.net/messages/149
 // Canada
+
 Toronto
 Montréal
 Vancouver
 Calgary
 
+// http://typo.mondediplo.net/messages/148
 // Cap-Vert
 
-
+// http://typo.mondediplo.net/messages/146
 // Chili
+
 Viña del Mar
 Valparaíso
 Concepción
 Antofagasta
+Punta Arenas
+Ushuaia
 
+// http://typo.mondediplo.net/messages/1020
 // Chine
 
-
+// http://typo.mondediplo.net/messages/145
 // Chypre
+
 Larnaca
 Morfou
 Limassol
 Nicosie
 
+// http://typo.mondediplo.net/messages/144
 // Colombie
+
 Apartadó
 Barranquilla
 Cartagena
@@ -432,66 +687,85 @@ Cali
 Mapiripán
 Medellin
 
+// http://typo.mondediplo.net/messages/143
 // Comores
+
 Praia
 Mindelo
 Assomada
 
+// http://typo.mondediplo.net/messages/142
 // Congo
 
-
+// http://typo.mondediplo.net/messages/1086
 // Corée du Nord
 
+Chongjin
+Kaesong
 
+// http://typo.mondediplo.net/messages/1087
 // Corée du Sud
 
+Inchon
+Kwangju
+Masan
+Pusan
+Sunchon
 
+// http://typo.mondediplo.net/messages/141
 // Costa Rica
 
-
+// http://typo.mondediplo.net/messages/140
 // Côte d'Ivoire
+
 Duékoué
 San Pedro
 Taï
 Zagné
 
+// http://typo.mondediplo.net/messages/139
 // Croatie
+
 Dubrovnik
 Rijeka
 Zadar
 
+// http://typo.mondediplo.net/messages/138
 // Cuba
 
-
+// http://typo.mondediplo.net/messages/137
 // Danemark
 
-
+// http://typo.mondediplo.net/messages/136
 // Djibouti
 
-
+// http://typo.mondediplo.net/messages/135
 // Dominique
 
-
+// http://typo.mondediplo.net/messages/1309
 // Égypte
 
-
+// http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
-
+// http://typo.mondediplo.net/messages/132
 // Équateur
 
-
+// http://typo.mondediplo.net/messages/131
 // Érythrée
 
-
+// http://typo.mondediplo.net/messages/130
 // Espagne
+
 Ceuta
 Melilla
 
+// http://typo.mondediplo.net/messages/129
 // Estonie
 
-
+// http://typo.mondediplo.net/messages/128
 // États-Unis
+
 Baton Rouge
 Detroit
 Los Angeles
@@ -499,22 +773,26 @@ New York
 La Nouvelle-Orléans
 San Francisco
 
+// http://typo.mondediplo.net/messages/127
 // Éthiopie
 
-
+// http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
 
-
+// http://typo.mondediplo.net/messages/126
 // Fidji
+
 Lautoka
 Nadi
 Ba
 Labasa
 
+// http://typo.mondediplo.net/messages/124
 // Finlande
 
-
+// http://typo.mondediplo.net/messages/123
 // France
+
 Bordeaux
 Grenoble
 Lille
@@ -522,62 +800,76 @@ Nantes
 Strasbourg
 Toulouse
 
+// http://typo.mondediplo.net/messages/122
 // Gabon
 
-
+// http://typo.mondediplo.net/messages/121
 // Gambie
 
-
+// http://typo.mondediplo.net/messages/120
 // Géorgie
+
 Batoumi
 Poti
 Zougdidi
 
+// http://typo.mondediplo.net/messages/119
 // Ghana
+
 Keta
 Tamale
 
+// http://typo.mondediplo.net/messages/118
 // Grèce
 
-
+// http://typo.mondediplo.net/messages/117
 // Grenade
 
-
+// http://typo.mondediplo.net/messages/116
 // Guatemala
 
-
+// http://typo.mondediplo.net/messages/115
 // Guinée
 
-
+// http://typo.mondediplo.net/messages/114
 // Guinée-Bissau
+
 Bafata
 Gabu
 Cacheu
 
+// http://typo.mondediplo.net/messages/113
 // Guinée-Équatoriale
+
 Bata
 
+// http://typo.mondediplo.net/messages/112
 // Guyana
 
-
+// http://typo.mondediplo.net/messages/111
 // Haïti
 
-
+// http://typo.mondediplo.net/messages/110
 // Honduras
+
 Cortés
 Tela
 La Ceiba
 Puerto Castilla
 San Pedro Sula
 
+// http://typo.mondediplo.net/messages/109
 // Hongrie
+
 Debrecen
 Miskolc
 
+// http://typo.mondediplo.net/messages/1088
 // Inde
 
-
+// http://typo.mondediplo.net/messages/1089
 // Indonésie
+
 Bandung
 Surabaya
 Medan
@@ -585,7 +877,9 @@ Palembang
 Makassar
 Semarang
 
+// http://typo.mondediplo.net/messages/108
 // Irak
+
 Al-Baaj
 Baiji
 Bassora
@@ -599,12 +893,15 @@ Lalish
 Mossoul
 Nadjaf
 Nassiriya
+Rabia
 Samarra
 Sinjar
 Tell Afar
 Tikrit
 
+// http://typo.mondediplo.net/messages/107
 // Iran
+
 Abadan
 Ahwaz
 Ardebil
@@ -625,17 +922,23 @@ Tabriz
 Yazd
 Zahedan
 
+// http://typo.mondediplo.net/messages/106
 // Irlande
+
 Cork
 Galway
 Dublin
 
+// http://typo.mondediplo.net/messages/105
 // Islande
+
 Reykjavík
 Akureyri
 Hafnarfjörður
 
+// http://typo.mondediplo.net/messages/104
 // Israël
+
 Acre
 Arad
 Arara
@@ -681,34 +984,40 @@ Wadi Salib
 Yanoun
 Yoqneam
 
+// http://typo.mondediplo.net/messages/103
 // Italie
 
-
+// http://typo.mondediplo.net/messages/102
 // Jamaïque
+
 Montego Bay
 Portmore
 
+// http://typo.mondediplo.net/messages/1090
 // Japon
 
-
+// http://typo.mondediplo.net/messages/101
 // Jordanie
+
 Irbid
 Madaba
 Zarka
 
+// http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
-
+// http://typo.mondediplo.net/messages/100
 // Kenya
 
-
+// http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
-
+// http://typo.mondediplo.net/messages/99
 // Kiribati
 
-
+// http://typo.mondediplo.net/messages/1042
 // Kosovo
+
 Cirez
 Decani
 Djakovica
@@ -745,11 +1054,15 @@ Vrela
 Vucitrn
 Zvecan
 
+// http://typo.mondediplo.net/messages/98
 // Koweït
+
 Ahmadi
 Jahra
 
+// http://typo.mondediplo.net/messages/1093
 // Laos
+
 Luang Prabang
 Paksé
 Phongsaly
@@ -757,22 +1070,26 @@ Sam Neua
 Savannakhet
 Thakhek
 
+// http://typo.mondediplo.net/messages/97
 // Lesotho
 
-
+// http://typo.mondediplo.net/messages/96
 // Lettonie
 
-
+// http://typo.mondediplo.net/messages/95
 // Liban
+
 Tripoli
 Saïda
 Tyr
 Zahlé
 
+// http://typo.mondediplo.net/messages/94
 // Liberia
 
-
+// http://typo.mondediplo.net/messages/93
 // Libye
+
 Bani Walid
 Benghazi
 Brega
@@ -791,16 +1108,18 @@ Zaouia
 Zintan
 Zouara
 
+// http://typo.mondediplo.net/messages/92
 // Liechtenstein
 
-
+// http://typo.mondediplo.net/messages/91
 // Lituanie
 
-
+// http://typo.mondediplo.net/messages/90
 // Luxembourg
 
-
+// http://typo.mondediplo.net/messages/89
 // Macédoine
+
 Bitola
 Gevgelija
 Kocani
@@ -814,12 +1133,16 @@ Tetovo
 Vaksince
 Veles
 
+// http://typo.mondediplo.net/messages/88
 // Madagascar
+
 Antsirabe
 Fianarantsoa
 Toliara
 
+// http://typo.mondediplo.net/messages/1094
 // Malaisie
+
 Bahru
 George Town
 Ipoh
@@ -839,13 +1162,15 @@ Seria
 Sibu
 Tanjong Pagar
 
+// http://typo.mondediplo.net/messages/87
 // Malawi
 
-
+// http://typo.mondediplo.net/messages/1095
 // Maldives
 
-
+// http://typo.mondediplo.net/messages/86
 // Mali
+
 Diabali
 Kati
 Konna
@@ -855,10 +1180,12 @@ Sikasso
 Ségou
 Sévaré
 
+// http://typo.mondediplo.net/messages/85
 // Malte
 
-
+// http://typo.mondediplo.net/messages/84
 // Maroc
+
 Aït Bouayèche
 Al-Hoceïma
 Fès
@@ -873,40 +1200,50 @@ Sidi Ifni
 Taza
 Tameslohte
 
+// http://typo.mondediplo.net/messages/83
 // Marshall
 
-
+// http://typo.mondediplo.net/messages/82
 // Maurice
+
 Quatre-Bornes
 Curepipe
 Rose-Hill
 Mahébourg
 
+// http://typo.mondediplo.net/messages/81
 // Mauritanie
+
 Nouadibhou
 Rosso
 
+// http://typo.mondediplo.net/messages/80
 // Mexique
 
-
+// http://typo.mondediplo.net/messages/79
 // Micronésie
+
 Côlonia
 Kolonia
 Tofol
 Weno
 
+// http://typo.mondediplo.net/messages/78
 // Moldavie
+
 Tiraspol
 Bălți
 Tighina
 
+// http://typo.mondediplo.net/messages/77
 // Monaco
 
-
+// http://typo.mondediplo.net/messages/1075
 // Mongolie
 
-
+// http://typo.mondediplo.net/messages/76
 // Monténégro
+
 Andrijevica
 Berane
 Bijelo Polje
@@ -920,19 +1257,21 @@ Rozaje
 Savnik
 Ulcinj
 
+// http://typo.mondediplo.net/messages/75
 // Mozambique
 
-
+// http://typo.mondediplo.net/messages/74
 // Namibie
 
-
+// http://typo.mondediplo.net/messages/73
 // Nauru
 
-
+// http://typo.mondediplo.net/messages/1096
 // Népal
 
-
+// http://typo.mondediplo.net/messages/72
 // Nicaragua
+
 León
 Granada
 Chinandega
@@ -941,7 +1280,9 @@ Rivas
 Masaya
 Matagalpa
 
+// http://typo.mondediplo.net/messages/71
 // Niger
+
 Aderbissinat
 Agadez
 Akokan
@@ -957,7 +1298,9 @@ Tegguidda
 Tessaoua
 Zinder
 
+// http://typo.mondediplo.net/messages/70
 // Nigeria
+
 Aba
 Calabar
 Ekets
@@ -973,34 +1316,44 @@ Port Harcourt
 Yenagoa
 Zaria
 
+// http://typo.mondediplo.net/messages/69
 // Norvège
 
-
+// http://typo.mondediplo.net/messages/1061
 // Nouvelle-Calédonie
 
-
+// http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
 
-
+// http://typo.mondediplo.net/messages/67
 // Oman
+
 Salalah
 Sur
 Sohar
 
+// http://typo.mondediplo.net/messages/65
 // Ouganda
 
-
+// http://typo.mondediplo.net/messages/1097
 // Ouzbékistan
 
+Boukhara
+Noukous
+Samarkand
 
+// http://typo.mondediplo.net/messages/1098
 // Pakistan
 
-
+// http://typo.mondediplo.net/messages/64
 // Palau
+
 Koror
 Meyuns
 
+// http://typo.mondediplo.net/messages/63
 // Palestine
+
 Beit Hanoun
 Beit Lahya
 Bethléem
@@ -1016,44 +1369,54 @@ Shati
 Tulkarem
 Wadi Fukin
 
+// http://typo.mondediplo.net/messages/62
 // Panamá
 
-
+// http://typo.mondediplo.net/messages/61
 // Papouasie-Nouvelle-Guinée
+
 Lae
 Madang
 Goroka
 Mount Hagen
 
+// http://typo.mondediplo.net/messages/60
 // Paraguay
 
-
+// http://typo.mondediplo.net/messages/59
 // Pays-Bas
 
-
+// http://typo.mondediplo.net/messages/58
 // Pérou
 
-
+// http://typo.mondediplo.net/messages/1099
 // Philippines
-metro Manila »
+
+metro Manila »
 Caloocan
 Makati
 Quezon City
 Davao
 Cebu
 
+// http://typo.mondediplo.net/messages/57
 // Pologne
+
 Bytom
 Chorzów
-Kielce
+Kielce 
 
+// http://typo.mondediplo.net/messages/56
 // Porto Rico
 
-
+// http://typo.mondediplo.net/messages/55
 // Portugal
+
 Porto
 
+// http://typo.mondediplo.net/messages/54
 // Qatar
+
 Al-Wakrah
 Al-Khor
 Al-Rayyan
@@ -1061,26 +1424,34 @@ Lusail
 Umm Salal
 Zoubara
 
+// http://typo.mondediplo.net/messages/147
 // République centrafricaine
+
 Birao
 Bouar
 Ouanda Djallé
 Sam Ouandja
 
+// http://typo.mondediplo.net/messages/53
 // République démocratique du Congo
+
 Kalemie
 Kilo-Moto
 Kinshasa
 
+// http://typo.mondediplo.net/messages/52
 // République dominicaine
 
-
+// http://typo.mondediplo.net/messages/24
 // République tchèque
+
 Brno
 Ostrava
 Plzeň
 
+// http://typo.mondediplo.net/messages/51
 // Roumanie
+
 Brăila
 Brașov
 Constanța
@@ -1090,7 +1461,9 @@ Iași
 Sighișoara
 Târgu Mureș
 
+// http://typo.mondediplo.net/messages/50
 // Royaume-Uni
+
 Londres
 Manchester
 Birmingham
@@ -1099,54 +1472,64 @@ Glasgow
 Cardiff
 Belfast
 
+// http://typo.mondediplo.net/messages/49
 // Russie
+
 Moscou et Saint-Pétersbourg
 
+// http://typo.mondediplo.net/messages/48
 // Rwanda
 
-
+// http://typo.mondediplo.net/messages/46
 // Saint-Kitts-et-Nevis
 
-
+// http://typo.mondediplo.net/messages/41
 // Saint-Marin
 
-
+// http://typo.mondediplo.net/messages/45
 // Saint-Vincent-et-les-Grenadines
+
 Georgetown
 Chateaubelair
 
+// http://typo.mondediplo.net/messages/47
 // Sainte-Lucie
 
-
+// http://typo.mondediplo.net/messages/44
 // Salomon
 
-
+// http://typo.mondediplo.net/messages/43
 // Salvador
+
 Santa Ana
 San Miguel
 
+// http://typo.mondediplo.net/messages/42
 // Samoa
 
-
+// http://typo.mondediplo.net/messages/40
 // São-Tomé-et-Príncipe
+
 São António do Príncipe
 
+// http://typo.mondediplo.net/messages/39
 // Sénégal
 
-
+// http://typo.mondediplo.net/messages/1318
 // Serbie
 
-
+// http://typo.mondediplo.net/messages/37
 // Seychelles
 
-
+// http://typo.mondediplo.net/messages/36
 // Sierra Leone
 
-
+// http://typo.mondediplo.net/messages/1100
 // Singapour
 
-
+// http://typo.mondediplo.net/messages/35
 // Slovaquie
+
 Košice
 Prešov
 Žilina
@@ -1154,12 +1537,16 @@ Banska Bystrica
 Trnava
 Nitra
 
+// http://typo.mondediplo.net/messages/34
 // Slovénie
+
 Maribor
 Kranj
 Celje
 
+// http://typo.mondediplo.net/messages/33
 // Somalie
+
 Alalu
 Baidoa
 Bargal
@@ -1169,7 +1556,9 @@ Galcaio
 Hargeisa
 Hobyo
 
+// http://typo.mondediplo.net/messages/32
 // Soudan
+
 Abou Hamed
 Abou Sourouj
 Al-Mouglad
@@ -1179,37 +1568,44 @@ Kourmouk
 Sirba
 Suleia
 
+// http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
 
-
+// http://typo.mondediplo.net/messages/1101
 // Sri Lanka
 
-
+// http://typo.mondediplo.net/messages/31
 // Suède
+
 Göteborg
 Malmö
 Uppsala
 Linköping
 Östersund
 
+// http://typo.mondediplo.net/messages/30
 // Suisse
+
 Bâle
 Genève
 Lausanne
 Zurich
 
+// http://typo.mondediplo.net/messages/29
 // Surina
 
-
+// http://typo.mondediplo.net/messages/28
 // Swaziland
 
-
+// http://typo.mondediplo.net/messages/27
 // Syrie
+
 Abou Kamal
 Alep
 Deir Ez-Zor
 Deraa
 Hama
+Hassaké
 Homs
 Idlib
 Kamechliyé
@@ -1218,20 +1614,24 @@ Qoussair
 Rakka
 Tadmor
 
+// http://typo.mondediplo.net/messages/1102
 // Tadjikistan
 
-
+// http://typo.mondediplo.net/messages/1103
 // Taïwan
 
-
+// http://typo.mondediplo.net/messages/26
 // Tanzanie
+
 Arusha
 Dar es-Salaam
 Stone Town
 Tanga
 Mbeya
 
+// http://typo.mondediplo.net/messages/25
 // Tchad
+
 Abéché
 Adré
 Abou Goulem
@@ -1242,37 +1642,49 @@ Massaguet
 Moundou
 Sarh
 
+// http://typo.mondediplo.net/messages/1104
 // Thaïlande
+
 Chiang Mai
 Nakhon Ratchasima
 Udon Thani
 Hat Yai
 Pattaya
 
+// http://typo.mondediplo.net/messages/1105
 // Timor-Leste
+
 Bacau
 
+// http://typo.mondediplo.net/messages/23
 // Togo
+
 Kara
 Dapaong
 Sokodé
 
+// http://typo.mondediplo.net/messages/22
 // Tonga
 
-
+// http://typo.mondediplo.net/messages/21
 // Trinité-et-Tobago
 
-
+// http://typo.mondediplo.net/messages/20
 // Tunisie
+
 Sfax
 Gabès
 Sousse
 Bizerte
 
+// http://typo.mondediplo.net/messages/1107
 // Turkménistan
+
 Kiptchak
 
+// http://typo.mondediplo.net/messages/19
 // Turquie
+
 Adana
 Adapazarı
 Agri
@@ -1291,6 +1703,7 @@ Bodrum
 Bursa
 Çesme
 Ceyhan
+Cizre
 Diyarbakır
 Edirne
 Erzincan
@@ -1298,10 +1711,11 @@ Erzurum
 Foça
 Gaziantep
 Göcek
-Iskenderun
-Istanbul
-Izmir
-Iznik
+İncirlik
+İskenderun
+İstanbul
+İzmir
+İznik
 Karaman
 Kars
 Karsıyaka
@@ -1332,15 +1746,18 @@ Van
 Yumurtalık
 Zonguldak
 
+// http://typo.mondediplo.net/messages/18
 // Tuvalu
 
-
+// http://typo.mondediplo.net/messages/17
 // Ukraine
+
 Chegueni
 Dnipro
 Donetsk
 Kharkiv
 Kherson
+Kramatorsk
 Kryvyï Rih
 Lviv
 Makiivka
@@ -1348,31 +1765,36 @@ Marioupol
 Mykolaïv
 Odessa
 Rivne
+Sloviansk
 Tcherkassy
 Tchernobyl
 
+// http://typo.mondediplo.net/messages/1065
 // Union soviétique
 
-
+// http://typo.mondediplo.net/messages/15
 // Uruguay
+
 Canelones
 Maldonado
 Salto
 Colonia
 
+// http://typo.mondediplo.net/messages/14
 // Vanuatu
 
-
+// http://typo.mondediplo.net/messages/13
 // Vatican
 
-
+// http://typo.mondediplo.net/messages/12
 // Venezuela
 
-
+// http://typo.mondediplo.net/messages/1108
 // Vietna
 
-
+// http://typo.mondediplo.net/messages/996
 // Yémen
+
 Aden
 Taez
 Hodeïdah
@@ -1381,7 +1803,9 @@ Marib
 Moukalla
 Saada
 
+// http://typo.mondediplo.net/messages/10
 // Zambie
+
 Livingston
 Ndola
 Chipata
@@ -1390,4 +1814,7 @@ Kabwe
 Luanshya
 Mufulira
 
+// http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
+

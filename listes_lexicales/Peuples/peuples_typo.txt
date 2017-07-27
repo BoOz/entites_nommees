@@ -1,853 +1,1080 @@
+
+
 // Habitants
+
 Afghan
 Afghane
 Afghans
 Afghanes
+
 Sud-Africain
 Sud-Africaine
 Sud-Africains
 Sud-Africaines
+
 Albanais
 Albanaise
 Albanais
 Albanaises
+
 Algérien
 Algérienne
 Algériens
 Algériennes
+
 Allemand
 Allemande
 Allemands
 Allemandes
+
 Andorran
 Andorrane
 Andorrans
 Andorranes
+
 Angolai
 Angolaise
 Angolais
 Angolaises
+
 Antiguai
 Antiguaise
 Antiguais
 Antiguaises
+
 Saoudien
 Saoudienne
 Saoudiens
 Saoudiennes
+
 Argentin
 Argentine
 Argentins
 Argentines
+
 Arménien
 Arménienne
 Arméniens
 Arméniennes
+
 Australien
 Australienne
 Australiens
 Australiennes
+
 Autrichien
 Autrichienne
 Autrichiens
 Autrichiennes
+
 Azerbaïdjanai
 Azerbaïdjanaise
 Azerbaïdjanais
 Azerbaïdjanaises
+
 Bahaméen
 Bahaméenne
 Bahaméens
 Bahaméennes
+
 Bahreïni
 Bahreïnie
 Bahreïnis
 Bahreïnies
+
 Bangladai
 Bangladaise
 Bangladais
 Bangladaises
+
 Barbadien
 Barbadienne
 Barbadiens
 Barbadiennes
+
 Belges
 Belge
 Belges
 Belges
+
 Bélizien
 Bélizienne
 Béliziens
 Béliziennes
+
 Béninoi
 Béninoise
 Béninois
 Béninoises
+
 Bhoutanai
 Bhoutanaise
 Bhoutanais
 Bhoutanaises
+
 Biélorusse
 Biélorusse
 Biélorusse
 Biélorusses
+
 Birman
 Birmane
 Birmans
 Birmanes
+
 Bolivien
 Bolivienne
 Boliviens
 Boliviennes
+
 Bosnien
 Bosnienne
 Bosniens
 Bosniennes
+
 Botswanai
 Botswanaise
 Botswanais
 Botswanaises
+
 Brésilien
 Brésilienne
 Brésiliens
 Brésiliennes
+
 Brunéien
 Brunéienne
 Brunéiens
 Brunéiennes
+
 Bulgare
 Bulgare
 Bulgare
 Bulgares
+
 Burkinabés
 Burkinabé
 Burkinabés
 Burkinabés
+
 Burundai
 Burundaise
 Burundais
 Burundaises
+
 Cambodgien
 Cambodgienne
 Cambodgiens
 Cambodgiennes
+
 Camerounai
 Camerounaise
 Camerounais
 Camerounaises
+
 Canadien
 Canadienne
 Canadiens
 Canadiennes
+
 Capverdien
 Capverdienne
 Capverdiens
 Capverdiennes
+
 Chilien
 Chilienne
 Chiliens
 Chiliennes
+
 Chinois
 Chinoise
 Chinois
 Chinoises
+
 Chypriote
 Chypriote
 Chypriote
 Chypriotes
+
 Colombien
 Colombienne
 Colombiens
 Colombiennes
+
 Comorien
 Comorienne
 Comoriens
 Comoriennes
+
 Congolai
 Congolaise
 Congolais
 Congolaises
+
 Nord-Coréen
 Nord-Coréenne
 Nord-Coréens
 Nord-Coréennes
+
 Coréen
 Coréenne
 Coréens
 Coréennes
+
 Costaricien
 Costaricienne
 Costariciens
 Costariciennes
+
 Ivoirien
 Ivoirienne
 Ivoiriens
 Ivoiriennes
+
 Croate
 Croate
 Croate
 Croates
+
 Cubain
 Cubaine
 Cubains
 Cubaines
+
 Danois
 Danoise
 Danoiss
 Danoises
+
 Djiboutien
 Djiboutienne
 Djiboutiens
 Djiboutiennes
+
 Dominiquais
 Dominiquaise
 Dominiquais
 Dominiquaises
+
 Égyptien
 Égyptienne
 Égyptiens
 Égyptiennes
+
 Émirati
 Émiratie
 Émiratis
 Émiraties
+
 Équatorien
 Équatorienne
 Équatoriens
 Équatoriennes
+
 Érythréen
 Érythréenne
 Érythréens
 Érythréennes
+
 Espagnol
 Espagnole
 Espagnols
 Espagnoles
+
 Estonien
 Estonienne
 Estoniens
 Estoniennes
+
 Américain
 Américaine
 Américains
 Américaines
+
 Éthiopien
 Éthiopienne
 Éthiopiens
 Éthiopiennes
 
-// PAS D'HABITANTS DANS EX-YOUGOSLAVIE
+// PAS D'HABITANTS DANS http://typo.mondediplo.net/messages/1043
+// EX-YOUGOSLAVIE
 
 Fidjien
 Fidjienne
 Fidjiens
 Fidjiennes
+
 Finlandais
 Finlandaise
 Finlandaiss
 Finlandaises
+
 Françai
 Française
 Français
 Françaises
+
 Gabonai
 Gabonaise
 Gabonais
 Gabonaises
+
 Gambien
 Gambienne
 Gambiens
 Gambiennes
+
 Géorgien
 Géorgienne
 Géorgiens
 Géorgiennes
+
 Ghanéen
 Ghanéenne
 Ghanéens
 Ghanéennes
+
 Grec
 Grecque
 Grecs
 Grecques
+
 Grenadien
 Grenadienne
 Grenadiens
 Grenadiennes
+
 Guatémaltèques
 Guatémaltèque
 Guatémaltèques
 Guatémaltèques
+
 Guinéen
 Guinéenne
 Guinéens
 Guinéennes
+
 Bissau-Guinéen
 Bissau-Guinéenne
 Bissau-Guinéens
 Bissau-Guinéennes
+
 Équato-Guinéen
 Équato-Guinéenne
 Équato-Guinéens
 Équato-Guinéennes
+
 Guyanien
 Guyanienne
 Guyaniens
 Guyaniennes
+
 Haïtien
 Haïtienne
 Haïtiens
 Haïtiennes
+
 Hondurien
 Hondurienne
 Honduriens
 Honduriennes
+
 Hongrois
 Hongroise
 Hongrois
 Hongroises
+
 Indien
 Indienne
 Indiens
 Indiennes
+
 Indonésien
 Indonésienne
 Indonésiens
 Indonésiennes
+
 Irakien
 Irakienne
 Irakiens
 Irakiennes
+
 Iranien
 Iranienne
 Iraniens
 Iraniennes
+
 Irlandais
 Irlandaise
 Irlandaiss
 Irlandaises
+
 Islandai
 Islandaise
 Islandais
 Islandaises
+
 Israélien
 Israélienne
 Israéliens
 Israéliennes
+
 Italien
 Italienne
 Italiens
 Italiennes
+
 Jamaïquain
 Jamaïquaine
 Jamaïquains
 Jamaïquaines
+
 Japonai
 Japonaises/Niponne
 Japonais
 Japonaises/Niponnes
+
 Jordanien
 Jordanienne
 Jordaniens
 Jordaniennes
+
 Kazakh
 Kazakhe
 Kazakhs
 Kazakhes
+
 Kényan
 Kényane
 Kényans
 Kényanes
+
 Kirghizes
 Kirghize
 Kirghizes
 Kirghizes
+
 Kiribatien
 Kiribatienne
 Kiribatiens
 Kiribatiennes
+
 Kosovar
 Kosovare
 Kosovars
 Kosovares
+
 Koweïtien
 Koweïtienne
 Koweïtiens
 Koweïtiennes
+
 Laotien
 Laotienne
 Laotiens
 Laotiennes
+
 Lesothan
 Lesothane
 Lesothans
 Lesothanes
+
 Letton
 Lettone
 Lettons
 Lettones
+
 Libanai
 Libanaise
 Libanais
 Libanaises
+
 Libérien
 Libérienne
 Libériens
 Libériennes
+
 Libyen
 Libyenne
 Libyens
 Libyennes
+
 Liechtensteinois
 Liechtensteinoise
 Liechtensteinois
 Liechtensteinoises
+
 Lituanien
 Lituanienne
 Lituaniens
 Lituaniennes
+
 Luxembourgeois
 Luxembourgeoise
 Luxembourgeois
 Luxembourgeoises
+
 Macédonien
 Macédonienne
 Macédoniens
 Macédoniennes
+
 Malgaches
 Malgache
 Malgaches
 Malgaches
+
 Malaisien
 Malaisienne
 Malaisiens
 Malaisiennes
+
 Malawien
 Malawienne
 Malawiens
 Malawiennes
+
 Maldivien
 Maldivienne
 Maldiviens
 Maldiviennes
+
 Malien
 Malienne
 Maliens
 Maliennes
+
 Maltais
 Maltaise
 Maltais
 Maltaises
+
 Marocain
 Marocaine
 Marocains
 Marocaines
+
 Marshallai
 Marshallaise
 Marshallais
 Marshallaises
+
 Mauricien
 Mauricienne
 Mauriciens
 Mauriciennes
+
 Mauritanien
 Mauritanienne
 Mauritaniens
 Mauritaniennes
+
 Mexicain
 Mexicaine
 Mexicains
 Mexicaines
+
 Micronésien
 Micronésienne
 Micronésiens
 Micronésiennes
+
 Moldaves
 Moldave
 Moldaves
 Moldaves
+
 Monégasques
 Monégasque
 Monégasques
 Monégasques
+
 Mongol
 Mongole
 Mongols
 Mongoles
+
 Monténégrin
 Monténégrine
 Monténégrins
 Monténégrines
+
 Mozambicain
 Mozambicaine
 Mozambicains
 Mozambicaines
+
 Namibien
 Namibienne
 Namibiens
 Namibiennes
+
 Nauruan
 Nauruane
 Nauruans
 Nauruanes
+
 Népalai
 Népalaise
 Népalais
 Népalaises
+
 Nicaraguayen
 Nicaraguayenne
 Nicaraguayens
 Nicaraguayennes
+
 Nigérien
 Nigérienne
 Nigériens
 Nigériennes
+
 Nigérian
 Nigériane
 Nigérians
 Nigérianes
+
 Norvégien
 Norvégienne
 Norvégiens
 Norvégiennes
+
 Néo-Calédonien
 Néo-Calédonienne
 Néo-Calédoniens
 Néo-Calédoniennes
+
 Néo-Zélandai
 Néo-Zélandaise
 Néo-Zélandais
 Néo-Zélandaises
+
 Omanai
 Omanaise
 Omanais
 Omanaises
+
 Ougandai
 Ougandaise
 Ougandais
 Ougandaises
+
 Ouzbeks/Ouzbèkes
 Ouzbeks/Ouzbèke
 Ouzbeks/Ouzbèkes
 Ouzbeks/Ouzbèkes
+
 Pakistanais
 Pakistanaise
 Pakistanais
 Pakistanaises
+
 Palauan
 Palauane
 Palauans
 Palauanes
+
 Palestinien
 Palestinienne
 Palestiniens
 Palestiniennes
+
 Panaméen
 Panaméenne
 Panaméens
 Panaméennes
+
 Papouan
 Papouanes-Néo-Guinéenne
 Papouans
 Papouanes-Néo-Guinéennes
+
 Paraguayen
 Paraguayenne
 Paraguayens
 Paraguayennes
+
 Néerlandai
 Néerlandaise
 Néerlandais
 Néerlandaises
+
 Péruvien
 Péruvienne
 Péruviens
 Péruviennes
+
 Philippin
 Philippine
 Philippins
 Philippines
+
 Polonais
 Polonaise
 Polonais
 Polonaises
+
 Portoricain
 Portoricaine
 Portoricains
 Portoricaines
+
 Portugai
 Portugaise
 Portugais
 Portugaises
+
 Qatari
 Qatarie
 Qataris
 Qataries
+
 Centrafricain
 Centrafricaine
 Centrafricains
 Centrafricaines
+
 Congolai
 Congolaise
 Congolais
 Congolaises
+
 Dominicain
 Dominicaine
 Dominicains
 Dominicaines
+
 Tchèques
 Tchèque
 Tchèques
 Tchèques
+
 Roumain
 Roumaine
 Roumain
 Roumaines
+
 Britanniques
 Britannique
 Britanniques
 Britanniques
+
 Russes
 Russe
 Russes
 Russes
+
 Rwandai
 Rwandaise
 Rwandais
 Rwandaises
+
 Saint-Kittoi
 Saint-Kittoise
 Saint-Kittois
 Saint-Kittoises
+
 Saint-Marinai
 Saint-Marinaise
 Saint-Marinais
 Saint-Marinaises
+
 Saint-Vincentai
 Saint-Vincentaise
 Saint-Vincentais
 Saint-Vincentaises
+
 Saint-Lucien
 Saint-Lucienne
 Saint-Luciens
 Saint-Luciennes
+
 Salomonai
 Salomonaise
 Salomonais
 Salomonaises
+
 Salvadorien
 Salvadorienne
 Salvadoriens
 Salvadoriennes
+
 Samoan
 Samoane
 Samoans
 Samoanes
+
 Santoméen
 Santoméenne
 Santoméens
 Santoméennes
+
 Sénégalai
 Sénégalaise
 Sénégalais
 Sénégalaises
+
 Serbes
 Serbe
 Serbes
 Serbes
+
 Seychelloi
 Seychelloise
 Seychellois
 Seychelloises
+
 Sierra-Léonai
 Sierra-Léonaise
 Sierra-Léonais
 Sierra-Léonaises
+
 Singapourien
 Singapourienne
 Singapouriens
 Singapouriennes
+
 Slovaques
 Slovaque
 Slovaques
 Slovaques
+
 Slovènes
 Slovène
 Slovènes
 Slovènes
+
 Somalien
 Somalienne
 Somaliens
 Somaliennes
+
 Soudanais
 Soudanaise
 Soudanaiss
 Soudanaises
+
 Sud-Soudanai
 Sud-Soudanaie
 Sud-Soudanais
 Sud-Soudanaies
+
 Sri-Lankai
 Sri-Lankaise
 Sri-Lankais
 Sri-Lankaises
+
 Suédois
 Suédoise
 Suédois
 Suédoises
+
 Suisse
 Suissesse
 Suisses
 Suissesses
+
 Surinamien
 Surinamienne
 Surinamiens
 Surinamiennes
+
 Swazi
 Swazie
 Swazis
 Swazies
+
 Syrien
 Syrienne
 Syriens
 Syriennes
+
 Tadjik
 Tadjike
 Tadjiks
 Tadjikes
+
 Taïwanais
 Taïwanaise
 Taïwanais
 Taïwanaises
+
 Tanzanien
 Tanzanienne
 Tanzaniens
 Tanzaniennes
+
 Tachadien
 Tachadienne
 Tachadiens
 Tachadiennes
+
 Thaïlandai
 Thaïlandaise
 Thaïlandais
 Thaïlandaises
+
 Est-Timorai
 Est-Timoraise
 Est-Timorais
 Est-Timoraises
+
 Togolai
 Togolaise
 Togolais
 Togolaises
+
 Tonguien
 Tonguienne
 Tonguiens
 Tonguiennes
+
 Trinitéen
 Trinitéenne
 Trinitéens
 Trinitéennes
+
 Tunisien
 Tunisienne
 Tunisiens
 Tunisiennes
+
 Turkmènes
 Turkmène
 Turkmènes
 Turkmènes
+
 Turcs
 Turc
 Turcs
 Turcs
+
 Tuvaluan
 Tuvaluane
 Tuvaluans
 Tuvaluanes
+
 Ukrainien
 Ukrainienne
 Ukrainiens
 Ukrainiennes
 
-// PAS D'HABITANTS DANS Union soviétique
+// PAS D'HABITANTS DANS http://typo.mondediplo.net/messages/1065
+// Union soviétique
 
 Uruguayen
 Uruguayenne
 Uruguayens
 Uruguayennes
+
 Vanuatan
 Vanuatane
 Vanuatans
 Vanuatanes
+
 Vatican
 Vaticane
 Vaticans
 Vaticanes
+
 Vénézuélien
 Vénézuélienne
 Vénézuéliens
 Vénézuéliennes
+
 Vietnamien
 Vietnamienne
 Vietnamiens
 Vietnamiennes
+
 Yéménites
 Yéménite
 Yéménites
 Yéménites
+
 Zambien
 Zambienne
 Zambiens
 Zambiennes
+
 Zimbabwéen
 Zimbabwéenne
 Zimbabwéens
 Zimbabwéennes
-// ethnies
+
+// ethnies 
+
+// http://typo.mondediplo.net/messages/182
 // Afghanistan
 
+// http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
+// http://typo.mondediplo.net/messages/180
 // Albanie
 
+// http://typo.mondediplo.net/messages/179
 // Algérie
 
+// http://typo.mondediplo.net/messages/178
 // Allemagne
 
+// http://typo.mondediplo.net/messages/177
 // Andorre
 
+// http://typo.mondediplo.net/messages/176
 // Angola
 
+// http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
 
+// http://typo.mondediplo.net/messages/174
 // Arabie saoudite
 
+// http://typo.mondediplo.net/messages/173
 // Argentine
 
+// http://typo.mondediplo.net/messages/172
 // Arménie
 
+// http://typo.mondediplo.net/messages/171
 // Australie
 
+// http://typo.mondediplo.net/messages/170
 // Autriche
 
+// http://typo.mondediplo.net/messages/169
 // Azerbaïdjan
 
+// http://typo.mondediplo.net/messages/168
 // Bahamas
 
+// http://typo.mondediplo.net/messages/167
 // Bahreïn
 
+// http://typo.mondediplo.net/messages/166
 // Bangladesh
 
+// http://typo.mondediplo.net/messages/165
 // Barbade
 
+// http://typo.mondediplo.net/messages/164
 // Belgique
 
+// http://typo.mondediplo.net/messages/163
 // Belize
 
+// http://typo.mondediplo.net/messages/162
 // Bénin
 
+// http://typo.mondediplo.net/messages/161
 // Bhoutan
 
+// http://typo.mondediplo.net/messages/160
 // Biélorussie
 
+// http://typo.mondediplo.net/messages/159
 // Birmanie
 
 Bamars Chinois
@@ -860,210 +1087,314 @@ Paos
 Rohingyas
 Shans
 Was
+
+// http://typo.mondediplo.net/messages/158
 // Bolivie
 
+// http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
+// http://typo.mondediplo.net/messages/156
 // Botswana
 
+// http://typo.mondediplo.net/messages/155
 // Brésil
 
+// http://typo.mondediplo.net/messages/154
 // Brunei
 
+// http://typo.mondediplo.net/messages/153
 // Bulgarie
 
+// http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
+// http://typo.mondediplo.net/messages/151
 // Burundi
 
+// http://typo.mondediplo.net/messages/1019
 // Cambodge
 
+// http://typo.mondediplo.net/messages/150
 // Cameroun
 
+// http://typo.mondediplo.net/messages/149
 // Canada
 
+// http://typo.mondediplo.net/messages/148
 // Cap-Vert
 
+// http://typo.mondediplo.net/messages/146
 // Chili
 
+// http://typo.mondediplo.net/messages/1020
 // Chine
 
+// http://typo.mondediplo.net/messages/145
 // Chypre
 
+// http://typo.mondediplo.net/messages/144
 // Colombie
 
+// http://typo.mondediplo.net/messages/143
 // Comores
 
+// http://typo.mondediplo.net/messages/142
 // Congo
 
+// http://typo.mondediplo.net/messages/1086
 // Corée du Nord
 
+// http://typo.mondediplo.net/messages/1087
 // Corée du Sud
 
+// http://typo.mondediplo.net/messages/141
 // Costa Rica
 
+// http://typo.mondediplo.net/messages/140
 // Côte d'Ivoire
 
+// http://typo.mondediplo.net/messages/139
 // Croatie
 
+// http://typo.mondediplo.net/messages/138
 // Cuba
 
+// http://typo.mondediplo.net/messages/137
 // Danemark
 
+// http://typo.mondediplo.net/messages/136
 // Djibouti
 
+// http://typo.mondediplo.net/messages/135
 // Dominique
 
+// http://typo.mondediplo.net/messages/1309
 // Égypte
 
+// http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
+// http://typo.mondediplo.net/messages/132
 // Équateur
 
+// http://typo.mondediplo.net/messages/131
 // Érythrée
 
+// http://typo.mondediplo.net/messages/130
 // Espagne
 
+// http://typo.mondediplo.net/messages/129
 // Estonie
 
+// http://typo.mondediplo.net/messages/128
 // États-Unis
 
+// http://typo.mondediplo.net/messages/127
 // Éthiopie
 
+// http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
 
+// http://typo.mondediplo.net/messages/126
 // Fidji
 
+// http://typo.mondediplo.net/messages/124
 // Finlande
 
+// http://typo.mondediplo.net/messages/123
 // France
 
+// http://typo.mondediplo.net/messages/122
 // Gabon
 
+// http://typo.mondediplo.net/messages/121
 // Gambie
 
+// http://typo.mondediplo.net/messages/120
 // Géorgie
 
+// http://typo.mondediplo.net/messages/119
 // Ghana
 
+// http://typo.mondediplo.net/messages/118
 // Grèce
 
+// http://typo.mondediplo.net/messages/117
 // Grenade
 
+// http://typo.mondediplo.net/messages/116
 // Guatemala
 
+// http://typo.mondediplo.net/messages/115
 // Guinée
 
+// http://typo.mondediplo.net/messages/114
 // Guinée-Bissau
 
+// http://typo.mondediplo.net/messages/113
 // Guinée-Équatoriale
 
+// http://typo.mondediplo.net/messages/112
 // Guyana
 
+// http://typo.mondediplo.net/messages/111
 // Haïti
 
+// http://typo.mondediplo.net/messages/110
 // Honduras
 
+// http://typo.mondediplo.net/messages/109
 // Hongrie
 
+// http://typo.mondediplo.net/messages/1088
 // Inde
 
+// http://typo.mondediplo.net/messages/1089
 // Indonésie
 
+// http://typo.mondediplo.net/messages/108
 // Irak
 
+// http://typo.mondediplo.net/messages/107
 // Iran
 
+// http://typo.mondediplo.net/messages/106
 // Irlande
 
+// http://typo.mondediplo.net/messages/105
 // Islande
 
+// http://typo.mondediplo.net/messages/104
 // Israël
 
+// http://typo.mondediplo.net/messages/103
 // Italie
 
+// http://typo.mondediplo.net/messages/102
 // Jamaïque
 
+// http://typo.mondediplo.net/messages/1090
 // Japon
 
+// http://typo.mondediplo.net/messages/101
 // Jordanie
 
+// http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
+// http://typo.mondediplo.net/messages/100
 // Kenya
 
+// http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
+// http://typo.mondediplo.net/messages/99
 // Kiribati
 
+// http://typo.mondediplo.net/messages/1042
 // Kosovo
 
+// http://typo.mondediplo.net/messages/98
 // Koweït
 
+// http://typo.mondediplo.net/messages/1093
 // Laos
 
+// http://typo.mondediplo.net/messages/97
 // Lesotho
 
+// http://typo.mondediplo.net/messages/96
 // Lettonie
 
+// http://typo.mondediplo.net/messages/95
 // Liban
 
+// http://typo.mondediplo.net/messages/94
 // Liberia
 
+// http://typo.mondediplo.net/messages/93
 // Libye
 
+// http://typo.mondediplo.net/messages/92
 // Liechtenstein
 
+// http://typo.mondediplo.net/messages/91
 // Lituanie
 
+// http://typo.mondediplo.net/messages/90
 // Luxembourg
 
+// http://typo.mondediplo.net/messages/89
 // Macédoine
 
+// http://typo.mondediplo.net/messages/88
 // Madagascar
 
+// http://typo.mondediplo.net/messages/1094
 // Malaisie
 
+// http://typo.mondediplo.net/messages/87
 // Malawi
 
+// http://typo.mondediplo.net/messages/1095
 // Maldives
 
+// http://typo.mondediplo.net/messages/86
 // Mali
 
+// http://typo.mondediplo.net/messages/85
 // Malte
 
+// http://typo.mondediplo.net/messages/84
 // Maroc
 
+// http://typo.mondediplo.net/messages/83
 // Marshall
 
+// http://typo.mondediplo.net/messages/82
 // Maurice
 
+// http://typo.mondediplo.net/messages/81
 // Mauritanie
 
+// http://typo.mondediplo.net/messages/80
 // Mexique
 
+// http://typo.mondediplo.net/messages/79
 // Micronésie
 
+// http://typo.mondediplo.net/messages/78
 // Moldavie
 
+// http://typo.mondediplo.net/messages/77
 // Monaco
 
+// http://typo.mondediplo.net/messages/1075
 // Mongolie
 
+// http://typo.mondediplo.net/messages/76
 // Monténégro
 
+// http://typo.mondediplo.net/messages/75
 // Mozambique
 
+// http://typo.mondediplo.net/messages/74
 // Namibie
 
+// http://typo.mondediplo.net/messages/73
 // Nauru
 
+// http://typo.mondediplo.net/messages/1096
 // Népal
 
+// http://typo.mondediplo.net/messages/72
 // Nicaragua
 
+// http://typo.mondediplo.net/messages/71
 // Niger
 
+// http://typo.mondediplo.net/messages/70
 // Nigeria
 
 Annangs
@@ -1074,14 +1405,20 @@ Itsérikis
 Modakékés
 Ogonis
 Yoroubas
+
+// http://typo.mondediplo.net/messages/69
 // Norvège
 
+// http://typo.mondediplo.net/messages/1061
 // Nouvelle-Calédonie
 
+// http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
 
+// http://typo.mondediplo.net/messages/67
 // Oman
 
+// http://typo.mondediplo.net/messages/65
 // Ouganda
 
 Langis
@@ -1089,140 +1426,212 @@ Bantous
 Acholis
 Bagandas
 Banyankolés
+
+// http://typo.mondediplo.net/messages/1097
 // Ouzbékistan
 
+// http://typo.mondediplo.net/messages/1098
 // Pakistan
 
+// http://typo.mondediplo.net/messages/64
 // Palau
 
+// http://typo.mondediplo.net/messages/63
 // Palestine
 
+// http://typo.mondediplo.net/messages/62
 // Panamá
 
+// http://typo.mondediplo.net/messages/61
 // Papouasie-Nouvelle-Guinée
 
+// http://typo.mondediplo.net/messages/60
 // Paraguay
 
+// http://typo.mondediplo.net/messages/59
 // Pays-Bas
 
+// http://typo.mondediplo.net/messages/58
 // Pérou
 
+// http://typo.mondediplo.net/messages/1099
 // Philippines
 
+// http://typo.mondediplo.net/messages/57
 // Pologne
 
+// http://typo.mondediplo.net/messages/56
 // Porto Rico
 
+// http://typo.mondediplo.net/messages/55
 // Portugal
 
+// http://typo.mondediplo.net/messages/54
 // Qatar
 
+// http://typo.mondediplo.net/messages/147
 // République centrafricaine
 
+// http://typo.mondediplo.net/messages/53
 // République démocratique du Congo
 
+// http://typo.mondediplo.net/messages/52
 // République dominicaine
 
+// http://typo.mondediplo.net/messages/24
 // République tchèque
 
+// http://typo.mondediplo.net/messages/51
 // Roumanie
 
+// http://typo.mondediplo.net/messages/50
 // Royaume-Uni
 
+// http://typo.mondediplo.net/messages/49
 // Russie
 
+// http://typo.mondediplo.net/messages/48
 // Rwanda
 
+// http://typo.mondediplo.net/messages/46
 // Saint-Kitts-et-Nevis
 
+// http://typo.mondediplo.net/messages/41
 // Saint-Marin
 
+// http://typo.mondediplo.net/messages/45
 // Saint-Vincent-et-les-Grenadines
 
+// http://typo.mondediplo.net/messages/47
 // Sainte-Lucie
 
+// http://typo.mondediplo.net/messages/44
 // Salomon
 
+// http://typo.mondediplo.net/messages/43
 // Salvador
 
+// http://typo.mondediplo.net/messages/42
 // Samoa
 
+// http://typo.mondediplo.net/messages/40
 // São-Tomé-et-Príncipe
 
+// http://typo.mondediplo.net/messages/39
 // Sénégal
 
+// http://typo.mondediplo.net/messages/1318
 // Serbie
 
+// http://typo.mondediplo.net/messages/37
 // Seychelles
 
+// http://typo.mondediplo.net/messages/36
 // Sierra Leone
 
+// http://typo.mondediplo.net/messages/1100
 // Singapour
 
+// http://typo.mondediplo.net/messages/35
 // Slovaquie
 
+// http://typo.mondediplo.net/messages/34
 // Slovénie
 
+// http://typo.mondediplo.net/messages/33
 // Somalie
 
+// http://typo.mondediplo.net/messages/32
 // Soudan
 
+// http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
 
+// http://typo.mondediplo.net/messages/1101
 // Sri Lanka
 
+// http://typo.mondediplo.net/messages/31
 // Suède
 
+// http://typo.mondediplo.net/messages/30
 // Suisse
 
+// http://typo.mondediplo.net/messages/29
 // Surina
 
+// http://typo.mondediplo.net/messages/28
 // Swaziland
 
+// http://typo.mondediplo.net/messages/27
 // Syrie
 
+// http://typo.mondediplo.net/messages/1102
 // Tadjikistan
 
+// http://typo.mondediplo.net/messages/1103
 // Taïwan
 
+// http://typo.mondediplo.net/messages/26
 // Tanzanie
 
+// http://typo.mondediplo.net/messages/25
 // Tchad
 
+// http://typo.mondediplo.net/messages/1104
 // Thaïlande
 
+// http://typo.mondediplo.net/messages/1105
 // Timor-Leste
 
+// http://typo.mondediplo.net/messages/23
 // Togo
 
+// http://typo.mondediplo.net/messages/22
 // Tonga
 
+// http://typo.mondediplo.net/messages/21
 // Trinité-et-Tobago
 
+// http://typo.mondediplo.net/messages/20
 // Tunisie
 
+// http://typo.mondediplo.net/messages/1107
 // Turkménistan
 
+// http://typo.mondediplo.net/messages/19
 // Turquie
 
+// http://typo.mondediplo.net/messages/18
 // Tuvalu
 
+// http://typo.mondediplo.net/messages/17
 // Ukraine
 
+// http://typo.mondediplo.net/messages/1065
 // Union soviétique
 
+// http://typo.mondediplo.net/messages/15
 // Uruguay
 
+// http://typo.mondediplo.net/messages/14
 // Vanuatu
 
+// http://typo.mondediplo.net/messages/13
 // Vatican
 
+// http://typo.mondediplo.net/messages/12
 // Venezuela
 
+// http://typo.mondediplo.net/messages/1108
 // Vietna
 
+// http://typo.mondediplo.net/messages/996
 // Yémen
 
+// http://typo.mondediplo.net/messages/10
 // Zambie
 
+// http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
+

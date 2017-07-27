@@ -1,11 +1,13 @@
-Entités nommées dans Typo
 
-Personnalités - Institutions - Partis et formations politiques - Pays - Villes - Géographie - Publications - Nationalité / éthnies - /!\ Sociétés (A ajouter dans Divers en section 2) - Fonctions - Langues - Nature de l'État et Régime
-// publications
+
+// publications 
+
+// http://typo.mondediplo.net/messages/1045
 // Lieux de publication
 
+
 AAEL
-A bâbord !
+À bâbord !
 ABC
 ABC Color
 Ab Irato
@@ -25,11 +27,13 @@ Aden. Paul Nizan et les années trente
 Adva Center
 Africa Mining Intelligence
 Africultures
-Afrique-Editions
+Afrique-Éditions
 Aftenposten
 L'Age d'homme
-Agnès Viénot Editions
+Agnès Viénot Éditions
 Agone
+Agriculture and Human Values
+Agronomy for Sustainable Development
 Air Force Magazine
 Aïr Info
 Akata
@@ -43,11 +47,11 @@ Al-Chark Al-Awsat
 Al Dante
 Alfred A. Knopf
 Al-Hayat
-Al-Jazira
-Allary Editions
+Al-Jazira 
+Allary Éditions
 Allia
 Alliage
-Alma Editeur
+Alma Editeur 
 Al-Misri Al-Yawm
 Al-Medina
 Allen Lane Penguin Group
@@ -76,13 +80,15 @@ A. Pedone
 A plus d'un titre
 Apogée
 Aras
+Arbre bleu
 Arcane 17
 L'Arche
 L'Archipel
 Les Arènes
 Argumenty i fakty
+The Arizona Republic
 Arkhê
-Arnaud Franel Editions
+Arnaud Franel Éditions
 Arléa
 Artège
 Asahi Shimbun
@@ -128,7 +134,7 @@ Baywood
 BBC Mundo
 Beacon Press
 Le Bec en l'air
-Beijing News
+Beijing News 
 Belin
 Les Belles Lettres
 Bénévent
@@ -142,6 +148,7 @@ Bloomberg Businessweek
 Bloomsbury Publishing
 La Boîte à bulles
 Boitempo Editorial
+Les Bons Caractères
 Le Bord de l'eau
 Boréal
 Börsen-Zeitung
@@ -162,7 +169,7 @@ Bulletin of the World Health Organization
 Burt Franklin
 Business Day
 Business Insider
-Business Week
+Business Week 
 
 
 Cahier d'études stratégiques
@@ -184,14 +191,14 @@ Cardozo Law Review
 Carnot
 Cartouche
 Casa das Letras
-Casbah Editions
+Casbah Éditions
 Le Cavalier bleu
 Caros Amigos
 Cénomane
 Center for Strategic and International Studies
 Central University Press
 Century Foundation
-Cérès Editions
+Cérès Éditions
 Cerf
 Cerveau & Psycho
 Cetim
@@ -213,12 +220,13 @@ La Chronique internationale de l'IRES
 La Chronique des Amériques
 The Chronicle of Higher Education
 Cidhica
+Circé
 Clarendon Press
 Clarín
 The Clarion-Ledger
 Les Clés de la presse
 Climats
-CNRS Editions
+CNRS Éditions
 Coconino Press
 Colophon
 Commentary
@@ -234,7 +242,7 @@ Le Coquelicot
 Cornélius
 Cornell University Press
 Corriere della Serra
-Corsaires Editions
+Corsaires Éditions
 Couleur livres
 Counterpoint
 CounterPunch
@@ -269,6 +277,7 @@ Dargaud
 Darna
 Dar An-Nahar
 éd. Dar El-Gharb
+Dar Nelson
 Dawn
 De Boeck
 Défense nationale et sécurité collective
@@ -336,68 +345,71 @@ Ediciones Escaparate
 Edicions 62
 EDIF
 Ediouro
-Edisud
-Editions de l'Amateur
-Editions Amsterdam
-Editions Arkuiris
-Editions B2
-Editions CNT-RP
-Editions de Juillet
-Editions de l'Aube
-Editions de la Cité
-Editions de la Nuit
-Editions de l'Attribut
-Editions de l'Eclat
-Editions de l’EHESS
-Editions de l'Epervier
-Editions de l'Imprimeur
-Editions de l'Institut des Amériques
-Editions de l'OCDE
-Editions de l'Olivier
-Editions de l'Opportun
-Editions de Minuit
-Editions d'en bas
-
-Editions des Equateurs
-Editions des Femmes
-Editions des Nations unies
-Editions des Syrtes
-Les Editions du bout de la ville
-Editions du Centre d'histoire du travail
-Editions du centre Paul-Hymans
-Editions du Cercle de la librairie
-Editions du Cerisier
-Editions du Chêne
-Editions du Conseil de l'Europe
-Editions du Croquant
-Editions du Cygne
-Editions du huitième jour
-Editions du Linteau
-Editions du Moment
-Editions du Monde libertaire
-Editions du Panama
-Editions du Rocher
-Editions du Rouergue
-Editions du Sonneur
-Editions du Temps
-Editions du Toucan
-Editions du Trésor
-Editions Frat Mat
-Editions Informpechat
-Editions LEP
-Editions libertaires
-Editions N° 1
-Editions Palea
-Editions Pélissier
-Editions sociales
-Editions Unesco
-Editions universitaires du Septentrion
-Editorade Cultura
+Édisud
+Éditions de la Maison des sciences de l’homme
+Éditions de l'Amateur
+Éditions Amsterdam
+Éditions Arkuiris
+Éditions de l'Asymétrie
+Éditions de l'Aube
+Éditions B2
+Éditions CNT-RP
+Éditions de Juillet
+Éditions de la Cité
+Éditions de la Nuit
+Éditions de l'Attribut
+Éditions de l'Eclat
+Éditions de l’EHESS
+Éditions de l'Épervier
+Éditions de l'Imprimeur
+Éditions de l'Institut des Amériques
+Éditions de l'OCDE
+Éditions de l'Olivier
+Éditions de l'Opportun
+Éditions de Minuit
+Éditions d'en bas
+Éditions des Équateurs
+Éditions des Femmes
+Éditions des Nations unies
+Éditions des Syrtes
+Les Éditions du bout de la ville
+Éditions du Caïman
+Éditions du Centre d'histoire du travail
+Éditions du centre Paul-Hymans
+Éditions du Cercle de la librairie
+Éditions du Cerisier
+Éditions du Chêne
+Éditions du Conseil de l'Europe
+Éditions du Croquant
+Éditions du Cygne
+Éditions du huitième jour
+Éditions du Linteau
+Éditions du Moment
+Éditions du Monde libertaire
+Éditions du Panama
+Éditions du Rocher
+Éditions du Rouergue
+Éditions du Sandre
+Éditions du Sonneur
+Éditions du Temps
+Éditions du Toucan
+Éditions du Trésor
+Éditions Frat Mat
+Éditions Informpechat
+Éditions LEP
+Éditions libertaires
+Éditions N° 1
+Éditions Palea
+Éditions Pélissier
+Éditions sociales
+Éditions Unesco
+Éditions universitaires du Septentrion
+Editora de Cultura
 Editorial de Ciencias Sociales
 Editorial José Martí
 Editorial Universitaria
 EDP Sciences
-Efimerida ton Syntakton
+Efimerida ton Syntakton 
 Einaudi
 Ellipses
 El Espectador
@@ -415,10 +427,10 @@ ENAG
 Energeia
 ENS Editions
 L'Encyclopédie des nuisances
-Energie pour tous
+Énergie pour tous
 En toutes lettres
 Entremonde
-Erès
+Érès
 Erick Bonnier
 Espace
 Espacio Laical
@@ -430,10 +442,10 @@ L'Esprit des péninsules
 L'Esprit du temps
 Estrella
 Estudios Urbanos
-Eternel
-Etincelles
-Etudes
-Les Etudes du CERI
+Éternel
+Étincelles
+Études
+Les Études du CERI
 Eurabe-CADH
 Eurasia Daily Monitor
 Eurekah-Landes Bioscience
@@ -443,7 +455,7 @@ Everat
 The Examiner
 L'Expansion
 Express India
-Extra !
+Extra !
 The Express Tribune
 
 La Fabrique
@@ -474,7 +486,7 @@ Fortune
 Franco Angeli
 François Bourin éditeur
 François-Xavier de Guibert
-Frankfurter Allgemeine Zeitung
+Frankfurter Allgemeine Zeitung 
 Fraternité Matin
 The Free Press
 Frontline
@@ -511,6 +523,7 @@ Gulf News
 
 Haaretz
 Handelszeitung
+ The Hankyoreh  
 Harper & Row
 HarperCollins
 HarperCollins Publishers India
@@ -527,6 +540,7 @@ Hermann
 Hermé
 Hermès-Lavoisier
 Hérodote
+Héros-Limite
 Hetzel-Quantin
 Heyne
 Hill and Wang
@@ -536,10 +550,10 @@ Hoëbeke
 L'Homme
 Homnisphères
 Houghton Mifflin
-The Huffington Post
+The Huffington Post 
 Hugo et Compagnie
 L'Humanité
-Hürriyet
+Hürriyet 
 Hurst & Company
 
 
@@ -563,14 +577,14 @@ Indian Research Press
 Indiana University Press
 Infolio Editions
 Infolio
-InfoSud
+InfoSud 
 Infoworld
 Les Inrockuptibles
 L'Insomniaque
 Institut d'études slaves
 Institut de recherche sur le Maghreb contemporain
 Instituto Cubano del Libro
-Instituto de Estudios Peruanos
+Instituto de Estudios Peruanos 
 L'Interdisciplinaire
 Interlink Pub Group
 International Crisis Group
@@ -673,6 +687,7 @@ Marco Pietteur
 Mardaga
 Mare & Martin
 Maren Sell
+Mareuil
 Marines Editions
 La Martinière
 Martin Secker
@@ -731,7 +746,7 @@ Le Muscadier
 
 
 La Nacíon
-La Nación
+La Nación 
 El Nacional
 Nada
 Nanfang Zhoumo
@@ -758,12 +773,14 @@ New Society Publishers
 The New Statesman
 New Straits Times
 The New Times
-(?:The )?New York Times
+The New York Times
 The New Yorker
 Nezavissimaïa Gazeta
 Nhan Dan
+Niet ! Éditions
 Nihon Keizai Shimbun
 NiL
+Noir et Rouge
 Noir sur Blanc
 Non Lieu
 W. W. Norton
@@ -840,7 +857,7 @@ Pepper
 Perfil
 Perigee Books
 El Periódico de Catalunya
-El Periódico
+El Periódico 
 Periódico Informativo Oftalmológico
 Permanent Black
 Perrin
@@ -865,7 +882,7 @@ Pluto Press
 Point de vue
 Le Point du jour éditeur
 Political Communication
-Politico
+ Politico
 Politika
 Politique africaine
 Politique étrangère
@@ -875,7 +892,7 @@ Polity Press
 Pontcerq
 Population & Avenir
 Population & Sociétés
-POUR
+Pour
 Pour la Palestine
 Les Prairies ordinaires
 Premières Pierres
@@ -885,6 +902,7 @@ La Presse
 La Presse de Tunisie
 Presses de la Cité
 Presses de la Renaissance
+Presses de l’Inalco
 Presses de l'Université Laval
 Presses de l'université Paris-Sorbonne
 Presses de Sciences Po
@@ -906,7 +924,7 @@ Prometheus Books
 Propyläen Verlag
 Prospect
 Le P'tit Gavroche
-PublicAffairs
+PublicAffairs 
 Public Culture
 Public Library of Science
 Publications de l'Université de Provence
@@ -932,6 +950,7 @@ Ralph Myles Publisher
 Random House
 Ramsay
 La Razón
+Regain de lecture
 Regnery Publishing
 La Renaissance du livre
 éd. René Viénet
@@ -945,6 +964,7 @@ Review of African Political Economy
 Revue bleue
 Revue de l'énergie
 Revue de l'IRES
+ La Revue des droits de l'homme
 Revue des études slaves
 Revue d'histoire
 Revue d'histoire de l'Amérique française
@@ -955,12 +975,13 @@ Revue politique et parlementaire
 Revue suisse
 Riad El-Rayyes Books
 Rivages
+Riveneuve éditions
 The Riverside Press
 Rizzoli
 Robert Laffont
 Robotnik Slaski
 Rosspen
-Rossiskaïa Gazeta
+Rossiïskaïa Gazeta
 Roularta Books
 Routledge
 Rowman & Littlefield
@@ -972,7 +993,7 @@ Rue des cascades
 Rzeczpospolita
 
 
-Saarbrücker Zeitung
+Saarbrücker Zeitung 
 Sabine Wespieser
 Said International
 Saint Martin's Press
@@ -1014,12 +1035,13 @@ Les Solitaires intempestifs
 Soteca
 Le Souffle d'or
 South China Morning Post
-South Dakota Law Review
+ South Dakota Law Review
 South End Press
 Der Spiegel
 La Stampa
 Stanford University Press
 Steidl
+Steinkis
 Stern
 Stratégies
 Straits Times
@@ -1067,6 +1089,7 @@ Tintaji
 Tipografia
 Tirésias
 Today's Zaman
+ Tomato News
 Toute Latitude
 To Vima
 TPBM
@@ -1083,7 +1106,7 @@ Turkish Daily News
 
 
 Ultima Hora
-United Press International
+United Press International 
 University of California Press
 University of Chicago Press
 University of Hawaii Press
@@ -1104,6 +1127,7 @@ University of Wisconsin Press
 Urbanisme
 US News & World Report
 USA Today
+ L'Usine nouvelle
 
 
 Valeurs actuelles
@@ -1114,7 +1138,7 @@ Varia
 VenEconomía
 Vents d'ailleurs
 Verdier
-Verso Press
+Verso
 Verticales
 V&R Uni Press
 Viator Publications
@@ -1138,6 +1162,7 @@ The Wall Street Journal
 The Weekly Observer
 The Weekly Standard
 Weiss Press
+William Blake & Co
 Women's Press
 Word Policy Journal
 Work and Occupations
@@ -1146,7 +1171,7 @@ W. W. Norton & Company
 
 
 Xargol
-Xinhua
+Xinhua 
 XO éditions
 XXI
 
@@ -1169,172 +1194,229 @@ Zones sensibles
 Zulma
 
 
-// media
+
+// media 
+
+// http://typo.mondediplo.net/messages/182
 // Afghanistan
 
+// http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
+// http://typo.mondediplo.net/messages/180
 // Albanie
 
+// http://typo.mondediplo.net/messages/179
 // Algérie
 
+// http://typo.mondediplo.net/messages/178
 // Allemagne
-
 
 Bild Zeitung
 Der Tagesspiegel
-Die Spiegel
+Der Spiegel
 Die Zeit
 Frankfurter Allgemeine Zeitung
 Süddeutsche Zeitung
 Taz
 
+// http://typo.mondediplo.net/messages/177
 // Andorre
 
+// http://typo.mondediplo.net/messages/176
 // Angola
 
+// http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
 
+// http://typo.mondediplo.net/messages/174
 // Arabie saoudite
-
 
 Arab Times
 Asharq Al-Aswat
 
+// http://typo.mondediplo.net/messages/173
 // Argentine
 
+// http://typo.mondediplo.net/messages/172
 // Arménie
 
+// http://typo.mondediplo.net/messages/171
 // Australie
-
 
 Fairfax
 The Australian
 
+// http://typo.mondediplo.net/messages/170
 // Autriche
-
 
 Der Standard
 
+// http://typo.mondediplo.net/messages/169
 // Azerbaïdjan
 
+// http://typo.mondediplo.net/messages/168
 // Bahamas
 
+// http://typo.mondediplo.net/messages/167
 // Bahreïn
 
+// http://typo.mondediplo.net/messages/166
 // Bangladesh
 
+// http://typo.mondediplo.net/messages/165
 // Barbade
 
+// http://typo.mondediplo.net/messages/164
 // Belgique
 
+// http://typo.mondediplo.net/messages/163
 // Belize
 
+// http://typo.mondediplo.net/messages/162
 // Bénin
 
+// http://typo.mondediplo.net/messages/161
 // Bhoutan
 
+// http://typo.mondediplo.net/messages/160
 // Biélorussie
 
+// http://typo.mondediplo.net/messages/159
 // Birmanie
-
 
 Myanmar Times
 
+// http://typo.mondediplo.net/messages/158
 // Bolivie
 
+// http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
+// http://typo.mondediplo.net/messages/156
 // Botswana
 
+// http://typo.mondediplo.net/messages/155
 // Brésil
 
+// http://typo.mondediplo.net/messages/154
 // Brunei
 
+// http://typo.mondediplo.net/messages/153
 // Bulgarie
 
+// http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
+// http://typo.mondediplo.net/messages/151
 // Burundi
 
+// http://typo.mondediplo.net/messages/1019
 // Cambodge
 
+// http://typo.mondediplo.net/messages/150
 // Cameroun
 
+// http://typo.mondediplo.net/messages/149
 // Canada
 
+// http://typo.mondediplo.net/messages/148
 // Cap-Vert
 
+// http://typo.mondediplo.net/messages/146
 // Chili
 
+// http://typo.mondediplo.net/messages/1020
 // Chine
 
+// http://typo.mondediplo.net/messages/145
 // Chypre
-
 
 Politis
 Volkan
 
+// http://typo.mondediplo.net/messages/144
 // Colombie
 
+// http://typo.mondediplo.net/messages/143
 // Comores
 
+// http://typo.mondediplo.net/messages/142
 // Congo
 
+// http://typo.mondediplo.net/messages/1086
 // Corée du Nord
 
+// http://typo.mondediplo.net/messages/1087
 // Corée du Sud
 
+Yonhap
+les « Cho-Joong-Dong »
+
+// http://typo.mondediplo.net/messages/141
 // Costa Rica
 
+// http://typo.mondediplo.net/messages/140
 // Côte d'Ivoire
 
+// http://typo.mondediplo.net/messages/139
 // Croatie
 
+// http://typo.mondediplo.net/messages/138
 // Cuba
-
 
 Granma
 
+// http://typo.mondediplo.net/messages/137
 // Danemark
-
 
 Jyllands-Posten
 
+// http://typo.mondediplo.net/messages/136
 // Djibouti
 
+// http://typo.mondediplo.net/messages/135
 // Dominique
 
+// http://typo.mondediplo.net/messages/1309
 // Égypte
-
 
 Mada masr
 
+// http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
+// http://typo.mondediplo.net/messages/132
 // Équateur
 
+// http://typo.mondediplo.net/messages/131
 // Érythrée
 
+// http://typo.mondediplo.net/messages/130
 // Espagne
-
 
 El País
 
+// http://typo.mondediplo.net/messages/129
 // Estonie
 
+// http://typo.mondediplo.net/messages/128
 // États-Unis
 
+// http://typo.mondediplo.net/messages/127
 // Éthiopie
 
+// http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
 
+// http://typo.mondediplo.net/messages/126
 // Fidji
 
+// http://typo.mondediplo.net/messages/124
 // Finlande
 
+// http://typo.mondediplo.net/messages/123
 // France
-
 
 BFM TV
 Direct 8
@@ -1349,68 +1431,90 @@ Direct Matin
 Metro
 Paris Match
 Conseil national du numérique
+Cf.  infographie : Presse française
+Entreprises
+Arianespace
+BNP Paribas
+les Chantiers de l'Atlantique
+LVMH
 
+// http://typo.mondediplo.net/messages/122
 // Gabon
 
+// http://typo.mondediplo.net/messages/121
 // Gambie
 
+// http://typo.mondediplo.net/messages/120
 // Géorgie
-
 
 Civil Georgia
 Imedi
 The Messenger
 
+// http://typo.mondediplo.net/messages/119
 // Ghana
 
+// http://typo.mondediplo.net/messages/118
 // Grèce
 
+// http://typo.mondediplo.net/messages/117
 // Grenade
 
+// http://typo.mondediplo.net/messages/116
 // Guatemala
 
+// http://typo.mondediplo.net/messages/115
 // Guinée
 
+// http://typo.mondediplo.net/messages/114
 // Guinée-Bissau
 
+// http://typo.mondediplo.net/messages/113
 // Guinée-Équatoriale
 
+// http://typo.mondediplo.net/messages/112
 // Guyana
 
+// http://typo.mondediplo.net/messages/111
 // Haïti
 
+// http://typo.mondediplo.net/messages/110
 // Honduras
-
 
 El Heraldo
 La Prensa
 
+// http://typo.mondediplo.net/messages/109
 // Hongrie
 
+// http://typo.mondediplo.net/messages/1088
 // Inde
 
+// http://typo.mondediplo.net/messages/1089
 // Indonésie
-
 
 Kompas
 
+// http://typo.mondediplo.net/messages/108
 // Irak
 
+// http://typo.mondediplo.net/messages/107
 // Iran
 
+// http://typo.mondediplo.net/messages/106
 // Irlande
 
+// http://typo.mondediplo.net/messages/105
 // Islande
-
 
 Morgunblaðið
 365 miðlar
 RUV
 
+// http://typo.mondediplo.net/messages/104
 // Israël
 
-
-Médias 
+Médias 
 Al Qods
 Davar
 Derech Hanitzotz
@@ -1424,144 +1528,194 @@ News From Within
 Yediot Aharonot
 Zion
 
+// http://typo.mondediplo.net/messages/103
 // Italie
 
+// http://typo.mondediplo.net/messages/102
 // Jamaïque
 
+// http://typo.mondediplo.net/messages/1090
 // Japon
 
+// http://typo.mondediplo.net/messages/101
 // Jordanie
 
+// http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
+// http://typo.mondediplo.net/messages/100
 // Kenya
 
+// http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
+// http://typo.mondediplo.net/messages/99
 // Kiribati
 
+// http://typo.mondediplo.net/messages/1042
 // Kosovo
 
+// http://typo.mondediplo.net/messages/98
 // Koweït
 
+// http://typo.mondediplo.net/messages/1093
 // Laos
 
+// http://typo.mondediplo.net/messages/97
 // Lesotho
 
+// http://typo.mondediplo.net/messages/96
 // Lettonie
-
 
 The Baltic Course
 
+// http://typo.mondediplo.net/messages/95
 // Liban
 
+// http://typo.mondediplo.net/messages/94
 // Liberia
 
+// http://typo.mondediplo.net/messages/93
 // Libye
 
+// http://typo.mondediplo.net/messages/92
 // Liechtenstein
 
+// http://typo.mondediplo.net/messages/91
 // Lituanie
 
+// http://typo.mondediplo.net/messages/90
 // Luxembourg
 
+// http://typo.mondediplo.net/messages/89
 // Macédoine
 
+// http://typo.mondediplo.net/messages/88
 // Madagascar
 
+// http://typo.mondediplo.net/messages/1094
 // Malaisie
-
 
 New Straits Times
 
+// http://typo.mondediplo.net/messages/87
 // Malawi
 
+// http://typo.mondediplo.net/messages/1095
 // Maldives
 
+// http://typo.mondediplo.net/messages/86
 // Mali
 
+// http://typo.mondediplo.net/messages/85
 // Malte
 
+// http://typo.mondediplo.net/messages/84
 // Maroc
 
+// http://typo.mondediplo.net/messages/83
 // Marshall
 
+// http://typo.mondediplo.net/messages/82
 // Maurice
 
+// http://typo.mondediplo.net/messages/81
 // Mauritanie
 
+// http://typo.mondediplo.net/messages/80
 // Mexique
 
+// http://typo.mondediplo.net/messages/79
 // Micronésie
 
+// http://typo.mondediplo.net/messages/78
 // Moldavie
 
+// http://typo.mondediplo.net/messages/77
 // Monaco
 
+// http://typo.mondediplo.net/messages/1075
 // Mongolie
 
+// http://typo.mondediplo.net/messages/76
 // Monténégro
 
+// http://typo.mondediplo.net/messages/75
 // Mozambique
 
+// http://typo.mondediplo.net/messages/74
 // Namibie
 
+// http://typo.mondediplo.net/messages/73
 // Nauru
 
-
-
+// http://typo.mondediplo.net/messages/1096
 // Népal
 
+// http://typo.mondediplo.net/messages/72
 // Nicaragua
 
+// http://typo.mondediplo.net/messages/71
 // Niger
 
+// http://typo.mondediplo.net/messages/70
 // Nigeria
 
+// http://typo.mondediplo.net/messages/69
 // Norvège
 
+// http://typo.mondediplo.net/messages/1061
 // Nouvelle-Calédonie
 
+// http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
 
+// http://typo.mondediplo.net/messages/67
 // Oman
 
+// http://typo.mondediplo.net/messages/65
 // Ouganda
 
+// http://typo.mondediplo.net/messages/1097
 // Ouzbékistan
 
+// http://typo.mondediplo.net/messages/1098
 // Pakistan
 
+// http://typo.mondediplo.net/messages/64
 // Palau
 
+// http://typo.mondediplo.net/messages/63
 // Palestine
-
 
 Al Qods
 
+// http://typo.mondediplo.net/messages/62
 // Panamá
-
 
 La Prensa
 
+// http://typo.mondediplo.net/messages/61
 // Papouasie-Nouvelle-Guinée
 
+// http://typo.mondediplo.net/messages/60
 // Paraguay
 
+// http://typo.mondediplo.net/messages/59
 // Pays-Bas
-
 
 NRC Handelsblad
 
+// http://typo.mondediplo.net/messages/58
 // Pérou
 
+// http://typo.mondediplo.net/messages/1099
 // Philippines
-
 
 Philippine Daily Inquirer
 
+// http://typo.mondediplo.net/messages/57
 // Pologne
-
 
 Dziennik Zachodni
 Gazeta Wyborcza
@@ -1570,140 +1724,194 @@ Trybuna Górnicza
 Trybuna Robotnicza
 wSieci
 
+// http://typo.mondediplo.net/messages/56
 // Porto Rico
 
+// http://typo.mondediplo.net/messages/55
 // Portugal
 
+// http://typo.mondediplo.net/messages/54
 // Qatar
 
+// http://typo.mondediplo.net/messages/147
 // République centrafricaine
 
+// http://typo.mondediplo.net/messages/53
 // République démocratique du Congo
 
+// http://typo.mondediplo.net/messages/52
 // République dominicaine
 
+// http://typo.mondediplo.net/messages/24
 // République tchèque
 
+// http://typo.mondediplo.net/messages/51
 // Roumanie
 
+// http://typo.mondediplo.net/messages/50
 // Royaume-Uni
-
 
 BBC
 
+// http://typo.mondediplo.net/messages/49
 // Russie
-
 
 Nezavissimaïa Gazeta
 Ria Novosti
-Rossiskaïa Gazeta
+Rossiïskaïa Gazeta
 
+// http://typo.mondediplo.net/messages/48
 // Rwanda
-
 
 Kangura
 
+// http://typo.mondediplo.net/messages/46
 // Saint-Kitts-et-Nevis
 
+// http://typo.mondediplo.net/messages/41
 // Saint-Marin
 
+// http://typo.mondediplo.net/messages/45
 // Saint-Vincent-et-les-Grenadines
 
+// http://typo.mondediplo.net/messages/47
 // Sainte-Lucie
 
+// http://typo.mondediplo.net/messages/44
 // Salomon
 
+// http://typo.mondediplo.net/messages/43
 // Salvador
-
 
 La Prensa Gráfica
 
+// http://typo.mondediplo.net/messages/42
 // Samoa
 
+// http://typo.mondediplo.net/messages/40
 // São-Tomé-et-Príncipe
 
+// http://typo.mondediplo.net/messages/39
 // Sénégal
 
+// http://typo.mondediplo.net/messages/1318
 // Serbie
 
+// http://typo.mondediplo.net/messages/37
 // Seychelles
 
+// http://typo.mondediplo.net/messages/36
 // Sierra Leone
 
+// http://typo.mondediplo.net/messages/1100
 // Singapour
 
+// http://typo.mondediplo.net/messages/35
 // Slovaquie
 
+// http://typo.mondediplo.net/messages/34
 // Slovénie
 
+Mladina  
 
-Mladina  
-
+// http://typo.mondediplo.net/messages/33
 // Somalie
 
+// http://typo.mondediplo.net/messages/32
 // Soudan
 
+// http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
 
+// http://typo.mondediplo.net/messages/1101
 // Sri Lanka
 
+// http://typo.mondediplo.net/messages/31
 // Suède
 
+// http://typo.mondediplo.net/messages/30
 // Suisse
 
+// http://typo.mondediplo.net/messages/29
 // Surina
 
+// http://typo.mondediplo.net/messages/28
 // Swaziland
 
+// http://typo.mondediplo.net/messages/27
 // Syrie
 
+// http://typo.mondediplo.net/messages/1102
 // Tadjikistan
 
+// http://typo.mondediplo.net/messages/1103
 // Taïwan
 
+// http://typo.mondediplo.net/messages/26
 // Tanzanie
 
+// http://typo.mondediplo.net/messages/25
 // Tchad
 
+// http://typo.mondediplo.net/messages/1104
 // Thaïlande
 
+// http://typo.mondediplo.net/messages/1105
 // Timor-Leste
 
+// http://typo.mondediplo.net/messages/23
 // Togo
 
+// http://typo.mondediplo.net/messages/22
 // Tonga
 
+// http://typo.mondediplo.net/messages/21
 // Trinité-et-Tobago
 
+// http://typo.mondediplo.net/messages/20
 // Tunisie
 
+// http://typo.mondediplo.net/messages/1107
 // Turkménistan
 
+// http://typo.mondediplo.net/messages/19
 // Turquie
-
 
 Cumhuriyet
 Hürriyet
 Milliyet
 
+// http://typo.mondediplo.net/messages/18
 // Tuvalu
 
+// http://typo.mondediplo.net/messages/17
 // Ukraine
 
+// http://typo.mondediplo.net/messages/1065
 // Union soviétique
 
+// http://typo.mondediplo.net/messages/15
 // Uruguay
 
+// http://typo.mondediplo.net/messages/14
 // Vanuatu
 
+// http://typo.mondediplo.net/messages/13
 // Vatican
 
+// http://typo.mondediplo.net/messages/12
 // Venezuela
 
+// http://typo.mondediplo.net/messages/1108
 // Vietna
 
+// http://typo.mondediplo.net/messages/996
 // Yémen
 
+// http://typo.mondediplo.net/messages/10
 // Zambie
 
+// http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
+

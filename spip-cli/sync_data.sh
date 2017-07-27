@@ -27,8 +27,14 @@ echo "/* Mise à jour typoDiplo */"
 cd listes_lexicales
 
 echo "Mise à jour des partis"
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=institutions" > Partis_politiques/institutions_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=partis_formations_politiques" > Partis_politiques/partis_typo.txt
-
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=pays" > Pays/pays_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=villes" > Villes/villes_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=lieux" > Geographie/geographie_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=medias" > Journaux/journaux_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=habitants" > Peuples/peuples_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=sujets" > Sujets/sujets_diplo.txt
 
 # Diff
 
@@ -37,5 +43,6 @@ git diff  HEAD -- listes_lexicales/ > listes_lexicales/diff.txt
 cat listes_lexicales/diff.txt
 
 echo "\n Valider le diff et mettre à jour la BDD ? [o/n]"
+
 read valider
 [[ $valider == "o" ]] && echo "C'est parti !\n" || exit
