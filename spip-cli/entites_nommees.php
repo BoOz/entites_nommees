@@ -95,10 +95,12 @@ class entites_nommees extends Command {
 					passthru("clear");
 					
 					// Maj du fichier recaler.txt sur GD en bash.
-					passthru("./plugins/entites_nommees/spip-cli/sync_data.sh"); // chmod +x sync_data.sh la premiere fois
+					passthru("./plugins/entites_nommees/spip-cli/sync_data.sh", $reponse); // chmod +x sync_data.sh la premiere fois
+					if($reponse == 1){
+						echo "On annule la lise à jour de la base de donnée car le diff des listes a été rejeté.\n\n" ;
+						exit ;
+					}
 					
-					
-					exit;
 					$output->writeln("<info>Mise à jour des entités dans la base de données d'après le fichier recaler.txt</info>");
 					
 					// recaler apres coup d'apres le fichier recaler.txt
