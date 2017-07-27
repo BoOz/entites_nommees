@@ -42,5 +42,5 @@ cat listes_lexicales/diff.txt
 
 echo "Valider le diff et mettre à jour la BDD ? [o/n]"
 
-read valider
-[[ $valider == "o" ]] && echo "C'est parti !\n" || exit
+#read valider
+#[[ $valider == "o" ]] && echo "C'est parti !\n" || exit
