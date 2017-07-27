@@ -42,7 +42,10 @@ Installer un spip avec une base de données d'articles + le plugin `spip-cli` (h
 ```
 cd plugins/
 git clone https://github.com/BoOz/entites_nommees.git
+chmod -R g+rwX entites_nommees
+chmod +x entites_nommees/spip-cli/sync_data.sh
 ```
+
 Activer ensuite le plugin `entites_nommees` dans l'admin de SPIP.
 
 **Configuration**
