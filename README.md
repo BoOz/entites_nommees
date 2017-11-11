@@ -20,7 +20,7 @@ On s'appuie pour cela sur des listes issues du site typo.mondediplo.net, ou mond
 -- Institutions publiques
 -- Partis politiques
 
-On cherche ensuite en Regexp le masque Xxx Xxx xx xx Xxx sur le reliquat du texte, en ignorant les mots de la langue française les plus fréquents constatés
+On cherche ensuite en Regexp le masque Xxx Xxx xx xx Xxx sur le reliquat du texte, en ignorant les mots de la langue française les plus fréquents constatés. fichier stop word  ``mots_courants.php``.
 
 On obtient :
 -> Des Personnalités
@@ -28,7 +28,7 @@ On obtient :
 
 **Usage**
 
-Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=entites_nommees`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=explorer`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
 
 ```
 spip entites -r oui // pour recommencer à zéro l'indexation
