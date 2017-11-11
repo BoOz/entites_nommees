@@ -67,7 +67,7 @@ spip entites -m oui // pour optimiser après une indexation
 Le fichier ``recaler.txt`` permet de réformater des entités mal indexées. 
 format : 
 ```
-// entite actuelle 	entite dans l'extrait	type_entite	entite``
+// entite actuelle 	entite dans l'extrait	type_entite	entite
 ```
 
 Sont reindexées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales (mise à jour du type d'entités).
