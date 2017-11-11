@@ -60,13 +60,17 @@ Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.
 RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
 
-# Optimiser les entites enregistrées
+# Optimiser a posteriori les entites enregistrées
 ```
 spip entites -m oui // pour optimiser après une indexation
 ```
-Le fichier ``recaler.txt`` permet de réformater après l'indexation des entités mal indexées par des listes de remappage au format ``// entite actuelle 	entite dans l'extrait	type_entite	entite``
+Le fichier ``recaler.txt`` permet de réformater des entités mal indexées. 
+format : 
+```
+// entite actuelle 	entite dans l'extrait	type_entite	entite``
+```
 
-Sont reformatées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales.
+Sont reindexées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales (mise à jour du type d'entités).
 
 Enfin on efface les mots de ``mots_courants.php`` qui ont été enregistrés par erreur.
 
