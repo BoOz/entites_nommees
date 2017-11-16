@@ -87,7 +87,13 @@ format :
 
 Sont reindexées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales (mise à jour du type d'entités).
 
+https://github.com/BoOz/entites_nommees/tree/master/listes_lexicales
+
 Enfin on efface les mots de ``mots_courants.php`` qui ont été enregistrés par erreur.
+
+https://github.com/BoOz/entites_nommees/blob/master/mots_courants.php
+
+
 
 
 
