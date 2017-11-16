@@ -65,9 +65,12 @@ define('_SECTEUR_ENTITES',"919, 1379,1723,901"); // pour plusieurs secteurs
 ```
 Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.net/Iterateurs
 
-# RewriteRule references
+# RewriteRule `references`
+
+```
 RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
+```
 
 # Détail de l'optimisation a posteriori les entites enregistrées
 
