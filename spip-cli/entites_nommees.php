@@ -245,7 +245,7 @@ class entites_nommees extends Command {
 					}
 					if(!is_dir('plugins/entites_nommees/stats'))
 						mkdir('plugins/entites_nommees/stats');
-					ecrire_fichier('plugins/entites_nommees/stats/decompte_references.txt', $decompte_entites);
+					ecrire_fichier('plugins/entites_nommees/stats/decompte_references.txt', "Entite	type	poids\n" . $decompte_entites);
 					
 					echo "Maj de 'plugins/entites_nommees/stats/decompte_references.txt'\n" ;
 					echo sizeof($references) . " références apparaissant plus de 5 fois.\n\n" ;
