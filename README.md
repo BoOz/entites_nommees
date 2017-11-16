@@ -26,16 +26,23 @@ On obtient :
 -> Des Personnalités
 -> D'autres entités pour gonfler les listes prédéfinies.
 
-**Usage**
+# Usage
 
-Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=explorer`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+Lancer la commande spip-cli `spip entites` puis `spip entites -m oui`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+
+Après une une indexation passer les traitements d'optimisations des données à posteriori avec `spip entites -m oui`
+
+On peut ensuite voir les entités nommées sur la page `/?page=explorer`.
+
+# Toutes les commandes
 
 ```
-spip entites -r oui // pour recommencer à zéro l'indexation
+spip entites // pour indexer 1 000 articles.
 spip entites -m oui // pour optimiser après une indexation
+spip entites -r oui // pour recommencer à zéro l'indexation
 ```
 
-**Installation dans SPIP**
+# Installation dans SPIP
 
 Installer un spip avec une base de données d'articles + le plugin `spip-cli` (https://contrib.spip.net/SPIP-Cli) , puis
 
@@ -49,7 +56,7 @@ Copier les fichiers du répertoire `/squelettes`dans votre propre répertoire `/
 
 Activer ensuite le plugin `entites_nommees` dans l'admin de SPIP.
 
-**Configuration**
+# Configuration
 
 Définir dans `config/mes_options.php` le secteur dans lequel prendre les articles pour trouver des entités. Par défaut `1`.
 ```
@@ -62,11 +69,14 @@ Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.
 RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
 
-# Optimiser a posteriori les entites enregistrées
+# Détail de l'optimisation a posteriori les entites enregistrées
+
 ```
 spip entites -m oui // pour optimiser après une indexation
 ```
-Le fichier ``recaler.txt`` permet de réformater des entités mal indexées. 
+
+Le fichier `recaler.txt` permet de réformater des entités mal indexées. 
+
 format : 
 ```
 // entite actuelle 	entite dans l'extrait	type_entite	entite
