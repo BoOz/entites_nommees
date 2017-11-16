@@ -45,6 +45,7 @@ git clone https://github.com/BoOz/entites_nommees.git
 chmod -R g+rwX entites_nommees
 chmod +x entites_nommees/spip-cli/sync_data.sh
 ```
+Copier les fichiers du répertoire `/squelettes`dans votre propre répertoire `/squelettes` ou `/squelettes/contenu`.
 
 Activer ensuite le plugin `entites_nommees` dans l'admin de SPIP.
 
