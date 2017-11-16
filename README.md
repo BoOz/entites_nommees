@@ -26,16 +26,23 @@ On obtient :
 -> Des Personnalités
 -> D'autres entités pour gonfler les listes prédéfinies.
 
-**Usage**
+# Usage
 
-Lancer la commande spip-cli `spip entites` puis se rendre sur `/?page=explorer`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+Lancer la commande spip-cli `spip entites` puis `spip entites -m oui`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
+
+Après une une indexation passer les traitements d'optimisations des données à posteriori avec `spip entites -m oui`
+
+On peut ensuite voir les entités nommées sur la page `/?page=explorer`.
+
+# Toutes les commandes
 
 ```
-spip entites -r oui // pour recommencer à zéro l'indexation
+spip entites // pour indexer 1 000 articles.
 spip entites -m oui // pour optimiser après une indexation
+spip entites -r oui // pour recommencer à zéro l'indexation
 ```
 
-**Installation dans SPIP**
+# Installation dans SPIP
 
 Installer un spip avec une base de données d'articles + le plugin `spip-cli` (https://contrib.spip.net/SPIP-Cli) , puis
 
@@ -45,26 +52,34 @@ git clone https://github.com/BoOz/entites_nommees.git
 chmod -R g+rwX entites_nommees
 chmod +x entites_nommees/spip-cli/sync_data.sh
 ```
+Copier les fichiers du répertoire `/squelettes`dans votre propre répertoire `/squelettes` ou `/squelettes/contenu`.
 
 Activer ensuite le plugin `entites_nommees` dans l'admin de SPIP.
 
-**Configuration**
+# Configuration
 
 Définir dans `config/mes_options.php` le secteur dans lequel prendre les articles pour trouver des entités. Par défaut `1`.
 ```
 define('_SECTEUR_ENTITES',1);
+define('_SECTEUR_ENTITES',"919, 1379,1723,901"); // pour plusieurs secteurs
 ```
 Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.net/Iterateurs
 
-# entites nommees /references
+# RewriteRule `references`
+
+```
 RewriteRule ^references$  spip.php?page=explorer [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
+```
 
-# Optimiser a posteriori les entites enregistrées
+# Détail de l'optimisation a posteriori les entites enregistrées
+
 ```
 spip entites -m oui // pour optimiser après une indexation
 ```
-Le fichier ``recaler.txt`` permet de réformater des entités mal indexées. 
+
+Le fichier `recaler.txt` permet de réformater des entités mal indexées. 
+
 format : 
 ```
 // entite actuelle 	entite dans l'extrait	type_entite	entite
@@ -72,7 +87,13 @@ format :
 
 Sont reindexées aussi les entités indéterminées ultérieurement ajoutées dans les fichiers `` *_ajouts`` dans chaque sous répertoires de listes lexicales (mise à jour du type d'entités).
 
+https://github.com/BoOz/entites_nommees/tree/master/listes_lexicales
+
 Enfin on efface les mots de ``mots_courants.php`` qui ont été enregistrés par erreur.
+
+https://github.com/BoOz/entites_nommees/blob/master/mots_courants.php
+
+
 
 
 
