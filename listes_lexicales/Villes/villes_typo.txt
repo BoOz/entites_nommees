@@ -743,6 +743,7 @@ Ashdod
 Ashkelon
 Beer Sheva
 Beit Lid
+Beit Shemesh
 Deir Yassine
 Dikla
 Dimona
@@ -1330,7 +1331,8 @@ São António do Príncipe
 Košice
 Prešov
 Žilina
-Banska Bystrica
+Banská Bystrica
+Levoča
 Trnava
 Nitra
 

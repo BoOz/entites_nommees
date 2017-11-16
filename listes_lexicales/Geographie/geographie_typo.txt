@@ -482,6 +482,7 @@ Silicon Valley
 //Divers
 
 barrage de la Renaissance du Nil Bleu
+Bole 
 
 // http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
@@ -647,7 +648,8 @@ Soto Cano Air Base
 
 //Divers
 
-Jammu-et-Cachemire  
+Jammu-et-Cachemire   
+ Bengale-Occidental 
 
 // http://typo.mondediplo.net/messages/1089
 // Indonésie
@@ -740,6 +742,7 @@ mont Carmel
 Jérusalem-Est
 vallée de Jezreel
 Jourdain 
+Mea Shearim 
 mer Morte
 mont Thabor
 Galilée

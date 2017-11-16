@@ -194,13 +194,13 @@ Parti travailliste démocratique (DLP)
 // Belgique
 
 Centre démocrate humaniste (CDH)
-Chrétiens démocrates flamands (CD&V)
+Chrétiens-démocrates flamands (CD&V)
 Démocrates fédéralistes indépendants (DÉFI)
-Ecologistes confédérés pour l'Organisation des luttes originales, Verts (Écolo)
+Écologistes confédérés pour l'Organisation des luttes originales, Verts (Écolo)
 Parti écologiste belge flamand (Groen)
 Mouvement réformateur (MR)
 Alliance néo-flamande (N-VA)
-Libéraux et démocrates flamands (Open Vld)
+Libéraux et démocrates flamands (Open VLD)
 Parti populaire (PP)
 Parti du travail de Belgique - Gauche d'ouverture (PTB-GO)
 Parti socialiste (PS)
@@ -1271,7 +1271,7 @@ Parti révolutionnaire institutionnel (PRI)
 Parti d'action nationale (PAN)
 Parti de la révolution démocratique (PRD)
 Parti vert écologiste du Mexique (PVEM)
-Mouvement régénération nationale (Morena)
+Mouvement de régénération nationale (Morena)
 Mouvement citoyen (Movimiento Ciudadanos)
 Armée zapatiste de libération nationale (EZLN)
 
@@ -1559,10 +1559,12 @@ Parti démocratique populaire (PPD)
 // http://typo.mondediplo.net/messages/55
 // Portugal
 
+Bloc de gauche
 Coalition démocratique unitaire (CDU)
 Parti socialiste (PS)
 Portugal devant (PAF)
-Centre démocrate et social -- Parti populaire (CDS-PP)
+Centre démocrate et social - Parti populaire (CDS-PP)
+Parti communiste portugais (PCP)
 Parti social-démocrate (PSD)
 
 // http://typo.mondediplo.net/messages/54
@@ -1634,6 +1636,7 @@ Sinn Féin
 Parti national écossais (SNP)
 Parti unioniste de l'Ulster (UUP)
 Armée républicaine irlandaise (IRA)
+Confédération des syndicats britanniques (TUC)
 
 // http://typo.mondediplo.net/messages/49
 // Russie
@@ -1769,7 +1772,7 @@ Parti populaire - Notre Slovaquie (LSNS)
 Pont (Most-Hid)
 Les gens ordinaires et personnalités indépendantes -Nouvelle majorité (OLaNO-NOVA)
 Liberté et solidarité (SAS)
-Direction -- Social-démocratie (SMER-SD)
+Direction - Social-démocratie (Smer-SD)
 Parti national slovaque (SNS)
 
 // http://typo.mondediplo.net/messages/34
@@ -2019,12 +2022,12 @@ Parti radical (PR)
 // http://typo.mondediplo.net/messages/15
 // Uruguay
 
-Frente amplio (FA)
+Frente Amplio (FA)
 Mouvement révolutionnaire oriental (MRO)
 Parti colorado
 Parti communiste (PCU)
 Parti démocrate-chrétien (PDC)
-Parti national ou « Parti blanco » (PN)
+Parti national ou « Parti Blanco » (PN)
 
 // http://typo.mondediplo.net/messages/14
 // Vanuatu
@@ -2061,7 +2064,7 @@ Parti de la réforme du Vietnam (Viet Tan)
 // Yémen
 
 Congrès général du peuple (CGP)
-Parti yéménite pour la réforme (Islah)
+Parti yéménite pour la réforme (Al-Islah)
 Organisation nassérienne unioniste populaire
 Parti de la renaissance arabe (Parti Baas)
 Parti socialiste yéménite (PSY)

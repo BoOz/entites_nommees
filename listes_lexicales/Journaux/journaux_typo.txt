@@ -29,7 +29,7 @@ Africa Mining Intelligence
 Africultures
 Afrique-Éditions
 Aftenposten
-L'Age d'homme
+L'Âge d'homme
 Agnès Viénot Éditions
 Agone
 Agriculture and Human Values
@@ -77,7 +77,7 @@ André Versaille éditeur
 Les Annales de la recherche urbaine
 Antipodes
 A. Pedone
-A plus d'un titre
+À plus d'un titre
 Apogée
 Aras
 Arbre bleu
@@ -288,6 +288,7 @@ Delga
 Delta Books
 Demi-Lune
 Demopolis
+De Morgen
 La Dépêche
 Dentu
 La Dernière Goutte
@@ -318,25 +319,27 @@ Doubleday
 Le Droit ouvrier
 Droz
 Duke University Press
+Dunod
 Dykinson
 
 
 Earthscan Publications Ltd
 The East African
 Eburnie
-L'Ecarlate
-L'Echappée
-L'Echo
-Les Echos
-L'Ecole émancipée
+L'Écarlate
+L'Échappée
+L'Écho
+Les Échos
+L'École émancipée
+Econometrica
 The Economic Times
 Economica
-Economie et Statistiques
-Economie Matin
-L'Economie politique
+Économie et Statistiques
+Économie Matin
+L'Économie politique
 The Economist
 The Economist Intelligence Unit
-Ecosociété
+Écosociété
 éd. Ciepac
 éd. Ciesas
 Ed. Malatesta
@@ -383,6 +386,7 @@ Les Éditions du bout de la ville
 Éditions du Croquant
 Éditions du Cygne
 Éditions du huitième jour
+Éditions du Larzac
 Éditions du Linteau
 Éditions du Moment
 Éditions du Monde libertaire
@@ -396,6 +400,7 @@ Les Éditions du bout de la ville
 Éditions du Trésor
 Éditions Frat Mat
 Éditions Informpechat
+Éditions Kimé
 Éditions LEP
 Éditions libertaires
 Éditions N° 1
@@ -411,6 +416,7 @@ Editorial Universitaria
 EDP Sciences
 Efimerida ton Syntakton 
 Einaudi
+Electoral Studies
 Ellipses
 El Espectador
 Elkar
@@ -541,6 +547,7 @@ Hermé
 Hermès-Lavoisier
 Hérodote
 Héros-Limite
+Het Belang van Limburg
 Hetzel-Quantin
 Heyne
 Hill and Wang
@@ -553,6 +560,7 @@ Houghton Mifflin
 The Huffington Post 
 Hugo et Compagnie
 L'Humanité
+L'Humanité Dimanche
 Hürriyet 
 Hurst & Company
 
@@ -616,6 +624,7 @@ Joseph K.
 Le Jour
 Le Journal hebdomadaire
 Journal officiel de l'Union européenne
+Journal of Economic Theory
 Journal of Ethnic and Migration Studies
 Journal of the Medical Association of Thailand
 
@@ -623,7 +632,6 @@ Journal of the Medical Association of Thailand
 Karthala
 Keter-Books
 Khiasma Sud
-Kimé
 KITLV Press
 Klanba Editions
 Klincksieck
@@ -650,6 +658,7 @@ Leduc.s Editions
 La Lenteur
 Lessius
 La Lettre du continent
+L’Harmattan
 La Librairie orientale
 La Libre Belgique
 La Lettre de l'océan Indien
@@ -661,6 +670,7 @@ Liberalnaïa Missiia
 Libertalia
 La Liberté
 Liberté économique et progrès social
+Libre & Solidaire
 Librería Española
 Les Liens qui libèrent
 Lieux communs
@@ -680,6 +690,7 @@ Maisonneuve et Larose
 Malta University Press
 Mango
 Manohar
+Manucius
 Le Manuscrit
 Mapa Publishers
 Marakhot
@@ -847,6 +858,7 @@ Le Pas de côté
 Passage du Nord-Ouest
 Le Passager clandestin
 Les Passés simples
+Le Passeur
 Pathfinder
 Payot & Rivages
 Peeters
@@ -957,6 +969,7 @@ La Renaissance du livre
 Le Rénovateur
 La República
 La Repubblica
+Les Requins marteaux
 Res Publica
 Ressouvenances
 Retraite et société
@@ -1001,6 +1014,7 @@ Saint-Simon
 Sakkoulas
 Salt Publishing
 Salvator
+Santé & Travail
 Saptamâna Financiara
 Saqi
 Schoken
@@ -1013,6 +1027,7 @@ The Scotsman
 Sens & Tonka
 Seppia
 Le Serpent à plumes
+Seuil
 Seven Stories Press
 Shaw
 Shehui Kexue Wenxian Chubanshe
@@ -1025,6 +1040,7 @@ Slow Food Editore
 Small Arms Survey
 Soap Éditions
 Société des écrivains
+Social Choice and Individual Values
 Social Science and Medicine
 Socialist Register
 Sociologie et Société
@@ -1135,6 +1151,7 @@ Valor Econômico
 Vajra Publications
 Vanderbilt University Press
 Varia
+Vendémiaire
 VenEconomía
 Vents d'ailleurs
 Verdier
@@ -1145,6 +1162,7 @@ Viator Publications
 La Vie économique
 Vientiane Times
 Viking Press
+Village mondial
 Villard Books
 La ville brûle
 Vingtième Siècle
@@ -1269,6 +1287,8 @@ Der Standard
 
 // http://typo.mondediplo.net/messages/164
 // Belgique
+
+RTBF : Radio-Télévision belge de la Communauté française
 
 // http://typo.mondediplo.net/messages/163
 // Belize
@@ -1624,6 +1644,12 @@ New Straits Times
 
 // http://typo.mondediplo.net/messages/80
 // Mexique
+
+La Jornada
+Proceso
+Televisa
+TV Azteca
+Univision
 
 // http://typo.mondediplo.net/messages/79
 // Micronésie
