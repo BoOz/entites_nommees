@@ -28,6 +28,8 @@ On obtient :
 
 # Usage
 
+`spip entites ; spip entites -m oui`
+
 Lancer la commande spip-cli `spip entites` puis `spip entites -m oui`. La commande `spip entites` traite 1 000 articles. On peut la relancer plusieurs fois si il faut traiter plus que 1 000 articles, voire carrément envoyer `for i in {1..50} ; do spip entites ; done`.
 
 Après une une indexation passer les traitements d'optimisations des données à posteriori avec `spip entites -m oui`
