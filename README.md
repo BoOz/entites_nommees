@@ -54,6 +54,7 @@ Activer ensuite le plugin `entites_nommees` dans l'admin de SPIP.
 Définir dans `config/mes_options.php` le secteur dans lequel prendre les articles pour trouver des entités. Par défaut `1`.
 ```
 define('_SECTEUR_ENTITES',1);
+define('_SECTEUR_ENTITES',"919, 1379,1723,901"); // pour plusieurs secteurs
 ```
 Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.net/Iterateurs
 
