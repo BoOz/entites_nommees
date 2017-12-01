@@ -70,7 +70,7 @@ Note : en SPIP 2, installer aussi le plugin `iterateurs` : https://contrib.spip.
 # RewriteRule `references`
 
 ```
-RewriteRule ^references$  spip.php?page=explorer [QSA,L]
+RewriteRule ^references$  spip.php?page=entites [QSA,L]
 RewriteRule ^references/([a-zA-Z0-9._%\ -]+)/?$  spip.php?page=entite&entite=$1 [QSA,L]
 ```
 
