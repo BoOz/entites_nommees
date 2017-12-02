@@ -1655,17 +1655,47 @@ Proche-Orient
 
 // Mots-clés "Géographie" Diplo (non référencés dans Typodiplo)
 
+ Açores
+
  Afrique australe
+
+ Afrique centrale
+
+ Afrique de l'Est
+
+ Afrique de l'Ouest
+
+ Afrique des Grands Lacs
+
+ Afrique du Nord
+
+ Amérique centrale
+
+ Amérique du Nord
+
+ Amérique du Sud
 
  Amérique latine
 
+ Antarctique
+
+ Antilles néerlandaises
+
+ Arctique
+
  Asie centrale
+
+ Asie du Nord
 
  Asie du Sud-Est
 
  Balkans
 
- Pays baltes
+ Benelux
+
+ Bengale-Occidental
+
+ Bermudes
 
  Burkina Faso
 
@@ -1673,137 +1703,81 @@ Proche-Orient
 
  Caucase
 
+ Ceylan
+
+ Congo belge
+
  Corne de l'Afrique
 
  Corse
 
- France Outre-mer
+ Côte française des Somalis
+
+ Côte-de-l'Or
+
+ Dahomey
+
+ Dubaï
+
+ Ecosse
 
  États-Unis (affaires extérieures)
 
  États-Unis (affaires intérieures)
 
+ Europe centrale
+
  Europe de l'Est
 
+ Europe de l'Ouest
+
+ Europe du Nord
+
+ Fédération d'Arabie du Sud
+
+ France Outre-mer
+
+ Gibraltar
+
  Golfe
+
+ Groenland
 
  Guadeloupe
 
  Guyane
 
- République d'Irlande
-
- Irlande du Nord
-
- Martinique
-
- Méditerranée
-
- République fédérale de Yougoslavie
-
- Scandinavie
-
- Timor-Oriental
-
- URSS
-
- Monde arabe
-
- Tiers-monde
+ Haute-Volta
 
  Hongkong
 
- Amérique centrale
+ Ile de Man
 
  Indochine
 
- Tchécoslovaquie
+ Indochine française
 
- RDA
+ Irlande du Nord
+
+ Kurdistan
+
+ La Réunion
 
  Macao
 
  Maghreb
 
- Océan indien
+ Malouines
 
- Europe centrale
+ Mariannes du Nord
 
- Amérique du Nord
-
- Polynésie française
-
- Sri Lanka
-
- Tibet
-
- Europe de l'Ouest
-
- Gibraltar
-
- Pacifique
-
- La Réunion
-
- Sahel
+ Martinique
 
  Mayotte
 
+ Méditerranée
+
  Mer Baltique
-
- Papouasie-Nouvelle-Guinée
-
- Antilles néerlandaises
-
- Suriname
-
- Serbie-et-Monténégro
-
- Afrique centrale
-
- Afrique de l'Ouest
-
- Antarctique
-
- Asie du Nord
-
- Palestine (Cisjordanie)
-
- Palestine (Gaza)
-
- Kurdistan
-
- RFA
-
- Rhodésie du Sud
-
- Sahara
-
- Voïvodine
-
- Yémen du Nord
-
- Yémen du Sud
-
- Yougoslavie
-
- Amérique du Sud
-
- Sud-Vietnam
-
- Dubaï
-
- Palestine (Jérusalem)
-
- Palestine mandataire
-
- Açores
-
- Afrique des Grands Lacs
-
- Arctique
-
- Ecosse
 
  Mer Caspienne
 
@@ -1813,58 +1787,90 @@ Proche-Orient
 
  Mer Égée
 
- Nord-Vietnam
-
- Afrique du Nord
-
- Afrique de l'Est
-
- Zaïre
-
- Dahomey
-
- Haute-Volta
-
- Sahara occidental
-
  Mer noire
 
- Ceylan
+ Monde arabe
 
- Sud-Ouest africain
-
- Benelux
-
- Bengale-Occidental
-
- Congo belge
-
- Indochine française
-
- Rhodésie du Nord
-
- Nyassaland
-
- Europe du Nord
-
- Nouvelle-Guinée hollandaise
-
- Côte-de-l'Or
-
- République arabe unie
-
- Tanganyika
+ Nord-Vietnam
 
  Nouvelle-Guinée
 
- Côte française des Somalis
+ Nouvelle-Guinée hollandaise
 
- Malouines
+ Nyassaland
 
- Fédération d'Arabie du Sud
+ Océan indien
+
+ Pacifique
+
+ Palestine (Cisjordanie)
+
+ Palestine (Gaza)
+
+ Palestine (Jérusalem)
+
+ Palestine mandataire
+
+ Papouasie-Nouvelle-Guinée
+
+ Pays baltes
+
+ Polynésie française
+
+ RDA
+
+ République arabe unie
+
+ République d'Irlande
+
+ République fédérale de Yougoslavie
+
+ RFA
+
+ Rhodésie du Nord
+
+ Rhodésie du Sud
+
+ Sahara
+
+ Sahara occidental
+
+ Sahel
+
+ Scandinavie
+
+ Serbie-et-Monténégro
+
+ Somaliland
 
  Sous-continent indien
 
- Ile de Man
+ Sri Lanka
 
- Somaliland
+ Sud-Ouest africain
+
+ Sud-Vietnam
+
+ Suriname
+
+ Tanganyika
+
+ Tchécoslovaquie
+
+ Tibet
+
+ Tiers-monde
+
+ Timor-Oriental
+
+ URSS
+
+ Voïvodine
+
+ Yémen du Nord
+
+ Yémen du Sud
+
+ Yougoslavie
+
+ Zaïre

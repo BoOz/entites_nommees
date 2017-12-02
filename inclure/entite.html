@@ -63,7 +63,7 @@
 ]
 <BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
 #SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
+<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 
 
 [(#REM) On cherche avec Diploiser (tf-idf) des articles similaires ]
@@ -132,7 +132,7 @@
 	{select #GET{select}}
 	{par #GET{tri}}{inverse #GET{sens_tri}}
 	
-	{snippet content,'',300}
+	{snippet content,'',100}
 	
 	{pagination 50}>
 	[(#SET{properties,[(#VALEUR{properties}|json_decode{1})]})]
@@ -145,11 +145,8 @@
 
 [(#REM) Affichage ]
 
-<div class="categorie hermetique"><B_type>
-	<BOUCLE_type(DATA){source sql, #VAL{"select type_entite from entites_nommees where entite=LENTITE limit 0,1"}|replace{LENTITE,#ENV{entite}|_q}}{si #ENV{entite}|oui}>
-		<p>Type : #TYPE_ENTITE</p>
-	</BOUCLE_type>
-	
+<div class="categorie hermetique">
+
 	<INCLURE{fond=inclure/entite_temps,entite}>
 	
 	[(#REM) références proches ]
@@ -159,7 +156,7 @@
 	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">
-					<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{entite,entite=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
+					<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
 						[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
 						[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 					</a>
@@ -172,67 +169,6 @@
 	</p>
 </div>
 
-[(#REM)	Biographies 1277
-		TODO : à pondérer plus haut.
-]
-
-<B_bio>
-<h2 class="catego">Biographie</h2>
-<div style="max-height:300px;overflow:auto;margin-bottom:30px">
-<BOUCLE_bio(ARTICLES){statut IN prop, publie}{id_mot=1277}{id_article IN #GET{articles}}>
-
-<a href="#URL_PAGE{article,id_article=#ID_ARTICLE}"><h3>#SURTITRE // #TITRE</h3></a>
-<br>
-[(#TEXTE)] 
-</BOUCLE_bio>
-</div>
-</B_bio>
-
-[(#REM)	Chronologies 604 
-		https://ilkeryilmaz.github.io/timelinejs/
-		TODO : à pondérer plus haut.
-]
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>	
-<script type="text/javascript" src="#CHEMIN{javascript/timelinejs/js/timeline.min.js}"></script>
-<link rel="stylesheet" href="#CHEMIN{javascript/timelinejs/css/timeline.css}" type="text/css" media="all">
-<style>
-.timeline-item{overflow:auto}
-.slide-active button{padding:0}
-</style>
-
-#SET{timeline,#ARRAY}
-<BOUCLE_chronologie(ARTICLES){statut IN prop, publie}{id_mot=604}{id_article IN #GET{articles}}>
-[(#SET{timeline,[(#GET{timeline}|peupler_timeline{#TEXTE**,<a href="#URL_ARTICLE" title='[(#SURTITRE|attribut_html)] // [(#TITRE|attribut_html)]'>-></a>})]})]
-</BOUCLE_chronologie>
-</B_chronologie>
-
-<B_dates>
-<div style="position:relative;margin-bottom:150px">
-	<h2 id="chronologie" class="catego">Chronologie</h2>
-	<div class="timeline-container timeline-theme-1">
-		<div class="timeline js-timeline">
-		<BOUCLE_dates(DATA){source table,#GET{timeline}}{cle > 500}>
-			<div data-time="#CLE">
-			[(#VALEUR)]
-			</div>
-		</BOUCLE_dates>
-		</div>
-	</div>
-</div>
-</B_dates>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.js-timeline').Timeline({
-			autoplay: true,
-			autoplaySpeed : 6000
-		});
-	});
-</script>
-
-
 <B_en_relation>
 <h2 class="catego"> Nos articles en relation avec <span>#ENV{entite}</span></h2>
 <ul class="liste" style="margin-bottom:30px">
@@ -244,7 +180,7 @@
 			#GET{id}
 		</div>
 		<BOUCLE_snippets(SPHINX){recherche #ENV{entite}}
-				{snippet content,'',300}
+				{snippet content,'',100}
 				{filter 1, 'properties.objet = "article"'}
 				{filter #GET{id}, 'IN(properties.id_objet, @valeurs)'}
 				{pagination 1}
@@ -270,7 +206,7 @@
 			#GET{id}
 		</div>
 		<BOUCLE_snippets_recherche(SPHINX){recherche #ENV{entite}}
-				{snippet content,'',300}
+				{snippet content,'',100}
 				{filter 1, 'properties.objet = "article"'}
 				{filter #GET{id}, 'IN(properties.id_objet, @valeurs)'}
 				{pagination 1}

@@ -41,8 +41,7 @@
 			<h3>Personnalités</h3>
 			<ul>
 			<BOUCLE_personnalites_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='Personnalités' ANDWHERE group by entite COMP order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
-				<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
-			</small>
+				<li><a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</small>
 				</li>
 			</BOUCLE_personnalites_frequents>
 			</ul>
@@ -60,7 +59,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_institutions_frequents(DATA){source sql, #VAL{"select type_entite, entite , count(id_entite) nb from entites_nommees where type_entite in ('Institutions', 'Institutions automatiques') ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>[(#TYPE_ENTITE|match{auto}|oui) (auto) ]
+					<li><a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</a>[(#TYPE_ENTITE|match{auto}|oui) (auto) ]
 				</small>
 					</li>
 				</BOUCLE_institutions_frequents>
@@ -76,7 +75,7 @@
 				<ul>
 				<BOUCLE_lieux_frequents(DATA){source sql, #VAL{"select type_entite, entite , count(id_entite) nb from entites_nommees where type_entite in ('Pays', 'Geographie', 'Geographie', 'Géographie (auto)', 'Villes') ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
 					#SET{notin,#GET{notin}|push{#TYPE_ENTITE|_q}}
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>[(#TYPE_ENTITE|match{auto}|oui) (auto) ]
+					<li><a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</a>[(#TYPE_ENTITE|match{auto}|oui) (auto) ]
 				</small>
 					</li>
 				</BOUCLE_lieux_frequents>
@@ -94,7 +93,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_entite_frequents(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+					<li><a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</a>
 				</small>
 					</li>
 				</BOUCLE_entite_frequents>
@@ -113,7 +112,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 				<BOUCLE_entite_frequents_autres(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='TYPEENTITE' ANDWHERE group by entite order by nb desc"}|replace{TYPEENTITE,#TYPE_ENTITE}|replace{ANDWHERE,#GET{andwhere}} }{pagination 1000}>
-					<li>[(#ENTITE|replace{^.*:})]&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+					<li><a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</a>
 				</small>
 					</li>
 				</BOUCLE_entite_frequents_autres>
@@ -127,13 +126,12 @@
 <div class="a_ajouter" style="clear:both;line-height:1.3em">
 	<B_a_ajouter>
 		#ANCRE_PAGINATION
-	
 	 <h3>À ajouter</h3>
 	
 		<ul>
 		<BOUCLE_a_ajouter(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='a ajouter' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
 			<li style="float:left;padding-right:15px">
-			#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
+			<a href="/?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">#ENTITE&nbsp;</a><small>[(#NB)]&nbsp;fois</a>
 		</small>
 			</li>
 		</BOUCLE_a_ajouter>

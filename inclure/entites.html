@@ -13,7 +13,7 @@
 [(#ENV{decenie}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like }|concat{#ENV{decenie}|replace{\d$}|concat{%}|_q}} ]
 [(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
 
-[(#REM) Chopper les autres entités dans les mêmes articles que notre entité ]
+[(#REM) Chopper les autres entités des articles liés à notre entité ]
 
 #SET{req,#VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q}}
 <BOUCLE_fc(DATA){source sql, #GET{req} }{si #ENV{entite}|oui}>
