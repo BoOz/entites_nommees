@@ -25,7 +25,7 @@ cat diff-recaler.txt
 echo "Mise à jour les listes TypoDiplo\n"
 cd listes_lexicales
 
-typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=institutions" > Partis_politiques/institutions_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=institutions" > Institutions/institutions_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=partis_formations_politiques" > Partis_politiques/partis_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=pays" > Pays/pays_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=villes" > Villes/villes_typo.txt
