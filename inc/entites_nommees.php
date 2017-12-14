@@ -205,7 +205,7 @@ function trouver_entites($texte,$id_article){
 	//var_dump($fragments,"<hr><hr>");
 	
 	// Isoler les entites inconnues de la forme : Conseil national pour la défense de la démocratie (CNDD)
-	$recolte = recolter_fragments("Institutions automatiques", $acronymes, $texte, $fragments, $id_article, $texte_original);
+	$recolte = recolter_fragments("Institutions (auto)", $acronymes, $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
 
@@ -403,7 +403,7 @@ function trouver_entites($texte,$id_article){
 				$f = preg_replace("/\|".$m[2]."\|/u","|Géographie (auto)|",$v) ;
 				$fragments_traites[] = $f ;
 			}elseif(preg_match("`$institutions`Uu",$m[1])){
-				$f = preg_replace("/\|".$m[2]."\|/u","|Institutions automatiques|",$v) ;
+				$f = preg_replace("/\|".$m[2]."\|/u","|Institutions (auto)|",$v) ;
 				$fragments_traites[] = $f ;
 			}else{
 				$fragments_traites[] = $v ;
