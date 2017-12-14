@@ -1,0 +1,15 @@
+[(#REM) Liste des entites d'un type]
+
+<B_entites>
+	#ANCRE_PAGINATION
+	<h3>#TYPE</h3>
+	<ul>
+	<BOUCLE_entites(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where type_entite="}|concat{#ENV{type}|_q}|concat{" group by entite order by nb desc"}}
+		{pagination 50}
+		{si #ENV{type}}
+		>
+		<li><a href="#URL_PAGE{entite,entite=#ENTITE}">#ENTITE</a> <small>#NB fois</small></li>
+	</BOUCLE_entites>
+	</ul>
+	<p class="pagination">#PAGINATION</p>
+</B_entites>

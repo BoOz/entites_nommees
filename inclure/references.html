@@ -1,0 +1,71 @@
+<style>
+	ul {
+		margin:0;
+		list-style-type:none;
+		padding:0;
+	}
+	.col{
+		width:135px;
+		margin-right:20px;
+		margin-bottom:60px;
+	}
+	.col ul {
+		max-height:500px;
+		overflow:auto;
+	}
+	.amis{
+		margin:30px 0 ;
+	}
+	.a_ajouter {
+	    background-color: #2c3f4f;
+	    color: #bbbbbb;
+	    margin: 0;
+	    padding: 40px ;
+	}
+	.a_ajouter a{
+		color : white ;
+	}
+	.entites_residuelles {
+	    margin: 0;
+	    padding: 40px ;
+	}
+	.entites_residuelles a{
+	}
+</style>
+
+<div style="display: flex; flex-flow: row wrap;">
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Personnalités}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Institutions}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Partis politiques}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Entreprises}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Sujets}>
+	</div>
+
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Pays}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Geographie}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Villes}>
+	</div>
+	<div class="col">
+		<INCLURE{fond=inclure/entites_type,type=Peuples}>
+	</div>
+</div>
+
+<h3>Autres types</h3>
+
+<BOUCLE_types(DATA){source types_entites}{type !IN Personnalités,Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Villes,Peuples}{!par poids}{" || "}>
+<a href="#URL_PAGE{type_entites,type=#TYPE}">#TYPE</a> : #POIDS entités
+</BOUCLE_types>

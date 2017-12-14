@@ -739,3 +739,17 @@ function nettoyer_entite($entite){
 	return $entite ;
 }
 
+function generer_stop_words(){
+	// effacer les mots courrants (stop words)
+	lire_fichier(find_in_path("mots_courants.php"), $stop_words);
+	// virer les com
+	$stop_words = preg_replace(",^//.*,um","",$stop_words);
+	preg_match_all('`\=\s*"([^"]+)"`Uims', $stop_words, $w);
+	
+	$words = array();
+	foreach($w[1] as $reg){
+		$words = array_merge($words, explode("|",$reg));
+	}
+	
+	return $words ;
+}

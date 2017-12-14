@@ -37,6 +37,7 @@ la casbah d'Alger
 Kabylie
  Petite Kabylie
  Grande Kabylie
+Sidi Bel Abbès
 
 // http://typo.mondediplo.net/messages/178
 // Allemagne
@@ -781,6 +782,8 @@ Vénétie
 //Divers
 
 territoire libre de Trieste 
+villes métropolitaines : certaines provinces ont été remplacées par des villes métropolitaines  
+ ville métropolitaine de Milan
 
 // http://typo.mondediplo.net/messages/102
 // Jamaïque

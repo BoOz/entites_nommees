@@ -460,7 +460,6 @@ Valparaíso
 Concepción
 Antofagasta
 Punta Arenas
-Ushuaia
 
 // http://typo.mondediplo.net/messages/1020
 // Chine
@@ -784,6 +783,9 @@ Yoqneam
 
 // http://typo.mondediplo.net/messages/103
 // Italie
+
+certaines provinces ont été remplacées par des villes métropolitaines 
+ville métropolitaine de Milan
 
 // http://typo.mondediplo.net/messages/102
 // Jamaïque

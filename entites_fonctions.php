@@ -1,40 +1,29 @@
 <?php
 
-// Charger les entites nommees
-include_spip("inc/entites_nommees");
+// Charger les fonction de décourverte d'entites nommees
+include_spip("inc/entites_nommees") ;
 
-function preparer_texte($texte){
-	
-	//$texte = "Philippe Lucas et Jean-Claude Vatin, Maspero, Paris, 1975."; << merde car pas d'espace au debut
-	
-	//http://archives.mondediplo.com/?page=noms&id_article=2488
-	//$texte = "Dans l’article d’Eric Rouleau « Ce pouvoir si pesant des militaires turcs »" ; << '
-	
-	// M. François d’Orcival http://archives.mondediplo.com/?page=noms&id_article=38507&var_mode=recalcul
-	//$texte = "M. François d'Orcival" ;
-	// $texte = "Fondé en 1954, sur l’initiative de M. François Honti, par M. Beuve-Méry, le Monde diplomatique atteint";
-	// insecables utf-8
-	
-	$texte = str_replace("\xC2\xA0", " ", $texte);
-	$texte = str_replace("’", "'", $texte);
-	$texte = str_replace("~", " ", $texte);
-	
-	// Nettoyer les inters et itals spip.
-	$texte = str_replace("}}}", ". ", $texte);
-	// gras spip
-	$texte = str_replace("{{", "", $texte);
-	$texte = str_replace("}}", "", $texte);
-	
-	include_spip("inc/filtres");
-	$texte= " " . filtrer_entites($texte) ; // ne pas louper un nom en début de texte.
-	
-	return $texte ;
-	
-}
+
+
+
+
+// File system d'entités nommées
 
 /*
-	Tableaux de regexp par types d'entites
-	à partir de fichiers dictionnaires
+	Tableaux de regexp par types d'entites à partir de fichiers dictionnaires au format texte.
+	
+	Les fichiers textes sont normés : repertoire_type/liste_entites.txt
+	
+	On parcourt les répertoires pour lister les types, et les fichiers pour lister les entites en regexp.
+	
+	On procède en deux passes, la premiere pour les termes qui ont plusieurs mots (mode multi)
+	ensuite une seconde passe pour les entités d'un seul mot (mode mono) qui restent dans le texte après extraction des multi.
+	
+	On renvoie un tableau [type] => Regexp d'entites.
+	
+	TODO : 
+		- renommer la fonction de maniere plus explicite.
+		- ajouter memoization enfonction de la date de maj du fichier le plus récent pour ne pas relire les fichiers en permanance lors du calcul par lot des entites.
 */
 
 function generer_types_entites($nb_mots="multi"){
@@ -145,6 +134,101 @@ function generer_types_entites($nb_mots="multi"){
 	
 }
 
+// tabelau des mots dans un fichier dictionnaire
+
+function generer_mots_fichier($fichier_mots){
+	include_spip('iterateur/data');
+	$liste = file_get_contents($fichier_mots);
+	$mots = inc_file_to_array_dist(trim($liste)) ;
+	
+	foreach($mots as $k => $mot){
+		$mot = trim($mot) ;
+		
+		//pas de ligne vides ou de // commentaires 
+		if( preg_match(",^\/\/|^$,",$mot) || $mot == "")
+			unset($mots[$k]) ;
+	}
+	
+	//var_dump("<pre>", $mots, "</pre>");
+	//die();
+	return $mots ;
+}
+
+// fonctions de nettoyage
+
+function preparer_texte($texte){
+	
+	//$texte = "Philippe Lucas et Jean-Claude Vatin, Maspero, Paris, 1975."; << merde car pas d'espace au debut
+	
+	//http://archives.mondediplo.com/?page=noms&id_article=2488
+	//$texte = "Dans l’article d’Eric Rouleau « Ce pouvoir si pesant des militaires turcs »" ; << '
+	
+	// M. François d’Orcival http://archives.mondediplo.com/?page=noms&id_article=38507&var_mode=recalcul
+	//$texte = "M. François d'Orcival" ;
+	// $texte = "Fondé en 1954, sur l’initiative de M. François Honti, par M. Beuve-Méry, le Monde diplomatique atteint";
+	// insecables utf-8
+	
+	$texte = str_replace("\xC2\xA0", " ", $texte);
+	$texte = str_replace("’", "'", $texte);
+	$texte = str_replace("~", " ", $texte);
+	
+	// Nettoyer les inters et itals spip.
+	$texte = str_replace("}}}", ". ", $texte);
+	// gras spip
+	$texte = str_replace("{{", "", $texte);
+	$texte = str_replace("}}", "", $texte);
+	
+	include_spip("inc/filtres");
+	$texte= " " . filtrer_entites($texte) ; // ne pas louper un nom en début de texte.
+	
+	return $texte ;
+	
+}
+
+
+// fonctions d'affichage
+
+// <BOUCLE_entites(DATA){source principales_entites}>
+// Lister les principales entites aparraissant plus de 5 fois
+// D'après un fichier csv pour des bonnes perfs.
+// Entite	type	poids
+
+function inc_principales_entites_to_array_dist(){
+	$c = trim(file_get_contents(find_in_path("stats/decompte_references.txt")));
+	$csv = inc_file_to_array_dist($c);
+	
+	// isoler les champs d'entete
+	$entete = array_shift($csv);
+	$entete = explode("	",strtolower($entete));
+	
+	// creer un tableau
+	foreach($csv as $l){
+		$valeurs = explode("	", $l);
+		$r = array();
+		for($i=0 ; $i < sizeof($entete) ; $i++)
+			$r[$entete[$i]] = $valeurs[$i] ;
+		$e[] = $r ;
+	}
+	// var_dump("<pre>", $e);
+	return $e ;
+}
+
+// <BOUCLE_types(DATA){source types_entites}>
+
+// Lister les types des entites principales
+
+function inc_types_entites_to_array_dist(){
+	$entites = inc_principales_entites_to_array_dist();
+	foreach($entites as $e)
+		$r[$e['type']] += $e['poids'] ;
+	
+	foreach($r as $type => $poids)
+		$t[] = array("type" => $type, "poids" => $poids);
+	
+	return $t ;
+}
+
+
 function nuage_mot($poids, $max){
 	$score = $poids/$max; # entre 0 et 1
 	
@@ -233,6 +317,7 @@ function peupler_timeline($timeline, $texte, $lien=""){
 	return $timeline ;
 }
 
+// ??
 function entites_nommees($noms = array()){
 	
 	if(!is_array($noms))
@@ -255,35 +340,3 @@ function entites_nommees($noms = array()){
 	return $entites_nommees ;
 }
 
-function generer_mots_fichier($fichier_mots){
-	include_spip('iterateur/data');
-	$liste = file_get_contents($fichier_mots);
-	$mots = inc_file_to_array_dist(trim($liste)) ;
-	
-	foreach($mots as $k => $mot){
-		$mot = trim($mot) ;
-		
-		//pas de ligne vides ou de // commentaires 
-		if( preg_match(",^\/\/|^$,",$mot) || $mot == "")
-			unset($mots[$k]) ;
-	}
-	
-	//var_dump("<pre>", $mots, "</pre>");
-	//die();
-	return $mots ;
-}
-
-function generer_stop_words(){
-	// effacer les mots courrants (stop words)
-	lire_fichier(find_in_path("mots_courants.php"), $stop_words);
-	// virer les com
-	$stop_words = preg_replace(",^//.*,um","",$stop_words);
-	preg_match_all('`\=\s*"([^"]+)"`Uims', $stop_words, $w);
-	
-	$words = array();
-	foreach($w[1] as $reg){
-		$words = array_merge($words, explode("|",$reg));
-	}
-	
-	return $words ;
-}

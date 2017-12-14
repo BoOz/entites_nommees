@@ -403,10 +403,15 @@ Les Éditions du bout de la ville
 Éditions Kimé
 Éditions LEP
 Éditions libertaires
+Éditions Mimésis
+Les Éditions Noir sur Blanc
 Éditions N° 1
 Éditions Palea
 Éditions Pélissier
+Éditions Philippe Picquier
+Éditions rue d'Ulm
 Éditions sociales
+Éditions Syllepse
 Éditions Unesco
 Éditions universitaires du Septentrion
 Editora de Cultura
@@ -609,6 +614,7 @@ Izvestia
 Jaca Book
 Jacana
 Jacob-Duvernet
+J'ai lu
 James Currey
 The Japan Times
 Japonesia Review
@@ -732,7 +738,6 @@ Middle East Report
 Mideast Mirror
 Midi libre
 Mille et une nuits
-Mimésis
 Minerva
 Mint asbl
 Miskal Yediot Aharonot Books
@@ -793,7 +798,6 @@ Niet ! Éditions
 Nihon Keizai Shimbun
 NiL
 Noir et Rouge
-Noir sur Blanc
 Non Lieu
 W. W. Norton
 Les Notes de l'IES
@@ -884,7 +888,6 @@ Pétra
 Petroleum Review
 Phaidon
 Phébus
-Philippe Picquier
 Philippe Rey
 Philippine Daily Inquirer
 Philosophie Magazine
@@ -911,6 +914,8 @@ Les Prairies ordinaires
 Premières Pierres
 Premier Parallèle
 La Prensa
+Prensa libre
+Présence africaine
 La Presse
 La Presse de Tunisie
 Presses de la Cité
@@ -926,7 +931,6 @@ Presses universitaires de France
 Presses universitaires de Laval
 Presses universitaires du Mirail
 Presses universitaires du Septentrion
-Prensa libre
 Princeton Architectural Press
 Privat
 Problèmes d'Amérique latine
@@ -994,6 +998,7 @@ The Riverside Press
 Rizzoli
 Robert Laffont
 Robotnik Slaski
+Roma Tre-Press
 Rosspen
 Rossiïskaïa Gazeta
 Roularta Books
@@ -1001,7 +1006,6 @@ Routledge
 Rowman & Littlefield
 Royal Geographical Society
 Rue de l'échiquier
-Rue d'Ulm
 Rue du monde
 Rue des cascades
 Rzeczpospolita
@@ -1033,6 +1037,7 @@ Seven Stories Press
 Shaw
 Shehui Kexue Wenxian Chubanshe
 Siedler Verlag
+Sigest
 Siglo XXI
 Simon & Schuster
 Sindbad
@@ -1093,6 +1098,7 @@ Tesev Publications
 Textuel
 Thames & Hudson
 Théâtre typographique
+La Thébaïde
 Thélès
 Le Tiers Livre
 Three Leaves Publishing
