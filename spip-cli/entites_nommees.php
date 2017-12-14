@@ -140,12 +140,12 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)', 'Villes','a ajouter') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)', 'Villes','a ajouter','institutions','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
 								
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter','institutions','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;
