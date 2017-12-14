@@ -156,12 +156,12 @@ function generer_mots_fichier($fichier_mots){
 	$liste = file_get_contents($fichier_mots);
 	$mots = inc_file_to_array_dist(trim($liste)) ;
 	
-	foreach($mots as $k => $mot){
+	foreach($mots as $k => &$mot){
 		$mot = trim($mot) ;
-		
-		//pas de ligne vides ou de // commentaires 
-		if( preg_match(",^\/\/|^$,",$mot) || $mot == "")
-			unset($mots[$k]) ;
+	
+	//pas de ligne vides ou de // commentaires 
+	if( preg_match(",^\/\/|^$,",$mot) || $mot == "")
+		unset($mots[$k]) ;
 	}
 	
 	//var_dump("<pre>", $mots, "</pre>");

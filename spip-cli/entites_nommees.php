@@ -80,6 +80,7 @@ class entites_nommees extends Command {
 		$type_source = $input->getOption('type') ;
 		
 		include_spip("base/abstract_sql");
+		include_spip("entites_fonctions");
 		
 		if ($spip_loaded) {
 			chdir($spip_racine);
@@ -132,21 +133,19 @@ class entites_nommees extends Command {
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
 					foreach($types_requalif as $t){
 						$type_entite = basename($t['dirname']);
-						
 						$entites_a_revoir = $freq = array(); 
-						lire_fichier($t['dirname'] . "/" . $t['basename'], $freq);
-						//echo $t['file'] . "\n" ;
-						$entites_a_revoir = explode("\n", $freq);
+						$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
+						
 						if(sizeof($entites_a_revoir) > 1 ){
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques', 'Villes') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
 								
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions automatiques','Villes') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;

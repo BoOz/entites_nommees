@@ -28,7 +28,7 @@ cd listes_lexicales
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=institutions" > Institutions/institutions_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=partis_formations_politiques" > Partis_politiques/partis_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=pays" > Pays/pays_typo.txt
-typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=villes" > Villes/villes_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=villes" > Geographie/villes_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=lieux" > Geographie/geographie_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=medias" > Journaux/journaux_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=habitants" > Peuples/peuples_typo.txt
