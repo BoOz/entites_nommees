@@ -60,9 +60,3 @@
 		<INCLURE{fond=inclure/entites_type,type=Peuples}>
 	</div>
 </div>
-
-<h3>Autres types</h3>
-
-<BOUCLE_types(DATA){source types_entites}{type !IN Personnalités,Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}{" || "}>
-<a href="#URL_PAGE{type_entites,type=#TYPE}">#TYPE</a> : #POIDS entités
-</BOUCLE_types>

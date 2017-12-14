@@ -1,5 +1,5 @@
 <div class="ui center aligned container">
-	<BOUCLE_nb_entites(DATA){source sql,select count(entite) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
+	<BOUCLE_nb_entites(DATA){source sql,select count(distinct(entite)) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
 	<div class="ui grid">
 		<div class="ten wide column">
 		<p style="height:1em;line-height: 0.9em;overflow:auto">

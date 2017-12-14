@@ -1,0 +1,18 @@
+#BOITE_OUVRIR{'','info'}
+<ul>
+	<li><a href="#URL_ECRIRE{configurer_entites_nommees}">Entités à valider</a></li>
+	<li><a href="#URL_ECRIRE{entites_regexp}">Expressions rationnelles</a></li>
+</ul>
+#BOITE_FERMER
+
+
+#BOITE_OUVRIR{'','info'}
+
+<h2>Types d'entités automatiques</h2>
+
+<ul>
+<BOUCLE_types(DATA){source types_entites}{type !IN Personnalités,Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}>
+<li><a href="[(#SELF|parametre_url{type,#TYPE})]">#TYPE</a> : #POIDS entités</li>
+</BOUCLE_types>
+</ul>
+#BOITE_FERMER
