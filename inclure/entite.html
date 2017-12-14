@@ -25,10 +25,11 @@
 
 [(#REM)	100 references pondérées en relation avec #ENV{entite} ]
 <BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
+
+[(#REM) Autres entites en meme temps que notre entite dans les articles ]
+#SET{fonctions,#ARRAY}
 #SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-<BOUCLE_refs(DATA){source sql, #VAL{"select entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}> #SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
-
-
+<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux','INDETERMINE','Institutions automatiques') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 [(#REM) On cherche avec Diploiser (tf-idf) des articles similaires ]
 
 [(#REM) Générer un paquet d'entités proches répétées plusieurs fois en fonction de leur poids puis multiplier par 10 pour ?? ]
@@ -112,10 +113,20 @@
 
 	<INCLURE{fond=inclure/entite_temps,entite}>
 	
+	[(#REM) si c'est une personalité, mettre les fonctions en relation ]
+	<BOUCLE_fonctions(entites_nommees){entite}{type_entite=Personnalités}{0,1}>
+	<B_f>
+	<h3>Fonctions en relation :</h3>
+	<p>
+	<BOUCLE_f(DATA){source table, #GET{fonctions}}{!par valeur}{", "}>#CLE</BOUCLE_f>
+	</p>
+	<B_f>
+	</BOUCLE_fonctions>
+	
 	[(#REM) références proches ]
 	
 	<B_references_proches>
-	<div>Relations :</div>
+	<h3>Références proches :</h3>
 	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">

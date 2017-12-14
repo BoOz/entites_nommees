@@ -30,6 +30,18 @@ function generer_types_entites($nb_mots="multi"){
 	include_spip('iterateur/data');
 	include_spip("inc/entites_nommees");
 	
+	// mettre en cache à la date de modif du dernier fichier modif.
+	$fichiers = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ;
+	foreach($fichiers as $k => $v)
+		$mtime[$v['basename']] = $v['mtime'] ;
+	
+	$date_modif_fichiers = max($mtime);
+	
+	$key = "$nb_mots, " . $date_modif_fichiers ;
+	if (function_exists('cache_get')
+		and $c = cache_get($key))
+			return $c ;
+	
 	// lister les répertoires / types d'entites : Pays Villes ...
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
 	
@@ -129,6 +141,9 @@ function generer_types_entites($nb_mots="multi"){
 			}
 		}
 	}
+	
+	// memoisation
+	if (function_exists('cache_set')) cache_set($key, $types_entites);
 	
 	return $types_entites ;
 	
