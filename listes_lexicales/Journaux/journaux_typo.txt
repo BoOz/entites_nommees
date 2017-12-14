@@ -434,6 +434,7 @@ Energeia
 ENS Editions
 L'Encyclopédie des nuisances
 Énergie pour tous
+Enrick B. Éditions
 En toutes lettres
 Entremonde
 Érès
@@ -798,9 +799,9 @@ W. W. Norton
 Les Notes de l'IES
 Le Nouveau Courrier
 Nouveau Monde
-Nouvelles Editions de l'université
-Nouvelles Editions ivoiriennes
-Nouvelles Editions Lignes
+Nouvelles Éditions de l'université
+Nouvelles Éditions ivoiriennes
+Nouvelles Éditions Lignes
 Novaïa Gazeta
 Nowy Przemys
 Nowy Robotnik
@@ -814,7 +815,7 @@ Observatoire des Amériques
 The Observer
 Odile Jacob
 L'Œuvre
-Oh ! Editions
+Oh ! Éditions
 Oikos-tau
 OIT
 Oil and Gas Journal
@@ -1067,6 +1068,7 @@ Süddeutsche Zeitung
 Sud Ouest
 Sulliver
 The Sunday Times
+Super 8 Éditions
 Sussex Academic Press
 Syros
 
