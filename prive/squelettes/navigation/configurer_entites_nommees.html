@@ -11,8 +11,19 @@
 <h2>Types d'entités automatiques</h2>
 
 <ul>
-<BOUCLE_types(DATA){source types_entites}{type !IN Personnalités,Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}>
+<BOUCLE_types(DATA){source types_entites}{type !IN Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}>
 <li><a href="[(#SELF|parametre_url{type,#TYPE})]">#TYPE</a> : #POIDS entités</li>
 </BOUCLE_types>
+</ul>
+#BOITE_FERMER
+
+#BOITE_OUVRIR{'','info'}
+
+<h2>Types d'entités validées</h2>
+
+<ul>
+<BOUCLE_types_(DATA){source types_entites}{type IN Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}>
+<li><a href="[(#URL_PAGE{type_entites,type=#TYPE})]">#TYPE</a> : #POIDS entités</li>
+</BOUCLE_types_>
 </ul>
 #BOITE_FERMER
