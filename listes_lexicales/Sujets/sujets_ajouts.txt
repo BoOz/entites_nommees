@@ -3,6 +3,8 @@
 // debraye sur les personnalités
 Celtics de Glasgow
 
+// lieux de pouvoir
+Washington
 
 // ONG
 Amnesty International
@@ -21,7 +23,7 @@ Opus Dei
 Opéra du Caire
 Pacha Mama
 Musée du quai Branly
-
+Jeux olympiques
 
 // distinctions
 Prix Nobel
