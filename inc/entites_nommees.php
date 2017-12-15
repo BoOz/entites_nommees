@@ -71,12 +71,12 @@ function trouver_entites($texte,$id_article){
 	
 	// $types d'entites lieux ou média à repérer dans les notes.
 	foreach($types_entites as $k => $v)
-		if(preg_match("/(^villes.*|^pays.*|^journaux.*)/i", $k, $r))
+		if(preg_match("/(^villes.*|^pays.*|^medias.*)/i", $k, $r))
 			$types_connus[$r[1]] = $v ;
 	
 	// $types d'entites lieux ou média à repérer dans les notes.
 	foreach($types_entites_mono as $k => $v)
-		if(preg_match("/(^villes.*|^pays.*|^journaux.*)/i", $k, $r))
+		if(preg_match("/(^villes.*|^pays.*|^medias.*)/i", $k, $r))
 			$types_connus_mono[$r[1]] = $v ;
 	
 	$notes = entites_nommees_notes_bas_page($texte, $id_article, $types_connus, $types_connus_mono);
@@ -503,7 +503,7 @@ function entites_nommees_notes_bas_page($texte, $id_article, $regex_types_connus
 
 function recolter_fragments($type_entite, $regex, $texte, $fragments, $id_article, $texte_original){
 	// Trouver toutes les occurences d'une entité en respectant la casse bien sur.
-	//if(preg_match("/Journaux/", $type_entite))
+	//if(preg_match("/medias/", $type_entite))
 	//	var_dump($regex);
 	
 	if(preg_match_all( "`" . $regex . "`u" , $texte ,$e)){

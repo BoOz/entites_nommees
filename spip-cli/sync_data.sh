@@ -30,7 +30,7 @@ typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=partis_fo
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=pays" > Pays/pays_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=villes" > Geographie/villes_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=lieux" > Geographie/geographie_typo.txt
-typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=medias" > Journaux/journaux_typo.txt
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=medias" > Medias/medias_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=habitants" > Peuples/peuples_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=sujets" > Sujets/sujets_diplo.txt
 
