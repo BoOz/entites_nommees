@@ -23,7 +23,7 @@
 
 <ul>
 <BOUCLE_types_(DATA){source types_entites}{type IN Institutions,Partis politiques,Entreprises,Sujets,Pays,Geographie,Peuples}{!par poids}>
-<li><a href="[(#URL_PAGE{type_entites,type=#TYPE})]">#TYPE</a> : #POIDS entités</li>
+<li><a href="[(#SELF|parametre_url{type,#TYPE})]">#TYPE</a> : #POIDS entités</li>
 </BOUCLE_types_>
 </ul>
 #BOITE_FERMER

@@ -19,7 +19,7 @@
 #SET{max,#GET{poids}|max}
 #SET{moyenne,#GET{poids}|array_sum|div{#GET{poids}|count}}
 
-<h2 id="references" style="margin-top:60px">Entités nommées</h2>
+<h2 id="references">Entités nommées</h2>
 <p>Ces références sont détectées automatiquement dans le texte par un algorithme. Il peut y avoir des erreurs.</p>
 
 [(#REM) Debug 
@@ -30,18 +30,22 @@
 <h3 style="margin-top:1.5em">Personnalités</h3>
 <BOUCLE_personnalites(DATA){source table,#GET{entites}}{type_entite IN Personnalités}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a></BOUCLE_personnalites>
 
-<B_institutions>
-<h3 style="margin-top:1.5em">Institutions</h3>
-<BOUCLE_institutions(DATA){source table,#GET{entites}}{type_entite IN Institutions,Partis politiques}{fusion entite}{par entite}{", "}>
-<a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
-</BOUCLE_institutions>
-
-<BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Institutions,Partis politiques}{fusion type_entite}>
+<BOUCLE_types_entites_nommees(DATA){source table,#GET{entites}}{type_entite !IN INDETERMINE,Personnalités,Sources,Auteurs}{fusion type_entite}>
 <h3 style="margin-top:1.5em">#TYPE_ENTITE</h3>
 <BOUCLE_entites(DATA){source table,#GET{entites}}{type_entite=#TYPE_ENTITE}{fusion entite}{par entite}{", "}>
 <a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
 </BOUCLE_entites>
 </BOUCLE_types_entites_nommees>
+
+<B_a>
+<h3 style="margin-top:1.5em">Auteurs</h3>
+<BOUCLE_a(DATA){source table,#GET{entites}}{type_entite IN Auteurs}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
+</BOUCLE_a>
+
+<B_s>
+<h3 style="margin-top:1.5em">Sources</h3>
+<BOUCLE_s(DATA){source table,#GET{entites}}{type_entite IN Sources}{fusion entite}{par entite}{", "}><a href="[(#URL_PAGE{entite,entite=#ENTITE})]">[<span title="[(#GET{poids}|table_valeur{#ENTITE})]">(#ENTITE|replace{^.*:})</span>]</a>
+</BOUCLE_s>
 
 <B_entites_inconnues>
 <h3 style="margin-top:1.5em">Entités inconnues</h3>
