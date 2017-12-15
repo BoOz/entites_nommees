@@ -30,6 +30,8 @@ Malcolm	Malcolm X	Personnalités	Malcolm X
 Fidel	Fidel	Personnalités	Fidel Castro
 Che Guevara	Che Guevara	Personnalités	Ernesto Che Guevara
 Che	Che	Personnalités	Ernesto Che Guevara
+Lula da Silva	Lula da Silva	Personnalités	Luiz Inácio Lula da Silva
+Lula	Lula	Personnalités	Luiz Inácio Lula da Silva
 			
 // Partis politiques avec nom d'usage ou disparus			
 Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)

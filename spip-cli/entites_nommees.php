@@ -115,12 +115,12 @@ class entites_nommees extends Command {
 									continue;
 								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
-								$sel = 	"select * from entites_nommees where entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+								$sel = 	"select * from entites_nommees where BINARY entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 								$q = sql_query($sel);
 								$nb = sql_count($q);
 								if($nb > 0){
 									echo "$nb $entite_actuelle ($entite_dans_extrait) => $entite\n" ;
-									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where entite=" . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where BINARY entite=" . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 									echo $up . "\n" ;
 									sql_query($up);
 									echo "\n" ;
@@ -145,7 +145,7 @@ class entites_nommees extends Command {
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where  type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;

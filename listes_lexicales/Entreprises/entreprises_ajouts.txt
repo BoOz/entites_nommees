@@ -57,9 +57,11 @@ Twitter
 YouTube
 Microsoft
 Apple
+Uber
+Amazon
+
 
 // autre
-Fnac
 Publicis
 Kentucky Fried Chicken (KFC)
 Compagnie européenne d'intelligence stratégique (CEIS)
@@ -68,13 +70,11 @@ BHP Billiton
 Rio Tinto
 Wesfarmers
 China Ocean Shipping Company
-Uber
 Vinci
 France Télécom
 ArcelorMittal
 Areva
 Texaco
-Amazon 
 Coca-Cola
 Eiffage
 Abertis
@@ -83,3 +83,10 @@ Airbnb
 Tisco 
 Monsanto 
 Alstom 
+
+// Culture
+Disney
+Sony
+Warner
+Fnac
+
