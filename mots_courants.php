@@ -2,7 +2,7 @@
 
 /* Listes de MOTS COURANTS qui matchent dans la regexp qui trouve les personnalités, par exemple parce qu'ils sont en début de phrase avec une majuscule. On va isoler les echapper de la regexp  */
 
-$adverbes = "Tandis|Ensuite|Puisque|Cependant|Bien|Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quel?s?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout" ;
+$adverbes = "Tandis|Ensuite|Puisque|Cependant|Bien|Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quel?s?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout|Qu'importe" ;
 $pronoms = "Les?|La|Aux?|Ces?|Cet+e?|Celui|celles?|ceux|Tous|toute?s?|Des|Aucune?|Du|Ça|Celles-ci|Celui-ci" ;
 $verbes = "Lire|Voir|Etant|Est(?:-ce)?|se|Peut-on|Reste|A-t-elle|A-t-il" ;
 $conjonctions = "Lorsque|Mais|Ou|Et|Donc|Or|Ni|Car" ;

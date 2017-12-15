@@ -149,7 +149,7 @@ function generer_types_entites($nb_mots="multi"){
 	
 }
 
-// tabelau des mots dans un fichier dictionnaire
+// tableau des mots dans un fichier dictionnaire
 
 function generer_mots_fichier($fichier_mots){
 	include_spip('iterateur/data');

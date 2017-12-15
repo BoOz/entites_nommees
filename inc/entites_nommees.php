@@ -52,8 +52,6 @@ function trouver_entites($texte,$id_article){
 		
 	*/
 	
-
-	
 	// Charger les regexp par types d'entites définis dans des fichiers dictionnaires au format txt.
 	// - entités nommées qui font plusieurs mots.
 	$types_entites =  generer_types_entites("multi");
@@ -102,15 +100,31 @@ function trouver_entites($texte,$id_article){
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 	}
-
+	
 	// var_dump($fragments, "lol");
-
+	
+	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
+	
 	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
 	foreach($types_entites as $k => $v)
 		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
 			$orgas[$r[1]] = $v ;
-	
-	//var_dump("<pre>", $orgas);
+		
+		//var_dump("<pre>", $orgas);
+		
+		// monter un tableau acronyme => nom
+		// [PC] => Parti communiste
+		// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
+		foreach($orgas as $orga){
+			$insts = explode("\P{L}", $orga);
+			foreach($insts as $i){
+				$i = stripslashes($i) ;
+				if(!preg_match("`$acronymes`",$i, $m))
+					continue ;
+				$institutions[$m[2]] = trim($m[1]) ;
+			}
+		}
+		//var_dump("<pre>", $institutions);
 	
 	foreach($orgas as $type => $reg){
 		// On cherche la forme developpée + acrronyme : Confédération générale du travail (CGT)
@@ -122,19 +136,14 @@ function trouver_entites($texte,$id_article){
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
 		
-		/*
 		// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
 		$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
 		
-		//var_dump($types_reduits);
+		// var_dump($types_reduits);
 		
 		$recolte = recolter_fragments($label, $types_reduits, $texte, $fragments, $id_article, $texte_original);
 		$fragments = $recolte['fragments'];
 		$texte = $recolte['texte'];
-		
-		//var_dump($reg);
-		
-		*/
 		
 		// ensuite que l'acronyme s'il fait plus qu'une lettre...
 		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
@@ -157,30 +166,25 @@ function trouver_entites($texte,$id_article){
 	//var_dump($fragments);
 	
 	/* recaler les acro et les developpés */
-	$institutions = array() ;
-	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
-	
-	// Repérer les organisations
-	// si une forme longue est trouvée, on cherche
-	// var_dump($fragment);
-	if(is_array($fragments))
-		foreach($fragments as $v){
-			if(preg_match("`$acronymes`u",$v,$m))
-				$institutions[$m[2]] = $m[1] ;
-		}
-	
-	//var_dump("<hr>",$fragments,"<hr>",$institutions,"<hr>");
 	
 	if(is_array($fragments))
 		foreach($fragments as $v){
 			if(preg_match("/^(.*)\|(Institutions|Partis politiques)\|/u",$v,$m)){
 				// cas des Parti communiste (PC)
 				// recaler des institutions réduites PC
+				// ["PS"]=>"Parti socialiste "
 				if($institutions[$m[1]]){
+					// PS => Parti socialiste PS
 					$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
 					$fragments_fusionnes[] = $f ;
-				}elseif(in_array($m[1], $institutions)){ // recaler des institutions réduites moyenne Parti communiste
-					$f = preg_replace("/^".$m[1]."/u", $institutions[$m[1]] . " (" . $m[1] . ")", $v) ;
+				}elseif(in_array($m[1], $institutions)){ 
+					// recaler des institutions réduites moyenne
+					// Parti communiste => Parti communiste (PC)
+					// trouver la clé de Partic communiste
+					$ac = array_keys($institutions, $m[1]);
+					$ac = $ac[0] ;
+					
+					$f = preg_replace("/^".$m[1]."/u", $m[1] . " (" . $ac . ")", $v) ;
 					$fragments_fusionnes[] = $f ;
 				}else
 					$fragments_fusionnes[] = $v ;
@@ -208,8 +212,8 @@ function trouver_entites($texte,$id_article){
 	$recolte = recolter_fragments("Institutions (auto)", $acronymes, $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
 	$texte = $recolte['texte'];
-
-
+	
+	
 	// on enlève des FONCTIONS de QUELQUEPART : premier ministre du Luxembourg etc
 	$recolte = recolter_fragments("Fonctions", "(" . FONCTIONS_PERSONNALITES . ")\s(?:du|de la|d'|des)\s(". LETTRE_CAPITALE . LETTRES ."+)", $texte, $fragments, $id_article, $texte_original);
 	$fragments = $recolte['fragments'];
@@ -363,9 +367,9 @@ function trouver_entites($texte,$id_article){
 	// remplacer les extraits caviardés par des vrais.
 	if(is_array($fragments))
 		foreach($fragments as $v){
-	
+			
 			//var_dump($v,"hum");
-	
+			
 			if(preg_match("`\d+\|(.*xxx.*)`u",$v,$extraitsc)){ // extraits caviardés précédemment
 				$r = str_replace("`", "" , str_replace("xxx", ".*?" , preg_quote($extraitsc[1]))) ;
 				if(preg_match("`" . $r . "`u" , $texte_original , $extrait )){ // peut donner un résultat long d'un paragraphe entier si l'entite xxx est au début.
@@ -374,9 +378,8 @@ function trouver_entites($texte,$id_article){
 				}else{
 					$fragments_fusionnes[] = $v ;
 				}
-	
+				
 			//var_dump("deb", $v, $f,"zou");
-	
 			}else{
 				$fragments_fusionnes[] = $v ;
 			}

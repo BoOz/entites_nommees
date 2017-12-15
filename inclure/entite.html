@@ -29,7 +29,7 @@
 [(#REM) Autres entites en meme temps que notre entite dans les articles ]
 #SET{fonctions,#ARRAY}
 #SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux','INDETERMINE','Institutions automatiques') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
+<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux','INDETERMINE','Institutions (auto)','Géographie (auto)') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 [(#REM) On cherche avec Diploiser (tf-idf) des articles similaires ]
 
 [(#REM) Générer un paquet d'entités proches répétées plusieurs fois en fonction de leur poids puis multiplier par 10 pour ?? ]

@@ -1,8 +1,4 @@
-// partis cité directement dans la forme réduite sans accronymes. penser ensuite à les recaler dans le fichier recaler.txt
-Front national
-Parti communiste français
-Parti communiste
-Parti socialiste
+
 Khmers rouges
 
 // nom d'usage en VO
