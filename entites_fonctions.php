@@ -1,13 +1,9 @@
 <?php
-
 // Charger les fonction de décourverte d'entites nommees
 include_spip("inc/entites_nommees") ;
 
-
-
-
-
-// File system d'entités nommées
+// Des listes d'entités nommées validées sont dans dans des fichiers textes.
+// On en sort des expressions rationnelles à passer sur le texte.
 
 /*
 	Tableaux de regexp par types d'entites à partir de fichiers dictionnaires au format texte.
@@ -23,7 +19,7 @@ include_spip("inc/entites_nommees") ;
 	
 	TODO : 
 		- renommer la fonction de maniere plus explicite.
-		- ajouter memoization enfonction de la date de maj du fichier le plus récent pour ne pas relire les fichiers en permanance lors du calcul par lot des entites.
+		- ajouter memoization en fonction de la date de maj du fichier le plus récent pour ne pas relire les fichiers en permanance lors du calcul par lot des entites.
 */
 
 function generer_types_entites($nb_mots="multi"){
@@ -200,7 +196,6 @@ function preparer_texte($texte){
 	
 }
 
-
 // fonctions d'affichage
 
 // <BOUCLE_entites(DATA){source principales_entites}>
@@ -216,7 +211,7 @@ function inc_principales_entites_to_array_dist(){
 	$entete = array_shift($csv);
 	$entete = explode("	",strtolower($entete));
 	
-	// creer un tableau
+	// créer un tableau
 	foreach($csv as $l){
 		$valeurs = explode("	", $l);
 		$r = array();
@@ -235,7 +230,7 @@ function inc_principales_entites_to_array_dist(){
 function inc_types_entites_to_array_dist(){
 	$entites = inc_principales_entites_to_array_dist();
 	foreach($entites as $e)
-		$r[$e['type']] += $e['poids'] ;
+		$r[$e['type']] ++ ;
 	
 	foreach($r as $type => $poids)
 		$t[] = array("type" => $type, "poids" => $poids);

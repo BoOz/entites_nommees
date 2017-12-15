@@ -4,8 +4,6 @@
 
 <p>Entités nommées trouvées par IA à valider.</p>
 
-
-
 [(#ENV{type}|oui) #SET{type,and type_entite=#ENV{type}|_q} ]
 
 <B_entites_automatiques>
@@ -25,12 +23,11 @@
 <ul>
 <BOUCLE_entite_(DATA){source sql,#VAL{"select type_entite, entite, extrait, id_article from entites_nommees where type_entite not in('Institutions','Partis politiques','Entreprises','Sujets','Pays','Geographie','Peuples','Lieux de publication') and entite like '%"}|concat{#ENV{entite}}|concat{"%' "}|concat{#GET{type}}|concat{"and entite !="}|concat{#ENV{entite}|_q}|concat{" group by entite order by date desc limit 0,3"}}{si #ENV{entite}}>
 <li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a>
-<p>#EXTRAIT — <a href="#URL_ARTICLE">voir l'article</a></p>
+<p>#EXTRAIT — <a href="#URL_PAGE{extraire_entites,id_article=#ID_ARTICLE}">voir l'article</a></p>
 </li>
 </BOUCLE_entite_>
 </ul>
 </B_entite_>
-
 
 <B_entite>
 #ANCRE_PAGINATION
@@ -38,12 +35,10 @@
 <ul>
 <BOUCLE_entite(DATA){source sql,#VAL{"select type_entite, entite, extrait, id_article from entites_nommees where entite ="}|concat{#ENV{entite}|_q}|concat{""}|concat{#GET{type}}|concat{" order by date desc"}}{pagination 100}{si #ENV{entite}}>
 <li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a>
-<p>#EXTRAIT — <a href="#URL_ARTICLE">voir l'article</a></p>
+<p>#EXTRAIT — <a href="#URL_PAGE{extraire_entites,id_article=#ID_ARTICLE}">voir l'article</a></p>
 </li>
 </BOUCLE_entite>
 </ul>
 <p>#PAGINATION</p>
 </B_entite>
-
-
 
