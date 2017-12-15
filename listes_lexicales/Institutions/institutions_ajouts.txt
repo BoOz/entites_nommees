@@ -29,3 +29,9 @@ Pentagone
 // syndicats
 Confédération générale du travail (CGT)
 Confédération française démocratique du travail (CFDT)
+
+
+// ONU
+Conseil des droits de l’homme des Nations unies
+Conférence des parties (COP)
+

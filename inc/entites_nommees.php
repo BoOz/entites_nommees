@@ -279,7 +279,7 @@ function trouver_entites($texte,$id_article){
 	// var_dump("<pre>",$entites_residuelles,"</pre><hr>zou<pre>",$fragments,"<hr>",$texte,"<hr>");
 	$institutions = array() ;
 	// fusionner les personnalités Barack Obama + Mr Obama => Barack Obama
-	// En cas d'acronyme Parti communiste (PC), virer aussi la forme réduite		
+	// En cas d'acronyme Parti communiste (PC), virer aussi la forme réduite
 	
 	if(is_array($fragments))
 		foreach($fragments as $v){
