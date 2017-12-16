@@ -142,20 +142,21 @@ function trouver_entites($texte,$id_article){
 			//var_dump($reg);
 			$label = preg_replace("/\d$/", "", $type);
 			
-			// On cherche la forme developpée + acrronyme : Confédération générale du travail (CGT)
+			// On cherche la forme developpée + acronyme : Confédération générale du travail (CGT)
 			
 			$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
 			$fragments = $recolte['fragments'];
 			$texte = $recolte['texte'];
 			
+			//var_dump("<pre>",$fragments, $texte, "<hr>");
+			
 			// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
-			$types_reduits = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+			// Mais plus tard sinon on se fait avoir par les homonymes.
+			$types_reduits[] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
 			
-			// var_dump($types_reduits);
+			//var_dump($types_reduits);
 			
-			$recolte = recolter_fragments($label, $types_reduits, $texte, $fragments, $id_article, $texte_original);
-			$fragments = $recolte['fragments'];
-			$texte = $recolte['texte'];
+			//var_dump("<pre>",$fragments, $texte);
 			
 			// ensuite que l'acronyme s'il fait plus qu'une lettre...
 			preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
@@ -170,10 +171,16 @@ function trouver_entites($texte,$id_article){
 			$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
 			$fragments = $recolte['fragments'];
 			$texte = $recolte['texte'];
-			
 			/**/
 		}
-	
+		
+		foreach($types_reduits as $t){
+			$recolte = recolter_fragments($label, $t, $texte, $fragments, $id_article, $texte_original);
+			$fragments = $recolte['fragments'];
+			$texte = $recolte['texte'];	
+			
+		}
+		
 	// a debug
 	//var_dump("<pre>", $fragments);
 	
