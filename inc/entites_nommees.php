@@ -115,21 +115,26 @@ function trouver_entites($texte,$id_article){
 		// [PC] => Parti communiste
 		// en cas d'homonymie laisser tomber.
 		// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
+		// doublons par la cle OU la valeur (FN ou Front national) 
+		// Parti communiste (PCU)
+		$homonymes = $institutions = array();
 		foreach($orgas as $orga){
 			$insts = explode("\P{L}", $orga);
 			foreach($insts as $i){
 				$i = stripslashes($i) ;
 				if(!preg_match("`$acronymes`",$i, $m))
 					continue ;
-				if($institutions[$m[2]])
+				//var_dump("<pre>",$m);
+				if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
+					$homonymes[] = trim($m[1]) ;
 					$institutions[$m[2]] = "homonymes" ;
-				else
+				}else
 					$institutions[$m[2]] = trim($m[1]) ;
 			}
+			//var_dump("<pre>", $institutions);
 			foreach($institutions as $i => $v)
-				if($v == "homonymes")
+				if($v == "homonymes" OR @in_array($v,$homonymes))
 					unset($institutions[$i]) ;
-			
 		}
 		//var_dump("<pre>", $institutions);
 		
