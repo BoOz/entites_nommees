@@ -111,9 +111,9 @@ function trouver_entites($texte,$id_article){
 		
 		//var_dump("<pre>", $orgas);
 		
-		// monter un tableau acronyme => nom
-		// [PC] => Parti communiste
-		// en cas d'homonymie laisser tomber.
+		// monter un tableau acronyme => nom pou ressayer de capter des FARC directement dans le texte.
+		// [PS] => Parti socialiste
+		// en cas d'homonymie laisser tomber ex : Front national (FN) et Front national (PBKS) ou Les Républiccains (LR) et Les Raleurs (LR)
 		// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
 		// doublons par la cle OU la valeur (FN ou Front national) 
 		// Parti communiste (PCU)
@@ -133,10 +133,10 @@ function trouver_entites($texte,$id_article){
 			}
 			//var_dump("<pre>", $institutions);
 			foreach($institutions as $i => $v)
-				if($v == "homonymes" OR @in_array($v,$homonymes))
+				if($v == "homonymes")
 					unset($institutions[$i]) ;
 		}
-		//var_dump("<pre>", $institutions);
+		//var_dump("<pre>", $homonymes);
 		
 		foreach($orgas as $type => $reg){
 			//var_dump($reg);
@@ -178,16 +178,16 @@ function trouver_entites($texte,$id_article){
 	//var_dump("<pre>", $fragments);
 	
 	/* recaler les acro et les developpés */
-	// Repérer les organisations dans le texte pour surcharger les institution générales (des regexp)
+	// Repérer les organisations dans le texte pour surcharger les institutions générales (des regexp)
 	// si une forme longue est trouvée, on cherche
 	
 	if(is_array($fragments))
 		foreach($fragments as $v){
 			if(preg_match("`$acronymes`u",$v,$m))
-				$institutions[$m[2]] = $m[1] ;
+				$institutions_locales[$m[2]] = trim($m[1]) ;
 		}
 	
-	//var_dump("<pre>",$institutions,"<hr>");
+	//var_dump("<pre>",$institutions_locales,"<hr>",$homonymes);
 	
 	if(is_array($fragments))
 		foreach($fragments as $v){
@@ -195,15 +195,17 @@ function trouver_entites($texte,$id_article){
 				// cas des Parti communiste (PC)
 				// recaler des institutions réduites PC
 				// ["PS"]=>"Parti socialiste "
-				if($institutions[$m[1]]){
+				$ar_inst = ($institutions_locales[$m[1]]) ? $institutions_locales : $institutions ;
+				if($ar_inst[$m[1]]){
 					// PS => Parti socialiste PS
-					$f = preg_replace("/^".$m[1]."/u", trim($institutions[$m[1]]) . " (" . $m[1] . ")", $v) ;
+					$f = preg_replace("/^".$m[1]."/u", trim($ar_inst[$m[1]]) . " (" . $m[1] . ")", $v) ;
 					$fragments_fusionnes[] = $f ;
-				}elseif(in_array($m[1], $institutions)){ 
+				}elseif( (in_array($m[1], $institutions) AND !in_array($m[1],$homonymes) ) OR in_array($m[1], $institutions_locales)){ 
+					$ar_inst = (in_array($m[1], $institutions_locales)) ? $institutions_locales : $institutions ;
 					// recaler des institutions réduites moyenne
-					// Parti communiste => Parti communiste (PC)
-					// trouver la clé de Partic communiste
-					$ac = array_keys($institutions, $m[1]);
+					// Parti socialiste => Parti socialiste (PS)
+					// trouver la clé de Parti communiste
+					$ac = array_keys($ar_inst, $m[1]);
 					$ac = $ac[0] ;
 					
 					$f = preg_replace("/^".$m[1]."/u", $m[1] . " (" . $ac . ")", $v) ;
