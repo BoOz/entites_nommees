@@ -208,7 +208,7 @@
 			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
 			<strong>#TITRE</strong><small>, [(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</small></BOUCLE_article>
 			<div class="intro">
-			(...)[ (#EXTRAIT) ](...) <a href="./?page=article&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
+			(...)[ (#EXTRAIT) ](...) <a href="./?page=extraire_entites&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
 			</div>
 		</p>
 	</BOUCLE_extraits_articles_entite>
@@ -261,7 +261,7 @@
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
 		<div><strong><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
-		<small><a href="?page=article&amp;id_article=[(#ID_ARTICLE)#references#references]">[voir]</a></small>
+		<small><a href="?page=extraire_entites&amp;id_article=[(#ID_ARTICLE)#references#references]">[voir]</a></small>
 		</div>
 	</BOUCLE_fragments>
 	<p>#PAGINATION</p>

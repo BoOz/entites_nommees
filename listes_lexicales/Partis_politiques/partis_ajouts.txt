@@ -1,4 +1,8 @@
+// homonymies
+// désactiver le vrai Parti communiste (PCU) qui récupère Parti communiste par défaut.
+Parti communiste (PCU)
 
+// Oublis ?
 Khmers rouges
 
 // nom d'usage en VO
