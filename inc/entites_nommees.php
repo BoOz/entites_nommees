@@ -180,7 +180,7 @@ function trouver_entites($texte,$id_article){
 	/* recaler les acro et les developpés */
 	// Repérer les organisations dans le texte pour surcharger les institutions générales (des regexp)
 	// si une forme longue est trouvée, on cherche
-	
+	$institutions_locales = array();
 	if(is_array($fragments))
 		foreach($fragments as $v){
 			if(preg_match("`$acronymes`u",$v,$m))
