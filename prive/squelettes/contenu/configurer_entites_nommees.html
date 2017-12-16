@@ -2,13 +2,11 @@
 
 <h1>Entités nommées</h1>
 
-<p>Entités nommées trouvées par IA à valider.</p>
-
 [(#ENV{type}|oui) #SET{type,and type_entite=#ENV{type}|_q} ]
 
 <B_entites_automatiques>
 #ANCRE_PAGINATION
-<h2>Entités automatiques [« (#ENV{type}) »]</h2>
+<h2>Entités [« (#ENV{type}) »]</h2>
 <ul>
 <BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb from entites_nommees where 1 "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 100}{si #ENV{entite}|non}>
 <li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a> - #NB</li>
