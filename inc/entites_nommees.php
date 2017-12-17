@@ -152,7 +152,7 @@ function trouver_entites($texte,$id_article){
 			
 			// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
 			// Mais plus tard sinon on se fait avoir par les homonymes.
-			$types_reduits[$label] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+			$types_reduits[$label][] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
 			
 			//var_dump($types_reduits);
 			
@@ -173,12 +173,12 @@ function trouver_entites($texte,$id_article){
 			$texte = $recolte['texte'];
 			/**/
 		}
-		
-		foreach($types_reduits as $l => $t){
-			$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
-			$fragments = $recolte['fragments'];
-			$texte = $recolte['texte'];
-		}
+		foreach($types_reduits as $l => $ts)
+			foreach($ts as $t){
+				$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
+				$fragments = $recolte['fragments'];
+				$texte = $recolte['texte'];
+			}
 		
 	// a debug
 	//var_dump("<pre>", $fragments);
