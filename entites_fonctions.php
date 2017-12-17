@@ -80,6 +80,12 @@ function generer_types_entites($nb_mots="multi"){
 				//exit ;
 			}
 			
+			// trier par nombre de mot inverse
+			usort($entites_multi, 'tri_taille_chaine');
+			$entites_multi = array_reverse($entites_multi);
+			
+			//var_dump($entites_multi);
+			
 			// Mono ou multi mots ?
 			if($nb_mots == "mono")
 				$ajout_entites = $entites_mono ;
@@ -100,8 +106,9 @@ function generer_types_entites($nb_mots="multi"){
 						// var_dump($entite_unique, $sous_masque, $sous_masque_propre, "<br>");
 					}
 					
-					// gérer les accents
-					$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
+					// gérer les accents sauf dans les acronymes
+					if(!strpos($entite_unique,"("))
+						$entite_unique = preg_replace("/E|É/u", "(?:É|E)", $entite_unique);
 					
 					// forme développée ou pas
 					//$entite_unique = preg_replace("/\(\)/", "", $entite_unique);
@@ -163,6 +170,17 @@ function generer_mots_fichier($fichier_mots){
 	//var_dump("<pre>", $mots, "</pre>");
 	//die();
 	return $mots ;
+}
+
+function tri_taille_chaine($chaine1, $chaine2)
+	{
+	$taille1 = str_word_count($chaine1);
+	$taille2 = str_word_count($chaine2);
+	if ($taille1 == $taille2)
+	{
+		return strcmp($chaine1, $chaine2); // Ordre alphabétique si les chaines sont de meme taille
+	}
+	return ($taille1 < $taille2) ? -1 : 1;
 }
 
 // fonctions de nettoyage
