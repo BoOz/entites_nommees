@@ -1,0 +1,13 @@
+[(#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite='Personnalités' and id_article=LARTICLE group by entite"}|replace{LARTICLE,#ENV{id_article}}})]
+
+<h3>Personnalités</h3>
+<p>Ces références sont calculées automatiquement, il peut y avoir des erreurs.</p>
+<B_personnalites>
+	<div class="tags decale">
+	<BOUCLE_personnalites(DATA)
+		{source sql, #GET{req}}
+	>
+		<a class="mots" href="/references/[(#ENTITE|rawurlencode)]">#ENTITE</a>
+	</BOUCLE_personnalites>
+	</div>
+</B_personnalites>

@@ -23,13 +23,13 @@
 [(#REM) Récuperer le poids total des références les plus fréquentes dans le fichier stats.txt (ne pas en prendre plus de 5 000 sinon c long ? ) ]
 <BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{0,5000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
 
-[(#REM)	100 references pondérées en relation avec #ENV{entite} ]
 <BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
+#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
 
+[(#REM)	100 references pondérées en relation avec #ENV{entite} ]
 [(#REM) Autres entites en meme temps que notre entite dans les articles ]
 #SET{fonctions,#ARRAY}
-#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Journaux','INDETERMINE','Institutions (auto)','Géographie (auto)') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
+<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Medias') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
 [(#REM) On cherche avec Diploiser (tf-idf) des articles similaires ]
 
 [(#REM) Générer un paquet d'entités proches répétées plusieurs fois en fonction de leur poids puis multiplier par 10 pour ?? ]
@@ -50,7 +50,6 @@
 	{filter 1, 'properties.objet = "article"'}
 	{filter #GET{notin}|explode{","}, 'NOT IN(properties.id_objet, @valeurs)'}
 ]
-
 
 [(#REM)
 	On ajoute les résultats de recherche 
@@ -98,7 +97,7 @@
 	
 	{snippet content,'',100}
 	
-	{pagination 50}>
+	{pagination 10}>
 	[(#SET{properties,[(#VALEUR{properties}|json_decode{1})]})]
 	#SET{id,#GET{properties}|table_valeur{id_objet}}
 	[(#GET{articles_en_relation}|table_valeur{art_#GET{id}}|non)
@@ -106,31 +105,18 @@
 	]
 </BOUCLE_articles>
 
-
 [(#REM) Affichage ]
 
 <div class="categorie hermetique">
-
-	<INCLURE{fond=inclure/entite_temps,entite}>
-	
-	[(#REM) si c'est une personalité, mettre les fonctions en relation ]
-	<BOUCLE_fonctions(entites_nommees){entite}{type_entite=Personnalités}{0,1}>
-	<B_f>
-	<h3>Fonctions en relation :</h3>
-	<p>
-	<BOUCLE_f(DATA){source table, #GET{fonctions}}{!par valeur}{", "}>#CLE</BOUCLE_f>
-	</p>
-	<B_f>
-	</BOUCLE_fonctions>
 	
 	[(#REM) références proches ]
 	
 	<B_references_proches>
-	<h3>Références proches :</h3>
+	<h3>Références proches : <small>(Pour gensim, ne pas afficher)</small></h3>
 	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
-		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,50}{valeur > 0.02}{si #ENV{entite}}>
+		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,80}{valeur > 0.02}{si #ENV{entite}}>
 				<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">
-					<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
+					<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
 						[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
 						[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 					</a>
@@ -138,9 +124,6 @@
 		</BOUCLE_references_proches>
 	</div>
 	</B_references_proches>
-	<p style="text-align:right">
-		<a href="#references">Voir plus de références</a>
-	</p>
 </div>
 
 <B_en_relation>
@@ -168,7 +151,6 @@
 </ul>
 </B_en_relation>
 
-
 <B_en_relation_recherche>
 <h2 class="catego"> Nos articles également en relation avec <span>#ENV{entite}</span> (recherche, #TOTAL_BOUCLE documents)</h2>
 <ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
@@ -193,79 +175,3 @@
 </BOUCLE_en_relation_recherche>
 </ul>
 </B_en_relation_recherche>
-
-[(#ENV{entite}|oui) #SET{andwhere,#VAL{" and entite = LENTITE "}|replace{LENTITE,#VAL{""}|concat{#ENV{entite}}|concat{""}|_q}|replace{"^'"}|replace{"'$"}} ]
-[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
-[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
-
-#SET{req,#VAL{"select entite, extrait, id_article, type_entite, date from entites_nommees where 1 ANDWHERE order by date desc"}|replace{ANDWHERE,#GET{andwhere}}}
-<B_extraits_articles_entite>
-	<h2 class="catego">Références dans nos articles <span>(#GRAND_TOTAL documents)</span></h2>
-	<div style="max-height:200px;overflow:auto;clear:left; margin: 30px 0;">
-	#ANCRE_PAGINATION
-	<BOUCLE_extraits_articles_entite(DATA){source sql,#GET{req}}{pagination 50}{si #ENV{entite}|oui}>
-		<p>
-			<BOUCLE_article(ARTICLES){id_article=#ID_ARTICLE}{statut IN prop, publie}>
-			<strong>#TITRE</strong><small>, [(#DATE_REDAC|nom_mois)][ (#DATE_REDAC|annee)]</small></BOUCLE_article>
-			<div class="intro">
-			(...)[ (#EXTRAIT) ](...) <a href="./?page=extraire_entites&id_article=#ID_ARTICLE#references" title="Extrait de « [(#TITRE)] »">[voir]</a>
-			</div>
-		</p>
-	</BOUCLE_extraits_articles_entite>
-		<p>#PAGINATION</p>
-	</div>
-</B_extraits_articles_entite>
-
-<h2 class="catego">Principales références [ (#ENV{entite}|oui)proches de [(#ENV{entite})]]</h2>
-
-<div id="references" style="margin-bottom:30px">
-	<INCLURE{fond=inclure/entites,entite}>
-	<p style="text-align:right">
-		<a href="#URL_PAGE{entites,entite=#ENV{entite}}">Voir toutes les références</a>
-	</p>
-</div>
-
-
-<BOUCLE_rem(DATA){liste 1}{si #GET{rem}|non}>
-
-#SET{comp,'having nb > 5'}
-
-#SET{andwhere,""}
-[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{ and date like }|concat{#ENV{sdate}|concat{%}|_q}} ]
-[(#ENV{id_article}|oui) #SET{andwhere,#VAL{" and id_article=LID "}|replace{LID,#ENV{id_article}}} ]
-[(#GET{articles}|sizeof|>={1}|oui)
-#SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
-]
-
-<div class="a_ajouter" style="clear:both;line-height:1.3em">
-	<B_a_ajouter>
-		#ANCRE_PAGINATION
-	 <h3>À ajouter</h3>
-		<ul>
-		<BOUCLE_a_ajouter(DATA){source sql, #VAL{"select entite , count(id_entite) nb from entites_nommees where type_entite='a ajouter' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}}|replace{COMP,#GET{comp}}}{pagination 1000}>
-			<li style="float:left;padding-right:15px">
-			#ENTITE&nbsp;<small><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})][&amp;id_article=(#ENV{id_article})]">[(#NB)]&nbsp;fois</a>
-		</small>
-			</li>
-		</BOUCLE_a_ajouter>
-		</ul>
-		<p>#PAGINATION</p>
-	</B_a_ajouter>
-	<br style="clear:both" />
-</div>
-
-<div class="entites_residuelles ui segment left aligned container">
-	<B_fragments>
-	<h2 class="catego" title="Références inconnues[ (#ENV{entite}|oui)proches de [(#ENV{entite})]]">Références inconnues <span>(#GRAND_TOTAL)</span></h2>
-	<p>Notre algorithme a extrait ces références en raison de leurs lettres capitales, mais il ne les a pas reconnues.</p>
-	#ANCRE_PAGINATION
-	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
-		<div><strong><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
-		<small><a href="?page=extraire_entites&amp;id_article=[(#ID_ARTICLE)#references#references]">[voir]</a></small>
-		</div>
-	</BOUCLE_fragments>
-	<p>#PAGINATION</p>
-	</B_fragments>
-</div>
-
-</BOUCLE_rem>
