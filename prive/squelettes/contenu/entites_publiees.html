@@ -1,0 +1,22 @@
+<h1>Références publiées</h1>
+
+<p>
+<BOUCLE_types_entites(DATA)
+	{source csv, #CHEMIN{stats/decompte_references.txt}}
+	{fusion type}
+	{1,n}
+	{", "}
+>
+<a href="[(#SELF|parametre_url{type,#TYPE})]">#TYPE</a>
+</BOUCLE_types_entites>
+</p>
+<B_principales_entites>
+<h2>#TOTAL_BOUCLE entités [ « (#ENV{type}) » ]</h2>
+<BOUCLE_principales_entites(DATA)
+	{source csv, #CHEMIN{stats/decompte_references.txt}}
+	{type==#ENV{type,.}}
+	{1,n}
+	{"<br>"}
+>
+#ENTITE
+</BOUCLE_principales_entites>

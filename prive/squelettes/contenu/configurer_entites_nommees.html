@@ -65,7 +65,7 @@
 	<p>Notre algorithme a extrait ces références en raison de leurs lettres capitales, mais il ne les a pas reconnues.</p>
 	#ANCRE_PAGINATION
 	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 20}{si #ENV{id_article}|non}>
-		<div><strong><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
+		<div><strong><a href="?exec=configurer_entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
 		<small><a href="?page=extraire_entites&amp;id_article=[(#ID_ARTICLE)#references#references]">[voir]</a></small>
 		</div>
 	</BOUCLE_fragments>
