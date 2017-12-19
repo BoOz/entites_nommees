@@ -17,6 +17,10 @@
 		}
 		
 		/*
+			alter table entites_nommees add statut varchar(10) DEFAULT 'prop' NOT NULL
+			alter table entites_nommees add index rapido (statut) ; 
+		*/
+				/*
 		if (version_compare($current_version,"0.3","<")){
 			// ajout de champs
 			maj_tables('entites_nommees');
