@@ -112,15 +112,15 @@
 	[(#REM) références proches ]
 	
 	<B_references_proches>
-	<h3>Références proches : <small>(Pour gensim, ne pas afficher)</small></h3>
-	<div style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+	<div id="references_proches" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+		<h3>Références proches</h3>
 		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,80}{valeur > 0.02}{si #ENV{entite}}>
-				<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">
-					<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
-						[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
-						[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
-					</a>
-				</span>
+			<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">
+				<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
+					[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
+					[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
+				</a>
+			</span>
 		</BOUCLE_references_proches>
 	</div>
 	</B_references_proches>

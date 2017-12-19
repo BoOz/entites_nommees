@@ -6,6 +6,7 @@ Saïgon
 Abidjan
 La Haye
 Marseille
+Dien Bien Phu
 
 // alias
 Caire

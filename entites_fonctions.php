@@ -220,6 +220,7 @@ function preparer_texte($texte){
 // Lister les principales entites aparraissant plus de 5 fois
 // D'après un fichier csv pour des bonnes perfs.
 // Entite	type	poids
+// inutile ?
 
 function inc_principales_entites_to_array_dist(){
 	$c = trim(file_get_contents(find_in_path("stats/decompte_references.txt")));
@@ -244,7 +245,7 @@ function inc_principales_entites_to_array_dist(){
 // <BOUCLE_types(DATA){source types_entites}>
 
 // Lister les types des entites principales
-
+// inutile ?
 function inc_types_entites_to_array_dist(){
 	$entites = inc_principales_entites_to_array_dist();
 	foreach($entites as $e)

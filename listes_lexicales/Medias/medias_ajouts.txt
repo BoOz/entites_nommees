@@ -56,6 +56,17 @@ Courrier International
 British Broadcasting Corporation (BBC)
 BBC News
 Charlie Hebdo
+Nuevo Herald
+Figaro Magazine
+Boston Globe
+BFM Business
+Die Welt
+New Yorker
+Time Magazine
+Irish Times
+
+
+WikiLeaks
 
 // Editeurs
 Armand Colin

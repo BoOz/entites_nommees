@@ -66,9 +66,11 @@ Révolution française
 Brexit
 Terreur
 
+
 // Social
 Loi Macron
 Hartz IV
+Tests ADN
 
 // révolutions
 Révolution islamique
@@ -113,3 +115,26 @@ Sykes-Picot
 // culture
 Hollywood
 
+Checkpoint Charlie
+Inside Job
+Green Hunt
+Community Health
+Super Bowl
+Guns of Brixton
+Grey's Anatomy
+Apocalypse Now
+Star Academy
+Breaking the Silence
+Miami Beach
+Deepwater Horizon
+West Point
+Basic Income Earth Network
+Nord Stream
+
+guerre de Cent Ans
+Pearl Harbor
+Jobs Act
+Siècle
+Dow Jones
+Far West
+Commune de Paris
