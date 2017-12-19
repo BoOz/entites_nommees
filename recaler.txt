@@ -74,3 +74,5 @@ Panthères	Panthères noires	Partis politiques	Panthères noires
 // Accents			
 Equateur	Equateur	Pays	Équateur
 Etats-unis	Etats-unis	Pays	États-unis
+			
+Abdel xxx Al-Sissi	Al-Sissi	Personnalités	Abdel Fattah Al-Sissi
