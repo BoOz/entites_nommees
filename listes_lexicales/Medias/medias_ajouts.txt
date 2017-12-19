@@ -64,9 +64,12 @@ Die Welt
 New Yorker
 Time Magazine
 Irish Times
-
+Corriere della Sera
 
 WikiLeaks
+
+
+France Télévisions
 
 // Editeurs
 Armand Colin

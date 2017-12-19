@@ -238,7 +238,7 @@ class entites_nommees extends Command {
 					$output->writeln("<info>Générer le fichier txt du décompte des principales entités</info>");
 					// Générer le fichier txt du décompte des principales entites
 					
-					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","","entite, type_entite","nb desc","", "nb>5");
+					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","","entite, type_entite","nb desc","", "nb>8");
 					foreach($references as $reference){
 						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
 					}
@@ -247,7 +247,7 @@ class entites_nommees extends Command {
 					ecrire_fichier('plugins/entites_nommees/stats/decompte_references.txt', "Entite	type	poids\n" . $decompte_entites);
 					
 					echo "Maj de 'plugins/entites_nommees/stats/decompte_references.txt'\n" ;
-					echo sizeof($references) . " références apparaissant plus de 5 fois.\n\n" ;
+					echo sizeof($references) . " références apparaissant plus de 8 fois.\n\n" ;
 					exit();
 				}
 				
