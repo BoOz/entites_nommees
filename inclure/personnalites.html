@@ -1,8 +1,7 @@
 [(#REM) TODO ajouter le statut publie ]
-[(#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite='Personnalités' and id_article=LARTICLE group by entite"}|replace{LARTICLE,#ENV{id_article}}})]
+[(#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite='Personnalités' and statut='publie' and id_article=LARTICLE group by entite order by nb desc"}|replace{LARTICLE,#ENV{id_article}}})]
 <B_personnalites>
 <h3>Personnalités</h3>
-<p>Ces références sont calculées automatiquement, il peut y avoir des erreurs.</p>
 	<div class="tags decale">
 	<BOUCLE_personnalites(DATA)
 		{source sql, #GET{req}}
