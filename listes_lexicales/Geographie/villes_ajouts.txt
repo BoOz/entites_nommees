@@ -17,3 +17,8 @@ New-york
 
 // lieu d'edition
 New Haven
+
+
+Munich
+Saint-Pétersbourg
+Francfort

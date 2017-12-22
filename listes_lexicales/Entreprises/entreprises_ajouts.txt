@@ -125,3 +125,5 @@ Standard Oil
 Morgan Chase
 Gaz de France
 Deutsche Bahn
+Gazprom
+Peugeot
