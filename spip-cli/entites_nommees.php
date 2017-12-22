@@ -144,7 +144,7 @@ class entites_nommees extends Command {
 								
 								$nb = sql_count($ent);
 								if($nb > 0){
-									echo $nb . " entites " . $e . " de statut INDETERMINE => "  . $t['filename'] .  "\n";
+									echo $nb . " entites " . $e . " => "  . $t['filename'] .  "\n";
 									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
@@ -238,7 +238,7 @@ class entites_nommees extends Command {
 					$output->writeln("<info>Générer le fichier txt du décompte des principales entités</info>");
 					// Générer le fichier txt du décompte des principales entites
 					
-					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)') and entite not like '%auteur:%' and entite not like '%lieu:%'","entite, type_entite","nb desc","", "nb>10");
+					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)') and entite not like '%auteur:%' and entite not like '%lieu:%' and entite not in ('République')","entite, type_entite","nb desc","", "nb>9");
 					foreach($references as $reference){
 						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
 						sql_query("update entites_nommees set statut='publie' where entite=" . _q($reference['entite']));

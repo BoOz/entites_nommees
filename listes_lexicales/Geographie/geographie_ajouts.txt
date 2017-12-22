@@ -31,3 +31,28 @@ Nil Bleu
 Nil Blanc
 
 Val-d'Oise
+
+
+Ossétie du Sud
+Caroline du Nord
+Asie du Sud
+Ligue du Nord
+Dakota du Nord
+Allemagne de l'Ouest
+Kordofan du Sud
+Europe du Sud
+Atlantique Nord
+Asie de l'Est
+Caroline du Sud
+//Communauté des Etats
+Grand Nord
+Caucase du Nord
+Allemagne de l'Est
+Côtes-d'Armor
+City de Londres
+Europe du Sud-Est
+Ossétie du Nord
+Grand Ouest
+Communauté d'Etats
+Etats-Unis d'Europe
+Côte d'Azur

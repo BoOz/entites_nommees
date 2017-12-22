@@ -6,10 +6,10 @@
 
 <B_entites_automatiques>
 #ANCRE_PAGINATION
-<h2>Entités [« (#ENV{type}) »]</h2>
+<h2>Entités [« (#ENV{type}) »] <small>#GRAND_TOTAL de statut  `prop `</small></h2>
 <ul>
-<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where statut != 'publie' "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 100}{si #ENV{entite}|non}>
-<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a> - #NB <small>— #STATUT</small> </li>
+<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where statut != 'publie' "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 500}{si #ENV{entite}|non}>
+<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]" title="#NB — #STATUT">#ENTITE</a></li>
 </BOUCLE_entites_automatiques>
 </ul>
 <p>#PAGINATION</p>
@@ -59,25 +59,11 @@
 #SET{andwhere,#GET{andwhere}|concat{" and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
 ]
 
-<div class="entites_residuelles ui segment left aligned container">
-	<B_fragments>
-	<h2 class="catego" title="Références inconnues[ (#ENV{entite}|oui)proches de [(#ENV{entite})]]">Références [proches de « (#ENV{entite}) »] à valider <span>(#GRAND_TOTAL)</span></h2>
-	<p>Notre algorithme a extrait ces références en raison de leurs lettres capitales, mais il ne les a pas reconnues.</p>
-	#ANCRE_PAGINATION
-	<BOUCLE_fragments(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 20}{si #ENV{id_article}|non}>
-		<div><strong><a href="?exec=configurer_entites_nommees[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
-		<small><a href="?page=extraire_entites&amp;id_article=[(#ID_ARTICLE)#references#references]">[voir]</a></small>
-		</div>
-	</BOUCLE_fragments>
-	<p>#PAGINATION</p>
-	</B_fragments>
-</div>
-
 [(#REM) Détail d'une entité ]
 
 <B_entite>
 
-[(#REM) si c'est une personalité, mettre les fonctions en relation ]
+[(#REM) si c'est une personnalité, mettre les fonctions en relation ]
 <BOUCLE_fonctions(entites_nommees){entite}{type_entite=Personnalités}{0,1}>
 <B_f>
 <h3>Fonctions en relation :</h3>
@@ -88,7 +74,7 @@
 </BOUCLE_fonctions>
 
 #ANCRE_PAGINATION
-<h2>Extraits d'artilces liés à [« (#ENV{type}) » > ][« (#ENV{entite}) »]</h2>
+<h2>Extraits d'articles liés à [« (#ENV{type}) » > ][« (#ENV{entite}) »]</h2>
 <ul>
 <BOUCLE_entite(DATA){source sql,#VAL{"select type_entite, entite, extrait, id_article from entites_nommees where entite ="}|concat{#ENV{entite}|_q}|concat{""}|concat{#GET{type}}|concat{" order by date desc"}}{pagination 100}{si #ENV{entite}}>
 <li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a>

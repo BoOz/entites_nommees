@@ -73,3 +73,9 @@ France Télévisions
 
 // Editeurs
 Armand Colin
+
+
+News of the World
+News Corp
+Associated Press
+Daily Telegraph
