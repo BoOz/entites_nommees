@@ -1,3 +1,5 @@
+
+
 // Formations politiques 
 
 // http://typo.mondediplo.net/messages/182
@@ -833,7 +835,7 @@ Front pour l'avancement et le progrès haïtien (FRAPH)
 // http://typo.mondediplo.net/messages/110
 // Honduras
 
-Partido Libertad y Refundación (Libre)
+Parti Liberté et refondation (Libre)
 Parti anticorruption (PAC)
 Partido Liberal de Honduras (PLH)
 Parti national du Honduras (PNH)
@@ -1468,6 +1470,7 @@ Pas de partis politiques
 « Conquête » (Fatah)
 Mouvement de la résistance islamique (Hamas)
 Front démocratique de libération de la Palestine (FDLP)
+Organisation de libération de la Palestine (OLP)
 Parti de la libération islamique (PLI)
 Brigades Izz Al-Din Al-Qassam
 Ezzedine Al-Qassam
