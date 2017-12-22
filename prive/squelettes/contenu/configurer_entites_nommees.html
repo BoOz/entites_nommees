@@ -8,8 +8,8 @@
 #ANCRE_PAGINATION
 <h2>Entités [« (#ENV{type}) »]</h2>
 <ul>
-<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb from entites_nommees where 1 "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 100}{si #ENV{entite}|non}>
-<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a> - #NB</li>
+<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where 1 "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 100}{si #ENV{entite}|non}>
+<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]">#ENTITE</a> - #NB <small>— #STATUT</small> </li>
 </BOUCLE_entites_automatiques>
 </ul>
 <p>#PAGINATION</p>
