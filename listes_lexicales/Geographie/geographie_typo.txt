@@ -296,6 +296,14 @@ São Vicente
 // Chine
 
 // Provinces 
+Fujian
+Gansu
+Guangdong
+Heilongjiang
+Hubei
+Hunan
+Zhejiang 
+Xinjiang
 vallée de la Shaksgam  Aksai Chin
 
 //Divers

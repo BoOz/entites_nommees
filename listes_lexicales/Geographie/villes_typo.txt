@@ -464,6 +464,9 @@ Punta Arenas
 // http://typo.mondediplo.net/messages/1020
 // Chine
 
+Baiyin
+Wuhan
+
 // http://typo.mondediplo.net/messages/145
 // Chypre
 

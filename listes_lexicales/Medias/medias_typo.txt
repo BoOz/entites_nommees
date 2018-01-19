@@ -353,6 +353,7 @@ Ediouro
 Éditions de l'Amateur
 Éditions Amsterdam
 Éditions Arkuiris
+Éditions de la Sorbonne
 Éditions de l'Asymétrie
 Éditions de l'Aube
 Éditions B2
@@ -1079,6 +1080,7 @@ Syros
 
 
 Tahin Party
+Tallandier
 Talmart
 Talonbooks
 Tarik Editions
@@ -1356,6 +1358,12 @@ Myanmar Times
 
 // http://typo.mondediplo.net/messages/1020
 // Chine
+
+CCTV
+Caixin
+China News Weekly
+Nanfang Zhoumo
+Zhongguo Jingying Bao
 
 // http://typo.mondediplo.net/messages/145
 // Chypre
