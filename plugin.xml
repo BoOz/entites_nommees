@@ -15,5 +15,11 @@
 <pipeline>
 	<nom>declarer_tables_principales</nom>
 	<inclure>base/entites_nommees.php</inclure>
-</pipeline>  
+</pipeline>
+
+<bouton id="configurer_entites_nommees" parent='menu_configuration'>
+	<icone>images/config-contenu-16.png</icone>
+	<titre>Entités nommées</titre>
+</bouton>
+
 </plugin>
