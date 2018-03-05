@@ -13,11 +13,13 @@
 		);
 		
 		$entites_key = array(
-				"PRIMARY KEY"     => "id_entite",
-				"KEY entite"        => "entite",
-				"KEY type_entite"        => "type_entite",
-				"KEY statut"        => "statut",
-				"KEY date"        => "date",
+				"PRIMARY KEY" => "id_entite",
+				"KEY entite" => "entite",
+				"KEY type_entite" => "type_entite",
+				"KEY statut" => "statut",
+				"KEY date" => "date",
+				"KEY id_article" => "id_article",
+				"KEY id_article_statut" => "id_article,statut"
 		);
 		
 		$tables_principales['entites_nommees'] = array('field' => &$entites, 'key' => &$entites_key);

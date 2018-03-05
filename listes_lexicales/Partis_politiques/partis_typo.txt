@@ -22,6 +22,8 @@ Congrès national africain (ANC)
 Alliance démocratique (DA)
 Combattants pour la liberté économique (EFF)
 Parti national (NP)
+Congrès panafricain (PAC)
+Parti communiste sud-africain (SACP)
 
 // http://typo.mondediplo.net/messages/180
 // Albanie
@@ -56,6 +58,7 @@ Mouvement de la société pour la paix (MSP)
 Rassemblement pour la culture et la démocratie (RCD)
 Rassemblement national démocratique (RND)
 Parti des travailleurs (PT)
+Union démocratique du manifeste algérien (UDMA)
 Armée islamique du salut (AIS)
 Al-Qaida au Maghreb islamique (AQMI)
 Groupe islamique armé (GIA)
@@ -2090,4 +2093,5 @@ Parti uni pour le développement national (UPND)
 Movement for Democratic Change-Ncube (MDC-N)
 Movement for Democratic Change-Tsvangirai (MDC-T)
 Union nationale africaine du Zimbabwe - Front patriotique (ZANU-PF)
+
 
