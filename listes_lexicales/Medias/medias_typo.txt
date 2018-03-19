@@ -1823,6 +1823,9 @@ Nezavissimaïa Gazeta
 Novaïa Gazeta
 Ria Novosti
 Rossiïskaïa Gazeta
+Divers
+le Bolchoï
+le Théâtre Mariinski
 
 // http://typo.mondediplo.net/messages/48
 // Rwanda
@@ -1977,4 +1980,5 @@ Milliyet
 
 // http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
 
