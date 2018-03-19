@@ -5,6 +5,11 @@
 // http://typo.mondediplo.net/messages/182
 // Afghanistan
 
+//Divers
+
+province de Helmand
+Herat
+
 // http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
@@ -415,6 +420,8 @@ port de Doraleh
 
 //Divers
  
+Charm El-Cheikh
+place Tahrir
 vallée du Nil
 
 // http://typo.mondediplo.net/messages/133
@@ -717,6 +724,7 @@ Moussa
  Chatt Al-Arab 
  Ormuz 
  Khorasan
+ Khorramshahr
  Khouzistan
  Ourmia 
 îles Tomb 

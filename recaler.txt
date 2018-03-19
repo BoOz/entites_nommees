@@ -51,8 +51,10 @@ Front Al-Nosra	Front Al-Nosra	Partis politiques	Front Fatah Al-Cham
 			
 // Pays avec noms d'usage			
 RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
+RDC	RDC	Pays	République démocratique du Congo (RDC)
 RDA	RDA	Pays	République démocratique allemande (RDA)
 Maastricht	traité de Maastricht	a_ajouter	traité de Maastricht
+RAU	RAU	Pays	République arabe unie
 Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite
 			
 // Alias			
@@ -75,5 +77,13 @@ Panthères	Panthères noires	Partis politiques	Panthères noires
 // Accents			
 Equateur	Equateur	Pays	Équateur
 Etats-unis	Etats-unis	Pays	États-unis
-			
 Abdel xxx Al-Sissi	Al-Sissi	Personnalités	Abdel Fattah Al-Sissi
+Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu
+			
+			
+			
+			
+// Ajoutés par Suzy			
+Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est
+Organisation de l'Etat islamique		Partis politiques	Organisation de l'État islamique
+Etat islamique		Partis politiques	Organisation de l'État islamique

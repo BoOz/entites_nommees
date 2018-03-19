@@ -101,6 +101,8 @@ L'Association
 L'Atalante
 L'Atelier
 Atelier des Cahiers
+Atelier du Gué
+Ateliers Henry Dougier
 ATG
 Athéna
 Atlantica
@@ -153,7 +155,6 @@ Le Bord de l'eau
 Boréal
 Börsen-Zeitung
 Bouchène
-Bourin Editeur
 Brasil de Fato
 Brecha
 La Brèche
@@ -211,6 +212,7 @@ Chapelot
 Charles Léopold Mayer
 Chatto & Windus
 Chemed Books
+Chemical & Engineering News
 Chemin de ronde
 Le Cherche Midi
 China Daily
@@ -241,7 +243,7 @@ La Contre Allée
 Le Coquelicot
 Cornélius
 Cornell University Press
-Corriere della Serra
+Corriere della Sera
 Corsaires Éditions
 Couleur livres
 Counterpoint
@@ -297,7 +299,7 @@ Le Devoir
 Der Tagesspiegel
 Descartes & Cie
 Desde Abajo
-Des Femmes
+Des femmes - Antoinette Fouque
 Desmaret
 De Standaard
 Le Devoir
@@ -334,6 +336,7 @@ L'École émancipée
 Econometrica
 The Economic Times
 Economica
+Economic Affairs
 Économie et Statistiques
 Économie Matin
 L'Économie politique
@@ -349,10 +352,12 @@ Edicions 62
 EDIF
 Ediouro
 Édisud
+Éditions François Bourin
 Éditions de la Maison des sciences de l’homme
 Éditions de l'Amateur
 Éditions Amsterdam
 Éditions Arkuiris
+Éditions Chronique
 Éditions de la Sorbonne
 Éditions de l'Asymétrie
 Éditions de l'Aube
@@ -362,7 +367,7 @@ Ediouro
 Éditions de la Cité
 Éditions de la Nuit
 Éditions de l'Attribut
-Éditions de l'Eclat
+Éditions de l'Éclat
 Éditions de l’EHESS
 Éditions de l'Épervier
 Éditions de l'Imprimeur
@@ -370,6 +375,7 @@ Ediouro
 Éditions de l'OCDE
 Éditions de l'Olivier
 Éditions de l'Opportun
+Éditions Matériologiques
 Éditions de Minuit
 Éditions d'en bas
 Éditions des Équateurs
@@ -407,10 +413,12 @@ Les Éditions du bout de la ville
 Éditions Mimésis
 Les Éditions Noir sur Blanc
 Éditions N° 1
+Éditions Nzoi
 Éditions Palea
 Éditions Pélissier
 Éditions Philippe Picquier
 Éditions rue d'Ulm
+Éditions Sillage
 Éditions sociales
 Éditions Syllepse
 Éditions Unesco
@@ -426,23 +434,17 @@ Electoral Studies
 Ellipses
 El Espectador
 Elkar
-El Litoral
-El Mundo
-El Nuevo Herald
-El País
-El Tiempo
-El Universo
-El Watan
 Elyzad
 Les Empêcheurs de penser en rond
 ENAG
 Energeia
-ENS Editions
+ENS Éditions
 L'Encyclopédie des nuisances
 Énergie pour tous
 Enrick B. Éditions
 En toutes lettres
 Entremonde
+Environmental Science and Technology
 Érès
 Erick Bonnier
 Espace
@@ -470,6 +472,7 @@ L'Expansion
 Express India
 Extra !
 The Express Tribune
+
 
 La Fabrique
 Die Fackel
@@ -597,6 +600,7 @@ Infoworld
 Les Inrockuptibles
 L'Insomniaque
 Institut d'études slaves
+Institut de recherche de la FSU
 Institut de recherche sur le Maghreb contemporain
 Instituto Cubano del Libro
 Instituto de Estudios Peruanos 
@@ -607,6 +611,7 @@ International Herald Tribune
 International Journal of Climatology
 International Review of the Red Cross
 ¿Interrogations?
+IRD Éditions
 Ivan R. Dee Inc.
 Ivrea
 Izvestia
@@ -669,6 +674,7 @@ La Lettre du continent
 L’Harmattan
 La Librairie orientale
 La Libre Belgique
+El Litoral
 La Lettre de l'océan Indien
 Liaisons directes
 Liana Levi
@@ -685,6 +691,7 @@ Lieux communs
 Lignes
 Lignes de repères
 Lignes et Manifestes
+Le Livre de poche
 Luc Pire
 Lux
 Lynne Rienner Publishers
@@ -741,6 +748,7 @@ Midi libre
 Mille et une nuits
 Minerva
 Mint asbl
+Mirobole éditions
 Miskal Yediot Aharonot Books
 Mississippi Business Journal
 The MIT Press
@@ -760,6 +768,7 @@ Mother Jones
 Mouvements
 Moyen-Orient
 Multinational Monitor
+El Mundo
 Le Muscadier
 
 
@@ -778,6 +787,7 @@ Nation Books
 Nation of Islam
 Natsiia i Derjava
 Nature
+Nature Communications Londres
 Nature Genetics
 Nature et Progrès Editions
 Neue Rheinische Zeitung
@@ -812,7 +822,9 @@ Nowy Przemys
 Nowy Robotnik
 NRC Handelsblad
 Nuestra America
+El Nuevo Herald
 Les Nuits rouges
+Nutrients
 Nuvis
 
 
@@ -831,10 +843,12 @@ Ombres
 Omniscience
 Oneworld Publications
 Open Democracy
+OR Books
 L'Orient - Le Jour
 Oser dire
 Osez la république sociale !
 L'Osservatore Romano
+Otium
 Ouest-France
 Outlook
 Overlook Press
@@ -866,6 +880,7 @@ Le Passager clandestin
 Les Passés simples
 Le Passeur
 Pathfinder
+Paulsen
 Payot & Rivages
 Peeters
 Penguin Books
@@ -894,8 +909,10 @@ Philippine Daily Inquirer
 Philosophie Magazine
 Pierre-Guillaume de Roux
 Le Plan B
+PLOS One 
 Plume
 Pluto Press
+PNAS
 Point de vue
 Le Point du jour éditeur
 Political Communication
@@ -958,6 +975,7 @@ Quæ
 Les 400 coups
 Quai Voltaire
 Québec Amérique
+Quidam éditeur
 La Quinzaine littéraire
 Le Quotidien
 
@@ -985,8 +1003,10 @@ Revue de l'énergie
 Revue de l'IRES
  La Revue des droits de l'homme
 Revue des études slaves
+Revue européenne des migrations internationales
 Revue d'histoire
 Revue d'histoire de l'Amérique française
+Revue française de pédagogie
 Revue internationale des sciences sociales
 La Revue internationale et stratégique
 La Revue nouvelle
@@ -1014,6 +1034,7 @@ Rzeczpospolita
 
 Saarbrücker Zeitung 
 Sabine Wespieser
+Sables
 Said International
 Saint Martin's Press
 Saint-Simon
@@ -1030,6 +1051,7 @@ Sciences sociales et santé
 Scribest Publications
 Scrineo
 The Scotsman
+Seghers
 Sens & Tonka
 Seppia
 Le Serpent à plumes
@@ -1116,6 +1138,7 @@ Tipografia
 Tirésias
 Today's Zaman
  Tomato News
+Touchstone
 Toute Latitude
 To Vima
 TPBM
@@ -1133,6 +1156,7 @@ Turkish Daily News
 
 Ultima Hora
 United Press International 
+El Universal Mexico
 University of California Press
 University of Chicago Press
 University of Hawaii Press
@@ -1150,6 +1174,7 @@ University Press of Kentucky
 University of Texas Press
 University of the West Indies Press
 University of Wisconsin Press
+El Universo
 Urbanisme
 US News & World Report
 USA Today
@@ -1187,8 +1212,10 @@ Vuibert
 
 Wal Fadjri
 The Wall Street Journal
+El Watan
 The Weekly Observer
 The Weekly Standard
+Weidenfeld & Nicolson
 Weiss Press
 William Blake & Co
 Women's Press
@@ -1297,8 +1324,6 @@ Der Standard
 
 // http://typo.mondediplo.net/messages/164
 // Belgique
-
-RTBF : Radio-Télévision belge de la Communauté française
 
 // http://typo.mondediplo.net/messages/163
 // Belize
@@ -1417,6 +1442,7 @@ Jyllands-Posten
 // http://typo.mondediplo.net/messages/1309
 // Égypte
 
+Al-Masri Al-Youm
 Mada masr
 
 // http://typo.mondediplo.net/messages/133
@@ -1468,11 +1494,6 @@ Metro
 Paris Match
 Conseil national du numérique
 Cf.  infographie : Presse française
-Entreprises
-Arianespace
-BNP Paribas
-les Chantiers de l'Atlantique
-LVMH
 
 // http://typo.mondediplo.net/messages/122
 // Gabon
@@ -1799,6 +1820,7 @@ BBC
 // Russie
 
 Nezavissimaïa Gazeta
+Novaïa Gazeta
 Ria Novosti
 Rossiïskaïa Gazeta
 

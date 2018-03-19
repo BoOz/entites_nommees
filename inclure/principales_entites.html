@@ -12,9 +12,9 @@
 <div id="references_geo" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
 <BOUCLE_top_geo(DATA){source table, #GET{entites}}{par cle}>
 	<span style="font-size:[(#VALEUR|nuage_mot{#GET{max}})]em;">
-		<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{recherche,s=#CLE}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
-			[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
-			[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
+		<a style="padding-right:20px;text-decoration:none" href="#URL_PAGE{recherche,s=#CLE}" title="[(#CLE|match{\\(.*\\)}|oui) #CLE , ]score : #VALEUR">
+			[(#CLE|match{\\(.*\\)}|oui)[(#CLE|replace{" ",&nbsp;}|match{\\(.*\\'}|replace{\\(|\\)}|replace{^.*:})]]
+			[(#CLE|match{\\(.*\\)}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
 		</a>
 	</span>
 </BOUCLE_top_geo>

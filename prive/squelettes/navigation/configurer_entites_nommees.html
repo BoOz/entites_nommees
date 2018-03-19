@@ -12,7 +12,7 @@
 <h2>Types d'entités automatiques</h2>
 <p>Entités nommées trouvées par IA à valider.</p>
 <ul>
-<BOUCLE_types(DATA){source sql,#VAL{"select type_entite, count(entite) poids from entites_nommees where type_entite not IN ('Institutions','Partis politiques','Entreprises','Peuples','Geographie') and statut !='publie' group by type_entite order by poids desc"}}>
+<BOUCLE_types(DATA){source sql,#VAL{"select type_entite, count(entite) poids from entites_nommees where type_entite not IN ('Institutions','Partis politiques','Entreprises','Peuples','Geographie') and entite not like '%auteur:%' and entite not like '%lieu:%' and entite not in ('République','Nord','Sud','Est','Ouest') and statut !='publie' group by type_entite order by poids desc"}}>
 <li><a href="[(#SELF|parametre_url{type,#TYPE_ENTITE})]">#TYPE_ENTITE</a> : #POIDS entités</li>
 </BOUCLE_types>
 </ul>

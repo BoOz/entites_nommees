@@ -6,10 +6,10 @@
 
 <B_entites_automatiques>
 #ANCRE_PAGINATION
-<h2>Entités [« (#ENV{type}) »] <small>#GRAND_TOTAL de statut  `prop `</small></h2>
+<h2>Entités [« (#ENV{type}) »] <small>[(#GRAND_TOTAL|number_format{0, ',', '&nbsp;'})] de statut  `prop `</small></h2>
 <ul>
-<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where statut != 'publie' "}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 500}{si #ENV{entite}|non}>
-<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]" title="#NB — #STATUT">#ENTITE</a></li>
+<BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where statut != 'publie' and type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)') and entite not like '%auteur:%' and entite not like '%lieu:%' and entite not in ('République','Nord','Sud','Est','Ouest')"}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}{pagination 500}{si #ENV{entite}|non}>
+<li>[(#ENV{type}|non)#TYPE_ENTITE - ]<a href="[(#SELF|parametre_url{entite,#ENTITE})]" title="#NB — #STATUT">#ENTITE</a> <small>([(#NB|number_format{0, ',', '&nbsp;'})])</small></li>
 </BOUCLE_entites_automatiques>
 </ul>
 <p>#PAGINATION</p>
