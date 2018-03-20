@@ -812,6 +812,7 @@ Hokkaido
  Honshu
  Kyushu
  Shikoku 
+Wakabayashi 
 
 // http://typo.mondediplo.net/messages/101
 // Jordanie
@@ -1892,4 +1893,3 @@ Proche-Orient
  Yougoslavie
 
  Zaïre
-
