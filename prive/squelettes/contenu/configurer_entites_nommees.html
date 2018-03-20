@@ -7,7 +7,7 @@
 <B_entites_automatiques>
 #ANCRE_PAGINATION
 <h2>[(#GRAND_TOTAL|number_format{0, ',', '&nbsp;'})] entités nommées non publiées <small> statut  `prop `</small>.</h2>
-<p>Ces entités seront publiées quand elles atteindront 10 occurrences.</p>
+<p>Ces entités seront publiées par la commande <kbd style="padding:5px;">spip entites -m oui</kbd> quand elles atteindront 10 occurrences.</p>
 <ul>
 <BOUCLE_entites_automatiques(DATA){source sql,#VAL{"select type_entite, entite, count(entite) nb, statut from entites_nommees where statut != 'publie' and type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)') and entite not like '%auteur:%' and entite not like '%lieu:%' and entite not in ('République','Nord','Sud','Est','Ouest')"}|concat{#GET{type}}|concat{" group by entite order by nb desc"}}
 {pagination 500}{si #ENV{entite}|non}{si #ENV{type}|non}>

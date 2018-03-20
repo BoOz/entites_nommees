@@ -102,6 +102,25 @@ class entites_nommees extends Command {
 						exit ;
 					}
 					
+					// maj du fichier auteurs si besoin
+					if($auteurs_txt = find_in_path("listes_lexicales/auteurs")){
+						$output->writeln("<info>Mise à jour des auteurs dans $auteurs_txt/auteurs_spip.txt</info>");
+						$auteurs = sql_allfetsel("nom","spip_auteurs");
+						foreach($auteurs as $a){
+							$nom = $a["nom"] ;
+							if(strpos($nom,'*')){
+								$n = explode("*",$nom);
+								$nom = $n[1] . " " . $n[0] ;
+							}
+							$liste_auteurs .= $nom . "\n" ;
+						}
+						//var_dump(_DIR_RACINE . "$auteurs_txt/auteurs_spip.txt");
+						include_spip("inc/flock");
+						if(!ecrire_fichier(_DIR_RACINE . "$auteurs_txt/auteurs_spip.txt", $liste_auteurs))
+							$output->writeln("<error>Erreur, pas pu écrire : " . _DIR_RACINE . "$auteurs_txt/auteurs_spip.txt</error>");
+						//var_dump($liste_auteurs);
+					}
+					
 					$output->writeln("<info>Mise à jour des entités dans la base de données d'après le fichier recaler.txt</info>");
 					
 					// recaler apres coup d'apres le fichier recaler.txt
@@ -111,7 +130,7 @@ class entites_nommees extends Command {
 					$entites_a_revoir = explode("\n", $recale);
 					if(sizeof($entites_a_revoir) > 1 )
 							foreach($entites_a_revoir as $e){
-								if(preg_match(",^//," ,$e) OR preg_match(",^$," ,$e)) /**/
+								if(preg_match(",^//," ,$e) OR preg_match(",^$," ,trim($e))) /**/
 									continue;
 								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
@@ -131,12 +150,18 @@ class entites_nommees extends Command {
 					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
 					include_spip('iterateur/data');
 					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
+					$types_requalif_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*/*') ; /**/
+					
+					$types_requalif = array_merge($types_requalif, $types_requalif_perso);
+					
 					foreach($types_requalif as $t){
 						$type_entite = basename($t['dirname']);
 						$entites_a_revoir = $freq = array(); 
 						$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
 						
-						if(sizeof($entites_a_revoir) > 1 ){
+						//var_dump($t['dirname'] . "/" . $t['basename'] , $entites_a_revoir);
+						
+						if(sizeof($entites_a_revoir) >= 1 ){
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;

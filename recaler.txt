@@ -85,5 +85,12 @@ Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu
 			
 // Ajoutés par Suzy			
 Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est
-Organisation de l'Etat islamique		Partis politiques	Organisation de l'État islamique
-Etat islamique		Partis politiques	Organisation de l'État islamique
+Organisation de l'Etat islamique	Organisation de l'Etat islamique	Partis politiques	Organisation de l'État islamique
+Etat islamique	Etat islamique	Partis politiques	Organisation de l'État islamique
+Communauté des États	indépendants	Organisations	Communauté des États indépendants
+Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe
+la Commission	europe	Organisations	Commission européenne
+Timor oriental	Timor oriental	Geographie	Timor-Leste
+Timor-Oriental	Timor-Oriental	Geographie	Timor-Leste
+			
+ASEAN	ASEAN	Organisations	Anase
