@@ -132,7 +132,7 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(preg_match(",^//," ,$e) OR preg_match(",^$," ,trim($e))) /**/
 									continue;
-								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite) = explode("\t", $e);
+								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite, $type_correc) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
 								$sel = 	"select * from entites_nommees where BINARY entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 								$q = sql_query($sel);
@@ -156,6 +156,11 @@ class entites_nommees extends Command {
 					
 					foreach($types_requalif as $t){
 						$type_entite = basename($t['dirname']);
+						
+						// Au cas ou...
+						if($type_entite == "Personnalites")
+							continue ;
+						
 						$entites_a_revoir = $freq = array(); 
 						$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
 						

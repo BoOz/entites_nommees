@@ -1,96 +1,102 @@
-// Entité actuelle	Texte contient	Type	Entité correcte
-Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
-Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
-OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)
-Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)
-ONU	ONU	Institutions	Organisation des Nations unies (ONU)
-FMI	FMI	Institutions	Fonds monétaire international (FMI)
-			
-// Personnalités			
-Gaulle	général de Gaulle	Personnalités	Charles de Gaulle
-Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)
-État	coups d'État	a_ajouter	Coup d'État
-Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II
-Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II
-Reagan	Reagan	Personnalités	Ronald Reagan
-Marx	Marx	Personnalités	Karl Marx
-Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev
-Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong
-Mao	Mao	Personnalités	Mao Zedong
-Le Pen	Mme Le Pen	Personnalités	Marine Le Pen
-Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen
-Pinochet	Pinochet	Personnalités	Augusto Pinochet
-BHL	BHL	Personnalités	Bernard-Henri Lévy
-Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing
-Nasser	Nasser	Personnalités	Gamal Abdel Nasser
-Allende	Allende	Personnalités	Salvadore Allende
-Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II
-Ben Laden	Ben Laden	Personnalités	Oussama Ben Laden
-Malcolm	Malcolm X	Personnalités	Malcolm X
-Fidel	Fidel	Personnalités	Fidel Castro
-Che Guevara	Che Guevara	Personnalités	Ernesto Che Guevara
-Che	Che	Personnalités	Ernesto Che Guevara
-Lula da Silva	Lula da Silva	Personnalités	Luiz Inácio Lula da Silva
-Lula	Lula	Personnalités	Luiz Inácio Lula da Silva
-Abdel xxx Sissi	Abdel Fatah Sissi	Personnalités	Abdel Fattah Al-Sissi
-			
-// Partis politiques avec nom d'usage ou disparus			
-Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)
-OLP	OLP	Partis politiques	Organisation de libération de la Palestine (OLP)
-Hezbollah	Hezbollah	Partis politiques	Parti de Dieu (Hezbollah)
-NPA	NPA	Partis politiques	Nouveau Parti anticapitaliste (NPA)
-PS	PS	Partis politiques	Parti socialiste (PS)
-Parti socialiste	Parti socialiste	Partis politiques	Parti socialiste (PS)
-PC	communiste français	Partis politiques	Parti communiste français (PCF)
-Front	Front national	Partis politiques	Front national (FN)
-Front national	Front national	Partis politiques	Front national (FN)
-Khmers	Khmers rouges	Partis politiques	Khmers rouges
-Conseil	Conseil national de la Résistance	Partis politiques	Conseil national de la Résistance (CNR)
-Parti	Parti populaire français	Partis politiques	Parti populaire français (PPF)
-Front Al-Nosra	Front Al-Nosra	Partis politiques	Front Fatah Al-Cham
-			
-// Pays avec noms d'usage			
-RFA	RFA	Pays	République fédérale d'Allemagne (RFA)
-RDC	RDC	Pays	République démocratique du Congo (RDC)
-RDA	RDA	Pays	République démocratique allemande (RDA)
-Maastricht	traité de Maastricht	a_ajouter	traité de Maastricht
-RAU	RAU	Pays	République arabe unie
-Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite
-			
-// Alias			
-Caire	Caire	Villes	Le Caire
-New York Times	New York Times	Journaux	The New York Times
-New York	New York Times	Journaux	The New York Times
-media:New York Times	New York Times	Sources	media:The New York Times
-Monde SA	Monde SA	Journaux	Le Monde
-Monde	Monde	Journaux	Le Monde
-Point	Point	Journaux	Le Point
-Figaro	Figaro	Journaux	Le Figaro
-TF	TF 1	Journaux	TF1
-Black Panthers	Black Panthers	Partis politiques	Panthères noires
-			
-// Choses connues			
-Jeux	Jeux olympiques	a_ajouter	Jeux olympiques
-Déclaration des droits de l'homme	Déclaration des droits de l'homme	institutions	Déclaration universelle des droits de l'homme
-Panthères	Panthères noires	Partis politiques	Panthères noires
-			
-// Accents			
-Equateur	Equateur	Pays	Équateur
-Etats-unis	Etats-unis	Pays	États-unis
-Abdel xxx Al-Sissi	Al-Sissi	Personnalités	Abdel Fattah Al-Sissi
-Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu
-			
-			
-			
-			
-// Ajoutés par Suzy			
-Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est
-Organisation de l'Etat islamique	Organisation de l'Etat islamique	Partis politiques	Organisation de l'État islamique
-Etat islamique	Etat islamique	Partis politiques	Organisation de l'État islamique
-Communauté des États	indépendants	Organisations	Communauté des États indépendants
-Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe
-la Commission	europe	Organisations	Commission européenne
-Timor oriental	Timor oriental	Geographie	Timor-Leste
-Timor-Oriental	Timor-Oriental	Geographie	Timor-Leste
-			
-ASEAN	ASEAN	Organisations	Anase
+// Entité actuelle	Texte contient	Type	Entité correcte	
+Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
+Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
+OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	acronyme
+Nations	Nations unies	Institutions	Organisation des Nations unies (ONU)	acronyme
+ONU	ONU	Institutions	Organisation des Nations unies (ONU)	acronyme
+FMI	FMI	Institutions	Fonds monétaire international (FMI)	acronyme
+				
+// Personnalités				
+Gaulle	général de Gaulle	Personnalités	Charles de Gaulle	correction
+Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)	correction
+État	coup d'État	a_ajouter	Coup d'État	
+Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II	correction
+Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II	
+Reagan	Reagan	Personnalités	Ronald Reagan	
+Marx	Marx	Personnalités	Karl Marx	correction
+Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev	
+Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong	
+Mao	Mao	Personnalités	Mao Zedong	
+Le Pen	Mme Le Pen	Personnalités	Marine Le Pen	correction
+Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen	correction
+Pinochet	Pinochet	Personnalités	Augusto Pinochet	
+BHL	BHL	Personnalités	Bernard-Henri Lévy	
+Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing	
+Nasser	Nasser	Personnalités	Gamal Abdel Nasser	alias
+Allende	Allende	Personnalités	Salvadore Allende	correction
+Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II	correction
+Ben Laden	Ben Laden	Personnalités	Oussama Ben Laden	alias
+Malcolm	Malcolm X	Personnalités	Malcolm X	correction
+Fidel	Fidel	Personnalités	Fidel Castro	correction
+Che Guevara	Che Guevara	Personnalités	Ernesto Che Guevara	alias
+Che	Che	Personnalités	Ernesto Che Guevara	alias
+Lula da Silva	Lula da Silva	Personnalités	Luiz Inácio Lula da Silva	alias
+Lula	Lula	Personnalités	Luiz Inácio Lula da Silva	alias
+Abdel xxx Sissi	Abdel Fatah Sissi	Personnalités	Abdel Fattah Al-Sissi	correction
+				
+// Partis politiques avec nom d'usage ou disparus				
+Hamas	Hamas	Partis politiques	Mouvement de la résistance islamique (Hamas)	alias
+OLP	OLP	Partis politiques	Organisation de libération de la Palestine (OLP)	alias
+Hezbollah	Hezbollah	Partis politiques	Parti de Dieu (Hezbollah)	alias
+NPA	NPA	Partis politiques	Nouveau Parti anticapitaliste (NPA)	alias
+PS	PS	Partis politiques	Parti socialiste (PS)	alias
+Parti socialiste	Parti socialiste	Partis politiques	Parti socialiste (PS)	alias
+PC	communiste français	Partis politiques	Parti communiste français (PCF)	alias
+Front	Front national	Partis politiques	Front national (FN)	alias
+Front national	Front national	Partis politiques	Front national (FN)	correction
+Khmers	Khmers rouges	Partis politiques	Khmers rouges	correction
+Conseil	Conseil national de la Résistance	Partis politiques	Conseil national de la Résistance (CNR)	correction
+Parti	Parti populaire français	Partis politiques	Parti populaire français (PPF)	correction
+Front Al-Nosra	Front Al-Nosra	Partis politiques	Front Fatah Al-Cham	alias
+				
+// Pays avec noms d'usage				
+RFA	RFA	Pays	République fédérale d'Allemagne (RFA)	alias
+RDC	RDC	Pays	République démocratique du Congo (RDC)	alias
+RDA	RDA	Pays	République démocratique allemande (RDA)	alias
+Maastricht	traité de Maastricht	a_ajouter	traité de Maastricht	correction
+RAU	RAU	Pays	République arabe unie	alias
+Arabie Saoudite	Arabie Saoudite	Pays	Arabie saoudite	
+				
+// Alias				
+Caire	Caire	Villes	Le Caire	correction
+New York Times	New York Times	Journaux	The New York Times	correction
+New York	New York Times	Journaux	The New York Times	correction
+media:New York Times	New York Times	Sources	media:The New York Times	correction
+Monde SA	Monde SA	Journaux	Le Monde	correction
+Monde	Monde	Journaux	Le Monde	correction
+Point	Point	Journaux	Le Point	correction
+Figaro	Figaro	Journaux	Le Figaro	correction
+TF	TF 1	Journaux	TF1	correction
+Black Panthers	Black Panthers	Partis politiques	Panthères noires	alias
+				
+// Choses connues				
+Jeux	Jeux olympiques	a_ajouter	Jeux olympiques	correction
+Déclaration des droits de l'homme	Déclaration des droits de l'homme	institutions	Déclaration universelle des droits de l'homme	correction
+Panthères	Panthères noires	Partis politiques	Panthères noires	correction
+				
+// Accents				
+Equateur	Equateur	Pays	Équateur	correction
+Etats-unis	Etats-unis	Pays	États-unis	correction
+Abdel xxx Al-Sissi	Al-Sissi	Personnalités	Abdel Fattah Al-Sissi	correction
+Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu	correction
+				
+				
+				
+				
+// Ajoutés par Suzy				
+Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est	alias
+Organisation de l'Etat islamique	Organisation de l'Etat islamique	Partis politiques	Organisation de l'État islamique	correction
+État islamique	Etat islamique	Partis politiques	Organisation de l'État islamique	alias
+Communauté des États	indépendants	Organisations	Communauté des États indépendants	correction
+Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe	correction
+la Commission	europe	Organisations	Commission européenne	correction
+Timor oriental	Timor oriental	Geographie	Timor-Leste	alias
+Timor-Oriental	Timor-Oriental	Geographie	Timor-Leste	alias
+				
+ASEAN	ASEAN	Organisations	Anase	alias
+LREM	LREM	Partis politiques	En marche	alias
+Frères	musulmans	Partis politiques	Frères musulmans	correction
+Sadam	Hussein	Personnalités	Saddam Hussein	correction
+Arabie Séoudite	Arabie Séoudite	Pays	Arabie saoudite	alias
+Arabie séoudite	Arabie séoudite	Pays	Arabie saoudite	alias
+Oréal Paris	Oréal Paris	Entreprises	L'Oréal Paris	correction

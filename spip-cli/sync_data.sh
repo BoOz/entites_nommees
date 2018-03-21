@@ -34,6 +34,9 @@ typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=medias" >
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=habitants" > Peuples/peuples_typo.txt
 typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=sujets" > Sujets/sujets_diplo.txt
 
+# Personnalités de controle a posteriori avec wikipedia
+typoDiploBrut "http://typo.mondediplo.net/?page=entites_nommees&entite=personnalites" > personnalites_typo.txt
+
 # Diff
 
 cd ../
