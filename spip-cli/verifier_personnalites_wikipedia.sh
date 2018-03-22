@@ -16,9 +16,9 @@ mv ../stats/personnalites.txt.tmp ../stats/personnalites.txt
 cat ../stats/entites_validees.txt | sort | uniq > ../stats/entites_validees.txt.tmp
 mv ../stats/entites_validees.txt.tmp ../stats/entites_validees.txt
 
-comm -2 -3 ../stats/personnalites.txt ../stats/entites_validees.txt > ./stats/personnalites_a_valider.txt
+comm -2 -3 ../stats/personnalites.txt ../stats/entites_validees.txt > ../stats/personnalites_a_valider.txt
 
-cat ./stats/personnalites_a_valider.txt | while read f
+cat ../stats/personnalites_a_valider.txt | while read f
 do
 	
 	# page fr de wikipedia pour $f
@@ -43,7 +43,7 @@ do
 	str=$(echo "$p" | grep "Wikipédia ne possède pas d'article avec ce nom")
 	if (( ${#str} > 0 ))
 		then
-			echo "$original inconnu..." >> ../listes_lexicales/Sujets/entites_inconnues_wikipedia.txt
+			echo "$original" >> ../listes_lexicales/Sujets/entites_inconnues_wikipedia.txt
 			echo "$original" >> ../stats/entites_validees.txt
 			continue
 	fi
@@ -66,17 +66,6 @@ do
 			continue
 	fi
 	
-	str=$(echo $categories | grep -Eo "État|Pays|Comté|Quartier")
-	if (( ${#str} > 0 ))
-		then
-			echo "$original géo"
-			echo "$original" >> ../listes_lexicales/Geographie/geographie_wikipedia.txt
-			echo "$original" >> ../stats/entites_validees.txt
-			continue
-	fi
-	
-	
-	
 	str=$(echo $categories | grep -Eo "Entreprise")
 	if (( ${#str} > 0 ))
 		then
@@ -94,7 +83,16 @@ do
 			echo "$original" >> ../stats/entites_validees.txt
 			continue
 	fi
-
+	
+	str=$(echo $categories | grep -Eo "Pays|Comté|Quartier")
+	if (( ${#str} > 0 ))
+		then
+			echo "$original géo"
+			echo "$original" >> ../listes_lexicales/Geographie/geographie_wikipedia.txt
+			echo "$original" >> ../stats/entites_validees.txt
+			continue
+	fi
+	
 	str=$(echo $categories | grep -Eo "Traité")
 	if (( ${#str} > 0 ))
 		then
@@ -149,13 +147,7 @@ do
 	fi
 	
 	# Les autres passent dans divers
-	str=$(echo $categories | grep -Eo "Parti politique")
-	if (( ${#str} > 0 ))
-		then
-			echo "$original Divers"
-			echo "$original" >> ../listes_lexicales/Sujets/divers_wikipedia.txt
-			echo "$original" >> ../stats/entites_validees.txt
-			continue
-	fi
-	
+	echo "$original" >> ../listes_lexicales/Sujets/divers_wikipedia.txt
+	echo "$original" >> ../stats/entites_validees.txt
+
 done

@@ -146,17 +146,6 @@ class entites_nommees extends Command {
 								}
 							}
 					
-					// controler les personnalites publiées sur wikipedia
-					$personnalites_publiees = sql_allfetsel("entite", "entites_nommees","type_entite='Personnalites' and statut='publie'","entite");
-					foreach($personnalites_publiees as $pers)
-						$liste_pers .= $pers["entite"] . "\n" ;
-					
-					include_spip("inc/flock");
-					if(!ecrire_fichier("plugins/entites_nommees/stats/personnalites.txt", $liste_pers))
-						$output->writeln("<error>Erreur, pas pu écrire : plugins/entites_nommees/stats/personnalites.txt</error>");
-					
-					passthru("./plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
-					
 					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
 					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
 					include_spip('iterateur/data');
@@ -181,12 +170,12 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
 								
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;
@@ -194,6 +183,7 @@ class entites_nommees extends Command {
 							}
 						}
 					}
+					
 					$output->writeln("<info>Requalification des données d'après les mots courants (stop words)</info>");
 					include_spip("inc/entites_nommees");
 					$words = generer_stop_words();
@@ -229,8 +219,6 @@ class entites_nommees extends Command {
 							
 						}
 					}
-					
-					
 					
 					// effacer les entites trop peu frequentes
 					$date_e = sql_fetch(sql_query("select DATE_ADD(date,INTERVAL -5 YEAR) ladate from entites_nommees order by date desc limit 0,1"));
@@ -296,6 +284,57 @@ class entites_nommees extends Command {
 					
 					echo "Maj de 'plugins/entites_nommees/stats/decompte_references.txt'\n" ;
 					echo sizeof($references) . " références apparaissant plus de 10 fois.\n\n" ;
+					
+					
+					// controler les personnalites publiées sur wikipedia
+					$personnalites_publiees = sql_allfetsel("entite", "entites_nommees","type_entite='Personnalites' and statut='publie'","entite");
+					foreach($personnalites_publiees as $pers)
+						$liste_pers .= $pers["entite"] . "\n" ;
+					
+					include_spip("inc/flock");
+					if(!ecrire_fichier("plugins/entites_nommees/stats/personnalites.txt", $liste_pers))
+						$output->writeln("<error>Erreur, pas pu écrire : plugins/entites_nommees/stats/personnalites.txt</error>");
+					
+					passthru("plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
+					
+					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
+					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
+					include_spip('iterateur/data');
+					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
+					$types_requalif_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*/*') ; /**/
+					
+					$types_requalif = array_merge($types_requalif, $types_requalif_perso);
+					
+					foreach($types_requalif as $t){
+						$type_entite = basename($t['dirname']);
+						
+						// Au cas ou...
+						if($type_entite == "Personnalites")
+							continue ;
+						
+						$entites_a_revoir = $freq = array(); 
+						$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
+						
+						//var_dump($t['dirname'] . "/" . $t['basename'] , $entites_a_revoir);
+						
+						if(sizeof($entites_a_revoir) >= 1 ){
+							foreach($entites_a_revoir as $e){
+								if(trim($e) == "")
+									continue ;
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								
+								$nb = sql_count($ent);
+								if($nb > 0){
+									echo $nb . " entites " . $e . " => "  . $t['filename'] .  " : $type_entite \n";
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									echo $up . "\n";
+									sql_query($up);
+									echo "\n\n" ;
+								}
+							}
+						}
+					}
+					
 					exit();
 				}
 				
