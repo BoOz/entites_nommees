@@ -91,9 +91,7 @@ Communauté des États	latino-amércain	Organisations	Communauté des États lat
 la Commission	europe	Organisations	Commission européenne	correction
 Timor oriental	Timor oriental	Geographie	Timor-Leste	alias
 Timor-Oriental	Timor-Oriental	Geographie	Timor-Leste	alias
-				
 ASEAN	ASEAN	Organisations	Association des nations de l'Asie du Sud-Est (Anase)	alias
-LREM	LREM	Partis politiques	En marche	alias
 Frères	musulmans	Partis politiques	Frères musulmans	correction
 Sadam	Hussein	Personnalités	Saddam Hussein	correction
 Arabie Séoudite	Arabie Séoudite	Pays	Arabie saoudite	alias
