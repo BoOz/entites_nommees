@@ -1,7 +1,7 @@
-Entités nommées dans Typo
 
-Personnalités - Institutions - Partis et formations politiques - Pays - Villes - Géographie - Publications - Nationalité / éthnies - /!\ Sociétés (A ajouter dans Divers en section 2) - Fonctions - Langues - Nature de l'État et Régime
+
 // Pays (nom officiel)
+
 Antigua-et-Barbuda
 Belize
 Burkina Faso
@@ -186,219 +186,421 @@ sultanat de Brunei Darussalam
 territoire de Nouvelle-Calédonie et dépendances
 État d'Israël
 État de Libye
-État de Palestine
-territoires palestiniens
+État de Palestine 
+ territoires palestiniens
 État des émirats arabes unis
 État du Koweït
 État du Qatar
 État indépendant de Papouasie-Nouvelle-Guinée
 État indépendant des Samoa
 État libre associé de Porto Rico
-État plurinational de Bolivie
-République de Bolivie
+État plurinational de Bolivie 
+ République de Bolivie
 États fédérés de Micronésie
 États-Unis d'Amérique
 États-Unis du Mexique
 îles Salomon
-// Pays
+
+// Pays 
+
 Afghanistan
+
 Afrique du Sud
+
 Albanie
+
 Algérie
+
 Allemagne
+
 Andorre
+
 Angola
+
 Antigua-et-Barbuda
+
 Arabie saoudite
+
 Argentine
+
 Arménie
+
 Australie
+
 Autriche
+
 Azerbaïdjan
+
 Bahamas
+
 Bahreïn
+
 Bangladesh
+
 Barbade
+
 Belgique
+
 Belize
+
 Bénin
+
 Bhoutan
+
 Biélorussie
+
 Birmanie
+
 Bolivie
+
 Bosnie-Herzégovine
+
 Botswana
+
 Brésil
+
 Brunei
+
 Bulgarie
+
 Burkina faso
+
 Burundi
+
 Cambodge
+
 Cameroun
+
 Canada
+
 Cap-Vert
+
 Chili
+
 Chine
+
 Chypre
+
 Colombie
+
 Comores
+
 Congo
+
 Corée du Nord
+
 Corée du Sud
+
 Costa Rica
+
 Côte d'Ivoire
+
 Croatie
+
 Cuba
+
 Danemark
+
 Djibouti
+
 Dominique
+
 Égypte
+
 Émirats arabes unis
+
 Équateur
+
 Érythrée
+
 Espagne
+
 Estonie
+
 États-Unis
+
 Éthiopie
+
 Ex-yougoslavie
+
 Fidji
+
 Finlande
+
 France
+
 Gabon
+
 Gambie
+
 Géorgie
+
 Ghana
+
 Grèce
+
 Grenade
+
 Guatemala
+
 Guinée
+
 Guinée-Bissau
+
 Guinée-Équatoriale
+
 Guyana
+
 Haïti
+
 Honduras
+
 Hongrie
+
 Inde
+
 Indonésie
+
 Irak
+
 Iran
+
 Irlande
+
 Islande
+
 Israël
+
 Italie
+
 Jamaïque
+
 Japon
+
 Jordanie
+
 Kazakhstan
+
 Kenya
+
 Kirghizstan
+
 Kiribati
+
 Kosovo
+
 Koweït
+
 Laos
+
 Lesotho
+
 Lettonie
+
 Liban
+
 Liberia
+
 Libye
+
 Liechtenstein
+
 Lituanie
+
 Luxembourg
+
 Macédoine
+
 Madagascar
+
 Malaisie
+
 Malawi
+
 Maldives
+
 Mali
+
 Malte
+
 Maroc
+
 Marshall
+
 Maurice
+
 Mauritanie
+
 Mexique
+
 Micronésie
+
 Moldavie
+
 Monaco
+
 Mongolie
+
 Monténégro
+
 Mozambique
+
 Namibie
+
 Nauru
+
 Népal
+
 Nicaragua
+
 Niger
+
 Nigeria
+
 Norvège
+
 Nouvelle-Calédonie
+
 Nouvelle-Zélande
+
 Oman
+
 Ouganda
+
 Ouzbékistan
+
 Pakistan
+
 Palau
+
 Palestine
+
 Panamá
+
 Papouasie-Nouvelle-Guinée
+
 Paraguay
+
 Pays-Bas
+
 Pérou
+
 Philippines
+
 Pologne
-Porto rico
+
+Porto Rico
+
 Portugal
+
 Qatar
+
 République centrafricaine
+
 République démocratique du Congo
+
 République dominicaine
+
 République tchèque
+
 Roumanie
-Royaume-uni
+
+Royaume-Uni
+
 Russie
+
 Rwanda
+
 Saint-Kitts-et-Nevis
+
 Saint-Marin
+
 Saint-Vincent-et-les-Grenadines
+
 Sainte-Lucie
+
 Salomon
+
 Salvador
+
 Samoa
+
 São-Tomé-et-Príncipe
+
 Sénégal
+
 Serbie
+
 Seychelles
+
 Sierra Leone
+
 Singapour
+
 Slovaquie
+
 Slovénie
+
 Somalie
+
 Soudan
+
 Soudan du Sud
+
 Sri lanka
+
 Suède
+
 Suisse
+
 Surinam
+
 Swaziland
+
 Syrie
+
 Tadjikistan
+
 Taïwan
+
 Tanzanie
+
 Tchad
+
 Thaïlande
+
 Timor-Leste
+
 Togo
+
 Tonga
+
 Trinité-et-Tobago
+
 Tunisie
+
 Turkménistan
+
 Turquie
+
 Tuvalu
+
 Ukraine
+
 Union soviétique
+
 Uruguay
+
 Vanuatu
+
 Vatican
+
 Venezuela
+
 Vietnam
+
 Yémen
+
 Zambie
+
 Zimbabwe

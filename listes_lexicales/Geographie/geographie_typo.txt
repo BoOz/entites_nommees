@@ -1,183 +1,152 @@
-// lieux
-// AUSTRALIE
 
-// BIRMANIE
 
-// BRUNEI
+// lieux 
 
-// CAMBODGE
-
-// EX-YOUGOSLAVIE
-
-// FIDJI
-
-// INDONÉSIE
-
-// KIRIBATI f.
-
-// LAOS
-
-// MALAISIE
-
-// MALDIVES
-
-// MARSHALL
-
-// MICRONÉSIE f.
-
-// NAURU f.
-
-// NOUVELLE-CALÉDONIE
-
-// Provinces
-province Nord
-province Sud
-province des îles Loyauté
-
-// NOUVELLE-ZÉLANDE
-
-// NUNAVUT
-
-// PALAU m.
-
-// PAPOUASIE-NOUVELLE-GUINÉE
-
-// Provinces
-Hela
-
-// PHILIPPINES
-
-// PORTO RICO
-
-// SAINT-KITTS-ET-NEVIS
-
-// SAINT-MARIN
-
-// SAINT-VINCENT-ET-LES-GRENADINES
-
-// SAINTE-LUCIE
-
-// SALOMON
-
-// SAMOA
-
-// SÃO-TOMÉ-ET-PRÍNCIPE
-
-// THAÏLANDE
-
-// TIMOR-LESTE
-
-// TONGA
-
-// TUVALU
-
-// UKRAINE
-
-// Union soviétique
-
-// VANUATU
-
+// http://typo.mondediplo.net/messages/182
 // Afghanistan
 
+//Divers
+
+province de Helmand
+Herat
+
+// http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
-// Provinces
+// Provinces 
 Cap-Est
 Cap-Nord
 Cap-Ouest
-Etat libre
+État libre
 Gauteng
 Kwazulu-Natal
 Limpopo
 Mpumalanga
-Nord-Ouest.
+Nord-Ouest
 
+// http://typo.mondediplo.net/messages/180
 // Albanie
 
-// Divers
+//Divers
+
 lac Shkroda
-Drin
+Drin 
 
-
+// http://typo.mondediplo.net/messages/179
 // Algérie
 
-// Divers
-Bab El-Oued
-la Casbah d’Alger
+//Divers
+
+Bab El-Oued 
+la casbah d'Alger 
 Kabylie
-Petite Kabylie
-Grande Kabylie
+ Petite Kabylie
+ Grande Kabylie
+Sidi Bel Abbès
 
-
-
+// http://typo.mondediplo.net/messages/178
 // Allemagne
 
-// Divers
-Alexanderplatz
-Spree
+//Divers
 
+Alexanderplatz 
+Spree 
 
+// http://typo.mondediplo.net/messages/177
 // Andorre
 
+// http://typo.mondediplo.net/messages/176
 // Angola
 
-// Divers
+//Divers
+
 Aldeia Nova
 Benguela
-fleuves Dande
-Cuanza
+Dande
+ Cuanza
+Capanda 
+Waku-Kungo 
 
-Capanda
-Waku-Kungo
-
-
+// http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
 
+// http://typo.mondediplo.net/messages/174
 // Arabie saoudite
 
-// Provinces
+// Provinces 
 Al-Jouf
 Asir
 Jizan
 Najran
 Nadjd
 
-// Divers
-Dhahran
-Farasan
-le Hedjaz
+//Divers
+
+Dhahran 
+Farasan 
+le Hedjaz 
 péninsule arabique
-Tiran Égypte - Arabie saoudite
-La minorité chiite se trouve dans la province orientale
+Roub Al-Khali  
+Tiran  
+Zahran 
 
-
+// http://typo.mondediplo.net/messages/173
 // Argentine
 
+// http://typo.mondediplo.net/messages/172
 // Arménie
 
+// http://typo.mondediplo.net/messages/171
+// Australie
+
+// Provinces 
+Territoire  Nord
+Territoire de la capitale australienne
+
+//Divers
+
+Darwin
+ Pine Gap 
+terre d'Arnhem 
+
+// http://typo.mondediplo.net/messages/170
 // Autriche
 
+// http://typo.mondediplo.net/messages/169
 // Azerbaïdjan
 
+// http://typo.mondediplo.net/messages/168
 // Bahamas
 
-// Divers
-les Bahamas sont composées de 700 îles et îlots
+//Divers
 
 
+// http://typo.mondediplo.net/messages/167
 // Bahreïn
 
-// Divers
+//Divers
+
 îles Hawar
 
-
+// http://typo.mondediplo.net/messages/166
 // Bangladesh
 
+// http://typo.mondediplo.net/messages/165
 // Barbade
 
+// http://typo.mondediplo.net/messages/164
 // Belgique
 
-// Provinces
+// Provinces 
+wallonne
+flamande  bruxelloise 
+trois Communautés 
+Communauté flamande
+Communauté française
+Communauté germanophone
+Région flamande
+Région wallonne
+Région de Bruxelles-capitale
 Anvers
 Brabant flamand
 Brabant wallon
@@ -189,315 +158,524 @@ Liège
 Luxembourg
 Namur
 
+// http://typo.mondediplo.net/messages/163
 // Belize
 
+// http://typo.mondediplo.net/messages/162
 // Bénin
 
+// http://typo.mondediplo.net/messages/161
 // Bhoutan
 
+// http://typo.mondediplo.net/messages/160
 // Biélorussie
 
+// Provinces 
+Brest
+Homel
+Hrodna
+Mahiliow
+Minsk
+Vitebsk
+
+// http://typo.mondediplo.net/messages/159
+// Birmanie
+
+//Divers
+
+Rangoun 
+Pyinmana 
+Salween
+ Irrawaddy 
+« région spéciale » n° 1 
+le Kokang 
+Ramree 
+îles Cocos 
+champ gazier de Yadana 
+barrage de Ta Sang  
+ barrage de Myitsone
+Hatgyi 
+Tasang 
+
+// http://typo.mondediplo.net/messages/158
 // Bolivie
 
+// http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
-// Divers
-Vrbas
+//Divers
 
+Vrbas 
 
+// http://typo.mondediplo.net/messages/156
 // Botswana
 
+// http://typo.mondediplo.net/messages/155
 // Brésil
 
-// Divers
-l’ABC
-périphérie industrielle de São Paulo
+//Divers
 
+l'ABC  
 
+// http://typo.mondediplo.net/messages/154
+// Brunei
 
+// http://typo.mondediplo.net/messages/153
 // Bulgarie
 
-// Divers
+//Divers
+
 monts Rhodopes
-Stara Planina
+Stara Planina 
 
-
+// http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
-// Divers
-Kadiogo
+//Divers
 
+Kadiogo 
 
+// http://typo.mondediplo.net/messages/151
 // Burundi
 
+// http://typo.mondediplo.net/messages/1019
+// Cambodge
+
+//Divers
+
+lac Tonlé Sap
+
+// http://typo.mondediplo.net/messages/150
 // Cameroun
 
-// Divers
-péninsule de Bakassi
+// Provinces 
+Adamaoua
+ Centre
+Est
+Extrême-Nord
+ Littoral
+Ouest
+ Nord
+ Nord-Ouest
+ Sud   Sud-Ouest
+
+//Divers
+
+péninsule de Bakassi 
 barrage de Lom Pangar
-port et centrale à gaz de Kribi
-centrale hydroélectrique de Mem'vele
+ port et centrale à gaz de Kribi
+ centrale hydroélectrique de Mem'vele
 
-
-
+// http://typo.mondediplo.net/messages/149
 // Canada
 
-// Divers
+// Provinces 
+Alberta
+Colombie-Britannique
+Manitoba
+Nouveau-Brunswick
+Terre-Neuve--Labrador
+Ontario
+Nouvelle-Écosse
+Île--Prince-Édouard
+Québec
+Saskatchewan
+Nunavut
+Yukon
+
+//Divers
+
 archipel Arctique canadien
 
-
+// http://typo.mondediplo.net/messages/148
 // Cap-Vert
 
-// Divers
-São Vicente
+//Divers
 
+São Vicente 
 
+// http://typo.mondediplo.net/messages/146
 // Chili
 
+// http://typo.mondediplo.net/messages/1020
 // Chine
 
-// Divers
-se reporter à la carte du _Manière de voir_ n° 123
-« Chine
-état critique »
+// Provinces 
+Fujian
+Gansu
+Guangdong
+Heilongjiang
+Hubei
+Hunan
+Zhejiang 
+Xinjiang
+vallée de la Shaksgam  Aksai Chin
+
+//Divers
 
 
-
+// http://typo.mondediplo.net/messages/145
 // Chypre
 
-// Divers
+//Divers
+
 l'île d'Aphrodite
 
-
+// http://typo.mondediplo.net/messages/144
 // Colombie
 
+// http://typo.mondediplo.net/messages/143
 // Comores
 
-// Divers
-Mayotte est administrée par le France
+//Divers
+
 Grands-Comoriens
-Mohéliens
-Anjouanais
+ Mohéliens
+ Anjouanais
 
-
-
+// http://typo.mondediplo.net/messages/142
 // Congo
 
-// Divers
-région du Pool
+//Divers
+
+région du Pool 
 quartier de Mpila
-Oyo 
+Oyo 
 
-
+// http://typo.mondediplo.net/messages/1086
 // Corée du Nord
 
+// http://typo.mondediplo.net/messages/1087
 // Corée du Sud
 
+// http://typo.mondediplo.net/messages/141
 // Costa Rica
 
-// Divers
-fleuve San Juan
-parc de la Merced
+//Divers
 
+San Juan 
+parc de la Merced 
 
+// http://typo.mondediplo.net/messages/140
 // Côte d'Ivoire
 
-// Divers
+//Divers
+
 Bouaké
 Cocody
-le Plateau
+ le Plateau 
+Grand-Bassam 
+Cavally 
 
-Grand-Bassam
-fleuve Cavally
-
-
+// http://typo.mondediplo.net/messages/139
 // Croatie
 
-// Divers
+//Divers
+
 péninsule d'Istrie
 
-
+// http://typo.mondediplo.net/messages/138
 // Cuba
 
-// Divers
-Sierra Maestra
-caserne Moncada
+//Divers
+
+Sierra Maestra 
+caserne Moncada 
 Santiago de Cuba
-Oriente
-Gran Piedra
-zone de Guantanamo louée aux États-Unis
+Oriente 
+Gran Piedra 
 
-
+// http://typo.mondediplo.net/messages/137
 // Danemark
 
-// Divers)
-île de Fyn
-Jylland
-Nørrebro
-l'Øresund ou Sund
-Roskilde
+// Provinces 
+Hovedstaden
+Jutland  Nord
+Jutland central
+Danemark  Sud
+Zélande  Nord
 
+//Divers
 
+Christianshavn 
+île de Fyn 
+Jylland 
+Nørrebro 
+l'Øresund 
+Sund 
+Roskilde 
+
+// http://typo.mondediplo.net/messages/136
 // Djibouti
 
-// Divers
+//Divers
+
 port de Doraleh
 
-
+// http://typo.mondediplo.net/messages/135
 // Dominique
 
+// http://typo.mondediplo.net/messages/1309
 // Égypte
 
-// Divers
-valée du Nil
+//Divers
+ 
+Charm El-Cheikh
+place Tahrir
+vallée du Nil
 
-
+// http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
+// http://typo.mondediplo.net/messages/132
 // Équateur
 
+// http://typo.mondediplo.net/messages/131
 // Érythrée
 
+//Divers
+ 
+Dahlak 
+
+// http://typo.mondediplo.net/messages/130
 // Espagne
 
-// Divers 
+// Provinces 
+Andalousie
+Aragon
+Principauté des Asturies
+îles Baléares
+communauté autonome basque
+Canaries
+Cantabrie
+Castille-La Manche
+Castille--León
+Catalogne
+Estrémare
+Galice
+communauté de Madrid
+région de Murcie
+communauté de Navarre
+La Rioja
+communauté valencienne
+
+//Divers
+ 
 Costa Brava
 Costa Dorada
-aux Canaries : El Medano
-El Hierro
+Canaries
+El Medano
+ El Hierro 
 
-
-
+// http://typo.mondediplo.net/messages/129
 // Estonie
 
+// http://typo.mondediplo.net/messages/128
 // États-Unis
 
-// Divers
-baie de Guantánamo « louée » à Cuba
-île de Guam cédée par l'Espagne aux Etats-Unis en 1898  
-14 autres territoires dépendants non incorporés
+//Divers
 
+Guantánamo  
+île de Guam  
+Samoa
+ Baker
+ Howland
+ Jarvis
+ Johnston Atoll
+ Kingman Reef
+ Midway
+ Navassa
+ Northern Mariana
+ Palmyra Atoll
+ Puerto Rico
+ Virgin
+ Wake 
 
-
+// http://typo.mondediplo.net/messages/127
 // Éthiopie
 
-// Divers
-L'Éthiopie enclavée a accès à la mer par Port-Soudan et par Djibouti.
+//Divers
+
 barrage de la Renaissance du Nil Bleu
+Bole 
 
+// http://typo.mondediplo.net/messages/1043
+// EX-YOUGOSLAVIE
 
+// http://typo.mondediplo.net/messages/126
+// Fidji
+
+//Divers
+
+Vanua Levu
+Viti Levu
+
+// http://typo.mondediplo.net/messages/124
 // Finlande
 
+// Provinces 
+Aland
+Carélie  Nord
+Carélie  Sud
+Finlande centrale
+Finlande  Sud-Ouest
+Kainuu
+Kanta-Häme
+Laponie
+Ostrobotnie
+Ostrobotnie centrale
+Ostrobotnie  Nord
+Ostrobotnie  Sud
+Päijät-Häme
+Pirkanmaa
+Satakunta
+Savonie  Nord
+Savonie  Sud
+Uusimaa
+Vallée de la Kymi
+
+// http://typo.mondediplo.net/messages/123
 // France
 
-// Divers
-Front de Seine
+//Divers
+
+Front de Seine 
 hôpital de la Croix-Rouge
 la Goutte-d'Or
 le Val-Fourré
-Roissy - Charles-de-Gaulle
+Roissy - Charles-de-Gaulle 
 Sophia Antipolis
 
-
+// http://typo.mondediplo.net/messages/122
 // Gabon
 
-// Divers
+//Divers
+
 Bélinga
 
-
+// http://typo.mondediplo.net/messages/121
 // Gambie
 
+// http://typo.mondediplo.net/messages/120
 // Géorgie
 
-// Divers
-Akhalkalaki
-Gori
+// Provinces 
+Gourie
+Iméréthie
+Kakhétie
+Kvémo-Kartlie
+Mingrélie  Haute-Svanétie
+Mtskhéta-Mtianéti
+Racha-Léckhumi  Kvémo Svanéti
+Samtskhe-Djavakhéti
+Shida Kartli
+Abkhazie
+Adjarie
+
+//Divers
+
+Akhalkalaki 
+Gori 
 vallée de Pankissi
-Sénaki
+Sénaki 
 
-
+// http://typo.mondediplo.net/messages/119
 // Ghana
 
-// Divers
+//Divers
+
 Nima
-quartier populaire d’Accra
+ quartier populaire d'Accra
+barrage d'Akosombo
+Volta 
+Gold Coast
+ 
+Côte-de-l'Or 
 
-barrage d’Akosombo
-Volta
-ancienne Gold Coast
-ou Côte-de-l’Or
-
-
-
+// http://typo.mondediplo.net/messages/118
 // Grèce
 
-// Divers
-Salonique
-plutôt que Thessalonique
+//Divers
 
-place Syntagma
+Salonique 
+place Syntagma 
 
-
+// http://typo.mondediplo.net/messages/117
 // Grenade
 
+// http://typo.mondediplo.net/messages/116
 // Guatemala
 
-// Divers
+//Divers
+
 volcan Fuego
 Tikal
-Mirador
+ Mirador 
+Usumacinta
 
-fleuve Usumacinta
-
-
+// http://typo.mondediplo.net/messages/115
 // Guinée
 
+// http://typo.mondediplo.net/messages/114
 // Guinée-Bissau
 
-// Divers
+//Divers
+
 Bafatá
 
-
+// http://typo.mondediplo.net/messages/113
 // Guinée-Équatoriale
 
-// Divers
-ex-Guinée espagnole : Río Muni et île Bioko
+//Divers
 
+Río Muni
+ île Bioko  
 
+// http://typo.mondediplo.net/messages/112
 // Guyana
 
+// http://typo.mondediplo.net/messages/111
 // Haïti
 
-// Divers
-Artibonite
+//Divers
+
+Artibonite 
 Cité Soleil
-la Saline
-Bel Air
-Martissant
+ la Saline
+ Bel Air
+ Martissant 
+Cap-Haïtien
+ Pétionville
 
-Pétionville
-
-
+// http://typo.mondediplo.net/messages/110
 // Honduras
 
-// Divers
-Copán
-Soto Cano Air Base
+//Divers
 
+Copán 
+Soto Cano Air Base 
 
+// http://typo.mondediplo.net/messages/109
 // Hongrie
 
+// http://typo.mondediplo.net/messages/1088
 // Inde
 
-// Divers
-Jammu-et-Cachemire  
-le reste du Cachemire est divisé entre le Pakistan et la Chine. Conflit ouvert
+//Divers
+
+Jammu-et-Cachemire   
+ Bengale-Occidental 
+
+// http://typo.mondediplo.net/messages/1089
+// Indonésie
+
+//Divers
 
 
-
+// http://typo.mondediplo.net/messages/108
 // Irak
 
-// Provinces
+// Provinces 
 Anbar
 Bagdad
 Bassora
@@ -513,17 +691,15 @@ Salaheddine
 Souleimaniyé
 Wasit
 
-// Divers
-« zone verte » : îlot hypersécurisé situé à Bagdad et permettant de maintenir l'activité des institutions
-Chatt Al-Arab
-Les 3 provinces kurdes sont constituées en région autonome  
-le reste du découpage des entités fédérées est retardé par la grande instabilité dans l'ensemble du pays.
+//Divers
 
+« zone verte » 
+Chatt Al-Arab 
 
-
+// http://typo.mondediplo.net/messages/107
 // Iran
 
-// Provinces
+// Provinces 
 Alborz
 Ardebil
 Bouchehr
@@ -539,429 +715,756 @@ Téhéran
 Yazd
 Zanjan
 
-// Divers
-Abou Moussa
-Araxe
-Chatt Al-Arab
-Ormuz
-Khorasan
-Khouzistan
-Ourmia
+//Divers
 
+Ab
+Moussa 
+ Arabistan
+ Araxe 
+ Chatt Al-Arab 
+ Ormuz 
+ Khorasan
+ Khorramshahr
+ Khouzistan
+ Ourmia 
+îles Tomb 
 
-
+// http://typo.mondediplo.net/messages/106
 // Irlande
 
+// http://typo.mondediplo.net/messages/105
 // Islande
 
+// Provinces 
+Austurland
+Höfuðborgarsvæðið
+Norðurland eystra
+Norðurland vestra
+Suðurland
+Suðurnes
+Vestfirðir
+Vesturland
+
+// http://typo.mondediplo.net/messages/104
 // Israël
 
-// Divers
-« corpus separatum »
-« ligne verte »
+//Divers
+
+« corpus separatum » 
+« ligne verte » 
 golfe d'Akaba
 pont Allenby
 mont Carmel
 Jérusalem-Est
 vallée de Jezreel
-Jourdain
+Jourdain 
+Mea Shearim 
 mer Morte
 mont Thabor
 Galilée
-Golan
-Judée
-Néguev
-Samarie
-Sinaï
-
+ Golan
+ Judée
+ Néguev
+ Samarie
+ Sinaï
 centrale nucléaire de Dimona
 
-
+// http://typo.mondediplo.net/messages/103
 // Italie
 
-// Divers
-territoire libre de Trieste
+// Provinces 
+Abruzzes
+Vallée d'Aoste
+Basilicate
+Calabre
+Campanie
+Émilie-Romagne
+Frioul - Vénétie julienne
+Latium
+Ligurie
+Lombardie
+Marches
+Molise
+Ombrie
+Piémont
+Pouilles
+Sardaigne
+Sicile
+Toscane
+Trentin - Haut-Adige
+Vénétie
 
+//Divers
 
+territoire libre de Trieste 
+villes métropolitaines : certaines provinces ont été remplacées par des villes métropolitaines  
+ ville métropolitaine de Milan
+
+// http://typo.mondediplo.net/messages/102
 // Jamaïque
 
+// http://typo.mondediplo.net/messages/1090
 // Japon
 
+//Divers
+
+Hokkaido
+ Honshu
+ Kyushu
+ Shikoku 
+Wakabayashi 
+
+// http://typo.mondediplo.net/messages/101
 // Jordanie
 
+// http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
+//Divers
+
+Baïkonour 
+
+// http://typo.mondediplo.net/messages/100
 // Kenya
 
+// http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
+// http://typo.mondediplo.net/messages/99
+// Kiribati
+
+//Divers
+
+îles Gilbert
+ îles Phoenix
+ îles de la Ligne 
+île de Banaba
+
+// http://typo.mondediplo.net/messages/1042
 // Kosovo
 
-// Divers
+//Divers
+
 villages de Gorazdevac
-d’Orahovac et de Velika Hoca
-enclaves serbes au Kosovo
+ d'Orahovac et de Velika Hoca
+ enclaves serbes au Kosovo
+la Metohija 
 
-la Metohija
-
-
+// http://typo.mondediplo.net/messages/98
 // Koweït
 
-// Divers
-Failaka
-Warba
+//Divers
 
 
+// http://typo.mondediplo.net/messages/1093
+// Laos
+
+// http://typo.mondediplo.net/messages/97
 // Lesotho
 
+// http://typo.mondediplo.net/messages/96
 // Lettonie
 
-// Liban(le)
+// Provinces 
+Zemgale
+Kurzeme
+Latgale
+Vidzeme
 
-// Divers
+// http://typo.mondediplo.net/messages/95
+// Liban
+
+//Divers
+
 plaine de la Bekaa
 Liban sud
 Mont-Liban
 
-
+// http://typo.mondediplo.net/messages/94
 // Liberia
 
+// http://typo.mondediplo.net/messages/93
 // Libye
 
-// Divers
-djebel Nefoussa
+//Divers
+
+djebel Nefoussa 
 Cyrénaïque
-Fezzan
+ Fezzan 
 
-
-
+// http://typo.mondediplo.net/messages/92
 // Liechtenstein
 
-// Divers
+//Divers
+
 la Principauté
 
-
+// http://typo.mondediplo.net/messages/91
 // Lituanie
 
-// Divers
-Klaipėda
+//Divers
 
+Klaipėda 
 
+// http://typo.mondediplo.net/messages/90
 // Luxembourg
 
-// Divers
+//Divers
+
 le Grand-Duché
 
-
+// http://typo.mondediplo.net/messages/89
 // Macédoine
 
+// http://typo.mondediplo.net/messages/88
 // Madagascar
 
-// Provinces
+// Provinces 
+
+//Divers
+
+« la ville des mille » 
+Ambatovy 
+ Ilakaka 
+ Moramanga 
+ Sakaraha 
+ 
+Atsinanana 
 Antananarivo
-Antsiranana
-Fianarantsoa
-Mahajanga
-Toamasina
-Toliana
+ Antsiranana 
+ Fianarantsoa
+ Mahajanga
+ Toamasina 
+ Toliana 
 
-// Divers
-« la ville des mille »
-Ambatovy
-Ilakaka
-Moramanga
-Sakaraha
+// http://typo.mondediplo.net/messages/1094
+// Malaisie
 
-
-Atsinanana
-Madagascar est également divisée en 6 provinces __: Antananarivo
-Antsiranana
-Fianarantsoa
-Mahajanga
-Toamasina
-Toliana
-
-
-
+// http://typo.mondediplo.net/messages/87
 // Malawi
 
+// http://typo.mondediplo.net/messages/1095
+// Maldives
+
+//Divers
+
+îles Marao 
+
+// http://typo.mondediplo.net/messages/86
 // Mali
 
-// Divers
-le nord du Mali 
-le Nord
+// Provinces 
+Mopti
+Gao
+Tombouctou
 
-Azawad
-barrage de Markala
-Macina
+//Divers
 
+Azawad 
+barrage de Markala 
+Macina 
 
+// http://typo.mondediplo.net/messages/85
 // Malte
 
-// Divers
-Gozo
-habitants : Gozitains
+//Divers
 
+Gozo  
+ Gozitains 
 
-
+// http://typo.mondediplo.net/messages/84
 // Maroc
 
-// Divers
-Ceuta 
-Melilla 
-îles Zaffarines
+//Divers
 
-El-Ayoun
-la médina
+Ceuta 
+ Melilla 
+ îles Zaffarines 
+El-Ayoun 
+la médina 
 
+// http://typo.mondediplo.net/messages/83
+// Marshall
 
+//Divers
+
+atoll de Bikini 
+Delap-Uliga-Djarrit 
+atoll de Majuro
+ atoll de Kwajalein
+ île d'Ebeye 
+îles Ratak 
+ îles Ralik 
+
+// http://typo.mondediplo.net/messages/82
 // Maurice
 
-// Divers
-formé des îles de Port Louis
-Rodrigues
-Saint Brandon
-Agaléga
+//Divers
 
-Aapravasi Ghat : lieu de pèlerinage hindou
-morne Brabant : montagne et site historique de l’esclavage
+Port Louis
+ Rodrigues
+ Saint Brandon
+ Agaléga 
+Aapravasi Ghat 
+morne Brabant 
 
-
+// http://typo.mondediplo.net/messages/81
 // Mauritanie
 
+// http://typo.mondediplo.net/messages/80
 // Mexique
 
-// Divers
-sites archéologiques mayas : Palenque
-Tulum
+//Divers
 
-Tenochtitlán
-le Zócalo
+Palenque
+ Tulum 
+Tenochtitlán 
+le Zócalo 
 Yucatán
 
+// http://typo.mondediplo.net/messages/79
+// Micronésie
 
+// http://typo.mondediplo.net/messages/78
 // Moldavie
 
+// http://typo.mondediplo.net/messages/77
 // Monaco
 
+// http://typo.mondediplo.net/messages/1075
 // Mongolie
 
+// http://typo.mondediplo.net/messages/76
 // Monténégro
 
-// Divers
-bouches de Kotor
-lac Shkodra ou lac Skadar
+//Divers
 
+bouches de Kotor 
+lac Shkodra 
+lac Skadar  
 
+// http://typo.mondediplo.net/messages/75
 // Mozambique
 
-// Divers
-lac Nyassa
+//Divers
 
+lac Nyassa 
 
+// http://typo.mondediplo.net/messages/74
 // Namibie
 
+// http://typo.mondediplo.net/messages/73
+// Nauru
+
+// http://typo.mondediplo.net/messages/1096
 // Népal
 
+// http://typo.mondediplo.net/messages/72
 // Nicaragua
 
+// http://typo.mondediplo.net/messages/71
 // Niger
 
+// http://typo.mondediplo.net/messages/70
 // Nigeria
 
-// Divers
-État musulman de Katsina  
-État de Cross River
+//Divers
 
-delta du Niger
+État musulman de Katsina  
+ État de Cross River
+delta du Niger 
 
-
+// http://typo.mondediplo.net/messages/69
 // Norvège
 
+// http://typo.mondediplo.net/messages/1061
+// Nouvelle-Calédonie
+
+// Provinces 
+province des îles Loyauté
+province Nord
+province Sud
+
+// http://typo.mondediplo.net/messages/68
+// Nouvelle-Zélande
+
+// Provinces 
+Auckland
+
+// http://typo.mondediplo.net/messages/67
 // Oman
 
-// Divers
-Bouraïmi
-Dhofar
+//Divers
+
+Bouraïmi 
+Dhofar  
+ dhofarie
+djebel Akhdar
+ djebel Al-Qara
 île Masirah
-Salalah
-Yibal
-champ de pétrole
+Moussandam 
+Salalah 
+Yibal 
 
-
-
+// http://typo.mondediplo.net/messages/65
 // Ouganda
 
+// http://typo.mondediplo.net/messages/1097
 // Ouzbékistan
 
+// http://typo.mondediplo.net/messages/1098
 // Pakistan
 
-// Divers
-les deux Pakistans
-les deux Waziristans
+// Provinces 
+Pendjab
+Sind
+Khyber Pakhtunkhwa
+Baloutchistan
+territoire fédéral d'Islamabad
+territoires tribaux fédéraux
+Azad Jammu--Cachemire
+Gilgit-Baltistan
 
+//Divers
 
+les deux Pakistans 
+les deux Waziristans 
+
+// http://typo.mondediplo.net/messages/64
+// Palau
+
+//Divers
+
+Koror 
+
+// http://typo.mondediplo.net/messages/63
 // Palestine
 
-// Divers
-Aïda
+//Divers
 
+Aïda 
 
+// http://typo.mondediplo.net/messages/62
 // Panamá
 
+// http://typo.mondediplo.net/messages/61
+// Papouasie-Nouvelle-Guinée
+
+// Provinces 
+Hela
+
+// http://typo.mondediplo.net/messages/60
 // Paraguay
 
-// Divers
-barrage binational d'Itaipu
+//Divers
 
+barrage binational d'Itaipu 
 
+// http://typo.mondediplo.net/messages/59
 // Pays-Bas
 
-// Divers
-le Meinweg
+//Divers
 
+le Meinweg 
 
+// http://typo.mondediplo.net/messages/58
 // Pérou
 
-// Divers
-Callao
+//Divers
+
+Callao 
 Cuajone
 
+// http://typo.mondediplo.net/messages/1099
+// Philippines
 
+//Divers
+
+Mindanao 
+archipel de Sulu
+Basilan
+ Bohol
+ Catanduanes
+ Cebu
+ Leyte
+ Luçon
+ Masbate
+ Mindanao
+ Mindoro
+ Negros
+ Palawan
+ Panay
+ Samar
+ Sulu
+ Tawi-Tawi 
+
+// http://typo.mondediplo.net/messages/57
 // Pologne
 
-// Divers
-Utiliser les noms polonais : Podlaskie
-Podkarpackie
-Lubelskie
-Warminsko-Mazurskie
-Swietokrzyskie .
+//Divers
 
 mines Budryk
-Pokój
+ Pokój 
 
+// http://typo.mondediplo.net/messages/56
+// Porto Rico
 
-
+// http://typo.mondediplo.net/messages/55
 // Portugal
 
+// http://typo.mondediplo.net/messages/54
 // Qatar
 
-// Divers
-Al-Ohdeid
-Burgan
-Dukhan
+//Divers
 
+Al-Ohdeid 
+Burgan 
+Dukhan 
 
+// http://typo.mondediplo.net/messages/147
 // République centrafricaine
 
-// Divers
-Vakaga
+//Divers
 
+Vakaga  
 
+// http://typo.mondediplo.net/messages/53
 // République démocratique du Congo
 
-// Divers
-barrage d'Inga
+//Divers
+
+barrage d'Inga 
 Nord-Kivu
-Sud-Kivu 
-les deux Kivus
-
-
-aéroport de Ndjili
+ Sud-Kivu 
+ les deux Kivus
+aéroport de Ndjili 
 lac Tanganyika
 
-
+// http://typo.mondediplo.net/messages/52
 // République dominicaine
 
-// Divers
-Hispaniola
+//Divers
 
+Hispaniola 
 
-// République Tchèque
+// http://typo.mondediplo.net/messages/24
+// République tchèque
 
+// http://typo.mondediplo.net/messages/51
 // Roumanie
 
+// http://typo.mondediplo.net/messages/50
 // Royaume-Uni
 
+// http://typo.mondediplo.net/messages/49
 // Russie
 
-// Divers
-fleuves : Ienisseï
-Lena
+// Provinces 
+Altaï
+Kamtchatka
+Khabarovsk
+Krasnodar
+Krasnoïarsk
+Perm
+Primorie
+Stavropol
+Transbaïkalie
+Adyghés
+Altaï
+Bachkortostan
+Bouriatie
+Carélie
+Daghestan
+Ingouchie
+Kabardino-Balkarie
+Kalmoukie
+Karatchaevo-Tcherkessie
+Khakassie
+Komis
+Maris
+Mordovie
+Ossétie  Nord
+Oudmourtie
+Sakha-Iakoutie
+Tatarstan
+Tchétchénie
+Tchouvachie
+Touva
+Amour
+Arkhangelsk
+Astrakhan
+Belgorod
+Briansk
+Iaroslavl
+Irkoutsk
+Ivanovo
+Kaliningrad
+Kalouga
+Kemerovo
+Kirov
+Kostroma
+Kourgan
+Koursk
+Leningrad
+Lipsk
+Magadan
+Moscou
+Mourmansk
+Nijni-Novgorod
+Novgorod
+Novossibirsk
+Omsk
+Oreil
+Orenbourg
+Oulianovsk
+Penza
+Pskov
+Riazan
+Sverdlosk
+Rostov
+Sakhaline
+Samara
+Saratov
+Smolensk
+Tambov
+Tcheliabinsk
+Tioumen
+Tomsk
+Toula
+Tver
+Vladimir
+Volgograd
+Vologda
+Voronej
+Centre
+Extrême-Orient
+Nord-Ouest
+Oural
+Sibérie
+Sud
+Volga
+
+//Divers
 
 détroit de Béring
-mer de Béring
+ mer de Béring
+Baïkal-Amour 
 
-ligne ferroviaire Baïkal-Amour
-
-
+// http://typo.mondediplo.net/messages/48
 // Rwanda
 
+// http://typo.mondediplo.net/messages/46
+// Saint-Kitts-et-Nevis
+
+// http://typo.mondediplo.net/messages/41
+// Saint-Marin
+
+//Divers
+
+
+// http://typo.mondediplo.net/messages/45
+// Saint-Vincent-et-les-Grenadines
+
+//Divers
+
+
+// http://typo.mondediplo.net/messages/47
+// Sainte-Lucie
+
+// http://typo.mondediplo.net/messages/44
+// Salomon
+
+// http://typo.mondediplo.net/messages/43
 // Salvador
 
-// Divers
-El Mozote
-El Salvador 
+//Divers
+
+El Mozote 
+El Salvador 
+
+// http://typo.mondediplo.net/messages/42
+// Samoa
+
+//Divers
+
+Savai'i
+ Upolu 
+
+// http://typo.mondediplo.net/messages/40
+// São-Tomé-et-Príncipe
+
+// Provinces 
+São-Tomé
+Príncipe
+
+//Divers
 
 
+// http://typo.mondediplo.net/messages/39
 // Sénégal
 
-// Divers
-pour la Casamance
-création prévue d'une entité autonome dans le nouveau découpage territorial décentralisé.
+//Divers
 
+Casamance
 
-
+// http://typo.mondediplo.net/messages/1318
 // Serbie
 
-// Divers
+//Divers
 
+Voïvodine 
 
+// http://typo.mondediplo.net/messages/37
 // Seychelles
 
-// Divers
-composées de 115 îles et îlots
+//Divers
 
 
+// http://typo.mondediplo.net/messages/36
 // Sierra Leone
 
+// http://typo.mondediplo.net/messages/1100
 // Singapour
 
+// http://typo.mondediplo.net/messages/35
 // Slovaquie
 
+// http://typo.mondediplo.net/messages/34
 // Slovénie
 
+// http://typo.mondediplo.net/messages/33
 // Somalie
 
-// Divers
-détroit de Bab Al-Mandeb
-Sool
+//Divers
+
+détroit de Bab Al-Mandeb 
+Sool 
 État semi-autonome de Puntland
 
-
+// http://typo.mondediplo.net/messages/32
 // Soudan
 
-// Divers
-Abyei
+//Divers
+
+Abyei 
 Nil Blanc
-Nil Bleu 
-État du Nil Bleu
-
-
-district d'Abyei
+ Nil Bleu 
+ État du Nil Bleu
+district d'Abyei 
 barrage hydroélectrique de Méroé
-monts Nouba
+monts Nouba 
 
-
+// http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
 
-// Divers
-Abyei
+//Divers
 
+Abyei 
 
+// http://typo.mondediplo.net/messages/1101
 // Sri Lanka
 
-// Provinces
+// Provinces 
 Nord
 Est
 Centre-Nord
@@ -970,115 +1473,423 @@ Centre
 Uva
 Sabaragamuwa
 Ouest
-Sud.
+Sud
 
+// http://typo.mondediplo.net/messages/31
 // Suède
 
+// http://typo.mondediplo.net/messages/30
 // Suisse
 
+// http://typo.mondediplo.net/messages/29
 // Surina
 
+// http://typo.mondediplo.net/messages/28
 // Swaziland
 
+// http://typo.mondediplo.net/messages/27
 // Syrie
 
-// Divers
-Ghouta
-Qalamoun
-Rojava
+//Divers
 
+Alep-Est 
+ Alépins
+Chayrat 
+Ghouta  
+Qalamoun  
+Rojava  
 
+// http://typo.mondediplo.net/messages/1102
 // Tadjikistan
 
+// http://typo.mondediplo.net/messages/1103
 // Taïwan
 
-// Divers
-détroit de Formose ou détroit de Taïwan
-Kaohsiung
+//Divers
 
+détroit de Formose 
+détroit de Taïwan
+Kaohsiung 
 
+// http://typo.mondediplo.net/messages/26
 // Tanzanie
 
+// http://typo.mondediplo.net/messages/25
 // Tchad
 
-// Divers
-bande d'Aouzou
-fleuves : Chari
-Logone
+//Divers
 
+bande d'Aouz
 
+Chari
+ Logone 
 
+// http://typo.mondediplo.net/messages/1104
+// Thaïlande
+
+//Divers
+ 
+Isaan 
+
+// http://typo.mondediplo.net/messages/1105
+// Timor-Leste
+
+//Divers
+
+Atauro 
+enclave d'Oecussi
+gisements pétroliers offshore de Kitan et Bayu-Undan
+ « Greater Sunrise » 
+Tibar 
+
+// http://typo.mondediplo.net/messages/23
 // Togo
 
+// http://typo.mondediplo.net/messages/22
+// Tonga
+
+//Divers
+
+
+// http://typo.mondediplo.net/messages/21
 // Trinité-et-Tobago
 
+// http://typo.mondediplo.net/messages/20
 // Tunisie
 
+// http://typo.mondediplo.net/messages/1107
 // Turkménistan
 
+// http://typo.mondediplo.net/messages/19
 // Turquie
 
-// Divers
+//Divers
+
 Asie Mineure
 Kurdistan
-le Cordon
-la Corne d'Or
+le Cordon 
+la Corne d'Or 
+
+// http://typo.mondediplo.net/messages/18
+// Tuvalu
+
+//Divers
 
 
+// http://typo.mondediplo.net/messages/17
+// Ukraine
+
+// Provinces 
+Donsk
+Lougansk
+Transcarpatie
+
+//Divers
+
+Donbass 
+Kryvorizhstal 
+Maïdan  
+mer Noire
+ mer d'Azov
+républiques populaires autoproclamées de Donetsk et de Lougansk 
+ « République populaire de Donetsk» 
+Yiddishland
+
+// http://typo.mondediplo.net/messages/1065
+// Union soviétique
+
+// http://typo.mondediplo.net/messages/15
 // Uruguay
 
-// Divers
-Río de la Plata
+//Divers
+
+Río de la Plata 
+
+// http://typo.mondediplo.net/messages/14
+// Vanuatu
+
+//Divers
 
 
+// http://typo.mondediplo.net/messages/13
 // Vatican
 
+// http://typo.mondediplo.net/messages/12
 // Venezuela
 
-// Divers
-région Occidente
+//Divers
 
+région Occidente 
 
+// http://typo.mondediplo.net/messages/1108
 // Vietna
 
-// Divers
-Ho Chi Minh-Ville 
-Ho Chi Minh
+//Divers
 
+Ho Chi Minh-Ville 
+ Ho Chi Minh
 
-
+// http://typo.mondediplo.net/messages/996
 // Yémen
 
-// Divers
-Hadramaout
-Hanish
-Kamaran  
-Périm 
-Socotra
+//Divers
 
-détroit de Bab Al-Mandeb
-Chabwa
-le Jawf
-lignes Hamza
-Philby
-Violet
+Hadramaout  
+Hanish 
+Kamaran  
+ Périm  
+ Socotra 
+détroit de Bab Al-Mandeb 
+Chabwa 
+le Jawf 
 
-le « quart vide »
-
-
+// http://typo.mondediplo.net/messages/10
 // Zambie
 
-// Divers
-Chambezi
+//Divers
+
+Chambezi 
 Copperbelt
 
-
+// http://typo.mondediplo.net/messages/9
 // Zimbabwe
 
-// Continents
-Afrique
-Amériques
-Asie
+// Continents 
+
 Europe
+
+Afrique
+
+Amériques
+
+Asie
+
+Continent
+
 Océanie
-Proche-Orient 
+
+Proche-Orient
+
+                                                                                                                                                                                                         
+
+// Mots-clés "Géographie" Diplo (non référencés dans Typodiplo)
+
+ Açores
+
+ Afrique australe
+
+ Afrique centrale
+
+ Afrique de l'Est
+
+ Afrique de l'Ouest
+
+ Afrique des Grands Lacs
+
+ Afrique du Nord
+
+ Amérique centrale
+
+ Amérique du Nord
+
+ Amérique du Sud
+
+ Amérique latine
+
+ Antarctique
+
+ Antilles néerlandaises
+
+ Arctique
+
+ Asie centrale
+
+ Asie du Nord
+
+ Asie du Sud-Est
+
+ Balkans
+
+ Benelux
+
+ Bengale-Occidental
+
+ Bermudes
+
+ Burkina Faso
+
+ Caraïbes
+
+ Caucase
+
+ Ceylan
+
+ Congo belge
+
+ Corne de l'Afrique
+
+ Corse
+
+ Côte française des Somalis
+
+ Côte-de-l'Or
+
+ Dahomey
+
+ Dubaï
+
+ Ecosse
+
+ États-Unis (affaires extérieures)
+
+ États-Unis (affaires intérieures)
+
+ Europe centrale
+
+ Europe de l'Est
+
+ Europe de l'Ouest
+
+ Europe du Nord
+
+ Fédération d'Arabie du Sud
+
+ France Outre-mer
+
+ Gibraltar
+
+ Golfe
+
+ Groenland
+
+ Guadeloupe
+
+ Guyane
+
+ Haute-Volta
+
+ Hongkong
+
+ Ile de Man
+
+ Indochine
+
+ Indochine française
+
+ Irlande du Nord
+
+ Kurdistan
+
+ La Réunion
+
+ Macao
+
+ Maghreb
+
+ Malouines
+
+ Mariannes du Nord
+
+ Martinique
+
+ Mayotte
+
+ Méditerranée
+
+ Mer Baltique
+
+ Mer Caspienne
+
+ Mer de Chine
+
+ Mer du Nord
+
+ Mer Égée
+
+ Mer noire
+
+ Monde arabe
+
+ Nord-Vietnam
+
+ Nouvelle-Guinée
+
+ Nouvelle-Guinée hollandaise
+
+ Nyassaland
+
+ Océan indien
+
+ Pacifique
+
+ Palestine (Cisjordanie)
+
+ Palestine (Gaza)
+
+ Palestine (Jérusalem)
+
+ Palestine mandataire
+
+ Papouasie-Nouvelle-Guinée
+
+ Pays baltes
+
+ Polynésie française
+
+ RDA
+
+ République arabe unie
+
+ République d'Irlande
+
+ République fédérale de Yougoslavie
+
+ RFA
+
+ Rhodésie du Nord
+
+ Rhodésie du Sud
+
+ Sahara
+
+ Sahara occidental
+
+ Sahel
+
+ Scandinavie
+
+ Serbie-et-Monténégro
+
+ Somaliland
+
+ Sous-continent indien
+
+ Sri Lanka
+
+ Sud-Ouest africain
+
+ Sud-Vietnam
+
+ Suriname
+
+ Tanganyika
+
+ Tchécoslovaquie
+
+ Tibet
+
+ Tiers-monde
+
+ Timor-Oriental
+
+ URSS
+
+ Voïvodine
+
+ Yémen du Nord
+
+ Yémen du Sud
+
+ Yougoslavie
+
+ Zaïre

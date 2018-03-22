@@ -1,5 +1,8 @@
-// Formations politiques
 
+
+// Formations politiques 
+
+// http://typo.mondediplo.net/messages/182
 // Afghanistan
 
 Coalition nationale d'Afghanistan (CNA)
@@ -12,13 +15,17 @@ Parti de la patrie (PP)
 Parti révolutionnaire national (PRN)
 Front uni islamique et national pour le salut de l'Afghanistan (Alliance du Nord ou Fuinsa)
 
+// http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
 Congrès national africain (ANC)
 Alliance démocratique (DA)
 Combattants pour la liberté économique (EFF)
 Parti national (NP)
+Congrès panafricain (PAC)
+Parti communiste sud-africain (SACP)
 
+// http://typo.mondediplo.net/messages/180
 // Albanie
 
 Alliance pour l'emploi, la protection sociale et l'intégration (APMI)
@@ -37,6 +44,7 @@ Parti de la démocratie sociale (PDSS)
 Parti communiste albanais (PKSH)
 Parti social-démocrate albanais (PSD)
 
+// http://typo.mondediplo.net/messages/179
 // Algérie
 
 Alliance nationale républicaine (ANR)
@@ -50,11 +58,13 @@ Mouvement de la société pour la paix (MSP)
 Rassemblement pour la culture et la démocratie (RCD)
 Rassemblement national démocratique (RND)
 Parti des travailleurs (PT)
+Union démocratique du manifeste algérien (UDMA)
 Armée islamique du salut (AIS)
 Al-Qaida au Maghreb islamique (AQMI)
 Groupe islamique armé (GIA)
 Groupe salafiste pour la prédication et le combat (GSPC)
 
+// http://typo.mondediplo.net/messages/178
 // Allemagne
 
 Alternative pour l'Allemagne (AfD)
@@ -65,6 +75,7 @@ La Gauche (Die Linke)
 Patriotes européens contre l'islamisation de l'Occident (Pegida)
 Parti social-démocrate (SPD)
 
+// http://typo.mondediplo.net/messages/177
 // Andorre
 
 Démocrates pour Andorre (DA)
@@ -74,6 +85,7 @@ Parti démocrate (PD)
 Démocratie sociale et progrès (SDP)
 Les Verts d'Andorre (VA)
 
+// http://typo.mondediplo.net/messages/176
 // Angola
 
 Large Convergence pour le salut de l'Angola -- Coalition électorale (CASA-CE)
@@ -83,16 +95,19 @@ Union nationale pour l'indépendance totale de l'Angola (Unita)
 Front nationale de libération de l'Angola (FNLA)
 Forces armées populaires de libération de l'Angola
 
+// http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
 
 Parti travailliste d'Antigua (ALP)
 Mouvement populaire de Barbuda (BPM)
 Parti progressiste unifié (UPP)
 
+// http://typo.mondediplo.net/messages/174
 // Arabie saoudite
 
 Al-Qaida dans la péninsule arabique (AQPA)
 
+// http://typo.mondediplo.net/messages/173
 // Argentine
 
 Alliance anticommuniste argentine (AAA)
@@ -107,6 +122,7 @@ Parti justicialiste (PJ)
 Progresistas
 Parti socialiste (PS)
 
+// http://typo.mondediplo.net/messages/172
 // Arménie
 
 Arménie prospère (BHK)
@@ -116,16 +132,18 @@ Parti républicain d'Arménie (HHK)
 Parti communiste arménien (HKK)
 État de droit (OEK)
 
+// http://typo.mondediplo.net/messages/171
 // Australie
 
 Parti des démocrates australiens (AD)
 Parti travailliste australien (ALP)
 Parti des Verts australiens (Greens)
 Parti australien de Katter (KAP)
-Parti libéral australien (LP)
+Parti libéral (LP)
 Parti national (NP)
 Équipe Nick Xenophon (NXT)
 
+// http://typo.mondediplo.net/messages/170
 // Autriche
 
 les Verts (Die Grünen)
@@ -134,6 +152,7 @@ Parti populaire d'Autriche (ÖVP)
 Parti social-démocrate d'Autriche (SPÖ)
 Équipe Stronach pour l'Autriche (Team Stronach)
 
+// http://typo.mondediplo.net/messages/169
 // Azerbaïdjan
 
 Parti démocrate d'Azerbaïdjan (ADP)
@@ -144,11 +163,13 @@ Parti de la mère patrie (ANAP)
 Parti de la solidarité civique (VHP)
 Parti du nouvel Azerbaïdjan (YAP)
 
+// http://typo.mondediplo.net/messages/168
 // Bahamas
 
 Mouvement national libre (FNM)
 Parti progressiste libéral (PLP)
 
+// http://typo.mondediplo.net/messages/167
 // Bahreïn
 
 Association de l'action islamique (AAI)
@@ -160,6 +181,7 @@ Front islamique de libération de Bahreïn (FILB)
 Mouvement de libération de Bahreïn (MLB)
 Waad
 
+// http://typo.mondediplo.net/messages/166
 // Bangladesh
 
 Ligue Awami (AL)
@@ -167,32 +189,36 @@ Parti nationaliste du Bangladesh (BNP)
 Parti islamiste du Bangladesh (JI)
 Parti communiste du Bangladesh (PCB)
 
+// http://typo.mondediplo.net/messages/165
 // Barbade
 
 Parti travailliste de la Barbade (BLP)
 Parti travailliste démocratique (DLP)
 
+// http://typo.mondediplo.net/messages/164
 // Belgique
 
 Centre démocrate humaniste (CDH)
-Chrétiens démocrates flamands (CD&V)
+Chrétiens-démocrates flamands (CD&V)
 Démocrates fédéralistes indépendants (DÉFI)
-Ecologistes confédérés pour l'Organisation des luttes originales, Verts (Écolo)
+Écologistes confédérés pour l'Organisation des luttes originales, Verts (Écolo)
 Parti écologiste belge flamand (Groen)
 Mouvement réformateur (MR)
 Alliance néo-flamande (N-VA)
-Libéraux et démocrates flamands (Open Vld)
+Libéraux et démocrates flamands (Open VLD)
 Parti populaire (PP)
 Parti du travail de Belgique - Gauche d'ouverture (PTB-GO)
 Parti socialiste (PS)
 Socialistische Partij Anders (SP.A)
 Intérêt flamand (VB)
 
+// http://typo.mondediplo.net/messages/163
 // Belize
 
 Parti uni du peuple (PUP)
 Parti démocratique uni (UDP)
 
+// http://typo.mondediplo.net/messages/162
 // Bénin
 
 Mouvement africain pour le développement et le progrès (Madep)
@@ -200,6 +226,7 @@ Parti du renouveau démocratique (PRD)
 Renaissance du Bénin (RB)
 Parti de la révolution populaire béninoise (PRPB)
 
+// http://typo.mondediplo.net/messages/161
 // Bhoutan
 
 Bhutan Kuen-Nyam Party (BKP)
@@ -209,6 +236,7 @@ Parti bhoutanais de l'unité et de l'harmonie (DPT)
 Parti démocratique populaire (PDP)
 Parti communiste du Bhoutan (CPB)
 
+// http://typo.mondediplo.net/messages/160
 // Biélorussie
 
 Front populaire biélorusse (BNF)
@@ -216,6 +244,7 @@ Parti communiste biélorusse (KPB)
 Parti civil uni de Biélorussie
 Parti républicain du travail et de la justice
 
+// http://typo.mondediplo.net/messages/159
 // Birmanie
 
 Parti national d'Arakan (ANP)
@@ -233,6 +262,7 @@ Pao National Army
 Shan State Army South (SSA-S)
 United Wa State Army (UWSA)
 
+// http://typo.mondediplo.net/messages/158
 // Bolivie
 
 Mouvement vers le socialisme (MAS)
@@ -244,6 +274,7 @@ Pouvoir démocratique social (PDS)
 Unidad Democrata (UD)
 Front d'unité nationale (UN)
 
+// http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
 Parti patriotique de Bosnie-Herzégovine (BPS)
@@ -258,6 +289,7 @@ Parti des sociaux-démocrates indépendants (SNSD)
 Parti socialiste serbe (SPS)
 Union pour un meilleur futur en Bosnie-Herzégovine (SBB BiH)
 
+// http://typo.mondediplo.net/messages/156
 // Botswana
 
 Parti démocrate du Botswana (BDP)
@@ -266,6 +298,7 @@ Botswana Congress Party (BPC)
 Botswana People's Party (BPP)
 Parapluie pour le changement démocratique (UDC)
 
+// http://typo.mondediplo.net/messages/155
 // Brésil
 
 Les Démocrates (DEM)
@@ -277,10 +310,11 @@ Parti de la République (PR)
 Parti des travailleurs (PT)
 Parti travailliste brésilien (PTB)
 Parti socialiste brésilien (PSB)
-Parti social-démocrate (PSDB)
+Parti de la social-démocratie brésilienne (PSDB)
 Parti socialisme et liberté (PSOL)
 Parti Vert (PV)
 
+// http://typo.mondediplo.net/messages/154
 // Brunei
 
 Parti du développement national (Parti Pembanguan)
@@ -288,6 +322,7 @@ Parti populaire de Brunei (BPP)
 Parti de la conscience populaire (Pakar)
 Parti de la solidarité nationale (PPKB ou BNSP)
 
+// http://typo.mondediplo.net/messages/153
 // Bulgarie
 
 Alternative pour la renaissance bulgare (ABV)
@@ -299,12 +334,14 @@ Front patriotique (FP)
 Citoyens pour le développement européen de la Bulgarie (GERB)
 Bloc réformiste (RB)
 
+// http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
 Congrès pour la démocratie et le progrès (CDP)
 Mouvement populaire pour le progrès (MPP)
 Union pour le progrès et le changement (UPC)
 
+// http://typo.mondediplo.net/messages/151
 // Burundi
 
 Conseil national de défense de la démocratie - Forces de défense de la démocratie (CNDD-FDD)
@@ -316,23 +353,26 @@ Parti pour la libération du peuple hutu (Palipehutu)
 Parti du redressement national (Parena)
 Union pour le progrès national (Uprona)
 
+// http://typo.mondediplo.net/messages/1019
 // Cambodge
 
 Front uni national pour un Cambodge indépendant, neutre, pacifique et coopératif (Funcinpec)
 Parti du peuple cambodgien (PPC)
 Parti du salut national du Cambodge (PSN)
 
+// http://typo.mondediplo.net/messages/150
 // Cameroun
 
 Rassemblement démocratique du peuple camerounais (RDPC)
 Front social-démocrate (SDF)
 
+// http://typo.mondediplo.net/messages/149
 // Canada
 
 Bloc québécois (BQ)
-Parti conservateur du Canada (CPC)
-Parti Vert du Canada (GP)
-Parti libéral du Canada (LPC)
+Parti Vert du Canada
+Parti conservateur du Canada (PCP)
+Parti libéral du Canada (PLC)
 Nouveau Parti démocratique (NPD)
 Action démocratique du Québec (ADQ)
 Coalition avenir Québec (CAQ)
@@ -340,11 +380,13 @@ Parti québécois (PQ)
 Parti vert du Québec (PVQ)
 Québec solidaire (QS)
 
+// http://typo.mondediplo.net/messages/148
 // Cap-Vert
 
 Parti africain pour l'indépendance du Cap-Vert (PAICV)
 Mouvement pour la démocratie (MPD)
 
+// http://typo.mondediplo.net/messages/146
 // Chili
 
 Chile Vamos
@@ -357,10 +399,12 @@ Parti pour la démocratie (PPD)
 Mouvement ample social (MAS)
 Mouvement de la gauche révolutionnaire (MIR)
 
+// http://typo.mondediplo.net/messages/1020
 // Chine
 
 Parti communiste chinois (PCC)
 
+// http://typo.mondediplo.net/messages/145
 // Chypre
 
 Parti progressiste des travailleurs (AKEL)
@@ -373,6 +417,7 @@ Parti démocrate (PD)
 Parti républicain turc - Union des forces (CTP)
 Parti de l'unité nationale (UBP)
 
+// http://typo.mondediplo.net/messages/144
 // Colombie
 
 Alliance sociale indépendante (ASI)
@@ -394,6 +439,7 @@ Forces armées révolutionnaires de Colombie - Armée du peuple (FARC)
 Armée de libération nationale (ELN)
 Armée populaire de libération (EPL)
 
+// http://typo.mondediplo.net/messages/143
 // Comores
 
 Parti pour l'entente comorienne (PEC)
@@ -401,6 +447,7 @@ Parti Juwa (PJ)
 Parti national de la justice (PNJ)
 Union pour le développement des Comores (UPDC)
 
+// http://typo.mondediplo.net/messages/142
 // Congo
 
 Conseil national des républicains (CNR)
@@ -408,6 +455,7 @@ Parti congolais du travail (PCT)
 Union panafricaine pour la démocratie sociale (Upads)
 Mouvement du 23 mars (M23)
 
+// http://typo.mondediplo.net/messages/1086
 // Corée du Nord
 
 Parti Chondogyo-Chong-u (CCD)
@@ -415,13 +463,16 @@ Parti social-démocrate (CSD)
 Front démocratique pour la réunification de la patrie (FDRP)
 Parti du travail de Corée (PTC)
 
+// http://typo.mondediplo.net/messages/1087
 // Corée du Sud
 
 Parti de la justice (PJ)
-Parti Minju de Corée (PMC)
+Minju (PMC)
 Parti de la nouvelle frontière (PNF)
-Parti populaire (PP)
+Parti du peuple (PP)
+Parti progressiste unifié (PPU)
 
+// http://typo.mondediplo.net/messages/141
 // Costa Rica
 
 Front large (FA)
@@ -434,6 +485,7 @@ Parti de la rénovation costariciaine (PRC)
 Parti de la restauration nationale (PRN)
 Parti unifié social chrétien (PUSC)
 
+// http://typo.mondediplo.net/messages/140
 // Côte d'Ivoire
 
 Front populaire ivoirien (FPI)
@@ -444,6 +496,7 @@ Rassemblement des républicains (RDR)
 Union pour la démocratie et pour la paix en Côte d'Ivoire (UDPCI)
 Al-Qaida au Maghreb islamique (AQMI)
 
+// http://typo.mondediplo.net/messages/139
 // Croatie
 
 Communauté démocratique croate (HDZ)
@@ -455,10 +508,12 @@ Parti social-démocrate (SDP)
 Parti démocratique indépendant serbe (SDSS)
 Travaillistes croates - Parti du travail
 
+// http://typo.mondediplo.net/messages/138
 // Cuba
 
 Parti communiste de Cuba (PCC)
 
+// http://typo.mondediplo.net/messages/137
 // Danemark
 
 Parti Alternative (AP)
@@ -468,9 +523,10 @@ Alliance libérale (LA)
 Parti du Groenland (Inuit Ataqatigiit)
 Parti populaire socialiste (SF)
 Parti social-démocrate (Socialdemokraterne)
-//République (Tjóðveldi)
+République (Tjóðveldi)
 Parti libéral danois (V)
 
+// http://typo.mondediplo.net/messages/136
 // Djibouti
 
 Front pour la restauration de l'unité démocratique (FRUD)
@@ -478,12 +534,14 @@ Parti national démocratique (PND)
 Rassemblement populaire pour le progrès (RPP)
 Union pour la majorité présidentielle (UMP)
 
+// http://typo.mondediplo.net/messages/135
 // Dominique
 
 Parti de la liberté de la Dominique (DFP)
 Parti travailliste de la Dominique (DLP)
 Parti des travailleurs unis (UWP)
 
+// http://typo.mondediplo.net/messages/1309
 // Égypte
 
 Alliance démocratique
@@ -528,13 +586,15 @@ Parti communiste égyptien (PCE)
 Parti national-démocrate (PND)
 Union socialiste arabe (USA)
 Groupe islamique (Al-Gamaa Al-Islamiyya)
-Les partisans de Jérusalem nom précédent (Ansar Beit Al-Maqdis)
+Les partisans de Jérusalem   nom précédent (Ansar Beit Al-Maqdis)
 Wilayat Sinaï
 
+// http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
 Aucun
 
+// http://typo.mondediplo.net/messages/132
 // Équateur
 
 Partido Avanza (Avanza)
@@ -551,17 +611,20 @@ Union équatorienne (UE)
 Union plurinationale des gauches Pachkutik (Unidad plurinacional de las Izquierdas-Pachakutik)
 Mouvement d'unité populaire (UP)
 
+// http://typo.mondediplo.net/messages/131
 // Érythrée
 
 Front populaire pour la démocratie et la justice (FPDJ)
 
+// http://typo.mondediplo.net/messages/130
 // Espagne
 
-Parti socialiste ouvrier espagnol (PSOE)
-Parti populaire (PP)
-Podemos
+Equo
 Gauche unie (IU)
 Parti communiste d'Espagne (PCE)
+Parti populaire (PP)
+Podemos
+Parti socialiste ouvrier espagnol (PSOE)
 Bloc nationaliste galicien (BNG)
 Bloc nationaliste valencien (BLOC)
 Centre nationaliste canarien (CNN)
@@ -577,6 +640,7 @@ Pays basque et liberté (ETA)
 Democracia real ya !
 mouvement du 15-M
 
+// http://typo.mondediplo.net/messages/129
 // Estonie
 
 Parti populaire conservateur d'Estonie (EKRE)
@@ -586,15 +650,17 @@ Parti du centre (K)
 Parti uni du peuple estonien
 Parti social-démocrate (SDE)
 
+// http://typo.mondediplo.net/messages/128
 // États-Unis
 
 Parti communiste des États-Unis (CPUSA)
 Green Party
-Parti libertarien (LP)
 Democratic Party (Parti démocrate)
+Libertarian Party (Parti libertarien)
 Republican Party (Parti républicain)
 Tea Party
 
+// http://typo.mondediplo.net/messages/127
 // Éthiopie
 
 Front démocratique révolutionnaire du peuple éthiopien (FDRPE)
@@ -608,9 +674,10 @@ Front de libération oromo (FLO)
 Front de libération national de l'Ogaden (FNLO)
 Front uni révolutionnaire démocratique afar (Furda)
 
+// http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
 
-
+// http://typo.mondediplo.net/messages/126
 // Fidji
 
 Fidji d'abord (Fiji First)
@@ -618,6 +685,7 @@ Parti de la fédération nationale (NFP)
 Parti fidjien uni (SDL)
 Parti social-démocrate libéral (Sodelpa)
 
+// http://typo.mondediplo.net/messages/124
 // Finlande
 
 Chrétiens-démocrates de Finlande (KD)
@@ -630,28 +698,37 @@ Parti populaire suédois de Finlande (SFP)
 Alliance de gauche (VAS)
 Ligue verte (VIHR)
 
+// http://typo.mondediplo.net/messages/123
 // France
 
+Debout la France
 Écologistes !
 Europe Ecologie -- Les Verts (EELV)
+En marche !
 Front de gauche (FDG)
+La France insoumise
 Front national (FN)
+Lutte ouvrière (LO)
 Les Républicains (LR)
+La République en marche (LRM)
 Mouvement des progressistes (MDP)
 Mouvement démocrate (MoDem)
 Nouveau Centre
+Nouveau Parti anticapitaliste (NPA)
 Parti communiste français (PCF)
 Parti de gauche (PG)
 Parti radical de gauche (PRG)
 Parti socialiste (PS)
 Union des démocrates et indépendants (UDI)
 
+// http://typo.mondediplo.net/messages/122
 // Gabon
 
 Parti démocratique gabonais (PDG)
 Rassemblement pour le Gabon (RPG)
 Union du peuple gabonais (UPG)
 
+// http://typo.mondediplo.net/messages/121
 // Gambie
 
 Alliance pour la construction et la réorientation patriotique (APRC)
@@ -659,6 +736,7 @@ Alliance nationale pour la démocratie et le développement (NADD)
 Parti de la réconciliation nationale (NRP)
 Parti de l'unité et la démocratie (UDP)
 
+// http://typo.mondediplo.net/messages/120
 // Géorgie
 
 Mouvement national uni (ENM)
@@ -668,11 +746,13 @@ Rêve géorgien
 Rêve géorgien -- Géorgie démocratique
 Parti communiste géorgien (SKP)
 
+// http://typo.mondediplo.net/messages/119
 // Ghana
 
 National Democratic Congress (NDC)
 New Patriotic Party (NPP)
 
+// http://typo.mondediplo.net/messages/118
 // Grèce
 
 Grecs indépendants (ANEL)
@@ -685,12 +765,14 @@ Mouvement socialiste panhellénique (Pasok)
 Coalition de la gauche radicale (Syriza)
 La Rivière (To Potami)
 
+// http://typo.mondediplo.net/messages/117
 // Grenade
 
 Parti travailliste uni de la Grenade (GULP)
 Congrès démocratique national (NDC)
 Nouveau Parti national (NNP)
 
+// http://typo.mondediplo.net/messages/116
 // Guatemala
 
 Convergencia-CPO-CRD
@@ -708,6 +790,7 @@ Guerilleros du peuple (EGP)
 Forces armées rebelles (FAR)
 Organisation du peuple en armes (ORPA)
 
+// http://typo.mondediplo.net/messages/115
 // Guinée
 
 Conseil national pour la démocratie et le développement (CNDD)
@@ -716,16 +799,19 @@ Rassemblement du peuple de Guinée (RPG)
 Union des forces démocratiques de Guinée (UFDG)
 Union des forces républicaines (UFR)
 
+// http://typo.mondediplo.net/messages/114
 // Guinée-Bissau
 
 Parti africain pour l'indépendance de la Guinée et du Cap-Vert (PAIGC)
 Parti du renouveau social (PRS)
 
+// http://typo.mondediplo.net/messages/113
 // Guinée-Équatoriale
 
 Parti de convergence pour la démocratie sociale (PCDS)
 Parti démocratique de la Guinée-Équatoriale (PDGE)
 
+// http://typo.mondediplo.net/messages/112
 // Guyana
 
 Alliance pour le changement (AFC)
@@ -733,6 +819,7 @@ Partenariat pour l'unité nationale (APNU)
 Congrès national du Peuple (PNC)
 Parti progressiste du peuple (PPP)
 
+// http://typo.mondediplo.net/messages/111
 // Haïti
 
 Haïti en action (AAA)
@@ -748,17 +835,19 @@ Parti haïtien Tèt Kale (PHTK)
 Réponse paysanne (RP)
 Front pour l'avancement et le progrès haïtien (FRAPH)
 
+// http://typo.mondediplo.net/messages/110
 // Honduras
 
-Partido Libertad y Refundación (Libre)
+Parti Liberté et refondation (Libre)
 Parti anticorruption (PAC)
 Partido Liberal de Honduras (PLH)
 Parti national du Honduras (PNH)
 
+// http://typo.mondediplo.net/messages/109
 // Hongrie
 
-au pouvoir (Fidesz-Alliance civique hongroise)
-Mouvement pour une meilleure Hongrie (Jobbik)
+le Fidesz (Fidesz-Alliance civique hongroise)
+le Jobbik (Jobbik)
 Parti populaire chrétien-démocrate (KDNP)
 Une autre politique est possible (LMP)
 coalition de gauche formée en 2014 (Unité)
@@ -767,6 +856,7 @@ Ensemble 2014 -- Parti pour une nouvelle ère (Együtt)
 Parti socialiste hongrois (MSZP)
 Dialogue pour la Hongrie (PM)
 
+// http://typo.mondediplo.net/messages/1088
 // Inde
 
 Parti de l'homme ordinaire (AAP)
@@ -778,23 +868,28 @@ Parti de la société majoritaire (BSP)
 Ligue musulmane de l'Union indienne, comité de l'état Kerala (LMUI)
 Parti du Congrès
 Parti communiste d'Inde (PCI)
+Parti communiste d'Inde maoïste (PCI-m)
 Parti Telugu Desam (PTD)
 Shiv Sena (SHS)
 Telegana Rashtra Samithi (TRS)
 YSR Congress Party (YSRCP)
+People's Liberation Guerrilla Army (PLGA)
 
+// http://typo.mondediplo.net/messages/1089
 // Indonésie
 
-Great Indonesia Movement Party (Gerindra)
-Party of the Functional Groups (Golkar)
+Front des défenseurs de l'islam (FPI)
+Gerindra
+Golkar
 Parti du mandat national (PAN)
 Parti démocrate (PD)
-Indonesian Democratic Party of Struggle (PDI-P)
+Parti indonésien de lutte (PDI-P)
 Parti du réveil national (PKB)
 Parti pour l'unité et le développement (PPP)
 Harakah Sunni for the Indonesian Society (Hasmi)
 Jemaah Islamiyah (JI)
 
+// http://typo.mondediplo.net/messages/108
 // Irak
 
 Al-Arabiya
@@ -816,6 +911,7 @@ Forces de mobilisation populaire
 Organisation de l'État islamique (OEI)
 Sahwa
 
+// http://typo.mondediplo.net/messages/107
 // Iran
 
 Association du clergé militant (ACM)
@@ -833,6 +929,7 @@ Les soldats de Dieu (Jundallah)
 Organisation des moudjahidins du peuple iranien (MKO ou OMPI)
 Parti pour une vie libre au Kurdistan (PJAK)
 
+// http://typo.mondediplo.net/messages/106
 // Irlande
 
 Alliance antiaustérité - Le peuple avant le profit (AAA-PBP)
@@ -842,21 +939,24 @@ Verts (GP)
 Parti travailliste irlandais (ILP)
 Parti des travailleurs (WP)
 
+// http://typo.mondediplo.net/messages/105
 // Islande
 
 Avenir radieux (BF)
 Parti pirate (Þ)
 Parti du progrès (PP)
 Mouvement gauche-vert (VG)
-Régénération ou Renaissance (XC)
+Régénération ou Parti de la réforme (XC)
 Parti de l'indépendance (XD)
 Alliance (XS)
 
+// http://typo.mondediplo.net/messages/104
 // Israël
 
 Ligue démocratique nationale (Balad)
 Foyer juif
 Front démocratique pour la paix et l'égalité (Hadash)
+Hatnuah
 Judaïsme de la Torah
 Koulanou
 « Israël, notre maison » (Israël Beitenou)
@@ -868,24 +968,26 @@ Shas
 Mouvement arabe pour le renouveau (Ta-al)
 Yesh Atid
 
+// http://typo.mondediplo.net/messages/103
 // Italie
 
-Coalition de centre-gauche
 Centre démocrate (CD)
+Frères d'Italie - Alliance nationale (FDI-AN)
+« En avant l'Italie ! » (FI)
 Mouvement 5 étoiles
 Nouveau Centre droit (NCD)
 Parti démocrate (PD)
 Choix civique pour l'Italie (SC)
-Gauche écologie et liberté (SEL)
+Gauche, écologie et liberté (SEL)
 Union du centre (UDC)
-Frères d'Italie - Alliance nationale (FDI-AN)
-« En avant l'Italie ! » (FI)
 
+// http://typo.mondediplo.net/messages/102
 // Jamaïque
 
 Parti travailliste de Jamaïque (JLP)
 People National Party (PNP)
 
+// http://typo.mondediplo.net/messages/1090
 // Japon
 
 Iniatives d'Osaka (IO)
@@ -899,6 +1001,7 @@ Parti libéral-démocrate (PLD)
 Parti japonais de l'innovation (ISHIN)
 Parti social-démocrate japonais (PSD)
 
+// http://typo.mondediplo.net/messages/101
 // Jordanie
 
 Front islamique d'action
@@ -910,6 +1013,7 @@ Parti démocratique populaire
 Parti national constitutionnel
 Parti centriste islamique (Wasat)
 
+// http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
 Parti populaire démocratique du Kazakhstan (Ak Jol)
@@ -920,6 +1024,7 @@ Parti démocratique uni (PDU)
 Parti national patriote (PNP)
 Unité du peuple du Kazakhstan (UPK)
 
+// http://typo.mondediplo.net/messages/100
 // Kenya
 
 Coalition pour les réformes et la démocratie (CORD)
@@ -929,6 +1034,7 @@ Parti de l'alliance nationale (TNA)
 Coalition nationale arc-en-ciel (NARC)
 Parti républicain uni (URP)
 
+// http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
 Parti socialiste « patrie » (Ata-Meken)
@@ -938,6 +1044,7 @@ Parti politique unité nationale et du patriotisme (Bir-Bol)
 Parti des communistes du Kirghizstan (PKK)
 République mère patrie (RAJ)
 
+// http://typo.mondediplo.net/messages/99
 // Kiribati
 
 « Les piliers de la vérité » (BTK)
@@ -945,14 +1052,16 @@ Kamaeuraoan Te I-Kiribati Party (KTK)
 Maurin Kiribati Paty (MKP)
 Tobwaan Kiribati Party (TKP)
 
+// http://typo.mondediplo.net/messages/1042
 // Kosovo
 
 Alliance pour l'avenir du Kosovo (AAK)
 Ligue démocratique du Kosovo (LDK)
 Initiative citoyenne pour le Kosovo (Nisma)
 Parti démocrate du Kosovo (PDK)
-Autodétermination (VV)
+Autodétermination (Vetëvendosje)
 
+// http://typo.mondediplo.net/messages/98
 // Koweït
 
 Forum démocratique du Koweït
@@ -962,10 +1071,12 @@ Bloc national islamique
 Bloc constitutionnel
 groupes tribaux
 
+// http://typo.mondediplo.net/messages/1093
 // Laos
 
 Parti révolutionnaire populaire lao (PRPL)
 
+// http://typo.mondediplo.net/messages/97
 // Lesotho
 
 All Basotho Convention (ABC)
@@ -973,6 +1084,7 @@ Basotho National party (BNP)
 Congrès démocratique (DC)
 Lesotho Congress for Democracy (LCD)
 
+// http://typo.mondediplo.net/messages/96
 // Lettonie
 
 Association lettone des régions (LRA)
@@ -984,6 +1096,7 @@ Parti vert (LZP)
 Parti social démocrate « Harmonie » (SC)
 Centre de la concorde
 
+// http://typo.mondediplo.net/messages/95
 // Liban
 
 Coalition du 14 mars
@@ -1000,14 +1113,17 @@ Mouvement de l'espoir (Mouvement Amal)
 Parti Baas
 Parti démocratique libanais
 Parti social nationaliste syrien (PSNS)
+Parti socialiste progressiste (PSP)
 Parti de Dieu (Hezbollah)
 
+// http://typo.mondediplo.net/messages/94
 // Liberia
 
 Congress for Democratic Change (CDC)
 Parti de l'unité (UP)
 Liberian United for Reconciliation and Democracy (LURD)
 
+// http://typo.mondediplo.net/messages/93
 // Libye
 
 Alliance des forces nationales (AFN)
@@ -1019,6 +1135,7 @@ Aube de la Libye (Fajr Libya)
 Conseil consultatif de la jeunesse islamique (MCCI)
 Conseil consultatif des moudjahidins des environs de Jérusalem (MSC)
 
+// http://typo.mondediplo.net/messages/92
 // Liechtenstein
 
 Les Indépendants (DU)
@@ -1026,6 +1143,7 @@ Parti progressiste des citoyens (FBP)
 Liste libre (FL)
 Union patriotique (VU)
 
+// http://typo.mondediplo.net/messages/91
 // Lituanie
 
 Voie du courage (DK)
@@ -1036,6 +1154,7 @@ Parti social-démocrate de Lituanie (LSDP)
 Union de la patrie - Démocrates chrétiens lituaniens (TS-LKD)
 Ordre et justice (TT)
 
+// http://typo.mondediplo.net/messages/90
 // Luxembourg
 
 Parti populaire social-chrétien (CSV)
@@ -1044,6 +1163,7 @@ Parti socialiste des travailleurs luxembourgeois (LSAP)
 Les Verts
 Parti communiste luxembourgeois (PCL)
 
+// http://typo.mondediplo.net/messages/89
 // Macédoine
 
 Union démocratique pour l'intégration (BDI)
@@ -1051,12 +1171,14 @@ Parti démocratique des Albanais (DPSH)
 Union sociale-démocrate de Macédoine (SDSM)
 Organisation révolutionnaire macédonienne intérieure - Parti démocratique pour l'unité nationale macédonienne (VMRO-DPMNE)
 
+// http://typo.mondediplo.net/messages/88
 // Madagascar
 
 Force nouvelle pour Madagascar (HVM)
 Miaraka amin'ni Prezida Andry Rajoelina (Mapar)
 J'aime Madagascar (TIM)
 
+// http://typo.mondediplo.net/messages/1094
 // Malaisie
 
 Front national (BN)
@@ -1067,6 +1189,7 @@ Coalition de l'espoir (PH)
 Parti socialiste de Malaisie (PSM)
 Sarawak People's Energy Party (TERAS)
 
+// http://typo.mondediplo.net/messages/87
 // Malawi
 
 Congrès national africain (ANC)
@@ -1075,6 +1198,7 @@ Parti du congrès malawite (MCP)
 Parti populaire (PP)
 Front démocratique uni (UDF)
 
+// http://typo.mondediplo.net/messages/1095
 // Maldives
 
 Parti de la justice (AP)
@@ -1083,6 +1207,7 @@ Maldives Development Alliance (MDA)
 Maldavian Democratic Party (MDP)
 Progressive Party of Maldives (PPM)
 
+// http://typo.mondediplo.net/messages/86
 // Mali
 
 Alliance pour la démocratie au Mali - Parti africain pour la solidarité et la justice (Adema-PASJ)
@@ -1098,11 +1223,13 @@ Front de libération du nord du Mali (FLNM)
 « Les enfants du pays » (Ganda Izo)
 Mouvement patriotique Ganda Koy (MPGK)
 
+// http://typo.mondediplo.net/messages/85
 // Malte
 
 Parti nationaliste (PN)
 Parti travailliste (PL)
 
+// http://typo.mondediplo.net/messages/84
 // Maroc
 
 Parti de l'indépendance (Istiqlal)
@@ -1116,11 +1243,13 @@ Rassemblement national des indépendants (RNI)
 Union socialiste des forces populaires (USFP)
 Front populaire de libération de la Saguia el Hamra et du rio de oro (Front Polisario)
 
+// http://typo.mondediplo.net/messages/83
 // Marshall
 
 Aelon Kein Ad Party
 Parti démocratique uni (UDP)
 
+// http://typo.mondediplo.net/messages/82
 // Maurice
 
 Alliance du peuple (Lepep)
@@ -1130,6 +1259,7 @@ Muveman liberater (ML)
 Mouvement militant mauricien (MMM)
 Parti travailliste (PTR)
 
+// http://typo.mondediplo.net/messages/81
 // Mauritanie
 
 Coordination de l'opposition démocratique (COD)
@@ -1139,19 +1269,23 @@ Parti du peuple mauritanien (PPM)
 Union pour la république (UPR)
 Al-Qaida au Maghreb islamique (AQMI)
 
+// http://typo.mondediplo.net/messages/80
 // Mexique
 
 Parti révolutionnaire institutionnel (PRI)
 Parti d'action nationale (PAN)
 Parti de la révolution démocratique (PRD)
 Parti vert écologiste du Mexique (PVEM)
-Mouvement régénération nationale (Morena)
+Mouvement de régénération nationale (Morena)
 Mouvement citoyen (Movimiento Ciudadanos)
+Armée zapatiste de libération nationale (EZLN)
 
+// http://typo.mondediplo.net/messages/79
 // Micronésie
 
-Note : Pas de partis formels, les candidats se présentent à titre indépendant.
+Note : Pas de partis formels, les candidats se présentent à titre indépendant.
 
+// http://typo.mondediplo.net/messages/78
 // Moldavie
 
 Parti des communistes de la République de Moldavie (PCRM)
@@ -1160,12 +1294,14 @@ Parti des socialistes de la République de Moldavie (PSRM)
 Parti démocrate de Moldavie (PDM)
 Parti libéral (PL)
 
+// http://typo.mondediplo.net/messages/77
 // Monaco
 
 Horizon Monaco
 Renaissance
 Union monégasque
 
+// http://typo.mondediplo.net/messages/1075
 // Mongolie
 
 Parti Coalition de la Justice (CJ)
@@ -1176,6 +1312,7 @@ Parti volonté civile - Parti Vert (CWGP)
 Tous les mongols (Dayar mongol)
 Parti démocrate (PD)
 
+// http://typo.mondediplo.net/messages/76
 // Monténégro
 
 Parti bosniaque (BS)
@@ -1188,6 +1325,7 @@ Monténégro positif
 Parti social-démocrate du Monténégro (SDP)
 Parti populaire socialiste du Monténégro (SNP)
 
+// http://typo.mondediplo.net/messages/75
 // Mozambique
 
 Front de libération du Mozambique (Frelimo)
@@ -1195,18 +1333,21 @@ Mouvement démocratique du Mozambique (MDM)
 Résistance nationale mozambicaine (Renamo)
 Mouvement national de résistance (MNR)
 
+// http://typo.mondediplo.net/messages/74
 // Namibie
 
 Democratic Turnhall Alliance (DTA)
 Rassemblement pour la démocratie et le progrès (RDP)
 Organisation de libération du Sud-Ouest africain (Swapo)
 
+// http://typo.mondediplo.net/messages/73
 // Nauru
 
 Parti démocratique (DP)
 Nauru First Party
 Parti de Nauru (Nauru Party)
 
+// http://typo.mondediplo.net/messages/1096
 // Népal
 
 et le Parti communiste du Népal marxiste-léniniste unifié ) (CPN-MLU)
@@ -1223,12 +1364,14 @@ Parti national démocratique du Népal (PNDN)
 Parti socialiste fédéral (PSF)
 Travailleurs du Népal et Parti des paysans (TNPP)
 
+// http://typo.mondediplo.net/messages/72
 // Nicaragua
 
 Front sandiniste de libération nationale (FSLN)
 Parti libéral indépendant (PLN)
 Parti libéral constitutionnel (PLC)
 
+// http://typo.mondediplo.net/messages/71
 // Niger
 
 Convention démocratique et sociale (CDS-Ramaha)
@@ -1241,6 +1384,7 @@ Al-Qaida au Maghreb islamique (AQMI)
 Front de libération de l'Aïr et de l'Azawak (FLAA)
 Mouvement des nigériens pour la justice (MNJ)
 
+// http://typo.mondediplo.net/messages/70
 // Nigeria
 
 Parti de tous les peuples du Nigeria (ANPP)
@@ -1248,6 +1392,7 @@ All Progressives Congress (APC)
 Parti démocratique du peuple (PDP)
 Boko Haram
 
+// http://typo.mondediplo.net/messages/69
 // Norvège
 
 Parti conservateur (H)
@@ -1259,12 +1404,14 @@ Parti travailliste (AP)
 Parti du centre (SP)
 Parti de gauche socialiste (SV)
 
+// http://typo.mondediplo.net/messages/1061
 // Nouvelle-Calédonie
 
 Calédonie ensemble
 Construisons notre nation arc-en-ciel
 Front de libération nationale kanak et socialiste (FLNKS)
 
+// http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
 
 Parti ACT (ANZ)
@@ -1274,10 +1421,12 @@ Parti Nouvelle-Zélande d'abord (NZFP)
 Parti travailliste néo-zélandais (NZLP)
 Parti national néo-zélandais (NZNP)
 
+// http://typo.mondediplo.net/messages/67
 // Oman
 
 Pas de partis politiques
 
+// http://typo.mondediplo.net/messages/65
 // Ouganda
 
 Forum pour le changement démocratique (FDC)
@@ -1285,6 +1434,7 @@ Mouvement de résistance nationale (NRM)
 ADF-NALU
 Armée de résistance du Seigneur (LRA)
 
+// http://typo.mondediplo.net/messages/1097
 // Ouzbékistan
 
 Parti social-démocrate de justice (Adolat)
@@ -1295,6 +1445,7 @@ Parti libéral-démocrate (Uzlidep)
 Mouvement écologique d'Ouzbékistan (MEO)
 Mouvement islamique d'Ouzbékistan (MOI)
 
+// http://typo.mondediplo.net/messages/1098
 // Pakistan
 
 Parti islamique du Pakistan (JI)
@@ -1311,25 +1462,30 @@ Parti national baloutche Mengal (PBN-M)
 Pakhtunkhwa Milli Awami Party (PKMAP)
 Parti du peuple pakistanais (PPP)
 
+// http://typo.mondediplo.net/messages/64
 // Palau
 
 Pas de partis politiques
 
+// http://typo.mondediplo.net/messages/63
 // Palestine
 
 « Conquête » (Fatah)
 Mouvement de la résistance islamique (Hamas)
 Front démocratique de libération de la Palestine (FDLP)
+Organisation de libération de la Palestine (OLP)
 Parti de la libération islamique (PLI)
 Brigades Izz Al-Din Al-Qassam
 Ezzedine Al-Qassam
 Front populaire de libération de la Palestine (FPLP)
 
+// http://typo.mondediplo.net/messages/62
 // Panamá
 
 Parti panaméiste (Partido Panameñista)
 Parti révolutionnaire démocratique (PRD)
 
+// http://typo.mondediplo.net/messages/61
 // Papouasie-Nouvelle-Guinée
 
 National Alliance Party (NA)
@@ -1340,6 +1496,7 @@ People's Progress Party (PPP)
 Triumph Heritage Empowerment Party (THE)
 United Ressources Party (URP)
 
+// http://typo.mondediplo.net/messages/60
 // Paraguay
 
 les colorados (ANR)
@@ -1351,6 +1508,7 @@ Parti libéral radical authentique (PLRA)
 Partido Patria Querida (PPQ)
 Union nationale de citoyens éthiques (Unace)
 
+// http://typo.mondediplo.net/messages/59
 // Pays-Bas
 
 Appel chrétien-démocrate (CDA)
@@ -1360,6 +1518,7 @@ Parti pour la liberté (PVV)
 Parti socialiste (SP)
 Parti populaire pour la liberté et la démocratie (VVD)
 
+// http://typo.mondediplo.net/messages/58
 // Pérou
 
 Parti de l'alliance pour le progrès (APP)
@@ -1372,6 +1531,7 @@ Parti Pérou possible (PP)
 Solidaridad nacional (SN)
 Partido Comunista del Peru-Sendero Luminoso, Sentier lumineux (PCP-SL)
 
+// http://typo.mondediplo.net/messages/1099
 // Philippines
 
 Lutte pour des Philippines démocratiques (LDP)
@@ -1385,6 +1545,7 @@ Abou Sayyaf
 Front de libération islamique moro (MILF)
 Nouvelle Armée du peuple (NAP)
 
+// http://typo.mondediplo.net/messages/57
 // Pologne
 
 Comité de défense de la démocratie (KOD)
@@ -1394,31 +1555,38 @@ Plate-forme civique (PO)
 Parti populaire polonais Parti paysan polonais (PSL)
 Alliance de la gauche démocratique (SLD)
 
+// http://typo.mondediplo.net/messages/56
 // Porto Rico
 
 Parti de l'indépendance portoricaine (PIP)
 Nouveau parti progressiste (PNP)
 Parti démocratique populaire (PPD)
 
+// http://typo.mondediplo.net/messages/55
 // Portugal
 
+Bloc de gauche
 Coalition démocratique unitaire (CDU)
 Parti socialiste (PS)
 Portugal devant (PAF)
-Centre démocrate et social -- Parti populaire (CDS-PP)
+Centre démocrate et social - Parti populaire (CDS-PP)
+Parti communiste portugais (PCP)
 Parti social-démocrate (PSD)
 
+// http://typo.mondediplo.net/messages/54
 // Qatar
 
 Partis politiques interdits
 
+// http://typo.mondediplo.net/messages/147
 // République centrafricaine
 
 Convergence nationale « le travail, rien que le travail » (KNK)
 Rassemblement démocratique centrafricain (RDC)
 Armée de résistance du Seigneur (LRA)
-« Coalition » (Séléka)
+« Coalition » (Seleka)
 
+// http://typo.mondediplo.net/messages/53
 // République démocratique du Congo
 
 Alliance des forces démocratiques pour la libération du Congo-Zaïre (AFDL)
@@ -1431,11 +1599,13 @@ forces démocratiques alliées (ADF-NALU)
 Armée de résistance du Seigneur (LRA)
 M23
 
+// http://typo.mondediplo.net/messages/52
 // République dominicaine
 
 Parti de la libération dominicaine (PLD)
 Parti révolutionnaire dominicain (PRD)
 
+// http://typo.mondediplo.net/messages/24
 // République tchèque
 
 Action des citoyens mécontents (ANO)
@@ -1446,6 +1616,7 @@ Parti des droits civiques (SPO)
 Parti des Verts (SZ)
 Tradition, responsabilité, prospérité (TOP-09)
 
+// http://typo.mondediplo.net/messages/51
 // Roumanie
 
 Alliance des libéraux et démocrates (ALDE)
@@ -1455,32 +1626,36 @@ Parti Vert (PV)
 Union démocrate magyare de Roumanie (UDMR)
 Union nationale pour le progrès de la Roumanie (UNPR)
 
+// http://typo.mondediplo.net/messages/50
 // Royaume-Uni
 
 Parti national britannique (BNP)
 Parti Vert de l'Angleterre et du Pays de Galles (Green Party)
 Liberal Democrats (Libéraux-démocrates)
-Conservative Party (Parti conservateur)
+les tories (Parti conservateur)
 The Labour Party (Parti travailliste)
 Parti pour l'indépendance du Royaume-Uni (UKIP)
 Democratic Unionist Party (DUP)
 Parti nationaliste gallois (Plaid Cymru)
 Parti social-démocrate et libéral d'Irlande du Nord (SDLP)
-Sinn Féin (SF)
+Sinn Féin
 Parti national écossais (SNP)
 Parti unioniste de l'Ulster (UUP)
 Armée républicaine irlandaise (IRA)
+Confédération des syndicats britanniques (TUC)
 
+// http://typo.mondediplo.net/messages/49
 // Russie
 
 Parti communiste de la Fédération de Russie (KPRF)
 Parti libéral-démocrate de Russie (LDPR)
-Russie Unie
+Russie unie
 Russie juste
 Iabloko
 Union des forces de droite (SPS)
 L'Autre Russie
 
+// http://typo.mondediplo.net/messages/48
 // Rwanda
 
 Front patriotique rwandais (FPR)
@@ -1488,6 +1663,7 @@ Parti social-démocrate du Rwanda (PSDR)
 Front/force démocratique de libération du Rwanda (FDLR)
 Mouvement du 23 mars (M23)
 
+// http://typo.mondediplo.net/messages/46
 // Saint-Kitts-et-Nevis
 
 Mouvement des citoyens concernés (CCM)
@@ -1496,6 +1672,7 @@ Mouvement de l'action populaire (PAM)
 Parti travailliste populaire (PLP)
 Saint-Kitts-et-Nevis Labor Party (SKNLP)
 
+// http://typo.mondediplo.net/messages/41
 // Saint-Marin
 
 Parti des chrétiens-démocrates saint-marinais (PDCS)
@@ -1507,16 +1684,19 @@ Union pour la République (UPR)
 Union saint-marinaise des modérés (USDM)
 Gauche unie (SU)
 
+// http://typo.mondediplo.net/messages/45
 // Saint-Vincent-et-les-Grenadines
 
 Nouveau parti démocratique (NDP)
 Unity Labor Party (ULP)
 
+// http://typo.mondediplo.net/messages/47
 // Sainte-Lucie
 
 Parti travailliste de Sainte-Lucie (SLP)
 Parti uni des travailleurs (UWP)
 
+// http://typo.mondediplo.net/messages/44
 // Salomon
 
 Parti de l'alliance démocratique (DAP)
@@ -1524,6 +1704,7 @@ Kadere Party of Solomon Islands (KPSI)
 Parti de l'Alliance populaire (PAP)
 Parti démocratique uni (UDP)
 
+// http://typo.mondediplo.net/messages/43
 // Salvador
 
 Alliance républicaine nationaliste (Arena)
@@ -1533,17 +1714,20 @@ Grande Alliance pour l'unité nationale (GANA)
 Parti de la coalition nationale (PCN)
 Parti démocrate-chrétien (PDC)
 
+// http://typo.mondediplo.net/messages/42
 // Samoa
 
 Parti pour la protection des droits de l'homme (HRPP)
 Tautua Samoa
 
+// http://typo.mondediplo.net/messages/40
 // São-Tomé-et-Príncipe
 
 Action démocratique indépendante (ADI)
 Mouvement pour la libération de São-Tomé-et-Príncipe -- Parti social-démocrate (MLSTP-PSD)
 Parti de la convergence démocratique - Groupe de réflexion (PCD-GR)
 
+// http://typo.mondediplo.net/messages/39
 // Sénégal
 
 Alliance pour la République (APR)
@@ -1551,6 +1735,7 @@ Benno Bokk Yaakar (BBY)
 Benno Siggil Senegal (BSS)
 Parti démocratique sénégalais (PDS)
 
+// http://typo.mondediplo.net/messages/1318
 // Serbie
 
 Assez (DJB)
@@ -1563,18 +1748,21 @@ Parti socialiste de Serbie (SPS)
 Parti radical serbe (SRS)
 Parti des Verts de Serbie (ZS)
 
+// http://typo.mondediplo.net/messages/37
 // Seychelles
 
 Lalyans Seselwa
 Parti populaire (Lepep)
 Seychelles National Party (SNP)
 
+// http://typo.mondediplo.net/messages/36
 // Sierra Leone
 
 All People Congress (APC)
 Front uni révolutionnaire (RUF)
 Parti populaire de Sierra Leone (SLPP)
 
+// http://typo.mondediplo.net/messages/1100
 // Singapour
 
 Parti de la solidarité nationale (NSP)
@@ -1582,6 +1770,7 @@ Parti d'action populaire (PAP)
 Parti démocratique de Singapour (SDP)
 Parti des travailleurs de Singapour (WP)
 
+// http://typo.mondediplo.net/messages/35
 // Slovaquie
 
 Mouvement chrétien-démocrate (KDH)
@@ -1589,9 +1778,10 @@ Parti populaire - Notre Slovaquie (LSNS)
 Pont (Most-Hid)
 Les gens ordinaires et personnalités indépendantes -Nouvelle majorité (OLaNO-NOVA)
 Liberté et solidarité (SAS)
-Direction -- Social-démocratie (SMER-SD)
+Direction - Social-démocratie (Smer-SD)
 Parti national slovaque (SNS)
 
+// http://typo.mondediplo.net/messages/34
 // Slovénie
 
 Parti démocratique des retraités de Slovénie (Desus)
@@ -1601,6 +1791,7 @@ Parti démocrate slovène (SDS)
 Parti du centre moderne (SMC)
 Združena Levica Gauche unie (ZL)
 
+// http://typo.mondediplo.net/messages/33
 // Somalie
 
 Alliance pour la re-libération de la Somalie (ARS)
@@ -1609,6 +1800,7 @@ Al-Chabab
 Parti islamique (Hibzul islam)
 Union des tribunaux islamiques (UTI)
 
+// http://typo.mondediplo.net/messages/32
 // Soudan
 
 Parti démocratique unioniste (DUP)
@@ -1620,12 +1812,14 @@ Mouvement de libération du Soudan (MLS-MM)
 Mouvement populaire de libération du Soudan (MPLS)
 Mouvement de libération populaire du Soudan nord (MPLS/Nord)
 
+// http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
 
 Mouvement populaire de libération du Soudan (MPLS)
 Mouvement populaire de libération du Soudan pour le changement démocratique (MPLS-CD)
 Armée de résistance du Seigneur (LRA)
 
+// http://typo.mondediplo.net/messages/1101
 // Sri Lanka
 
 Parti démocratique populaire de l'Eelam (EPDP)
@@ -1638,6 +1832,7 @@ Congrès musulman du Sri Lanka (SLMC)
 Alliance nationale tamoule (TNA)
 Parti national uni (UNP)
 
+// http://typo.mondediplo.net/messages/31
 // Suède
 
 Parti du centre (C)
@@ -1646,9 +1841,10 @@ Libéraux (L)
 Parti modéré (M)
 Parti de l'environnement - les Verts (MP)
 Parti social-démocrate suédois des travailleurs (SAP)
-Démocrates suédois (SD)
+Démocrates de Suède (SD)
 Parti de gauche (V)
 
+// http://typo.mondediplo.net/messages/30
 // Suisse
 
 Les Verts
@@ -1659,6 +1855,7 @@ Parti socialiste suisse (PSS)
 Parti Vert libéral (PVL)
 Union démocratique du centre (UDC)
 
+// http://typo.mondediplo.net/messages/29
 // Surina
 
 Parti pour l'unité nationale et la solidarité (KTPI)
@@ -1666,11 +1863,13 @@ Parti démocratique national (NDP)
 Parti national (NPS)
 Parti hindoustani uni (VHP)
 
+// http://typo.mondediplo.net/messages/28
 // Swaziland
 
 Mouvement populaire démocratique uni (Pudemo)
 Ngwane Natonal Liberatory Congress (NNLC)
 
+// http://typo.mondediplo.net/messages/27
 // Syrie
 
 Coalition nationale syrienne (CNS)
@@ -1692,6 +1891,7 @@ Armée de l'islam (Jaïch Al-Islam)
 Organisation de l'État islamique (OEI)
 Unités de protection du peuple (YPG)
 
+// http://typo.mondediplo.net/messages/1102
 // Tadjikistan
 
 Parti agraire du Tadjikistan (HAT)
@@ -1704,6 +1904,7 @@ Rubis du Badakhchan (LB)
 Parti de la Renaissance islamique du Tadjikistan (PRIT)
 Parti social-démocrate du Tadjikistan (PSD)
 
+// http://typo.mondediplo.net/messages/1103
 // Taïwan
 
 Coalition pan-bleue
@@ -1715,11 +1916,13 @@ Parti de la nouvelle force (PNF)
 Union solidarité Taïwan (UST)
 Parti de l'indépendance de Taïwan (TAIP)
 
+// http://typo.mondediplo.net/messages/26
 // Tanzanie
 
 Parti de la révolution (CCM)
 Civic United Front (CUF)
 
+// http://typo.mondediplo.net/messages/25
 // Tchad
 
 Coordination de la majorité présidentielle (CMP)
@@ -1727,6 +1930,7 @@ Mouvement patriotique du salut (MPS)
 Rassemblement national pour la démocratie au Tchad (RNDT-le Réveil)
 Union nationale pour la démocratie et le renouveau (UNDR)
 
+// http://typo.mondediplo.net/messages/1104
 // Thaïlande
 
 Parti démocrate
@@ -1738,6 +1942,7 @@ Gerakan Mujahidin Islam Patani (GMIP)
 Organisation unifiée de libération de Pattani (PULO)
 Patani Liberation Army (PLA)
 
+// http://typo.mondediplo.net/messages/1105
 // Timor-Leste
 
 Comité national pour la reconstruction timoraise (CNRT)
@@ -1747,6 +1952,7 @@ Parti démocrate (PD)
 Aitarak
 Tim Alpha
 
+// http://typo.mondediplo.net/messages/23
 // Togo
 
 Alliance nationale pour le changement (ANC)
@@ -1755,17 +1961,20 @@ Collectif sauvons le Togo (CST)
 Rassemblement du peuple togolais (RPT)
 Union pour la République (UNIR)
 
+// http://typo.mondediplo.net/messages/22
 // Tonga
 
 Parti populaire démocratique (PDP)
 Democratic Party of Friendly Islands (DPFI)
 
+// http://typo.mondediplo.net/messages/21
 // Trinité-et-Tobago
 
 Alliance nationale pour la reconstruction (NAR)
 Mouvement national populaire (PNM)
 Congrès national unifié (UNC)
 
+// http://typo.mondediplo.net/messages/20
 // Tunisie
 
 Congrès pour la République (CPR)
@@ -1775,6 +1984,7 @@ Front populaire
 Nidaa Tounès
 Parti de l'alliance démocratique (PAD)
 
+// http://typo.mondediplo.net/messages/1107
 // Turkménistan
 
 Parti démocratique du Turkménistan (DPT)
@@ -1782,6 +1992,7 @@ Parti agraire du Turkménistan (PAT)
 Parti communiste du Turkménistan (PCT)
 Parti des industriels et des entrepreneurs (PIE)
 
+// http://typo.mondediplo.net/messages/19
 // Turquie
 
 Parti de la justice et du développement (AKP)
@@ -1794,10 +2005,12 @@ Parti d'action nationaliste (MHP)
 Parti des travailleurs du Kurdistan (PKK)
 Force de défense du peuple (HPG)
 
+// http://typo.mondediplo.net/messages/18
 // Tuvalu
 
-Pas de partis politiques 
+Pas de partis politiques 
 
+// http://typo.mondediplo.net/messages/17
 // Ukraine
 
 Union panukrainienne « Patrie » (Batkivshchyna)
@@ -1809,18 +2022,20 @@ Parti radical (PR)
 « Entraide » (Samopomich)
 « Liberté » (Svoboda)
 
+// http://typo.mondediplo.net/messages/1065
 // Union soviétique
 
-
+// http://typo.mondediplo.net/messages/15
 // Uruguay
 
-Frente amplio (FA)
+Frente Amplio (FA)
 Mouvement révolutionnaire oriental (MRO)
 Parti colorado
 Parti communiste (PCU)
 Parti démocrate-chrétien (PDC)
-Parti national ou « Parti blanco » (PN)
+Parti national ou « Parti Blanco » (PN)
 
+// http://typo.mondediplo.net/messages/14
 // Vanuatu
 
 Confédération des Verts (GC)
@@ -1830,16 +2045,19 @@ Reunification of Movement for Change (RMC)
 Union des partis modérés (UMP)
 Vanua'aku Pati Our Land Party (VP)
 
+// http://typo.mondediplo.net/messages/13
 // Vatican
 
 Pas de partis politiques
 
+// http://typo.mondediplo.net/messages/12
 // Venezuela
 
 Table de l'unité démocratique (MUD)
 Parti communiste vénézuélien (PCV)
 Parti socialiste unifié du Venezuela (PSUV)
 
+// http://typo.mondediplo.net/messages/1108
 // Vietna
 
 Parti communiste vietnamien (PCV)
@@ -1848,10 +2066,11 @@ Bloc 8406
 Parti démocrate du Vietnam (PDV)
 Parti de la réforme du Vietnam (Viet Tan)
 
+// http://typo.mondediplo.net/messages/996
 // Yémen
 
 Congrès général du peuple (CGP)
-Parti yéménite pour la réforme (Islah)
+Parti yéménite pour la réforme (Al-Islah)
 Organisation nassérienne unioniste populaire
 Parti de la renaissance arabe (Parti Baas)
 Parti socialiste yéménite (PSY)
@@ -1859,6 +2078,7 @@ Al-Qaida dans la péninsule arabique (AQPA)
 houthistes
 Organisation de l'État islamique (OEI)
 
+// http://typo.mondediplo.net/messages/10
 // Zambie
 
 African National Congress (ANC)
@@ -1867,8 +2087,10 @@ Front patriotique (PF)
 Parti uni pour l'indépendance nationale (UNIP)
 Parti uni pour le développement national (UPND)
 
+// http://typo.mondediplo.net/messages/9
 // Zimbabwe
 
 Movement for Democratic Change-Ncube (MDC-N)
 Movement for Democratic Change-Tsvangirai (MDC-T)
 Union nationale africaine du Zimbabwe - Front patriotique (ZANU-PF)
+

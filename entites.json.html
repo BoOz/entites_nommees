@@ -1,0 +1,13 @@
+#HTTP_HEADER{Content-Type: text/plain; charset="#CHARSET"}
+{"success":true,"results":{
+<BOUCLE_categories(ENTITES_NOMMEES){entite LIKE %(#ENV{entite})%}{fusion type_entite}{","}>
+	"[(#TYPE_ENTITE|strtolower|translitteration)]":{
+		"name":"[(#TYPE_ENTITE)]",
+		"results":[
+			<BOUCLE_entites(DATA){source sql,#VAL{"select entite, count(id_article) nb from entites_nommees where entite like LENTITE and type_entite='LETYPE' group by entite having nb > 3 order by nb desc"}|replace{LETYPE,#TYPE_ENTITE}|replace{LENTITE,#VAL{%}|concat{#ENTITE}|concat{%}|_q}}{","}{0,4}>{
+			"title":"#ENTITE","description":" Healthy Population"
+			}</BOUCLE_entites>
+		]
+	}
+</BOUCLE_categories>
+}}

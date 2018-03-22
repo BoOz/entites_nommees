@@ -1,0 +1,14 @@
+<div class="entites_residuelles" style="text-align:left">
+
+	<B_fragments_inconnus>
+	<h3>Entités résiduelles (#GRAND_TOTAL)</h3>
+	#ANCRE_PAGINATION
+	<BOUCLE_fragments_inconnus(DATA){source sql, #VAL{"select count(id_entite) nb, entite, type_entite, extrait, id_article from entites_nommees where type_entite='INDETERMINE' ANDWHERE group by entite order by nb desc"}|replace{ANDWHERE,#GET{andwhere}} }{!par valeur}{valeur > 1}{pagination 100}{si #ENV{id_article}|non}>
+		<div><strong><a href="?page=entite[&amp;entite=(#ENTITE|rawurlencode)][&amp;sdate=(#ENV{sdate})][&amp;nb_articles=(#ENV{nb_articles})]">[(#ENTITE)]</a> :</strong> <small>[(#NB)]&nbsp;fois</small> [(#EXTRAIT)] 
+		<small><a href="?page=article&amp;id_article=[(#ID_ARTICLE)]">[voir]</a></small>
+		</div>
+	</BOUCLE_fragments_inconnus>
+	<p>#PAGINATION</p>
+	</B_fragments_inconnus>
+	
+</div>

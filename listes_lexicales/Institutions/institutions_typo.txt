@@ -1,21 +1,24 @@
-// institutions
+
+
+// institutions 
+
+// http://typo.mondediplo.net/messages/977
 // institutions et organismes d'État internationaux
 
-Commission européenne 
+institutions et organismes d'État internationaux
+Commission européenne 
 la Commission
-Conseil de l'Europe
-Conseil de l'Union européenne
-Conseil européen
+Conseil de l'Europe 
+Conseil de l'Union européenne 
+Conseil européen 
 Comité des représentants permanents (Coreper)
 Convention de sauvegarde des droits de l'homme et des libertés fondamentales
 Cour européenne des droits de l'homme
-Cour de justice de l'Union européenne
-
-
+Cour de justice de l'Union européenne 
 Cour internationale de justice (CIJ)
 Cour pénale internationale (CPI)
-groupe des 10 (1973) 
-groupe des 77 ou les « 77 ».
+groupe des 10  
+groupe des 77 ou les « 77 ».
 Association des nations de l'Asie du Sud-Est (Anase)
 Communauté andine des nations (CAN)
 Organisation mondiale du commerce (OMC)
@@ -23,15 +26,16 @@ Organisation des pays exportateurs de pétrole (OPEP)
 Organisation mondiale de la santé (OMS)
 Organisation mondiale du tourisme (OMT)
 Organisation du traité central (Cento)
-Organisation du traité de l'Asie du Sud-Est
+Organisation du traité de l'Asie du Sud-Est 
 
-// institutions dans les fiches « continents » et #institutions_internationales
+// institutions dans les fiches « continents » et #institutions_internationales 
 
+// http://typo.mondediplo.net/messages/1286
 // Commonwealth of Nations
 
-Charte du Commonwealth
+Charte du Commonwealth 
 
-
+// http://typo.mondediplo.net/messages/1288
 // Organisation des Nations unies
 
 Agence internationale de l'énergie atomique (AIEA)
@@ -40,15 +44,17 @@ Cour pénale internationale (CPI)
 Organisation pour l'interdiction des armes chimiques (OIAC)
 Organisation mondiale du commerce (OMC)
 Tribunal international du droit de la mer
+
 Assemblée générale
 Cour internationale de justice (CIJ)
 Conseil de tutelle
 Conseil de sécurité
 Conseil économique et social (Ecosoc)
 Secrétariat général
+
 Conférence des Nations unies sur le commerce et le développement (Cnuced)
 Conseil des droits de l'homme
-Haut-Commissariat pour les réfugiés (HCR)
+Haut Commissariat des Nations unies pour les réfugiés (HCR)
 opérations de maintien de la paix et missions politiques
 Programme alimentaire mondial (PAM)
 Programme des Nations unies pour le développement (PNUD)
@@ -57,12 +63,14 @@ Tribunal pénal international pour le Rwanda (TPIR)
 Tribunal pénal international pour l'ex-Yougoslavie (TPIY)
 Fonds des nations unies pour l'enfance (Unicef)
 Office de secours et de travaux des Nations unies pour les réfugiés de Palestine dans le Proche-Orient (UNRWA)
+
 Agence internationale de l'énergie atomique (AIEA)
 Autorité internationale des fonds marins (AIFM)
 Cour pénale internationale (CPI)
 Organisation pour l'interdiction des armes chimiques (OIAC)
 Organisation mondiale du commerce (OMC)
 Tribunal international du droit de la mer
+
 Banque mondiale
 Organisation des Nations unies pour l'alimentation et l'agriculture (FAO)
 Fonds monétaire international (FMI)
@@ -72,6 +80,7 @@ Organisation météorologique mondiale (OMM)
 Organisation mondiale de la propriété intellectuelle (OMPI)
 Organisation mondiale de la santé (OMS)
 Organisation des Nations unies pour l'éducation, la science et la culture (Unesco)
+
 convention-cadre des Nations unies sur les changements climatiques
 convention des Nations unies sur le droit de la mer
 convention sur l'interdiction des armes chimiques
@@ -79,6 +88,7 @@ Déclaration universelle des droits de l'homme
 pacte international relatif aux droits civils et politiques
 processus de Kimberley
 traité de non-prolifération nucléaire (TNP)
+
 Force intérimaire des Nations unies au Liban (Finul)
 Force intérimaire des Nations unies pour Abiyé (Fisnua)
 Force des Nation unies chargée d'observer le désengagement (Fnuod)
@@ -136,15 +146,16 @@ Mission de supervision des Nations unies en Syrie (Misnus)
 Mission d'observation de l'ONU pour l'Irak et le Koweït (Monuik)
 Mission d'observation de l'ONU au Yémen (Unyom)
 
-
+// http://typo.mondediplo.net/messages/1287
 // Organisation internationale de la francophonie
 
 Conférence ministérielle de la francophonie (CMF)
 Conseil permanent de la francophonie (CPF)
 Sommet de la francophonie
-charte de la francophonie
 
+charte de la francophonie 
 
+// http://typo.mondediplo.net/messages/1341
 // Organisations internationales
 
 Alliance des petits États insulaires (Aosis)
@@ -184,15 +195,16 @@ Tribunal international du droit de la mer
 Organisation des Nations unies pour l'éducation, la science et la culture (Unesco)
 Fonds des Nations unies pour l'enfance (Unicef)
 Office de secours et de travaux pour les réfugiés de Palestine dans le Proche-Orient (UNRWA)
+
 Commission africaine des droits de l'homme et des peuples (ACHPR)
 Association des pays africains producteurs de diamants (APDA)
 Autorité du bassin du Niger
 Communauté d'Afrique de l'Est (CAE)
 Commission du bassin du lac Tchad (CBLT)
 Communauté de développement de l'Afrique australe (CDAA)
-Communauté économique des États d'Afrique de l'Ouest (Cedeao)
-Communauté économique des États d'Afrique centrale (Ceeac)
-Communauté économique et monétaire d'Afrique centrale (Cemac)
+Communauté économique des États de l'Afrique de l'Ouest (Cedeao)
+Communauté économique des États de l'Afrique centrale (Ceeac)
+Communauté économique et monétaire de l'Afrique centrale (Cemac)
 Communauté des États sahélo-sahariens (CEN-SAD)
 Communauté économique des pays des Grands Lacs (CEPGL)
 Comité inter-États de lutte contre la sécheresse au Sahel (CILSS)
@@ -213,6 +225,7 @@ Union économique et monétaire ouest-africaine (Uemoa)
 Union du Maghreb arabe (UMA)
 Union du fleuve Mano
 zone franc
+
 Association des États de la Caraïbe (AEC)
 Association latino-américaine d'intégration (Aladi)
 Association latino-américaine de libre-échange (Alale)
@@ -232,6 +245,7 @@ Organisation des États américains (OEA)
 Organisation des États de la Caraïbe orientale (OECO)
 Système d'intégration centre-américain (SICA)
 Union des nations sud-américaines (Unasur)
+
 Association des nations de l'Asie du Sud-Est (Anase)
 Anase + 3
 Coopération économique Asie-Pacifique (APEC)
@@ -242,12 +256,16 @@ Organisation de coopération de Shanghaï (OCS)
 Organisation du traité de l'Asie du Sud-Est (Otase)
 Association sud-asiatique pour la coopération régionale (Saacr)
 Union économique eurasiatique (UEE)
+
 Association européenne de libre-échange (AELE)
 Conseil de l'Europe
 Union européenne (UE)
+
 Communauté du Pacifique (CPS)
 Forum des îles du Pacifique (FIP)
 Forum pour le développement des îles du Pacifique (FDIP)
 Groupe mélanésien Fer de lance (GMLF)
 Programme régional océanien de l'environnement (PROE)
+
 Conseil de coopération du Golfe (CCG)
+

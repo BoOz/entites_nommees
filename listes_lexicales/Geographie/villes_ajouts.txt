@@ -5,9 +5,20 @@ Québec
 Saïgon
 Abidjan
 La Haye
+Marseille
+Dien Bien Phu
+Las Vegas
 
 // alias
 Caire
 
 // faute mais on en trouve
 New-york
+
+// lieu d'edition
+New Haven
+
+
+Munich
+Saint-Pétersbourg
+Francfort

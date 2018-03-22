@@ -1,0 +1,177 @@
+[(#REM) Calculs ]
+
+#SET{filtre_entites,INDETERMINE}
+[(#ENV{entite}|oui) #SET{filtre_entites,^#ENV{entite}} ]
+
+#SET{andwhere,""}
+[(#ENV{entite}|oui) #SET{andwhere,#VAL{"and entite like '%LENTITE%'"}|replace{LENTITE,#ENV{entite}|_q}|replace{"^'"}|replace{"'$"}} ]
+[(#ENV{sdate}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like}|concat{#ENV{sdate}|concat{%}|_q}} ]
+[(#ENV{decenie}|oui) #SET{andwhere,#GET{andwhere}|concat{and date like }|concat{#ENV{decenie}|replace{\d$}|concat{%}|_q}} ]
+[(#ENV{id_article}|oui) #SET{andwhere,#VAL{"and id_article=LID"}|replace{LID,#ENV{id_article}}} ]
+
+[(#REM)	Références trouvées dans tous les articles avec cette entité.
+		Trouver les 100 références les plus fréquentes dans ces articles,
+		Diviser le nombre de chacune par son poids dans le corpus (ou par  5000 = beaucoup pour ???).
+		Obtenir le score de relation de chaque référence avec notre entité.
+		TODO : séparer les géo qui écrasent le reste.
+]
+
+#SET{references,#ARRAY}
+#SET{articles,#ARRAY}
+#SET{references_en_relation,#ARRAY}
+
+[(#REM) Récuperer le poids total des références les plus fréquentes dans le fichier stats.txt (ne pas en prendre plus de 5 000 sinon c long ? ) ]
+<BOUCLE_references_global(DATA){source file,#CHEMIN{'stats/decompte_references.txt'}}{si #CHEMIN{'stats/decompte_references.txt'}}{0,5000}> #SET{entite,#VALEUR|explode{"	"}|table_valeur{0}} #SET{poids,#VALEUR|explode{"	"}|table_valeur{2}} #SET{references,#GET{references}|array_merge{#ARRAY{#GET{entite},#GET{poids}}}} </BOUCLE_references_global>
+
+<BOUCLE_articles_lies(DATA){source sql, #VAL{"select id_article from entites_nommees where entite=LENTITE order by date desc"}|replace{LENTITE,#ENV{entite}|_q} }{si #ENV{entite}|oui}> #SET{articles,#GET{articles}|push{#ID_ARTICLE}}</BOUCLE_articles_lies>
+#SET{andwhere,#VAL{"and id_article in (LESARTICLES) and entite !=LENTITE"}|replace{LENTITE,#ENV{entite}|_q}|replace{LESARTICLES,#GET{articles}|join{","}}}
+
+[(#REM)	100 references pondérées en relation avec #ENV{entite} ]
+[(#REM) Autres entites en meme temps que notre entite dans les articles ]
+#SET{fonctions,#ARRAY}
+<BOUCLE_refs(DATA){source sql, #VAL{"select entite, type_entite, count(entite) nb from entites_nommees where 1 ANDWHERE and type_entite not in('Lieux de publication', 'Sources','Medias') group by entite order by nb desc limit 0,100"}|replace{ANDWHERE,#GET{andwhere}}}{si #ENV{id_article}|non}>[(#TYPE_ENTITE|=={Fonctions}|oui)#SET{fonctions,#GET{fonctions}|array_merge{#ARRAY{#ENTITE,#NB}}}]#SET{references_en_relation,#GET{references_en_relation}|array_merge{#ARRAY{#ENTITE,#NB|div{#GET{references}|table_valeur{#ENTITE}|sinon{5000}}}}}</BOUCLE_refs>
+[(#REM) On cherche avec Diploiser (tf-idf) des articles similaires ]
+
+[(#REM) Générer un paquet d'entités proches répétées plusieurs fois en fonction de leur poids puis multiplier par 10 pour ?? ]
+#SET{liste_mots,#ENV{entite}|liste_mots_tf_idf{#GET{references_en_relation}|max|mult{2}}}
+<BOUCLE_entites_frequentes_tf_idf(DATA){source table,#GET{references_en_relation}}{!par valeur}> #SET{liste_mots,#GET{liste_mots}|concat{" "}|concat{#CLE|liste_mots_tf_idf{#VALEUR}}} </BOUCLE_entites_frequentes_tf_idf>
+
+[(#REM)	Appel API simserver // Diploiser 
+		Récuperer id_article et score
+]
+#SET{articles_en_relation,#ARRAY}
+<BOUCLE_articles_en_relation(DATA){source diploiser,#GET{liste_mots},8}{!par score}{si #CHEMIN{modeles/item.html}}>
+	#SET{articles_en_relation,#GET{articles_en_relation}|array_merge{#ARRAY{art_#ID_ARTICLE,#SCORE}}}
+</BOUCLE_articles_en_relation>
+
+
+[(#REM)
+	[(#GET{articles_en_relation}|array_keys|print_r{1})]
+	{filter 1, 'properties.objet = "article"'}
+	{filter #GET{notin}|explode{","}, 'NOT IN(properties.id_objet, @valeurs)'}
+]
+
+[(#REM)
+	On ajoute les résultats de recherche 
+	
+	Définition de la fonction de score (tri des résultats)
+
+	On bidouille la date car le UNIX_TIMESTAMP
+	est stupidement impossible avant 1er janvier 1970.
+
+]
+
+[(#ENV{tri}|=={date}|ou{[(#ENV{entite}|strlen|=={0})]}?{
+	#SET{select,'*, IF (date > 2992477296, date-8589934591, date) as dateu'}
+	#SET{tri,dateu}
+	#SET{sens_tri,1}
+,
+	#SET{select,'*, WEIGHT() / (100+SQRT(SQRT(NOW()-(IF (date > 2992477296, date-8589934591, date))))) as poids'}
+	#SET{tri,poids}
+	#SET{sens_tri,1}
+})]
+
+[(#REM) supprimer les paginations de # SELF, pour les liens d'affinage ]
+[(#SET{self,[(#SELF|replace{'\+',' '}
+|parametre_url{debut_articles,''}
+|parametre_url{debut_cartes,''}
+|parametre_url{debut_livres,''}
+|parametre_url{debut_revues,''}
+)]})]
+
+<BOUCLE_articles(SPHINX){recherche #ENV*{entite}}
+	{filter 1, 'properties.visible = 1'}
+	{filter #ENV{annee},  'YEAR(date) = @valeur' }
+	{filter #ENV{apres},  'YEAR(date) >= @valeur' }
+	{filter #ENV{avant},  'YEAR(date) <= @valeur' }
+	{filtermultijson #ENV{mots}, properties.tags, #ENV{mots}}
+	{filtermultijson #ENV{auteurs}, properties.authors, #ENV{auteurs}}
+	{filter #ENV{typearticle}, "IN(properties.type, '@valeurs')"}
+	{filter #ENV{secteur}, 'IN(properties.secteur, @valeurs)'}
+	
+	{filter 1, "NOT IN(properties.type, 1,601,603,608,609,617)"}
+	{filter "Dans les revues", "NOT IN(properties.secteur,@valeurs)"}
+	
+	{select #GET{select}}
+	{par #GET{tri}}{inverse #GET{sens_tri}}
+	
+	{snippet content,'',100}
+	
+	{pagination 10}>
+	[(#SET{properties,[(#VALEUR{properties}|json_decode{1})]})]
+	#SET{id,#GET{properties}|table_valeur{id_objet}}
+	[(#GET{articles_en_relation}|table_valeur{art_#GET{id}}|non)
+		#SET{articles_en_relation,#GET{articles_en_relation}|array_merge{#ARRAY{art_#GET{id},0_recherche}}}
+	]
+</BOUCLE_articles>
+
+[(#REM) Affichage ]
+
+<div class="categorie hermetique">
+	
+	[(#REM) références proches ]
+	
+	<B_references_proches>
+	<div id="references_proches" style="margin:0px 60px 20px 0px;padding:0 50px;line-height:1.8em;text-align:center;">
+		<h3>Références proches</h3>
+		<BOUCLE_references_proches(DATA){source table,#GET{references_en_relation}}{par cle}{0,80}{valeur > 0.02}{si #ENV{entite}}>
+			<span style="font-size:[(#VALEUR|nuage_mot{#GET{references_en_relation}|max})]em;">
+				<a style="padding-right:20px;text-decoration:none" href="/#URL_PAGE{entite,entite=#CLE|rawurlencode}" title="[(#CLE|match{'\(.*\)'}|oui) #CLE , ]score : #VALEUR">
+					[(#CLE|match{'\(.*\)'}|oui)[(#CLE|replace{" ",&nbsp;}|match{'\(.*\)'}|replace{'\(|\)',''}|replace{^.*:})]]
+					[(#CLE|match{'\(.*\)'}|non)[(#CLE|replace{" ",&nbsp;}|replace{^.*:})]]
+				</a>
+			</span>
+		</BOUCLE_references_proches>
+	</div>
+	</B_references_proches>
+</div>
+
+<B_en_relation>
+<h2 class="catego"> Nos articles en relation avec <span>#ENV{entite}</span></h2>
+<ul class="liste" style="margin-bottom:30px">
+<BOUCLE_en_relation(DATA){source table,#GET{articles_en_relation}}{!par valeur}{valeur > 0}{si #CHEMIN{modeles/item.html}}>
+	<li>
+		<div style="float:right;width:100px">
+			Score : #VALEUR // 
+			#SET{id,#CLE|replace{^art_}}
+			#GET{id}
+		</div>
+		<BOUCLE_snippets(SPHINX){recherche #ENV{entite}}
+				{snippet content,'',100}
+				{filter 1, 'properties.objet = "article"'}
+				{filter #GET{id}, 'IN(properties.id_objet, @valeurs)'}
+				{pagination 1}
+			>
+			#INCLURE{fond=modeles/item-snippets,id_article=#GET{id},snippets=#VALEUR{snippet}}
+		</BOUCLE_snippets>
+			#INCLURE{fond=modeles/item,id=#GET{id}}
+		<//B_snippets>
+	</li>
+</BOUCLE_en_relation>
+</ul>
+</B_en_relation>
+
+<B_en_relation_recherche>
+<h2 class="catego"> Nos articles également en relation avec <span>#ENV{entite}</span> (recherche, #TOTAL_BOUCLE documents)</h2>
+<ul class="liste" style="max-height:700px;overflow:auto;margin-bottom:30px">
+<BOUCLE_en_relation_recherche(DATA){source table,#GET{articles_en_relation}}{!par valeur}{valeur = 0_recherche}{si #CHEMIN{modeles/item.html}}>
+	<li>
+		<div style="float:right;width:100px">
+			Score : #VALEUR // 
+			#SET{id,#CLE|replace{^art_}}
+			#GET{id}
+		</div>
+		<BOUCLE_snippets_recherche(SPHINX){recherche #ENV{entite}}
+				{snippet content,'',100}
+				{filter 1, 'properties.objet = "article"'}
+				{filter #GET{id}, 'IN(properties.id_objet, @valeurs)'}
+				{pagination 1}
+			>
+			#INCLURE{fond=modeles/item-snippets,id_article=#GET{id},snippets=#VALEUR{snippet}}
+		</BOUCLE_snippets_recherche>
+			#INCLURE{fond=modeles/item,id=#GET{id}}
+		<//B_snippets_recherche>
+	</li>
+</BOUCLE_en_relation_recherche>
+</ul>
+</B_en_relation_recherche>

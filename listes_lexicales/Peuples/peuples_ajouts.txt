@@ -10,3 +10,4 @@ Hutus
 Tutsis
 Arabes
 Blancs
+Khmers

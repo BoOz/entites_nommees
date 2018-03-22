@@ -1,0 +1,12 @@
+[(#REM) TODO ajouter le statut publie ]
+[(#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where type_entite='Personnalités' and statut='publie' and id_article=LARTICLE group by entite order by nb desc"}|replace{LARTICLE,#ENV{id_article}}})]
+<B_personnalites>
+<h3>Personnalités</h3>
+	<div class="tags decale">
+	<BOUCLE_personnalites(DATA)
+		{source sql, #GET{req}}
+	>
+		<a class="mots" href="/references/[(#ENTITE|rawurlencode)]">#ENTITE</a>
+	</BOUCLE_personnalites>
+	</div>
+</B_personnalites>

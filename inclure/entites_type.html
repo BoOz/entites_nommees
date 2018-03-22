@@ -1,0 +1,17 @@
+[(#REM) Liste des entites d'un type ]
+
+<B_entites>
+	#ANCRE_PAGINATION
+	<h3>#TYPE</h3>
+	<ul>
+	<BOUCLE_entites(DATA){source csv, #CHEMIN{stats/decompte_references.txt}}
+		{1,n}
+		{pagination #ENV{pagination,50}}
+		{type}
+		>
+		<li><a href="/references/[(#ENTITE|translitteration|rawurlencode)]">#ENTITE</a> <small>#POIDS fois</small></li>
+	</BOUCLE_entites>
+	</ul>
+	[(#ENV{pagination}|non)<p class="pagination">Voir toutes les références «&nbsp;<a href="index/[(#TYPE|translitteration|strtolower|rawurlencode)]">#TYPE</a>&nbsp;»</p>]
+	[(#ENV{pagination}|oui)<p class="pagination">#PAGINATION</p>]
+</B_entites>

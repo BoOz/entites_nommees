@@ -9,6 +9,9 @@ Parlement européen
 Parlement
 Cour des comptes
 
+// de l'UE
+États membres
+
 Haute Autorité
 
 // services secrets
@@ -25,3 +28,107 @@ Pentagone
 
 // syndicats
 Confédération générale du travail (CGT)
+Confédération française démocratique du travail (CFDT)
+Mouvement des entreprises de France (Medef)
+
+// ONU
+Conseil des droits de l’homme des Nations unies
+Conférence des parties (COP)
+
+Royal Navy
+Amis de la Terre
+
+Harvard Business School
+London School of Economics
+Collège de France
+Coup de Balai
+
+Qu'la Commune
+Quadrature du Net
+Quai d'Orsay
+
+// Entités « Institutions (auto) »
+
+Banque centrale européenne (BCE)
+Central Intelligence Agency (CIA)
+Banque africaine de développement (BAD)
+Sciences Po
+//Haut-Commissariat des Nations
+Conseil d'État
+Centre national de la recherche scientifique (CNRS)
+Fédération internationale de football association (FIFA)
+Human Rights Watch
+// Mission des Nations
+Federal Bureau of Investigation (FBI)
+Force ouvrière (FO)
+Communauté économique européenne (CEE)
+Conseil représentatif des institutions juives de France (CRIF)
+// Conférence des Nations
+// Theresa May
+Confédération française des travailleurs chrétiens (CFTC)
+Massachusetts Institute of Technology (MIT)
+// Haut Conseil
+Cour de justice des Communautés européennes (CJCE)
+Thein Sein
+Section française de l'Internationale ouvrière (SFIO)
+Objectifs du millénaire pour le développement (OMD)
+Société des nations (SDN)
+Secours populaire français (SPF)
+Union générale tunisienne du travail (UGTT)
+//Review of Books
+//Brookings Institution
+//Opération des Nations
+//Hôtel Président
+Confédération européenne des syndicats (CES)
+Occuper Wall Street (OWS)
+Front homosexuel d'action révolutionnaire (FHAR)
+// Castro annonce la création des comités de défense de la révolution (CDR)
+National Security Agency (NSA)
+Conseil national de transition (CNT)
+Transparency International
+Médecins sans frontières (MSF)
+Comité international de la Croix-Rouge (CICR)
+Securities and Exchange Commission (SEC)
+Conseil d'orientation des retraites (COR)
+Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC)
+Air Force
+National Review
+Département administratif de sécurité (DAS)
+Armée de libération du Kosovo (UÇK)
+École nationale d'administration (ENA)
+Communauté européenne du charbon et de l'acier (CECA)
+Sciences Po Paris
+Agence internationale de l'énergie (AIE)
+Organisation de l'unité africaine (OUA)
+Fonds européen de stabilité financière (FESF)
+Movimiento Campesino del Aguán (MCA)
+Parlement de Wallonie
+Home Box Office (HBO)
+Nations Unies
+Parlement de Strasbourg
+Confédération nationale du travail (CNT)
+Conseil supérieur de l'audiovisuel (CSA)
+Citizens United
+Force internationale d'assistance à la sécurité (FIAS)
+//Courtiser les Eglises
+//Amérique (ALBA)
+Communauté économique des États
+Organisation armée secrète (OAS)
+Centre culturel populaire de Palente-Orchamps (CCPPO)
+Internet du groupe Norilsk
+// Abidjan (MACA)
+Gerakan Atjeh Merdeka (GAM)
+Bourse de Paris
+Régie autonome des transports parisiens (RATP)
+Fédération syndicale unitaire (FSU)
+// Donetsk (DNR)
+Université libre de Bruxelles
+National Security Agency
+Amis du Monde diplomatique (AMD)
+Conseil de Papouasie
+Fondation Copernic
+Mouvement des sans-terre (MST)
+American International Group (AIG)
+Agence nationale pour l'emploi (ANPE)
+
+

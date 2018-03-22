@@ -1,14 +1,18 @@
-// partis cité directement dans la forme réduite sans accronymes. Ou qui posent des PB en regex auto.
-Parti socialiste
-PS
+// Homonymies
+// Front national (FN) et (PBKS) : existe plusieurs fois donc OK il sera dédoublé.
+// mais Parti communiste existe une fois Parti communiste (PCU) donc on le remet pour le dédoubler.
+Parti communiste (PCU)
+État de droit (OEK)
+Alliance (XS)
 
-Parti communiste français
-PCF
+// Oublis ?
+Khmers rouges
+La république en marche (LREM)
 
-Parti communiste
-PC
+// nom d'usage en VO
+Forza Italia
 
-// absents
+// absents de typo diplo
 Organisation de libération de la Palestine (OLP)
 Al-Qaida
 Daech
@@ -18,4 +22,12 @@ Frères musulmans
 
 // anciens partis
 Nouveau Parti anticapitaliste (NPA)
+Union pour un mouvement populaire (UMP)
+Parti ouvrier d'unification marxiste (POUM)
+Conseil national de la Résistance (CNR)
 
+Nieuw-Vlaamse Alliantie
+Europe Ecologie
+
+Junge Freiheit
+Ligue du Nord

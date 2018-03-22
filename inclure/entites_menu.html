@@ -1,0 +1,30 @@
+<div class="ui center aligned container">
+	<BOUCLE_nb_entites(DATA){source sql,select count(distinct(entite)) nb from entites_nommees}> #SET{nb_entites,#NB} </BOUCLE_nb_entites>
+	<div class="ui grid">
+		<div class="ten wide column">
+		<p style="height:1em;line-height: 0.9em;overflow:auto">
+		 <small>([(#GET{nb_entites}|number_format{0,","," "})])</small> — <a href="#URL_PAGE{entites}">Index</a> - <a href="#URL_PAGE{explorer}">Visualiser les références</a>
+			
+			<B_chrono>
+			[(#TOTAL_BOUCLE|>={10}|oui)<span style="padding-left:3%">Filtrer par décennie :</span>
+			[(#TOTAL_BOUCLE|>={720}|oui)
+			<a href="[(#SELF|parametre_url{decenie,1950})]">1954-59</a>
+			]
+			]
+			
+			<BOUCLE_chrono(DATA){source sql,"select date from entites_nommees where date > '1950-01-01 00:00:00' group by year(date)"}>
+			[(#DATE|annee|modulo{10}|=={0}|oui), <a href="[(#SELF|parametre_url{decenie,[(#DATE|annee)]})]" style="[(#ENV{decenie}|replace{\d$}|=={#DATE|annee|replace{\d$}}|oui)font-weight:bold]">[(#DATE|annee)]</a>
+			]
+			</BOUCLE_chrono> 
+			
+		<span style="padding-left:10%">Filtrer par année</span> : <BOUCLE_arta(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y')}> [(#SET{date,[(#DATE|annee)]})]
+				<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+			</BOUCLE_arta>
+		<br><br>
+		Filtrer par numero :<BOUCLE_numeros(entites_nommees){!par date}{fusion DATE_FORMAT(date, '%Y-%m')}>[(#SET{date,[(#DATE|annee)][-(#DATE|mois)]})]
+				<a href="[(#SELF)]&sdate=#GET{date}"[ (#GET{date}|=={#ENV{sdate}}|oui)style="font-weight:bold"]>#GET{date}</a>
+			</BOUCLE_numeros>
+		</p>
+		</div>
+	</div>
+</div>

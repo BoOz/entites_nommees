@@ -1,0 +1,129 @@
+// énergie
+BP
+Royal Dutch Shell
+Elf
+GDF Suez
+ExxonMobil
+Total
+Chevron
+Électricité de France (EDF)
+Loy Yang Power
+Tokyo Electric Power Company
+Veolia
+Rosatom
+UraMin
+
+// transport et aviation
+Air France
+Air France-KLM
+Boeing
+Société nationale des chemins de fer français (SNCF)
+European Aeronotic Defence and Space (EADS)
+Fiat 
+Peugeot société anonyme (PSA)
+Ford
+Toyota 
+Volkswagen
+Hyundai 
+Renault
+
+// banque et finance
+Citigroup
+Standard & Poor’s
+BNP Paribas
+Westpac
+
+// fonds d'investissement
+Qatar Investment Authority (QIA)
+Kuwait Investment Authority (KIA)
+Merrill Lynch
+Abu Dhabi Investment Authority (ADIA)
+China Investment Corporation (CIC)
+Government of Singapore Investment Corporation (GIC)
+Temasek Holdings (Singapour)
+Banque asiatique d'investissement dans les infrastructures (BAII)
+
+// pharmaceutique
+GlaxoSmithKline
+Charles River Laboratories
+
+// technologie
+Facebook
+Google
+Mifare Classic
+International Data Corporation (IDC)
+Netflix
+Twitter
+YouTube
+Microsoft
+Apple
+Uber
+Amazon
+
+
+// autre
+Publicis
+Kentucky Fried Chicken (KFC)
+Compagnie européenne d'intelligence stratégique (CEIS)
+Starbucks Corporation
+BHP Billiton
+Rio Tinto
+Wesfarmers
+China Ocean Shipping Company
+Vinci
+France Télécom
+ArcelorMittal
+Areva
+Texaco
+Coca-Cola
+Eiffage
+Abertis
+SFR
+Airbnb 
+Tisco 
+Monsanto 
+Alstom 
+
+// Culture
+Disney
+Sony
+Warner
+Fnac
+
+British Airways
+Qatar Airways
+
+Dassault Aviation
+Club Med
+Électricité de France
+Pizza Hut
+Western Union
+PSA Peugeot Citroën
+
+Boston Consulting Group
+Dacia
+
+Scop Ti
+Goldman Sachs
+
+General Electric
+General Motors
+Euro RSCG
+Fannie Mae
+Freddie Mac
+JPMorgan Chase
+PNG LNG
+Sanofi
+Rolls Royce
+
+Saint-Gobain
+Paribas
+
+Bank of America
+United Fruit
+Standard Oil
+Morgan Chase
+Gaz de France
+Deutsche Bahn
+Gazprom
+Peugeot

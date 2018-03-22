@@ -1,0 +1,59 @@
+#SET{titre,#ENV{titre}} #SET{texte,#ENV{texte}} <BOUCLE_article(ARTICLES){id_article}>#SET{titre,#TITRE} #SET{chapo,#CHAPO**} #SET{texte,#TEXTE**}</BOUCLE_article>
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="#CHARSET">
+	<title>#NOM_SITE_SPIP</title>
+	<INCLURE{fond=inclure/head}>
+	<style type="text/css">
+		body{
+			margin:auto;
+			width:60% ;
+			padding: 20px 0 ;
+		}
+		textarea{
+			width:100%;
+			height:80px;
+			margin:0 0 20px 0;
+		}
+		section > div > div {
+			background-color:white;
+			padding:20px;
+		}
+	</style>
+</head>
+<body>
+	
+	<header>
+		<div class="ui center aligned container">
+			<strong>Extraction d'entités nommées dans </strong>
+			<h1>#GET{titre}</h1>
+		</div>
+	</header>
+	
+	<section>
+		<div class="ui center aligned container">
+			<textarea>
+				#GET{texte}
+			</textarea>
+			<div class="ui left aligned container">
+				<INCLURE{fond=inclure/entites_article_brutes}{env}>
+			</div>
+		</div>
+	</section>
+	
+	<div class="ui hidden clearing divider"></div>
+	
+	<footer>
+	</footer>
+<script type="text/javascript">
+$(document)
+	.ready(function() {
+		$("textarea").on("click", function(){
+			$(this).css("height","500px");
+		});
+});
+</script>
+</body>
+</html>
+

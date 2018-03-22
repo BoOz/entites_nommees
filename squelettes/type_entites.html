@@ -1,0 +1,22 @@
+<BOUCLE_type(DATA){source types_entites}{type}>
+<div class="contenu-principal">
+	<div class="categorie hermetique">
+		<h1>RÉFÉRENCES </h1>
+		<div class="baseline fat">
+		Références du type #TYPE  <small>(#POIDS)</small>
+		</div>
+	</div>
+		<header>
+			<div class="ui center aligned container">
+				<INCLURE{fond=inclure/entites_menu}>
+			</div>
+		</header>
+	<section>
+		<div class="ui center aligned container">
+			<div class="ui left aligned container">
+				<INCLURE{fond=inclure/entites_type,type}>
+			</div>
+		</div>
+	</section>
+</div>
+</BOUCLE_type>

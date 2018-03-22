@@ -1,0 +1,193 @@
+// Constatés dans le Diplo mais non présents sur le site typo
+
+// debraye sur les personnalités
+Celtics de Glasgow
+
+// lieux de pouvoir
+Washington
+
+// ONG
+Amnesty International
+Croix-Rouge 
+
+// OG
+Frontex
+
+// think tank
+Terra Nova
+
+// autres
+Opus Dei
+
+// culture
+Opéra du Caire
+Pacha Mama
+Musée du quai Branly
+Jeux olympiques
+
+// distinctions
+Prix Nobel
+prix Nobel
+
+// Périodes / Régimes
+Renaissance
+Lumières
+Second Empire
+
+IIIe République
+Ve République
+République
+
+IIIe Reich
+République de Weimar
+
+XXIe siècle
+XXe siècle
+XIXe siècle
+XVIIIe siècle
+XVIIe siècle
+XVIe siècle
+XVe siècle
+XIVe siècle
+XIIIe siècle
+XIIe siècle
+XIe siècle
+Xe siècle
+
+// Evenements
+
+Coup d'État
+11-Septembre
+guerre du Golfe
+traité de Versailles
+Intifada
+révolution russe
+Révolution française
+Brexit
+Terreur
+France de Vichy
+Révolution culturelle
+Grand Bond en avant
+
+// Social
+Loi Macron
+Hartz IV
+Tests ADN
+
+// révolutions
+Révolution islamique
+Mai 68
+
+
+// etat
+Sécurité sociale
+RSA
+
+// juridique
+Constitution
+Charte des Nations unies
+Déclaration des droits de l'homme
+Déclaration universelle des droits de l'homme et du citoyen
+traité de Maastricht
+
+// affaires
+Panama papers
+SwissLeaks 
+LuxLeaks 
+
+// mouvements sociaux
+Nuit debout
+
+// Santé
+VIH
+
+
+// économie
+PIB
+Bourse
+Consensus de Washington
+New Deal
+CAC 40
+
+// traités
+grand marché transatlantique (GMT)
+Bretton Woods
+Sykes-Picot 
+
+// culture
+Hollywood
+
+Checkpoint Charlie
+Inside Job
+Green Hunt
+Community Health
+Super Bowl
+Guns of Brixton
+Grey's Anatomy
+Apocalypse Now
+Star Academy
+Breaking the Silence
+Miami Beach
+Deepwater Horizon
+West Point
+Basic Income Earth Network
+Nord Stream
+
+guerre de Cent Ans
+Pearl Harbor
+Jobs Act
+Siècle
+Dow Jones
+Far West
+Commune de Paris
+Grands Lacs
+
+Cosa Nostra
+Central Intelligence Agency
+
+Grand Moyen-Orient
+Grand Palais
+Grand Paris Seine
+Grand Prix
+Grand Theft Auto
+Grand Timonier
+Grande Albanie
+Grande Boucle
+Grande Comore
+Grande Dépression
+Grande Guerre
+Grande Hongrie
+Grandes Plaines
+
+House of Cards
+Hyper Cacher
+Juifs d'Europe
+Juifs de France
+Klux Klan
+Kurdes d'Irak
+Kurdes de Syrie
+Kurdes de Turquie
+Ottomans
+Palestiniens d'Israël
+Serbes de Bosnie
+Serbes de Bosnie Radovan
+Serbes de Bosnie-Herzégovine
+Sahraouis
+
+Occuper Jackson
+
+Panzer division
+Paris Saint-Germain
+Taj Mahal
+
+Charte des Nations unies
+
+Nouvelle Vague
+World Trade Center
+Patriot Act
+World Wide Web
+Forum de Davos
+Gérard Larcher
+Zona Franca
+
+Watergate
