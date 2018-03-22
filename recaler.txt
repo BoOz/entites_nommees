@@ -85,15 +85,14 @@ Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu	correction
 				
 // Ajoutés par Suzy				
 Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est	alias
-Organisation de l'Etat islamique	Organisation de l'Etat islamique	Partis politiques	Organisation de l'État islamique	correction
-État islamique	Etat islamique	Partis politiques	Organisation de l'État islamique	alias
-Communauté des États	indépendants	Organisations	Communauté des États indépendants	correction
-Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe	correction
+État islamique	Etat islamique	Partis politiques	Organisation de l'État islamique (OEI)	alias
+Communauté des États	indépendants	Organisations	Communauté des États indépendants (CEI)	correction
+Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe (Celac)	correction
 la Commission	europe	Organisations	Commission européenne	correction
 Timor oriental	Timor oriental	Geographie	Timor-Leste	alias
 Timor-Oriental	Timor-Oriental	Geographie	Timor-Leste	alias
 				
-ASEAN	ASEAN	Organisations	Anase	alias
+ASEAN	ASEAN	Organisations	Association des nations de l'Asie du Sud-Est (Anase)	alias
 LREM	LREM	Partis politiques	En marche	alias
 Frères	musulmans	Partis politiques	Frères musulmans	correction
 Sadam	Hussein	Personnalités	Saddam Hussein	correction
@@ -103,3 +102,4 @@ Oréal Paris	Oréal Paris	Entreprises	L'Oréal Paris	correction
 République serbe de Bosnie	République serbe de Bosnie	Pays	Bosnie-Herzégovine	alias
 Chi Minh	Chi Minh	Géographie	Ho Chi Minh	correction
 Ho Chi-Minh	Ho Chi-Minh	Géographie	Ho Chi Minh	correction
+La République en marche	La République en marche	Partis politiques	La République en marche (LREM)	

@@ -134,12 +134,12 @@ class entites_nommees extends Command {
 									continue;
 								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite, $type_correc) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
-								$sel = 	"select * from entites_nommees where BINARY entite= " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+								$sel = 	"select * from entites_nommees where BINARY entite like " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 								$q = sql_query($sel);
 								$nb = sql_count($q);
 								if($nb > 0){
 									echo "$nb $entite_actuelle ($entite_dans_extrait) => $entite\n" ;
-									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where BINARY entite=" . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+									$up = "update entites_nommees set entite=". sql_quote($entite) .", type_entite=". sql_quote($type_entite) ." where entite like " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 									echo $up . "\n" ;
 									sql_query($up);
 									echo "\n" ;
@@ -170,12 +170,12 @@ class entites_nommees extends Command {
 							foreach($entites_a_revoir as $e){
 								if(trim($e) == "")
 									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
+								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite like " . sql_quote($e) . " or entite like " . sql_quote("auteur:$e") .")");
 								
 								$nb = sql_count($ent);
 								if($nb > 0){
 									echo $nb . " entites " . $e . " => "  . $t['filename'] .  "\n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
+									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)','Villes','a ajouter','Géographie (auto)') and (entite like " . sql_quote($e) . " or entite like " . sql_quote("auteur:$e") . ")" ;
 									echo $up . "\n";
 									sql_query($up);
 									echo "\n\n" ;
@@ -191,11 +191,11 @@ class entites_nommees extends Command {
 					
 					if(sizeof($words) > 1 ){
 						foreach($words as $e){
-							$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)') and entite= " . sql_quote($e));
+							$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)') and entite like " . sql_quote($e));
 							$nb = sql_count($ent);
 							if($nb > 0){
 								echo $nb . " entites '" . $e . "' de statut INDETERMINE => Poubelle\n";
-								$del =  "delete from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)') and entite=" . sql_quote($e) . "\n" ;
+								$del =  "delete from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Auteurs', 'Institutions (auto)') and entite like " . sql_quote($e) . "\n" ;
 								echo $del . "\n";
 								sql_query($del);
 								echo "\n" ;
@@ -275,7 +275,16 @@ class entites_nommees extends Command {
 					foreach($references as $reference){
 						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
 						// super long en BINARY
-						sql_query("update entites_nommees set statut='publie' where entite=" . _q($reference['entite']));
+						// toutes les versions avec accents ne seront pas updatés, sauf si mode BINARY, mais qui est long.
+						sql_query("update entites_nommees set statut='publie' where entite like " . _q($reference['entite']));
+						
+						// on teste si y'a besoin de faire du binary
+						$cmpt = sizeof(sql_allfetsel("entite","entites_nommees","entite like " . _q($reference['entite']),"BINARY entite","","","count(entite)>1")) ;
+						if($cmpt > 1){
+							$output->writeln("<info>" . $reference['entite'] . " à " . $cmpt . " variantes</info>");
+							// repasse en mode BINARY
+							sql_query("update entites_nommees set statut='publie' where BINARY entite like " . _q($reference['entite']));
+						}
 						//sql_query("update entites_nommees set statut='publie' where entite=" . _q($reference['entite']));
 					}
 					if(!is_dir('plugins/entites_nommees/stats'))
@@ -297,44 +306,46 @@ class entites_nommees extends Command {
 					
 					passthru("plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
 					
-					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
-					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
-					include_spip('iterateur/data');
-					$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
-					$types_requalif_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*/*') ; /**/
 					
-					$types_requalif = array_merge($types_requalif, $types_requalif_perso);
-					
-					foreach($types_requalif as $t){
-						$type_entite = basename($t['dirname']);
+					if($res){
+						// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
+						$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
+						include_spip('iterateur/data');
+						$types_requalif = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ; /**/
+						$types_requalif_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*/*') ; /**/
 						
-						// Au cas ou...
-						if($type_entite == "Personnalites")
-							continue ;
+						$types_requalif = array_merge($types_requalif, $types_requalif_perso);
 						
-						$entites_a_revoir = $freq = array(); 
-						$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
-						
-						//var_dump($t['dirname'] . "/" . $t['basename'] , $entites_a_revoir);
-						
-						if(sizeof($entites_a_revoir) >= 1 ){
-							foreach($entites_a_revoir as $e){
-								if(trim($e) == "")
-									continue ;
-								$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite= " . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") .")");
-								
-								$nb = sql_count($ent);
-								if($nb > 0){
-									echo $nb . " entites " . $e . " => "  . $t['filename'] .  " : $type_entite \n";
-									$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite=" . sql_quote($e) . " or entite=" . sql_quote("auteur:$e") . ")" ;	
-									echo $up . "\n";
-									sql_query($up);
-									echo "\n\n" ;
+						foreach($types_requalif as $t){
+							$type_entite = basename($t['dirname']);
+							
+							// Au cas ou...
+							if($type_entite == "Personnalites")
+								continue ;
+							
+							$entites_a_revoir = $freq = array(); 
+							$entites_a_revoir = generer_mots_fichier($t['dirname'] . "/" . $t['basename']);
+							
+							//var_dump($t['dirname'] . "/" . $t['basename'] , $entites_a_revoir);
+							
+							if(sizeof($entites_a_revoir) >= 1 ){
+								foreach($entites_a_revoir as $e){
+									if(trim($e) == "")
+										continue ;
+									$ent = sql_query("select * from entites_nommees where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite like " . sql_quote($e) . " or entite like " . sql_quote("auteur:$e") .")");
+									
+									$nb = sql_count($ent);
+									if($nb > 0){
+										echo $nb . " entites " . $e . " => "  . $t['filename'] .  " : $type_entite \n";
+										$up =  "update entites_nommees set type_entite=" . str_replace("_", " " , sql_quote($type_entite)) . " where type_entite in ('INDETERMINE', 'Personnalités', 'Institutions (auto)', 'Villes','a ajouter','Géographie (auto)') and (entite like " . sql_quote($e) . " or entite like " . sql_quote("auteur:$e") . ")" ;
+										echo $up . "\n";
+										sql_query($up);
+										echo "\n\n" ;
+									}
 								}
 							}
 						}
 					}
-					
 					exit();
 				}
 				
