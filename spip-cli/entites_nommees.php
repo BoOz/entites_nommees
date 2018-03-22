@@ -146,6 +146,17 @@ class entites_nommees extends Command {
 								}
 							}
 					
+					// controler les personnalites publiées sur wikipedia
+					$personnalites_publiees = sql_allfetsel("entite", "entites_nommees","type_entite='Personnalites' and statut='publie'","entite");
+					foreach($personnalites_publiees as $pers)
+						$liste_pers .= $pers["entite"] . "\n" ;
+					
+					include_spip("inc/flock");
+					if(!ecrire_fichier("plugins/entites_nommees/stats/personnalites.txt", $liste_pers))
+						$output->writeln("<error>Erreur, pas pu écrire : plugins/entites_nommees/stats/personnalites.txt</error>");
+					
+					passthru("./plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
+					
 					// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
 					$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
 					include_spip('iterateur/data');
@@ -218,6 +229,7 @@ class entites_nommees extends Command {
 							
 						}
 					}
+					
 					
 					
 					// effacer les entites trop peu frequentes

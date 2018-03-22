@@ -100,3 +100,6 @@ Sadam	Hussein	Personnalités	Saddam Hussein	correction
 Arabie Séoudite	Arabie Séoudite	Pays	Arabie saoudite	alias
 Arabie séoudite	Arabie séoudite	Pays	Arabie saoudite	alias
 Oréal Paris	Oréal Paris	Entreprises	L'Oréal Paris	correction
+République serbe de Bosnie	République serbe de Bosnie	Pays	Bosnie-Herzégovine	alias
+Chi Minh	Chi Minh	Géographie	Ho Chi Minh	correction
+Ho Chi-Minh	Ho Chi-Minh	Géographie	Ho Chi Minh	correction
