@@ -352,6 +352,8 @@ class entites_nommees extends Command {
 				if($restart !=="non"){
 					$output->writeln("<info>On efface tout et on recommence.</info>");
 					sql_query("truncate table entites_nommees");
+					if(!ecrire_fichier("plugins/entites_nommees/stats/entites_validees.txt", ""))
+							$output->writeln("<error>Erreur, pas pu écrire : " . _DIR_RACINE . "$auteurs_txt/auteurs_spip.txt</error>");
 				}
 				
 				//
