@@ -1,4 +1,4 @@
-// Entité actuelle	Texte contient	Type	Entité correcte	
+	Texte contient	Type	Entité correcte	
 Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	acronyme
@@ -101,3 +101,8 @@ République serbe de Bosnie	République serbe de Bosnie	Pays	Bosnie-Herzégovine
 Chi Minh	Chi Minh	Géographie	Ho Chi Minh	correction
 Ho Chi-Minh	Ho Chi-Minh	Géographie	Ho Chi Minh	correction
 La République en marche	La République en marche	Partis politiques	La République en marche (LREM)	
+République islamique	Iran	Pays	Iran	alias
+République islamique	Afghanistan	Pays	Afghanistan	alias
+République islamique	Pakistan	Pays	Pakistan	alias
+République islamique	Mauritanie	Pays	Mauritanie	alias
+Daech	Daech	Partis politiques	Organisation de l'État islamique (OEI)	alias

@@ -149,5 +149,6 @@ do
 	# Les autres passent dans divers
 	echo "$original" >> ../listes_lexicales/Sujets/divers_wikipedia.txt
 	echo "$original" >> ../stats/entites_validees.txt
-
+	
+	exit 1
 done

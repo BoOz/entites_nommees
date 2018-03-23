@@ -105,7 +105,17 @@ class entites_nommees extends Command {
 					// maj du fichier auteurs si besoin
 					if($auteurs_txt = find_in_path("listes_lexicales/auteurs")){
 						$output->writeln("<info>Mise à jour des auteurs dans $auteurs_txt/auteurs_spip.txt</info>");
-						$auteurs = sql_allfetsel("nom","spip_auteurs");
+						
+						// mais pas les auteurs d'extraits, ni l'auteur 1008.
+						$extraits = sql_allfetsel("id_objet","spip_mots_liens","objet='article' and id_mot in(605,621)");
+						$values = array_map('array_pop', $extraits);
+						$extraits = implode(',', $values);
+						$auteurs = sql_allfetsel("id_auteur","spip_auteurs_liens","objet='article' and id_objet in ($extraits,1008,15594)");
+						$values = array_map('array_pop', $auteurs);
+						$auteurs_extraits = implode(',', array_unique($values));
+						
+						$auteurs = sql_allfetsel("nom","spip_auteurs","id_auteur not in ($auteurs_extraits)");
+						
 						foreach($auteurs as $a){
 							$nom = $a["nom"] ;
 							if(strpos($nom,'*')){
@@ -306,6 +316,7 @@ class entites_nommees extends Command {
 					
 					passthru("plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
 					
+					var_dump($res);
 					
 					if($res){
 						// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
