@@ -79,7 +79,7 @@ do
 	if (( ${#str} > 0 ))
 		then
 			echo "$original Groupes armés"
-			echo "$original" >> ../listes_lexicales/Groupes_armes/groupes_armes_wikipedia.txt
+			echo "$original" >> ../listes_lexicales/Partis_politiques/groupes_armes_wikipedia.txt
 			echo "$original" >> ../stats/entites_validees.txt
 			continue
 	fi
@@ -150,5 +150,6 @@ do
 	echo "$original" >> ../listes_lexicales/Sujets/divers_wikipedia.txt
 	echo "$original" >> ../stats/entites_validees.txt
 	
-	exit 1
 done
+
+exit 1
