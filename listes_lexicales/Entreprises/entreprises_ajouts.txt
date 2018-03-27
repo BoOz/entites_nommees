@@ -26,6 +26,7 @@ Toyota
 Volkswagen
 Hyundai 
 Renault
+Airbus
 
 // banque et finance
 Citigroup
