@@ -607,16 +607,31 @@ function trouver_noms($texte){
 	// (?<!foo)bar trouve les occurrences de "bar" qui ne sont pas précédées par "foo". // assertion arriere negative
 	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
 	
-	// virer les débuts de phrases fréquents avec une liste de mots fréquents
-	$reg =  "%(?:\P{L})". // non lettre ou ponctuation non capturée
-			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
+	$reg =  "%(?:\P{L})". // Caractere qui n'est pas une lettre
+			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // non suivi d'un mot fréquent en debut de phrase, espace
 			"(".
-				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:" . LETTRES . ")(?:". LETTRESAP ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou ' (mais pas en deuxieme) ou d'un .
-				"(?:\s+" . LETTRE_CAPITALE . "(?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
-				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
-				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
-			"|". ENTITES_PERSO .")". // Personnalités à pseudo // a virer ?
-	"%mu"	;
+				"(?:".
+					"(?<!\.)". 
+					LETTRE_CAPITALE . // Lettre capitale non précédée d'un . (C.I.A)
+					"(?!')" . // non suivie par un apostrophe
+					"(?:" . LETTRES . ")". // suivie par des lettres ou -
+					"(?:". LETTRESAP ."+)*". // éventuellement suivi par un ' et des lettres
+				")". // On a trouvé un mot avec une capitale avec un apostrophe possible mais pas en seconde position.
+				"(?:\s+" . // Eventuellement un espace suivi
+					LETTRE_CAPITALE . "(?:". LETTRES ."+|\.)". //d un autre mot avec capitale derrière, ou bien une capitale suivie d'un . (George W. Bush)
+				")*".
+				"(?:\s+". // Eventuellement un espace
+					"(?!(?:". MOTS_MILIEU ."))". // non suivi par un mot courrant
+						LETTRES ."+" .
+				"){0,2}". // suivi d un ou deux mots sans capitale (van der)
+				"(?:".
+					"(?:\s+|'|’)". // un espace ou un apostrophe
+					"(?!". MOTS_FIN .")" . // non suivi par un mot courrant
+						LETTRE_CAPITALE . LETTRES ."+". // Un mot avec une capitale suivie de lettres ou -
+				")".
+				"|". ENTITES_PERSO . // Personnalités à pseudo // a virer ?
+			")".
+	"%u";
 	
 	preg_match_all($reg,$texte,$m);
 	$noms = $m[1] ;
@@ -689,6 +704,8 @@ function nettoyer_entite_nommee(&$entite, $key){
 }
 
 function trouver_entites_residuelles($texte){
+	
+	//var_dump("<pre>",$texte);
 	
 	// Mots avec une Capitale pas en début de phrase.
 	preg_match_all("`" . 
