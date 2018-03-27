@@ -5,6 +5,7 @@ Celtics de Glasgow
 
 // lieux de pouvoir
 Washington
+Downing Street
 
 // ONG
 Amnesty International
