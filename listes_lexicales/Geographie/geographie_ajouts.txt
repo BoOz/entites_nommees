@@ -33,7 +33,7 @@ Nil Blanc
 
 Val-d'Oise
 
-
+Haut-Karabakh
 Ossétie du Sud
 Caroline du Nord
 Asie du Sud
@@ -45,6 +45,7 @@ Europe du Sud
 Atlantique Nord
 Asie de l'Est
 Caroline du Sud
+
 //Communauté des Etats
 Grand Nord
 Caucase du Nord
