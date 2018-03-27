@@ -10,6 +10,7 @@ Dien Bien Phu
 Las Vegas
 Barcelone
 Casablanca
+Naples
 
 // alias
 Caire
