@@ -12,6 +12,7 @@ Barcelone
 Casablanca
 Naples
 Boston
+Davos
 
 // alias
 Caire
