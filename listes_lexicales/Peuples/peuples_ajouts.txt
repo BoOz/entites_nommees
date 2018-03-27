@@ -11,3 +11,7 @@ Tutsis
 Arabes
 Blancs
 Khmers
+Ouïgours
+Slaves
+Timorais
+Tziganes

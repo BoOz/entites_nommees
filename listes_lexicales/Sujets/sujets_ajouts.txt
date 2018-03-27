@@ -5,6 +5,8 @@ Celtics de Glasgow
 
 // lieux de pouvoir
 Washington
+Downing Street
+Matignon
 
 // ONG
 Amnesty International
@@ -68,6 +70,7 @@ Terreur
 France de Vichy
 Révolution culturelle
 Grand Bond en avant
+Septembre noir
 
 // Social
 Loi Macron
@@ -191,3 +194,4 @@ Gérard Larcher
 Zona Franca
 
 Watergate
+Charles-de-Gaulle
