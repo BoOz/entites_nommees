@@ -8,6 +8,8 @@ La Haye
 Marseille
 Dien Bien Phu
 Las Vegas
+Barcelone
+Casablanca
 
 // alias
 Caire
