@@ -11,3 +11,4 @@ Tutsis
 Arabes
 Blancs
 Khmers
+Ouïgours
