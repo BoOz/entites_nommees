@@ -11,6 +11,7 @@ Las Vegas
 Barcelone
 Casablanca
 Naples
+Boston
 
 // alias
 Caire
