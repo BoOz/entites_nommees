@@ -1,4 +1,4 @@
-// Entité actuelle	Texte contient	Type	Entité correcte	
+	Texte contient	Type	Entité correcte	
 Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	acronyme
@@ -14,20 +14,20 @@ Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II	correction
 Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II	
 Reagan	Reagan	Personnalités	Ronald Reagan	
 Marx	Marx	Personnalités	Karl Marx	correction
-Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev	
-Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong	
-Mao	Mao	Personnalités	Mao Zedong	
+Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev	alias
+Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong	alias
+Mao	Mao	Personnalités	Mao Zedong	alias
 Le Pen	Mme Le Pen	Personnalités	Marine Le Pen	correction
 Le Pen	M. Le Pen	Personnalités	Jean-Marie Le Pen	correction
-Pinochet	Pinochet	Personnalités	Augusto Pinochet	
-BHL	BHL	Personnalités	Bernard-Henri Lévy	
-Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing	
+Pinochet	Pinochet	Personnalités	Augusto Pinochet	alias
+BHL	BHL	Personnalités	Bernard-Henri Lévy	alias
+Giscard d'Estaing	Giscard d'Estaing	Personnalités	Valery Giscard d'Estaing	alias
 Nasser	Nasser	Personnalités	Gamal Abdel Nasser	alias
-Allende	Allende	Personnalités	Salvadore Allende	correction
+Allende	Allende	Personnalités	Salvadore Allende	alias
 Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II	correction
 Ben Laden	Ben Laden	Personnalités	Oussama Ben Laden	alias
 Malcolm	Malcolm X	Personnalités	Malcolm X	correction
-Fidel	Fidel	Personnalités	Fidel Castro	correction
+Fidel	Fidel	Personnalités	Fidel Castro	alias
 Che Guevara	Che Guevara	Personnalités	Ernesto Che Guevara	alias
 Che	Che	Personnalités	Ernesto Che Guevara	alias
 Lula da Silva	Lula da Silva	Personnalités	Luiz Inácio Lula da Silva	alias
@@ -101,3 +101,9 @@ République serbe de Bosnie	République serbe de Bosnie	Pays	Bosnie-Herzégovine
 Chi Minh	Chi Minh	Géographie	Ho Chi Minh	correction
 Ho Chi-Minh	Ho Chi-Minh	Géographie	Ho Chi Minh	correction
 La République en marche	La République en marche	Partis politiques	La République en marche (LREM)	
+République islamique	Iran	Pays	Iran	alias
+République islamique	Afghanistan	Pays	Afghanistan	alias
+République islamique	Pakistan	Pays	Pakistan	alias
+République islamique	Mauritanie	Pays	Mauritanie	alias
+Daech	Daech	Partis politiques	Organisation de l'État islamique (OEI)	alias
+Daesh	Daesh	Partis politiques	Organisation de l'État islamique (OEI)	alias
