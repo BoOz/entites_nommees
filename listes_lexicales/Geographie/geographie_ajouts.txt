@@ -19,6 +19,7 @@ Amérique du Sud
 Maghreb
 Sahara
 Balkans
+Amazonie
 
 // regions
 Golfe
