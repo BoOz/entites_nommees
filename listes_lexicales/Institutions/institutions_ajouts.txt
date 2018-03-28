@@ -17,6 +17,7 @@ Haute Autorité
 // services secrets
 CIA
 Mossad
+KGB
 
 // Sièges de gouvernements
 Kremlin
