@@ -27,6 +27,7 @@ Crimée
 Biafra
 Bretagne
 Bengale
+Sarre
 
 // regions
 Golfe
@@ -71,4 +72,6 @@ Côte d'Azur
 
 Wallonie
 
+//Etats fédérés
 Texas
+Floride
