@@ -26,6 +26,7 @@ Java
 Crimée
 Biafra
 Bretagne
+Bengale
 
 // regions
 Golfe
