@@ -22,6 +22,7 @@ Maghreb
 Sahara
 Balkans
 Amazonie
+Java
 
 // regions
 Golfe
