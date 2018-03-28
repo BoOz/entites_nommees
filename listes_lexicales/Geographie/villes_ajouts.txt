@@ -25,6 +25,7 @@ Sabra
 Chatila
 Kyoto
 Seattle
+Maastricht
 
 // alias
 Caire
