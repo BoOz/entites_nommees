@@ -18,6 +18,7 @@ Karachi
 Soweto
 Rambouillet
 Gênes
+Marrakech
 
 // alias
 Caire
