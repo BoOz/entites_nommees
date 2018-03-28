@@ -4,6 +4,8 @@
 océan Pacifique
 océan Atlantique
 Méditerranée
+Seine
+Mékong
 
 Orient
 Occident
@@ -20,13 +22,19 @@ Maghreb
 Sahara
 Balkans
 Amazonie
+Java
+Crimée
+Biafra
+Bretagne
+Bengale
+Sarre
 
 // regions
 Golfe
 Cisjordanie
 Gaza
-Moyen Orient
-Proche Orient
+Moyen-Orient
+Proche-Orient
 Levant
 
 Nil Bleu
@@ -34,6 +42,7 @@ Nil Blanc
 
 Val-d'Oise
 
+Mandchourie
 Haut-Karabakh
 Ossétie du Sud
 Caroline du Nord
@@ -46,6 +55,7 @@ Europe du Sud
 Atlantique Nord
 Asie de l'Est
 Caroline du Sud
+Waziristan
 
 //Communauté des Etats
 Grand Nord
@@ -62,4 +72,6 @@ Côte d'Azur
 
 Wallonie
 
+//Etats fédérés
 Texas
+Floride
