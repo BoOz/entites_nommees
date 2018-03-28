@@ -84,7 +84,8 @@ SFR
 Airbnb 
 Tisco 
 Monsanto 
-Alstom 
+Alstom
+Wal-Mart
 
 // Culture
 Disney
