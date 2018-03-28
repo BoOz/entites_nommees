@@ -23,6 +23,9 @@ Sahara
 Balkans
 Amazonie
 Java
+Crimée
+Biafra
+Bretagne
 
 // regions
 Golfe
