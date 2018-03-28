@@ -16,6 +16,7 @@ Davos
 Cancún
 Karachi
 Soweto
+Rambouillet
 
 // alias
 Caire
