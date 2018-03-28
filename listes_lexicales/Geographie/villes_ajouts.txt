@@ -19,6 +19,7 @@ Soweto
 Rambouillet
 Gênes
 Marrakech
+Hiroshima
 
 // alias
 Caire
