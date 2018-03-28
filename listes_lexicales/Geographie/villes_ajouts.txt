@@ -26,6 +26,8 @@ Chatila
 Kyoto
 Seattle
 Maastricht
+Shangaï
+Bombay
 
 // alias
 Caire
