@@ -20,6 +20,11 @@ Rambouillet
 Gênes
 Marrakech
 Hiroshima
+Tanger
+Sabra
+Chatila
+Kyoto
+Seattle
 
 // alias
 Caire
