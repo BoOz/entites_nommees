@@ -17,6 +17,7 @@ Cancún
 Karachi
 Soweto
 Rambouillet
+Gênes
 
 // alias
 Caire
