@@ -4,6 +4,7 @@
 océan Pacifique
 océan Atlantique
 Méditerranée
+Seine
 
 Orient
 Occident
