@@ -13,6 +13,8 @@ Casablanca
 Naples
 Boston
 Davos
+Cancún
+Karachi
 
 // alias
 Caire
