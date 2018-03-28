@@ -15,6 +15,7 @@ Boston
 Davos
 Cancún
 Karachi
+Soweto
 
 // alias
 Caire
