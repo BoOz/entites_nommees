@@ -293,7 +293,7 @@ class entites_nommees extends Command {
 						if($cmpt > 1){
 							$output->writeln("<info>" . $reference['entite'] . " à " . $cmpt . " variantes</info>");
 							// repasse en mode BINARY
-							sql_query("update entites_nommees set statut='publie' where BINARY entite like " . _q($reference['entite']));
+							sql_query("update entites_nommees set statut='publie' where BINARY entite like " . _q($reference['entite']) . " and statut='prop'");
 						}
 						//sql_query("update entites_nommees set statut='publie' where entite=" . _q($reference['entite']));
 					}
@@ -401,7 +401,7 @@ class entites_nommees extends Command {
 				foreach($res as $a){
 					
 					/// articles
-					$select = "id_article, titre, chapo, texte, date_redac" ;
+					$select = "id_article, titre, chapo, texte, date_redac, date" ;
 					$table = "spip_articles" ;
 					$where = "id_article=" . $a['id_article'] ;
 					
@@ -431,7 +431,9 @@ class entites_nommees extends Command {
 					
 					//var_dump($fragments);
 					
-					enregistrer_entites($fragments, $art['id_article'], $art['date_redac']);
+					$date_entite = ($art['date_redac']) ? $art['date_redac'] : $art['date'] ;
+					
+					enregistrer_entites($fragments, $art['id_article'], $date_entite);
 					
 					// Si tout s'est bien passé, on avance la barre
 					$progress->setFormat("<fg=white;bg=blue>%message%</>\n" . '%current%/%max% [%bar%] %percent:3s%% %elapsed:6s%/%estimated:-6s% %memory:6s%' ."\n\n");
