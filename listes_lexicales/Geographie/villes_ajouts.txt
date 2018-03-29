@@ -9,6 +9,8 @@ Marseille
 Dien Bien Phu
 Las Vegas
 Beyrouth
+Suez
+Bonn
 
 // alias
 Caire
