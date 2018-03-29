@@ -110,11 +110,11 @@ class entites_nommees extends Command {
 						$extraits = sql_allfetsel("id_objet","spip_mots_liens","objet='article' and id_mot in(605,621)");
 						$values = array_map('array_pop', $extraits);
 						$extraits = implode(',', $values);
-						$auteurs = sql_allfetsel("id_auteur","spip_auteurs_liens","objet='article' and id_objet in ($extraits,1008,15594)");
+						$auteurs = sql_allfetsel("id_auteur","spip_auteurs_liens","objet='article' and id_objet in ($extraits)");
 						$values = array_map('array_pop', $auteurs);
 						$auteurs_extraits = implode(',', array_unique($values));
 						
-						$auteurs = sql_allfetsel("nom","spip_auteurs","id_auteur not in ($auteurs_extraits)");
+						$auteurs = sql_allfetsel("nom","spip_auteurs","id_auteur not in ($auteurs_extraits,1008,15594)");
 						
 						foreach($auteurs as $a){
 							$nom = $a["nom"] ;
