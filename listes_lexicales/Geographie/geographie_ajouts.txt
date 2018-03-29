@@ -29,6 +29,7 @@ Bretagne
 Bengale
 Sarre
 Cachemire
+Flandre
 
 // regions
 Golfe
