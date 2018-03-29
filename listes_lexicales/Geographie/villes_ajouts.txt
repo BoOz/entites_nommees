@@ -28,6 +28,7 @@ Seattle
 Maastricht
 Shangaï
 Bombay
+Lagos
 
 // alias
 Caire
