@@ -28,6 +28,8 @@ Biafra
 Bretagne
 Bengale
 Sarre
+Cachemire
+Flandre
 
 // regions
 Golfe
@@ -75,3 +77,4 @@ Wallonie
 //Etats fédérés
 Texas
 Floride
+Califonie

@@ -28,6 +28,9 @@ Seattle
 Maastricht
 Shangaï
 Bombay
+Lagos
+Chicago
+Charm el Cheikh
 
 // alias
 Caire

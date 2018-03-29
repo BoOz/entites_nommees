@@ -61,7 +61,7 @@ Microsoft
 Apple
 Uber
 Amazon
-
+Action Group
 
 // autre
 Publicis
@@ -86,6 +86,7 @@ Tisco
 Monsanto 
 Alstom
 Wal-Mart
+Aguas del Illimani
 
 // Culture
 Disney
@@ -131,3 +132,4 @@ Deutsche Bahn
 Gazprom
 Peugeot
 Siemens
+Atlantic Richfield
