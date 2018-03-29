@@ -2,7 +2,7 @@
 
 /* Listes de MOTS COURANTS qui matchent dans la regexp qui trouve les personnalités, par exemple parce qu'ils sont en début de phrase avec une majuscule. On va isoler les echapper de la regexp  */
 
-$adverbes = "Tandis|Ensuite|Puisque|Cependant|Bien|Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quel?s?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout|Qu'importe" ;
+$adverbes = "Tandis|Ensuite|Puisque|Cependant|Bien|Encore|Autant|Après|Autre|Cela|Ceci|Sauf|Voici|Voilà|Pour|Parce|Cher|Chère|Comme|De|Selon|Si|Mais|En|Ainsi|Même|Avec|Tout|tous|toutes|Sans|Avant|Quel?s?|malgré|Chaque|Parmi|Ne|Non|Pas|Toujours|Nul|Tant|Celle-ci|Celui-ci|Peut-être|Grâce|Contrairement|Presque|Plutôt|Afin|Surtout|Qu'importe|Heureusement" ;
 $pronoms = "Les?|La|Aux?|Ces?|Cet+e?|Celui|celles?|ceux|Tous|toute?s?|Des|Aucune?|Du|Ça|Celles-ci|Celui-ci" ;
 $verbes = "Lire|Voir|Etant|Est(?:-ce)?|se|Peut-on|Reste|A-t-elle|A-t-il" ;
 $conjonctions = "Lorsque|Mais|Ou|Et|Donc|Or|Ni|Car" ;
@@ -16,7 +16,9 @@ $loc = "Sous|Sur|dans|Près|Loin|Là|Ici|Ailleurs|Devant|Au-delà|Face|Derrière
 $quant = "Environ|Quelques|Nombre|Très|Peu|plus|moins|Certains";
 $temps = "Quand|Hier|aujourd|Lors|Depuis|avant|après|pendant|Longtemps|Début|Fin|Parfois|Durant";
 $jargon = "Verra-t-on|Article|Cité|Originaire|Né|Née|Mort|Côté|Personne|Ancien|Résultats?|Ayant|Soit|Faute|Sorti|Parfois|Fort|Fondé|Faut-il|Fallait-il|Cf.|Vue|Voyez|Intervention|Issu";
-$autres = "C'est|Hello|Berceau|Statue|Rejet|Résistance|Autour|Monsieur|Mme|L|C|Rien|Est-il|Être|Comment|Alors|Tel|Telle|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The" ;
+$autres = "C'est|Hello|Berceau|Statue|Rejet|Résistance|Autour|Monsieur|Mme|L|C|Rien|Est-il|Être|Comment|Alors|Tel|Telle|Député|Editions|Prix|Commission|Etats?|Organisation|Nièce|Montagnes|Sénat|Vieux|Saint|Moyen|Dès|Naguère|Assemblée|Union|Société|Puis|Occidentaux|Enfin|Directeur|Aussi|Outre|Jamais|Toutefois|Programme|Jeune|Même|Déjà|Entre|Nombreux|Pourtant|Seule?s?|Cet|Non|Certes|Chez|Chacun|Notamment|Nouve(?:au|l)|Préface|AUJOURD|Parallèlement|Dernière|The|Réaction|Réponse" ;
+$verbes_debut = "Faire|Laisser|Retrouver" ;
+
 //$singleton = "Internet|Dieu|Eglise|Djihad|Prophète|Toile";
 
 define("MOTS_DEBUT", $adverbes . 
@@ -34,13 +36,14 @@ define("MOTS_DEBUT", $adverbes .
 					"|" . $temps .
 					"|" . $jargon .
 					"|" . $singleton .
-					"|" .  $autres);
+					"|" .  $autres .
+					"|" .  $verbes_debut);
 					
 
 // Mots au milieu de la séquence cherchée en regex
 
-$mots_milieu = "afin|et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière|encore|a|en|puis|au|et|vers|quand|narrateur" ;
-$verbes_milieux = "annonce|rencontre|dirige|intimide|sera|(?:ré)?invente|prévoit|menac|accus|accoupl|travail|national|présent|crois|préfèr|publi|interpell|écras|remett|affaibl|devien|contrib|rédig|suit|devien|instaur|nommé|crée|institu|Baptisé|remerci|quitt|occup" ;
+$mots_milieu = "afin|et|dans|à|pour|où|comme|ou|aux|au|and|par|est|ces|selon|sur|avec|contre|ni|une|sans|entre|depuis|jusqu'(?:au|à)|que|devant|sous|d'après|après|rue|\-\-|Dieu|derrière|encore|a|en|puis|au|et|vers|quand|narrateur|lorsque" ;
+$verbes_milieux = "annonce|rencontre|dirige|intimide|sera|(?:ré)?invente|prévoit|menac|accus|accoupl|travail|national|présent|crois|préfèr|publi|interpell|écras|remett|affaibl|devien|contrib|rédig|suit|devien|instaur|nommé|crée|institu|Baptisé|remerci|quitt|occup|organis|gagn|soutien|répond|reconnais|repersonn|retrouv|restitu" ;
 
 define("MOTS_MILIEU" ,	$mots_milieu . 
 						"|" . $verbes_milieux ) ;

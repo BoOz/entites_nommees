@@ -7,7 +7,7 @@ ONU	ONU	Institutions	Organisation des Nations unies (ONU)	acronyme
 FMI	FMI	Institutions	Fonds monétaire international (FMI)	acronyme
 				
 // Personnalités				
-Gaulle	général de Gaulle	Personnalités	Charles de Gaulle	correction
+Gaulle	de Gaulle	Personnalités	Charles de Gaulle	correction
 Fonds	Fonds monétaire international	Institutions	Fonds monétaire international (FMI)	correction
 État	coup d'État	a_ajouter	Coup d'État	
 Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II	correction
@@ -84,7 +84,7 @@ Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu	correction
 				
 				
 // Ajoutés par Suzy				
-Organisation du traité de l'Asie du Sud-Est		Organisations	Association des nations de l’Asie du Sud-Est	alias
+Organisation du traité de l'Asie du Sud-Est	Organisation du traité de l'Asie du Sud-Est	Organisations	Association des nations de l’Asie du Sud-Est	alias
 État islamique	Etat islamique	Partis politiques	Organisation de l'État islamique (OEI)	alias
 Communauté des États	indépendants	Organisations	Communauté des États indépendants (CEI)	correction
 Communauté des États	latino-amércain	Organisations	Communauté des États latino-américains et Caraïbe (Celac)	correction
@@ -107,3 +107,42 @@ République islamique	Pakistan	Pays	Pakistan	alias
 République islamique	Mauritanie	Pays	Mauritanie	alias
 Daech	Daech	Partis politiques	Organisation de l'État islamique (OEI)	alias
 Daesh	Daesh	Partis politiques	Organisation de l'État islamique (OEI)	alias
+New-york	New-york	Géographie	New York	correction
+Buenos-Aires	Buenos-Aires	Géographie	Buenos Aires	correction
+Costa-Rica	Costa-Rica	Géographie	Costa Rica	correction
+Kadhafi				
+les Communes	les Communes	Institutions	Chambre des Communes	alias
+Burkina	Burkina	Pays	Burkina Faso	alias
+Pâcques	île de 	Géographie	Île de Pacques	correction
+Amal	mouvement	Partis politiques	Mouvement Amal	correction
+Churchill	Churchill	Personnalités	Winston Churchill	
+Clémenceau	Clémenceau	Personnalités	Georges Clémenceau	
+Mossadegh	Mossadegh	Personnalités	Mohammad Mossadegh	
+Khol	Khol	Personnalités	Helmut Khol	
+Sri-Lanka	Sri-Lanka	Pays	Sri Lanka	correction
+Kuala-Lumpur	Kuala-Lumpur	Géographie	Kuala Lumpur	correction
+Führer	Führer	Personnalités	Adolf Hitler	alias
+Camus	Camus	Personnalités	Albert Camus	alias
+Tocqueville	Tocqueville	Personnalités	Alexis de Tocqueville	alias
+Centrafrique	Centrafrique	Géographie	République centrafricaine	alias
+Jaurès	Jaurès	Personnalités	Jean Jaurès	alias
+Pétain	Pétain	Personnalités	Philippe Pétain	alias
+Tananarive	Tananarive	Géographie	Antananarivo	ancien_nom
+général Dayan	général Dayan	Personnalités	Moché Dayan	alias
+Sartre	Sartre	Personnalités	Jean-Paul Sartre	alias
+Rio-de-Janeiro	Rio-de-Janeiro	Géographie	Rio de janeiro	correction
+CAC	40	Institutions	CAC 40	correction
+Constantinople	Constantinople	Géographie	Istanbul	ancien_nom
+Bengale oriental	Bengale oriental	Géographie	Pakistan	ancien_nom
+Bretton-Woods	Bretton-Woods		Bretton Woods	
+Taïpeh	Taïpeh	Géographie	Taipei	correction
+San-Francisco	San-Francisco	Géographie	San Francisco	correction
+Ryad	Ryad	Géographie	Riyad	correction
+Riad	Riad	Géographie	Riyad	correction
+Dehli	Dehli	Géographie	New Delhi	correction
+New-Delhi	New-Delhi	Géographie	New Delhi	correction
+Sao-Paulo	Sao-Paulo	Géographie	Saõ Paulo	correction
+Adenauer	Adenauer	Personnalités	Konrad Adenauer	correction
+Baltique	Baltique	Géographie	mer Baltique	alias
+Saint-Siège	Saint-Siège	Géographie	Saint Siège	correction
+Phnom-Penh	Phnom-Penh	Géographie	Phnom Penh	correction
