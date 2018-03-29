@@ -146,3 +146,9 @@ Adenauer	Adenauer	Personnalités	Konrad Adenauer	correction
 Baltique	Baltique	Géographie	mer Baltique	alias
 Saint-Siège	Saint-Siège	Géographie	Saint Siège	correction
 Phnom-Penh	Phnom-Penh	Géographie	Phnom Penh	correction
+Rhodésie	Rhodésie	Géographie	Zimbabwe	ancien_nom
+Mobutu	Mobutu	Personnalités	Joseph Mobutu	alias
+Khomeiny	Khomeiny	Personnalités	Rouhollah Khomeiny	alias
+Abdel Nasser	Abdel Nasser	Personnalités	Gamal Abdel Nasser	alias
+Calvo Ospina	Calvo Ospina	Personnalités	Hernando Calvo Ospina	alias
+Calvo Serer	Calvo Serer	Personnalités	Rafael Calvo Serer	alias
