@@ -43,7 +43,7 @@ do
 	str=$(echo "$p" | grep "Wikipédia ne possède pas d'article avec ce nom")
 	if (( ${#str} > 0 ))
 		then
-			echo "$original" >> ../listes_lexicales/Sujets/entites_inconnues_wikipedia.txt
+			echo "$original" >> ../stats/entites_inconnues_wikipedia.txt
 			echo "$original" >> ../stats/entites_validees.txt
 			continue
 	fi
