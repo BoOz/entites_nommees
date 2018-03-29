@@ -29,3 +29,8 @@ Roms
 Flamands
 Arabes de Palestine
 Albanais du Kosovo
+Palestiniens de Cisjordanie
+Palestiniens de Gaza
+Palestiniens de Jérusalem
+Palestiniens du Liban
+Arméniens du Haut-Karabakh
