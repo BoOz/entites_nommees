@@ -28,6 +28,7 @@ Biafra
 Bretagne
 Bengale
 Sarre
+Cachemire
 
 // regions
 Golfe
