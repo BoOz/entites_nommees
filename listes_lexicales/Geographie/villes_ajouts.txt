@@ -29,6 +29,7 @@ Maastricht
 Shangaï
 Bombay
 Lagos
+Chicago
 
 // alias
 Caire
