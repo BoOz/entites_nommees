@@ -26,6 +26,8 @@ Toyota
 Volkswagen
 Hyundai 
 Renault
+Airbus
+SNCF
 
 // banque et finance
 Citigroup
@@ -82,7 +84,8 @@ SFR
 Airbnb 
 Tisco 
 Monsanto 
-Alstom 
+Alstom
+Wal-Mart
 
 // Culture
 Disney
@@ -127,3 +130,4 @@ Gaz de France
 Deutsche Bahn
 Gazprom
 Peugeot
+Siemens
