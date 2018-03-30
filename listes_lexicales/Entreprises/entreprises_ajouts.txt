@@ -27,6 +27,8 @@ Toyota
 Volkswagen
 Hyundai 
 Renault
+Airbus
+SNCF
 
 // banque et finance
 Citigroup
@@ -61,6 +63,7 @@ Apple
 Uber
 Amazon
 
+Action Group
 
 // autre
 Publicis
@@ -83,14 +86,19 @@ SFR
 Airbnb 
 Tisco 
 Monsanto 
-Alstom 
+
+Alstom
+Wal-Mart
+Aguas del Illimani
 
 // Culture
 Disney
 Sony
 Warner
 Fnac
+
 McGraw Hill
+
 
 British Airways
 Qatar Airways
@@ -129,3 +137,6 @@ Gaz de France
 Deutsche Bahn
 Gazprom
 Peugeot
+
+Siemens
+Atlantic Richfield

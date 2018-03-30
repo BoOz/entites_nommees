@@ -11,3 +11,36 @@ Tutsis
 Arabes
 Blancs
 Khmers
+Ouïgours
+Slaves
+Timorais
+Tziganes
+Kurdes d'Irak
+Kurdes de Syrie
+Kurdes de Turquie
+Ottomans
+Palestiniens d'Israël
+Serbes de Bosnie
+Serbes de Bosnie Radovan
+Serbes de Bosnie-Herzégovine
+Sahraouis
+Wallons
+Roms
+Flamands
+Arabes de Palestine
+Albanais du Kosovo
+Palestiniens de Cisjordanie
+Palestiniens de Gaza
+Palestiniens de Jérusalem
+Palestiniens du Liban
+Arméniens du Haut-Karabakh
+Chinois de Hong-Kong
+Chinois de Timor
+Croates de Bosnie
+Indiens Mapuches
+Indiens Guaranis
+Indiens Miskitos
+Indiens Satéré Mawé
+Indiens des Andes
+Indiens du Chiapas
+Kurdes d'Iran

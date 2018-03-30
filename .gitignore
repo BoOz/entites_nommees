@@ -1,3 +1,4 @@
 # Fichiers de config
 .DS_Store
 *.config
+stats/

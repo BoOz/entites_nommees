@@ -104,82 +104,81 @@ function trouver_entites($texte,$id_article){
 	
 	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 	
-	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
+	// monter un tableau acronyme => nom pou ressayer de capter des FARC directement dans le texte.
+	// [PS] => Parti socialiste
+	// en cas d'homonymie laisser tomber ex : Front national (FN) et Front national (PBKS) ou Les Républiccains (LR) et Les Raleurs (LR)
+	// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
+	// doublons par la cle OU la valeur (FN ou Front national) 
+	$homonymes = $institutions = array();
 	foreach($types_entites as $k => $v)
 		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
 			$orgas[$r[1]] = $v ;
-		
-		//var_dump("<pre>", $orgas);
-		
-		// monter un tableau acronyme => nom pou ressayer de capter des FARC directement dans le texte.
-		// [PS] => Parti socialiste
-		// en cas d'homonymie laisser tomber ex : Front national (FN) et Front national (PBKS) ou Les Républiccains (LR) et Les Raleurs (LR)
-		// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
-		// doublons par la cle OU la valeur (FN ou Front national) 
-		// Parti communiste (PCU)
-		$homonymes = $institutions = array();
-		foreach($orgas as $orga){
-			$insts = explode("\P{L}", $orga);
-			foreach($insts as $i){
-				$i = stripslashes($i) ;
-				if(!preg_match("`$acronymes`",$i, $m))
-					continue ;
-				//var_dump("<pre>",$m);
-				if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
-					$homonymes[] = trim($m[1]) ;
-					$institutions[$m[2]] = "homonymes" ;
-				}else
-					$institutions[$m[2]] = trim($m[1]) ;
-			}
-			//var_dump("<pre>", $institutions);
-			foreach($institutions as $i => $v)
-				if($v == "homonymes")
-					unset($institutions[$i]) ;
+	
+	//var_dump("<pre>", $orgas);
+	
+	foreach($orgas as $orga){
+		$insts = explode("\P{L}", $orga);
+		foreach($insts as $i){
+			$i = stripslashes($i) ;
+			if(!preg_match("`$acronymes`",$i, $m))
+				continue ;
+			//var_dump("<pre>",$m);
+			if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
+				$homonymes[] = trim($m[1]) ;
+				$institutions[$m[2]] = "homonymes" ;
+			}else
+				$institutions[$m[2]] = trim($m[1]) ;
 		}
-		//var_dump("<pre>", $homonymes);
+	}
+	
+	//var_dump("<pre>", $institutions);
+	foreach($institutions as $i => $v)
+		if($v == "homonymes")
+			unset($institutions[$i]) ;
+	
+	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
+	foreach($orgas as $type => $reg){
+		//var_dump($reg);
+		$label = preg_replace("/\d$/", "", $type);
 		
-		foreach($orgas as $type => $reg){
-			//var_dump($reg);
-			$label = preg_replace("/\d$/", "", $type);
-			
-			// On cherche la forme developpée + acronyme : Confédération générale du travail (CGT)
-			
-			$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
+		// On cherche la forme developpée + acronyme : Confédération générale du travail (CGT)
+		
+		$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+		
+		//var_dump("<pre>",$fragments, $texte, "<hr>");
+		
+		// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
+		// Mais plus tard sinon on se fait avoir par les homonymes.
+		$types_reduits[$label][] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+		
+		//var_dump($types_reduits);
+		
+		//var_dump("<pre>",$fragments, $texte);
+		
+		// ensuite que l'acronyme s'il fait plus qu'une lettre...
+		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
+		
+		$acros[0] = str_replace("\(", "\P{L}", $acros[0]);
+		$acros[0] = str_replace("\)", "\P{L}", $acros[0]);
+		
+		$acros = join("|", array_unique($acros[0]));
+		
+		//var_dump("<pre>",$reg,$acros,"</pre>");
+		
+		$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+		/**/
+	}
+	foreach($types_reduits as $l => $ts)
+		foreach($ts as $t){
+			$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
 			$fragments = $recolte['fragments'];
 			$texte = $recolte['texte'];
-			
-			//var_dump("<pre>",$fragments, $texte, "<hr>");
-			
-			// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
-			// Mais plus tard sinon on se fait avoir par les homonymes.
-			$types_reduits[$label][] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
-			
-			//var_dump($types_reduits);
-			
-			//var_dump("<pre>",$fragments, $texte);
-			
-			// ensuite que l'acronyme s'il fait plus qu'une lettre...
-			preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
-			
-			$acros[0] = str_replace("\(", "\P{L}", $acros[0]);
-			$acros[0] = str_replace("\)", "\P{L}", $acros[0]);
-			
-			$acros = join("|", array_unique($acros[0]));
-			
-			//var_dump("<pre>",$reg,$acros,"</pre>");
-			
-			$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
-			$fragments = $recolte['fragments'];
-			$texte = $recolte['texte'];
-			/**/
 		}
-		foreach($types_reduits as $l => $ts)
-			foreach($ts as $t){
-				$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
-				$fragments = $recolte['fragments'];
-				$texte = $recolte['texte'];
-			}
-		
+	
 	// a debug
 	//var_dump("<pre>", $fragments);
 	
@@ -607,16 +606,31 @@ function trouver_noms($texte){
 	// (?<!foo)bar trouve les occurrences de "bar" qui ne sont pas précédées par "foo". // assertion arriere negative
 	// foo(?!bar) trouve toutes les occurrences de "foo" qui ne sont pas suivies par "bar". // assertion avant negative
 	
-	// virer les débuts de phrases fréquents avec une liste de mots fréquents
-	$reg =  "%(?:\P{L})". // non lettre ou ponctuation non capturée
-			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // pas suivie d'un mot fréquent en debut de phrase, espace
+	$reg =  "%(?:\P{L})". // Caractere qui n'est pas une lettre
+			"(?!(?i)(?:". MOTS_DEBUT .")\s+)". // non suivi d'un mot fréquent en debut de phrase, espace
 			"(".
-				"(?:(?<!\.)" . LETTRE_CAPITALE . "(?!')(?:" . LETTRES . ")(?:". LETTRESAP ."+|\.))". // Un mot avec une capitale non précédée d'un . (C.I.A. Le ...), suivie de lettres ou - ou ' (mais pas en deuxieme) ou d'un .
-				"(?:\s+" . LETTRE_CAPITALE . "(?:". LETTRES ."+|\.))*". // Des éventuels mots avec une capitale suivie de lettres ou - ou d'un . 
-				"(?:\s+(?!(?:". MOTS_MILIEU ."))". LETTRES ."+){0,2}". // Un ou deux éventuels mots (van der), mais pas des mots courants
-				"(?:(?:\s+|'|’)(?!". MOTS_FIN .")" . LETTRE_CAPITALE . LETTRES ."+)". // Un mot avec une capitale suivie de lettres ou - , mais pas des mots de fins
-			"|". ENTITES_PERSO .")". // Personnalités à pseudo // a virer ?
-	"%mu"	;
+				"(?:".
+					"(?<!\.)". 
+					LETTRE_CAPITALE . // Lettre capitale non précédée d'un . (C.I.A)
+					"(?!')" . // non suivie par un apostrophe
+					"(?:" . LETTRES . ")". // suivie par des lettres ou -
+					"(?:". LETTRESAP ."+)*". // éventuellement suivi par un ' et des lettres
+				")". // On a trouvé un mot avec une capitale avec un apostrophe possible mais pas en seconde position.
+				"(?:\s+" . // Eventuellement un espace suivi
+					LETTRE_CAPITALE . "(?:". LETTRES ."+|\.)". //d un autre mot avec capitale derrière, ou bien une capitale suivie d'un . (George W. Bush)
+				")*".
+				"(?:\s+". // Eventuellement un espace
+					"(?!(?:". MOTS_MILIEU ."))". // non suivi par un mot courrant
+						LETTRES ."+" .
+				"){0,2}". // suivi d un ou deux mots sans capitale (van der)
+				"(?:".
+					"(?:\s+|'|’)". // un espace ou un apostrophe
+					"(?!". MOTS_FIN .")" . // non suivi par un mot courrant
+						LETTRE_CAPITALE . LETTRES ."+". // Un mot avec une capitale suivie de lettres ou -
+				")".
+				"|". ENTITES_PERSO . // Personnalités à pseudo // a virer ?
+			")".
+	"%u";
 	
 	preg_match_all($reg,$texte,$m);
 	$noms = $m[1] ;
@@ -689,6 +703,8 @@ function nettoyer_entite_nommee(&$entite, $key){
 }
 
 function trouver_entites_residuelles($texte){
+	
+	//var_dump("<pre>",$texte);
 	
 	// Mots avec une Capitale pas en début de phrase.
 	preg_match_all("`" . 

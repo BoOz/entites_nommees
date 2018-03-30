@@ -1,5 +1,5 @@
 <?php
-// Charger les fonction de décourverte d'entites nommees
+// Charger les fonction de découverte d'entites nommees
 include_spip("inc/entites_nommees") ;
 
 // Des listes d'entités nommées validées sont dans dans des fichiers textes.
@@ -28,6 +28,7 @@ function generer_types_entites($nb_mots="multi"){
 	
 	// mettre en cache à la date de modif du dernier fichier modif.
 	$fichiers = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*/*') ;
+	$fichiers_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*/*') ;
 	foreach($fichiers as $k => $v)
 		$mtime[$v['basename']] = $v['mtime'] ;
 	
@@ -38,8 +39,12 @@ function generer_types_entites($nb_mots="multi"){
 		and $c = cache_get($key))
 			return $c ;
 	
-	// lister les répertoires / types d'entites : Pays Villes ...
+	// lister les répertoires / types d'entites du plugin : Pays Villes ...
 	$types_entites_repertoires = inc_ls_to_array_dist(_DIR_RACINE . 'plugins/entites_nommees/listes_lexicales/*') ;
+	// ajouter d'eventuelles listes persos de squelettes/listes_lexicales ...
+	$types_entites_repertoires_perso = inc_ls_to_array_dist(_DIR_RACINE . 'squelettes/listes_lexicales/*') ;
+	
+	$types_entites_repertoires = array_merge($types_entites_repertoires, $types_entites_repertoires_perso);
 	
 	foreach($types_entites_repertoires as $type){
 		
@@ -49,11 +54,12 @@ function generer_types_entites($nb_mots="multi"){
 		$entites_regexp = "" ;
 		
 		// pour chaque repertoire
-		$t_entite = $type['file'] ;
-		// var_dump($t_entite);
+		
+		$t_entite = $type['dirname'] . "/" . $type['basename'] ;
+		//var_dump("<pre>$t_entite/*.txt</pre>");
 		
 		// on liste les fichiers du repertoire
-		$sous_categories = inc_ls_to_array_dist(_DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/*.txt");
+		$sous_categories = inc_ls_to_array_dist("$t_entite/*.txt");
 		
 		// creer un type d'entite si le répertoire contient des recettes au format txt.
 		if( sizeof($sous_categories) >= 1){
@@ -61,11 +67,11 @@ function generer_types_entites($nb_mots="multi"){
 			
 			// pour chaque fichier
 			foreach($sous_categories as $sous_categorie){
-				$sous_categorie_type = $sous_categorie['file'] ;
+				$sous_categorie_type = $sous_categorie['basename'] ;
 				
-				// var_dump("<hr />-- $t_entite /" . $sous_categorie_type);
+				//var_dump("<hr />-- $t_entite /" . $sous_categorie_type);
 				//exit ;
-				$fichier_liste = _DIR_RACINE . "plugins/entites_nommees/listes_lexicales/$t_entite/$sous_categorie_type" ;
+				$fichier_liste = "$t_entite/$sous_categorie_type" ;
 				$sous_cat_entites = generer_mots_fichier($fichier_liste) ;
 				
 				foreach($sous_cat_entites as $k => $ligne){
@@ -134,13 +140,13 @@ function generer_types_entites($nb_mots="multi"){
 					$pos = strrpos(substr($chaine, 0, 10000), "\P{L}|") ;
 					//echo "dernier | du paquet $i à la pos : $pos" ;
 					$s_chaine = substr($chaine,0,$pos) ;
-					$types_entites[$t_entite.$i] = $s_chaine . "\P{L}" ;
+					$types_entites[basename($t_entite).$i] = $s_chaine . "\P{L}" ;
 					//echo $type_entite.$i ." = " . $types_entites[$type_entite.$i] ;
 					$chaine = str_replace($s_chaine . "\P{L}|" ,"", $chaine);
 					$i ++ ;
 				}
 			}else{
-				$types_entites[$t_entite] = $entites_regexp ;
+				$types_entites[basename($t_entite)] = $entites_regexp ;
 			}
 		}
 	}

@@ -5,6 +5,8 @@ Celtics de Glasgow
 
 // lieux de pouvoir
 Washington
+Downing Street
+Matignon
 
 // ONG
 Amnesty International
@@ -68,6 +70,7 @@ Terreur
 France de Vichy
 Révolution culturelle
 Grand Bond en avant
+Septembre noir
 
 // Social
 Loi Macron
@@ -164,15 +167,6 @@ Hyper Cacher
 Juifs d'Europe
 Juifs de France
 Klux Klan
-Kurdes d'Irak
-Kurdes de Syrie
-Kurdes de Turquie
-Ottomans
-Palestiniens d'Israël
-Serbes de Bosnie
-Serbes de Bosnie Radovan
-Serbes de Bosnie-Herzégovine
-Sahraouis
 
 Occuper Jackson
 
@@ -191,3 +185,4 @@ Gérard Larcher
 Zona Franca
 
 Watergate
+Charles-de-Gaulle

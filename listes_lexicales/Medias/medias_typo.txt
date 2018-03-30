@@ -1325,6 +1325,8 @@ Der Standard
 // http://typo.mondediplo.net/messages/164
 // Belgique
 
+RTBF
+
 // http://typo.mondediplo.net/messages/163
 // Belize
 
@@ -1823,9 +1825,6 @@ Nezavissimaïa Gazeta
 Novaïa Gazeta
 Ria Novosti
 Rossiïskaïa Gazeta
-Divers
-le Bolchoï
-le Théâtre Mariinski
 
 // http://typo.mondediplo.net/messages/48
 // Rwanda

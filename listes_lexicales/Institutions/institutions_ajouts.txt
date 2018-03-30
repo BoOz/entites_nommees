@@ -4,6 +4,7 @@ Cour suprême
 Congrès des Etats-Unis
 Congrès américain
 Chambre des représentants
+Sorbonne
 
 Parlement européen
 Parlement
@@ -17,6 +18,7 @@ Haute Autorité
 // services secrets
 CIA
 Mossad
+KGB
 
 // Sièges de gouvernements
 Kremlin
@@ -35,6 +37,7 @@ Mouvement des entreprises de France (Medef)
 Conseil des droits de l’homme des Nations unies
 Conférence des parties (COP)
 
+Bundesbank
 Royal Navy
 Amis de la Terre
 

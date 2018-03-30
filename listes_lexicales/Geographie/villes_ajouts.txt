@@ -8,9 +8,34 @@ La Haye
 Marseille
 Dien Bien Phu
 Las Vegas
+
 Beyrouth
 Suez
 Bonn
+
+Barcelone
+Casablanca
+Naples
+Boston
+Davos
+Cancún
+Karachi
+Soweto
+Rambouillet
+Gênes
+Marrakech
+Hiroshima
+Tanger
+Sabra
+Chatila
+Kyoto
+Seattle
+Maastricht
+Shangaï
+Bombay
+Lagos
+Chicago
+Charm el Cheikh
 
 // alias
 Caire
