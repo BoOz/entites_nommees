@@ -12,6 +12,7 @@ Tokyo Electric Power Company
 Veolia
 Rosatom
 UraMin
+Royal Dutch Shell
 
 // transport et aviation
 Air France
