@@ -144,7 +144,7 @@ class entites_nommees extends Command {
 									continue;
 								list($entite_actuelle,$entite_dans_extrait, $type_entite, $entite, $type_correc) = explode("\t", $e);
 								//var_dump($entite_actuelle,$entite_dans_extrait, $type_entite, $entite);
-								$sel = 	"select * from entites_nommees where BINARY entite like " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
+								$sel = 	"select * from entites_nommees where entite like " . sql_quote($entite_actuelle) . " and extrait like '%". addslashes($entite_dans_extrait) ."%'" ;
 								$q = sql_query($sel);
 								$nb = sql_count($q);
 								if($nb > 0){
@@ -240,7 +240,7 @@ class entites_nommees extends Command {
 						echo $nb . " entite pas connues \n";
 						while($res = sql_fetch($ent)){
 							$del =  "delete from entites_nommees where entite=" . sql_quote($res['entite']) ;
-							echo $del . " (" . $res['d'] . "< \n";
+							echo $del . " (" . $res['d'] . ") \n";
 							sql_query($del);
 							echo "\n" ;
 						}
@@ -286,10 +286,10 @@ class entites_nommees extends Command {
 						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
 						// super long en BINARY
 						// toutes les versions avec accents ne seront pas updatés, sauf si mode BINARY, mais qui est long.
-						sql_query("update entites_nommees set statut='publie' where entite like " . _q($reference['entite']));
+						sql_query("update entites_nommees set statut='publie' where entite like " . _q($reference['entite']) . " and statut='prop'");
 						
 						// on teste si y'a besoin de faire du binary
-						$cmpt = sizeof(sql_allfetsel("entite","entites_nommees","entite like " . _q($reference['entite']),"BINARY entite","","","count(entite)>1")) ;
+						$cmpt = sizeof(sql_allfetsel("entite","entites_nommees","entite like " . _q($reference['entite']) . " and statut='prop'","BINARY entite","","","count(entite)>1")) ;
 						if($cmpt > 1){
 							$output->writeln("<info>" . $reference['entite'] . " à " . $cmpt . " variantes</info>");
 							// repasse en mode BINARY
@@ -316,9 +316,9 @@ class entites_nommees extends Command {
 					
 					passthru("plugins/entites_nommees/spip-cli/verifier_personnalites_wikipedia.sh", $reponse); // chmod +x sync_data.sh la premiere fois
 					
-					var_dump($res);
+					//var_dump($reponse);
 					
-					if($res){
+					if($reponse){
 						// recaler après coup les ajouts dans les fichiers /listes_lexicales/*/*
 						$output->writeln("<info>Requalification des données d'après les listes_lexicales/*/*</info>");
 						include_spip('iterateur/data');
