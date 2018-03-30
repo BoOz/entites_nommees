@@ -110,7 +110,7 @@ Daesh	Daesh	Partis politiques	Organisation de l'État islamique (OEI)	alias
 New-york	New-york	Géographie	New York	correction
 Buenos-Aires	Buenos-Aires	Géographie	Buenos Aires	correction
 Costa-Rica	Costa-Rica	Géographie	Costa Rica	correction
-Kadhafi				
+Kadhafi	Kadhafi	Personnalités	Mouammar Kadhafi	alias
 les Communes	les Communes	Institutions	Chambre des Communes	alias
 Burkina	Burkina	Pays	Burkina Faso	alias
 Pâcques	île de 	Géographie	Île de Pacques	correction
@@ -134,7 +134,7 @@ Rio-de-Janeiro	Rio-de-Janeiro	Géographie	Rio de janeiro	correction
 CAC	40	Institutions	CAC 40	correction
 Constantinople	Constantinople	Géographie	Istanbul	ancien_nom
 Bengale oriental	Bengale oriental	Géographie	Pakistan	ancien_nom
-Bretton-Woods	Bretton-Woods		Bretton Woods	
+Bretton-Woods	Bretton-Woods	Sujets	Bretton Woods	
 Taïpeh	Taïpeh	Géographie	Taipei	correction
 San-Francisco	San-Francisco	Géographie	San Francisco	correction
 Ryad	Ryad	Géographie	Riyad	correction
@@ -152,3 +152,18 @@ Khomeiny	Khomeiny	Personnalités	Rouhollah Khomeiny	alias
 Abdel Nasser	Abdel Nasser	Personnalités	Gamal Abdel Nasser	alias
 Calvo Ospina	Calvo Ospina	Personnalités	Hernando Calvo Ospina	alias
 Calvo Serer	Calvo Serer	Personnalités	Rafael Calvo Serer	alias
+Collor de Mello	Collor de Mello	Personnalités	Fernande Collor de Mello	alias
+Intifida	Intifida	Sujets	Intifada	correction
+Conrad Adenauer	Conrad Adenauer	Personnalités	Konrad Adenauer	alias
+Díaz Ordaz	Díaz Ordaz	Personnalités	Gustavo Díaz Ordaz	alias
+Febres Cordero	Febres Cordero	Personnalités	Léon Febres Cordero	alias
+Foster Dulles	Foster Dulles	Personnalités	John Foster Dulles	alias
+Garcia Godoy	Garcia Godoy	Personnalités	Hector Garcia Godoy	alias
+García Meza	García Meza	Personnalités	Luis García Meza	alias
+Hafez Assad	Hafez Assad	Personnalités	Hafez Al-Assad	alias
+Hsing Han	Hsing Han	Personnalités	Lo Hsing Han	alias
+Maale Adumim	Maale Adumim	Géographie	Maale Adoumim	correction
+Mao Tse-Toung	Mao Tse-Toung	Personnalités	Mao Zedong	correction
+Mao Tsetoung 	Mao Tsetoung 	Personnalités	Mao Zedong	correction
+Mohamad Khatami	Mohamad Khatami	Personnalités	Mohamed Khatami	correction
+Napoléon Duarte	Napoléon Duarte	Personnalités	José Napoléon Duarte	correction
