@@ -104,82 +104,81 @@ function trouver_entites($texte,$id_article){
 	
 	$acronymes = "((?<!\P{L}\s)" . LETTRE_CAPITALE . "(?:". LETTRES ."|\s|')+)\((" . LETTRE_CAPITALE . "+)\)";
 	
-	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
+	// monter un tableau acronyme => nom pou ressayer de capter des FARC directement dans le texte.
+	// [PS] => Parti socialiste
+	// en cas d'homonymie laisser tomber ex : Front national (FN) et Front national (PBKS) ou Les Républiccains (LR) et Les Raleurs (LR)
+	// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
+	// doublons par la cle OU la valeur (FN ou Front national) 
+	$homonymes = $institutions = array();
 	foreach($types_entites as $k => $v)
 		if(preg_match("/^(institution.*|parti.*)/i", $k, $r))
 			$orgas[$r[1]] = $v ;
-		
-		//var_dump("<pre>", $orgas);
-		
-		// monter un tableau acronyme => nom pou ressayer de capter des FARC directement dans le texte.
-		// [PS] => Parti socialiste
-		// en cas d'homonymie laisser tomber ex : Front national (FN) et Front national (PBKS) ou Les Républiccains (LR) et Les Raleurs (LR)
-		// on demonte des regexp \P{L}Cour suprême\P{L}|\P{L}Congrès des (?:É|E)tats\-Unis\P{L}|...
-		// doublons par la cle OU la valeur (FN ou Front national) 
-		// Parti communiste (PCU)
-		$homonymes = $institutions = array();
-		foreach($orgas as $orga){
-			$insts = explode("\P{L}", $orga);
-			foreach($insts as $i){
-				$i = stripslashes($i) ;
-				if(!preg_match("`$acronymes`",$i, $m))
-					continue ;
-				//var_dump("<pre>",$m);
-				if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
-					$homonymes[] = trim($m[1]) ;
-					$institutions[$m[2]] = "homonymes" ;
-				}else
-					$institutions[$m[2]] = trim($m[1]) ;
-			}
-			//var_dump("<pre>", $institutions);
-			foreach($institutions as $i => $v)
-				if($v == "homonymes")
-					unset($institutions[$i]) ;
+	
+	//var_dump("<pre>", $orgas);
+	
+	foreach($orgas as $orga){
+		$insts = explode("\P{L}", $orga);
+		foreach($insts as $i){
+			$i = stripslashes($i) ;
+			if(!preg_match("`$acronymes`",$i, $m))
+				continue ;
+			//var_dump("<pre>",$m);
+			if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
+				$homonymes[] = trim($m[1]) ;
+				$institutions[$m[2]] = "homonymes" ;
+			}else
+				$institutions[$m[2]] = trim($m[1]) ;
 		}
-		//var_dump("<pre>", $homonymes);
+	}
+	
+	//var_dump("<pre>", $institutions);
+	foreach($institutions as $i => $v)
+		if($v == "homonymes")
+			unset($institutions[$i]) ;
+	
+	// Gérer ensuite les institutions et partis politiques en mode développé + acronyme connus pour trouver ensuite les autres.
+	foreach($orgas as $type => $reg){
+		//var_dump($reg);
+		$label = preg_replace("/\d$/", "", $type);
 		
-		foreach($orgas as $type => $reg){
-			//var_dump($reg);
-			$label = preg_replace("/\d$/", "", $type);
-			
-			// On cherche la forme developpée + acronyme : Confédération générale du travail (CGT)
-			
-			$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
+		// On cherche la forme developpée + acronyme : Confédération générale du travail (CGT)
+		
+		$recolte = recolter_fragments($label, $reg, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+		
+		//var_dump("<pre>",$fragments, $texte, "<hr>");
+		
+		// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
+		// Mais plus tard sinon on se fait avoir par les homonymes.
+		$types_reduits[$label][] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
+		
+		//var_dump($types_reduits);
+		
+		//var_dump("<pre>",$fragments, $texte);
+		
+		// ensuite que l'acronyme s'il fait plus qu'une lettre...
+		preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
+		
+		$acros[0] = str_replace("\(", "\P{L}", $acros[0]);
+		$acros[0] = str_replace("\)", "\P{L}", $acros[0]);
+		
+		$acros = join("|", array_unique($acros[0]));
+		
+		//var_dump("<pre>",$reg,$acros,"</pre>");
+		
+		$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
+		$fragments = $recolte['fragments'];
+		$texte = $recolte['texte'];
+		/**/
+	}
+	foreach($types_reduits as $l => $ts)
+		foreach($ts as $t){
+			$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
 			$fragments = $recolte['fragments'];
 			$texte = $recolte['texte'];
-			
-			//var_dump("<pre>",$fragments, $texte, "<hr>");
-			
-			// Ensuite la même chose sans l'acronyme : Confédération générale du travail.
-			// Mais plus tard sinon on se fait avoir par les homonymes.
-			$types_reduits[$label][] = preg_replace("/\s.\([^\)]+\)/u","",$reg);
-			
-			//var_dump($types_reduits);
-			
-			//var_dump("<pre>",$fragments, $texte);
-			
-			// ensuite que l'acronyme s'il fait plus qu'une lettre...
-			preg_match_all("/\\\\\([^)]{2,}\\\\\)/Uu", str_replace("(?:É|E)", "E", $reg), $acros);
-			
-			$acros[0] = str_replace("\(", "\P{L}", $acros[0]);
-			$acros[0] = str_replace("\)", "\P{L}", $acros[0]);
-			
-			$acros = join("|", array_unique($acros[0]));
-			
-			//var_dump("<pre>",$reg,$acros,"</pre>");
-			
-			$recolte = recolter_fragments($label, $acros, $texte, $fragments, $id_article, $texte_original);
-			$fragments = $recolte['fragments'];
-			$texte = $recolte['texte'];
-			/**/
 		}
-		foreach($types_reduits as $l => $ts)
-			foreach($ts as $t){
-				$recolte = recolter_fragments($l, $t, $texte, $fragments, $id_article, $texte_original);
-				$fragments = $recolte['fragments'];
-				$texte = $recolte['texte'];
-			}
-		
+	
 	// a debug
 	//var_dump("<pre>", $fragments);
 	
