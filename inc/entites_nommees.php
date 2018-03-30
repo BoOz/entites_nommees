@@ -125,11 +125,26 @@ function trouver_entites($texte,$id_article){
 			//var_dump("<pre>",$m);
 			if($institutions[$m[2]] OR in_array(trim($m[1]),$institutions)){
 				$homonymes[] = trim($m[1]) ;
+				//$doublons[] = $institutions[$m[2]] . " (". $m[2] .")" ;
+				//$doublons[] = $i ;
 				$institutions[$m[2]] = "homonymes" ;
 			}else
 				$institutions[$m[2]] = trim($m[1]) ;
 		}
 	}
+	
+	/*
+	// trouver des doublons à recalculer
+	foreach(array_unique($doublons) as $d){
+		$entites_doublons[] = sql_quote($d) ;
+		echo $d . "<br>" ;
+	}
+	
+	$article_a_reindexer = sql_allfetsel("id_article","entites_nommees","entite in (" . implode(",",$entites_doublons) .")") ;
+	$values = array_map('array_pop', $article_a_reindexer);
+	$article_a_reindexer = implode(',', array_unique($values));
+	echo $article_a_reindexer ;
+	*/
 	
 	//var_dump("<pre>", $institutions);
 	foreach($institutions as $i => $v)
