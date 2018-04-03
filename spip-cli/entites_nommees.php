@@ -114,7 +114,7 @@ class entites_nommees extends Command {
 						$values = array_map('array_pop', $auteurs);
 						$auteurs_extraits = implode(',', array_unique($values));
 						
-						$auteurs = sql_allfetsel("nom","spip_auteurs","id_auteur not in ($auteurs_extraits,1008,15594)");
+						$auteurs = sql_allfetsel("nom","spip_auteurs","id_auteur not in ($auteurs_extraits,1008,15594,815,4341,47208,13418,13706,14802,15022,15086,15913)");
 						
 						foreach($auteurs as $a){
 							$nom = $a["nom"] ;

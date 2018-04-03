@@ -167,3 +167,7 @@ Mao Tse-Toung	Mao Tse-Toung	Personnalités	Mao Zedong	correction
 Mao Tsetoung 	Mao Tsetoung 	Personnalités	Mao Zedong	correction
 Mohamad Khatami	Mohamad Khatami	Personnalités	Mohamed Khatami	correction
 Napoléon Duarte	Napoléon Duarte	Personnalités	José Napoléon Duarte	correction
+Nicolas Ceausescu	Nicolas Ceausescu	Personnalités	Nicolae Ceausescu	correction
+Paz Estenssoro	Paz Estenssoro	Personnalités	Victor Paz Estenssoro	alias
+Pérez de Cuellar	Pérez de Cuellar	Personnalités	Javier Pérez de Cuellar	alias
+Roa Bastos	Roa Bastos	Personnalités	Augusto Roa Bastos	
