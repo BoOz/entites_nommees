@@ -280,7 +280,7 @@ class entites_nommees extends Command {
 					
 					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)')  " . 
 					"and entite not like '%auteur:%' and entite not like '%lieu:%' " .
-					"and entite not in ('République','Nord','Sud','Est','Ouest')" .
+					"and entite not in ('République','Nord','Sud','Est','Ouest','AREA SHAPE','RAPPORT ANNUEL')" .
 					"" ,"entite, type_entite","nb desc","", "nb>9");
 					foreach($references as $reference){
 						$decompte_entites .= preg_replace("/\R/", "", $reference['entite']) . "	" . $reference['type_entite'] . "	" . $reference['nb'] . "\n" ;
