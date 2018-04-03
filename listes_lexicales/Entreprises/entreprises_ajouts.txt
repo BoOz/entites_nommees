@@ -12,6 +12,7 @@ Tokyo Electric Power Company
 Veolia
 Rosatom
 UraMin
+Royal Dutch Shell
 
 // transport et aviation
 Air France
@@ -61,7 +62,6 @@ Microsoft
 Apple
 Uber
 Amazon
-Action Group
 
 // autre
 Publicis
@@ -84,6 +84,7 @@ SFR
 Airbnb 
 Tisco 
 Monsanto 
+
 Alstom
 Wal-Mart
 Aguas del Illimani
@@ -93,6 +94,9 @@ Disney
 Sony
 Warner
 Fnac
+
+McGraw Hill
+
 
 British Airways
 Qatar Airways
@@ -131,5 +135,6 @@ Gaz de France
 Deutsche Bahn
 Gazprom
 Peugeot
+
 Siemens
 Atlantic Richfield
