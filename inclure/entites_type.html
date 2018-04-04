@@ -2,16 +2,16 @@
 
 <B_entites>
 	#ANCRE_PAGINATION
-	<h3>#TYPE</h3>
+	<h3>[(#TYPE|replace{Geographie,Géographie})]</h3>
 	<ul>
 	<BOUCLE_entites(DATA){source csv, #CHEMIN{stats/decompte_references.txt}}
 		{1,n}
 		{pagination #ENV{pagination,50}}
 		{type}
 		>
-		<li><a href="/references/[(#ENTITE|rawurlencode)]">#ENTITE</a> <small>#POIDS fois</small></li>
+		<li><a href="/references/[(#ENTITE|rawurlencode)]">#ENTITE</a> <small>[(#POIDS|number_format{0, ',', '&nbsp;'})] fois</small></li>
 	</BOUCLE_entites>
 	</ul>
-	[(#ENV{pagination}|non)<p class="pagination">Voir toutes les références «&nbsp;<a href="index/[(#TYPE|rawurlencode)]">#TYPE</a>&nbsp;»</p>]
+	[(#ENV{pagination}|non)<p class="pagination">Voir toutes les références «&nbsp;<a href="index/[(#TYPE|rawurlencode)]">[(#TYPE|replace{Geographie,Géographie})]</a>&nbsp;»</p>]
 	[(#ENV{pagination}|oui)<p class="pagination">#PAGINATION</p>]
 </B_entites>
