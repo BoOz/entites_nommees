@@ -144,3 +144,6 @@ Atlantic Richfield
 
 // Télécommunication
 Bouygues Telecom
+
+// Chaines de boutiques
+Galleries Lafayette
