@@ -147,3 +147,5 @@ Bouygues Telecom
 
 // Chaines de boutiques
 Galleries Lafayette
+
+United Fruit Company
