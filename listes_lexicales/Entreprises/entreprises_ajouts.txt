@@ -36,6 +36,7 @@ Citigroup
 Standard & Poor’s
 BNP Paribas
 Westpac
+Bundesbank 
 
 // fonds d'investissement
 Qatar Investment Authority (QIA)
