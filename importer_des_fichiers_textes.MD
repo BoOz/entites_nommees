@@ -38,5 +38,38 @@ chmod +x entites_nommees/spip-cli/sync_data.sh
 spip plugins:activer entites_nommees convertisseur
 ```
 
-## Importer les fichiers textes
-...
+## Importer les fichiers textes d'un repertorie chroniques
+
+**convertir les fichiers textes en fichiers d'import spip**
+
+```
+plugins/entites_nommees/spip-cli/importertxt.sh chroniques
+```
+
+**Importer dans spip**
+
+(après avoir créé une rubrique 1 dans l'admin et copié le dossier squelettes/ du plugin entites_nommees à la racine du spip)
+
+```
+spip import -s import_spip -d1
+```
+
+**Calculer les entités nommées**
+
+```
+spip entites
+```
+
+**Rétablir les entités mal nommées**
+
+```
+spip entites -m oui
+```
+
+**Voir le résultat**
+
+```
+/?page=explorer
+```
+
+
