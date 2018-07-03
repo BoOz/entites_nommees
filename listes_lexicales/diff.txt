@@ -1,0 +1,377 @@
+diff --git a/listes_lexicales/Geographie/geographie_typo.txt b/listes_lexicales/Geographie/geographie_typo.txt
+index 1a67052..eaca8e8 100755
+--- a/listes_lexicales/Geographie/geographie_typo.txt
++++ b/listes_lexicales/Geographie/geographie_typo.txt
+@@ -243,7 +243,8 @@ Kadiogo
+ 
+ //Divers
+ 
+-lac Tonlé Sap
++Tonlé Sap 
++esplanade du Wat Botum 
+ 
+ // http://typo.mondediplo.net/messages/150
+ // Cameroun
+@@ -963,6 +964,7 @@ Tombouctou
+ Azawad 
+ barrage de Markala 
+ Macina 
++zone des «trois frontières»
+ 
+ // http://typo.mondediplo.net/messages/85
+ // Malte
+@@ -1170,6 +1172,9 @@ le Meinweg
+ // http://typo.mondediplo.net/messages/58
+ // Pérou
+ 
++// Provinces 
++Condorcanqui
++
+ //Divers
+ 
+ Callao 
+@@ -1808,6 +1813,8 @@ Proche-Orient
+ 
+  Mer noire
+ 
++ Monde
++
+  Monde arabe
+ 
+  Nord-Vietnam
+@@ -1818,7 +1825,7 @@ Proche-Orient
+ 
+  Nyassaland
+ 
+- Océan indien
++ Océan Indien
+ 
+  Pacifique
+ 
+@@ -1830,8 +1837,6 @@ Proche-Orient
+ 
+  Palestine mandataire
+ 
+- Papouasie-Nouvelle-Guinée
+-
+  Pays baltes
+ 
+  Polynésie française
+@@ -1893,3 +1898,4 @@ Proche-Orient
+  Yougoslavie
+ 
+  Zaïre
++
+diff --git a/listes_lexicales/Geographie/villes_typo.txt b/listes_lexicales/Geographie/villes_typo.txt
+index f567395..00b6bca 100755
+--- a/listes_lexicales/Geographie/villes_typo.txt
++++ b/listes_lexicales/Geographie/villes_typo.txt
+@@ -882,10 +882,14 @@ Thakhek
+ // http://typo.mondediplo.net/messages/95
+ // Liban
+ 
+-Tripoli
++Bourj Hammoud
++Chnanir
++Naameh
+ Saïda
++Tripoli
+ Tyr
+-Zahlé
++Zahlé
++Zouk Mosbeh
+ 
+ // http://typo.mondediplo.net/messages/94
+ // Liberia
+@@ -975,6 +979,7 @@ Tanjong Pagar
+ // Mali
+ 
+ Diabali
++Djenné
+ Kati
+ Konna
+ Koulikoro
+@@ -1132,7 +1137,6 @@ Zaria
+ // Oman
+ 
+ Salalah
+-Sur
+ Sohar
+ 
+ // http://typo.mondediplo.net/messages/65
+@@ -1441,6 +1445,7 @@ Adré
+ Abou Goulem
+ Bongor
+ Doba
++Faya-Largeau
+ Maroua
+ Massaguet
+ Moundou
+@@ -1621,3 +1626,5 @@ Mufulira
+ // http://typo.mondediplo.net/messages/9
+ // Zimbabwe
+ 
++ 
++
+diff --git a/listes_lexicales/Institutions/institutions_typo.txt b/listes_lexicales/Institutions/institutions_typo.txt
+index 4f97315..d7d6311 100755
+--- a/listes_lexicales/Institutions/institutions_typo.txt
++++ b/listes_lexicales/Institutions/institutions_typo.txt
+@@ -269,3 +269,4 @@ Programme régional océanien de l'environnement (PROE)
+ 
+ Conseil de coopération du Golfe (CCG)
+ 
++
+diff --git a/listes_lexicales/Medias/medias_typo.txt b/listes_lexicales/Medias/medias_typo.txt
+index a238bab..47c89d8 100755
+--- a/listes_lexicales/Medias/medias_typo.txt
++++ b/listes_lexicales/Medias/medias_typo.txt
+@@ -51,7 +51,7 @@ Al-Jazira
+ Allary Éditions
+ Allia
+ Alliage
+-Alma Editeur 
++Alma éditeur 
+ Al-Misri Al-Yawm
+ Al-Medina
+ Allen Lane Penguin Group
+@@ -214,7 +214,7 @@ Chatto & Windus
+ Chemed Books
+ Chemical & Engineering News
+ Chemin de ronde
+-Le Cherche Midi
++Cherche Midi
+ China Daily
+ The Chosun Ilbo
+ The Christian Science Monitor
+@@ -334,6 +334,7 @@ L'Écho
+ Les Échos
+ L'École émancipée
+ Econometrica
++Economics of Education Review
+ The Economic Times
+ Economica
+ Economic Affairs
+@@ -352,20 +353,20 @@ Edicions 62
+ EDIF
+ Ediouro
+ Édisud
+-Éditions François Bourin
+-Éditions de la Maison des sciences de l’homme
+-Éditions de l'Amateur
+ Éditions Amsterdam
+ Éditions Arkuiris
+-Éditions Chronique
+-Éditions de la Sorbonne
+-Éditions de l'Asymétrie
+-Éditions de l'Aube
+ Éditions B2
++Éditions Cercle d'Art
++Éditions Chronique
+ Éditions CNT-RP
+ Éditions de Juillet
+ Éditions de la Cité
++Éditions de la Maison des sciences de l’homme
++Éditions de l'Amateur
+ Éditions de la Nuit
++Éditions de la Sorbonne
++Éditions de l'Asymétrie
++Éditions de l'Aube
+ Éditions de l'Attribut
+ Éditions de l'Éclat
+ Éditions de l’EHESS
+@@ -375,7 +376,6 @@ Ediouro
+ Éditions de l'OCDE
+ Éditions de l'Olivier
+ Éditions de l'Opportun
+-Éditions Matériologiques
+ Éditions de Minuit
+ Éditions d'en bas
+ Éditions des Équateurs
+@@ -392,7 +392,9 @@ Les Éditions du bout de la ville
+ Éditions du Conseil de l'Europe
+ Éditions du Croquant
+ Éditions du Cygne
++Éditions du détour
+ Éditions du huitième jour
++Les Éditions du Jaguar
+ Éditions du Larzac
+ Éditions du Linteau
+ Éditions du Moment
+@@ -405,11 +407,13 @@ Les Éditions du bout de la ville
+ Éditions du Temps
+ Éditions du Toucan
+ Éditions du Trésor
++Éditions François Bourin
+ Éditions Frat Mat
+ Éditions Informpechat
+ Éditions Kimé
+ Éditions LEP
+ Éditions libertaires
++Éditions Matériologiques
+ Éditions Mimésis
+ Les Éditions Noir sur Blanc
+ Éditions N° 1
+@@ -419,7 +423,7 @@ Les Éditions Noir sur Blanc
+ Éditions Philippe Picquier
+ Éditions rue d'Ulm
+ Éditions Sillage
+-Éditions sociales
++Les Éditions sociales
+ Éditions Syllepse
+ Éditions Unesco
+ Éditions universitaires du Septentrion
+@@ -666,6 +670,7 @@ The Lancet [Infectious Diseases]
+ Larcier
+ Lars Müller Publishers
+ Latin Business Chronicle
++Lavauzelle
+ Lawrence Erlbaum
+ Leduc.s Editions
+ La Lenteur
+@@ -900,7 +905,7 @@ Perspectives économiques en Afrique
+ Peter Hammer Verlag
+ Peter Lang
+ Les Petits Matins
+-Pétra
++Éditions Pétra
+ Petroleum Review
+ Phaidon
+ Phébus
+@@ -1042,6 +1047,7 @@ Sakkoulas
+ Salt Publishing
+ Salvator
+ Santé & Travail
++Santé publique
+ Saptamâna Financiara
+ Saqi
+ Schoken
+@@ -1070,8 +1076,9 @@ Small Arms Survey
+ Soap Éditions
+ Société des écrivains
+ Social Choice and Individual Values
+-Social Science and Medicine
+ Socialist Register
++Social Science and Medicine
++Social Science Quarterly
+ Sociologie et Société
+ Le Soir
+ Le Soleil
+@@ -1221,6 +1228,7 @@ William Blake & Co
+ Women's Press
+ Word Policy Journal
+ Work and Occupations
++World Development
+ World Politics
+ W. W. Norton & Company
+ 
+@@ -1980,3 +1988,4 @@ Milliyet
+ // http://typo.mondediplo.net/messages/9
+ // Zimbabwe
+ 
++
+diff --git a/listes_lexicales/Partis_politiques/partis_typo.txt b/listes_lexicales/Partis_politiques/partis_typo.txt
+index 8f94eaf..d0ca124 100755
+--- a/listes_lexicales/Partis_politiques/partis_typo.txt
++++ b/listes_lexicales/Partis_politiques/partis_typo.txt
+@@ -358,7 +358,7 @@ Union pour le progrès national (Uprona)
+ 
+ Front uni national pour un Cambodge indépendant, neutre, pacifique et coopératif (Funcinpec)
+ Parti du peuple cambodgien (PPC)
+-Parti du salut national du Cambodge (PSN)
++Parti du sauvetage national du Cambodge (PSNC)
+ 
+ // http://typo.mondediplo.net/messages/150
+ // Cameroun
+@@ -592,8 +592,6 @@ Wilayat Sinaï
+ // http://typo.mondediplo.net/messages/133
+ // Émirats arabes unis
+ 
+-Aucun
+-
+ // http://typo.mondediplo.net/messages/132
+ // Équateur
+ 
+@@ -703,7 +701,7 @@ Ligue verte (VIHR)
+ 
+ Debout la France
+ Écologistes !
+-Europe Ecologie -- Les Verts (EELV)
++Europe Ecologie - Les Verts (EELV)
+ En marche !
+ Front de gauche (FDG)
+ La France insoumise
+@@ -974,6 +972,8 @@ Yesh Atid
+ Centre démocrate (CD)
+ Frères d'Italie - Alliance nationale (FDI-AN)
+ « En avant l'Italie ! » (FI)
++ou (Ligue)
++Ligue du Nord
+ Mouvement 5 étoiles
+ Nouveau Centre droit (NCD)
+ Parti démocrate (PD)
+@@ -1215,6 +1215,9 @@ Rassemblement pour le Mali (RPM)
+ Union pour la République et la démocratie (URD)
+ Groupe vigilance démocratique et républicaine (VRD)
+ Al-Qaida au Maghreb islamique (AQMI)
++Ansar Dine
++ou (Jamaat Nosrat Al-Islam Wal-Mouslimin)
++Groupe de soutien à l'islam et aux musulmans (GSIM)
+ Coordination des mouvements de l'Azawad (CMA)
+ Haut Conseil pour l'unité de l'Azawad (HCUA)
+ Mouvement national de libération de l'Azawad (MNLA)
+@@ -2094,3 +2097,5 @@ Movement for Democratic Change-Ncube (MDC-N)
+ Movement for Democratic Change-Tsvangirai (MDC-T)
+ Union nationale africaine du Zimbabwe - Front patriotique (ZANU-PF)
+ 
++ 
++
+diff --git a/listes_lexicales/Pays/pays_typo.txt b/listes_lexicales/Pays/pays_typo.txt
+index 7eaa0ef..bf0fce4 100755
+--- a/listes_lexicales/Pays/pays_typo.txt
++++ b/listes_lexicales/Pays/pays_typo.txt
+@@ -604,3 +604,4 @@ Yémen
+ Zambie
+ 
+ Zimbabwe
++
+diff --git a/listes_lexicales/Peuples/peuples_typo.txt b/listes_lexicales/Peuples/peuples_typo.txt
+index 833fc0f..80f8f90 100755
+--- a/listes_lexicales/Peuples/peuples_typo.txt
++++ b/listes_lexicales/Peuples/peuples_typo.txt
+@@ -1634,3 +1634,4 @@ Banyankolés
+ // http://typo.mondediplo.net/messages/9
+ // Zimbabwe
+ 
++
+diff --git a/listes_lexicales/Sujets/sujets_diplo.txt b/listes_lexicales/Sujets/sujets_diplo.txt
+index dd65cea..2a91bbf 100755
+--- a/listes_lexicales/Sujets/sujets_diplo.txt
++++ b/listes_lexicales/Sujets/sujets_diplo.txt
+@@ -57,7 +57,7 @@ Communication
+ Communisme
+ Conflit
+ Conflit afghan
+-Conflit du Cachemire 1949
++Conflit du Cachemire
+ Conflit du Darfour
+ Conflit du Sahara occidental
+ Conflit indo-pakistanais
+@@ -142,10 +142,10 @@ Guérilla
+ Guerre civile
+ Guerre civile libanaise
+ Guerre d'Afghanistan
+-Guerre d'Afghanistan 2001
++Guerre d'Afghanistan
+ Guerre d'Algérie
+ Guerre d'Espagne
+-Guerre d'Irak 2002
++Guerre d'Irak
+ Guerre de Bosnie-Herzégovine
+ Guerre de Suez
+ Guerre des étoiles
+@@ -324,3 +324,4 @@ Urbanisme
+ Ville
+ Violence
+ Zone franche
++

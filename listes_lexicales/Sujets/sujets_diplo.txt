@@ -57,7 +57,7 @@ Communication
 Communisme
 Conflit
 Conflit afghan
-Conflit du Cachemire 1949
+Conflit du Cachemire
 Conflit du Darfour
 Conflit du Sahara occidental
 Conflit indo-pakistanais
@@ -142,10 +142,10 @@ Guérilla
 Guerre civile
 Guerre civile libanaise
 Guerre d'Afghanistan
-Guerre d'Afghanistan 2001
+Guerre d'Afghanistan
 Guerre d'Algérie
 Guerre d'Espagne
-Guerre d'Irak 2002
+Guerre d'Irak
 Guerre de Bosnie-Herzégovine
 Guerre de Suez
 Guerre des étoiles
@@ -324,3 +324,4 @@ Urbanisme
 Ville
 Violence
 Zone franche
+

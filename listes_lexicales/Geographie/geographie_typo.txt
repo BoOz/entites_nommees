@@ -243,7 +243,8 @@ Kadiogo
 
 //Divers
 
-lac Tonlé Sap
+Tonlé Sap 
+esplanade du Wat Botum 
 
 // http://typo.mondediplo.net/messages/150
 // Cameroun
@@ -963,6 +964,7 @@ Tombouctou
 Azawad 
 barrage de Markala 
 Macina 
+zone des «trois frontières»
 
 // http://typo.mondediplo.net/messages/85
 // Malte
@@ -1169,6 +1171,9 @@ le Meinweg
 
 // http://typo.mondediplo.net/messages/58
 // Pérou
+
+// Provinces 
+Condorcanqui
 
 //Divers
 
@@ -1808,6 +1813,8 @@ Proche-Orient
 
  Mer noire
 
+ Monde
+
  Monde arabe
 
  Nord-Vietnam
@@ -1818,7 +1825,7 @@ Proche-Orient
 
  Nyassaland
 
- Océan indien
+ Océan Indien
 
  Pacifique
 
@@ -1829,8 +1836,6 @@ Proche-Orient
  Palestine (Jérusalem)
 
  Palestine mandataire
-
- Papouasie-Nouvelle-Guinée
 
  Pays baltes
 
@@ -1893,3 +1898,4 @@ Proche-Orient
  Yougoslavie
 
  Zaïre
+

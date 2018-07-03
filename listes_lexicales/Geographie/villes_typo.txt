@@ -882,10 +882,14 @@ Thakhek
 // http://typo.mondediplo.net/messages/95
 // Liban
 
-Tripoli
+Bourj Hammoud
+Chnanir
+Naameh
 Saïda
+Tripoli
 Tyr
 Zahlé
+Zouk Mosbeh
 
 // http://typo.mondediplo.net/messages/94
 // Liberia
@@ -975,6 +979,7 @@ Tanjong Pagar
 // Mali
 
 Diabali
+Djenné
 Kati
 Konna
 Koulikoro
@@ -1132,7 +1137,6 @@ Zaria
 // Oman
 
 Salalah
-Sur
 Sohar
 
 // http://typo.mondediplo.net/messages/65
@@ -1441,6 +1445,7 @@ Adré
 Abou Goulem
 Bongor
 Doba
+Faya-Largeau
 Maroua
 Massaguet
 Moundou
@@ -1620,4 +1625,6 @@ Mufulira
 
 // http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
+ 
 

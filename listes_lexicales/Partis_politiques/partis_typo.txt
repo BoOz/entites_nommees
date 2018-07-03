@@ -358,7 +358,7 @@ Union pour le progrès national (Uprona)
 
 Front uni national pour un Cambodge indépendant, neutre, pacifique et coopératif (Funcinpec)
 Parti du peuple cambodgien (PPC)
-Parti du salut national du Cambodge (PSN)
+Parti du sauvetage national du Cambodge (PSNC)
 
 // http://typo.mondediplo.net/messages/150
 // Cameroun
@@ -592,8 +592,6 @@ Wilayat Sinaï
 // http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
 
-Aucun
-
 // http://typo.mondediplo.net/messages/132
 // Équateur
 
@@ -703,7 +701,7 @@ Ligue verte (VIHR)
 
 Debout la France
 Écologistes !
-Europe Ecologie -- Les Verts (EELV)
+Europe Ecologie - Les Verts (EELV)
 En marche !
 Front de gauche (FDG)
 La France insoumise
@@ -974,6 +972,8 @@ Yesh Atid
 Centre démocrate (CD)
 Frères d'Italie - Alliance nationale (FDI-AN)
 « En avant l'Italie ! » (FI)
+ou (Ligue)
+Ligue du Nord
 Mouvement 5 étoiles
 Nouveau Centre droit (NCD)
 Parti démocrate (PD)
@@ -1215,6 +1215,9 @@ Rassemblement pour le Mali (RPM)
 Union pour la République et la démocratie (URD)
 Groupe vigilance démocratique et républicaine (VRD)
 Al-Qaida au Maghreb islamique (AQMI)
+Ansar Dine
+ou (Jamaat Nosrat Al-Islam Wal-Mouslimin)
+Groupe de soutien à l'islam et aux musulmans (GSIM)
 Coordination des mouvements de l'Azawad (CMA)
 Haut Conseil pour l'unité de l'Azawad (HCUA)
 Mouvement national de libération de l'Azawad (MNLA)
@@ -2093,4 +2096,6 @@ Parti uni pour le développement national (UPND)
 Movement for Democratic Change-Ncube (MDC-N)
 Movement for Democratic Change-Tsvangirai (MDC-T)
 Union nationale africaine du Zimbabwe - Front patriotique (ZANU-PF)
+
+ 
 

@@ -51,7 +51,7 @@ Al-Jazira
 Allary Éditions
 Allia
 Alliage
-Alma Editeur 
+Alma éditeur 
 Al-Misri Al-Yawm
 Al-Medina
 Allen Lane Penguin Group
@@ -214,7 +214,7 @@ Chatto & Windus
 Chemed Books
 Chemical & Engineering News
 Chemin de ronde
-Le Cherche Midi
+Cherche Midi
 China Daily
 The Chosun Ilbo
 The Christian Science Monitor
@@ -334,6 +334,7 @@ L'Écho
 Les Échos
 L'École émancipée
 Econometrica
+Economics of Education Review
 The Economic Times
 Economica
 Economic Affairs
@@ -352,20 +353,20 @@ Edicions 62
 EDIF
 Ediouro
 Édisud
-Éditions François Bourin
-Éditions de la Maison des sciences de l’homme
-Éditions de l'Amateur
 Éditions Amsterdam
 Éditions Arkuiris
-Éditions Chronique
-Éditions de la Sorbonne
-Éditions de l'Asymétrie
-Éditions de l'Aube
 Éditions B2
+Éditions Cercle d'Art
+Éditions Chronique
 Éditions CNT-RP
 Éditions de Juillet
 Éditions de la Cité
+Éditions de la Maison des sciences de l’homme
+Éditions de l'Amateur
 Éditions de la Nuit
+Éditions de la Sorbonne
+Éditions de l'Asymétrie
+Éditions de l'Aube
 Éditions de l'Attribut
 Éditions de l'Éclat
 Éditions de l’EHESS
@@ -375,7 +376,6 @@ Ediouro
 Éditions de l'OCDE
 Éditions de l'Olivier
 Éditions de l'Opportun
-Éditions Matériologiques
 Éditions de Minuit
 Éditions d'en bas
 Éditions des Équateurs
@@ -392,7 +392,9 @@ Les Éditions du bout de la ville
 Éditions du Conseil de l'Europe
 Éditions du Croquant
 Éditions du Cygne
+Éditions du détour
 Éditions du huitième jour
+Les Éditions du Jaguar
 Éditions du Larzac
 Éditions du Linteau
 Éditions du Moment
@@ -405,11 +407,13 @@ Les Éditions du bout de la ville
 Éditions du Temps
 Éditions du Toucan
 Éditions du Trésor
+Éditions François Bourin
 Éditions Frat Mat
 Éditions Informpechat
 Éditions Kimé
 Éditions LEP
 Éditions libertaires
+Éditions Matériologiques
 Éditions Mimésis
 Les Éditions Noir sur Blanc
 Éditions N° 1
@@ -419,7 +423,7 @@ Les Éditions Noir sur Blanc
 Éditions Philippe Picquier
 Éditions rue d'Ulm
 Éditions Sillage
-Éditions sociales
+Les Éditions sociales
 Éditions Syllepse
 Éditions Unesco
 Éditions universitaires du Septentrion
@@ -666,6 +670,7 @@ The Lancet [Infectious Diseases]
 Larcier
 Lars Müller Publishers
 Latin Business Chronicle
+Lavauzelle
 Lawrence Erlbaum
 Leduc.s Editions
 La Lenteur
@@ -900,7 +905,7 @@ Perspectives économiques en Afrique
 Peter Hammer Verlag
 Peter Lang
 Les Petits Matins
-Pétra
+Éditions Pétra
 Petroleum Review
 Phaidon
 Phébus
@@ -1042,6 +1047,7 @@ Sakkoulas
 Salt Publishing
 Salvator
 Santé & Travail
+Santé publique
 Saptamâna Financiara
 Saqi
 Schoken
@@ -1070,8 +1076,9 @@ Small Arms Survey
 Soap Éditions
 Société des écrivains
 Social Choice and Individual Values
-Social Science and Medicine
 Socialist Register
+Social Science and Medicine
+Social Science Quarterly
 Sociologie et Société
 Le Soir
 Le Soleil
@@ -1221,6 +1228,7 @@ William Blake & Co
 Women's Press
 Word Policy Journal
 Work and Occupations
+World Development
 World Politics
 W. W. Norton & Company
 
@@ -1979,4 +1987,5 @@ Milliyet
 
 // http://typo.mondediplo.net/messages/9
 // Zimbabwe
+
 
