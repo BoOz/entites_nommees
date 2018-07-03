@@ -1,4 +1,4 @@
-	Texte contient	Type	Entité correcte	
+	Texte contient	Type	Entité correcte	motif
 Atlantique	Organisation du traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 Atlantique	traité de l'Atlantique nord	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	corrections
 OTAN	OTAN	Institutions	Organisation du traité de l'Atlantique nord (OTAN)	acronyme
@@ -13,7 +13,7 @@ Fonds	Fonds monétaire international	Institutions	Fonds monétaire international
 Hassan II du Maroc	Hassan II du Maroc	Personnalités	Hassan II	correction
 Majesté Hassan II	Majesté Hassan II	Personnalités	Hassan II	
 Reagan	Reagan	Personnalités	Ronald Reagan	
-Marx	Marx	Personnalités	Karl Marx	correction
+Marx	Marx	Personnalités	Karl Marx	alias
 Gorbatchev	Gorbatchev	Personnalités	Mikhaïl Gorbatchev	alias
 Mao Tsé-Toung	Mao Tsé-Toung	Personnalités	Mao Zedong	alias
 Mao	Mao	Personnalités	Mao Zedong	alias
@@ -76,7 +76,7 @@ Panthères	Panthères noires	Partis politiques	Panthères noires	correction
 				
 // Accents				
 Equateur	Equateur	Pays	Équateur	correction
-Etats-unis	Etats-unis	Pays	États-unis	correction
+Etats-unis	Etats-unis	Pays	États-Unis	correction
 Abdel xxx Al-Sissi	Al-Sissi	Personnalités	Abdel Fattah Al-Sissi	correction
 Dien Bien Phu	Dien Bien Phu	Geographie	Diên Biên Phu	correction
 				
@@ -171,3 +171,46 @@ Nicolas Ceausescu	Nicolas Ceausescu	Personnalités	Nicolae Ceausescu	correction
 Paz Estenssoro	Paz Estenssoro	Personnalités	Victor Paz Estenssoro	alias
 Pérez de Cuellar	Pérez de Cuellar	Personnalités	Javier Pérez de Cuellar	alias
 Roa Bastos	Roa Bastos	Personnalités	Augusto Roa Bastos	
+Timor-Est	Timor-Est	pays	Timor-Leste	alias
+Rwanda-Urundi				
+Knesseth	Knesseth	Institutions	Knesset	ancien_nom
+Caboul	Caboul	Géographie	Kaboul	ancien_nom
+Stamboul	Stamboul	Géographie	Istanbul	ancien_nom
+Istamboul	Istamboul	Géographie	Istanbul	ancien_nom
+Bélize	Bélize	Géographie	Belize	correction
+Communauté charbon-acier	Communauté charbon-acier	Institutions	Communauté européenne du charbon et de l'acier (CECA)	correction
+Staline	Staline	Personnalités	Joseph Staline	alias
+Malaysia	Malaysia	Géographie	Malaisie	correction
+Bandoeng	Bandoeng	Géographie	Bandung	correction
+Chah	Chah	Personnalités	Chah d'Iran	alias
+Antarctide	Antarctide	Géographie	Antarctique	alias
+Ville lumière	Ville lumière	Géographie	Paris	correction
+Congress of South African	Congress of South African	Organisations	Congrès des syndicates sud-africains	
+State Department	State Department	Institutions	Département d'État	alias
+UFC	UFC	Entreprises	United Fruit Company	alias
+UFC	Que choisir	Organisations	UFC - Que chosir	correction
+Communauté d'Etats indépendants (CEI)	Communauté d'Etats indépendants (CEI)	Organisations	Communauté des États indépendants (CEI)	correction
+Fédération internationale de football association (FIFA)	Fédération internationale de football association (FIFA)	Institutions	Fédération internationale de Football (FIFA)	correction
+Sciences Po Paris	Sciences Po Paris	Institutions	Sciences Po	correction
+Haut-Commissariat pour les réfugiés (HCR)	Haut-Commissariat pour les réfugiés (HCR)	Institutions	Haut Commissariat des Nations unies pour les réfugiés (HCR)	correction
+Haut Commissariat pour les réfugiés (HCR)	Haut Commissariat pour les réfugiés (HCR)	Institutions	Haut Commissariat des Nations unies pour les réfugiés (HCR)	
+traité de non-prolifération nucléaire (TNP)	traité de non-prolifération nucléaire (TNP)	Institutions	Traité de non-prolifération nucléaire (TNP)	correction
+Mouvement des travailleurs ruraux sans terre (MST)	Mouvement des travailleurs ruraux sans terre (MST)	Partis politiques	Mouvement des travailleurs sans terre (MST)	alias
+Mouvement des sans-terre (MST)	Mouvement des sans-terre (MST)	Partis politiques	Mouvement des travailleurs sans terre (MST)	
+Armée de libération du Kosovo (UCK)	Armée de libération du Kosovo (UCK)	Armée	Armée de libération du Kosovo (UÇK)	alias
+Organisation de coopération et de développement économique (OCDE)	Organisation de coopération et de développement économique (OCDE)	Organisations	Organisation de coopération et de développement économiques (OCDE)	correction
+Tribunal pénal international (TPIY)	Tribunal pénal international (TPIY)	Institutions	Tribunal pénal international pour l'ex-Yougoslavie (TPIY)	correction
+Orgnanisation des Nations unies pour l'alimentation et l'agriculture (FAO)	Orgnanisation des Nations unies pour l'alimentation et l'agriculture (FAO)	Organisations	Nations unies pour l'alimentation et l'agriculture (FAO)	alias
+Nations unies pour l'agriculture et l'alimentation (FAO)	Nations unies pour l'agriculture et l'alimentation (FAO)	Organisations	Nations unies pour l'alimentation et l'agriculture (FAO)	correction
+Organisation des pays producteurs de pétrole (OPEP)	Organisation des pays producteurs de pétrole (OPEP)	Organisations	Organisation des pays exportateurs de pétrole (OPEP)	correction
+Conseil économique et social (CES)	Conseil économique et social (CES)	Institutions	Conseil économique et social (Ecosoc)	correction
+Cour internationale de justice de xxx (CIJ)	Cour internationale de justice de xxx (CIJ)	Institutions	Cour internationale de justice (CIJ)	correction
+COP2	COP2	Organisations	COP21	correction
+Aliance Atlantique (OTAN)	Aliance Atlantique (OTAN)	Organisations	Organisation du traité de l'Atlantique nord (OTAN)	alias
+Cédéao	Cédéao	Organisations	Cedeao	alias
+Cyrus Vance (ONU)	Cyrus Vance (ONU)	Personnalités	Cyrus Vance	correction
+Occupy Wall Street (OWS)	Occupy Wall Street (OWS)	Partis politiques	Occuper Wall Street (OWS)	traduction
+Parlement de Strasbourg	Parlement de Strasbourg	Institutions	Parlement européen	alias
+secrétariat général 	secrétariat général de l'ONU	Institutions	Secrétariat général des Nations unies	alias
+secrétariat général 	secrétariat général des Nations unies	Institutions	Secrétariat général des Nations unies	alias
+Traité de non-prolifération (TNP)	Traité de non-prolifération (TNP)	Institutions	Traité de non-prolifération nucléaire (TNP)	alias
