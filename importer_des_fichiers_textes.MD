@@ -44,7 +44,7 @@ chmod +x entites_nommees/spip-cli/sync_data.sh
 spip plugins:activer entites_nommees convertisseur
 ```
 
-## Importer les fichiers textes d'un repertoiee "chroniques" (par exemple)
+## Importer les fichiers textes d'un repertoire "chroniques" (par exemple)
 
 **convertir les fichiers textes en fichiers d'import spip**
 
