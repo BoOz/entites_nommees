@@ -2,14 +2,20 @@
 
 Importer les fichiers textes dans spip puis faire tourner les entités nommées.
 
-## installer spip-cli
+## Installer spip-cli
+
+(la première fois)
+
+https://contrib.spip.net/SPIP-Cli
 
 ## Installer spip sur une base de donnée mysql
 
 **Télécharger spip**
+
 `spip dl`
 
 **Créer une base mysql**
+
 ```
 mysql
 create table entites
