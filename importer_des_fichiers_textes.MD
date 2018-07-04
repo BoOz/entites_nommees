@@ -38,6 +38,8 @@ git clone https://github.com/BoOz/entites_nommees.git
 chmod -R g+rwX entites_nommees
 chmod +x entites_nommees/spip-cli/sync_data.sh
 chmod +x entites_nommees/spip-cli/importertxt.sh
+cd ../
+
 ```
 
 **Activer les plugins**
