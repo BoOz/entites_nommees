@@ -37,6 +37,7 @@ svn co svn://zone.spip.org/spip-zone/_plugins_/convertisseur/trunk convertisseur
 git clone https://github.com/BoOz/entites_nommees.git
 chmod -R g+rwX entites_nommees
 chmod +x entites_nommees/spip-cli/sync_data.sh
+chmod +x entites_nommees/spip-cli/importertxt.sh
 ```
 
 **Activer les plugins**
