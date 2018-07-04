@@ -15,6 +15,7 @@ Forza Italia
 // absents de typo diplo
 Organisation de libération de la Palestine (OLP)
 Al-Qaida
+Al-Qaida dans la péninsule arabique
 Daech
 
 // alias
