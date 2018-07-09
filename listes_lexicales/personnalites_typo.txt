@@ -1763,7 +1763,9 @@ Bachar Al-Assad
 
 Waël Al-Halqi
 
-Abou Bakr Al-Baghdadi
+Abou Bakr Al-Baghdadi 
+
+Ammar Bagdache
 
 Hafez Al-Assad 
 
@@ -2035,4 +2037,3 @@ Emmerson Mnangagwa
 Robert Mugabe
 
  
-

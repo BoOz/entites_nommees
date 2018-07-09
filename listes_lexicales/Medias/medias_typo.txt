@@ -90,6 +90,7 @@ The Arizona Republic
 Arkhê
 Arnaud Franel Éditions
 Arléa
+Art 3 - Plessis Éditions
 Artège
 Asahi Shimbun
 Asbar for Studies Research and Communications
@@ -286,7 +287,6 @@ Défense nationale et sécurité collective
 Defense News
 Delachaux et Niestlé
 Delcourt
-Delga
 Delta Books
 Demi-Lune
 Demopolis
@@ -359,6 +359,7 @@ Ediouro
 Éditions Cercle d'Art
 Éditions Chronique
 Éditions CNT-RP
+Éditions Delga
 Éditions de Juillet
 Éditions de la Cité
 Éditions de la Maison des sciences de l’homme
@@ -1200,6 +1201,7 @@ Verdier
 Verso
 Verticales
 V&R Uni Press
+Via Romana
 Viator Publications
 La Vie économique
 Vientiane Times
@@ -1987,5 +1989,4 @@ Milliyet
 
 // http://typo.mondediplo.net/messages/9
 // Zimbabwe
-
 

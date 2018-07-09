@@ -214,3 +214,26 @@ Parlement de Strasbourg	Parlement de Strasbourg	Institutions	Parlement européen
 secrétariat général 	secrétariat général de l'ONU	Institutions	Secrétariat général des Nations unies	alias
 secrétariat général 	secrétariat général des Nations unies	Institutions	Secrétariat général des Nations unies	alias
 Traité de non-prolifération (TNP)	Traité de non-prolifération (TNP)	Institutions	Traité de non-prolifération nucléaire (TNP)	alias
+Abu Sayyaf	Abu Sayyaf	Partis politiques	Abou Sayyaf 	alias
+Front islamique de salut (FIS)	Front islamique de salut (FIS)	Partis politiques	Front islamique du salut (FIS)	correction
+Mouvement pour la libération de l'Angola (MPLA)	Mouvement pour la libération de l'Angola (MPLA)	Partis politiques	Mouvement populaire de libération de l'Angola (MPLA) 	correction
+Mouvement populaire pour la libération de l'Angola (MPLA) 	Mouvement populaire pour la libération de l'Angola (MPLA) 	Partis politiques	Mouvement populaire de libération de l'Angola (MPLA) 	correction
+Mouvement pour la libération de l'Angola (MPLA) 	Mouvement pour la libération de l'Angola (MPLA) 	Partis politiques	Mouvement populaire de libération de l'Angola (MPLA) 	correction
+Front de libération nationale kanak socialiste (FLNKS) 	Front de libération nationale kanak socialiste (FLNKS) 	Partis politiques	Front de libération nationale kanak et socialiste (FLNKS) 	correction
+Le Congrès national africain (ANC)	Le Congrès national africain (ANC)	Partis politiques	Congrès national africain (ANC)	correction
+Alliance des forces démocratiques pour la libération (AFDL) 	Alliance des forces démocratiques pour la libération (AFDL) 	Partis politiques	Alliance des forces démocratiques pour la libération du Congo-Zaïre (AFDL) 	correction
+Forces armées révolutionnaires de Colombie - Armée du peuple (FARC) 	Forces armées révolutionnaires de Colombie - Armée du peuple (FARC) 	Partis politiques	Forces armées révolutionnaires de Colombie (FARC) 	alias
+Organisation pour la libération de la Palestine (OLP) 	Organisation pour la libération de la Palestine (OLP) 	Partis politiques	Organisation de libération de la Palestine (OLP) 	alias
+Front populaire pour la libération de la Palestine (FPLP) 	Front populaire pour la libération de la Palestine (FPLP) 	Partis politiques	Front populaire de libération de la Palestine (FPLP) 	alias
+Parti social-démocrate brésilien (PSDB)	Parti social-démocrate brésilien (PSDB)	Partis politiques	Parti de la social-démocratie brésilienne (PSDB)	alias
+Front démocratique pour la libération de la Palestine (FDLP) 	Front démocratique pour la libération de la Palestine (FDLP) 	Partis politiques	Front démocratique de libération de la Palestine (FDLP) 	alias
+Le Parti communiste cubain (PCC) 	Le Parti communiste cubain (PCC) 	Partis politiques	Parti communiste cubain (PCC) 	correction
+Parti action nationale (PAN) 	Parti action nationale (PAN) 	Partis politiques	Parti d'action nationale (PAN) 	correction
+La politique agricole commune (PAC) 	La politique agricole commune (PAC) 	Partis politiques	Politique agricole commune (PAC) 	correction
+Groupes islamiques armés (GIA) 	Groupes islamiques armés (GIA) 	Partis politiques	groupe islamique armé	correction
+Groupes islamistes armés (GIA) 	Groupes islamistes armés (GIA) 	Partis politiques	groupe islamique armé	correction
+Grande Bretagne	Grande Bretagne	Géographie	Grande-Bretagne	correction
+é (SEL)	é (SEL)	Partis politiques	Gauche, écologie et liberté (SEL)	correction
+Al-Qaida dans la xxx (AQPA) 	Al-Qaida dans la xxx (AQPA) 	Partis politiques	Al-Qaida dans la péninsule arabique (AQPA) 	correction
+Al-Qaida en Irak	Al-Qaida en Irak	Partis politiques	Al-Qaida	
+Colombie (FARC)	Colombie (FARC)	Partis politiques	Forces armées révolutionnaires de Colombie (FARC) 	correction
