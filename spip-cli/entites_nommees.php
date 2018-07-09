@@ -278,7 +278,7 @@ class entites_nommees extends Command {
 					$output->writeln("<info>Générer le fichier txt du décompte des principales entités</info>");
 					// Générer le fichier txt du décompte des principales entites
 					
-					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)','Géographie (auto)')  " . 
+					$references = sql_allfetsel("entite, type_entite, count(id_entite) nb","entites_nommees","type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Institutions (auto)','Géographie (auto)')  " . 
 					"and entite not like '%auteur:%' and entite not like '%lieu:%' " .
 					"and entite not in ('République','Nord','Sud','Est','Ouest','AREA SHAPE','RAPPORT ANNUEL')" .
 					"" ,"entite, type_entite","nb desc","", "nb>9");
