@@ -100,7 +100,6 @@ Asia Pacific Viewpoint
 Asia Times Online
 L'Association
 L'Atalante
-L'Atelier
 Atelier des Cahiers
 Atelier du Gué
 Ateliers Henry Dougier
@@ -356,11 +355,12 @@ Ediouro
 Éditions Amsterdam
 Éditions Arkuiris
 Éditions B2
+Éditions Cairn
 Éditions Cercle d'Art
 Éditions Chronique
 Éditions CNT-RP
-Éditions Delga
 Éditions de Juillet
+Éditions de l'Atelier
 Éditions de la Cité
 Éditions de la Maison des sciences de l’homme
 Éditions de l'Amateur
@@ -372,6 +372,7 @@ Ediouro
 Éditions de l'Éclat
 Éditions de l’EHESS
 Éditions de l'Épervier
+Éditions Delga
 Éditions de l'Imprimeur
 Éditions de l'Institut des Amériques
 Éditions de l'OCDE
@@ -560,6 +561,7 @@ Henry Holt
 Hermann
 Hermé
 Hermès-Lavoisier
+L’Herne
 Hérodote
 Héros-Limite
 Het Belang van Limburg
@@ -676,12 +678,12 @@ Lawrence Erlbaum
 Leduc.s Editions
 La Lenteur
 Lessius
+La Lettre de l'océan Indien
 La Lettre du continent
 L’Harmattan
 La Librairie orientale
 La Libre Belgique
 El Litoral
-La Lettre de l'océan Indien
 Liaisons directes
 Liana Levi
 Lianhe Zaobao
@@ -698,6 +700,7 @@ Lignes
 Lignes de repères
 Lignes et Manifestes
 Le Livre de poche
+La Louve éditions
 Luc Pire
 Lux
 Lynne Rienner Publishers
@@ -934,6 +937,7 @@ Population & Avenir
 Population & Sociétés
 Pour
 Pour la Palestine
+Prairial
 Les Prairies ordinaires
 Premières Pierres
 Premier Parallèle
@@ -948,6 +952,7 @@ Presses de l’Inalco
 Presses de l'Université Laval
 Presses de l'université Paris-Sorbonne
 Presses de Sciences Po
+Presses du Châtelet
 Les Presses du réel
 Presses universitaires de Bordeaux
 Presses universitaires François-Rabelais
@@ -1051,6 +1056,7 @@ Santé & Travail
 Santé publique
 Saptamâna Financiara
 Saqi
+Schirmer/Mosel
 Schoken
 Science
 Sciences et Avenir
@@ -1085,12 +1091,14 @@ Le Soir
 Le Soleil
 Solidarité Guatemala
 Les Solitaires intempestifs
+Sonatine Éditions
 Soteca
 Le Souffle d'or
 South China Morning Post
  South Dakota Law Review
 South End Press
 Der Spiegel
+Springer
 La Stampa
 Stanford University Press
 Steidl

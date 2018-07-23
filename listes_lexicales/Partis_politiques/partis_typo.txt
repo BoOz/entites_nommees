@@ -1216,7 +1216,6 @@ Union pour la République et la démocratie (URD)
 Groupe vigilance démocratique et républicaine (VRD)
 Al-Qaida au Maghreb islamique (AQMI)
 Ansar Dine
-ou (Jamaat Nosrat Al-Islam Wal-Mouslimin)
 Groupe de soutien à l'islam et aux musulmans (GSIM)
 Coordination des mouvements de l'Azawad (CMA)
 Haut Conseil pour l'unité de l'Azawad (HCUA)
@@ -1341,7 +1340,7 @@ Mouvement national de résistance (MNR)
 
 Democratic Turnhall Alliance (DTA)
 Rassemblement pour la démocratie et le progrès (RDP)
-Organisation de libération du Sud-Ouest africain (Swapo)
+Organisation du peuple du Sud-Ouest africain (Swapo)
 
 // http://typo.mondediplo.net/messages/73
 // Nauru
@@ -1980,12 +1979,16 @@ Congrès national unifié (UNC)
 // http://typo.mondediplo.net/messages/20
 // Tunisie
 
+Afek Tounès
 Congrès pour la République (CPR)
-« renaissance » (Ennahda)
+Ennahda
+Ettajdid
 Forum démocratique pour le travail et les libertés (Ettakatol)
 Front populaire
 Nidaa Tounès
 Parti de l'alliance démocratique (PAD)
+Parti des travailleurs
+Mouvement des patriotes démocrates (Watad)
 
 // http://typo.mondediplo.net/messages/1107
 // Turkménistan

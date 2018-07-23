@@ -371,6 +371,8 @@ Thamanya
 // http://typo.mondediplo.net/messages/158
 // Bolivie
 
+Tiahuanaco
+
 // http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
@@ -1481,10 +1483,26 @@ Sokodé
 // http://typo.mondediplo.net/messages/20
 // Tunisie
 
-Sfax
-Gabès
-Sousse
 Bizerte
+El-Diem
+Gabès
+Gafsa
+Kairouan
+Kasserine
+Kebili
+Kélibia
+La Goulette
+La Marsa
+Menzel Bouzaïane
+Metlaoui
+Monastir
+Redeyef
+Sakiet Sidi Youssef
+Sbeïtla
+Sfax
+Sidi Bou Saïd
+Sousse
+Zarzia
 
 // http://typo.mondediplo.net/messages/1107
 // Turkménistan

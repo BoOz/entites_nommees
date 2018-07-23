@@ -197,7 +197,7 @@ Haut Commissariat pour les réfugiés (HCR)	Haut Commissariat pour les réfugié
 traité de non-prolifération nucléaire (TNP)	traité de non-prolifération nucléaire (TNP)	Institutions	Traité de non-prolifération nucléaire (TNP)	correction
 Mouvement des travailleurs ruraux sans terre (MST)	Mouvement des travailleurs ruraux sans terre (MST)	Partis politiques	Mouvement des travailleurs sans terre (MST)	alias
 Mouvement des sans-terre (MST)	Mouvement des sans-terre (MST)	Partis politiques	Mouvement des travailleurs sans terre (MST)	
-Armée de libération du Kosovo (UCK)	Armée de libération du Kosovo (UCK)	Armée	Armée de libération du Kosovo (UÇK)	alias
+Armée de libération du Kosovo (UCK)	Armée de libération du Kosovo (UCK)	Partis politiques	Armée de libération du Kosovo (UÇK)	alias
 Organisation de coopération et de développement économique (OCDE)	Organisation de coopération et de développement économique (OCDE)	Organisations	Organisation de coopération et de développement économiques (OCDE)	correction
 Tribunal pénal international (TPIY)	Tribunal pénal international (TPIY)	Institutions	Tribunal pénal international pour l'ex-Yougoslavie (TPIY)	correction
 Orgnanisation des Nations unies pour l'alimentation et l'agriculture (FAO)	Orgnanisation des Nations unies pour l'alimentation et l'agriculture (FAO)	Organisations	Nations unies pour l'alimentation et l'agriculture (FAO)	alias

@@ -200,6 +200,11 @@ Tasang
 // http://typo.mondediplo.net/messages/158
 // Bolivie
 
+//Divers
+
+cerro Rico 
+Potosí 
+
 // http://typo.mondediplo.net/messages/157
 // Bosnie-Herzégovine
 
@@ -309,6 +314,7 @@ Heilongjiang
 Hubei
 Hunan
 Zhejiang 
+Mongolie-Intérieure
 Xinjiang
 vallée de la Shaksgam  Aksai Chin
 
@@ -1354,6 +1360,7 @@ Volga
 détroit de Béring
  mer de Béring
 Baïkal-Amour 
+Iamal 
 
 // http://typo.mondediplo.net/messages/48
 // Rwanda
@@ -1561,6 +1568,11 @@ Tibar
 
 // http://typo.mondediplo.net/messages/20
 // Tunisie
+
+//Divers
+ :_  le cap Bon
+ Djerba 
+ Kerkennah 
 
 // http://typo.mondediplo.net/messages/1107
 // Turkménistan
