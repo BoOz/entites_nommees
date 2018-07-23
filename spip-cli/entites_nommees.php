@@ -275,6 +275,9 @@ class entites_nommees extends Command {
 						// sql_query($up);
 					}
 					
+					// retour des accents sur les types d'entités
+					sql_query("update entites_nommees set type_entite='Géographie' where type_entite='Geographie'");
+					
 					$output->writeln("<info>Générer le fichier txt du décompte des principales entités</info>");
 					// Générer le fichier txt du décompte des principales entites
 					
@@ -297,6 +300,7 @@ class entites_nommees extends Command {
 						}
 						//sql_query("update entites_nommees set statut='publie' where entite=" . _q($reference['entite']));
 					}
+					
 					if(!is_dir('plugins/entites_nommees/stats'))
 						mkdir('plugins/entites_nommees/stats');
 					ecrire_fichier('plugins/entites_nommees/stats/decompte_references.txt', "Entite	type	poids\n" . $decompte_entites);
