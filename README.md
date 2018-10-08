@@ -98,4 +98,8 @@ https://github.com/BoOz/entites_nommees/blob/master/mots_courants.php
 
 
 
+## Projets proches
+
+https://www.textrazor.com/demo
+
 
