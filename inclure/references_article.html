@@ -1,0 +1,13 @@
+[(#REM) Références liées à un article ]
+[(#SET{req,#VAL{"select entite, count(entite) nb from entites_nommees where statut='publie' and type_entite not in('Lieux de publication','Auteurs','rien','Fonctions','INDETERMINE', 'Sources','Medias','Journaux','Pays','Sujets','Institutions (auto)') and id_article=LARTICLE group by entite order by nb desc"}|replace{LARTICLE,#ENV{id_article}}})]
+<B_references>
+<h3>Références</h3>
+	<div class="tags decale">
+	<BOUCLE_references(DATA)
+		{source sql, #GET{req}}
+		{pagination 10}
+	>
+		<a class="mots [(#TYPE_ENTITE|translitteration|replace{ })]" href="/references/[(#ENTITE|rawurlencode)]">[(#ENTITE|ucfirst)]</a>
+	</BOUCLE_references>
+	</div>
+</B_references>
