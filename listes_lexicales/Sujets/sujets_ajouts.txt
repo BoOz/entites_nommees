@@ -101,6 +101,7 @@ LuxLeaks
 
 // mouvements sociaux
 Nuit debout
+« gilets jaunes »
 
 // Santé
 VIH
