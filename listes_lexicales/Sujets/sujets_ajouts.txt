@@ -100,10 +100,6 @@ Panama papers
 SwissLeaks 
 LuxLeaks 
 
-// mouvements sociaux
-Nuit debout
-gilets jaunes
-
 // Santé
 VIH
 
