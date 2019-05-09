@@ -41,8 +41,16 @@ On peut ensuite voir les entités nommées sur la page `/?page=explorer`.
 ```
 spip entites // pour indexer 1 000 articles.
 spip entites -m oui // pour optimiser après une indexation
+spip entites -s "gilets jaunes" // réindexer les articles dont le texte contient "gilets jaunes"
 spip entites -r oui // pour recommencer à zéro l'indexation
 ```
+
+**Voir les entites trouvées pour un article en particulier (debug)**
+`?page=extraire_entites&id_article=59646`
+
+**Calculer les entités dans un `fichier.txt` en ligne de commandes**
+`spip entites fichier.txt`
+
 
 # Installation dans SPIP
 
