@@ -41,6 +41,13 @@ class entites_nommees extends Command {
 				'non'
 			)
 			->addOption(
+				'reindex',
+				's',
+				InputOption::VALUE_OPTIONAL,
+				'Réindexer les articles dont le texte contient une chaine passée en option. spip entites -s "gilets jaunes"',
+				'non'
+			)
+			->addOption(
 				'type',
 				't',
 				InputOption::VALUE_OPTIONAL,
@@ -78,6 +85,7 @@ class entites_nommees extends Command {
 		$restart = $input->getOption('restart') ;
 		$requalifier = $input->getOption('maj') ;
 		$type_source = $input->getOption('type') ;
+		$reindexer = $input->getOption('reindex') ;
 		
 		include_spip("base/abstract_sql");
 		include_spip("entites_fonctions");
@@ -381,12 +389,14 @@ class entites_nommees extends Command {
 				foreach($articles_sql as $a)
 					$articles_faits[] = $a['id_article'] ;
 				
-				
 				// articles
 				$requete = "select id_article from spip_articles where statut !='prepa' and id_secteur IN (" . _SECTEUR_ENTITES . ") and id_article not in(" . implode(",", $articles_faits) . ") order by date_redac desc limit 0,1000" ;
 				// syndic articles
 				if($type_source == "spip_syndic_articles")
 					$requete = "select id_syndic_article id_article from spip_syndic_articles where id_syndic_article not in(" . implode(",", $articles_faits) . ") order by date desc limit 0,1000" ;
+				
+				if($reindexer !="non" and strlen($reindexer) > 1)
+					$requete = "select id_article from spip_articles where statut !='prepa' and id_secteur IN (" . _SECTEUR_ENTITES . ") and texte like '%". $reindexer ."%' order by date_redac desc limit 0,1000" ;
 				
 				//var_dump($requete);
 				//die();
