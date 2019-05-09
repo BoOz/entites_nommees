@@ -2,3 +2,6 @@
 .DS_Store
 *.config
 stats/
+listes_lexicales/diff.txt
+diff-recaler.txt
+
