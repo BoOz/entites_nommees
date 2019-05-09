@@ -88,8 +88,10 @@ Les Arènes
 Argumenty i fakty
 The Arizona Republic
 Arkhê
-Arnaud Franel Éditions
 Arléa
+Armand Colin
+Arnaud Bizalion Éditeur
+Arnaud Franel Éditions
 Art 3 - Plessis Éditions
 Artège
 Asahi Shimbun
@@ -100,6 +102,7 @@ Asia Pacific Viewpoint
 Asia Times Online
 L'Association
 L'Atalante
+L'Atelier contemporain
 Atelier des Cahiers
 Atelier du Gué
 Ateliers Henry Dougier
@@ -181,7 +184,6 @@ Les Cahiers du journalisme
 Les Cahiers du SLF
 Calmann-Lévy
 Cambourakis
-Cambridge University Press
 Camion Blanc
 Campus Fachbuch
 Canongate
@@ -200,7 +202,6 @@ Center for Strategic and International Studies
 Central University Press
 Century Foundation
 Cérès Éditions
-Cerf
 Cerveau & Psycho
 Cetim
 CFDT Productions
@@ -214,6 +215,7 @@ Chatto & Windus
 Chemed Books
 Chemical & Engineering News
 Chemin de ronde
+Chemosphere
 Cherche Midi
 China Daily
 The Chosun Ilbo
@@ -386,9 +388,11 @@ Ediouro
 Éditions des Syrtes
 Les Éditions du bout de la ville
 Éditions du Caïman
+Éditions du Canoë
 Éditions du Centre d'histoire du travail
 Éditions du centre Paul-Hymans
 Éditions du Cercle de la librairie
+Éditions du Cerf
 Éditions du Cerisier
 Éditions du Chêne
 Éditions du Conseil de l'Europe
@@ -402,6 +406,7 @@ Les Éditions du Jaguar
 Éditions du Moment
 Éditions du Monde libertaire
 Éditions du Panama
+Éditions du Ricochet
 Éditions du Rocher
 Éditions du Rouergue
 Éditions du Sandre
@@ -415,6 +420,7 @@ Les Éditions du Jaguar
 Éditions Kimé
 Éditions LEP
 Éditions libertaires
+Les Éditions Martin de Halleux
 Éditions Matériologiques
 Éditions Mimésis
 Les Éditions Noir sur Blanc
@@ -450,6 +456,7 @@ L'Encyclopédie des nuisances
 Enrick B. Éditions
 En toutes lettres
 Entremonde
+Environmental Health Perspectives
 Environmental Science and Technology
 Érès
 Erick Bonnier
@@ -470,6 +477,7 @@ Les Études du CERI
 Eurabe-CADH
 Eurasia Daily Monitor
 Eurekah-Landes Bioscience
+ European Law Journal
 Eurotopia
 Evenimentul Zilei
 Everat
@@ -514,6 +522,7 @@ The Free Press
 Frontline
 Futuribles
 Futuropolis
+FYP éditions
 
 
 Gaeso
@@ -553,7 +562,7 @@ Harvard University Press
 Harper's
 Hart Publishing
 Haymarket Books
-HB Editions
+HB Éditions
 Headline Book Publishing
 L'Hebdo
 Hebrew Publishing House
@@ -600,7 +609,7 @@ The Independent
 Les Indes savantes
 Indian Research Press
 Indiana University Press
-Infolio Editions
+Infolio Éditions
 Infolio
 InfoSud 
 Infoworld
@@ -653,7 +662,7 @@ Karthala
 Keter-Books
 Khiasma Sud
 KITLV Press
-Klanba Editions
+Klanba Éditions
 Klincksieck
 Knopf
 Knopf
@@ -675,7 +684,7 @@ Lars Müller Publishers
 Latin Business Chronicle
 Lavauzelle
 Lawrence Erlbaum
-Leduc.s Editions
+Leduc.s Éditions
 La Lenteur
 Lessius
 La Lettre de l'océan Indien
@@ -723,7 +732,7 @@ Mardaga
 Mare & Martin
 Maren Sell
 Mareuil
-Marines Editions
+Marines Éditions
 La Martinière
 Martin Secker
 Matériaux pour l'histoire de notre temps
@@ -763,6 +772,7 @@ Mississippi Business Journal
 The MIT Press
 The MIT Press
 Mnémos
+Le Monde à l'envers
 Le Monde libertaire
 Monde nouveau / Afrique nouvelle
 The Monitor
@@ -798,7 +808,7 @@ Natsiia i Derjava
 Nature
 Nature Communications Londres
 Nature Genetics
-Nature et Progrès Editions
+Nature et Progrès Éditions
 Neue Rheinische Zeitung
 Nevicata
 Newsweek
@@ -865,7 +875,7 @@ Oxford University Press
 
 
 La Padania
-Page deux
+Page 2
 Página 12
 Página 13
 Pagnerre
@@ -895,6 +905,7 @@ Peeters
 Penguin Books
 Pennsylvania State University Press
 La Pensée sauvage
+Peperoni Books
 Pepper
 Perfil
 Perigee Books
@@ -959,6 +970,7 @@ Presses universitaires François-Rabelais
 Presses universitaires de France
 Presses universitaires de Laval
 Presses universitaires du Mirail
+Les Presses universitaires de Montréal
 Presses universitaires du Septentrion
 Princeton Architectural Press
 Privat
@@ -1025,7 +1037,7 @@ Revue politique et parlementaire
 Revue suisse
 Riad El-Rayyes Books
 Rivages
-Riveneuve éditions
+Riveneuve
 The Riverside Press
 Rizzoli
 Robert Laffont
@@ -1091,6 +1103,8 @@ Le Soir
 Le Soleil
 Solidarité Guatemala
 Les Solitaires intempestifs
+Solhanets
+Somogy éditions d'art
 Sonatine Éditions
 Soteca
 Le Souffle d'or
@@ -1121,7 +1135,7 @@ Tahin Party
 Tallandier
 Talmart
 Talonbooks
-Tarik Editions
+Tarik Éditions
 Tatamis
 Taz
 Le Temps
@@ -1213,7 +1227,7 @@ Via Romana
 Viator Publications
 La Vie économique
 Vientiane Times
-Viking Press
+Viking
 Village mondial
 Villard Books
 La ville brûle
@@ -1252,6 +1266,7 @@ XXI
 Yale Law Journal
 Yale University Press
 Yediot Aharonot
+Yellow Now
 Ynet
 Yoda Press
 Yomiuri Shimbun
@@ -1313,6 +1328,9 @@ Asharq Al-Aswat
 
 // http://typo.mondediplo.net/messages/172
 // Arménie
+
+Haïkakan jamanak
+Oraghir
 
 // http://typo.mondediplo.net/messages/171
 // Australie
@@ -1451,6 +1469,7 @@ Granma
 // http://typo.mondediplo.net/messages/137
 // Danemark
 
+Arbejderen
 Jyllands-Posten
 
 // http://typo.mondediplo.net/messages/136
@@ -1738,6 +1757,8 @@ Univision
 // http://typo.mondediplo.net/messages/72
 // Nicaragua
 
+Envío
+
 // http://typo.mondediplo.net/messages/71
 // Niger
 
@@ -1749,6 +1770,8 @@ Univision
 
 // http://typo.mondediplo.net/messages/1061
 // Nouvelle-Calédonie
+
+Les Nouvelles calédoniennes
 
 // http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
@@ -1931,6 +1954,9 @@ Mladina  
 // http://typo.mondediplo.net/messages/1103
 // Taïwan
 
+Business Weekly
+CommonWealth
+
 // http://typo.mondediplo.net/messages/26
 // Tanzanie
 
@@ -1955,6 +1981,11 @@ Mladina  
 // http://typo.mondediplo.net/messages/20
 // Tunisie
 
+Al-Maarifa
+Echaab
+Errai
+Journal officiel de la République tunisienne
+
 // http://typo.mondediplo.net/messages/1107
 // Turkménistan
 
@@ -1970,6 +2001,9 @@ Milliyet
 
 // http://typo.mondediplo.net/messages/17
 // Ukraine
+
+Novy Kanal
+la presse quotidienne est toujours majoritairement russophone
 
 // http://typo.mondediplo.net/messages/1065
 // Union soviétique

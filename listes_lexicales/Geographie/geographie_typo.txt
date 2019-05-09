@@ -8,7 +8,7 @@
 //Divers
 
 province de Helmand
-Herat
+Mes Aynak 
 
 // http://typo.mondediplo.net/messages/181
 // Afrique du Sud
@@ -42,7 +42,6 @@ la casbah d'Alger
 Kabylie
  Petite Kabylie
  Grande Kabylie
-Sidi Bel Abbès
 
 // http://typo.mondediplo.net/messages/178
 // Allemagne
@@ -108,6 +107,7 @@ Territoire de la capitale australienne
 Darwin
  Pine Gap 
 terre d'Arnhem 
+île Christmas
 
 // http://typo.mondediplo.net/messages/170
 // Autriche
@@ -130,6 +130,10 @@ terre d'Arnhem
 
 // http://typo.mondediplo.net/messages/166
 // Bangladesh
+
+//Divers
+
+golfe du Bengale
 
 // http://typo.mondediplo.net/messages/165
 // Barbade
@@ -187,6 +191,7 @@ Rangoun
 Pyinmana 
 Salween
  Irrawaddy 
+Shwe 
 « région spéciale » n° 1 
 le Kokang 
 Ramree 
@@ -268,9 +273,9 @@ Ouest
 //Divers
 
 péninsule de Bakassi 
+mont Cameroun 
 barrage de Lom Pangar
- port et centrale à gaz de Kribi
- centrale hydroélectrique de Mem'vele
+port et centrale à gaz de Kribi
 
 // http://typo.mondediplo.net/messages/149
 // Canada
@@ -379,7 +384,9 @@ Cavally
 
 //Divers
 
+île de Brač 
 péninsule d'Istrie
+plage de Zlatni Rat
 
 // http://typo.mondediplo.net/messages/138
 // Cuba
@@ -443,6 +450,7 @@ vallée du Nil
 //Divers
  
 Dahlak 
+Contentieux: contentieux de frontière avec Djibouti à propos du Ras Doumeira et de l'île Jazira Doumeira 
 
 // http://typo.mondediplo.net/messages/130
 // Espagne
@@ -503,6 +511,7 @@ Samoa
 
 //Divers
 
+l'Éthiopie enclavée a accès à la mer par Port-Soudan  et par Djibouti
 barrage de la Renaissance du Nil Bleu
 Bole 
 
@@ -546,12 +555,13 @@ Vallée de la Kymi
 
 //Divers
 
-Front de Seine 
 hôpital de la Croix-Rouge
+Front de Seine 
 la Goutte-d'Or
-le Val-Fourré
+Plaine Commune
 Roissy - Charles-de-Gaulle 
 Sophia Antipolis
+le Val-Fourré
 
 // http://typo.mondediplo.net/messages/122
 // Gabon
@@ -559,6 +569,10 @@ Sophia Antipolis
 //Divers
 
 Bélinga
+ Franceville
+ Mouila
+ Oyem
+ Port-Gentil
 
 // http://typo.mondediplo.net/messages/121
 // Gambie
@@ -834,6 +848,11 @@ Baïkonour
 // http://typo.mondediplo.net/messages/100
 // Kenya
 
+//Divers
+
+_Villes_ : Lamu
+ Mombasa
+
 // http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
@@ -1009,9 +1028,9 @@ atoll de Majuro
 
 //Divers
 
-Port Louis
+Port-Louis
  Rodrigues
- Saint Brandon
+ Saint-Brandon
  Agaléga 
 Aapravasi Ghat 
 morne Brabant 
@@ -1081,6 +1100,8 @@ lac Nyassa
 État musulman de Katsina  
  État de Cross River
 delta du Niger 
+Niger
+golfe de Guinée
 
 // http://typo.mondediplo.net/messages/69
 // Norvège
@@ -1130,7 +1151,7 @@ Khyber Pakhtunkhwa
 Baloutchistan
 territoire fédéral d'Islamabad
 territoires tribaux fédéraux
-Azad Jammu--Cachemire
+Azad Cachemire
 Gilgit-Baltistan
 
 //Divers
@@ -1167,6 +1188,8 @@ Hela
 //Divers
 
 barrage binational d'Itaipu 
+département Central
+aquifère Patiño
 
 // http://typo.mondediplo.net/messages/59
 // Pays-Bas
@@ -1228,9 +1251,10 @@ mines Budryk
 
 //Divers
 
-Al-Ohdeid 
+Al-Oudeid 
 Burgan 
 Dukhan 
+_l'émirat fait approximativement la taille de l'Île-de-France_ 
 
 // http://typo.mondediplo.net/messages/147
 // République centrafricaine
@@ -1451,7 +1475,6 @@ Voïvodine
 
 détroit de Bab Al-Mandeb 
 Sool 
-État semi-autonome de Puntland
 
 // http://typo.mondediplo.net/messages/32
 // Soudan
@@ -1509,7 +1532,15 @@ Alep-Est
 Chayrat 
 Ghouta  
 Qalamoun  
-Rojava  
+ Rojava  
+Fédération démocratique de la Syrie du Nord
+trois cantons : Afrin
+ Kobané et Cezire
+villes : Aïn Issa 
+ Kamechliyé 
+ Kobané
+ Manbidj
+ Tell Abyad 
 
 // http://typo.mondediplo.net/messages/1102
 // Tadjikistan
@@ -1522,6 +1553,7 @@ Rojava
 détroit de Formose 
 détroit de Taïwan
 Kaohsiung 
+Taïwan est formée de l'île principale et d'îles plus petites qui se trouvent sur la côte chinoise.
 
 // http://typo.mondediplo.net/messages/26
 // Tanzanie
@@ -1643,8 +1675,6 @@ région Occidente
 
 //Divers
 
-Ho Chi Minh-Ville 
- Ho Chi Minh
 
 // http://typo.mondediplo.net/messages/996
 // Yémen
@@ -1659,6 +1689,10 @@ Kamaran  
 détroit de Bab Al-Mandeb 
 Chabwa 
 le Jawf 
+lignes Hamza 
+ Philby 
+ Violet 
+le « quart vide » 
 
 // http://typo.mondediplo.net/messages/10
 // Zambie

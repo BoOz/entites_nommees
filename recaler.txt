@@ -71,7 +71,7 @@ Black Panthers	Black Panthers	Partis politiques	Panthères noires	alias
 				
 // Choses connues				
 Jeux	Jeux olympiques	a_ajouter	Jeux olympiques	correction
-Déclaration des droits de l'homme	Déclaration des droits de l'homme	institutions	Déclaration universelle des droits de l'homme	correction
+Déclaration des droits de l'homme	Déclaration des droits de l'homme	Institutions	Déclaration universelle des droits de l'homme	correction
 Panthères	Panthères noires	Partis politiques	Panthères noires	correction
 				
 // Accents				
@@ -237,3 +237,15 @@ Grande Bretagne	Grande Bretagne	Géographie	Grande-Bretagne	correction
 Al-Qaida dans la xxx (AQPA) 	Al-Qaida dans la xxx (AQPA) 	Partis politiques	Al-Qaida dans la péninsule arabique (AQPA) 	correction
 Al-Qaida en Irak	Al-Qaida en Irak	Partis politiques	Al-Qaida	
 Colombie (FARC)	Colombie (FARC)	Partis politiques	Forces armées révolutionnaires de Colombie (FARC) 	correction
+Kirghizie	Kirghizie	Géographie	Kirghizstan	alias
+Institut de technologie du Massachusetts	Institut de technologie du Massachusetts	Institutions	Massachusetts Institute of Technology (MIT)	alias
+Vieux Continent	Vieux Continent	Géographie	Europe	alias
+vieux continent	vieux continent	Géographie	Europe	alias
+Mai 68	Mai 68	Sujets		alias
+mai 68	mai 68	Sujets		alias
+Diego-Garcia	Diego-Garcia	Géographie	Diego Garcia	correction
+Öçalan	Öçalan	Personnalités	Öcalan	correction
+Ocalan	Ocalan	Personnalités	Öcalan	correction
+entité sioniste	entité sioniste	Géographie	Israël	alias
+Nouveaux Chiens	Nouveaux Chiens	a_ajouter	Les Nouveaux Chiens de garde	correction
+Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II	alias

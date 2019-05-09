@@ -7,6 +7,7 @@
 
 Coalition nationale d'Afghanistan (CNA)
 Front national uni (FNU)
+Hezb-e-Wahdat
 Parti pour la vérité et la justice (PVJ)
 « le peuple » (Khalq)
 « le drapeau » (Parcham)
@@ -68,6 +69,7 @@ Groupe salafiste pour la prédication et le combat (GSPC)
 // Allemagne
 
 Alternative pour l'Allemagne (AfD)
+Debout (Aufstehen)
 Alliance 90 - Les Verts (Bündis 90 - Die Grünen)
 Union chrétienne-démocrate (CDU)
 Union chrétienne-sociale (CSU)
@@ -131,6 +133,8 @@ Héritage
 Parti républicain d'Arménie (HHK)
 Parti communiste arménien (HKK)
 État de droit (OEK)
+Autres organisations
+Aïlentrank
 
 // http://typo.mondediplo.net/messages/171
 // Australie
@@ -303,7 +307,8 @@ Parapluie pour le changement démocratique (UDC)
 
 Les Démocrates (DEM)
 Parti démocratique travailliste (PDT)
-Parti du mouvement démocratique brésilien (PMDB)
+Mouvement démocratique brésilien  (depuis 2017 ; ex- (MDB)
+Parti du mouvement démocratique brésilien) (PMDB)
 Parti progressiste (PP)
 Parti populaire socialiste (PPS)
 Parti de la République (PR)
@@ -311,8 +316,10 @@ Parti des travailleurs (PT)
 Parti travailliste brésilien (PTB)
 Parti socialiste brésilien (PSB)
 Parti de la social-démocratie brésilienne (PSDB)
+Parti social-libéral (PSL)
 Parti socialisme et liberté (PSOL)
 Parti Vert (PV)
+Réseau durable (Rede)
 
 // http://typo.mondediplo.net/messages/154
 // Brunei
@@ -338,6 +345,7 @@ Bloc réformiste (RB)
 // Burkina Faso
 
 Congrès pour la démocratie et le progrès (CDP)
+Le Balai citoyen
 Mouvement populaire pour le progrès (MPP)
 Union pour le progrès et le changement (UPC)
 
@@ -363,6 +371,7 @@ Parti du sauvetage national du Cambodge (PSNC)
 // http://typo.mondediplo.net/messages/150
 // Cameroun
 
+Mouvement pour la renaissance du Cameroun (MRC)
 Rassemblement démocratique du peuple camerounais (RDPC)
 Front social-démocrate (SDF)
 
@@ -467,8 +476,11 @@ Parti du travail de Corée (PTC)
 // Corée du Sud
 
 Parti de la justice (PJ)
-Minju (PMC)
-Parti de la nouvelle frontière (PNF)
+PMC
+Minju
+ex- (Parti de la liberté
+PNF
+Parti de la nouvelle frontière ; ex-Grand Parti national) (Saenuri)
 Parti du peuple (PP)
 Parti progressiste unifié (PPU)
 
@@ -662,15 +674,16 @@ Tea Party
 // Éthiopie
 
 Front démocratique révolutionnaire du peuple éthiopien (FDRPE)
-Ahmara National Democratic Movement (ANDM)
 Front de libération du peuple du Tigré (FLPT)
-Organisation démocratique du peuple oromo (OPDO)
-Mouvement démocratique des peuples du sud de l'Éthiopie (SEPDM)
+Organisation démocratique du peuple oromo (ODPO)
+Mouvement national démocratique amhara (MNDA)
+Mouvement démocratique des peuples du sud de l'Éthiopie (MDPSE)
 Parti national démocratique afar (ANDP)
 Somali People's Democratic Party (SPDP)
 Front de libération oromo (FLO)
 Front de libération national de l'Ogaden (FNLO)
 Front uni révolutionnaire démocratique afar (Furda)
+Ginbot 7
 
 // http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
@@ -703,9 +716,8 @@ Debout la France
 Écologistes !
 Europe Ecologie - Les Verts (EELV)
 En marche !
-Front de gauche (FDG)
+Front de gauche
 La France insoumise
-Front national (FN)
 Lutte ouvrière (LO)
 Les Républicains (LR)
 La République en marche (LRM)
@@ -717,6 +729,7 @@ Parti communiste français (PCF)
 Parti de gauche (PG)
 Parti radical de gauche (PRG)
 Parti socialiste (PS)
+Rassemblement national (RN)
 Union des démocrates et indépendants (UDI)
 
 // http://typo.mondediplo.net/messages/122
@@ -1244,6 +1257,7 @@ Parti socialiste unifié (PSU)
 Rassemblement national des indépendants (RNI)
 Union socialiste des forces populaires (USFP)
 Front populaire de libération de la Saguia el Hamra et du rio de oro (Front Polisario)
+M. Fouad Ali EL-HIMMA (PERSONNALITÉS)
 
 // http://typo.mondediplo.net/messages/83
 // Marshall
@@ -1369,6 +1383,8 @@ Travailleurs du Népal et Parti des paysans (TNPP)
 // http://typo.mondediplo.net/messages/72
 // Nicaragua
 
+Alliance civique pour la justice et la démocratie
+Articulation des mouvements sociaux
 Front sandiniste de libération nationale (FSLN)
 Parti libéral indépendant (PLN)
 Parti libéral constitutionnel (PLC)
@@ -1412,6 +1428,9 @@ Parti de gauche socialiste (SV)
 Calédonie ensemble
 Construisons notre nation arc-en-ciel
 Front de libération nationale kanak et socialiste (FLNKS)
+Parti de libération kanak (Palika)
+Parti travailliste
+Union calédonienne
 
 // http://typo.mondediplo.net/messages/68
 // Nouvelle-Zélande
@@ -1463,6 +1482,7 @@ Ligue musulmane du Pakistan-Quaid-e-Azam (LMP-Q)
 Parti national baloutche Mengal (PBN-M)
 Pakhtunkhwa Milli Awami Party (PKMAP)
 Parti du peuple pakistanais (PPP)
+Mouvement du Pakistan pour la justice (PTI)
 
 // http://typo.mondediplo.net/messages/64
 // Palau
@@ -1874,6 +1894,7 @@ Ngwane Natonal Liberatory Congress (NNLC)
 // http://typo.mondediplo.net/messages/27
 // Syrie
 
+Conseil démocratique syrien (CDS)
 Coalition nationale syrienne (CNS)
 Conseil national des Kurdes de Syrie (CNKS)
 Front national progressiste
@@ -1886,12 +1907,14 @@ Mouvement de l'homme libre du Levant (Ahrar Al-Sham)
 Armée syrienne libre (ASL)
 Brigades Abdallah Hazzam (BAA)
 Conquête d'Alep (Fatah Halab)
+Forces démocratiques syriennes
 Front Fatah Al-Cham
 Mouvement des nobles du parti de Dieu (Harakat Hezbollah Al-Nujaba)
 Armée de la conquête (Jaïch Al-Fatah)
 Armée de l'islam (Jaïch Al-Islam)
 Organisation de l'État islamique (OEI)
 Unités de protection du peuple (YPG)
+Unités de protection des femmes (YDJ)
 
 // http://typo.mondediplo.net/messages/1102
 // Tadjikistan
@@ -1921,7 +1944,9 @@ Parti de l'indépendance de Taïwan (TAIP)
 // http://typo.mondediplo.net/messages/26
 // Tanzanie
 
+Alliance pour le changement et la transparence (ACT)
 Parti de la révolution (CCM)
+Chadema
 Civic United Front (CUF)
 
 // http://typo.mondediplo.net/messages/25
@@ -1929,7 +1954,7 @@ Civic United Front (CUF)
 
 Coordination de la majorité présidentielle (CMP)
 Mouvement patriotique du salut (MPS)
-Rassemblement national pour la démocratie au Tchad (RNDT-le Réveil)
+Rassemblement national pour la démocratie au Tchad (RNDT - le Réveil)
 Union nationale pour la démocratie et le renouveau (UNDR)
 
 // http://typo.mondediplo.net/messages/1104

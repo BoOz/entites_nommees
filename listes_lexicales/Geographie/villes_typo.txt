@@ -119,7 +119,7 @@ Bamako
 La Valette
 Rabat
 Delap-Uliga-Djarrit
-Port Louis
+Port-Louis
 Nouakchott
 Mexico
 Palikir
@@ -219,6 +219,12 @@ Harare
 // http://typo.mondediplo.net/messages/182
 // Afghanistan
 
+Achin
+Herat
+Kandahar
+Koundouz
+Mazar-e-Charif
+
 // http://typo.mondediplo.net/messages/181
 // Afrique du Sud
 
@@ -241,10 +247,13 @@ Vlorë
 // http://typo.mondediplo.net/messages/179
 // Algérie
 
-Oran
-Constantine
 Annaba
+Constantine
+Ghardaïa
+Mers El-Kébir
+Oran
 Sétif
+Sidi-Bel-Abbès
 
 // http://typo.mondediplo.net/messages/178
 // Allemagne
@@ -288,6 +297,21 @@ Taëf
 // http://typo.mondediplo.net/messages/172
 // Arménie
 
+Agarak
+Alaverdi
+Artik
+Berdzor
+Chouchi
+Gavarr
+Goumri
+Sevan
+Sisian
+Spitak
+Stepanakert
+Vagharchapat
+Vanadzor
+Vardenis
+
 // http://typo.mondediplo.net/messages/171
 // Australie
 
@@ -318,6 +342,14 @@ Nuwaidrat
 
 // http://typo.mondediplo.net/messages/166
 // Bangladesh
+
+Chittagong
+Cox's Bazar
+Dholghata
+Gwadar
+Maeshkhali
+Matarbari
+Sonadia
 
 // http://typo.mondediplo.net/messages/165
 // Barbade
@@ -437,11 +469,14 @@ Siem Reap
 // http://typo.mondediplo.net/messages/150
 // Cameroun
 
-Douala
-Yaoundé
 Bafoussam
+Bamenda
+Buéa
+Douala
+Édéa
 Garoua
 Maroua
+Ngaoundéré
 
 // http://typo.mondediplo.net/messages/149
 // Canada
@@ -483,10 +518,10 @@ Nicosie
 Apartadó
 Barranquilla
 Cartagena
-Cucúta
+Cúcuta
 Cali
 Mapiripán
-Medellin
+Medellín
 
 // http://typo.mondediplo.net/messages/143
 // Comores
@@ -503,6 +538,7 @@ Assomada
 
 Chongjin
 Kaesong
+Pyeongchang 
 
 // http://typo.mondediplo.net/messages/1087
 // Corée du Sud
@@ -555,6 +591,10 @@ Zadar
 // http://typo.mondediplo.net/messages/131
 // Érythrée
 
+Assab
+Keren
+Massaoua
+
 // http://typo.mondediplo.net/messages/130
 // Espagne
 
@@ -572,10 +612,21 @@ Detroit
 Los Angeles
 New York
 La Nouvelle-Orléans
+Saint Louis
 San Francisco
 
 // http://typo.mondediplo.net/messages/127
 // Éthiopie
+
+Awasa
+Debre Markos
+Dese
+Dire Dawa
+Goba
+Gondar
+Harar
+Jima
+Mekele
 
 // http://typo.mondediplo.net/messages/1043
 // EX-YOUGOSLAVIE
@@ -814,6 +865,9 @@ Zarka
 // http://typo.mondediplo.net/messages/100
 // Kenya
 
+Lamu
+Mombasa
+
 // http://typo.mondediplo.net/messages/1092
 // Kirghizstan
 
@@ -909,10 +963,12 @@ Misrata
 Mizda
 Ras Lanouf
 Sabratha
+Sebha
 Sorman
 Syrte
 Taourgha
 Tarhouna
+Tobrouk
 Zaouia
 Zintan
 Zouara
@@ -1095,15 +1151,19 @@ Matagalpa
 
 Aderbissinat
 Agadez
+Aguelal
 Akokan
 Arlit
 Azelik
 Diffa
+Dirkou
 Iférouane
 Imouraren
 Ingal
+Madama
 Maradi
 N'Guigmi
+Séguédine
 Tegguidda
 Tessaoua
 Zinder
@@ -1112,11 +1172,14 @@ Zinder
 // Nigeria
 
 Aba
+Baga
+Benin City
 Calabar
 Ekets
 Enugu
 Ibadan
 Ibenos
+Jos
 Kaduna
 Kano
 Kumo
@@ -1247,6 +1310,7 @@ Sam Ouandja
 Kalemie
 Kilo-Moto
 Kinshasa
+Kolwezi
 
 // http://typo.mondediplo.net/messages/52
 // République dominicaine
@@ -1269,6 +1333,7 @@ Galați
 Iași
 Sighișoara
 Târgu Mureș
+Tulcea
 
 // http://typo.mondediplo.net/messages/50
 // Royaume-Uni
@@ -1361,8 +1426,10 @@ Alalu
 Baidoa
 Bargal
 Berbera
+Burao
 Eyl
 Galcaio
+Garowe
 Hargeisa
 Hobyo
 
@@ -1411,6 +1478,7 @@ Zurich
 // Syrie
 
 Abou Kamal
+Afrin
 Alep
 Deir Ez-Zor
 Deraa
@@ -1418,7 +1486,6 @@ Hama
 Hassaké
 Homs
 Idlib
-Kamechliyé
 Lattaquié
 Qoussair
 Rakka
@@ -1434,6 +1501,7 @@ Tadmor
 // Tanzanie
 
 Arusha
+Bagamoyo
 Dar es-Salaam
 Stone Town
 Tanga
@@ -1452,6 +1520,7 @@ Maroua
 Massaguet
 Moundou
 Sarh
+Zouar
 
 // http://typo.mondediplo.net/messages/1104
 // Thaïlande
@@ -1502,7 +1571,7 @@ Sbeïtla
 Sfax
 Sidi Bou Saïd
 Sousse
-Zarzia
+Zarzis
 
 // http://typo.mondediplo.net/messages/1107
 // Turkménistan
@@ -1579,9 +1648,11 @@ Zonguldak
 // http://typo.mondediplo.net/messages/17
 // Ukraine
 
+Berdiansk
 Chegueni
 Dnipro
 Donetsk
+Ivano-Frankivsk
 Kharkiv
 Kherson
 Kramatorsk
@@ -1591,10 +1662,13 @@ Makiivka
 Marioupol
 Mykolaïv
 Odessa
+Poltava
 Rivne
 Sloviansk
 Tcherkassy
+Tchernihiv
 Tchernobyl
+Vinnytsia
 
 // http://typo.mondediplo.net/messages/1065
 // Union soviétique
@@ -1623,12 +1697,28 @@ Colonia
 // Yémen
 
 Aden
-Taez
+Al-Baida
+Al-Dali
+Al-Gaydah
+Al-Hazm
+Al-Shihr
+Amran
+Ataq
+Dhamar
+Hajjah
 Hodeïdah
+Ibb
 Jibla
+Lahij
 Marib
+Moka
 Moukalla
 Saada
+Salif
+Sayoun
+Taez
+Tarim
+Zinjibar
 
 // http://typo.mondediplo.net/messages/10
 // Zambie
