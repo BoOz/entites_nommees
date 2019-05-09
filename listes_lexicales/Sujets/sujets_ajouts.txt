@@ -86,6 +86,7 @@ Mai 68
 // etat
 Sécurité sociale
 RSA
+couverture sanitaire universelle (CSU)
 
 // juridique
 Constitution
@@ -101,6 +102,7 @@ LuxLeaks
 
 // mouvements sociaux
 Nuit debout
+gilets jaunes
 
 // Santé
 VIH

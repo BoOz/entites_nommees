@@ -1,4 +1,5 @@
 // énergie
+Aramco
 BP
 Royal Dutch Shell
 Elf
@@ -29,12 +30,14 @@ Hyundai
 Renault
 Airbus
 SNCF
+Aéroports de Paris (ADP)
 
 // banque et finance
 Citigroup
 Standard & Poor’s
 BNP Paribas
 Westpac
+Bundesbank 
 
 // fonds d'investissement
 Qatar Investment Authority (QIA)
@@ -138,3 +141,11 @@ Peugeot
 
 Siemens
 Atlantic Richfield
+
+// Télécommunication
+Bouygues Telecom
+
+// Chaines de boutiques
+Galleries Lafayette
+
+United Fruit Company

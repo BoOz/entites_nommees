@@ -15,6 +15,7 @@ Forza Italia
 // absents de typo diplo
 Organisation de libération de la Palestine (OLP)
 Al-Qaida
+Al-Qaida dans la péninsule arabique
 Daech
 
 // alias
@@ -31,3 +32,8 @@ Europe Ecologie
 
 Junge Freiheit
 Ligue du Nord
+Gerakan Atjeh Merdeka (GAM)
+Occuper Wall Street (OWS)
+
+// mouvement de contestation
+gilets jaunes
