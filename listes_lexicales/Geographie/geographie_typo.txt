@@ -435,6 +435,8 @@ port de Doraleh
 //Divers
  
 Charm El-Cheikh
+lac Nasser 
+Louxor
 place Tahrir
 vallée du Nil
 
@@ -692,6 +694,14 @@ Jammu-et-Cachemire  
 
 //Divers
 
+État archipélagique composé des îles de Java
+ Sumatra
+ Kalimantan 
+ Sulawesi 
+ Bali
+ Papouasie 
+ Moluques
+Papouasie occidentale
 
 // http://typo.mondediplo.net/messages/108
 // Irak
@@ -731,7 +741,7 @@ Ispahan
 Kerman
 Kermanchah
 Qom
-Sistan Baloutchistan
+Sistan-Baloutchistan
 Téhéran
 Yazd
 Zanjan
@@ -1488,6 +1498,7 @@ Nil Blanc
 district d'Abyei 
 barrage hydroélectrique de Méroé
 monts Nouba 
+Kafia Kingi 
 
 // http://typo.mondediplo.net/messages/1011
 // Soudan du Sud
@@ -1567,6 +1578,7 @@ bande d'Aouz
 
 Chari
  Logone 
+Tibesti 
 
 // http://typo.mondediplo.net/messages/1104
 // Thaïlande

@@ -128,6 +128,7 @@ Babel
 Bachari
 Balkanologie
 Ballantine Books
+Balzac
 Bangkok Post
 The Banker
 Barnes & Co
@@ -398,7 +399,7 @@ Les Éditions du bout de la ville
 Éditions du Conseil de l'Europe
 Éditions du Croquant
 Éditions du Cygne
-Éditions du détour
+Éditions du Détour
 Éditions du huitième jour
 Les Éditions du Jaguar
 Éditions du Larzac
@@ -428,7 +429,7 @@ Les Éditions Noir sur Blanc
 Éditions Nzoi
 Éditions Palea
 Éditions Pélissier
-Éditions Philippe Picquier
+Éditions Picquier
 Éditions rue d'Ulm
 Éditions Sillage
 Les Éditions sociales
@@ -470,6 +471,7 @@ L'Esprit des péninsules
 L'Esprit du temps
 Estrella
 Estudios Urbanos
+Les Étaques
 Éternel
 Étincelles
 Études
@@ -539,6 +541,7 @@ George Washington University Press
 Geuthner
 Glénat
 Global Chances
+Globe
 The Globe and Mail
 Golias
 Grandvaux
@@ -883,6 +886,7 @@ El País
 Palgrave
 Palgrave Macmillan
 Pambazuka News
+Pantheon
 Pantheon Books
 Paperback
 Paradigm Publisher
@@ -1482,7 +1486,6 @@ Jyllands-Posten
 // Égypte
 
 Al-Masri Al-Youm
-Mada masr
 
 // http://typo.mondediplo.net/messages/133
 // Émirats arabes unis
@@ -1520,6 +1523,7 @@ El País
 // France
 
 BFM TV
+CNews
 Direct 8
 France 24
 M6

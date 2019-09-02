@@ -718,11 +718,12 @@ Europe Ecologie - Les Verts (EELV)
 En marche !
 Front de gauche
 La France insoumise
+Génération Écologie
 Lutte ouvrière (LO)
 Les Républicains (LR)
 La République en marche (LRM)
-Mouvement des progressistes (MDP)
 Mouvement démocrate (MoDem)
+Mouvement des progressistes (MP)
 Nouveau Centre
 Nouveau Parti anticapitaliste (NPA)
 Parti communiste français (PCF)
@@ -879,7 +880,7 @@ Parti de la société majoritaire (BSP)
 Ligue musulmane de l'Union indienne, comité de l'état Kerala (LMUI)
 Parti du Congrès
 Parti communiste d'Inde (PCI)
-Parti communiste d'Inde maoïste (PCI-m)
+Parti communiste d'Inde marxiste (PCI-m)
 Parti Telugu Desam (PTD)
 Shiv Sena (SHS)
 Telegana Rashtra Samithi (TRS)
@@ -892,6 +893,7 @@ People's Liberation Guerrilla Army (PLGA)
 Front des défenseurs de l'islam (FPI)
 Gerindra
 Golkar
+Renaissance des oulémas (Nahdlatul Ulama)
 Parti du mandat national (PAN)
 Parti démocrate (PD)
 Parti indonésien de lutte (PDI-P)
@@ -993,6 +995,8 @@ Parti démocrate (PD)
 Choix civique pour l'Italie (SC)
 Gauche, écologie et liberté (SEL)
 Union du centre (UDC)
+Anciens partis
+Parti communiste italien (PCI)
 
 // http://typo.mondediplo.net/messages/102
 // Jamaïque
@@ -1280,8 +1284,8 @@ Parti travailliste (PTR)
 
 Coordination de l'opposition démocratique (COD)
 Force de libération des Africains de Mauritanie (FLAM)
-Parti Tawassoul
 Parti du peuple mauritanien (PPM)
+Rassemblement national pour la réforme et le développement (RNRD-Tawassoul)
 Union pour la république (UPR)
 Al-Qaida au Maghreb islamique (AQMI)
 
@@ -1492,6 +1496,7 @@ Pas de partis politiques
 // http://typo.mondediplo.net/messages/63
 // Palestine
 
+Djihad islamique
 « Conquête » (Fatah)
 Mouvement de la résistance islamique (Hamas)
 Front démocratique de libération de la Palestine (FDLP)
@@ -1825,8 +1830,14 @@ Union des tribunaux islamiques (UTI)
 // http://typo.mondediplo.net/messages/32
 // Soudan
 
+Alliance pour la liberté et le changement (ALC)
+Association des professionnels soudanais (APS)
 Parti démocratique unioniste (DUP)
+Forces nationales du consensus
 Parti du congrès national (NCP)
+Nidaa Al-Sudan
+Oumma
+Parti communiste soudanais
 Front révolutionnaire soudanais (FRS)
 Mouvement pour la justice et l'égalité (MJE)
 Mouvement pour la liberté et la justice (MLJ)

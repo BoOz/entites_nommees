@@ -363,10 +363,11 @@ Sonadia
 // http://typo.mondediplo.net/messages/162
 // Bénin
 
+Abomey
 Cotonou
 Djougou
-Parakou
-Abomey
+Ouidah
+Parakou 
 
 // http://typo.mondediplo.net/messages/161
 // Bhoutan
@@ -1080,6 +1081,11 @@ Mahébourg
 // http://typo.mondediplo.net/messages/81
 // Mauritanie
 
+Aleg
+Arafat
+Basra
+Dar Naïm
+Kaédi
 Nouadibhou
 Rosso
 
@@ -1115,12 +1121,12 @@ Berane
 Bijelo Polje
 Cetinje
 Gusinje
-Niksic
+Nikšić
 Plav
 Pljevlja
 Podgorica
-Rozaje
-Savnik
+Rožaje
+Šavnik
 Ulcinj
 
 // http://typo.mondediplo.net/messages/75
@@ -1226,6 +1232,7 @@ Meyuns
 // http://typo.mondediplo.net/messages/63
 // Palestine
 
+Al-Boureij
 Beit Hanoun
 Beit Lahya
 Bethléem
@@ -1234,9 +1241,11 @@ Hébron
 Jabaliya
 Jénine
 Jéricho
+Khan Younès
 Naplouse
 Rafah
 Ramallah
+Salah Ad-Din
 Shati
 Tulkarem
 Wadi Fukin
@@ -1438,12 +1447,25 @@ Hobyo
 
 Abou Hamed
 Abou Sourouj
+Ad-Damazin
 Al-Mouglad
 Al-Obeid
+Atbara
+Dongola
 Ed-Debba
+Gedaref
+Halaïb
+Kadugli
+Kassala
 Kourmouk
+Méroé
+Omdurman
+Port-Soudan
+Sennar
 Sirba
 Suleia
+Wad Madani
+Wadi Halfa
 
 // http://typo.mondediplo.net/messages/1011
 // Soudan du Sud

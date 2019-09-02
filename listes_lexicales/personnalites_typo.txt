@@ -55,7 +55,7 @@ Messali Hadj
 // http://typo.mondediplo.net/messages/178
 // Allemagne
 
-Joachim Gauck
+Frank-Walter Steinmeier
 
 Angela Merkel
 
@@ -470,7 +470,9 @@ Simone Gbagbo
 
 Laurent Gbagbo
 
-Robert Gueï
+Robert Gueï 
+
+Félix Houphouët-Boigny
 
 // http://typo.mondediplo.net/messages/139
 // Croatie
@@ -532,7 +534,7 @@ Chérif Ismaïl
 
 Hosni Moubarak 
 
-Mohamed Morsi
+Mohamed Morsi 
 
 Gamal Abdel Nasser 
 
@@ -803,6 +805,10 @@ Narendra Modi
 
 Joko Widodo
 
+Ma'ruf Amin 
+
+Prabowo Subianto 
+
 Basuki Tjahaja Purnama
 Susilo Bambang Yudhoyono 
 
@@ -964,13 +970,17 @@ Silvio Berlusconi
 
 Pier Luigi Bersani 
 
+Luigi Di Maio 
+
  Mariastella Gelmini 
 
 Giuseppe  Grillo
 
 Alessandra Mussolini
 
-Matteo Renzi
+Matteo Renzi 
+
+Matteo Salvini
 
 Bettino Craxi
 
@@ -984,7 +994,7 @@ Andrew Holness
 // http://typo.mondediplo.net/messages/1090
 // Japon
 
-Akihito
+Naruhito
 
 Abe Shinzo
 
@@ -1233,9 +1243,11 @@ Anerood Jugnauth
 // http://typo.mondediplo.net/messages/81
 // Mauritanie
 
-Mohamed Ould Abdel Aziz
+Mohamed Ould Ghazouani
 
 Yahya Ould Hademine
+
+Mohamed Ould Abdel Aziz
 
 Moktar Ould Daddah 
 
@@ -1776,7 +1788,11 @@ Omar Abdirashid Ali Sharmarke
 // http://typo.mondediplo.net/messages/32
 // Soudan
 
-Omar Al-Bachir
+Conseil des États  et Assemblée nationale
+
+Omar Al-Bachir 
+
+général Mohamed Hamdan Daglo
 
 Gaafar Al-Nemeiry
 

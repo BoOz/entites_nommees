@@ -249,3 +249,4 @@ Ocalan	Ocalan	Personnalités	Öcalan	correction
 entité sioniste	entité sioniste	Géographie	Israël	alias
 Nouveaux Chiens	Nouveaux Chiens	a_ajouter	Les Nouveaux Chiens de garde	correction
 Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II	alias
+Turgut Ozal	Turgut Ozal	Personnalités	Turgut Özal	alias
