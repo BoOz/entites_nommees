@@ -20,8 +20,11 @@ Front uni islamique et national pour le salut de l'Afghanistan (Alliance du Nord
 // Afrique du Sud
 
 Congrès national africain (ANC)
+Les Noirs d'abord, la terre d'abord (BLF)
 Alliance démocratique (DA)
 Combattants pour la liberté économique (EFF)
+Front de la liberté Plus (FF+)
+Parti Inkatha de la liberté (IFP)
 Parti national (NP)
 Congrès panafricain (PAC)
 Parti communiste sud-africain (SACP)
@@ -732,6 +735,7 @@ Parti radical de gauche (PRG)
 Parti socialiste (PS)
 Rassemblement national (RN)
 Union des démocrates et indépendants (UDI)
+Union populaire républicaine (UPR)
 
 // http://typo.mondediplo.net/messages/122
 // Gabon
