@@ -110,4 +110,5 @@ https://github.com/BoOz/entites_nommees/blob/master/mots_courants.php
 
 https://www.textrazor.com/demo
 https://github.com/ICIJ/datashare
+https://permid.org/
 
