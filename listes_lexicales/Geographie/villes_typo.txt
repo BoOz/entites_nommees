@@ -250,10 +250,12 @@ Vlorë
 Annaba
 Constantine
 Ghardaïa
+Kherrata
 Mers El-Kébir
 Oran
 Sétif
 Sidi-Bel-Abbès
+Tlemcen
 
 // http://typo.mondediplo.net/messages/178
 // Allemagne
@@ -315,10 +317,13 @@ Vardenis
 // http://typo.mondediplo.net/messages/171
 // Australie
 
-Sydney
-Melbourne
+Adélaïde
 Brisbane
+Hobart
+Melbourne
 Perth
+Port Augusta
+Sydney 
 
 // http://typo.mondediplo.net/messages/170
 // Autriche
@@ -377,7 +382,9 @@ Parakou
 
 Hantsavitchy
 Lepel
+Navapolatsk
 Vileïka
+Vitebsk
 
 // http://typo.mondediplo.net/messages/159
 // Birmanie
@@ -588,6 +595,8 @@ Zadar
 
 // http://typo.mondediplo.net/messages/132
 // Équateur
+
+Guayaquil
 
 // http://typo.mondediplo.net/messages/131
 // Érythrée
@@ -942,6 +951,7 @@ Thakhek
 Bourj Hammoud
 Chnanir
 Naameh
+Nabatieh
 Saïda
 Tripoli
 Tyr
@@ -984,7 +994,7 @@ Zouara
 // Luxembourg
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 Bitola
 Gevgelija
@@ -1207,6 +1217,8 @@ Zaria
 // http://typo.mondediplo.net/messages/67
 // Oman
 
+Ibri
+Nizwa
 Salalah
 Sohar
 
@@ -1241,6 +1253,7 @@ Hébron
 Jabaliya
 Jénine
 Jéricho
+Kalkilya
 Khan Younès
 Naplouse
 Rafah
@@ -1631,7 +1644,8 @@ Gaziantep
 Göcek
 İncirlik
 İskenderun
-İstanbul
+İdil
+Istanbul
 İzmir
 İznik
 Karaman
@@ -1721,7 +1735,7 @@ Colonia
 Aden
 Al-Baida
 Al-Dali
-Al-Gaydah
+Al-Ghaydah
 Al-Hazm
 Al-Shihr
 Amran

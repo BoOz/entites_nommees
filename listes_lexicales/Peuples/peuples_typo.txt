@@ -1109,6 +1109,14 @@ Was
 // http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
+Mossis
+Bobos
+Dioulas
+Peuls
+Gourmantchés
+Sénoufos
+Touaregs
+
 // http://typo.mondediplo.net/messages/151
 // Burundi
 
@@ -1326,7 +1334,7 @@ Was
 // Luxembourg
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 // http://typo.mondediplo.net/messages/88
 // Madagascar

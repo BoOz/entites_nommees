@@ -62,7 +62,7 @@ République de Guinée-Bissau
 République de Guinée-Équatoriale
 République de Lettonie
 République de Lituanie
-République de Macédoine
+République de Macédoine du Nord
 République de Madagascar
 République de Malte
 République de Maurice
@@ -408,7 +408,7 @@ Lituanie
 
 Luxembourg
 
-Macédoine
+Macédoine du Nord
 
 Madagascar
 

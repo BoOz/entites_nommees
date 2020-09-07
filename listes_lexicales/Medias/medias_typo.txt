@@ -114,7 +114,6 @@ The Atlantic Monthly
 Atlas
 Atrabile
 Attila
-L'Aube
 Au diable Vauvert
 Aufbau
 Autrement
@@ -406,6 +405,7 @@ Les Éditions du Jaguar
 Éditions du Linteau
 Éditions du Moment
 Éditions du Monde libertaire
+Éditions d'une
 Éditions du Panama
 Éditions du Ricochet
 Éditions du Rocher
@@ -435,7 +435,6 @@ Les Éditions Noir sur Blanc
 Les Éditions sociales
 Éditions Syllepse
 Éditions Unesco
-Éditions universitaires du Septentrion
 Editora de Cultura
 Editorial de Ciencias Sociales
 Editorial José Martí
@@ -631,6 +630,7 @@ International Journal of Climatology
 International Review of the Red Cross
 ¿Interrogations?
 IRD Éditions
+ The Irish Times
 Ivan R. Dee Inc.
 Ivrea
 Izvestia
@@ -970,12 +970,12 @@ Presses de Sciences Po
 Presses du Châtelet
 Les Presses du réel
 Presses universitaires de Bordeaux
-Presses universitaires François-Rabelais
 Presses universitaires de France
 Presses universitaires de Laval
-Presses universitaires du Mirail
 Les Presses universitaires de Montréal
+Presses universitaires du Mirail
 Presses universitaires du Septentrion
+Presses universitaires François-Rabelais
 Princeton Architectural Press
 Privat
 Problèmes d'Amérique latine
@@ -1016,6 +1016,7 @@ La Razón
 Regain de lecture
 Regnery Publishing
 La Renaissance du livre
+La Renverse
 éd. René Viénet
 Le Rénovateur
 La República
@@ -1091,6 +1092,7 @@ Shehui Kexue Wenxian Chubanshe
 Siedler Verlag
 Sigest
 Siglo XXI
+Sillage
 Simon & Schuster
 Sindbad
 Skira
@@ -1128,6 +1130,7 @@ St. Martin's Press
 Sudamericana
 Süddeutsche Zeitung
 Sud Ouest
+Suhrkamp
 Sulliver
 The Sunday Times
 Super 8 Éditions
@@ -1244,6 +1247,7 @@ Viviane Hamy
 Vlast
 Voix d'encre
 La Voix du Nord
+La Volte
 Vuibert
 
 
@@ -1311,6 +1315,7 @@ Der Tagesspiegel
 Der Spiegel
 Die Zeit
 Frankfurter Allgemeine Zeitung
+Manager Magazin
 Süddeutsche Zeitung
 Taz
 
@@ -1690,7 +1695,7 @@ The Baltic Course
 // Luxembourg
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 // http://typo.mondediplo.net/messages/88
 // Madagascar

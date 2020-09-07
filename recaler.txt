@@ -250,3 +250,7 @@ entité sioniste	entité sioniste	Géographie	Israël	alias
 Nouveaux Chiens	Nouveaux Chiens	a_ajouter	Les Nouveaux Chiens de garde	correction
 Jean-Paul II	Jean-Paul II	Personnalités	Jean Paul II	alias
 Turgut Ozal	Turgut Ozal	Personnalités	Turgut Özal	alias
+Tayeb Erdogan	Tayeb Erdogan	Personnalités	Recep Tayyip Erdoğan	alias
+Brunéï	Brunéï	Géographie	Brunei	alias
+Bangla-Desh	Bangla-Desh	Géographie	Bangladesh	alias
+Franz Fanon	Franz Fanon	Personnalités	Frantz Fanon	correction

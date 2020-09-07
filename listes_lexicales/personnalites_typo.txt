@@ -61,6 +61,8 @@ Angela Merkel
 
 Joschka Fischer 
 
+Joachim Gauck 
+
 Achim GROßMANN 
 
 Christoph Hein 
@@ -75,7 +77,9 @@ Antoni Martí
 // http://typo.mondediplo.net/messages/176
 // Angola
 
-José Eduardo dos Santos
+João Lourenço
+
+José Eduardo Dos Santos
 
 // http://typo.mondediplo.net/messages/175
 // Antigua-et-Barbuda
@@ -187,7 +191,7 @@ Issa Ben Salman Al-Khalifa
 
 Abdul Hamid
 
-Skeikh Hasina Wajed
+Sheikh Hasina Wajed
 
 // http://typo.mondediplo.net/messages/165
 // Barbade
@@ -255,6 +259,12 @@ U Ottama
 // http://typo.mondediplo.net/messages/158
 // Bolivie
 
+Jeanine Áñez
+
+Luis Fernando Camacho 
+
+Carlos Mesa  
+
 Evo Morales
 
 // http://typo.mondediplo.net/messages/157
@@ -311,7 +321,7 @@ Boïko Borissov
 // http://typo.mondediplo.net/messages/152
 // Burkina Faso
 
-Roch Marc Kaboré
+Roch Marc Christian Kaboré
 
 Paul Kaba Thieba
 
@@ -551,7 +561,9 @@ président du conseil  et ministre de la défense
 
 famille Al-Nahyane 
 
-clan des Al-Maktoum
+clan des Al-Maktoum 
+
+prince héritier d'Abou Dhabi Mohammed Ben Zayed
 
 Chakhbout Ben Sultan Al-Nayhane 
 
@@ -576,7 +588,7 @@ Issayas Afeworki
 
 Felipe VI
 
-Mariano Rajoy
+Pedro Sánchez
 
 Ángel Acebes 
 
@@ -585,6 +597,8 @@ José María Aznar
 Felipe González 
 
 José Montilla
+
+Francisco Franco 
 
 cardinal Vicente Enrique Y Tarancón 
 
@@ -825,13 +839,19 @@ Abdurrahman Wahid
 // http://typo.mondediplo.net/messages/108
 // Irak
 
-Fouad Maassoum
+Bahram Saleh
 
-Haïdar Al-Abadi
+Adel Abdel Mahdi
 
-Abou Bakr Al-Baghdadi 
+Haïdar Al-Abadi 
+
+ Abou Bakr Al-Baghdadi 
+
+Ibrahim Al-Jaafari 
 
 Massoud Barzani 
+
+Fouad Maassoum  
 
 Nouri Al-Maliki 
 
@@ -860,7 +880,7 @@ Mohammad Khatami
 
 Hachémi Rafsandjani 
 
-général Ghassem Soleimani
+général Ghassem Soleimani 
 
 Chapour Baktiar 
 
@@ -1003,6 +1023,8 @@ Abe Shinzo
 
 Abdallah II
 
+Omar Razzaz
+
 Abdullah Ensour
 
 roi Abdallah Iᵉʳ 
@@ -1012,9 +1034,9 @@ roi Hussein
 // http://typo.mondediplo.net/messages/1091
 // Kazakhstan
 
-Noursoultan Nazarbaïev
+Kassym-Jomart Tokaïev
 
-Karim Massimov
+Askar Mamine
 
 // http://typo.mondediplo.net/messages/100
 // Kenya
@@ -1091,7 +1113,7 @@ Māris Kučinskis
 
 Michel Aoun
 
-Saad Hariri
+Saad Hariri  a démissionné en octobre 2019
 
 Samir Geagea 
 
@@ -1121,9 +1143,11 @@ Charles Taylor
 // http://typo.mondediplo.net/messages/93
 // Libye
 
-Aguila Salah Issa
+Abdallah Al-Thani
 
 Abdallah Al-Thani
+
+maréchal Khalifa Haftar
 
 Omar Al-Mokhtar 
 
@@ -1151,7 +1175,7 @@ Henri de Luxembourg
 Xavier Bettel
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 Gjorge Ivanov
 
@@ -1224,6 +1248,8 @@ Joseph Muscat
 
 Mohammed VI
 
+Saadeddine El-Othmani
+
 Abdelilah Benkirane
 
 Fouad Ali El-Himma
@@ -1256,9 +1282,9 @@ colonel Mohamed Khouna Ould Haidallah
 // http://typo.mondediplo.net/messages/80
 // Mexique
 
-Enrique Peña Nieto
+Andrés Manuel López Obrador
 
-Andrés Manuel López Obrador   
+Enrique Peña Nieto  
 
 Carlos Slim
 
@@ -1297,9 +1323,9 @@ Chimed Saikhanbileg
 // http://typo.mondediplo.net/messages/76
 // Monténégro
 
-Filip Vujanović
-
 Milo Đukanović
+
+Duško Marković
 
 // http://typo.mondediplo.net/messages/75
 // Mozambique
@@ -1384,15 +1410,21 @@ John Key
 // http://typo.mondediplo.net/messages/67
 // Oman
 
-Qabous Ben Saïd Al-Saïd
+baloutche
 
-Qabous Ben Saïd Al-Saïd
+ sud-asiatique et africaine
+
+baloutche
+
+ sud-asiatique et africaine
 
 dynastie des Al-Saïd
 
 Tarek Ben Taymour
 
-sultan Saïd Ben Taymour
+sultan Qabous Ben Saïd Al-Saïd
+
+ sultan Saïd Ben Taymour
 
 // http://typo.mondediplo.net/messages/65
 // Ouganda
@@ -1487,7 +1519,7 @@ général Velasco
 
 Rodrigo Duterte
 
-Benigno Aquino 
+Benigno Aquino  
 
 Lino Brocka 
 
@@ -1609,7 +1641,7 @@ Nicolae Ceaușescu
 
 Élisabeth II
 
-Theresa May
+Boris Johnson
 
 Anthony Blair  
 
@@ -1624,7 +1656,7 @@ Margaret Thatcher
 
 Vladimir Poutine
 
-Dmitri Medvedev
+Mikhaïl Michoustine
 
 Roman Abramovitch 
 
@@ -1649,6 +1681,8 @@ Mikhaïl Khodorkovski
 Sergueï Lavrov 
 
 Edouard Limonov  
+
+Dmitri Medvedev 
 
 Mikhaïl Prokhorov
 
@@ -1792,7 +1826,9 @@ Conseil des États  et Assemblée nationale
 
 Omar Al-Bachir 
 
+général Abdel Fatah Al-Bourhane
 général Mohamed Hamdan Daglo
+premier ministre Abdallah Hamdok
 
 Gaafar Al-Nemeiry
 
@@ -2015,9 +2051,9 @@ Enele Sopoaga
 // http://typo.mondediplo.net/messages/17
 // Ukraine
 
-Petro Porochenko
+Volodymyr Zelensky
 
-Volodymyr Hroïsman
+Oleksi Hontcharouk
 
 Rinat Akhmetov 
 
@@ -2039,13 +2075,13 @@ Leonid Koutchma
 
 Viktor Pintchouk 
 
+Petro Porochenko 
+
 Serhiy Tarouta 
 
 Ioulia Timochenko 
 
-Olexandr Tourtchinov 
-
-Volodymyr Zelensky
+Olexandr Tourtchinov
 
 Stepan Bandera 
 

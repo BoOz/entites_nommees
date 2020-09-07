@@ -86,7 +86,7 @@ Farasan
 le Hedjaz 
 péninsule arabique
 Roub Al-Khali  
-Tiran  
+Tiran   
 Zahran 
 
 // http://typo.mondediplo.net/messages/173
@@ -107,6 +107,7 @@ Territoire de la capitale australienne
 Darwin
  Pine Gap 
 terre d'Arnhem 
+six territoires dépendants
 île Christmas
 
 // http://typo.mondediplo.net/messages/170
@@ -244,6 +245,7 @@ Stara Planina
 //Divers
 
 Kadiogo 
+Bobo-Dioulasso
 
 // http://typo.mondediplo.net/messages/151
 // Burundi
@@ -688,9 +690,17 @@ Soto Cano Air Base
 
 Jammu-et-Cachemire   
  Bengale-Occidental 
+Lakshadweep 
+Telangana 
 
 // http://typo.mondediplo.net/messages/1089
 // Indonésie
+
+// Provinces 
+la Papouasie occidentale
+qui comprend la partie extrême-occidentale de la Nouvelle-Guinée
+ la Papouasie
+qui se voit attribuer le territoire restant_
 
 //Divers
 
@@ -699,9 +709,9 @@ Jammu-et-Cachemire  
  Kalimantan 
  Sulawesi 
  Bali
- Papouasie 
+ Nouvelle-Guinée 
  Moluques
-Papouasie occidentale
+mer de Céram
 
 // http://typo.mondediplo.net/messages/108
 // Irak
@@ -912,6 +922,7 @@ Vidzeme
 
 //Divers
 
+place des Martyrs 
 plaine de la Bekaa
 Liban sud
 Mont-Liban
@@ -950,7 +961,7 @@ Klaipėda
 le Grand-Duché
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 // http://typo.mondediplo.net/messages/88
 // Madagascar
@@ -1543,15 +1554,19 @@ Alep-Est
 Chayrat 
 Ghouta  
 Qalamoun  
- Rojava  
+ Rojava   
 Fédération démocratique de la Syrie du Nord
 trois cantons : Afrin
- Kobané et Cezire
+ Kobané et Cezire 
 villes : Aïn Issa 
+ Derik 
  Kamechliyé 
- Kobané
  Manbidj
- Tell Abyad 
+ Ras Al-Aïn 
+ Tall Tamer
+ Tell Abyad
+ Tirwazi
+autoroute M4
 
 // http://typo.mondediplo.net/messages/1102
 // Tadjikistan
@@ -1711,8 +1726,9 @@ le « quart vide »
 
 //Divers
 
+barrage de Kafue Gorge
 Chambezi 
-Copperbelt
+Copperbelt 
 
 // http://typo.mondediplo.net/messages/9
 // Zimbabwe
@@ -1846,6 +1862,8 @@ Proche-Orient
  La Réunion
 
  Macao
+
+ Macédoine
 
  Maghreb
 

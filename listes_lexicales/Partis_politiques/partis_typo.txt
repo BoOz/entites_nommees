@@ -73,10 +73,11 @@ Groupe salafiste pour la prédication et le combat (GSPC)
 
 Alternative pour l'Allemagne (AfD)
 Debout (Aufstehen)
-Alliance 90 - Les Verts (Bündis 90 - Die Grünen)
+Alliance 90 - les Verts (Bündis 90 - Die Grünen)
 Union chrétienne-démocrate (CDU)
 Union chrétienne-sociale (CSU)
 La Gauche (Die Linke)
+Parti libéral-démocrate (FDP)
 Patriotes européens contre l'islamisation de l'Occident (Pegida)
 Parti social-démocrate (SPD)
 
@@ -94,10 +95,9 @@ Les Verts d'Andorre (VA)
 // Angola
 
 Large Convergence pour le salut de l'Angola -- Coalition électorale (CASA-CE)
-Front de libération nationale de l'Angola (FLNA)
+Front nationale de libération de l'Angola (FNLA)
 Mouvement populaire de libération de l'Angola (MPLA)
 Union nationale pour l'indépendance totale de l'Angola (Unita)
-Front nationale de libération de l'Angola (FNLA)
 Forces armées populaires de libération de l'Angola
 
 // http://typo.mondediplo.net/messages/175
@@ -272,7 +272,7 @@ United Wa State Army (UWSA)
 // http://typo.mondediplo.net/messages/158
 // Bolivie
 
-Mouvement vers le socialisme (MAS)
+Mouvement vers le socialisme - Instrument politique pour la souveraineté des peuples (MAS-IPSP)
 Mouvement social-démocrate (MDS)
 Mouvement nationaliste révolutionnaire (MNR)
 Parti communiste de Bolivie (PCB)
@@ -648,6 +648,7 @@ Réunir le Pays basque (EH Bildu)
 Forum des Asturies (FAC)
 Parti nationaliste basque (PNV)
 Parti socialiste d'Euskadi (PSE)
+Vox
 Unité (Batasuna)
 Pays basque et liberté (ETA)
 Democracia real ya !
@@ -911,6 +912,7 @@ Jemaah Islamiyah (JI)
 
 Al-Arabiya
 Appel islamique (Al-Dawa Al-Islamiya)
+Appel islamique (Dawa)
 Alliance nationale irakienne
 Mouvement pour le changement (Bzutinewey Goran)
 Coalition de l'État de droit
@@ -924,7 +926,10 @@ Al-Qaida en Irak
 Armée du Mahdi
 Brigade Badr
 Chevaliers de l'espoir
+État islamique d'Irak  ) (EII)
 Forces de mobilisation populaire
+Unités de mobilisation populaire (Hachd Al-Chaabi)
+: (Kataeb Hezbollah)
 Organisation de l'État islamique (OEI)
 Sahwa
 
@@ -1132,9 +1137,14 @@ Bloc de la loyauté à la résistance
 Courant patriotique libre, « mouvement de Michel Aoun » (CPL)
 Mouvement de l'espoir (Mouvement Amal)
 Parti Baas
+Parti communiste libanais
 Parti démocratique libanais
 Parti social nationaliste syrien (PSNS)
 Parti socialiste progressiste (PSP)
+Citoyennes et citoyens dans un État
+Mouvement des jeunes pour le changement
+Mouvement du peuple
+Organisation populaire nassérienne
 Parti de Dieu (Hezbollah)
 
 // http://typo.mondediplo.net/messages/94
@@ -1185,7 +1195,7 @@ Les Verts
 Parti communiste luxembourgeois (PCL)
 
 // http://typo.mondediplo.net/messages/89
-// Macédoine
+// Macédoine du Nord
 
 Union démocratique pour l'intégration (BDI)
 Parti démocratique des Albanais (DPSH)
@@ -1265,7 +1275,7 @@ Parti socialiste unifié (PSU)
 Rassemblement national des indépendants (RNI)
 Union socialiste des forces populaires (USFP)
 Front populaire de libération de la Saguia el Hamra et du rio de oro (Front Polisario)
-M. Fouad Ali EL-HIMMA (PERSONNALITÉS)
+M. Abdelilah BENKIRANE (PERSONNALITÉS)
 
 // http://typo.mondediplo.net/messages/83
 // Marshall
@@ -1666,9 +1676,9 @@ Liberal Democrats (Libéraux-démocrates)
 les tories (Parti conservateur)
 The Labour Party (Parti travailliste)
 Parti pour l'indépendance du Royaume-Uni (UKIP)
-Democratic Unionist Party (DUP)
+Parti unioniste démocratique (DUP)
 Parti nationaliste gallois (Plaid Cymru)
-Parti social-démocrate et libéral d'Irlande du Nord (SDLP)
+Parti social-démocrate et travailliste d'Irlande du Nord (SDLP)
 Sinn Féin
 Parti national écossais (SNP)
 Parti unioniste de l'Ulster (UUP)
@@ -2066,6 +2076,7 @@ Parti communiste ukrainien (KPU)
 Front populaire (NF)
 Parti radical (PR)
 « Entraide » (Samopomich)
+Serviteur du peuple
 « Liberté » (Svoboda)
 
 // http://typo.mondediplo.net/messages/1065
