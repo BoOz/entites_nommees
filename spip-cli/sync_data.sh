@@ -12,7 +12,7 @@ cd plugins/entites_nommees/
 # Synchro Google Sheet
 
 echo "Mise à jour des alias sur Google spreadsheets"
-curl --silent "https://docs.google.com/spreadsheets/d/1ks_VyPlc3dAzGjrV08j1OaP6bKh4umuOjE92jCqfhAo/pub?gid=0&single=true&output=tsv" > recaler-gsp.txt 
+curl -L --silent "https://docs.google.com/spreadsheets/d/1ks_VyPlc3dAzGjrV08j1OaP6bKh4umuOjE92jCqfhAo/pub?gid=0&single=true&output=tsv" > recaler-gsp.txt 
 new=$(cat recaler-gsp.txt | tr '\r' '\n' | tr -s '\n') # nettoyer les sauts de lignes
 echo "$new" > recaler.txt
 rm recaler-gsp.txt
